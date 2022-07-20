@@ -1,0 +1,18 @@
+aula 1 de agentes inteligentes
+dia 19/07/2022
+
+- a disciplina é 'fácil', envolve pouca matemática, a depender do problema a ser trabalhado
+- buscaremos problemas para apresentar na aula e fazer trabalhos em cima disso
+- bastante prática
+- formato de estudo dirigido, teremos material para ler
+- desenvolver em Python, via Google Colab
+- buscar artigos sobre agentes inteligentes para apresentar
+- coisa curta, de 10 a 15 minutos
+- avaliação: processo contínuo, sem provas e trabalhos
+- a intenção é ter um artigo ao final para submissão
+- sistema dinâmico é um sistema que muda com o tempo
+- Thomas Schelling: estudos sobre segregação
+- http://patadata.org/maparacial/
+- https://ccl.northwestern.edu/netlogo/
+- http://www.netlogoweb.org/launch#http://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Segregation.nlogo
+- https://towardsdatascience.com/getting-started-with-openai-gym-d2ac911f5cbc
