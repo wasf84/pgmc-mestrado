@@ -16,3 +16,11 @@ dia 19/07/2022
 - https://ccl.northwestern.edu/netlogo/
 - http://www.netlogoweb.org/launch#http://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Segregation.nlogo
 - https://towardsdatascience.com/getting-started-with-openai-gym-d2ac911f5cbc
+
+aula 2 de agentes inteligentes
+dia 21/07/2022
+
+- "revisão sistemática - como fazer" a ser apresentado pelo Danilo de Souza (aluno do doutorado), na próxima aula, dia 26/07/2022
+- neste primeiro momento, o importante é fazer uma revisão sistemática em algum assunto de interesse
+- apresentação do framework Open AI Gym e explicação do "cartpole"
+- assunto de meu interesse: https://iwaponline.com/jwcc/article/11/4/1580/70336/The-role-of-agent-based-modeling-and-multi-agent
