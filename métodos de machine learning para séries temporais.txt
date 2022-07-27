@@ -1,0 +1,6 @@
+métodos de machine learning para séries temporais
+
+elastic net
+extreme learning machine
+extreme gradient boosting
+método mars
