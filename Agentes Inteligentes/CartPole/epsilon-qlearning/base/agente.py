@@ -1,17 +1,28 @@
 # -*- coding: utf-8 -*-
 
 try:
-    import gym, math, numpy as np, matplotlib.pyplot as plt
+    import gym, math, threading, numpy as np, matplotlib.pyplot as plt
 except ImportError:
     raise ImportError("Falha na importação dos módulos.")
 except:
     raise Exception("Aconteceu algum erro genérico não tratado.")
 # ===================================================================== #
-class Agente(object):
-    def __init__(self, env_name, discrete, num_eps, min_epsilon, min_learning_rate, discount_factor, dec):
+class Agente(threading.Thread):
+    def __init__(self, thread_id, ag_name, env_name, discrete, num_eps, min_epsilon, min_learning_rate, discount_factor, dec, qtable):
         """
             Método de inicialização da classe
         """
+
+        # IMPORTANTE!!!!!
+        # sem este passo a thread não funciona
+        if thread_id > 0: # thread_id = 0 é o agente treinador. ele não precisa rodar em thread
+            threading.Thread.__init__(self)
+
+        self.thread_id = thread_id
+
+        # apenas o nome do agente para ficar mais fácil de verificar quando estiver executando em multithread
+        self.ag_name = ag_name
+
         # criando o ambiente Gym para o CartPole; este agente foi feito pensando no CartPole,
         #   mas pode pensar em estender para outros ambientes
         self.env = gym.make(env_name)
@@ -40,7 +51,10 @@ class Agente(object):
         self.ub = [self.env.observation_space.high[0], 0.05, self.env.observation_space.high[2], math.radians(40) / 1.]
 
         # a QTable
-        self.qtable = np.zeros(self.discrete + (self.env.action_space.n, ))
+        if qtable is not None:
+            self.qtable = qtable
+        else:
+            self.qtable = np.zeros(self.discrete + (self.env.action_space.n, ))
 # ---------------------------------------------------------------------#
     def __repr__(self):
         """
@@ -48,7 +62,7 @@ class Agente(object):
         """
         pass
 # ---------------------------------------------------------------------#
-    def rand_action(self, state):
+    def choose_action(self, state):
         """
             O fator aleatório para melhorar o aprendizado
         """
@@ -84,37 +98,64 @@ class Agente(object):
         # reduz à medida que aumenta a quantidade de episódios
         # https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf
         return max(self.min_learning_rate, min(1., 1. - math.log10((ep + 1) / self.dec)))
-# ---------------------------------------------------------------------#        
+# ---------------------------------------------------------------------#
     def update_qtable(self, state, action, reward, new_state):
         # isso está no Google Colab da disciplina
-        idx = state + [action]
-        print(self.qtable[tuple(idx)])
-        self.qtable[tuple(state + action)] += self.learning_rate * (reward + self.discount_factor * np.max(self.qtable[new_state]) - self.qtable[state][action])
-        #self.qtable[state][action] += self.learning_rate * (reward + self.discount_factor * np.max(self.qtable[new_state]) - self.qtable[state][action])
+        self.qtable[state][action] += self.learning_rate * (reward + self.discount_factor * np.max(self.qtable[new_state]) - self.qtable[state][action])
 # ---------------------------------------------------------------------#        
     def training(self):
         """
             Este método contém o Epsilon-QLearning para treinamento
         """
         for ep in range(self.num_eps):
-            obs = self.discrete_state(self.env.reset())
+            current_state = self.discrete_state(self.env.reset())
 
             self.learning_rate = self.get_learning_rate(ep)
             self.epsilon = self.get_epsilon(ep)
             done = False
 
             while not done:
-                action = self.rand_action(obs)
-                obs, reward, done, _ = self.env.step(action)
-                new_state = self.discrete_state(obs)
-                self.update_qtable(obs, action, reward, new_state)
-                obs = new_state
+                action = self.choose_action(current_state)
+                observation, reward, done, _ = self.env.step(action)
+                new_state = self.discrete_state(observation)
+                self.update_qtable(current_state, action, reward, new_state)
+                current_state = new_state
 
-        print('Finzalido o treinamento')
+        print('#####################################')
+        print(' Treinamento realizado ', self.ag_name)
+        print('#####################################')
 # ---------------------------------------------------------------------#
     def exec(self):
         """
-            Executa o projeto, ou seja, treina e avalia a porra toda
+            Executa o projeto, ou seja, depois de treinado, avalia a porra toda
         """
-        pass
+        # recompensa total
+        tr = 0
+        done = False
+
+        # estado atual
+        cs = self.discrete_state(self.env.reset())
+
+        while not done:
+            action = np.argmax(self.qtable[cs])
+            obs, reward, done, _ = self.env.step(action)
+            new_state = self.discrete_state(obs)
+            cs = new_state
+            tr += reward
+
+        self.reward = tr
+
+        print('###################################')
+        print(' Avaliação realizada ', self.ag_name)
+        print('###################################')
+# ---------------------------------------------------------------------#
+    def run(self):
+        """
+            Este é o método que a Thread invocará
+        """
+        print("Iniciando thread...: " + self.ag_name)
+        #self.training()
+        self.exec()
+        print("Agente...: ", self.ag_name, "Recompensa total...: ", self.reward)
+        print("Encerrando thread...: " + self.ag_name)
 # ===================================================================== #
