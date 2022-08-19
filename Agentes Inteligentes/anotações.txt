@@ -33,3 +33,11 @@ dia 02/08/2022
 - implementação de um agente relfexivo estático, sua política não se altera
 - um agente dinâmico é um agente reflexivo que muda suas políticas ao longo do tempo, de acordo com as alterações do ambiente
 - criar uma política que resolva o mountaincar para a próxima aula
+
+aula # de agentes inteligentes
+dia 18/08/2022
+- deu uma pincelada inicial geral entre o qlearning e o epsilon-qlearning, falando da diferença entre ambos
+- proposta de criar um ambiente customizado no Gym para executar um aprendizado de máquina
+- continuar dentro do classic control mesmo
+- resolver o Acrobot, por política ou qlearning
+- aprendendo a criar ambiente customizado
