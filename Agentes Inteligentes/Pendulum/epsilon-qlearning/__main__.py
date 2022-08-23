@@ -5,9 +5,9 @@ import gym, math, tqdm, numpy as np, matplotlib.pyplot as plt
 # Inicializaçao do ambiente
 env_name = "Pendulum-v1"
 env = gym.make(env_name)
-num_eps = 7000
+num_eps = 30000
 epsilon, min_epsilon = 0.0, 0.1
-learning_rate, min_learning_rate = 0.0, 0.45
+learning_rate, min_learning_rate = 0.0, 0.57
 discount_factor = 0.95
 dec = 15
 
