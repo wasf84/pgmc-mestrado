@@ -1,0 +1,43 @@
+aula 1 de agentes inteligentes
+dia 19/07/2022
+
+- a disciplina é 'fácil', envolve pouca matemática, a depender do problema a ser trabalhado
+- buscaremos problemas para apresentar na aula e fazer trabalhos em cima disso
+- bastante prática
+- formato de estudo dirigido, teremos material para ler
+- desenvolver em Python, via Google Colab
+- buscar artigos sobre agentes inteligentes para apresentar
+- coisa curta, de 10 a 15 minutos
+- avaliação: processo contínuo, sem provas e trabalhos
+- a intenção é ter um artigo ao final para submissão
+- sistema dinâmico é um sistema que muda com o tempo
+- Thomas Schelling: estudos sobre segregação
+- http://patadata.org/maparacial/
+- https://ccl.northwestern.edu/netlogo/
+- http://www.netlogoweb.org/launch#http://www.netlogoweb.org/assets/modelslib/Sample%20Models/Social%20Science/Segregation.nlogo
+- https://towardsdatascience.com/getting-started-with-openai-gym-d2ac911f5cbc
+
+aula 2 de agentes inteligentes
+dia 21/07/2022
+
+- "revisão sistemática - como fazer" a ser apresentado pelo Danilo de Souza (aluno do doutorado), na próxima aula, dia 26/07/2022
+- neste primeiro momento, o importante é fazer uma revisão sistemática em algum assunto de interesse
+- apresentação do framework Open AI Gym e explicação do "cartpole"
+- assunto de meu interesse: https://iwaponline.com/jwcc/article/11/4/1580/70336/The-role-of-agent-based-modeling-and-multi-agent
+
+aula 3 de agentes inteligentes
+dia 02/08/2022
+- vai continuar com o cartpole da Gym API e desenvolver um agente para controlar
+- mexer no lunar lander e usar algum agente já pronto para controlar
+- a aula de hoje começou pela atividade 3 do ClassRoom, "Revisitando o CartPole"
+- implementação de um agente relfexivo estático, sua política não se altera
+- um agente dinâmico é um agente reflexivo que muda suas políticas ao longo do tempo, de acordo com as alterações do ambiente
+- criar uma política que resolva o mountaincar para a próxima aula
+
+aula # de agentes inteligentes
+dia 18/08/2022
+- deu uma pincelada inicial geral entre o qlearning e o epsilon-qlearning, falando da diferença entre ambos
+- proposta de criar um ambiente customizado no Gym para executar um aprendizado de máquina
+- continuar dentro do classic control mesmo
+- resolver o Acrobot, por política ou qlearning
+- aprendendo a criar ambiente customizado
