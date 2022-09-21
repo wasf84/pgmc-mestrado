@@ -1,2 +1,3 @@
-**/deep-learning/dl-env/
+**/dl-env/
+**/.spyproject/
 .ipynb_checkpoints
