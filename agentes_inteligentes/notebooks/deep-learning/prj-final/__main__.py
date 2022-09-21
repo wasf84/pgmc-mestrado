@@ -6,7 +6,7 @@ Created on Mon Sep 12 21:58:32 2022
 @author: wasf84
 """
 
-import collections
+#import collections
 import numpy as np
 import gym
 
@@ -14,25 +14,35 @@ import gym
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from keras.layers import Dense, Flatten, Activation, Input, Lambda
-from keras.models import Sequential, Model
+from keras.layers import Dense, Flatten #, Activation, Input, Lambda
+from keras.models import Sequential #, Model
 
 from rl.agents import SARSAAgent
-from rl.agents.dqn import mean_q
+#from rl.agents.dqn import mean_q
 
-from rl.callbacks import TrainEpisodeLogger
-from rl.policy import EpsGreedyQPolicy, GreedyQPolicy, BoltzmannQPolicy, MaxBoltzmannQPolicy
+#from rl.callbacks import TrainEpisodeLogger
+from rl.policy import EpsGreedyQPolicy, MaxBoltzmannQPolicy, GreedyQPolicy, BoltzmannQPolicy
 
-from keras.utils import plot_model
-import keras.backend as K
+#from keras.utils import plot_model
+#import keras.backend as K
 
 # Criando o ambiente para treinar com o SARSA
-env = gym.make('CartPole-v1')
-seed_val = 261
+env = gym.make('Acrobot-v1')
+
+### Com o CartPole funciona normalmente.
+### env = gym.make('CartPole-v1')
+
+### Com o MountainCar não funciona. O episódio trunca com 200 movimentos e este
+### número chega rápido durante o treinamento SEM alcançar a solução.
+### env = gym.make('MountainCar-v0')
+
+# Isso é para garantir o mesmo ambiente de execução toda vez.
+seed_val = 369
 env.seed(seed_val)
 np.random.seed(seed_val)
 
-max_steps = 30000
+# Para treinar a rede
+max_steps = 70001
 
 states = env.observation_space.shape[0]
 actions = env.action_space.n
@@ -59,7 +69,7 @@ def RN(st, ac):
 model = RN(states, actions)
 
 # Defining SARSA Keras-RL agent: inputing the policy and the model
-sarsa = SARSAAgent(model=model, nb_actions=actions, policy=MaxBoltzmannQPolicy())
+sarsa = SARSAAgent(model=model, nb_actions=actions, policy=GreedyQPolicy())
 
 # Compiling SARSA with mean squared error loss
 sarsa.compile('adam', metrics=['mse'])
@@ -68,7 +78,7 @@ sarsa.compile('adam', metrics=['mse'])
 sarsa.fit(env, nb_steps=max_steps, visualize=False, verbose=1)
 
 # Fitting and testing our agent model for 200 episodes
-scores = sarsa.test(env, nb_episodes = 200, visualize = False)
+scores = sarsa.test(env, nb_episodes = 300, visualize = False)
 
 #%matplotlib inline
 sns.set()

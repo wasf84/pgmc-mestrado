@@ -41,3 +41,9 @@ dia 18/08/2022
 - continuar dentro do classic control mesmo
 - resolver o Acrobot, por política ou qlearning
 - aprendendo a criar ambiente customizado
+
+aula # de agentes inteligentes
+dia 13/09/2022
+- PICOC
+- População = Problema (num caso mais geral)
+
