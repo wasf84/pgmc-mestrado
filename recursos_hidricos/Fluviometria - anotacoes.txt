@@ -1,0 +1,12 @@
+Fluviometria
+
+- Parte 1
+- é o estudo da medição de níveis e vazões (é empírico, ou seja, feito em campo)
+- medição de descarga líquida = vazão
+- é o volume de água que atravessa uma sessão tranversal numa determinada unidade de tempo (geralmente segundo) (volume no tempo)
+
+- não entendi bem o que é cota...
+- existe o ponto 0 de medição? tipo...as réguas linimétricas começam de uma certa altura, certo?
+
+- Parte 2
+- por que medições especificamente às 7h e às 17h? (curiosidade)

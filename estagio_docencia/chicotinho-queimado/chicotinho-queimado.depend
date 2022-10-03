@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1664769923 source:/home/wasf84/Documentos/pgmc-mestrado/estagio_docencia/chicotinho-queimado/main.c
+	<time.h>
+	<stdio.h>
+	<stdlib.h>
+
