@@ -1,0 +1,184 @@
+ocCódigo
+54001000
+
+Nome Estação
+POVOADO DE VAU
+
+Bacia
+5 - ATLÂNTICO,TRECHO LESTE
+
+SubBacia
+54 - RIO JEQUITINHONHA
+
+Rio
+RIO JEQUITINHONHA
+
+Estado
+MINAS GERAIS
+
+Município
+SERRO
+
+Responsável
+ANA
+
+Operadora
+CPRM
+
+Localização
+-18.4175 -43.5253
+
+Altitude (m)
+855
+
+Área de Drenagem (Km²)
+371
+
+=========================================
+
+Código
+54001100
+
+Nome Estação
+DIAMANTINA
+
+Bacia
+5 - ATLÂNTICO,TRECHO LESTE
+
+SubBacia
+54 - RIO JEQUITINHONHA
+
+Rio
+RIO JEQUITINHONHA
+
+Estado
+MINAS GERAIS
+
+Município
+DIAMANTINA
+
+Responsável
+IGAM-MG
+
+Operadora
+IGAM-MG
+
+Localização
+-18.4108 -43.5161
+
+Altitude (m)
+
+Área de Drenagem (Km²)
+390
+
+=========================================
+
+Código
+54002990
+
+Nome Estação
+MENDANHA - MONTANTE
+
+Bacia
+5 - ATLÂNTICO,TRECHO LESTE
+
+SubBacia
+54 - RIO JEQUITINHONHA
+
+Rio
+RIO JEQUITINHONHA
+
+Estado
+MINAS GERAIS
+
+Município
+DIAMANTINA
+
+Responsável
+ANA
+
+Operadora
+ANA
+
+Localização
+-18.1106 -43.5258
+
+Altitude (m)
+
+Área de Drenagem (Km²)
+1290
+
+=========================================
+
+Código
+54003000
+
+Nome Estação
+MENDANHA
+
+Bacia
+5 - ATLÂNTICO,TRECHO LESTE
+
+SubBacia
+54 - RIO JEQUITINHONHA
+
+Rio
+RIO JEQUITINHONHA
+
+Estado
+MINAS GERAIS
+
+Município
+DIAMANTINA
+
+Responsável
+ANA
+
+Operadora
+ANA
+
+Localização
+-18.1106 -43.5258
+
+Altitude (m)
+698
+
+Área de Drenagem (Km²)
+1290
+
+=========================================
+
+Código
+54003500
+
+Nome Estação
+ITACAMBIRA
+
+Bacia
+5 - ATLÂNTICO,TRECHO LESTE
+
+SubBacia
+54 - RIO JEQUITINHONHA
+
+Rio
+RIO CONGONHAS
+
+Estado
+MINAS GERAIS
+
+Município
+ITACAMBIRA
+
+Responsável
+IGAM-MG
+
+Operadora
+IGAM-MG
+
+Localização
+-16.6658 -43.1533
+
+Altitude (m)
+756
+
+Área de Drenagem (Km²)

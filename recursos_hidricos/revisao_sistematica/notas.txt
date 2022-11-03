@@ -1,0 +1,17 @@
+(I) Trabalhos que definam modelos de previsões de vazão de rios
+(I) Trabalhos que aplicam modelos à previsões de vazão de rios
+(I) Trabalhos que apresentem apenas estudos primários
+(E) Trabalhos que não englobem previsões hidrológicas
+(E) 
+(E) Trabalhos que possam ser acessados de forma aberta ou por meio do periódico da CAPES
+(E) Trabalhos que apresentem estudos segundários ou terciários
+
+-----------------
+
+Estudos que utilizam FUZZY e GMDH híbridos receberão 1 ponto
+Estudos que utilizam ANFIS e GMDH híbridos receberão 1 ponto
+Estudos que utilizam GS- GMDH receberão 2 pontos
+Estudos que utilizam GMDH receberão 3 pontos
+Estudos que utilizam previões de chuvas receberão 1 ponto
+Estudos que utilizam previões de enxentes em rios receberão 2 ponto
+Estudos que utilizam previões naturais de vazão em rios receberão 3 ponto
