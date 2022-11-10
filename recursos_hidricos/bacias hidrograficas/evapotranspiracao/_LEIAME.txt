@@ -1,0 +1,1 @@
+Abrir o aquivo "evapotranspiracao_alto_paraiba_sul.qgz" no QGiz e ele já carregará tudo certinho!
