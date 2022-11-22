@@ -1,3 +1,25 @@
-- enunciado de "Algoritmos_A02F01" precisa arrumar para o padrão do C++. Ao invés de "Utilize %.2f", passar para "Utilize cout.precision(3)".
+- a questão "Algoritmos_A02E01" está para "c_program" e não compila para C++
+
+- não consigo executar a questão "Algoritmos_A02E10". Aparece insistentemente a seguinte mensagem de erro:
+
+prog.cpp: In function ‘int main()’:
+prog.cpp:48:5: error: redefinition of ‘int main()’
+ int main() {
+     ^~~~
+prog.cpp:36:5: note: ‘int main()’ previously defined here
+ int main() {
+     ^~~~
+
+...mas no g++ localmente roda normalmente. Não sei mais o que tentar. =/
+
+- enunciado de "Algoritmos_A02F01" precisa arrumar para o padrão do C++. Ao invés de "Utilize %.2f", passar para "Utilize cout.precision(2); cout << fixed;".
+
 - não entendi como é pra usar a função e resolver o exercício "Algoritmos_X_A02E02"
+
 - não consegui resolver o exercício "Laboratorio_A02E03" pelo desafio
+
+- a questão "Algoritmos_X_A02E01" está para "c_program" e não compila para C++
+
+- a questão "Laboratorio_A02_URI1006" está falhando pra apenas um dos testes, mas por causa de arredondamento em casa decimal. =/
+
+- a questão "Laboratório_A02E01" está para "c_program" e não compila para C++
