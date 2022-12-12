@@ -1,30 +1,16 @@
-- A Ciência é o conhecimento adquirido através do estudo, pesquisa ou prática.
-- A tecnologia é o estudo das técnicas, uso de instrumentos para resolução de problemas.
-- A humanidade, na medida em que avança sobre a Ciência, desenvolve novas técnicas de produção, desenvolve novas ou aprimora tecnologias passadas.
+- A Ciência é o conhecimento adquirido através do estudo, pesquisa ou prática;
+- A tecnologia é o estudo das técnicas, uso de instrumentos para resolução de problemas; o ser humano é uma criatura desenvolvedora de ferramentas, com as quais domina o ambiente;
+- A humanidade, na medida em que avança sobre a Ciência, desenvolve novas técnicas de produção, desenvolve novas ou aprimora tecnologias passadas;
 - A Tecnologia é um produto da Ciência.
-- Avança em conhecimento antes, em tecnologia posteriormente.
-- Tecnologia não é um termo recente; tecnologia primitiva quando o homem dominou o fogo, tecnologia medieval permitiu as navegações, expansão do mercantilismo; tecnologia industrial, máquinas pesadas e complexas mudou a forma de produção capitalista; mais recentemente, século 20, tecnologia nuclear revolucionou a medicina, nanotecnologia, robótica.
+- Tecnologia não é um termo recente; tecnologia primitiva quando o homem inventou a roda, tecnologia moderna permitiu as navegações, expansão do mercantilismo; tecnologia industrial, máquinas pesadas e complexas mudou a forma de produção capitalista; mais recentemente, século 20, tecnologia nuclear revolucionou a medicina, nanotecnologia, robótica.
 
 ------------------------------
 
-4.4 Ciência e Tecnologia
+Referências:
 
-Em Computação, os termos ciência e tecnologia quase sempre andam tão juntos que muitas pessoas têm dificuldade em distingui-los. Porém, a ciência é a busca do conhecimento e das explicações. A ciência constrói teorias para explicar os fatos observados. Já a tecnologia é a aplicação dos conhecimentos nas atividades práticas, como, por exemplo, as atividades industriais e econômicas.
-
-Ao contrário da ciência, a tecnologia não tem por vocação explicar o mundo. Ela é prática e existe para transformar o mundo, não para teorizar sobre ele.
-
-Observa-se que, algumas vezes, dissertações e teses em Computação, bem como artigos científicos, ainda são fortemente caracterizados como apresentações meramente tecnológicas: sistemas, protótipos, frameworks, arquiteturas, modelos, processos, todas essas construções são técnicas, e não necessariamente ciência.
-
-Para que um trabalho seja efetivamente de cunho científico, é necessário que a informação contida nele explique um pouco mais sobre o porquê de as coisas funcionarem como funcionam ou como poderiam funcionar melhor. Então a ciência pode estar presente em ideias apresentadas em um trabalho. Usualmente, há um problema de pesquisa identificado para o qual ainda não se conhece uma solução satisfatória. Há também uma hipótese, ou seja, uma ideia que pode ser testada para resolver o problema integral ou parcialmente. O trabalho deve mostrar que a ideia em questão de fato é válida, empregando as construções do método científico que se aplicarem ao caso.
-
-O trabalho pode ser recheado de evidências de que de fato está sendo apresentado conhecimento novo. Entre essas evidências podem-se mencionar os estudos de caso, a pesquisa bibliográfica comparativa, a pesquisa experimental etc. Além disso, usualmente demonstra-se também que as novas ideias têm aplicação prática em uma ferramenta, algoritmo, protótipo, processo etc. Dessa forma, esses artefatos podem e devem ser apresentados como elementos nos quais a ideia se incorpora, ganhando vida e aplicação prática, ou seja, realizando sua vocação técnica. A monografia ou o artigo usualmente não deveria ser sobre o artefato, mas sobre as ideias incorporadas nele.
-
-Nos níveis de iniciação científica, mestrado e doutorado, a pesquisa em Ciência da Computação, seja qual for a subárea, deve levar o pesquisador a buscar uma contribuição para o conhecimento e não apenas apresentar novas tecnologias. Embora estas também sejam relevantes e importantes, não são necessariamente ciência, ficando, portanto, adequadas apenas nos níveis de trabalhos de graduação e especialização.
-
-A pesquisa científica deve ser realizada de acordo com os princípios do método científico. As observações e os experimentos, se for o caso, devem ser obtidos de forma rigorosa e repetível. Trabalhos de iniciação científica, mestrado e doutorado devem, assim, produzir ciência para serem considerados pesquisa científica.
-
-Usualmente, um trabalho científico se estrutura sobre um problema de pesquisa a ser resolvido (uma questão ainda não respondida satisfatoriamente) e uma hipótese (uma possível resposta a ser avaliada). Se a hipótese for confirmada pela evidência empírica ou formal, o cientista deve apresentar uma teoria que explique tal fato, em geral como uma extensão ou alternativa a uma teoria anterior.
-
-Uma pesquisa bem-sucedida possivelmente iniciará com uma revisão bibliográfica adequada para que se conheçam os principais conceitos da área e para que se conheçam os últimos desenvolvimentos na área. Após essa revisão, quando o pesquisador for capaz de reconhecer as questões importantes ainda não respondidas, ele poderá realizar o trabalho de pesquisa iniciando, por exemplo, com um estudo de caso para que a pesquisa exploratória coloque à luz novas questões e problemas. Depois de formular uma hipótese para resolver o problema indicado e uma justificativa que explique por que a hipótese deveria funcionar, o pesquisador poderá aplicar os métodos empíricos adequados para convencer os demais de que a sua hipótese é correta frente aos princípios do método científico, isto é, que ela é coerente com os conhecimentos existentes e que é suficientemente simples para ser adequada pelo princípio da lâmina de Occam.
-
-A pesquisa científica não pode ser definida como uma receita de bolo, na qual se deve executar sempre a mesma sequência de passos para chegar ao resultado esperado, mas imagina-se que ela siga determinados critérios para que seja objetiva, isto é, para que outros aceitem seus resultados como válidos independentemente de opinião ou preferência.
+https://www.coladaweb.com/geografia/tecnologia
+https://www.youtube.com/watch?v=k9iF-DBb7b0
+https://www.significados.com.br/tecnologia-2/
+https://www.significados.com.br/ciencia/
+https://educacao.uol.com.br/disciplinas/historia/capitalismo-industrial-capitalismo-e-revolucoes-das-novas-tecnologias.htm
+Metodologia de Pesquisa para Ciência da Computação, 3a. edição

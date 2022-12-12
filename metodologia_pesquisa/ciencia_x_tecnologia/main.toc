@@ -1,0 +1,4 @@
+\babel@toc {brazil}{}\relax 
+\beamer@sectionintoc {1}{Ciência}{3}{0}{1}
+\beamer@sectionintoc {2}{Tecnologia}{5}{0}{2}
+\beamer@sectionintoc {3}{Relação entre Ciência e Tecnologia}{8}{0}{3}

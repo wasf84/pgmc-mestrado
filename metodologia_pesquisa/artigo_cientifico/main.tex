@@ -1,0 +1,66 @@
+\documentclass[11pt]{beamer}
+
+%%%%%%%% tema e cor %%%%%%%%
+\mode<presentation> {
+\usetheme{Madrid}
+%\usecolortheme{albatross}
+}
+
+\input{config.tex}
+
+%%%%%%%% titulo e subtitulo %%%%%%%%
+\title{Metodologia Científica e Ética na Pesquisa}
+\subtitle{Normas e Diretrizes - Artigo Científico}
+
+%%%%%%%% nome dos autores %%%%%%%%
+\author{Welson de Avelar Soares Filho}
+
+\begin{document}
+\input{files/pre-slides.tex}
+
+%%%%%%%% slides %%%%%%%%
+\section{Introdução}
+\input{files/introducao.tex}
+
+\section{Artigo Científico}
+\input{files/artigo_cientifico.tex}
+
+%\section{Tecnologia}
+%\input{files/tecnologia.tex}
+
+%\section{Relação entre Ciência e Tecnologia}
+%\input{files/relacao.tex}
+
+%\section{Objetivos}
+%\input{files/objetivos.tex}
+
+%\section{Metodologia}
+%\input{files/metodologia.tex}
+
+%\section{Resultados}
+%\input{files/resultados.tex}
+
+%\section{Conclusão}
+%\input{files/conclusao.tex}
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+%------------------------------------------------
+%%%%%%%% referencias %%%%%%%%
+\section{Referências}
+\nocite{*}
+\begin{frame}[allowframebreaks]{Referências}
+    \bibliographystyle{unsrt}
+    \bibliography{ref.bib}
+\end{frame}
+
+
+%%%%%%%% repete primeiro slide %%%%%%%%
+\begin{frame}
+\titlepage 
+\end{frame}
+
+
+\end{document}
