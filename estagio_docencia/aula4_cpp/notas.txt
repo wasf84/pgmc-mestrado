@@ -1,0 +1,4 @@
+Poderia reconsiderar a forma que se imprime em alguns exercícios. Por exemplo, no exercício "Algoritmos_A04E05" o teste executa números inteiros e os imprime como float.
+
+Acontece que pra imprimir EXATAMENTE igual ao teste, e, consequentemente, ter a avaliação 100% correta pelo sistema, necessita de alguns pequenos truques só para imprimir formatadinho. Apenas isso. Não é algo que interfira no que se está ensinando na aula em questão.
+
