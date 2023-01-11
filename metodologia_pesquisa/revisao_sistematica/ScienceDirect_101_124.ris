@@ -1,0 +1,572 @@
+TY  - JOUR
+T1  - Inductive predictions of hydrologic events using a Long Short-Term Memory network and the Soil and Water Assessment Tool
+AU  - Majeske, Nicholas
+AU  - Zhang, Xuesong
+AU  - Sabaj, McKailey
+AU  - Gong, Lei
+AU  - Zhu, Chen
+AU  - Azad, Ariful
+JO  - Environmental Modelling & Software
+VL  - 152
+SP  - 105400
+PY  - 2022
+DA  - 2022/06/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2022.105400
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815222001062
+KW  - Hydrology
+KW  - Machine learning
+KW  - Long short-term memory
+KW  - Wabash river
+KW  - Little river
+KW  - Watershed
+AB  - We present machine learning methods to predict hydrologic features such as streamflow and soil moisture from spatially and temporally varying hydrological and meteorological data. We used a temporal reduction technique to reduce computation and memory requirements and trained a Long Short-Term Memory (LSTM) network to predict soil moisture and streamflow over multiple watersheds. We show LSTM networks can be trained in a fraction of the time required by complex process-based and attention-based models such as Soil and Water Assessment Tool (SWAT) and GeoMAN without sacrificing accuracy. We also demonstrate that outside data - sourced from a watershed other than the target - can be used to train LSTM to comparable or even superior prediction accuracy. The success of LSTM in such spatially-inductive settings shows hydrologic features can be predicted with minimal prior knowledge of the watershed in question. Finally, we make all methodologies of this work publicly available as an end-to-end software pipeline that facilitates rapid prototyping of hydrologic learners.
+ER  - 
+
+TY  - JOUR
+T1  - Real-time streamflow forecasting: AI vs. Hydrologic insights
+AU  - Krajewski, Witold F.
+AU  - Ghimire, Ganesh R.
+AU  - Demir, Ibrahim
+AU  - Mantilla, Ricardo
+JO  - Journal of Hydrology X
+VL  - 13
+SP  - 100110
+PY  - 2021
+DA  - 2021/12/01/
+SN  - 2589-9155
+DO  - https://doi.org/10.1016/j.hydroa.2021.100110
+UR  - https://www.sciencedirect.com/science/article/pii/S2589915521000389
+KW  - Real-time streamflow forecasting
+KW  - Artificial intelligence
+KW  - Hydrologic insights
+KW  - Benchmarking
+KW  - Persistence
+KW  - Iowa
+AB  - In this paper, we propose a set of simple benchmarks for the evaluation of data-based models for real-time streamflow forecasting, such as those developed with sophisticated Artificial Intelligence (AI) algorithms. The benchmarks are also data-based and provide context to judge incremental improvements in the performance metrics from the more complicated approaches. The benchmarks include temporal and spatial persistence, persistence corrected for baseflow and streamflow, as well as river distance weighted runoff obtained from space-time distributed rainfall. In the development of the benchmarks, we use basic hydrologic insights such as flow aggregation by the river network, scale-dependence in basin response, streamflow partitioning into quick flow and baseflow, water travel time, and rainfall averaging by the basin width function. The study uses 140 streamflow gauges in Iowa that cover a range of basin scales between 7 and 37,000 km2. The data cover 17 years. This work demonstrates that the proposed benchmarks can provide good performance according to several commonly used metrics. For example, streamflow forecasting at half of the test locations across years achieves a Kling-Gupta Efficiency (KGE) score of 0.6 or higher at one-day ahead lead time, and 20% of cases reach the KGE of 0.8 or higher. The proposed benchmarks are easy to implement and should prove useful for developers of data-based as well as physics-based hydrologic models and real-time data assimilation techniques.
+ER  - 
+
+TY  - JOUR
+T1  - A computer vision-based approach to fusing spatiotemporal data for hydrological modeling
+AU  - Jiang, Shijie
+AU  - Zheng, Yi
+AU  - Babovic, Vladan
+AU  - Tian, Yong
+AU  - Han, Feng
+JO  - Journal of Hydrology
+VL  - 567
+SP  - 25
+EP  - 40
+PY  - 2018
+DA  - 2018/12/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2018.09.064
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169418307583
+KW  - Computer vision
+KW  - Data fusion
+KW  - Hydrological modeling
+KW  - Machine learning
+KW  - Heihe River Basin
+KW  - Environmental big data
+AB  - This study develops a novel approach to data-driven hydrological modeling. The approach adopts the feature representation technique in computer vision to effectively exploit spatial information contained in time-variant input data fields and seamlessly fuse multisource information via machine learning. The new approach overcomes a major limitation of existing approaches in which the spatial heterogeneity of input variables cannot be sufficiently accounted for. The approach is applied to predict the streamflow in a watershed on the northern margin of the Qinghai-Tibetan Plateau, and its performance is compared with various data-driven and process-based models. The major findings are as follows. First, the new approach represents a general framework for the fusion of multisource spatiotemporal data for hydrological modeling and demonstrates great potential to incorporate fast-growing environmental big data. Second, the new approach demonstrates satisfactory short-term forecasting, long-term simulation, and transfer learning performances and is promising for addressing predictions in ungauged basins. Third, the predictors, including precipitation, temperature, leaf area index, and historical streamflow, play markedly distinct roles in modeling streamflow with the novel approach. Finally, topographic information is not a necessary model input in the proposed approach because spatial patterns can be well embodied by other inputs (e.g., temperature) that have high similarities with topography. This study represents the first attempt to bring computer vision into data-driven hydrological modeling and may inspire future studies in this promising direction.
+ER  - 
+
+TY  - JOUR
+T1  - Ensemble and stochastic conceptual data-driven approaches for improving streamflow simulations: Exploring different hydrological and data-driven models and a diagnostic tool
+AU  - Hah, David
+AU  - Quilty, John M.
+AU  - Sikorska-Senoner, Anna E.
+JO  - Environmental Modelling & Software
+VL  - 157
+SP  - 105474
+PY  - 2022
+DA  - 2022/11/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2022.105474
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815222001785
+KW  - Ensemble
+KW  - Stochastic
+KW  - Streamflow simulation
+KW  - Data-driven model
+KW  - Hydrological model
+KW  - Uncertainty
+AB  - Recently, the conceptual data-driven approach (CDDA) was proposed to correct residuals of ensemble hydrological models (HMs) using data-driven models (DDMs), followed by the stochastic CDDA (SCDDA) that used HM simulations as input to DDMs within a stochastic framework - both approaches improved ensemble HMs' simulations. Here, a new SCDDA is introduced where CDDA uncertainty is estimated (instead of DDM uncertainty in the original SCDDA). Using nine HM-DDM combinations for daily streamflow simulation in three Swiss catchments, the new SCDDA improved CDDA's mean continuous ranked probability score up to 15% and performed similarly without a snow-routine in a snowy catchment, suggesting that SCDDA may account for missing processes in HMs. The stochastic framework can convert unreliable ensemble models into more reliable (stochastic) models at the cost of simulation sharpness. The coverage probability plot is proposed as a diagnostic tool, predicting SCDDA's out-of-sample reliability using validation set data (CDDA simulations and observations).
+ER  - 
+
+TY  - JOUR
+T1  - A day-ahead industrial load forecasting model using load change rate features and combining FA-ELM and the AdaBoost algorithm
+AU  - Zhu, Ziwei
+AU  - Zhou, Mengran
+AU  - Hu, Feng
+AU  - Wang, Shenghe
+AU  - Ma, Jinhui
+AU  - Gao, Bo
+AU  - Bian, Kai
+AU  - Lai, Wenhao
+JO  - Energy Reports
+VL  - 9
+SP  - 971
+EP  - 981
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 2352-4847
+DO  - https://doi.org/10.1016/j.egyr.2022.12.044
+UR  - https://www.sciencedirect.com/science/article/pii/S2352484722026440
+KW  - Short-term load forecast
+KW  - Industrial customers
+KW  - Spearman correlation coefficient
+KW  - Extreme learning machine
+KW  - Ensemble learning
+AB  - Industrial customers consume a large part of the total electricity demand. In the operation of industrial energy systems, accurate prediction of electric loads is a prerequisite to help industrial users adjust their electric load dispatch and improve energy efficiency. Therefore, this paper proposes a day-ahead industrial load forecasting model employing load change rate features and combining the firefly algorithm to optimize the extreme learning machine and adaptive boosting algorithm (LCR-AdaBoost-FA-ELM). The industrial load is mainly influenced by the power users’ production schedules, making its forecasting laws mainly analyzed by the changing laws of the load data itself. Given this, the rate of load change feature is introduced to form a candidate feature set with variables such as the date and lag load. In order to decrease the number of parameters required to train the model, the Spearman correlation coefficient is used to select high-quality input features and eliminate variables that are weakly associated with electricity consumption. The basic algorithm of the prediction model is the ELM, based on which the FA is used to optimize its weights and biases. Finally, the ensemble learning concept is introduced to learn to combine multiple FA-ELM weak predictors by AdaBoost to correct the prediction errors. In this paper, the proposed model is validated using a typical industrial industry, a furniture factory, as a research case. The results show that the proposed LCR features can capture the nonlinear characteristics of the load sequence, resulting in more precise prediction outcomes. Additionally, based on the FA boosting ELM prediction accuracy, AdaBoost can lower the day-ahead load prediction error once more. Using the mean absolute percentage error (MAPE) as an example, AdaBoost-FA-ELM declines by 76.85% compared to ELM and decreases by 23.90% before and after the LCR features are applied. The proposed forecasting model framework in this paper provides a new research strategy for the field of energy forecasting.
+ER  - 
+
+TY  - JOUR
+T1  - The effect of data granularity on prediction of extreme hydrological events in highly urbanized watersheds: A supervised classification approach
+AU  - Erechtchoukova, Marina G.
+AU  - Khaiter, Peter A.
+JO  - Environmental Modelling & Software
+VL  - 96
+SP  - 232
+EP  - 238
+PY  - 2017
+DA  - 2017/10/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2017.06.037
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815217302554
+KW  - Hydrological scale
+KW  - Data granularity
+KW  - Extreme event
+KW  - Hydrological prediction
+KW  - Supervised classification
+KW  - Time delay embedding
+AB  - During heavy rains, small urbanized watersheds with predominantly impervious surfaces exhibit high surface runoff which may subsequently lead to flash floods. Prediction of such extreme events in an efficient and timely manner is one of the important problems faced by regional flood management teams. These predictions can be done using supervised classification and data collected by stream and rain gauges installed on the watershed. The accuracy of predictions depends on data granularity which determines the achievable level of uncertainty for different lead time intervals. The study was implemented on data collected in a highly urbanized watershed of a small stream – Spring Creek, Ontario, Canada. It was demonstrated that the upscaling of observation data improves the classifiers’ performance while increasing modelling scales. The obtained results suggest the development of ensembles of classifiers trained on data sets of different granularity as a means to extend the lead time of reliable predictions.
+ER  - 
+
+TY  - JOUR
+T1  - Runoff predictions in ungauged basins using sequence-to-sequence models
+AU  - Yin, Hanlin
+AU  - Guo, Zilong
+AU  - Zhang, Xiuwei
+AU  - Chen, Jiaojiao
+AU  - Zhang, Yanning
+JO  - Journal of Hydrology
+VL  - 603
+SP  - 126975
+PY  - 2021
+DA  - 2021/12/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2021.126975
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169421010258
+KW  - Rainfall-runoff modeling
+KW  - LSTM
+KW  - Sequence-to-sequence models
+KW  - Ungauged basins
+AB  - How to improve the performance of runoff predictions in ungauged basins (PUB) is challenging. Recently, the long short-term memory (LSTM) based models have excellent performance and receive many attentions. In this paper, to improve the performance for 1-day-ahead runoff PUB and provide good performance for multi-day-ahead runoff PUB, we propose four sequence-to-sequence (S2S) models to deal with PUB. Furthermore, we introduce two modules named attribute-weighting module and multi-head-attention module for improving the performance. To show the power of these S2S models and the advantages of those two modules, we test our four S2S models and also three benchmark models including a PUB-LSTM model and two process-driven models by using k-fold validation on 531 basins of the Catchment Attributes and Meteorology for Large-Sample Studies (CAMELS) dataset. For 1-day-ahead runoff PUB, the median and the mean of Nash–Sutcliffe efficiency for the 531 basins provided by our best model achieve 0.78 and 0.70, respectively, while those provided by the PUB-LSTM model (the best one among those three benchmark models) are 0.69 and 0.54, respectively. Besides, our S2S models have promising results for multi-day-ahead runoff PUB. For 7th-day-ahead runoff PUB, the median and the mean of Nash–Sutcliffe efficiency for the 531 basins provided by our best model are 0.68 and 0.57, respectively. Furthermore, the results also show that the two modules are beneficial for improving the performance.
+ER  - 
+
+TY  - JOUR
+T1  - Evaluation of Subseasonal-to-Seasonal (S2S) precipitation forecast from the North American Multi-Model ensemble phase II (NMME-2) over the contiguous U.S.
+AU  - Zhang, Lujun
+AU  - Kim, Taereem
+AU  - Yang, Tiantian
+AU  - Hong, Yang
+AU  - Zhu, Qian
+JO  - Journal of Hydrology
+VL  - 603
+SP  - 127058
+PY  - 2021
+DA  - 2021/12/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2021.127058
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169421011082
+KW  - NMME-2
+KW  - Subseasonal-to-seasonal Precipitation Forecast
+KW  - CONUS
+KW  - Forecast Validation
+KW  - Forecast Bias
+KW  - Extreme Precipitation
+AB  - The second phase of the North America Multi-Model Ensemble (NMME-2) provides globally available Subseasonal-to-Seasonal (S2S) precipitation forecasts with a daily resolution. The S2S precipitation forecasts are getting increasing attention for their potentials in providing hydrometeorological forcing information for water resources planning at an extended range. However, the forecast skills of many existing S2S forecast products will significantly decrease when the lead time increases, hindering their applicability for watershed-scale hydrologic modeling. Therefore, forecast validation and large-scale evaluation are of great importance for water resources planning and hydrological applications. In this study, we comprehensively evaluate the S2S precipitation forecasts from the NMME-2 dataset over the contiguous United States (CONUS) and during the study period from 1982 to 2011. Three aspects of precipitation forecast capabilities are compared and analyzed: bias, skill scores, and the ability to predict extreme precipitation events. The Parameter-elevation Regressions on Independent Slopes Model (PRISM) is used as ground truth reference. Differs from other regional forecast validation study, we further examined and analyzed the dependences of NMME-2 precipitation forecast skills according to different seasonality, geographical locations, and lead times. Results show that the forecast biases are not sensitive to lead times but are seasonally dependent of all NMME-2 models. Overestimations are found in the Western U.S. in cooler seasons while underestimations are observed in the central regions of the U.S. in warmer seasons. The forecast skill of all individual NMME-2 models generally decreases as increases of lead times. The simple model averaging (SMA) of five NMME-2 models demonstrates a higher forecast skill than any individual NMME-2 models. Spatially, the highest forecast skill scores are observed at coastal areas in the Western U.S. with an one-week lead time. As compared to the historical resampled forecasts, NMME-2 also shows better performance in predicting extreme precipitation events above 99% percentiles and below 1% percentiles with higher probability of detections and lower false alarm ratios. The obtained results suggest the great potentials of NMME-2 precipitation forecasts in assisting ensemble hydrologic forecasts at the S2S scale over the CONUS.
+ER  - 
+
+TY  - JOUR
+T1  - Complexity of hydrologic basins: A chaotic dynamics perspective
+AU  - Ombadi, Mohammed
+AU  - Nguyen, Phu
+AU  - Sorooshian, Soroosh
+AU  - Hsu, Kuo-lin
+JO  - Journal of Hydrology
+VL  - 597
+SP  - 126222
+PY  - 2021
+DA  - 2021/06/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2021.126222
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169421002699
+KW  - Nonlinear dynamics
+KW  - Catchment classification
+KW  - Hydrologic complexity
+AB  - The objective of this study is to examine the dynamic complexity of hydrologic basins using techniques of phase space reconstruction. These non-parametric, model-free techniques which have their basis in the theory of chaotic dynamical systems are advantageous in resurrecting the features of multivariable dynamics solely from one-dimensional timeseries. Dynamic complexity is characterized by two measures directly interpretable as number of active degrees of freedom (dimensionality) and strength of nonlinearity. The analysis is conducted on daily streamflow observations of 408 basins from the Model Parameter Estimation Project (MOPEX) dataset spanning a wide range of climatic, topographic and land surface properties. The results show that the two complexity measures vary considerably across basins; however, their distributions are positively skewed, indicating that most basins exhibit low dimensionality and moderate nonlinearity. By examining how dynamic complexity relate to a set of 15 basin properties, it was found that dynamics dimensionality is primarily related to basin size; precisely larger basins exhibit lower dimensional dynamics. On the other hand, strength of nonlinearity is found to be regulated by the extent of vegetation in land cover. Specifically, basins with limited vegetation cover tend to have more linear dynamics. Furthermore, some observations regarding the presence of chaotic dynamics and the relationship between dynamic complexity and accuracy of prediction are presented. The results of this study have implications and potential relevance to catchment similarity and classification frameworks as well as model selection and extrapolation of model parameters to ungauged basins.
+ER  - 
+
+TY  - JOUR
+T1  - Advancing flood warning procedures in ungauged basins with machine learning
+AU  - Rasheed, Zimeena
+AU  - Aravamudan, Akshay
+AU  - Gorji Sefidmazgi, Ali
+AU  - Anagnostopoulos, Georgios C.
+AU  - Nikolopoulos, Efthymios I.
+JO  - Journal of Hydrology
+VL  - 609
+SP  - 127736
+PY  - 2022
+DA  - 2022/06/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.127736
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169422003110
+KW  - Flood peak
+KW  - Prediction
+KW  - Machine learning
+KW  - Ungauged basins
+KW  - Flood warning
+AB  - Flood prediction across scales and more specifically in ungauged areas remains a great challenge that limits the efficiency of flood risk mitigation strategies and disaster preparedness. Building upon the recent success of Machine Learning (ML) models on streamflow prediction, this work presents a prototype ML-based framework for flood warning and flood peak prediction. The fundamental elements of the proposed system consist of a) a Long-Short Term Memory (LSTM) model for classifying storm events to Flood/no-Flood given a threshold based on the 90th flow percentile and b) the flood peak prediction models. The selected ML-models for flood peak prediction are the Histogram based Gradient Boosting Regressor and the Random Forest. One of the strengths, and reason for selection, of these decision-tree models is their degree of interpretability. This is exploited in the study to help us spatially disentangle the role of both the static and dynamic drivers of flood peak response. Our analysis is presented for 18 distinct hydroclimatic regions across the contiguous US. Results reveal a significant regional dependence on both predictive performance and dominant flood predictors, which emphasize the variability in the complexity of a catchment’s hydrologic behavior as well as its impact on forecasting flood response. Evaluation of the drivers of flood peaks noted distinct dependencies among the dynamic and static predictors considered in our models for flood peaks of different severity. Specifically, low-moderate flood events showed a clear preponderance for the static catchment attributes over dynamic predictors like precipitation whereas precipitation was the dominant driver for the highest flood peaks. The proposed flood peak prediction models were compared against a state-of-the-art LSTM model and were shown to outperform in ungauged basins for the majority of basins. Overall, the proposed system classified storms correctly for >80% in all cases and exhibited a percent relative difference in flood peak estimates of <30% in most cases.
+ER  - 
+
+TY  - JOUR
+T1  - A review on flood management technologies related to image processing and machine learning
+AU  - Munawar, Hafiz Suliman
+AU  - Hammad, Ahmed W.A.
+AU  - Waller, S. Travis
+JO  - Automation in Construction
+VL  - 132
+SP  - 103916
+PY  - 2021
+DA  - 2021/12/01/
+SN  - 0926-5805
+DO  - https://doi.org/10.1016/j.autcon.2021.103916
+UR  - https://www.sciencedirect.com/science/article/pii/S0926580521003678
+KW  - Flood management
+KW  - Image processing
+KW  - Machine learning
+KW  - Disaster management
+AB  - Flood management, which involves flood prediction, detection, mapping, evacuation, and relief activities, can be improved via the adoption of state-of-the-art tools and technology. Focusing on ways to mitigate floods and provide a quick response after floods is critical to ensuring fatalities are minimized, along with reducing environmental and economic damages. In the literature, techniques from different domains including remote sensing, machine learning, image processing and data analysis have been explored to manage different tasks related to flood management. This study proposes a new framework that categorizes the recent research that has been conducted on flood management systems. The framework addresses the following significant research questions: (1) What are the major techniques deployed in flood management? (2) What are the phases of flood management which existing studies tend to focus on? (3) What are the systems that are proposed to tackle problems related to flood management? (4) What are the research gaps identified in the literature when it comes to deploying technology for flood management? A classification framework for flood management has been proposed to group the various technologies reviewed. Lack of hybrid models, which combine image processing and machine learning, for flood management was observed. In addition, the application of machine learning-based methods in the post-disaster scenario was found to be limited. Thus, future efforts need to focus on combining disaster management knowledge, image processing techniques and machine learning tools to ensure effective and holistic disaster management across all phases.
+ER  - 
+
+TY  - JOUR
+T1  - The value of human data annotation for machine learning based anomaly detection in environmental systems
+AU  - Russo, Stefania
+AU  - Besmer, Michael D.
+AU  - Blumensaat, Frank
+AU  - Bouffard, Damien
+AU  - Disch, Andy
+AU  - Hammes, Frederik
+AU  - Hess, Angelika
+AU  - Lürig, Moritz
+AU  - Matthews, Blake
+AU  - Minaudo, Camille
+AU  - Morgenroth, Eberhard
+AU  - Tran-Khac, Viet
+AU  - Villez, Kris
+JO  - Water Research
+VL  - 206
+SP  - 117695
+PY  - 2021
+DA  - 2021/11/01/
+SN  - 0043-1354
+DO  - https://doi.org/10.1016/j.watres.2021.117695
+UR  - https://www.sciencedirect.com/science/article/pii/S0043135421008897
+KW  - Machine learning
+KW  - Anomaly detection
+KW  - Environmental systems
+KW  - Labels
+AB  - Anomaly detection is the process of identifying unexpected data samples in datasets. Automated anomaly detection is either performed using supervised machine learning models, which require a labelled dataset for their calibration, or unsupervised models, which do not require labels. While academic research has produced a vast array of tools and machine learning models for automated anomaly detection, the research community focused on environmental systems still lacks a comparative analysis that is simultaneously comprehensive, objective, and systematic. This knowledge gap is addressed for the first time in this study, where 15 different supervised and unsupervised anomaly detection models are evaluated on 5 different environmental datasets from engineered and natural aquatic systems. To this end, anomaly detection performance, labelling efforts, as well as the impact of model and algorithm tuning are taken into account. As a result, our analysis reveals the relative strengths and weaknesses of the different approaches in an objective manner without bias for any particular paradigm in machine learning. Most importantly, our results show that expert-based data annotation is extremely valuable for anomaly detection based on machine learning.
+ER  - 
+
+TY  - JOUR
+T1  - Joint probability analysis of water and sediment and predicting sediment load based on copula function
+AU  - Jin, Haoyu
+AU  - Chen, Xiaohong
+AU  - Zhong, Ruida
+AU  - Pan, Yingjie
+AU  - Zhao, Tongtiegang
+AU  - Liu, Zhiyong
+AU  - Tu, Xinjun
+JO  - International Journal of Sediment Research
+VL  - 37
+IS  - 5
+SP  - 639
+EP  - 652
+PY  - 2022
+DA  - 2022/10/01/
+SN  - 1001-6279
+DO  - https://doi.org/10.1016/j.ijsrc.2022.04.002
+UR  - https://www.sciencedirect.com/science/article/pii/S1001627922000270
+KW  - Marginal distribution
+KW  - Joint distribution
+KW  - Copula
+KW  - Flow
+KW  - Sediment load
+KW  - Jinsha River Basin (JRB)
+AB  - The Jinsha River comprises the upper reaches of the Yangtze River, which is the river section with the highest sediment content. Monitoring of sediment transport in the Jinsha River is done to the guarantee for the normal operation of the Three Gorges Reservoir. In the current study, a copula function was used to do a joint probability analysis of the water and sediment in the Jinsha River Basin (JRB), further a sediment load prediction model based on the copula function also was constructed. The results show that the average annual flow from 2001 to 2018 at the outlet of the Jinsha River (Yibin station) is about 60.43 billion m3, and the average annual sediment load is about 58.82 million t. The linear correlation coefficient between annual flow and annual sediment load is 0.28. The best marginal distribution for annual flow and sediment load is Pearson Type Three (PE3) and Generalized Normal (GNO), respectively, and the best fit for the combined distribution of the two variables is the Frank copula function. The synchronous probability of water and sediment occurrence is 0.459, and the asynchronous probability is 0.541. Based on the copula prediction model, the sediment load can be effectively simulated, and the correlation coefficient between the simulated sequence and the measured sequence reached 0.93. The current study provides important significance for the analysis of water and sediment in the JRB, which is beneficial to the management of Three Gorges Reservoir sediment discharge in the upstream and downstream.
+ER  - 
+
+TY  - JOUR
+T1  - Streamflow prediction using LASSO-FCM-DBN approach based on hydro-meteorological condition classification
+AU  - Chu, Haibo
+AU  - Wei, Jiahua
+AU  - Wu, Wenyan
+JO  - Journal of Hydrology
+VL  - 580
+SP  - 124253
+PY  - 2020
+DA  - 2020/01/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2019.124253
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169419309886
+KW  - Streamflow prediction
+KW  - LASSO
+KW  - Deep Belief Networks
+KW  - Fuzzy C-means
+KW  - Classification
+AB  - Streamflow prediction is a challenging task due to the different processes involved in streamflow generation. These different processes have different characteristics of the relationships between hydro-meteorological variables and streamflow, which make it a challenging task to develop single data-driven stream flow prediction models that can map the input-output relationships for all different streamflow regimes. To improve the performance of streamflow prediction, we proposed a flow-regime-dependent approach to map the relationships between hydro-meteorological variables and streamflow based on hydro-meteorological condition classification. This approach integrates the least absolute shrinkage and selection operator (LASSO), Fuzzy C-means (FCM) and Deep Belief Networks (DBN) and therefore referred to as the LASSO-FCM-DBN approach. This approach employs LASSO to select the hydro-meteorological variables which have a significant impact on streamflow, FCM to identify different streamflow regimes, and DBN as a data-driven model to map the nonlinear and complex relationships between the selected hydro-meteorological variables and streamflow within different flow regimes. To assess the performance of the proposed approach, two comparative studies were carried out – 1) the multi-variable FCM was compared to the traditional single-variable threshold-based method; and 2) the performance of the DBN was compared to a traditional Artificial Neural Networks (ANNs) model. Two stations in the Tennessee River, USA were used as the case study. The results demonstrate that the performance of the multi-variable-based FCM classification method is better and more stable than the traditional threshold-based single-variable method, due to the sensitivity of the single-variable method to different threshold values. In addition, DBNs performed better than traditional ANNs in all three statistical measures considered. Overall, the LASSO-FCM-DBN multi-model system significantly improved the performance of streamflow prediction and is therefore a valuable tool for water resources management and planning.
+ER  - 
+
+TY  - JOUR
+T1  - Integration of numerical model and cloud computing
+AU  - Chen, Chong
+AU  - Chen, Dan
+AU  - Yan, Yingnan
+AU  - Zhang, Gaofeng
+AU  - Zhou, Qingguo
+AU  - Zhou, Rui
+JO  - Future Generation Computer Systems
+VL  - 79
+SP  - 396
+EP  - 407
+PY  - 2018
+DA  - 2018/02/01/
+SN  - 0167-739X
+DO  - https://doi.org/10.1016/j.future.2017.06.007
+UR  - https://www.sciencedirect.com/science/article/pii/S0167739X17312347
+KW  - Cloud computing
+KW  - Numerical model
+KW  - Model as a service
+AB  - With the significant advancements in Information and Communications Technology (ICT), cloud based applications provide a novel approach to access applications which are not installed on the local computers. The integration of cloud computing and Internet of Things (IoT) indicated a bright future of the Internet. In this paper, a new architecture of cloud computing—Model as a Service (MaaS) is proposed. The feasibility of the proposed architecture is proved by implementing a groundwater model on cloud as a case study. The groundwater model is established using MODFLOW for the middle reach of the Heihe River Basin (HRB). The model is calibrated using in situ observation to ensure capability of simulating the groundwater process with Root Mean Square Error (RMSE) of 1.70 m and coefficient of determination (R2) of 0.64. The parameter uncertainties of the groundwater model are analyzed by sequential data assimilation algorithms (PF, Particle Filter; EnKF, Ensemble Kalman Filter) in a synthetic case. The results show that the parameter uncertainties are effectively reduced by incorporating observed information recursively. A comparison between PF and EnKF indicate that the results from PF are slightly better than those from EnKF. The integration shows a bright future for simulating the groundwater system in real-time. This study provides a flexible and effective approach for analyzing the uncertainties and time variant properties of the parameters and the proposed architecture of cloud computing provides a novel approach for the researchers and decision-makers to construct numerical models and follow-up researches.
+ER  - 
+
+TY  - JOUR
+T1  - Topology-regularized universal vector autoregression for traffic forecasting in large urban areas
+AU  - Schimbinschi, Florin
+AU  - Moreira-Matias, Luis
+AU  - Nguyen, Vinh Xuan
+AU  - Bailey, James
+JO  - Expert Systems with Applications
+VL  - 82
+SP  - 301
+EP  - 316
+PY  - 2017
+DA  - 2017/10/01/
+SN  - 0957-4174
+DO  - https://doi.org/10.1016/j.eswa.2017.04.015
+UR  - https://www.sciencedirect.com/science/article/pii/S0957417417302518
+KW  - Topology regularized universal vector autoregression
+KW  - Multivariate timeseries forecasting
+KW  - Spatiotemporal autocorrelation
+KW  - Traffic prediction
+KW  - Big data
+KW  - Structural risk minimization
+AB  - Autonomous vehicles are soon to become ubiquitous in large urban areas, encompassing cities, suburbs and vast highway networks. In turn, this will bring new challenges to the existing traffic management expert systems. Concurrently, urban development is causing growth, thus changing the network structures. As such, a new generation of adaptive algorithms are needed, ones that learn in real-time, capture the multivariate nonlinear spatio-temporal dependencies and are easily adaptable to new data (e.g. weather or crowdsourced data) and changes in network structure, without having to retrain and/or redeploy the entire system. We propose learning Topology-Regularized Universal Vector Autoregression (TRU-VAR) and examplify deployment with of state-of-the-art function approximators. Our expert system produces reliable forecasts in large urban areas and is best described as scalable, versatile and accurate. By introducing constraints via a topology-designed adjacency matrix (TDAM), we simultaneously reduce computational complexity while improving accuracy by capturing the non-linear spatio-temporal dependencies between timeseries. The strength of our method also resides in its redundancy through modularity and adaptability via the TDAM, which can be altered even while the system is deployed. The large-scale network-wide empirical evaluations on two qualitatively and quantitatively different datasets show that our method scales well and can be trained efficiently with low generalization error. We also provide a broad review of the literature and illustrate the complex dependencies at intersections and discuss the issues of data broadcasted by road network sensors. The lowest prediction error was observed for TRU-VAR, which outperforms ARIMA in all cases and the equivalent univariate predictors in almost all cases for both datasets. We conclude that forecasting accuracy is heavily influenced by the TDAM, which should be tailored specifically for each dataset and network type. Further improvements are possible based on including additional data in the model, such as readings from different metrics.
+ER  - 
+
+TY  - JOUR
+T1  - Hybrid and automated machine learning approaches for oil fields development: The case study of Volve field, North Sea
+AU  - Nikitin, Nikolay O.
+AU  - Revin, Ilia
+AU  - Hvatov, Alexander
+AU  - Vychuzhanin, Pavel
+AU  - Kalyuzhnaya, Anna V.
+JO  - Computers & Geosciences
+VL  - 161
+SP  - 105061
+PY  - 2022
+DA  - 2022/04/01/
+SN  - 0098-3004
+DO  - https://doi.org/10.1016/j.cageo.2022.105061
+UR  - https://www.sciencedirect.com/science/article/pii/S0098300422000267
+KW  - Machine learning
+KW  - CRM
+KW  - Hybrid model
+KW  - Oil production forecasting
+KW  - Seismic analysis
+KW  - CNN
+KW  - Composite AI
+AB  - The field development workflow contains numerous tasks involving decision-making processes. The modern machine learning methods, including automatic machine learning (AutoML), reduce the geophysics or machine learning experts’ time required to solve routine tasks. In the paper, we focus on the automated solution of the location of the wells optimization problem, namely, improving the quality of oil production estimation and estimating reservoir characteristics for appropriate wells placement and parametrization, using the same AutoML approach. Ideas of making several parallel or consequent tasks automatically within one framework are arising as Composite AI. We implemented and investigated the quality of forecasting models for oil production estimation: physics equation-based, pure data-driven, and hybrid. CRMIP (Capacitance–Resistance Model Injector–Producer) model is chosen as a physics-related approach. We automated the seismic analysis using evolutionary identification of convolutional neural network structure for reservoir detection to help investigate reservoir characteristics for wells location choice. The Volve oil field dataset was used as a case study to conduct the experiments. The implemented approaches can analyze different oil fields and even be adapted to similar physics-related problems.
+ER  - 
+
+TY  - JOUR
+T1  - Comprehensive learning particle swarm optimization enabled modeling framework for multi-step-ahead influenza prediction
+AU  - Yang, Siyue
+AU  - Bao, Yukun
+JO  - Applied Soft Computing
+VL  - 113
+SP  - 107994
+PY  - 2021
+DA  - 2021/12/01/
+SN  - 1568-4946
+DO  - https://doi.org/10.1016/j.asoc.2021.107994
+UR  - https://www.sciencedirect.com/science/article/pii/S1568494621009169
+KW  - Influenza prediction
+KW  - Multi-step-ahead prediction
+KW  - Prediction modeling strategies
+KW  - Influenza-like illness
+KW  - Machine learning
+KW  - CLPSO-based modeling framework
+AB  - Epidemics of influenza are major public health concerns. Since influenza prediction always relies on the weekly clinical or laboratory surveillance data, typically the weekly Influenza-like illness (ILI) rate series, accurate multi-step-ahead influenza predictions using ILI series is of great importance, especially, to the potential coming influenza outbreaks. This study proposes Comprehensive Learning Particle Swarm Optimization based Machine Learning (CLPSO-ML) framework incorporating support vector regression (SVR) and multilayer perceptron (MLP) for multi-step-ahead influenza prediction. A comprehensive examination and comparison of the performance and potential of three commonly used multi-step-ahead prediction modeling strategies, including iterated strategy, direct strategy and multiple-input multiple-output (MIMO) strategy, was conducted using the weekly ILI rate series from both the Southern and Northern China. The results show that: (1) The MIMO strategy achieves the best multi-step-ahead prediction, and is potentially more adaptive for longer horizon; (2) The iterated strategy demonstrates special potentials for deriving the least time difference between the occurrence of the predicted peak value and the true peak value of an influenza outbreak; (3) For ILI in the Northern China, SVR model implemented with MIMO strategy performs best, and SVR with iterated strategy also shows remarkable performance especially during outbreak periods; while for ILI in the Southern China, both SVR and MLP models with MIMO strategy have competitive prediction performance
+ER  - 
+
+TY  - JOUR
+T1  - A stochastic conceptual-data-driven approach for improved hydrological simulations
+AU  - Quilty, John M.
+AU  - Sikorska-Senoner, Anna E.
+AU  - Hah, David
+JO  - Environmental Modelling & Software
+VL  - 149
+SP  - 105326
+PY  - 2022
+DA  - 2022/03/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2022.105326
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815222000329
+KW  - Ensemble
+KW  - Stochastic
+KW  - Streamflow simulation
+KW  - Data-driven model
+KW  - Hydrological model
+KW  - Uncertainty
+AB  - In a companion paper, Sikorska-Senoner and Quilty (2021) introduced the ensemble-based conceptual-data-driven approach (CDDA) for improving hydrological simulations. This approach consists of an ensemble of hydrological model (HM) simulations (generated via different parameter sets) whose residuals are ‘corrected’ by a data-driven model (one per HM parameter set), resulting in an improved ensemble simulation. Through a case study involving three Swiss catchments, it was demonstrated that CDDA generates significantly improved ensemble streamflow simulations when compared to the ensemble HM. In this follow-up study, a stochastic version of CDDA (SCDDA) is developed that, in addition to parameter uncertainty, accounts for input data, input variable selection, and model output uncertainty. Using several deterministic and probabilistic performance metrics, it is shown that SCDDA results in significantly more accurate and reliable ensemble-based streamflow simulations than the CDDA, ensemble and stochastic HMs, and a quantile regression-based approach, improving the mean interval score by 26–79%.
+ER  - 
+
+TY  - JOUR
+T1  - Rainfall forecasting model using machine learning methods: Case study Terengganu, Malaysia
+AU  - Ridwan, Wanie M.
+AU  - Sapitang, Michelle
+AU  - Aziz, Awatif
+AU  - Kushiar, Khairul Faizal
+AU  - Ahmed, Ali Najah
+AU  - El-Shafie, Ahmed
+JO  - Ain Shams Engineering Journal
+VL  - 12
+IS  - 2
+SP  - 1651
+EP  - 1663
+PY  - 2021
+DA  - 2021/06/01/
+SN  - 2090-4479
+DO  - https://doi.org/10.1016/j.asej.2020.09.011
+UR  - https://www.sciencedirect.com/science/article/pii/S2090447920302069
+KW  - Forecasting rainfall
+KW  - Machine learning algorithms
+KW  - Boosted decision tree regression
+KW  - Decision forest regression
+KW  - Neural network regression
+KW  - Bayesian linear regression
+AB  - Rainfall plays a main role in managing the water level in the reservoir. The unpredictable amount of rainfall due to the climate change can cause either overflow or dry in the reservoir. In this study, several models and methods were applied to predict the rainfall data in Tasik Kenyir, Terengganu. The comparative study was conducted focusing on developing and comparing several Machine Learning (ML) models, evaluating different scenarios and time horizon, andforecasting rainfall using two types of methods.Data involved for this research consist of taking the average rainfall from 10 stations around the study area using Thiessen polygon to weight the station area and projected rainfall.The forecasting model uses four different ML algorithms, which are Bayesian Linear Regression (BLR), Boosted Decision Tree Regression (BDTR), Decision Forest Regression (DFR) and Neural Network Regression (NNR). On the other hand,the rainfall was predicted on different time horizon by using different ML’s algorithms which ismethod 1 (M1): Forecasting Rainfall Using Autocorrelation Function (ACF) and method 2 (M2): Forecasting Rainfall Using Projected Error. In M1, the best regression developed for ACF is BDTR since it has the highest coefficient of determination, R2, after tuning the hyperparameter. The results show coefficient between 0.5 and 0.9 with the highest of each scenarios for daily (0.9739693), weekly (0.989461), 10-days (0.9894429) and monthly (0.9998085). In M2, overall model performances show that normalization using LogNormal is preferably giving a good result of each categories except for 10-days with BDTR and DFR are the most acceptable result than NNR and BLR. It is concluded that, two different methods have been applied with different scenarios and different time horizons, and M1 shows a rather high accuracy than M2 using BDTR modeling.
+ER  - 
+
+TY  - JOUR
+T1  - Wavelet based analysis on rainfall and water table depth forecasting using Neural Networks in Kanyakumari district, Tamil Nadu, India
+AU  - Stanley Raj, A.
+AU  - Hudson Oliver, D.
+AU  - Srinivas, Y.
+AU  - Viswanath, J.
+JO  - Groundwater for Sustainable Development
+VL  - 5
+SP  - 178
+EP  - 186
+PY  - 2017
+DA  - 2017/09/01/
+SN  - 2352-801X
+DO  - https://doi.org/10.1016/j.gsd.2017.06.009
+UR  - https://www.sciencedirect.com/science/article/pii/S2352801X17300772
+KW  - Rainfall
+KW  - Wavelet analysis
+KW  - Neural Networks forecasting
+KW  - Water table depth model
+AB  - Rainfall is one of the most complex phenomenons occurring on earth to study with extreme and advanced soft computing engine that can perform well with adaptive perception. Water table depth is more or less proportionate to the rainfall occurring on the study area. Some other factors involved in it are climate change, soil characteristics and human activities. Here in this research, an attempt has been made to study the behaviour of rainfall in Kanyakumari district, Tamil Nadu, India. The study region is one of the most agricultural favourable climatic districts with large area of cultivating lands. Unlike the other districts in Tamil Nadu, this district gets rainfall from both south west and north east monsoons. For this analysis, wavelet tool has been used. Apart from analysing it, short term forecasting has been attempted with efficient soft computing tool, Artificial Neural Networks (ANN). This method has been validated with the actual water table depth with respect to the rainfall. This approach applied to the data works well for short term forecasting. The performance of the model was evaluated using the regression coefficients and Mean Absolute Percent Error (MAPE) reveals the success of the working integrated model.
+ER  - 
+
+TY  - JOUR
+T1  - Development of flood hazard map and emergency relief operation system using hydrodynamic modeling and machine learning algorithm
+AU  - Rahman, Mahfuzur
+AU  - Chen, Ningsheng
+AU  - Islam, Md Monirul
+AU  - Mahmud, Golam Iftekhar
+AU  - Pourghasemi, Hamid Reza
+AU  - Alam, Mehtab
+AU  - Rahim, Md Abdur
+AU  - Baig, Muhammad Aslam
+AU  - Bhattacharjee, Arnob
+AU  - Dewan, Ashraf
+JO  - Journal of Cleaner Production
+VL  - 311
+SP  - 127594
+PY  - 2021
+DA  - 2021/08/15/
+SN  - 0959-6526
+DO  - https://doi.org/10.1016/j.jclepro.2021.127594
+UR  - https://www.sciencedirect.com/science/article/pii/S0959652621018126
+KW  - Flood
+KW  - Coping mechanisms
+KW  - Emergency relief
+KW  - Hydrodynamic modeling
+KW  - Economic instability
+AB  - This study performs flood hazard mapping and evaluates community flood coping strategies. In addition, it proposes a humanitarian aid information system (HAIS) to enhance emergency support for flood victims. First, a flood hazard map was prepared using the hydrodynamic model (HM)–FLO 2D coupled with a machine learning algorithm (MLA)-scaled conjugate gradient neural network (SCG-NN). The performance of the MLA was evaluated using a validation dataset and statistical measures such as the mean square error (MSE: 0.080), root mean square error (RMSE: 0.282), and coefficient of determination (R2 = 0.830). According to the generated flood hazard map, most of the study area was classified as low (47.85%) or moderate (27.47%) hazardous zones, whereas only a small portion was delineated as high (20.64%) or very high (4.04%) hazardous zones. The accuracy of the hazard map (HM-MLA) versus the ground truth was tested statistically and was found to be high. Second, an investigation of local flood management strategies revealed that the current information system is not well prepared for emergencies, including the quantification of emergency relief necessities. Therefore, an HAIS, which specifies hazard information and quantifies emergency aids (food items) for flood victims, can be an effective emergency preparedness tool. We calculated the required emergency aid considering satellite-derived flood data. Finally, we conclude that the proposed HAIS will help humanitarian organizations and government agencies coordinate and perform relief operations effectively in the worst-hit regions across the country.
+ER  - 
+
+TY  - JOUR
+T1  - Assessing the new Natural Resources Conservation Service water supply forecast model for the American West: A challenging test of explainable, automated, ensemble artificial intelligence
+AU  - Fleming, Sean W.
+AU  - Garen, David C.
+AU  - Goodbody, Angus G.
+AU  - McCarthy, Cara S.
+AU  - Landers, Lexi C.
+JO  - Journal of Hydrology
+VL  - 602
+SP  - 126782
+PY  - 2021
+DA  - 2021/11/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2021.126782
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169421008325
+KW  - Water supply forecasting
+KW  - Operational hydrology
+KW  - Explainable machine learning
+KW  - Hydrologic modeling
+KW  - Water management
+AB  - Western US water management is underpinned by spring-summer water supply forecasts (WSFs) from hydrologic models forced primarily by winter mountain snowpack data. The US Department of Agriculture Natural Resources Conservation Service (NRCS) operates the largest such system regionally. NRCS recently developed a next-generation WSF prototype, the multi-model machine-learning metasystem (M4). Here, we test this ensemble artificial intelligence (AI)-based prototype against challenging theoretical and practical criteria for accepting a new operational WSF model. In 20 hindcasting test-cases spanning diverse environments across the western US and Alaska, on average out-of-sample R2 and RPSS improved over 50% and RMSE improved 13% relative to current benchmarks. The M4 ensemble mean forecast also performed more consistently than any of its diverse constituent models and in several cases outperformed all of them. Live operational testing at a subset of sites during the 2020 forecast season additionally demonstrated logistical feasibility of workflows, as well as geophysical explainability of results in terms of known hydrologic processes, belying the black-box reputation of machine learning and enabling relatable forecast storylines for clients. This was accomplished using WSF-focused pragmatic solutions, like “popular votes” for different candidate predictors among the constituent forecast systems, and graphical visualization of reduced-dimension, AI-extracted nonlinear feature-target relationships. We also found that certain M4 technical design elements, including autonomous machine learning (AutoML), hyperparameter pre-calibration, and theory-guided data science, collectively permitted automated (“over-the-loop”) training and operation. Overall, the analyses confirmed M4 meets requirements for NRCS operational adoption. This finding signals that, despite negligible operational-community uptake of machine learning so far, suitably purpose-designed novel AI systems have capacity to transition into large-scale practical applications with service-delivery organizations; it appears M4 will be the largest AI migration into operational river forecasting to date. It may ultimately provide a broader integration platform for harnessing multiple data and model types.
+ER  - 
+
+TY  - JOUR
+T1  - Multidimensional architecture using a massive and heterogeneous data: Application to drought monitoring
+AU  - Balti, Hanen
+AU  - Abbes, Ali Ben
+AU  - Mellouli, Nedra
+AU  - Farah, Imed Riadh
+AU  - Sang, Yanfang
+AU  - Lamolle, Myriam
+JO  - Future Generation Computer Systems
+VL  - 136
+SP  - 1
+EP  - 14
+PY  - 2022
+DA  - 2022/11/01/
+SN  - 0167-739X
+DO  - https://doi.org/10.1016/j.future.2022.05.010
+UR  - https://www.sciencedirect.com/science/article/pii/S0167739X22001753
+KW  - Big data
+KW  - Data storage
+KW  - Spatio-temporal querying
+KW  - Decision-making
+KW  - Earth observation
+KW  - Disaster management
+AB  - The rapid increase in the number of Earth Observation (EO) systems generates a massive amount of heterogeneous data. It has raised big issues in collecting, preprocessing, storing, and the visualization these data. However, traditional techniques are facing serious challenges when dealing with big EO data dimensions (i.e., Volume, Veracity, Variety, and Velocity), especially in natural hazards management. Therefore, big data techniques and tools attract more attention. In this paper we propose a multidimensional model framework for Big EO data warehousing. This framework includes 3 parts: (1) Data collection and preprocessing, being responsible for collecting data and improving their quality; (2) Data loading and storage, performing the ingestion task which consists of transferring the data from external resources to the Big data platform for storage; and (3) Visualization and interpretation, aiming to provide spatio-temporal analysis. This framework could be useful for decision-makers in monitoring the effects of drought disasters and, consequently, planning the mitigation and remediation measures. Experiments are carried out on drought monitoring in China along the period 2000–2020. The input data include remote sensing data, biophysical data, and climatological data. The results reveal that the proposed framework has a higher retrieval speed and a greater elasticity with different kinds (i.e. spatial, temporal, or spatiotemporal) of requests compared to traditional frameworks, indicating its superiority.
+ER  - 

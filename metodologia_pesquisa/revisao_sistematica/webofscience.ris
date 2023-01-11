@@ -1,0 +1,145 @@
+﻿TY  - JOUR
+AU  - Miau, S
+AU  - Hung, WH
+TI  - River Flooding Forecasting and Anomaly Detection Based on Deep Learning
+T2  - IEEE ACCESS
+LA  - English
+KW  - Floods
+KW  - river water level
+KW  - forecasting
+KW  - deep learning
+KW  - anomaly detection
+KW  - PREDICTION
+KW  - MODEL
+KW  - BACKPROPAGATION
+KW  - ORGANIZATION
+KW  - ALGORITHM
+KW  - ERROR
+KW  - RMSE
+KW  - ANN
+AB  - Pluvial floods are rare and dangerous disasters that have a small duration but a destructive impact in most countries. In recent years, the deep learning model has played a significant role in operational flood management areas such as flood forecasting and flood warnings. This paper employed a deep learning-based model to predict the water level flood phenomenon of a river in Taiwan. We combine the advantages of the CNN model and the GRU model and connect the output of the CNN model to the input of the GRU model, called Conv-GRU neural network, and our experiments showed that the Conv-GRU neural network could extract complex features of the river water level. We compared the predictions of several neural network architectures commonly used today. The experimental results indicated that the Conv-GRU model outperformed the other state-of-the-art approaches. We used the Conv-GRU model for anomaly/fault detection in a time series using open data. The efficacy of this approach was demonstrated on 27 river water level station datasets. Data from Typhoon Soudelor in 2015 were investigated by our model using the anomaly detection method. The experimental results showed our proposed method could detect abnormal water levels effectively.
+AD  - Natl Chengchi Univ NCCU, Dept Management Informat Syst, Taipei 11605, TaiwanC3  - National Chengchi UniversityPU  - IEEE-INST ELECTRICAL ELECTRONICS ENGINEERS INC
+PI  - PISCATAWAY
+PA  - 445 HOES LANE, PISCATAWAY, NJ 08855-4141 USA
+SN  - 2169-3536
+J9  - IEEE ACCESS
+JI  - IEEE Access
+PY  - 2020
+VL  - 8
+SP  - 198384
+EP  - 198402
+DO  - 10.1109/ACCESS.2020.3034875
+WE  - Science Citation Index Expanded (SCI-EXPANDED)AN  - WOS:000589725500001
+N1  - Times Cited in Web of Science Core Collection:  13
+Total Times Cited:  13
+Cited Reference Count:  77
+ER  -
+
+TY  - JOUR
+AU  - Moishin, M
+AU  - Deo, RC
+AU  - Prasad, R
+AU  - Raj, N
+AU  - Abdulla, S
+TI  - Designing Deep-Based Learning Flood Forecast Model With ConvLSTM Hybrid Algorithm
+T2  - IEEE ACCESS
+LA  - English
+KW  - ConvLSTM
+KW  - deep learning
+KW  - flood forecasting
+KW  - flood index
+KW  - flood risk management
+KW  - RESOURCES
+KW  - PYTHON
+AB  - Efficient, robust, and accurate early fiood warning is a pivotal decision support tool that can help save lives and protect the infrastructure in natural disasters. This research builds a hybrid deep learning (ConvLSTM) algorithm integrating the predictive merits of Convolutional Neural Network (CNN) and Long Short-Term Memory (LSTM) Network to design and evaluate a fiood forecasting model to forecast the future occurrence of fiood events. Derived from precipitation dataset, the work adopts a Flood Index (I-F), in form of a mathematical representation, to capture the gradual depletion of water resources over time, employed in a fiood monitoring system to determine the duration, severity, and intensity of any fiood situation. The newly designed predictive model utilizes statistically significant lagged I-F, improved by antecedent and real-time rainfall data to forecast the next daily I-F value. The performance of the proposed ConvLSTM model is validated against 9 different rainfall datasets in fiood prone regions in Fiji which faces fiood-driven devastations almost annually. The results illustrate the superiority of ConvLSTM-based fiood model over the benchmark methods, all of which were tested at the 1-day, 3-day, 7-day, and the 14-day forecast horizon. For instance, the Root Mean Squared Error (RMSE) for the study sites were 0.101, 0.150, 0.211 and 0.279 for the four forecasted periods, respectively, using ConvLSTM model. For the next best model, the RMSE values were 0.105, 0.154, 0.213 and 0.282 in that same order for the four forecast horizons. In terms of the difference in model performance for individual stations, the Legate-McCabe Efficiency Index (LME) were 0.939, 0.898, 0.832 and 0.726 for the four forecast horizons, respectively. The results demonstrated practical utility of ConvLSTM in accurately forecasting I-F and its potential use in disaster management and risk mitigation in the current phase of extreme weather events.
+AD  - Univ Southern Queensland Springfield, Sch Sci, Springfield, Qld 4300, AustraliaAD  - Univ Fiji, Sch Sci & Technol, Dept Sci, Lautoka, FijiAD  - Univ Southern Queensland, USQ Coll, Toowoomba, Qld 4350, AustraliaC3  - University of Southern QueenslandC3  - University of Southern QueenslandFU  - Australian Government's Department of Foreign Affairs and Trade through the Australia Awards Scholarship scheme for Fiji [2020-2021]
+FX  - This work was supported by the Australian Government's Department of Foreign Affairs and Trade through the Australia Awards Scholarship scheme for Fiji under Grant 2020-2021.
+PU  - IEEE-INST ELECTRICAL ELECTRONICS ENGINEERS INC
+PI  - PISCATAWAY
+PA  - 445 HOES LANE, PISCATAWAY, NJ 08855-4141 USA
+SN  - 2169-3536
+J9  - IEEE ACCESS
+JI  - IEEE Access
+PY  - 2021
+VL  - 9
+SP  - 50982
+EP  - 50993
+DO  - 10.1109/ACCESS.2021.3065939
+WE  - Science Citation Index Expanded (SCI-EXPANDED)AN  - WOS:000638388300001
+N1  - Times Cited in Web of Science Core Collection:  20
+Total Times Cited:  21
+Cited Reference Count:  48
+ER  -
+
+TY  - JOUR
+AU  - Chen, MY
+AU  - Li, Z
+AU  - Gao, S
+AU  - Xue, M
+AU  - Gourley, JJ
+AU  - Kolar, RL
+AU  - Hong, Y
+TI  - A flood predictability study for Hurricane Harvey with the CREST-iMAP model using high-resolution quantitative precipitation forecasts and U-Net deep learning precipitation nowcasts
+T2  - JOURNAL OF HYDROLOGY
+LA  - English
+KW  - Quantitative precipitation forecast
+KW  - Flood
+KW  - Deep learning
+KW  - Hydrologic -hydraulic model
+KW  - Forecasts
+KW  - Hurricane Harvey
+KW  - HOURLY ASSIMILATION
+KW  - WEATHER
+KW  - PREDICTION
+KW  - CYCLE
+AB  - A flood is one of the most hazardous natural disasters, and it commonly causes fatalities and socioeconomic damages. The advances of modeling techniques and observation data in flood prediction have found success in field operations. This paper presents a comprehensive flood prediction of Hurricane Harvey in 1-hour lead-time that is not limited to 1D streamflow forecast but also 2D flood extent and 3D inundation depth. It uses highresolution quantitative precipitation forecasts (QPFs, from operational Rapid Refresh-RAP, and High Resolution Rapid Refresh-HRRR models) and deep learning nowcasts (AI nowcasts). The results show that the QPFs have a well-known displacement issue and the AI nowcast cannot predict the precipitation intensity, and an attempt to combine the two methods (AI hybrid) failed to improve the overall accuracy. However, the 2D flood extent predictions with the HRRR and AI hybrid forcings can provide information indicating the future flooded area with about 50% accuracy (hit rate) and stream flow prediction showed that the HRRR QPF can provide relatively accurate flood peak prediction (-8%). In contrast, the AI nowcast reveals minimal displacement errors but underpredicts precipitation intensity. The deep learning method also indicates that the binary tests with low threshold, which are commonly employed in the deep learning field, neglect the importance of precipitation intensity errors for extreme event studies.
+AD  - Univ Oklahoma, Sch Civil Engn & Environm Sci, Norman, OK 73019 USAAD  - Univ Oklahoma, Hydrometeorol & Remote Sensing Lab, Norman, OK USAAD  - Univ Oklahoma, Sch Meteorol, Norman, OK USAAD  - NOAA Natl Severe Storm Lab, Norman, OK USAC3  - University of Oklahoma SystemC3  - University of Oklahoma - NormanC3  - University of Oklahoma SystemC3  - University of Oklahoma - NormanC3  - University of Oklahoma SystemC3  - University of Oklahoma - NormanC3  - National Oceanic Atmospheric Admin (NOAA) - USAPU  - ELSEVIER
+PI  - AMSTERDAM
+PA  - RADARWEG 29, 1043 NX AMSTERDAM, NETHERLANDS
+SN  - 0022-1694
+SN  - 1879-2707
+J9  - J HYDROL
+JI  - J. Hydrol.
+DA  - SEP
+PY  - 2022
+VL  - 612
+C7  - 128168
+DO  - 10.1016/j.jhydrol.2022.128168
+WE  - Science Citation Index Expanded (SCI-EXPANDED)AN  - WOS:000844319800001
+N1  - Times Cited in Web of Science Core Collection:  0
+Total Times Cited:  0
+Cited Reference Count:  65
+ER  -
+
+TY  - CPAPER
+AU  - Liu, F
+AU  - Xu, F
+AU  - Yang, S
+A1  - IEEE
+TI  - A Flood Forecasting Model based on Deep Learning Algorithm via Integrating Stacked Autoencoders with BP Neural Network
+T2  - 2017 IEEE THIRD INTERNATIONAL CONFERENCE ON MULTIMEDIA BIG DATA (BIGMM 2017)
+LA  - English
+CP  - IEEE 3rd International Conference on Multimedia Big Data (BigMM)
+KW  - artificial neural network
+KW  - flood forecasting
+KW  - deep learning
+KW  - stacked autoencoders
+KW  - SELF-ORGANIZING MAP
+KW  - SUPPORT VECTOR REGRESSION
+AB  - Artificial neural network (ANN) has been widely applied in flood forecasting and got good results. However, it can still not go beyond one or two hidden layers for the problematic non-convex optimization. This paper proposes a deep learning approach by integrating stacked autoencoders (SAE) and back propagation neural networks (BPNN) for the prediction of stream flow, which simultaneously takes advantages of the powerful feature representation capability of SAE and superior predicting capacity of BPNN. To further improve the non-linearity simulation capability, we first classify all the data into several categories by the K-means clustering. Then, multiple SAE-BP modules are adopted to simulate their corresponding categories of data. The proposed approach is respectively compared with the support-vector-machine (SVM) model, the BP neural network model, the RBF neural network model and extreme learning machine (ELM) model. The experimental results show that the SAE-BP integrated algorithm performs much better than other benchmarks.
+AD  - Hohai Univ, Coll Comp & Informat, Nanjing, Jiangsu, Peoples R ChinaAD  - Nantong Univ, Sch Elect Engn, Nantong, Peoples R ChinaC3  - Hohai UniversityC3  - Nantong UniversityFU  - National Natural Science Foundation of China [61602150]; Fundamental Research Funds for the Central Universities [2015B03114]; China Postdoctoral Science Foundation [2016M600355]; Jiangsu Planned Projects for Postdoctoral Research Funds [1601013B]; University Natural Science Research Project of Jiangsu Province [16KJB520009, 16KJB520037]
+FX  - This work was partially supported by National Natural Science Foundation of China under Grant No.61602150, the Fundamental Research Funds for the Central Universities under Gran No. 2015B03114, Project funded by China Postdoctoral Science Foundation under grant no. 2016M600355, Jiangsu Planned Projects for Postdoctoral Research Funds award number: 1601013B, University Natural Science Research Project of Jiangsu Province, Grant No. 16KJB520009 and16KJB520037.
+PU  - IEEE
+PI  - NEW YORK
+PA  - 345 E 47TH ST, NEW YORK, NY 10017 USA
+SN  - 978-1-5090-6549-3
+PY  - 2017
+SP  - 58
+EP  - 61
+DO  - 10.1109/BigMM.2017.29
+WE  - Conference Proceedings Citation Index - Science (CPCI-S)AN  - WOS:000419853200010
+N1  - Times Cited in Web of Science Core Collection:  45
+Total Times Cited:  46
+Cited Reference Count:  17
+ER  -
+
