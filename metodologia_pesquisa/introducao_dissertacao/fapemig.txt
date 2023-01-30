@@ -1,0 +1,54 @@
+No Brasil, a ocorrência de inundações em áreas urbanas tem-se intensificado devido a diversos
+fatores, dentre eles a urbanização acelerada e a ocupação inadequada. Além da impermeabilização
+dos solos, falta infraestrutura nos municípios e o desmatamento ciliar também contribui para as
+inundações, favorecendo o aumento do volume de vazão e a velocidade de propagação da onda de
+inundação em regiões onde os eventos hidrológicos constituem um risco de desastre natural
+(CEMADEN, 2022).
+Como exemplo, os últimos desastres ocorridos nos estados de Minas Gerais, São Paulo, Rio
+de Janeiro e Bahia que trouxeram não só perda econômica – danos à bens materiais, agricultura,
+turismo, infraestrutura dos munícipios –, como também perda de vidas humanas.
+Recentemente, o estado de Minas Gerais sofreu com inundações em diversos munícipios. Em
+janeiro deste ano, a cheia do rio São Francisco foi considerada a maior da história no reservatório da
+Usina Hidrelétrica de Três Marias, desde que a central entrou em operação (MARQUES, 2022). Em
+fevereiro, Minas Gerais contabilizou 435 em estado de emergência, superando inundações históricas
+como as ocorridas nos anos de 2013 e 2020 (FIGLIAGI, 2022).
+No estado de Minas Gerais, há diversas lacunas de conhecimento sobre processos
+hidrológicos em bacias hidrográficas que necessitam ser superadas. O interesse por informações hidro
+meteorológicas vem crescendo, principalmente, por parte dos gestores de recursos hídricos com
+pretensão de otimizar a tomada de decisão, a fim de minimizar os riscos decorrentes de eventos
+extremos (CUNHA et al., 2013; DALAGNOL et al, 2020).
+O problema de inundações urbanas é um dos grandes desafios da atualidade, demandando
+ações multidisciplinares sobre a bacia hidrográfica como um ambiente integrado e dinâmico (FERRAZ,
+2021). Necessita-se de mais informações sobre a real influência das modificações no funcionamento
+hidrológico das bacias hidrográficas.
+Sendo assim, o estudo e previsão de vazões por modelos hidrológicos do tipo chuva-vazão são
+de extrema importância, possibilitando entender melhor o comportamento hidrológico em bacias
+hidrográficas e, ainda, mapear as áreas vulneráveis em caso de enchentes.
+Nesse sentido, os modelos matemáticos surgem como uma ferramenta para a gestão dos
+recursos hídricos. Os modelos hidrológicos definem-se como representações matemáticas do fluxo da
+água e seus constituintes sobre parte da superfície terrestre, permitindo conhecer a dinâmica da bacia
+hidrográfica em um curto intervalo de tempo e de maneira econômica em relação a recursos
+financeiros (MACHADO et al, 2018). São utilizados para simulação em softwares a partir de variáveis
+de entrada com objetivo de se aproximar do sistema real. São capazes de prever as saídas em bacias
+hidrográficas, auxiliando na gestão dos recursos hídricos (SCHARFFENBERG &amp; HARRIS, 2008;
+USACE, 2021).
+Dentre as diversas ferramentas disponíveis que permitem estimar a geração e a propagação do
+escoamento em uma bacia hidrográfica, destaca-se o sistema Hydrologic Engineering Center -
+Hydrologic Modeling System (HEC-HMS), desenvolvido pelo Corpo de Engenheiros do Exército dos
+Estados Unidos. Esse sistema, simula a transformação da chuva-vazão em sistemas de bacias e sub-
+bacias hidrográficas baseado na representação dos processos do ciclo hidrológico e, com isso, permite
+estimar o escoamento superficial e calcular as vazões resultantes da precipitação de entrada em
+vários pontos de drenagem por meio de diversos modelos matemáticos (NATARAJAN &amp;
+RADHAKRISHNAN, 2021; USACE, 2021).
+Nesse contexto, possibilita prever as vazões – um dos grandes desafios atuais – em eventos
+extremos provocados por fortes chuvas e, consequentemente, alertar a população e evitar grandes
+tragédias. O último Painel Intergovernamental sobre Mudanças Climáticas (IPCC) 2022, aponta que
+as mudanças climáticas são incontestáveis e que os riscos relacionados à inundação estão cada vez
+
+mais intensos devido as alterações meteorológicas, podendo ocasionar desastres naturais. Ademais,
+os eventos extremos aliados à vulnerabilidade da sociedade intensificam esses riscos (MORENO &amp;
+RAVACHE, 2021).
+Entretanto, uma das grandes dificuldades dos gestores e analistas da área de recursos hídricos
+é a utilização desses programas, por não terem o conhecimento necessário para parametrizar o
+software. Sendo assim, faz-se necessária a transferência de tecnologia do modelo otimizado e
+validado para os órgãos gestores de recursos hídricos de Minas Gerais.

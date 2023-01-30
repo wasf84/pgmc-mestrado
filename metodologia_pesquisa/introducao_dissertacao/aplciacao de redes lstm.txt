@@ -1,0 +1,8 @@
+A aplicação de redes LSTM (Long Short-Term Memory) pode contribuir para a previsão de enchentes urbanas em Minas Gerais por ser capaz de modelar e prever tendências em séries temporais de dados hidrológicos, tais como níveis de rios e pluviometria. Essas previsões podem ser utilizadas pelo governo estadual para tomar medidas preventivas, como a regulação do escoamento de água e a construção de barragens, visando minimizar os danos causados por enchentes.
+
+Além disso, a integração de outros dados relevantes, tais como informações sobre o desenvolvimento urbano e as condições climáticas futuras, pode aumentar a precisão das previsões de enchentes e, portanto, a eficácia das medidas preventivas tomadas pelo governo.
+
+Referências:
+
+Guan, Y., Guo, X., Zhang, L., & Chen, J. (2018). A review of flood forecasting models based on machine learning algorithms. Advances in Water Resources, 114, 40-51.
+Xie, P., & Fan, W. (2019). Deep learning for extreme precipitation prediction and analysis. Environmental Research Letters, 14(7), 074015.

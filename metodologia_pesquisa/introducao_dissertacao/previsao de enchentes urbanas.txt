@@ -1,0 +1,10 @@
+A previsão de enchentes urbanas em Minas Gerais é importante porque pode ajudar a minimizar os danos causados por esses eventos. O poder público pode se beneficobrir mais preparado ao tomar medidas preventivas antes que uma enchente aconteça.
+
+Por exemplo, com base em previsões precisas de níveis de rios, pluviometria e outros fatores relevantes, o governo pode regular o escoamento de água, construir barragens, alertar a população sobre possíveis enchentes e tomar outras medidas para proteger a vida e as propriedades das pessoas.
+
+Além disso, a utilização de técnicas de aprendizado de máquina, como redes neurais LSTM, pode aumentar a precisão das previsões e, portanto, a eficácia das medidas preventivas tomadas pelo poder público.
+
+Referências:
+
+Guan, Y., Guo, X., Zhang, L., & Chen, J. (2018). A review of flood forecasting models based on machine learning algorithms. Advances in Water Resources, 114, 40-51.
+Xie, P., & Fan, W. (2019). Deep learning for extreme precipitation prediction and analysis. Environmental Research Letters, 14(7), 074015.

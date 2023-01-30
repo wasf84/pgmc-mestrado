@@ -5,7 +5,18 @@ time series forecasting
 
 ---------
 
+Todos limitados aos anos: 2018 - 2022
+
 Scopus
+( ( TITLE-ABS-KEY ( "deep learning" )  OR  TITLE-ABS-KEY ( "machine learning" ) )  AND  TITLE-ABS-KEY ( "flood forecasting" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2022 )  OR  LIMIT-TO ( PUBYEAR ,  2021 )  OR  LIMIT-TO ( PUBYEAR ,  2020 )  OR  LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
+
 Web of Science
-Springer
+(((TI=(deep learning) OR TI=(machine learning))) AND TI=(flood forecasting)) OR
+(((AB=(deep learning) OR AB=(machine learning))) AND AB=(flood forecasting)) OR
+(((AK=(deep learning) OR AK=(machine learning))) AND AK=(flood forecasting))
+
 Science Direct
+("deep learning" OR "machine learning") AND (runoff OR precipitation-runoff OR rainfall-runoff) AND ("flood forecasting" OR "time series forecasting")
+
+SpringerLink
+("deep learning" OR "machine learning") AND "runoff" AND ("flood forecasting" OR "time series forecasting")
