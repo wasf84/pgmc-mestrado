@@ -1,0 +1,28 @@
+Leilei Cao, Qing-Hua Qin, Ning Zhao,
+An RBF–MFS model for analysing thermal behaviour of skin tissues,
+International Journal of Heat and Mass Transfer,
+Volume 53, Issues 7–8,
+2010,
+Pages 1298-1307,
+ISSN 0017-9310,
+https://doi.org/10.1016/j.ijheatmasstransfer.2009.12.036.
+(https://www.sciencedirect.com/science/article/pii/S0017931009006966)
+Abstract: A meshless model based on radial basis function and method of fundamental solution (RBF–MFS) is developed to investigate bioheat transfer problems. First, A time-stepping θ-method is used in handling the time variable in the Pennes bioheat equation. Then, the particular solution is approximated by a linear combination of radial basis functions, and the homogeneous solution is approximately determined by the method of fundamental solution. The multi-subdomain RBF–MFS technique is implemented for analysing problems containing different materials and/or multi-connected regions. The efficiency of the proposed method is assessed by several examples including normal tissue, tissue with tumor and burned tissue.
+Keywords: Bioheat transfer; Radial basis function; Fundamental solution; Multi-subdomain
+
+
+
+
+
+Dieter Haemmerich,
+1 - Mathematical modeling of heat transfer in biological tissues (bioheat transfer),
+Editor(s): Punit Prakash, Govindarajan Srimathveeravalli,
+Principles and Technologies for Electromagnetic Energy Based Therapies,
+Academic Press,
+2022,
+Pages 1-24,
+ISBN 9780128205945,
+https://doi.org/10.1016/B978-0-12-820594-5.00012-5.
+(https://www.sciencedirect.com/science/article/pii/B9780128205945000125)
+Abstract: This chapter provides an introduction to the modeling of heat transfer problems in biological tissue (bioheat transfer). After providing an overview of the various mechanisms contributing toward bioheat transfer, the most prominent mathematical model employed for bioheat transfer problems is described. Next, the relevant thermal tissue properties that impact bioheat transfer are discussed, including their dependence on temperature. A common model to represent thermal tissue damage—the Arrhenius model—is introduced, and then applied for modeling of tissue blood perfusion in response to heat exposures. Finally, an example computer model is presented that incorporates the various aspects introduced in this chapter.
+Keywords: Arrhenius model; Bioheat transfer; Blood perfusion; Sensitivity analysis; Specific heat; Thermal conductivity; Tissue properties
