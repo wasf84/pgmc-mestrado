@@ -4,3 +4,4 @@
 - estações à montante com raio de 35km (por exemplo)
 - aplicar rede lstm, rede que roda em grafo (libs tensorflow, keras, prophet)
 - e ver o resultado
+===========================
