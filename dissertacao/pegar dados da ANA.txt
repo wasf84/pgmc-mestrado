@@ -1,0 +1,8 @@
+Este link passando direto funcionou!
+
+com SSL
+https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroSerieHistorica?codEstacao=58068000&dataInicio=&dataFim=&tipoDados=3&nivelConsistencia=1
+
+
+sem SSL
+http://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroSerieHistorica?codEstacao=58068000&dataInicio=&dataFim=&tipoDados=3&nivelConsistencia=1
