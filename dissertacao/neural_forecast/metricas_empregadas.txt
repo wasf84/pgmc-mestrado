@@ -1,0 +1,7 @@
+Métricas empregadas
+
+Dependente de escala: RMSE
+Erro percentual: SMAPE
+? Erro relativo: MdRAE
+Independente de escala: MASE
+Dispersão dos dados: R2
