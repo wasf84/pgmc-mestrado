@@ -1,0 +1,57 @@
+# import calendar
+# import datetime
+# import json
+# import os
+# import requests
+# import xml.etree.ElementTree as ET
+# from tqdm import tqdm
+
+# def get_data_telemetrica(codEstacao, dataInicio, dataFim): #, save=False
+
+#     # 1. Fazer a requisião ao servidor e pegar a árvore e a raiz dos dados
+#     params = {'codEstacao':codEstacao, 'dataInicio':dataInicio, 'dataFim':dataFim}
+#     server = 'http://telemetriaws1.ana.gov.br/ServiceANA.asmx/DadosHidrometeorologicos'
+#     response = requests.get(server, params)
+#     tree = ET.ElementTree(ET.fromstring(response.content))
+#     root = tree.getroot()
+
+#     # 2. Iteração dentro dos elementos do XML procurando os dados que são disponibilizados para a estação
+#     list_vazao = []
+#     list_data = []
+#     list_nivel = []
+#     list_chuva = []
+
+#     for i in tqdm(root.iter('DadosHidrometereologicos')):
+
+#         data = i.find('DataHora').text
+#         try:
+#             vazao = float(i.find('Vazao').text)
+#         except TypeError:
+#             vazao = i.find('Vazao').text
+
+#         try:
+#             nivel = float(i.find('Nivel').text)
+#         except TypeError:
+#             nivel = i.find('Nivel').text
+
+#         try:
+#             chuva = float(i.find('Chuva').text)
+#         except TypeError:
+#             chuva = i.find('Chuva').text
+
+#         list_vazao.append(vazao)
+#         list_data.append(data)
+#         list_nivel.append(nivel)
+#         list_chuva.append(chuva)
+
+#     df = pd.DataFrame([list_data, list_nivel, list_chuva, list_vazao]).transpose()
+#     df.columns = ['Data', 'Nivel', 'Chuva', 'Vazao']
+
+#     df = df.sort_values(by='Data')
+#     df = df.set_index('Data')
+#     df.index = pd.to_datetime(df.index)
+
+#     # if save == True:
+#     #     df.to_excel(codEstacao+'_dados.xlsx')
+
+#     return df
