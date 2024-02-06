@@ -1,0 +1,26 @@
+Rodando localmente
+
+# Tree-specific hyperparameters control the construction and complexity of the decision trees
+Melhor conjunto de hiperparâmetros:  {'colsample_bytree': 0.44, 'max_depth': 222, 'min_child_weight': 0, 'subsample': 0.33}
+(0.17921252997240184, 0.7826071632037115, 91.9912606190657)
+
+
+# Learning task-specific hyperparameters control the overall behavior of the model and the learning process
+Melhor conjunto de hiperparâmetros:  {'alpha': 0, 'gamma': 4444, 'learning_rate': 0.2, 'reg_lambda': 0}
+(0.16196498401653897, 0.647613852649588, 117.12062174614914)
+
+
+
+======================
+
+
+
+Rodando no Colab
+
+# Tree-specific hyperparameters control the construction and complexity of the decision trees
+Melhor conjunto de hiperparâmetros:  {'colsample_bytree': 0.7525, 'max_depth': 0, 'min_child_weight': 0, 'subsample': 1}
+(0.15860342538557998, 0.6890262714135291, 110.02358855470945)
+
+# Learning task-specific hyperparameters control the overall behavior of the model and the learning process
+Melhor conjunto de hiperparâmetros:  {'alpha': 0, 'gamma': 2500, 'learning_rate': 0.4, 'reg_lambda': 0}
+(0.18717767169425353, 0.6260615677879766, 120.6490778619256)
