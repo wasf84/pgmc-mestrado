@@ -1,3 +1,5 @@
 **/dl-env/
 **/.spyproject/
+**/*tmp*
 .ipynb_checkpoints
+.directory
