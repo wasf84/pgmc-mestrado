@@ -1,5 +1,6 @@
 **/dl-env/
 **/.spyproject/
+**/lightning_logs/
 **/*tmp*
 .ipynb_checkpoints
 .directory
