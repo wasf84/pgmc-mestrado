@@ -2,5 +2,6 @@
 **/.spyproject/
 **/lightning_logs/
 **/*tmp*
+**/.idea/
 .ipynb_checkpoints
 .directory
