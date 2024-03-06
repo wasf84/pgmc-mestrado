@@ -1,7 +1,0 @@
-Reunião tutoria, estágio docência
-Dia 17/10/2022
-
-- tarefa relacionada aos bancos de questões do Moodle
-- terá de resolver as questões usando C++ puro e enviar as soluções
-- quando achar alguma questão com enunciado problemático, fazendo referência ao C, criar um relatório e mandar para o Maurílio
-- ficarei com as aulas pares, rodrigo aulas ímpares
