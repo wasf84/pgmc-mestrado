@@ -1,4 +1,5 @@
-Elastic Net é um método de regressão que executa, simultaneamente à seleção de variáveis, um processo de regularização. Regularização é um procedimento para quando o modelo está overfitting, ou seja, o modelo está muito bem ajustado para os dados de treino mas não gera bons resultados com os dados de teste.
+Elastic Net é um método de regressão que executa, simultaneamente à seleção de variáveis, um processo de regularização. Regularização é um procedimento para quando o modelo está overfitting, ou seja, o modelo está muito bem ajustado para os dados de treino mas não gera bons 
+resultados com os dados de teste.
 
 A regularização pode ser realizada de duas maneiras: utilizando penalização l1 ou penalização l2. A penalização l1 é chamada de regressão 'lasso' e a penalização l2 é a chamada regressão 'ridge'.
 
