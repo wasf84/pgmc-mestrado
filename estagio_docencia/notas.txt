@@ -1,3 +1,0 @@
-- os dias para ajudar na aplicação de prova será enviado por email; aguardar o email
-- segunda chamada vai esperar os demais professores manifestarem e os outros tutores
-- revisar as questões no Moodle, ajustar enunciado, o output, eventualmente criar questão nova, etc
