@@ -1,9 +1,0 @@
-Melhores parâmetros para um "fch = 10"
--------------- LGBM -------------
-{'num_leaves': 223, 'n_estimators': 178, 'learning_rate': 0.06272774657480125, 'min_data_in_leaf': 7, 'bagging_fraction': 0.8180844425699854, 'colsample_bytree': 0.5599540214861034, 'n_lags': 4}
-
--------------- XGB --------------
-{'max_depth': 136, 'subsample': 0.45461293692073884, 'learning_rate': 0.1749856379943729, 'min_child_weight': 300, 'colsample_bytree': 0.08793456432326684, 'n_lags': 3}
-
--------------- kNN --------------
-{'weights': 'uniform', 'n_neighbors': 15, 'algorithm': 'brute', 'n_lags': 1}
