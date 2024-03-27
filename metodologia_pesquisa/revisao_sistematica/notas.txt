@@ -5,10 +5,10 @@ time series forecasting
 
 ---------
 
-Todos limitados aos anos: 2018 - 2022
+Todos limitados aos anos: 2018 - 2023
 
 Scopus
-( ( TITLE-ABS-KEY ( "deep learning" )  OR  TITLE-ABS-KEY ( "machine learning" ) )  AND  TITLE-ABS-KEY ( "flood forecasting" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2022 )  OR  LIMIT-TO ( PUBYEAR ,  2021 )  OR  LIMIT-TO ( PUBYEAR ,  2020 )  OR  LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
+( ( TITLE-ABS-KEY ( "deep learning" )  OR  TITLE-ABS-KEY ( "machine learning" ) )  AND  TITLE-ABS-KEY ( "flood forecasting" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2023 ) OR LIMIT-TO ( PUBYEAR ,  2022 )  OR  LIMIT-TO ( PUBYEAR ,  2021 )  OR  LIMIT-TO ( PUBYEAR ,  2020 )  OR  LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
 
 Web of Science
 (((TI=(deep learning) OR TI=(machine learning))) AND TI=(flood forecasting)) OR
@@ -20,3 +20,8 @@ Science Direct
 
 SpringerLink
 ("deep learning" OR "machine learning") AND "runoff" AND ("flood forecasting" OR "time series forecasting")
+
+ScieloBR
+
+
+Revista Mineira de Recursos Hídricos
