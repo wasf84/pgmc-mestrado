@@ -1,0 +1,584 @@
+TY  - JOUR
+T1  - Geochemistry Articles – December 2023
+JO  - Organic Geochemistry
+VL  - 188
+SP  - 104738
+PY  - 2024
+DA  - 2024/02/01/
+SN  - 0146-6380
+DO  - https://doi.org/10.1016/j.orggeochem.2024.104738
+UR  - https://www.sciencedirect.com/science/article/pii/S0146638024000032
+ER  - 
+
+TY  - JOUR
+T1  - Review of satellite radar interferometry for subsidence analysis
+AU  - Raspini, Federico
+AU  - Caleca, Francesco
+AU  - Del Soldato, Matteo
+AU  - Festa, Davide
+AU  - Confuorto, Pierluigi
+AU  - Bianchini, Silvia
+JO  - Earth-Science Reviews
+VL  - 235
+SP  - 104239
+PY  - 2022
+DA  - 2022/12/01/
+SN  - 0012-8252
+DO  - https://doi.org/10.1016/j.earscirev.2022.104239
+UR  - https://www.sciencedirect.com/science/article/pii/S0012825222003233
+KW  - Subsidence
+KW  - SAR
+KW  - DInSAR
+KW  - Mapping
+KW  - Monitoring
+KW  - Characterization
+KW  - Modeling
+AB  - This paper includes a critical review of the existing literature on the use of satellite SAR imagery for subsidence analysis. Land subsidence, related to multiple natural and human-induced processes, is observed globally in an increasing number of areas. Potentially leading to severe impacts on economics and the environment, subsidence has attracted growing scientific attention and, over the last decades, new tools and methods have been developed for accurately measuring the spatial and temporal evolution of surface deformations associated with subsidence phenomena. The collection of the existing scientific literature on the satellite InSAR for subsidence analysis was conducted in January 2022 exploiting the WoS's freely accessible web search engine. An extensive database of 1059 scientific contributions was compiled, covering the period 1997–2021. The content of each record in the literature database has been critically examined to collect and store information regarding the study area location, microwave band adopted, satellite used, processing approach, subsidence cause, application type, field evidence and strategies to validate and compare InSAR data. Analysis of temporal distribution revealed a substantial growth in scientific production and an increasing interest of geoscientists, with a mean value of 21 articles per year from 1997 to 2014, rising to about 100 articles per year between 2015 and 2021. All continents include at least a study area, with Asia and Europe having the largest number of case studies, with 586 and 281 analyses in their territory, respectively, and revealing a clear geographical bias in subsidence study locations. Graphical visualizations and syntheses of current applications are presented. The large availability of different acquisition bands, the increasing imaging capabilities, refinement of processing approaches, and growing expertise in data interpretation allowed InSAR data to be used at different scales of analysis, for different purposes and subsidence types, in a wide range of physiographic settings. This review highlights that satellite InSAR has moved from being a niche topic to an operative tool with a major role in subsidence studies. Despite more than 25 years of progress and advancements, technical and operational challenges remain to be faced. Leveraging on the analysis of the literature review and authors' experience, recommendations and perspectives are provided for a more effective use of InSAR data.
+ER  - 
+
+TY  - JOUR
+T1  - Algorithmic green infrastructure optimisation: Review of artificial intelligence driven approaches for tackling climate change
+AU  - Shaamala, Abdulrazzaq
+AU  - Yigitcanlar, Tan
+AU  - Nili, Alireza
+AU  - Nyandega, Dan
+JO  - Sustainable Cities and Society
+VL  - 101
+SP  - 105182
+PY  - 2024
+DA  - 2024/02/01/
+SN  - 2210-6707
+DO  - https://doi.org/10.1016/j.scs.2024.105182
+UR  - https://www.sciencedirect.com/science/article/pii/S221067072400012X
+KW  - Green infrastructure
+KW  - Infrastructure optimisation
+KW  - Climate change
+KW  - Artificial intelligence
+KW  - Machine learning
+KW  - Optimisation algorithms
+AB  - Green infrastructure (GI) is a fundamental building block of our cities. It contributes to the sustainability and vitality of cities by offering various benefits such as greening, cooling, water, air quality, and managing carbon emissions. GI plays an essential role in enhancing overall well-being. The utilisation of artificial intelligence (AI) technologies for GI optimisation is perceived as a powerful approach for cities. A knowledge gap, nevertheless, remains in research on AI-driven GI optimisation for tackling climate change. This study aims to consolidate the comprehension of AI-driven GI optimisation, particularly for tackling climate change. The study methodology adopts the PRISMA protocol to perform a systematic literature review. The review results are analysed from six aspects—i.e., optimisation objectives, objectives categories, indicators, models, GI types, and scales. The findings revealed: (a) GI optimisation was mainly undertaken in the areas of air quality, biodiversity and ecosystem security, energy efficiency, public health, heat islands, and water management; (b) Indicator categories were mainly concentrated on indicators related to GI, indicators related to the objective, and other general/supporting indicators. Based on these findings, a framework was developed to enhance the understanding of the AI-driven GI optimisation process within the realm of climate change.
+ER  - 
+
+TY  - JOUR
+T1  - Statistical physics approaches to the complex Earth system
+AU  - Fan, Jingfang
+AU  - Meng, Jun
+AU  - Ludescher, Josef
+AU  - Chen, Xiaosong
+AU  - Ashkenazy, Yosef
+AU  - Kurths, Jürgen
+AU  - Havlin, Shlomo
+AU  - Schellnhuber, Hans Joachim
+JO  - Physics Reports
+VL  - 896
+SP  - 1
+EP  - 84
+PY  - 2021
+DA  - 2021/02/18/
+T2  - Statistical physics approaches to the complex Earth system
+SN  - 0370-1573
+DO  - https://doi.org/10.1016/j.physrep.2020.09.005
+UR  - https://www.sciencedirect.com/science/article/pii/S0370157320303458
+KW  - Statistical physics
+KW  - Complex Earth systems
+KW  - Complex network
+KW  - Climate change
+KW  - Earthquake
+AB  - Global warming, extreme climate events, earthquakes and their accompanying socioeconomic disasters pose significant risks to humanity. Yet due to the nonlinear feedbacks, multiple interactions and complex structures of the Earth system, the understanding and, in particular, the prediction of such disruptive events represent formidable challenges to both scientific and policy communities. During the past years, the emergence and evolution of Earth system science has attracted much attention and produced new concepts and frameworks. Especially, novel statistical physics and complex networks-based techniques have been developed and implemented to substantially advance our knowledge of the Earth system, including climate extreme events, earthquakes and geological relief features, leading to substantially improved predictive performances. We present here a comprehensive review on the recent scientific progress in the development and application of how combined statistical physics and complex systems science approaches such as critical phenomena, network theory, percolation, tipping points analysis, and entropy can be applied to complex Earth systems. Notably, these integrating tools and approaches provide new insights and perspectives for understanding the dynamics of the Earth systems. The overall aim of this review is to offer readers the knowledge on how statistical physics concepts and theories can be useful in the field of Earth system science.
+ER  - 
+
+TY  - JOUR
+T1  - Smart farming: Agriculture's shift from a labor intensive to technology native industry
+AU  - Charania, Imran
+AU  - Li, Xinrong
+JO  - Internet of Things
+VL  - 9
+SP  - 100142
+PY  - 2020
+DA  - 2020/03/01/
+SN  - 2542-6605
+DO  - https://doi.org/10.1016/j.iot.2019.100142
+UR  - https://www.sciencedirect.com/science/article/pii/S2542660519302471
+KW  - Smart farming
+KW  - Internet of Things
+KW  - Artificial intelligence
+KW  - Robotics
+AB  - Since human beings transitioned to an agrarian lifestyle, technological advancements have enabled evolutions in agriculture, resulting in greater varieties and yields of crops. However, as society faces the effects of climate change and the resulting social challenges, agriculture is at a unique point in its history. Recent advancements in a number of key technologies have placed agriculture at the precipice of another evolution that could not only affect the variety and yield of crops, but also climatological and social outcomes as well. Specifically, advancements with the Internet of Things, artificial intelligence, and robotics among others have enabled data-driven and automated agriculture. This paper intends to provide a review of current and emerging agriculture technology applications as well as research efforts by examining the advancement of these key technologies in the context of smart farming. We also present future directions for these agriculture technology applications.
+ER  - 
+
+TY  - JOUR
+T1  - Estimated flooded rice grain yield and nitrogen content in leaves based on RPAS images and machine learning
+AU  - Eugenio, Fernando Coelho
+AU  - Grohs, Mara
+AU  - Schuh, Mateus
+AU  - Venancio, Luan Peroni
+AU  - Schons, Cristine
+AU  - Badin, Tiago Luis
+AU  - Mallmann, Caroline Lorenci
+AU  - Fernandes, Pablo
+AU  - Pereira da Silva, Sally Deborah
+AU  - Fantinel, Roberta Aparecida
+JO  - Field Crops Research
+VL  - 292
+SP  - 108823
+PY  - 2023
+DA  - 2023/03/01/
+SN  - 0378-4290
+DO  - https://doi.org/10.1016/j.fcr.2023.108823
+UR  - https://www.sciencedirect.com/science/article/pii/S0378429023000163
+KW  - Precision agriculture
+KW  - UAVs
+KW  - Predictive modeling
+KW  - Phenology
+AB  - Remote sensing based on Remote Piloted Aircraft Systems (RPAS) has proved valuable for monitoring agronomic parameters in precision agriculture. This research aimed to develop predictive models based on machine learning to estimate indirect nitrogen levels (Narea) and grain yield in irrigated rice. During the five phenological stages of cultivation, a Sequoia® camera aboard the Phantom 4® Pro platform acquired the multispectral images. In addition to the spectral bands, 11 vegetation indices were taken as predictors of the response variables (Narea and grain yield). Spearman's correlation coefficient (p) analyzed the ideal monitoring window and selected the model variables. The Multi-Layer Perceptron (MLP) algorithm adjusted the predictive models that had their performance evaluated in training and testing. The results obtained by the Spearman correlation indicate that the ideal window for monitoring rice by RPAS, for both response variables, occurs at the beginning of the reproduction phase (R1). MLP generated a more accurate model for Narea, demonstrated by Pearson's correlation between predicted and observed values (0.82 and 0.71) and mean absolute error (MAE) of 9.47 and 10.89. Grain yield models show good MLP at all stages and excellent accuracy. In this way, our results reinforce the excellent efficiency of the combination of remote sensing via RPAS and machine learning in applications aimed at precision agriculture, serving as a useful tool for managing production and evaluating grain yield in irrigated rice fields.
+ER  - 
+
+TY  - JOUR
+T1  - A machine learning approach for identifying and delineating agricultural fields and their multi-temporal dynamics using three decades of Landsat data
+AU  - Li, Ting
+AU  - Johansen, Kasper
+AU  - McCabe, Matthew F.
+JO  - ISPRS Journal of Photogrammetry and Remote Sensing
+VL  - 186
+SP  - 83
+EP  - 101
+PY  - 2022
+DA  - 2022/04/01/
+SN  - 0924-2716
+DO  - https://doi.org/10.1016/j.isprsjprs.2022.02.002
+UR  - https://www.sciencedirect.com/science/article/pii/S0924271622000363
+KW  - Center-pivot field
+KW  - Delineation
+KW  - DBSCAN
+KW  - Convolution neural networks
+KW  - Spectral clustering
+KW  - Random forest
+AB  - High spatial and temporal resolution satellite imagery are essential data for land cover discrimination and mapping of vegetation dynamics, offering insights into the number, extent, and condition of agricultural fields. However, an accurate account of the number, location, and variability of fields can be challenging to obtain in a timely manner, particularly at scale or in regions where ground-supporting data are not available, limiting the capacity for food production and water use assessment and planning. To bridge this capacity gap, a convolutional neural network approach was adopted and combined with two clustering techniques: the density-based spatial clustering of applications with noise (DBSCAN) and spectral clustering, to provide an account of agricultural fields and their extent across a region lacking ground based information. A random forest classification was also employed to discriminate crop types. Using an annual maximum normalized difference vegetation index (NDVI) derived from 2018 Landsat-8 data, the approach was applied to classify the shape and delineate the extent of agricultural fields across an agricultural region in Saudi Arabia that had an area under irrigation exceeding 2,300 km2. When assessed against manually identified center-pivot fields (CPFs), the method achieved 97.4% producer’s and 98.0% user’s accuracies on an object basis, and 81.4% producer’s and 85.4% user’s accuracies on a pixel basis for identifying non-CPFs (i.e., tree crop plantations and other non-woody crops). The over- and under-segmentation error for CPFs was 1.5% and 1.0%, respectively, with intersection over union errors reported as being 3.5%. The framework showed stability when retrospectively applied to Landsat data from the year 2000, returning 97.5% producer’s and 96.6% user’s accuracies for CPF identification. In order to characterize the temporal dynamics of agricultural development over the past three decades, an analysis of field behavior between 1988 and 2020 was subsequently undertaken. The analysis indicated that the number of CPFs in the study region increased from 45 (covering 20 km2) in 1988 to 5,080 CPFs by 2016 (covering 2,368 km2), followed by a recent reduction to 3,700 CPFs in 2020 (covering 1,581 km2). Through the multi-temporal analysis, individual fields were able to be characterized in terms of their expansion, contraction and activity throughout the study period. Overall, the proposed method was simple to train, efficient in dealing with large datasets, relied on limited in-situ records to a very small degree, and has the potential to be applied to larger national scales, providing an ongoing assessment of important agroinformatic metrics.
+ER  - 
+
+TY  - JOUR
+T1  - Drone as a Service (DaaS) in promoting cleaner agricultural production and Circular Economy for ethical Sustainable Supply Chain development
+AU  - Mahroof, Kamran
+AU  - Omar, Amizan
+AU  - Rana, Nripendra P.
+AU  - Sivarajah, Uthayasankar
+AU  - Weerakkody, Vishanth
+JO  - Journal of Cleaner Production
+VL  - 287
+SP  - 125522
+PY  - 2021
+DA  - 2021/03/10/
+SN  - 0959-6526
+DO  - https://doi.org/10.1016/j.jclepro.2020.125522
+UR  - https://www.sciencedirect.com/science/article/pii/S0959652620355682
+KW  - Drone as a service (DaaS)
+KW  - Circular economy
+KW  - ReSOLVE framework
+KW  - Industry 4.0
+KW  - ISM
+KW  - MICMAC
+AB  - In order to grow the food the world needs, there is a pressing need to gain a more detailed understanding of how innovative solutions can be incorporated into the agricultural supply chains, particularly within production, for environmentally, economically, ethically and socially viable food production. Despite a number of innovative solutions available, many challenges in agricultural supply are still prevalent, with researchers to date largely focusing on these challenges in isolation, as opposed to exploring the relationships held between these challenges. Thus, supported by Circular Economy, Agriculture, Industry 4.0 literature and expert opinions, agricultural supply chain challenges are modelled and analysed using ISM methodology to help uncover 12 agricultural challenges which ultimately impede goods moving within the supply chain. Findings discovered that the Unproductive Workers and Pesticide Hazards are the key drivers of agricultural challenges. The ISM Hierarchical model elucidates research propositions and a parsimonious model for future research.
+ER  - 
+
+TY  - JOUR
+T1  - GEOCHEMISTRY ARTICLES – October 2023
+JO  - Organic Geochemistry
+VL  - 187
+SP  - 104704
+PY  - 2024
+DA  - 2024/01/01/
+SN  - 0146-6380
+DO  - https://doi.org/10.1016/j.orggeochem.2023.104704
+UR  - https://www.sciencedirect.com/science/article/pii/S014663802300150X
+ER  - 
+
+TY  - JOUR
+T1  - The Global LAnd Surface Satellite (GLASS) evapotranspiration product Version 5.0: Algorithm development and preliminary validation
+AU  - Xie, Zijing
+AU  - Yao, Yunjun
+AU  - Zhang, Xiaotong
+AU  - Liang, Shunlin
+AU  - Fisher, Joshua B.
+AU  - Chen, Jiquan
+AU  - Jia, Kun
+AU  - Shang, Ke
+AU  - Yang, Junming
+AU  - Yu, Ruiyang
+AU  - Guo, Xiaozheng
+AU  - Liu, Lu
+AU  - Ning, Jing
+AU  - Zhang, Lilin
+JO  - Journal of Hydrology
+VL  - 610
+SP  - 127990
+PY  - 2022
+DA  - 2022/07/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.127990
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169422005650
+KW  - GLASS
+KW  - Evapotranspiration
+KW  - Deep neural networks
+KW  - Machine learning
+KW  - Bayesian model averaging
+AB  - An accurate estimation of spatially and temporally continuous global terrestrial evapotranspiration (ET) is essential in the assessment of surface energy, water and carbon cycles. The Global LAnd Surface Satellite (GLASS) ET product Version 4.0 (v4.0) based on the Bayesian model averaging (BMA) method was generated to estimate global terrestrial ET. However, certain uncertainty for the GLASS ET product v4.0 limits its application. In this study, we introduced the deep neural networks (DNN) merging framework to improve terrestrial ET estimation for GLASS ET product Version 5.0 (v5.0) generation by integrating five satellite-derived ET products [Moderate Resolution Imaging Spectroradiometer (MODIS) ET product (MOD16), Shuttleworth–Wallace dual-source ET product (SW), Priestley–Taylor-based ET product (PT-JPL), modified satellite-based Priestley–Taylor ET product (MS-PT) and simple hybrid ET product (SIM)]. We compared the performance of DNN method against other merging methods, including GLASS ET algorithm v4.0 (BMA), the gradient boosting regression tree (GBRT) method and the random forest (RF) method, based on 195 global eddy covariance (EC) flux towers covering observations from 2000 through 2015. Validations indicated that the DNN had the highest accuracy among four merging methods across different land cover types, yielding the highest average determination coefficients (R2, 0.62), root-mean-squared-error (RMSE, 24.1 W/m2) and Kling–Gupta efficiency (KGE, 0.77) with a of 99% confidence interval. Compared with GLASS ET algorithm v4.0, the DNN improved on the R2 by approximately 7% (p < 0.01) and the KGE by 10%. Based on the DNN, we then generated 8-day GLASS ET product v5.0 globally with a 1 km spatial resolution from 2001 to 2015 driven by GLASS vegetation and surface net radiation (Rn) datasets and Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA2) datasets. This global terrestrial ET product provides a valuable dataset for monitoring regional and global water resources and environmental changes.
+ER  - 
+
+TY  - JOUR
+T1  - Need and vision for global medium-resolution Landsat and Sentinel-2 data products
+AU  - Radeloff, Volker C.
+AU  - Roy, David P.
+AU  - Wulder, Michael A.
+AU  - Anderson, Martha
+AU  - Cook, Bruce
+AU  - Crawford, Christopher J.
+AU  - Friedl, Mark
+AU  - Gao, Feng
+AU  - Gorelick, Noel
+AU  - Hansen, Matthew
+AU  - Healey, Sean
+AU  - Hostert, Patrick
+AU  - Hulley, Glynn
+AU  - Huntington, Justin L.
+AU  - Johnson, David M.
+AU  - Neigh, Chris
+AU  - Lyapustin, Alexei
+AU  - Lymburner, Leo
+AU  - Pahlevan, Nima
+AU  - Pekel, Jean-Francois
+AU  - Scambos, Theodore A.
+AU  - Schaaf, Crystal
+AU  - Strobl, Peter
+AU  - Woodcock, Curtis E.
+AU  - Zhang, Hankui K.
+AU  - Zhu, Zhe
+JO  - Remote Sensing of Environment
+VL  - 300
+SP  - 113918
+PY  - 2024
+DA  - 2024/01/01/
+SN  - 0034-4257
+DO  - https://doi.org/10.1016/j.rse.2023.113918
+UR  - https://www.sciencedirect.com/science/article/pii/S0034425723004704
+KW  - High-level data products
+KW  - Analysis Ready Data
+KW  - global change monitoring
+KW  - Harmonized Landsat Sentinel-2 data
+AB  - Global changes in climate and land use are threatening natural ecosystems, biodiversity, and the ecosystem services people rely on. This is why it is necessary to track and monitor spatiotemporal change at a level of detail that can inform science, management, and policy development. The current constellation of multiple Landsat and Sentinel-2 satellites collecting imagery at predominantly ≤30-m spatial resolution affords an opportunity for the generation of global medium- resolution products every few days. Our goal is to both identify the information needs and provide direction towards the generation of a suite of global, high-level, systematically-generated, medium-resolution products designed for both management and science. Our vision builds on the success of the NASA MODIS/VIIRS product suite, while recognizing the unique strengths of medium-resolution satellite data given their higher spatial resolution and longer time series. We propose a suite of 13 essential products that enable the characterization of the current state and changes in the biosphere, cryosphere, and hydrosphere, and would fill information needs identified by the Committee on Earth Observation Satellites for the Global Climate Observing System and the Global Terrestrial Observing System, by the National Research Council of the US National Academies in the decadal survey, and by others. These products are: land cover, land cover change, burned area, forest loss, vegetation indices, phenology, dynamic habitat indices, albedo, land surface temperature, snow cover, ice extent, surface water extent, and evapotranspiration. Furthermore, we provide a list of desirable products poised for addition to the essential products (e.g., crop type, emissivity, and ice sheet velocity). Lastly, we suggest aspirational products requiring further algorithm development (e.g., forest structure and crop yield). For the identified essential products, algorithms are in place, making it feasible to begin generating products systematically. These products should be accompanied by quality and accuracy assessments undertaken following consensus protocols. Five decades after the first Landsat satellite, and two decades after the MODIS products were first produced, it is time now for readily available, standardized, and consistent high-level products built upon medium-resolution imagery, thereby fulfilling the promise and the vision that inspired the Landsat program since its inception.
+ER  - 
+
+TY  - JOUR
+T1  - Impacts of climate change on vegetation pattern: Mathematical modeling and data analysis
+AU  - Sun, Gui-Quan
+AU  - Li, Li
+AU  - Li, Jing
+AU  - Liu, Chen
+AU  - Wu, Yong-Ping
+AU  - Gao, Shupeng
+AU  - Wang, Zhen
+AU  - Feng, Guo-Lin
+JO  - Physics of Life Reviews
+VL  - 43
+SP  - 239
+EP  - 270
+PY  - 2022
+DA  - 2022/12/01/
+SN  - 1571-0645
+DO  - https://doi.org/10.1016/j.plrev.2022.09.005
+UR  - https://www.sciencedirect.com/science/article/pii/S1571064522000653
+KW  - Climate change
+KW  - Vegetation pattern
+KW  - Mathematical modeling
+KW  - Data analysis
+AB  - Climate change has become increasingly severe, threatening ecosystem stability and, in particular, biodiversity. As a typical indicator of ecosystem evolution, vegetation growth is inevitably affected by climate change, and therefore has a great potential to provide valuable information for addressing such ecosystem problems. However, the impacts of climate change on vegetation growth, especially the spatial and temporal distribution of vegetation, are still lacking of comprehensive exposition. To this end, this review systematically reveals the influences of climate change on vegetation dynamics in both time and space by dynamical modeling the interactions of meteorological elements and vegetation growth. Moreover, we characterize the long-term evolution trend of vegetation growth under climate change in some typical regions based on data analysis. This work is expected to lay a necessary foundation for systematically revealing the coupling effect of climate change on the ecosystem.
+ER  - 
+
+TY  - CHAP
+T1  - Index
+A2  - Malard, Florian
+A2  - Griebler, Christian
+A2  - Rétaux, Sylvie
+BT  - Groundwater Ecology and Evolution (Second Edition)
+PB  - Academic Press
+CY  - San Diego
+SP  - 589
+EP  - 610
+PY  - 2023
+DA  - 2023/01/01/
+SN  - 978-0-12-819119-4
+DO  - https://doi.org/10.1016/B978-0-12-819119-4.20001-2
+UR  - https://www.sciencedirect.com/science/article/pii/B9780128191194200012
+ER  - 
+
+TY  - JOUR
+T1  - Reconstructing monthly 0.25° terrestrial evapotranspiration data in a remote arid region using Bayesian-driven ensemble learning method
+AU  - Ochege, Friday Uchenna
+AU  - Yuan, Xiuliang
+AU  - Ezekwe, Ifeanyichukwu C.
+AU  - Ling, Qing
+AU  - Nzabarinda, Vincent
+AU  - Kayiranga, Alphonse
+AU  - Xie, Mingjuan
+AU  - Shi, Haiyang
+AU  - Luo, Geping
+JO  - Journal of Hydrology
+VL  - 634
+SP  - 131115
+PY  - 2024
+DA  - 2024/05/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2024.131115
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169424005109
+KW  - Reconstructed evapotranspiration (ET)
+KW  - Bayesian ensemble learning
+KW  - Gridded ET evaluation
+KW  - Arid Central Asia
+AB  - This study presents a Bayesian-driven ensemble learning framework to minimize errors in evapotranspiration (ET) data assimilation, thereby generating a continuous-scale ET estimation with improved accuracy for the data-scarce arid Central Asia (CA). Five state-of-the-art gridded ET products were extensively tested and utilized to reconstruct new long-term ET data at grid scale, including two Global Land Data Assimilation System (GLDAS)-Land Surface Models (LSM) (Catchment and NOAH), two reanalysis products (European Centre for Medium-Range Weather Forecasts Reanalysis 5 (ERA5) and Modern-Era Retrospective Analysis for Research and Applications – ver. 2 (MERRA2)), along with the Global Land Evaporation Amsterdam (GLEAM) satellite ET product ver. 3.6b. Taylor Skill Score was employed to evaluate the input gridded ET datasets, using in situ measurements across four arid biomes — cropland, shrubland, farmland, and grassland —as benchmarks. Bayes-Markov Chain Monte Carlo (Bayes-MCMC)-derived logarithmically transformed predictors from the posterior ensemble anomalies were standardized to resolve the mismatches in the cumulative distribution functions of ET data relating to the in situ observations. We found that the constrained residual errors were more profound between 45th and 95th percentiles for the rescaled total ET anomalies across all the input ET datasets at 95 % confidence interval. Moreover, the weighted ensemble estimates derived from the Bayes-MCMC were instrumental in correcting ET anomalies, leading to the robust reconstruction of a more reliable ensemble mean ET data for Central Asia (CAETens) at monthly temporal and 0.25° spatial resolutions, spanning from 2003 to 2020. Overall, CAETens exhibited superior performance, achieving the highest averaged Kling-Gupta Efficiency of 0.75 and registering the lowest Root Mean Square Error of 6.85 mm/m compared to the standalone gridded ET products. Comparisons of spatial distributions of fine-scale features, and evaluations using standard metrics revealed that all ET products varied significantly (p < 0.05) by biome types. Remarkably, only CAETens exhibited a reasonable low positive bias and pronounced ability to resolve the complex spatiotemporal patterns associated with the input gridded ET products. The study bridges the gap in continuous ET monitoring for sustainable water resources management in CA.
+ER  - 
+
+TY  - JOUR
+T1  - Economic analysis of global microalgae biomass energy potential
+AU  - Yuan, Shuo
+AU  - Lei, Wenbin
+AU  - Cen, Yu
+AU  - Liu, Qi
+AU  - Liu, Jingping
+AU  - Fu, Jianqin
+AU  - Han, Yubo
+JO  - Science of The Total Environment
+VL  - 899
+SP  - 165596
+PY  - 2023
+DA  - 2023/11/15/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2023.165596
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969723042195
+KW  - Biomass energy
+KW  - Microalgae
+KW  - Growth model
+KW  - Economic potential analysis
+AB  - With the increasing demand for renewable energy, microalgae, as a renewable biomass energy, can fix carbon dioxide and have broad application prospects in alleviating the energy crisis and improving the environment. In this paper, the potential biomass of global microalgae is calculated based on the mathematical growth model of microalgae proposed by predecessors. Based on this, this study further uses Newton's gravity model as the basic model of economic analysis and calculates the economic potential coefficient of microalgae production in various regions of the world by using the data of the world's top 20 cities in terms of urban population and urban GDP in 2020. The study has obtained the current global unused land with the high economic value of large-scale microalgae production areas, such as western North America, northern Africa, and northwest China, etc., which can provide guidance for the future site selection and development of microalgae biomass energy.
+ER  - 
+
+TY  - JOUR
+T1  - Modeling streamflow in headwater catchments: A data-based mechanistic grounded framework
+AU  - Fernandez, Nicolas
+AU  - Camacho, Luis A.
+AU  - Nejadhashemi, A. Pouyan
+JO  - Journal of Hydrology: Regional Studies
+VL  - 44
+SP  - 101243
+PY  - 2022
+DA  - 2022/12/01/
+SN  - 2214-5818
+DO  - https://doi.org/10.1016/j.ejrh.2022.101243
+UR  - https://www.sciencedirect.com/science/article/pii/S2214581822002567
+KW  - Headwater hydrology
+KW  - Data-based mechanistic modeling
+KW  - Rainfall-runoff
+KW  - Baseflow estimation
+KW  - Transfer functions
+KW  - System identification
+AB  - Study Region
+The Lenguazaque River Basin is a 290 km2 headwater catchment of the Fuquene Lake Watershed in the Colombian Andes. Regional stakeholders are optimizing water allocations for all users, given numerous quantity related issues such as its simultaneous use for conservation, agriculture, and coal mining.
+Study Focus
+Developing hydrological models in headwater catchments is challenging, especially in developing countries where technical resources and data are limited. This study addresses these challenges by proposing strategies to develop reliable yet mathematically simple models, requiring fewer inputs than data-intensive alternatives. Three stages are proposed, focused on 1) assessing hydrological data, 2) preparing datasets for modeling, and 3) developing models in daily and sub-daily resolutions. The last stage is grounded on a data-based mechanistic modeling approach and includes a novel combination of baseflow separation with digital filters and multi-objective optimization principles. Having a hydrophysical meaning, obtained models are suitable for simulating alternative scenarios.
+New hydrological insights for the region
+Resulting daily models achieved an acceptable performance, significantly better than a semi-distributed model. The performance of sub-daily models was sub-optimal, yet it can be improved by enhancing the quality of sub-daily datasets and the efficiency of computational algorithms. Due to their mathematical nature, the proposed strategies are expected to be applicable to other headwater catchments where improving water management is an imperative need.
+ER  - 
+
+TY  - JOUR
+T1  - GEOCHEMISTRY ARTICLES – September 2021
+JO  - Organic Geochemistry
+VL  - 167
+SP  - 104378
+PY  - 2022
+DA  - 2022/05/01/
+SN  - 0146-6380
+DO  - https://doi.org/10.1016/j.orggeochem.2022.104378
+UR  - https://www.sciencedirect.com/science/article/pii/S0146638022000122
+ER  - 
+
+TY  - JOUR
+T1  - Toward a greener future: A survey on sustainable blockchain applications and impact
+AU  - Rani, Pritam
+AU  - Sharma, Pratima
+AU  - Gupta, Indrajeet
+JO  - Journal of Environmental Management
+VL  - 354
+SP  - 120273
+PY  - 2024
+DA  - 2024/03/01/
+SN  - 0301-4797
+DO  - https://doi.org/10.1016/j.jenvman.2024.120273
+UR  - https://www.sciencedirect.com/science/article/pii/S0301479724002597
+KW  - Sustainable
+KW  - Blockchain
+KW  - Conservations
+KW  - Applications
+KW  - Environmental sustainability
+KW  - Energy-efficient
+AB  - Blockchain Technology has garnered significant attention due to its immense potential to transform the way transactions are conducted and information is managed. Blockchain is a decentralized digital ledger that is spread across a network of computers, ensuring the secure, transparent, and unchangeable recording of transactions. However, the energy consumption of certain blockchain networks like Bitcoin, Litecoin, Monero, Zcash, and others has generated apprehensions regarding the sustainability of this technology. Bitcoin alone consumes approximately 100 terawatt-hours annually, contributing significantly to global carbon emissions. The substantial energy requirements not only contribute to carbon emissions but also pose a risk to the long-term viability of the blockchain industry. This study reviews articles from eight reputable databases between 2017 to August 2023, employing the systematic review and preferred reporting items for systematic reviews and meta-analyses approach for screening. Therefore, explore the applications of sustainable blockchain networks aimed at reducing environmental impact while ensuring efficiency and security. This survey also assesses the challenges and limitations posed by diverse blockchain applications regarding sustainability and provides valuable foresight into potential future advancements. Through this survey, the aim is to track and verify sustainable practices, facilitating the transition to a low-carbon economy, and promoting environmental stewardship, with a specific focus on highlighting the potential of sustainable blockchain networks in enabling secure and transparent tracking of these practices. Finally, the paper sheds light on pertinent research challenges and provides a roadmap of future directions, stimulating further research in this promising field.
+ER  - 
+
+TY  - JOUR
+T1  - Quantification of rainfall, temperature, and reference evapotranspiration trend and their interrelationship in sub-climatic zones of Bangladesh
+AU  - Rahman, Md. Naimur
+AU  - Azim, Syed Anowerul
+AU  - Jannat, Farhana Akter
+AU  - Hasan Rony, Md. Rakib
+AU  - Ahmad, Babor
+AU  - Sarkar, Md Abdur Rouf
+JO  - Heliyon
+VL  - 9
+IS  - 9
+SP  - e19559
+PY  - 2023
+DA  - 2023/09/01/
+SN  - 2405-8440
+DO  - https://doi.org/10.1016/j.heliyon.2023.e19559
+UR  - https://www.sciencedirect.com/science/article/pii/S2405844023067671
+KW  - Bangladesh
+KW  - Climate
+KW  - Evapotranspiration
+KW  - Spatial distribution
+KW  - Trend analysis
+KW  - Weather
+AB  - Rainfall, temperature, and reference evapotranspiration (ET0) have a significant influence on irrigation, aridity, flooding, and crop water requirements. The primary aims of this study were to analyze the trends in rainfall, temperature, and ET0 in seven sub-climatic zones of Bangladesh from 1989 to 2020, as well as examine their interrelationships. The Modified Mann-Kendall method was employed to assess trends, while linear regression was used for trend validation. ET0 was calculated using the FAO-56 Penman-Monteith method, and Sen’s slope was utilized to quantify the magnitude. Spatial analysis was conducted using Inverse Distance Weighting techniques. The findings revealed that annual rainfall increased only in the south-eastern zone, while the other zones experienced a decline. No significant changes were observed in annual maximum temperature, except in the south-eastern, north-eastern, and south-central zones, which showed variations ranging from 0.02 to 0.05 (°C/year). However, the yearly minimum temperature increased in all zones. Additionally, negative changes were observed in the annual magnitude of ET0 for all zones and seasons, except for the south-eastern and north-eastern zones, with a range of 0.01–0.02 mm/year. It was also noted that rainfall and ET0 displayed a strong decreasing relationship, except during the pre-monsoon season. Regarding regional variation, the northern regions exhibited a significant decreasing trend in both rainfall and ET0. The study identified key challenges, including water scarcity and irrigation difficulties due to declining rainfall and evapotranspiration, increased aridity, changing flood patterns, temperature-related impacts on crop growth, regional disparities in climate trends, and the need for effective climate change adaptation measures. Therefore, the study’s findings can contribute to knowledge in areas such as irrigation scheduling, promoting climate-smart agricultural practices, encouraging crop diversification to reduce dependence on water-intensive crops cultivation, and planning resilient water resource management to minimize the effects of environmental shifts, regulate human operations, and implement disaster remedial actions in Bangladesh.
+ER  - 
+
+TY  - JOUR
+T1  - GEOCHEMISTRY ARTICLES – January 2021
+JO  - Organic Geochemistry
+VL  - 153
+SP  - 104198
+PY  - 2021
+DA  - 2021/03/01/
+SN  - 0146-6380
+DO  - https://doi.org/10.1016/j.orggeochem.2021.104198
+UR  - https://www.sciencedirect.com/science/article/pii/S014663802100019X
+ER  - 
+
+TY  - JOUR
+T1  - GEOCHEMISTRY ARTICLES – April 2021
+JO  - Organic Geochemistry
+VL  - 161
+SP  - 104247
+PY  - 2021
+DA  - 2021/11/01/
+SN  - 0146-6380
+DO  - https://doi.org/10.1016/j.orggeochem.2021.104247
+UR  - https://www.sciencedirect.com/science/article/pii/S0146638021000681
+ER  - 
+
+TY  - JOUR
+T1  - Unearthing trends in environmental science and engineering research: Insights from a probabilistic topic modeling literature analysis
+AU  - Palanichamy, Yazwand
+AU  - Kargar, Mehdi
+AU  - Zolfagharinia, Hossein
+JO  - Journal of Cleaner Production
+VL  - 317
+SP  - 128322
+PY  - 2021
+DA  - 2021/10/01/
+SN  - 0959-6526
+DO  - https://doi.org/10.1016/j.jclepro.2021.128322
+UR  - https://www.sciencedirect.com/science/article/pii/S0959652621025373
+KW  - Research trends
+KW  - Topic modeling
+KW  - Latent dirichlet allocation
+KW  - Environmental science
+KW  - Environmental engineering
+AB  - Academic contributions in environmental science and engineering (ESE) research are needed to ensure a cleaner, productive, and environmentally conscious society. Hence, an understanding of the critical trends, topics, and research developments in the field is crucial towards facilitating the identification, communication, and improved research collaboration of nascent and increasingly complex environmental problems. As a deeper analysis of the broader trend evolution of ESE research is lacking in the literature, we employ a more robust content analysis approach in the form of a topic modeling computational text analysis method to unearth key temporal and regional insights in the field. As such, we apply a latent Dirichlet allocation (LDA) model on abstract metadata based on 3572 articles procured from reputable journals that published subject matter related to ESE research from 2005 to 2019 inclusive. We analyze the statistical composition of each inferred topic in the form of word clouds and uncover general research trends, such as topics related to environmental impact assessments, improved clean cookstoves, solid waste management, and environmental lead pollution. We also perform temporal analysis experiments across each respective journal and observe a high degree of consistency and variance among topic focuses. Moreover, whilst quantifying trends at the regional level, we detect that certain countries display clearly discernible patterns, suggesting that research communities in ESE from various countries tend to focus on different sub-fields. The main contribution of our work is the application of a more refined computer-assisted content analysis method in ESE trend analysis research that can serve as the foundation for future exploratory trend analysis investigations in ESE and other related fields.
+ER  - 
+
+TY  - JOUR
+T1  - High uncertainty of evapotranspiration products under extreme climatic conditions
+AU  - Qian, Long
+AU  - Zhang, Zhitao
+AU  - Wu, Lifeng
+AU  - Fan, Shaoshuai
+AU  - Yu, Xingjiao
+AU  - Liu, Xiaogang
+AU  - Ba, Yalan
+AU  - Ma, Haijiao
+AU  - Wang, Yicheng
+JO  - Journal of Hydrology
+VL  - 626
+SP  - 130332
+PY  - 2023
+DA  - 2023/11/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.130332
+UR  - https://www.sciencedirect.com/science/article/pii/S002216942301274X
+KW  - Terrestrial evapotranspiration
+KW  - Evapotranspiration products
+KW  - Extreme climate
+KW  - Assessment
+KW  - Global
+AB  - Terrestrial Evapotranspiration (ET) is an important process for understanding regional or global water, energy, and carbon cycles, and with the development of satellite observations and increased research investment, grid ET products covering a broad spatial extent are becoming more readily available. However, as global warming becomes a reality and extreme climate events occur worldwide, existing studies do not go far enough to verify that these grid products can still be used under extreme climate conditions. This study evaluates nine global ET products, including land surface reanalysis products (GLDAS_CLSM, GLDAS_NOAH, ERA5, and FLDAS), remote sensing (RS) products (GLEAM_v3.6b, MOD16A2, and PMLv2), and multi-source data fusion products (REA and Synthesized), using observations from 153 flux towers worldwide. The objective is to evaluate their performance in estimating ET under extreme climatic conditions (high temperature, high vapor pressure deficit (VPD), and drought). The results indicate that the estimation accuracy of all ET products is significantly reduced under extreme climatic conditions, showing high uncertainty, and this impact is most severe in the Americas (AM) region. Overall, multi-source data fusion products showed the best estimation performance and were less affected by extreme climatic conditions. Among the remote sensing modeling products, GLEAM_v3.6b showed the best performance, while MOD16A2 has the lowest estimation accuracy. Land surface reanalysis products were most affected by extreme conditions, with CLSM and NOAH showing similar performance and ERA5 having the largest errors (RMSE_ERA5 = 1.699 mm/d, MAE_ERA5 = 1.294 mm/d). The ET products show significant error fluctuations and overestimation (PBias > 0.5) in most of North America, and there is a decline in simulation accuracy in arid and semi-arid regions near 30°N, with most ET products showing overestimation. The most significant errors were observed in cropland areas (CRO) and deciduous broadleaf forest areas (DBF), with significant overestimation in mixed forest areas (MF). The results of this study provide valuable insights for researchers in selecting ET products under extreme climatic conditions and encourage product developers to consider uncertainty under such conditions, thereby improving product accuracy.
+ER  - 
+
+TY  - JOUR
+T1  - Assessing the Potentials of Digitalization as a Tool for Climate Change Adaptation and Sustainable Development in Urban Centres
+AU  - Balogun, Abdul-Lateef
+AU  - Marks, Danny
+AU  - Sharma, Richa
+AU  - Shekhar, Himanshu
+AU  - Balmes, Chiden
+AU  - Maheng, Dikman
+AU  - Arshad, Adnan
+AU  - Salehi, Pourya
+JO  - Sustainable Cities and Society
+VL  - 53
+SP  - 101888
+PY  - 2020
+DA  - 2020/02/01/
+SN  - 2210-6707
+DO  - https://doi.org/10.1016/j.scs.2019.101888
+UR  - https://www.sciencedirect.com/science/article/pii/S2210670719307267
+KW  - Adaptation
+KW  - Climate change
+KW  - Digitalization
+KW  - Sustainable
+KW  - Urban
+AB  - Digitalization is a key enabler of sustainable development of cities’ socio-economic dynamics with the potential to foster climate-friendly urban environments and societies. The advent of the 4th industrial revolution has seen the increased application of digitalization in several fields and at different levels. High-tech digital devices, platforms and environments are increasingly being deployed to enhance productivity, efficiency and sustainability, and improve overall well-being of urban dwellers. Digitalization is projected to further impact cities in future, transform jobs and trigger life-style changes with far-reaching impacts that will ultimately affect cities’ resilience and adaptation capacities. While a growing body of research has highlighted the significance of digitalization to climate change mitigation such as reducing GHG and CO2 emissions, comprehensive evaluations of the potentials of digitalization as an enabler of climate change adaptation remain scarce. This paper addresses this gap by analysing the current trend in digital revolution in relation to climate change adaptation and examines the likely challenges of digitalization. A desk research method was adopted, focusing on core digitalization concepts driving the Fourth Industrial Revolution (IR 4.0). Nine case studies in cities across various continents were selected to assess the potentials of digitalization in addressing climatic hazards and to highlight benefits from implementing digitalization, while considering the social-ecological-technological challenges and tensions around IR 4.0. Our findings reveal the capabilities of digitalization in supporting more effective early warning and emergency response systems, enhancing food and water security, improving power infrastructure performance, enabling citizen engagement and participatory adaptation measures and minimizing the impacts of climatic hazards. Finally, we recommend feasible pathways to overcome present risks and challenges in order to optimize the numerous opportunities offered by digitalization in support of climate change adaptation initiatives.
+ER  - 
+
+TY  - JOUR
+T1  - A unified model for high resolution mapping of global lake (>1 ha) clarity using Landsat imagery data
+AU  - Song, Kaishan
+AU  - Wang, Qiang
+AU  - Liu, Ge
+AU  - Jacinthe, Pierre-Andre
+AU  - Li, Sijia
+AU  - Tao, Hui
+AU  - Du, Yunxia
+AU  - Wen, Zhidan
+AU  - Wang, Xiang
+AU  - Guo, Wenwen
+AU  - Wang, Zongming
+AU  - Shi, Kun
+AU  - Du, Jia
+AU  - Shang, Yingxin
+AU  - Lyu, Lili
+AU  - Hou, Junbin
+AU  - Zhang, Baohua
+AU  - Cheng, Shuai
+AU  - Lyu, Yunfeng
+AU  - Fei, Long
+JO  - Science of The Total Environment
+VL  - 810
+SP  - 151188
+PY  - 2022
+DA  - 2022/03/01/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2021.151188
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969721062665
+KW  - Optically active constituents
+KW  - Remote estimation
+KW  - SDD Landsat OLI
+KW  - Multiple regression model
+KW  - Worldwide lakes SDD
+AB  - Lake clarity, usually measured by Secchi disc depth (SDD), is a reliable proxy of lakes trophic status due to its close link with total suspended matter, chlorophyll-a, and nutrients. Trained with in-situ measured SDD and match-up Landsat images, we established various regression models to estimate SDD for global lakes. We selected a unified model which demonstrated good spatiotemporal transferability, and has potential to map SDD in different years with good quality of Landsat top-of-atmosphere (TOA) images embedded in Google Earth Engine (GEE). The unified model was successfully calibrated (n = 3586 data points, R2 = 0.84, MAPE = 29.8%) against SDD measured in 2235 lakes across the world, and the validation (n = 1779, R2 = 0.76, MAPE = 38.8%) also exhibited stable performance. The unified model was tuned to historical SDD measurements coincident with different Landsat sensors (L5-TM, L7-ETM+, L8-OLI) launched over the past four decades (1984–2020), thus confirming its temporal stability. Global SDD was mapped using GEE with OLI TOA products mainly acquired in 2019 to examine the spatial variation of lake water clarity (lake surface area ≥ 1 ha) all over the world. Worldwide, lake water clarity averaged 3.13 ± 1.71 m in 2019, but exhibited remarkable spatial variability due to catchment hydrological and landscape settings, lake morphology, elevation and anthropogenic impact. Inland waters in Europe (4.18 ± 1.82 m) and North America (3.84 ± 1.77 m) had the highest clarity due to greater water depth combined with less human disturbance in the high latitude regions. Lakes in South America (2.50 ± 2.33 m), Asia (2.44 ± 1.63 m) and Africa (2.36 ± 0.72 m) displayed intermediate clarity. Lakes in Oceania (1.97 ± 1.48 m) exhibited the lowest clarity for all continents except Antarctica. Further, we used the mapped SDD to evaluate water trophic status using the Carlson trophic state index. Our results indicate that, in 2019, about 63.6% of the lake areas and 47.8% of total lake numbers (2,219,627/4,646,056) were oligotrophic for global lakes, while about 23.6% areal percent and 37.1% of lake numbers are eutrophic mostly as a result of their being located in agricultural and urban-dominated drainage basins. This study, for the first time, provides water clarity information for lakes with area ≥ 1 ha all over the world with 30-m resolution and facilitates the understanding of the water clarity relevant to TSM (r = 0.95), Chl-a (r = 0.73), total phosphorus (r = 0.75), total nitrogen (r = 0.60), which could further provide water clarity data and technical support for trophic level evaluations as well. This unified model could serve as a powerful research tool for long-term monitoring of aquatic ecosystems and assessing their resilience to anthropogenic disturbance and climate change-related stressors.
+ER  - 

@@ -1,0 +1,604 @@
+TY  - JOUR
+T1  - The urban morphology on our planet – Global perspectives from space
+AU  - Zhu, Xiao Xiang
+AU  - Qiu, Chunping
+AU  - Hu, Jingliang
+AU  - Shi, Yilei
+AU  - Wang, Yuanyuan
+AU  - Schmitt, Michael
+AU  - Taubenböck, Hannes
+JO  - Remote Sensing of Environment
+VL  - 269
+SP  - 112794
+PY  - 2022
+DA  - 2022/02/01/
+SN  - 0034-4257
+DO  - https://doi.org/10.1016/j.rse.2021.112794
+UR  - https://www.sciencedirect.com/science/article/pii/S0034425721005149
+KW  - Remote sensing
+KW  - Sentinels
+KW  - Big data
+KW  - Data fusion
+KW  - Deep learning
+KW  - Local climate zones
+KW  - Urban morphology
+KW  - Global urban LCZ dataset
+KW  - Global inequality
+AB  - Urbanization is the second largest mega-trend right after climate change. Accurate measurements of urban morphological and demographic figures are at the core of many international endeavors to address issues of urbanization, such as the United Nations’ call for “Sustainable Cities and Communities”. In many countries – particularly developing countries –, however, this database does not yet exist. Here, we demonstrate a novel deep learning and big data analytics approach to fuse freely available global radar and multi-spectral satellite data, acquired by the Sentinel-1 and Sentinel-2 satellites. Via this approach, we created the first-ever global and quality controlled urban local climate zones classification covering all cities across the globe with a population greater than 300,000 and made it available to the community (https://doi.org/10.14459/2021mp1633461). Statistical analysis of the data quantifies a global inequality problem: approximately 40% of the area defined as compact or light/large low-rise accommodates about 60% of the total population, whereas approximately 30% of the area defined as sparsely built accommodates only about 10% of the total population. Beyond, patterns of urban morphology were discovered from the global classification map, confirming a morphologic relationship to the geographical region and related cultural heritage. We expect the open access of our dataset to encourage research on the global change process of urbanization, as a multidisciplinary crowd of researchers will use this baseline for spatial perspective in their work. In addition, it can serve as a unique dataset for stakeholders such as the United Nations to improve their spatial assessments of urbanization.
+ER  - 
+
+TY  - JOUR
+T1  - Estimating sub-daily resolution soil moisture using Fengyun satellite data and machine learning
+AU  - Wang, Jiao
+AU  - Zhang, Yongqiang
+AU  - Song, Peilin
+AU  - Tian, Jing
+JO  - Journal of Hydrology
+VL  - 632
+SP  - 130814
+PY  - 2024
+DA  - 2024/03/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2024.130814
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169424002087
+KW  - Soil Moisture
+KW  - Sub-daily resolution
+KW  - Passive Microwave
+KW  - Artificial Neural Network
+KW  - Fengyun-3
+AB  - Soil moisture (SM) is a critical parameter influencing hydrological cycles, evaporation, and plant transpiration, connecting land surface and atmospheric interactions. However, traditional SM inversion methods mainly offer daily resolution data, potentially overlooking diurnal fluctuations due to factors such as precipitation and human activities. This study addresses this limitation by shifting to sub-daily (four times per day) SM data, utilizing artificial neural networks (ANN) with microwave brightness temperature data obtained from Fengyun-3C and Fengyun-3D (FY-3C and FY-3D) satellites, alongside the microwave vegetation index (MVI) to correct for vegetation effects. The ANN was trained from July 2018 to December 2019 (FY-3C) and January 2019 to December 2022 (FY-3D) using the International Soil Moisture Network as the training target. The ANN method demonstrates favorable global performance, as indicated by r = 0.751–0.805, NSE = 0.56–0.64, RMSE = 0.069–0.077 m3/m3, ubRMSE = 0.066–0.071 m3/m3, and mean Bias = 0.002–0.007 m3/m3 under the cross-validation mode. It can capture significant diurnal variations in SM, especially in regions like central Asia, western Australia, and South America. This research presents the feasibility of producing sub-daily high-temporal-resolution SM products with potential applications in large-scale agricultural drought and flood disaster monitoring, thereby enhancing national disaster management and mitigation strategies.
+ER  - 
+
+TY  - JOUR
+T1  - Multimodel ensemble estimation of Landsat-like global terrestrial latent heat flux using a generalized deep CNN-LSTM integration algorithm
+AU  - Guo, Xiaozheng
+AU  - Yao, Yunjun
+AU  - Tang, Qingxin
+AU  - Liang, Shunlin
+AU  - Shao, Changliang
+AU  - Fisher, Joshua B.
+AU  - Chen, Jiquan
+AU  - Jia, Kun
+AU  - Zhang, Xiaotong
+AU  - Shang, Ke
+AU  - Yang, Junming
+AU  - Yu, Ruiyang
+AU  - Xie, Zijing
+AU  - Liu, Lu
+AU  - Ning, Jing
+AU  - Zhang, Lilin
+JO  - Agricultural and Forest Meteorology
+VL  - 349
+SP  - 109962
+PY  - 2024
+DA  - 2024/04/15/
+SN  - 0168-1923
+DO  - https://doi.org/10.1016/j.agrformet.2024.109962
+UR  - https://www.sciencedirect.com/science/article/pii/S0168192324000777
+KW  - Latent heat flux
+KW  - Integration algorithm
+KW  - CNN-LSTM
+KW  - Landsat
+KW  - High-spatial-resolution products
+AB  - Accurate estimates of high-spatial-resolution global terrestrial latent heat flux (LE) from Landsat data are crucial for many basic and applied research. Yet current Landsat-derived LE products were developed using single algorithm with large uncertainties and discrepancies. Here we proposed a convolutional neural network-long short-term memory (CNN-LSTM)-based integrated LE (CNN-LSTM-ILE) framework that integrates five Landsat-derived physical LE algorithms, topography-related variables (elevation, slope and aspect) and eddy covariance (EC) observations to estimate 30-m global terrestrial LE. CNN-LSTM-ILE not only conserves good performance of LE estimation from pure deep learning (DL) algorithm, but partially inherits physical mechanism of the individual physical algorithms for improving the generalization of the integration algorithms for extreme cases. CNN-LSTM is an algorithm that combines two deep learning structures (CNN and LSTM) to effectively utilize the spatial and temporal information contained in the forcing inputs. The data were collected from 190 globally distributed EC observations from 2000 to 2015 and were provided by FLUXNET. The cross-validation results indicated that the CNN-LSTM integration algorithm improved the LE estimates by reducing the root mean square error (RMSE) of 5–8 W/m2 and increasing Kling-Gupta efficiency (KGE) of 0.05–0.16 when compared with the individual LE algorithms and the results of three other machine learning integration algorithms (multiple linear regression, MLR; random forest, RF; and deep neural networks, DNN). The CNN-LSTM integration algorithm had highest KGE (0.81) and R2 (0.66) compared to ground-measured and was applied to generate the Landsat-like regional and global terrestrial LE. An innovation of our strategy is that the CNN-LSTM-ILE model integrates pixel proximity effects and daily LE variations to enhance the accuracy of 16-day LE estimations. This approach can produce a more reliable Landsat-like global terrestrial LE product to improve the representativeness of heterogeneous regions for monitoring hydrological variables.
+ER  - 
+
+TY  - JOUR
+T1  - An innovative approach to predict atmospheric rivers: Exploring convolutional autoencoder
+AU  - Singh, Shivam
+AU  - Goyal, Manish Kumar
+JO  - Atmospheric Research
+VL  - 289
+SP  - 106754
+PY  - 2023
+DA  - 2023/07/01/
+SN  - 0169-8095
+DO  - https://doi.org/10.1016/j.atmosres.2023.106754
+UR  - https://www.sciencedirect.com/science/article/pii/S0169809523001515
+KW  - Atmospheric rivers
+KW  - Deep learning
+KW  - Autoencoder
+KW  - Floods
+KW  - Integrated water vapor transport
+KW  - Machine learning
+AB  - Atmospheric rivers (ARs) are filamentary regions of high moisture content in mid-latitude regions through which most of the poleward moisture is being transported. These ARs carry a huge amount of water in the form of vapor and thus landfalling of these ARs may bring either a beneficial supply of water or may create hazardous flood situations and thus cause damage to life and property. These regions have been statistically characterized as intense integrated water vapor transport (IVT) regions in the troposphere based on various thresholds of magnitude, direction, and geometry. To enhance the knowledge of data-driven methods for modelling nonlinear atmospheric dynamics associated with ARs, a first ever study with data-driven methodology incorporating a Deep Learning architecture, Autoencoder has been proposed. While training the proposed model, the Adam optimizer was used to reduce the mean squared error loss and was optimized using the Rectified Linear Unit (ReLU) and Sigmoid activation functions. The prediction results of the availability of ARs at next frames by the Autoencoder were assessed by popularly used performance evaluation metrics structural similarity index metrics (SSMI), mean squared error (MSE), root mean squared error (RMSE), and peak signal to noise ratio (PSNR). We have got comparatively higher scores (average) of SSIM (0.739) and PSNR (64.422) and lower scores (average) of RMSE (0.155) and MSE (0.0247) for AR prediction from our model which signifies the accuracy of the proposed Autoencoder in capturing AR dynamics. The findings of the study could be useful in giving important insights to incorporate Deep Learning models for forecasting ARs at significant lead time and consequently reducing the risk and increasing the resilience of AR flood prone regions.
+ER  - 
+
+TY  - JOUR
+T1  - A review of machine learning models and influential factors for estimating evapotranspiration using remote sensing and ground-based data
+AU  - Amani, Shima
+AU  - Shafizadeh-Moghadam, Hossein
+JO  - Agricultural Water Management
+VL  - 284
+SP  - 108324
+PY  - 2023
+DA  - 2023/06/30/
+SN  - 0378-3774
+DO  - https://doi.org/10.1016/j.agwat.2023.108324
+UR  - https://www.sciencedirect.com/science/article/pii/S0378377423001890
+KW  - Flux towers
+KW  - Land surface temperature
+KW  - Surface energy balance
+KW  - Water resources management
+AB  - In the era of water scarcity and severe droughts, the accurate estimation of evapotranspiration (ET) is crucial for the efficient management of water resources, understanding hydrological and ecological processes, and comprehending the relationships between the atmosphere, hydrosphere, and biosphere. ET is a complex phenomenon influenced by a set of biophysical and environmental factors. Its estimation becomes more complicated in heterogeneous environments, demanding detailed data and accurate model calibration. Combining remote sensing imagery and machine learning (ML) models has provided a considerable capacity for estimating ET, which relaxes a number of assumptions and requires less data than traditional approaches. Satellite imagery provides influential variables for ET estimation using ML models. Nevertheless, a growing number of ML models and emerging satellite imagery has opened up a wide and complex potential before researchers. While previous studies have reviewed physical-based methods for ET estimation, this paper offers a recent decade review of the progress, challenges, and opportunities provided by the RS and ML models for the ET estimation and future outlook.
+ER  - 
+
+TY  - JOUR
+T1  - Random Forest–based gully erosion susceptibility assessment across different agro-ecologies of the Upper Blue Nile basin, Ethiopia
+AU  - Setargie, Tadesual Asamin
+AU  - Tsunekawa, Atsushi
+AU  - Haregeweyn, Nigussie
+AU  - Tsubo, Mitsuru
+AU  - Fenta, Ayele Almaw
+AU  - Berihun, Mulatu Liyew
+AU  - Sultan, Dagnenet
+AU  - Yibeltal, Mesenbet
+AU  - Ebabu, Kindiye
+AU  - Nzioki, Benedict
+AU  - Meshesha, Taye Minichil
+JO  - Geomorphology
+VL  - 431
+SP  - 108671
+PY  - 2023
+DA  - 2023/06/15/
+SN  - 0169-555X
+DO  - https://doi.org/10.1016/j.geomorph.2023.108671
+UR  - https://www.sciencedirect.com/science/article/pii/S0169555X23000910
+KW  - Soil erosion
+KW  - Machine learning
+KW  - DEM spatial resolution
+KW  - GIS and RS
+KW  - Runoff curve number
+KW  - Dryland
+AB  - Several environmental factors are known to influence the spatial distribution and susceptibility of gully erosion, yet the relative importance and interaction of these factors remain little understood in Ethiopia. In this study, we integrated detailed field investigations with high-resolution remote sensing products to assess gully erosion susceptibility and identify its controlling factors using Random Forest (RF) model in six representative watersheds across contrasting (highland, midland, and lowland) agro-ecological environments in the Upper Blue Nile basin of Ethiopia. Data for 20 controlling factors were extracted from datasets at eight different pixel resolutions ranging from 0.5 to 30 m in a geographic information system environment. About 70 % and 30 % of the dataset in each watershed were randomly selected for model training and validation purposes, respectively. Multicollinearity and correlation analyses were performed to identify variables with collinearity problems and explain their statistical relationships among the other variables. RF predicted gully erosion susceptibility and the relative importance of the controlling factors. The model showed outstanding performance when the finest-resolution datasets were used. Elevation, height above nearest drainage, runoff curve number-II, distance from streams, drainage density, soil type, and land use/land cover were found to be the most important factors controlling the spatial distribution of gullies in all six watersheds, irrespective of the watershed treatment conditions and agro-ecological settings. Thus, the most susceptible land to gully erosion was low-lying grazing and cultivated lands with sensitive soil of high runoff-generation capacity located within short horizontal and vertical distances from drainage networks. Therefore, basin- and watershed-scale gully management strategies should give priority to these areas. The identification of the runoff curve number-II, a hydrologic parameter for predicting direct runoff from excess rainfall, as one of the most important factors controlling gully erosion was a novel finding which will be useful for developing improved process-based gully erosion models.
+ER  - 
+
+TY  - JOUR
+T1  - Characterization of groundwater storage changes in the Amazon River Basin based on downscaling of GRACE/GRACE-FO data with machine learning models
+AU  - Satizábal-Alarcón, Diego Alejandro
+AU  - Suhogusoff, Alexandra
+AU  - Ferrari, Luiz Carlos
+JO  - Science of The Total Environment
+VL  - 912
+SP  - 168958
+PY  - 2024
+DA  - 2024/02/20/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2023.168958
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969723075873
+KW  - Remote sensing
+KW  - AdaBoost
+KW  - Random Forest
+KW  - Artificial intelligence
+KW  - Time series
+KW  - Amazon aquifer system
+KW  - Land cover
+AB  - Groundwater storage changes in the Amazon River Basin (ARB) play an important role in the hydrological behavior of the region, with significant influence on climate variability and rainforest ecosystems. The GRACE and GRACE-FO satellite missions provide gravity anomalies from which it is possible to monitor changes in terrestrial water storage, albeit at low spatial resolution. This study downscaled GRACE and GRACE-FO data from machine learning models from 1° (110 km approx) to 0.25° (27.5 km approx). It estimated the spatiotemporal variability of terrestrial and groundwater storage anomalies between 2002 and 2021 for the Amazon River Basin. In parallel, the Random Forest and AdaBoost algorithms were compared and analyzed. The results reflected a good fit of the models with a very low error and a slight superiority in the predictions obtained by AdaBoost. On the predictions at 0.25°, spatial patterns associated with the strong influence on storage changes of some rivers and snow-capped mountains were identified, as well as an increase in the accuracy of the scaled data of the original ones. Positive long-term behavior was also obtained in terrestrial and groundwater storage of 14.26 ± 1.18 km3/yr and + 22.24 ± 1.18 km3/yr, respectively. Validation of the time series of groundwater anomalies to water levels in the monitoring wells obtained maximum correlation coefficients of 0.85 with confidence levels of 0.01. These results are promising for satellite information in water management, especially in regional monitoring of unconfined aquifers. The obtained data is stored in a dedicated repository (Satizábal-Alarcón et al., 2023).
+ER  - 
+
+TY  - JOUR
+T1  - A systematic literature review on lake water level prediction models
+AU  - Ozdemir, Serkan
+AU  - Yaqub, Muhammad
+AU  - Yildirim, Sevgi Ozkan
+JO  - Environmental Modelling & Software
+VL  - 163
+SP  - 105684
+PY  - 2023
+DA  - 2023/05/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2023.105684
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815223000701
+KW  - Lake water level
+KW  - Reservoir water level
+KW  - Prediction
+KW  - Forecast
+KW  - Time series
+AB  - Global climate change has led to large fluctuations in lake levels in recent years as meteorological and hydrological parameters have changed and water use has been intense. Water scientists use various computer models to analyze the hydrological variables recorded in the past and make projections for all future scenarios. Based on the technological progress, six different types of algorithms were studied in this review to predict the water level in lakes. The prediction results show that Deep Learning (DL) has the highest accuracy in terms of the evaluation metrics. Since the Artificial Intelligence (AI) field is still emerging and continue to improve, this study highlights better comprehension of current applications and the problems that need to be investigated more for LWL forecasting techniques. It reveals that the studies mainly focused on lakes either in USA or China and there is room for improvement for other locations that are scarcely investigated.
+ER  - 
+
+TY  - JOUR
+T1  - Predicting the spatiotemporal characteristics of atmospheric rivers: A novel data-driven approach
+AU  - Meghani, Samarth
+AU  - Singh, Shivam
+AU  - Kumar, Nagendra
+AU  - Goyal, Manish Kumar
+JO  - Global and Planetary Change
+VL  - 231
+SP  - 104295
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 0921-8181
+DO  - https://doi.org/10.1016/j.gloplacha.2023.104295
+UR  - https://www.sciencedirect.com/science/article/pii/S0921818123002692
+KW  - Atmospheric rivers
+KW  - Deep learning
+KW  - Convolutional autoencoder
+KW  - Floods
+KW  - Integrated water vapor transport
+KW  - Machine learning
+AB  - Atmospheric Rivers (ARs) are narrow bands of high-water vapor content in the low troposphere of mid-latitude regions through which most of the poleward moisture is being transported. ARs have been represented statistically as the regions of intense vertically integrated horizontal water vapor transport (IVT) in the atmosphere. These ARs have been found positively correlated with extreme precipitation and flood events at some coastal mid-latitude regions and thus have been linked to several socioeconomic implications. The robust and accurate forecasts of AR availability at a significant lead time can be a useful tool for managing AR-associated floods and water resources. To enhance the knowledge of data-driven methods for modelling nonlinear atmospheric dynamics associated with ARs, we have explored some popular deep-learning architectures for predicting AR availability. AR availability maps derived from the statistical characterization of IVT using ERA5 reanalyses data of ECMWF from the testing dataset are taken as ground truth for the prediction. The predictions of the models have been analyzed based on popularly adopted performance evaluation metrics structural similarity index measure (SSIM), mean square error (MSE), root mean square error (RMSE), and peak signal-to-noise ratio (PSNR). Our proposed autoencoder model outperforms the conventional convolutional neural network (CNN) and Conv-LSTM model. We have got comparatively higher scores (average) of SSIM (0.739) and PSNR (64.424) as well as lower scores (average) of RMSE (0.155) and MSE (0.025) for the predictions which signify the ability of our model to learn spatiotemporal features linked with AR-dynamics.
+ER  - 
+
+TY  - JOUR
+T1  - Retrieving water chlorophyll-a concentration in inland waters from Sentinel-2 imagery: Review of operability, performance and ways forward
+AU  - Llodrà-Llabrés, Joana
+AU  - Martínez-López, Javier
+AU  - Postma, Thedmer
+AU  - Pérez-Martínez, Carmen
+AU  - Alcaraz-Segura, Domingo
+JO  - International Journal of Applied Earth Observation and Geoinformation
+VL  - 125
+SP  - 103605
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 1569-8432
+DO  - https://doi.org/10.1016/j.jag.2023.103605
+UR  - https://www.sciencedirect.com/science/article/pii/S1569843223004296
+KW  - Remote sensing
+KW  - Inland aquatic ecosystems
+KW  - Water quality
+KW  - Atmospheric correction
+KW  - Spectral indices
+AB  - The fundamental role of water for life and the threats to water bodies around the world have highlighted the need for their conservation. Remote sensing is a tool that allows us to monitor water bodies in a rapid, systematic, accurate and economical way, being complementary to traditional field sampling methods. The main aim of this review is to synthesise the use of the Sentinel-2 satellite for chlorophyll-a monitoring, an indicator of the trophic state of aquatic ecosystems, and assess the role of each parameter on chlorophyll-a retrieval. To this end, indices, models, atmospheric corrections and field sampling details used so far in chlorophyll-a monitoring of aquatic ecosystems using Sentinel-2 imagery were analysed. Sentinel-2 was chosen because it has suitable features for monitoring water bodies (spatial, temporal and spectral resolution), despite not having been specifically designed for that purpose. The indices aphy(B4)/a*phy(B4), B7(1/B4-1/B5), B5-(B6 + B4)/2 and B3/B4 performed best in lakes and B2 + B3 + B4 + B5, B3/B6 and (B5-B4)/(B5 + B4) in reservoirs. The atmospheric correction ELM performed worse than Sen2Cor and ATCOR in lakes. In reservoirs, ATCOR performed best and C2XC and Dark Object Subtraction performed worse. Finally, classical machine learning and deep learning models outperformed traditional linear and non-linear models. An integrated vision of remote sensing with Ecology could improve some weaknesses found in the reviewed articles, such as the lack of methodological details in field sampling or knowledge of the dynamics and functioning of the ecosystem to achieve the most optimal sampling of the system. By doing so the field of remote sensing would have a higher aplicability. Some further investigations are needed on small water bodies (area < 0.1 km2), which have been scarcely studied by remote sensing, although accounting for >90% of the water bodies worldwide.
+ER  - 
+
+TY  - JOUR
+T1  - Utilizing machine learning and CMIP6 projections for short-term agricultural drought monitoring in central Europe (1900–2100)
+AU  - Mohammed, Safwan
+AU  - Arshad, Sana
+AU  - Alsilibe, Firas
+AU  - Moazzam, Muhammad Farhan Ul
+AU  - Bashir, Bashar
+AU  - Prodhan, Foyez Ahmed
+AU  - Alsalman, Abdullah
+AU  - Vad, Attila
+AU  - Ratonyi, Tamás
+AU  - Harsányi, Endre
+JO  - Journal of Hydrology
+VL  - 633
+SP  - 130968
+PY  - 2024
+DA  - 2024/04/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2024.130968
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169424003627
+KW  - Standardized precipitation index
+KW  - Forecasting
+KW  - CMIP6
+KW  - Random Forest
+KW  - Hungary
+AB  - Water availability for agricultural practices is dynamically influenced by climatic variables, particularly droughts. Consequently, the assessment of drought events is directly related to the strategic water management in the agricultural sector. The application of machine learning (ML) algorithms in different scenarios of climatic variables is a new approach that needs to be evaluated. In this context, the current research aims to forecast short-term drought i.e., SPI-3 from different climatic predictors under historical (1901–2020) and future (2021–2100) climatic scenarios employing machine learning (bagging (BG), random forest (RF), decision table (DT), and M5P) algorithms in Hungary, Central Europe. Three meteorological stations namely, Budapest (BD) (central Hungary), Szeged (SZ) (east south Hungary), and Szombathely (SzO) (west Hungary) were selected to forecast short-term agriculture drought i.e., Standardized Precipitation Index (SPI-3) in the long run. For this purpose, the ensemble means of three global circulation models GCMs from CMIP6 are being used to get the projected (2021–2100) time series of climatic indicators (i.e., rainfall R, mean temperature T, maximum temperature Tmax, and minimum temperature Tmin under two scenarios of socioeconomic pathways (SSP2-4.5 and SSP4-6.0). The results of this study revealed more severe to extreme drought events in past decades, which are projected to increase in the near future (2021–2040). Man-Kendall test (Tau) along with Sen’s slope (SS) also revealed an increasing trend of SPI-3 drought in the historical period with Tau = −0.2, SS = −0.05, and near future with Tau = −0.12, SS = −0.09 in SSP2-4.5 and Tau = −0.1, SS = −0.08 in SSP4-6.0. Implementation of ML algorithms in three scenarios: SC1 (R + T + Tmax + Tmin), SC2 (R), and SC3 (R + T)) at the BD station revealed RF-SC3 with the lowest RMSE RFSC3-TR = 0.33, and the highest NSE RFSC3-TR = 0.89 performed best for forecasting SPI-3 on historical dataset. Hence, the best selected RF-SC3 was implemented on the remaining two stations (SZ and SzO) to forecast SPI-3 from 1901 to 2100 under SSP2-4.5 and SSP4-6.0. Interestingly, RF-SC3 forecasted the SPI-3 under SSP2-4.5, with the lowest RMSE = 0.34 and NSE = 0.88 at SZ and RMSE = 0.34 and NSE = 0.87 at SzO station for SSP2-4.5. Hence, our research findings recommend using SSP2-4.5, to provide more accurate drought predictions from R + T for future projections. This could foster a gradual shift towards sustainability and improve water management resources. However, concrete strategic plans are still needed to mitigate the negative impacts of the projected extreme drought events in 2028, 2030, 2031, and 2034. Finally, the validation of RF for short-term drought prediction on a large historical dataset makes it significant for use in other drought studies and facilitates decision making for future disaster management strategies.
+ER  - 
+
+TY  - JOUR
+T1  - An assimilated deep learning approach to identify the influence of global climate on hydrological fluxes
+AU  - Kalu, Ikechukwu
+AU  - Ndehedehe, Christopher E.
+AU  - Okwuashi, Onuwa
+AU  - Eyoh, Aniekan E.
+AU  - Ferreira, Vagner G.
+JO  - Journal of Hydrology
+VL  - 614
+SP  - 128498
+PY  - 2022
+DA  - 2022/11/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.128498
+UR  - https://www.sciencedirect.com/science/article/pii/S002216942201068X
+KW  - Deep learning
+KW  - Neural Network
+KW  - Nino 3.4
+KW  - Terrestrial water storage
+KW  - BPNN
+AB  - The rapid acceleration of the global water cycle caused by changes in global climate trigger complex processes that make conventional machine learning techniques limited in assessing impacts of such changes on terrestrial water storage (TWS). This study introduces an assimilated deep learning neural network to improve the modeling of TWS dynamics. Key predictors and inputs to this deep learning framework include runoff, rainfall, soil moisture, evapotranspiration, global teleconnection patterns and sea surface temperatures (SSTs). The proposed back propagation model in this study capitalizes on the availability of remotely sensed observations and model datasets to predict monthly TWS, a quantity that is difficult to observe in the field, but important for the estimation of regional water budget balance, and water resource management for agricultural purposes. By integrating pre-processed outputs from the Principal Component Analysis (PCA) and Independent Component Analysis (ICA) into our network using a deep neural pattern, we synthesized TWS from 2002 to 2017, and also made future predictions using our trained models. Results from these analyses showed that the ICA-BPNN model has a higher predictive accuracy compared to the PCA-BPNN. These models (ICA-BPNN and PCA-BPNN) were used to fit the three dominant temporal patterns of Gravity Recovery and Climate Experiment (GRACE) – observed TWS over Africa. Our simulation results from the testing phase indicate that the fits for the prediction of the first three leading modes of TWS for both models when compared to the observed GRACE-TWS were PCA-BPNN1 (89%), PCA-BPNN2 (82%), PCA-BPNN3 (84%) and ICA-BPNN1 (93%), ICA-BPNN2 (88%), ICA-BPNN3 (82%). The simulation fit of the BPNN corresponding to multi-annual time series, which are captured in the second and third orthogonal modes and localized patterns of TWS were lower than those of annual signals in both the PCA- and ICA-BPNN models. This was attributed to the fact that the multi-annual time series in GRACE-hydrological signals of our test-bed are complex compared to the annual patterns of TWS. On the one hand, this exemplifies the superior performance of our predictive framework in modeling naturalized system (annual changes in TWS driven by only climatic factors). On the other hand, the complexity in modelling multi-annual variations in TWS suggests heavily disturbed naturalized systems evidenced in the presence of human water management operations among other anthropogenic activities.
+ER  - 
+
+TY  - JOUR
+T1  - U-Net convolutional neural network models for detecting and quantifying placer mining disturbances at watershed scales
+AU  - Malik, Karim
+AU  - Robertson, Colin
+AU  - Braun, Douglas
+AU  - Greig, Clara
+JO  - International Journal of Applied Earth Observation and Geoinformation
+VL  - 104
+SP  - 102510
+PY  - 2021
+DA  - 2021/12/15/
+SN  - 1569-8432
+DO  - https://doi.org/10.1016/j.jag.2021.102510
+UR  - https://www.sciencedirect.com/science/article/pii/S0303243421002178
+KW  - Placer mining
+KW  - Placer disturbance detection
+KW  - U-Net
+KW  - Semantic segmentation
+KW  - Random forest
+AB  - Placer mining is a mineral extraction method in floodplains that involves the removal of earth material to access mineral-laden sediments, a process that can have significant and long-term impacts on aquatic ecosystems. Given the widespread nature of mining, new tools are required to monitor the potential watershed-scale ecological impacts of placer mining. This study adapted and evaluated a deep learning model – a U-Net convolution neural network, and compared it to a traditional image classification method – random forests (RF) – to detect and quantify the area of post-placer mining disturbance at the watershed scale. Overall, both random forest and U-Net models performed well at classifying digitized image samples where placer disturbances were mapped. Sensitivity in placer classification was high, with both modelling frameworks achieving at least 75% accuracy in the classification of digitized placer samples in 7 out of 12 modelling scenarios. Misclassification of non-placer pixels as placer was highly variable among different models, data configurations, study sites, and time periods. Commission errors (i.e., incorrectly classifying a non-placer pixel as placer) were typically the result of models labelling water areas or forest areas as placer – errors which may have only marginal practical significance. In general, U-Net models performed better in terms of minimizing misclassification errors, whereas RF models performed slightly better in classifying known placer pixels. We conclude with discussions on the advantages of deploying U-Net and RF models for placer detection, challenges that may be encountered in operational systems that employ the models, and identifying outstanding issues which need to be addressed in future placer modelling studies.
+ER  - 
+
+TY  - JOUR
+T1  - Artificial neural networks in drought prediction in the 21st century–A scientometric analysis
+AU  - Dikshit, Abhirup
+AU  - Pradhan, Biswajeet
+AU  - Santosh, M.
+JO  - Applied Soft Computing
+VL  - 114
+SP  - 108080
+PY  - 2022
+DA  - 2022/01/01/
+SN  - 1568-4946
+DO  - https://doi.org/10.1016/j.asoc.2021.108080
+UR  - https://www.sciencedirect.com/science/article/pii/S1568494621009819
+KW  - Drought prediction
+KW  - Neural networks
+KW  - Scientometric analysis
+KW  - Deep learning
+KW  - Interpretable models
+AB  - Droughts are the most spatially complex geohazard, which often lasts for years, thereby severely impacting socio-economic sectors. One of the critical aspects of drought studies is developing a reliable and robust forecasting model, which could immensely help drought management planners in adopting adequate measures. Further, the prediction of drought events are extremely challenging due to the involvement of several hydro-meteorological factors, which are further aggravated by the effect of climate change. Among the several techniques such as statistical, physical and data-driven that are used to forecast droughts, artificial neural networks provide one of the most robust approach. As droughts are inherently non-linear and multivariate in nature, the capability of neural networks to capture the dynamic relationship easily and efficiently has seen a rise in its use. Here we evaluate the most used architectures in the last two decades, using scientometric analysis. A general framework used in drought prediction studies is explained and examples from various continents are provided, thus exploring the topic in a global context. The findings show that using sophisticated input representation, the artificial intelligence-based solutions applied to drought prediction of hydro-meteorological variables have promising success, particularly in complex geographical scenarios. The future works need to focus on interpretable models, use of deep learning architectures for long lead time forecasting and use of neural networks to predict different drought characteristics like drought propagation and flash droughts. We also summarize the most widely used neural network approaches in spatial drought prediction, which would serve as a foundation for future research in drought prediction studies.
+ER  - 
+
+TY  - JOUR
+T1  - Conventional and intelligent models for detection and prediction of fluid loss events during drilling operations: A comprehensive review
+AU  - Krishna, Shwetank
+AU  - Ridha, Syahrir
+AU  - Vasant, Pandian
+AU  - Ilyas, Suhaib Umer
+AU  - Sophian, Ali
+JO  - Journal of Petroleum Science and Engineering
+VL  - 195
+SP  - 107818
+PY  - 2020
+DA  - 2020/12/01/
+SN  - 0920-4105
+DO  - https://doi.org/10.1016/j.petrol.2020.107818
+UR  - https://www.sciencedirect.com/science/article/pii/S0920410520308792
+KW  - Artificial intelligence
+KW  - Detection
+KW  - Drilling
+KW  - Lost circulation
+KW  - Prediction
+AB  - Fluid loss to subsurface formations is a challenging aspect during drilling operations in petroleum industry. Several other drilling issues such as fluid influx and pipe sticking can be triggered in such scenarios, posturing a significant risk to rig personnel, environment, and economical drilling. Therefore, prediction and early detection of lost circulation events are required for safe and economic drilling operation. Several theoretical studies have been performed to detect and predict fluid loss event during hydrocarbon extraction. This paper reviews the existing conventional and intelligent models developed for early detection and prediction of lost circulation events. These predictive and detecting models comprise of Artificial Intelligence (AI) algorithms that require improvements for data reduction, universal prediction and compatibility. The review also covers several sensor-based techniques, different geostatistical-based models and Pressure-While-Drilling (PWD) tools for their applications in early loss circulation detection. In addition, loss circulation zones types, severity level, scenario and common preventive measures are also included in this review. This study aims to provide a systematic review of the published literature from the last forty years on the developed conventional and intelligent models for detection and prediction of fluid loss events and emphasizes on increasing AI involvement for precise results.
+ER  - 
+
+TY  - JOUR
+T1  - Assessing spatial connectivity effects on daily streamflow forecasting using Bayesian-based graph neural network
+AU  - Liu, Guanjun
+AU  - Ouyang, Shuo
+AU  - Qin, Hui
+AU  - Liu, Shuai
+AU  - Shen, Qin
+AU  - Qu, Yuhua
+AU  - Zheng, Zhiwei
+AU  - Sun, Huaiwei
+AU  - Zhou, Jianzhong
+JO  - Science of The Total Environment
+VL  - 855
+SP  - 158968
+PY  - 2023
+DA  - 2023/01/10/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2022.158968
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969722060673
+KW  - Graph neural network
+KW  - Streamflow forecasting
+KW  - Uncertainty assessment
+KW  - Variational inference
+KW  - Deep learning
+KW  - Spatial connectivity
+AB  - Data-driven models have been widely developed and achieved impressive results in streamflow prediction. However, the existing data-driven models mostly focus on the selection of input features and the adjustment of model structure, and less on the impact of spatial connectivity on daily streamflow prediction. In this paper, a basin network based on graph-structured data is constructed by considering the spatial connectivity of different stations in the real basin. Furthermore, a novel graph neural network model, variational Bayesian edge-conditioned graph convolution model, which consists of edge-conditioned convolution networks and variational Bayesian inference, is proposed to assess the spatial connectivity effects on daily streamflow forecasting. The proposed graph neural network model is applied to forecast the next-day streamflow of a hydrological station in the Yangtze River Basin, China. Six comparative models and three comparative experimental groups are used to validate model performance. The results show that the proposed model has excellent performance in terms of deterministic prediction accuracy (NSE ≈ 0.980, RMSE≈1362.7 and MAE ≈ 745.8) and probabilistic prediction reliability (ICPC≈0.984 and CRPS≈574.1), which demonstrates that establishing appropriate connectivity and reasonably identifying connection relationships in the basin network can effectively improve the deterministic and probabilistic forecasting performance of the graph convolutional model.
+ER  - 
+
+TY  - JOUR
+T1  - Intelligent solutions for earthquake data analysis and prediction for future smart cities
+AU  - Dey, Bhawna
+AU  - Dikshit, Parthh
+AU  - Sehgal, Samridhi
+AU  - Trehan, Vasuda
+AU  - Kumar Sehgal, Vivek
+JO  - Computers & Industrial Engineering
+VL  - 170
+SP  - 108368
+PY  - 2022
+DA  - 2022/08/01/
+SN  - 0360-8352
+DO  - https://doi.org/10.1016/j.cie.2022.108368
+UR  - https://www.sciencedirect.com/science/article/pii/S036083522200417X
+KW  - Smart cities
+KW  - Earthquake prediction
+KW  - Machine learning
+KW  - Seismic hazard
+AB  - The analysis and prediction of the Earthquake for smart cities are of greatest significance because all the critical infrastructure like drinking water resources, mobile networks, healthcare, power grid, and transportation, may affect the social-economic balance of the place which is tampered with such natural disasters. An earthquake has some effect on the environment due to the sudden movement of tectonic plates known as Earthquake Environmental Effects (EEE). These changes can be divided into 2 categories namely primary (e.g. subsidence, surface faulting) and secondary effects (displaced rocks, tsunami, landslides). In this paper, the major contribution revolves around earthquakes and their analysis. Earthquakes occur due to the shifting of tectonic plates on the lithosphere. These movements occur due to the Frictional stress between gliding plate borders builds up and leads to fault line failure. This sudden shaking of the plates releases a certain kind of energy in the Lithosphere which creates seismic waves. Earthquakes are also categorized into different classes ranging from minor to great, depending on their magnitude.
+ER  - 
+
+TY  - JOUR
+T1  - A review of regional and Global scale Land Use/Land Cover (LULC) mapping products generated from satellite remote sensing
+AU  - Wang, Yanzhao
+AU  - Sun, Yonghua
+AU  - Cao, Xuyue
+AU  - Wang, Yihan
+AU  - Zhang, Wangkuan
+AU  - Cheng, Xinglu
+JO  - ISPRS Journal of Photogrammetry and Remote Sensing
+VL  - 206
+SP  - 311
+EP  - 334
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 0924-2716
+DO  - https://doi.org/10.1016/j.isprsjprs.2023.11.014
+UR  - https://www.sciencedirect.com/science/article/pii/S0924271623003209
+KW  - Land cover
+KW  - Land use
+KW  - LULC products
+KW  - Satellite remote sensing
+KW  - Challenges and trends
+AB  - Land Use and Land Cover (LULC) mapping products are essential for various environmental studies, including ecological environmental assessments, resource management, urban planning, and climate change. Satellite remote sensing allows for the efficient acquisition of large-scale land use/land cover change information, enabling the creation of accurate LULC mapping products. The article summarizes the basic information, classification systems, application fields, challenges, and trends of 107 satellite LULC products (59 general and 48 thematic products). In terms of spatial scale, there are 56 global, 16 continental and 35 national products, with the spatial resolution ranging from 1 m to 100 km. China's SinoLC-1 is the only product with 1 m spatial resolution. Meanwhile, the temporal frequency of the 54 products is from 1 to 10 years, with 52 single-date products also available. Dynamic World provides a near real-time global LULC mapping service. Significant differences exist between the various LULC products, and the differences in classification schemes are one of the primary factors leading to inconsistency and uncertainty. Most LULC products based on remote sensing use the Land Cover Classification Systems (LCCS) developed by the Food and Agriculture Organization of the United Nations (FAO), but the detailed classification is often absent for categories other than forests. And distinct LULC products find applications across various study domains that span different scales. Currently, the classification system, temporal and spatial resolution, product accuracy, and validation datasets remain constraints to applying LULC products. However, LULC products have been gradually advancing towards finer classification and higher spatial and temporal resolution, with the use of deep learning, cloud computing, and multiple data sources becoming a major trend. This article can assist users in choosing the most suitable LULC mapping product for specific applications and requirements by providing comprehensive information and guidance.
+ER  - 
+
+TY  - JOUR
+T1  - Estimation of global land surface evapotranspiration and its trend using a surface energy balance constrained deep learning model
+AU  - Chen, Han
+AU  - Ghani Razaqpur, A.
+AU  - Wei, Yizhao
+AU  - Huang, Jinhui Jeanne
+AU  - Li, Han
+AU  - McBean, Edward
+JO  - Journal of Hydrology
+VL  - 627
+SP  - 130224
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.130224
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423011666
+KW  - Global land surface evapotranspiration
+KW  - Surface energy balance constrained deep learning (DL-SEB) model
+KW  - Deep learning
+KW  - Positive trend
+KW  - Climate change
+AB  - Estimating global land surface evapotranspiration (ET) is of great significance for assessing the impact of climate change on the global hydrological cycle and energy balance. In this study, we propose a surface energy balance constrained deep learning (DL-SEB) model for simulating global land surface evapotranspiration (ET). The accuracy of the DL-SEB model in estimating ET was tested using FLUXNET observations. The results suggested that the proposed DL-SEB model significantly enhanced the simulation capability of extreme ET events compared with the original deep learning model (without being coupled with the energy balance equation). The DL-SEB model was further applied to reconstruct global ET changes during 2000–2019 based on meteorological, soil, vegetation, and flux data sets. The annual average global land surface ET was 613 mm/yr during the period 2000–2019 (exclude Antarctica and deserts). The global land surface ET exhibited a significant upward trend with average increase rate of 1.16 mm/yr during the past two decades, which corresponds to approximately 3.8% increase above the mean global ET during 2000–2019. The positive trend of global land surface ET was driven by the combined effect of air temperature (Ta), soil moisture (SM), net radiation flux (Rn) and leaf area index (LAI). The natural climatic events such as El Niño events significantly altered short-term global ET variation, but did not changed the long-term increase trend of global ET. This study enhanced the understanding of the impact of climate change on the global land surface ET. The proposed DL-SEB model achieved a physics-based, smart and reliable ET simulation at global and regional scales.
+ER  - 
+
+TY  - JOUR
+T1  - Machine learning and remote sensing integration for leveraging urban sustainability: A review and framework
+AU  - Li, Fei
+AU  - Yigitcanlar, Tan
+AU  - Nepal, Madhav
+AU  - Nguyen, Kien
+AU  - Dur, Fatih
+JO  - Sustainable Cities and Society
+VL  - 96
+SP  - 104653
+PY  - 2023
+DA  - 2023/09/01/
+SN  - 2210-6707
+DO  - https://doi.org/10.1016/j.scs.2023.104653
+UR  - https://www.sciencedirect.com/science/article/pii/S2210670723002640
+KW  - Machine learning
+KW  - Deep learning
+KW  - Remote sensing
+KW  - Sustainable urban development
+KW  - Urban studies
+KW  - Urban sustainability
+KW  - Urban analytics
+AB  - Climate change and rapid urbanisation exacerbated multiple urban issues threatening urban sustainability. Numerous studies integrated machine learning and remote sensing to monitor urban issues and develop mitigation strategies for sustainability. However, few studies comparatively analysed joint applications of machine learning and remote sensing for urban issues and sustainability. This paper presents a systematic review and formulates a framework integrating machine learning and remote sensing in urban studies. The literature analysis reveals: Most studies occurred in Asia, Europe, and North America, driven by technical and ethical factors, highlighting responsible approaches for data-scarce regions; Reviewed studies prioritised physical spatial aspects over socioeconomic factors, requiring multi-source data for comprehensive analysis; Conventional satellite, aerial images, and Lidar data are prevalent due to affordability, quality, and accessibility; Although supervised machine learning dominates, unsupervised methods and algorithm selection paradigms require exploration; Integration offers accurate results and thorough analysis in image processing and analytics, while image acquisition and decision-making necessitate human supervision. This paper provides a comprehensive review and an integrative framework for machine learning and remote sensing, enriching insights into their potential for urban studies and spatial analytics. The study informs urban planning and policymaking by promoting efficient management via enhanced machine learning and remote sensing integration, and bolstering data-driven decision-making.
+ER  - 
+
+TY  - JOUR
+T1  - Enhancing environmental data imputation: A physically-constrained machine learning framework
+AU  - Pastorini, Marcos
+AU  - Rodríguez, Rafael
+AU  - Etcheverry, Lorena
+AU  - Castro, Alberto
+AU  - Gorgoglione, Angela
+JO  - Science of The Total Environment
+SP  - 171773
+PY  - 2024
+DA  - 2024/03/24/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2024.171773
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969724019168
+KW  - Environmental data
+KW  - Missing values
+KW  - Data imputation
+KW  - Machine learning
+KW  - Physical constraints
+AB  - In water resources management, new computational capabilities have made it possible to develop integrated models to jointly analyze climatic conditions and water quantity/quality of the entire watershed system. Although the value of this integrated approach has been demonstrated so far, the limited availability of field data may hinder its applicability by causing high uncertainty in the model response. In this context, before collecting additional data, it is recommended first to recognize what improvement in model performance would occur if all available records could be well exploited. This work proposes a novel machine learning framework with physical constraints capable of successfully imputing a high percentage of missing data belonging to several environmental domains (meteorology, water quantity, water quality), yielding satisfactory results. In particular, the minimum NSE computed for meteorologic variables is 0.72. For hydrometric variables, NSE is always >0.97. More than 78 % of the physical-water-quality variables is characterized by NSE > 0.45, and >66 % of the chemical-water quality variables reaches NSE > 0.35. This work's results demonstrate the proposed framework's effectiveness as a data augmentation tool to improve the performance of integrated environmental modeling.
+ER  - 
+
+TY  - JOUR
+T1  - Humidity forecasting in a potato plantation using time-series neural models
+AU  - Yartu, Mercedes
+AU  - Cambra, Carlos
+AU  - Navarro, Milagros
+AU  - Rad, Carlos
+AU  - Arroyo, Ángel
+AU  - Herrero, Álvaro
+JO  - Journal of Computational Science
+VL  - 59
+SP  - 101547
+PY  - 2022
+DA  - 2022/03/01/
+SN  - 1877-7503
+DO  - https://doi.org/10.1016/j.jocs.2021.101547
+UR  - https://www.sciencedirect.com/science/article/pii/S1877750321002039
+KW  - Precision irrigation
+KW  - Potato crop
+KW  - Time series forecast
+KW  - Supervised learning
+KW  - Neural networks
+KW  - Interpolation
+AB  - It is widely acknowledged that, under the frame of sustainable farming, using the minimum water resources is a relevant requirement. In order to do that, precision irrigation aims at identifying the irrigation needs of plantations and irrigate accordingly. Artificial intelligence is a promising solution in this field as intelligent models are able to learn the soil moisture dynamics in the soil-plant-atmosphere system and then generating appropriate irrigation scheduling. This is a complex task as the phenology of plants and its water demand vary with soil properties and weather conditions. The present research contributes to this challenging task by proposing the application of neural networks in order to learn the time-series evolution of irrigation needs associated to a potato plantation. Several of such models are thoroughly compared, together with different interpolation methods, in order to find the best combination for accurately forecasting water needs. In order to predict the soil water content in a potato field crop, in which soil humidity probes were installed at 15, 30, and 45 cm depth during the whole cycle of a potato crop. This innovative study and its promising results provide with significant contributions to address the problem of predicting and managing groundwater for agricultural use in a sustainable way.
+ER  - 
+
+TY  - JOUR
+T1  - Evaluating different predictive strategies for filling the global GRACE/-FO terrestrial water storage anomalies gap
+AU  - Wan, Xiangyu
+AU  - You, Wei
+AU  - Kusche, Jürgen
+AU  - Li, Fupeng
+AU  - Yang, Xinchun
+AU  - Fan, Dongming
+AU  - Pu, Lun
+AU  - Jiang, Zhongshan
+JO  - Journal of Hydrology
+VL  - 626
+SP  - 130216
+PY  - 2023
+DA  - 2023/11/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.130216
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423011587
+KW  - GRACE/-FO
+KW  - Terrestrial water storage
+KW  - Gap filling
+KW  - Machine learning
+AB  - The Gravity Recovery and Climate Experiment (GRACE) and GRACE Follow-On (GRACE-FO) missions provide unprecedented approaches for tracking terrestrial water storage anomalies (TWSA). However, evaluating long-term hydrologic states requires continuous TWSA without the ∼11-month gap between the two GRACE missions. Trend prediction is a challenging problem for TWSA gap-filling. There are three common methods for handling trends in previous efforts, i.e., de-trending the TWSA, adding back the long-term or piecewise trends of GRACE/-FO to the detrended predictions, or not performing such trend replacement. However, a single global application of one of these methods will not produce optimal results. Therefore, we designed a framework to select the optimal trend replacement strategy for each grid in this study. Based on this framework, we better filled the gap (excluding Antarctica) using machine learning techniques adopting the Global Land Data Assimilation System (GLDAS) Noah TWSA, precipitation, and temperature as inputs. The median gridwise Nash-Sutcliffe efficiency of the result generated by our framework improves by 0.08 compared to the result of a single long-term trend replacement strategy. Furthermore, we quantitatively evaluated the impact of three predictive strategies on the results: selection of leader machine learning technique, selection of optimal trend replacement strategy, and selection of most relevant inputs. The results indicate that the selection of trend replacement strategy has the greatest influence, followed by the selection of machine learning technique and then the selection of inputs. In addition, we found that in areas with abundant surface water, utilizing surface water anomalies as an additional predictor benefits the results. Our study is expected to provide suggestions for better TWSA predictive strategies.
+ER  - 
+
+TY  - JOUR
+T1  - Enhancing climate resilience in businesses: The role of artificial intelligence
+AU  - Singh, Shivam
+AU  - Goyal, Manish Kumar
+JO  - Journal of Cleaner Production
+VL  - 418
+SP  - 138228
+PY  - 2023
+DA  - 2023/09/15/
+SN  - 0959-6526
+DO  - https://doi.org/10.1016/j.jclepro.2023.138228
+UR  - https://www.sciencedirect.com/science/article/pii/S0959652623023867
+KW  - Climate change
+KW  - Business
+KW  - Risk assessment
+KW  - Resilience
+KW  - Artificial intelligence
+KW  - Atmospheric rivers
+AB  - The abrupt rise in extreme weather events (floods, heat waves, droughts, etc.) due to changing climate in the last decades has increased the level of threats to various sectors (agriculture, energy, transportation, etc.) globally. The climate projections from global circulation models indicate even more intense and frequent extreme events in the future, which in turn pose more risks to socioeconomic infrastructure. The enhanced understanding of the climate-related financial risk associated with businesses has driven efforts to include critical information on probable risks associated with climate change in financial decision-making. In this study, we have presented a framework to assess the need of incorporating climate risk assessment as an integral part of business operations. We also reviewed revealed literature to understand the possible impacts of climate change on various sectors and presented key strategies to assess the climate risk associated with them. Also, a framework incorporating probable climate threats to business ecology with principles of robustness, resourcefulness, redundancy, and rapidity has been proposed to adapt and mitigate associated risks for a climate-resilient business ecosystem. The integration of Artificial Intelligence in managing risk could be a promising tool for enhancing business resilience to climate change and could be used as a tool. Robust and accurate predictions of climate and weather extremes from deep learning algorithms at a significant lead time can help in minimizing the associated risk with a business infrastructure. Atmospheric Rivers (ARs), a weather extreme cause huge socioeconomic risk by triggering floods and droughts in various continents of mid-latitude regions. We have presented a case study investigating the ability of deep learning algorithms to predict ARs. The results from the analysis advocate the application of deep learning algorithms to predict weather and climate extremes in decision support systems to enhance the climate resilience of a business ecosystem.
+ER  - 
+
+TY  - JOUR
+T1  - Forecasting actual evapotranspiration without climate data based on stacked integration of DNN and meta-heuristic models across China from 1958 to 2021
+AU  - Elbeltagi, Ahmed
+AU  - Srivastava, Aman
+AU  - Li, Penghan
+AU  - Jiang, Jiawen
+AU  - Jinsong, Deng
+AU  - Rajput, Jitendra
+AU  - Khadke, Leena
+AU  - Awad, Ahmed
+JO  - Journal of Environmental Management
+VL  - 345
+SP  - 118697
+PY  - 2023
+DA  - 2023/11/01/
+SN  - 0301-4797
+DO  - https://doi.org/10.1016/j.jenvman.2023.118697
+UR  - https://www.sciencedirect.com/science/article/pii/S0301479723014858
+KW  - Actual evapotranspiration
+KW  - Deep neural networks
+KW  - Meta-heuristic models
+KW  - Stacked hybridization
+KW  - Sustainability
+AB  - As a non-linear phenomenon that varies along with agro-climatic conditions alongside many other factors, Evapotranspiration (ET) process represents a complexity when be assessed especially if there is a data scarcity in the weather data. However, even under such a data scarcity, the accurate estimates of ET values remain necessary for precise irrigation. So, the present study aims to: i) evaluate the performance of six hybrid machine learning (ML) models in estimating the monthly actual ET values under different agro-climatic conditions in China for seven provinces (Shandong, Jiangsu, Zhejiang, Fujian, Jiangxi, Hubei, and Henan), and ii) select the best-developed model based on statistical metrics and reduce errors between predicted and actual ET (AET) values. AET datasets were divided into 78% for model training (from 1958 to 2007) and the remaining was used for testing (from 2008 to 2021). Deep Neural Networks (DNN) was used as a standalone model at first then the stacking method was applied to integrate DNN with data-driven models such as Additive regression (AR), Random Forest (RF), Random Subspace (RSS), M5 Burned Tree (M5P) and Reduced Error Purning Tree (REPTree). Partial Auto-Correlation Function (PACF) was used for selection of the best lags inputs to the developed models. Results have revealed that DNN-based hybrid models held better performance than non-hybrid DNN models, such that the DNN-RF algorithm outperformed others during both training and testing stages, followed by DNN-RSS. This model has acquired the best values of every statistical measure [MAE (10.8, 12.9), RMSE (15.6, 17.4), RAE (31.9%, 41.4%), and RRSE (39.3%, 47.2%)] for training and testing, respectively. In contrast, the DNN model held the worst performance [MAE (14.9, 13.7), RMSE (20.1, 18.2), RAE (43.9%, 43.7%), and RRSE (50.6%, 49.3%)], for training and testing, respectively. Results from the study presented have revealed the capability of DNN-based hybrid models for long-term predictions of the AET values. Moreover, the DNN-RF model has been suggested as the most suitable model to improve future investigation for AET predictions, which could benefit the enhancement of the irrigation process and increase crop yield.
+ER  - 

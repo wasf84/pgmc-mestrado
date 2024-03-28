@@ -1,0 +1,273 @@
+TY  - JOUR
+T1  - Assessing spatial connectivity effects on daily streamflow forecasting using Bayesian-based graph neural network
+AU  - Liu, Guanjun
+AU  - Ouyang, Shuo
+AU  - Qin, Hui
+AU  - Liu, Shuai
+AU  - Shen, Qin
+AU  - Qu, Yuhua
+AU  - Zheng, Zhiwei
+AU  - Sun, Huaiwei
+AU  - Zhou, Jianzhong
+JO  - Science of The Total Environment
+VL  - 855
+SP  - 158968
+PY  - 2023
+DA  - 2023/01/10/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2022.158968
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969722060673
+KW  - Graph neural network
+KW  - Streamflow forecasting
+KW  - Uncertainty assessment
+KW  - Variational inference
+KW  - Deep learning
+KW  - Spatial connectivity
+AB  - Data-driven models have been widely developed and achieved impressive results in streamflow prediction. However, the existing data-driven models mostly focus on the selection of input features and the adjustment of model structure, and less on the impact of spatial connectivity on daily streamflow prediction. In this paper, a basin network based on graph-structured data is constructed by considering the spatial connectivity of different stations in the real basin. Furthermore, a novel graph neural network model, variational Bayesian edge-conditioned graph convolution model, which consists of edge-conditioned convolution networks and variational Bayesian inference, is proposed to assess the spatial connectivity effects on daily streamflow forecasting. The proposed graph neural network model is applied to forecast the next-day streamflow of a hydrological station in the Yangtze River Basin, China. Six comparative models and three comparative experimental groups are used to validate model performance. The results show that the proposed model has excellent performance in terms of deterministic prediction accuracy (NSE ≈ 0.980, RMSE≈1362.7 and MAE ≈ 745.8) and probabilistic prediction reliability (ICPC≈0.984 and CRPS≈574.1), which demonstrates that establishing appropriate connectivity and reasonably identifying connection relationships in the basin network can effectively improve the deterministic and probabilistic forecasting performance of the graph convolutional model.
+ER  - 
+
+TY  - JOUR
+T1  - Hypertuned temporal fusion transformer for multi-horizon time series forecasting of dam level in hydroelectric power plants
+AU  - Stefenon, Stefano Frizzo
+AU  - Seman, Laio Oriel
+AU  - da Silva, Luiza Scapinello Aquino
+AU  - Mariani, Viviana Cocco
+AU  - Coelho, Leandro dos Santos
+JO  - International Journal of Electrical Power & Energy Systems
+VL  - 157
+SP  - 109876
+PY  - 2024
+DA  - 2024/06/01/
+SN  - 0142-0615
+DO  - https://doi.org/10.1016/j.ijepes.2024.109876
+UR  - https://www.sciencedirect.com/science/article/pii/S0142061524000978
+KW  - Decision-making
+KW  - Hydroelectric power plant
+KW  - Temporal fusion transformer
+KW  - Time series forecasting
+AB  - This paper addresses the challenge of predicting dam level rise in hydroelectric power plants during floods and proposes a solution using an automatic hyperparameters tuning temporal fusion transformer (AutoTFT) model. Hydroelectric power plants play a critical role in long-term energy planning, and accurate prediction of dam level rise is crucial for maintaining operational safety and optimizing energy generation. The AutoTFT model is applied to analyze time series data representing the water storage capacity of a hydroelectric power plant, providing valuable insights for decision-making in emergency situations. The results demonstrate that the AutoTFT model surpasses other deep learning approaches, achieving high accuracy in predicting dam level rise across different prediction horizons. Having a root mean square error (RMSE) of 2.78×10−3 for short-term forecasting and 1.72 considering median-term forecasting, the AutoTFT shows to be promising for time series prediction presented in this paper. The AutoTFT had lower RMSE than the adaptive neuro-fuzzy inference system, long short-term memory, bootstrap aggregation (bagged), sequential learning (boosted), and stacked generalization ensemble learning approaches. The findings underscore the potential of the AutoTFT model for improving operational efficiency, ensuring safety, and optimizing energy generation in hydroelectric power plants during flood events.
+ER  - 
+
+TY  - JOUR
+T1  - FlowDyn: A daily streamflow prediction pipeline for dynamical deep neural network applications
+AU  - Sadeghi Tabas, S.
+AU  - Humaira, N.
+AU  - Samadi, S.
+AU  - Hubig, N.C.
+JO  - Environmental Modelling & Software
+VL  - 170
+SP  - 105854
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2023.105854
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815223002402
+KW  - Deep neural networks
+KW  - Autoencoders
+KW  - FlowDyn package
+KW  - Streamflow prediction
+KW  - Web-based visualization
+AB  - This paper presents a dynamical neural network framework to understand how catchment systems respond to daily rainfall-runoff processes over time. We developed an interactive Python-based deep neural network (DNN) package called FlowDyn (presented through a JS-based web platform) to simulate and forecast daily streamflow data for >180 gauging stations across the globe. Several DNN models, including long short-term memory (LSTM), Gated Recurrent Unit (GRU), and a hybrid network of convolutional neural network and LSTM (ConvLSTM), as well as an auto encoder (AE) model were developed and integrated into the FlowDyn pipeline to analyze and forecast sequential daily streamflow values that are embedded within a web-based application for demonstration and visualization. Inputs were gathered from different web services, including the catchment attributes and meteorology for large-sample studies (CAMELS), the national climatic data center (NCDC), and the global runoff data center (GRDC). DNN configurations were trained and tested with an average accuracy rating of 0.83 across 183 river basins globally. FlowDyn simulation and performance demonstrated that different DNN models were able to learn both regionally consistent and location-specific hydrological behaviors. Through the findings of this paper, we advocate the merit of applying FlowDyn package in the field of daily rainfall-runoff prediction at both local and global scales.
+ER  - 
+
+TY  - JOUR
+T1  - Earth for AI: A Political Ecology of Data-Driven Climate Initiatives
+AU  - Nost, Eric
+AU  - Colven, Emma
+JO  - Geoforum
+VL  - 130
+SP  - 23
+EP  - 34
+PY  - 2022
+DA  - 2022/03/01/
+SN  - 0016-7185
+DO  - https://doi.org/10.1016/j.geoforum.2022.01.016
+UR  - https://www.sciencedirect.com/science/article/pii/S0016718522000240
+KW  - Adaptation
+KW  - Artificial intelligence
+KW  - Climate change
+KW  - Digital geographies
+KW  - Environmental data justice
+KW  - Knowledge production
+AB  - Emerging narratives around artificial intelligence (AI) and machine learning place great faith in these technologies’ ability to ameliorate threats posed by climate change. They promise the capacity to analyze vast amounts of more precise and real-time data, improving how decision-makers predict, respond, and adapt. Yet scholars in political ecology have long observed that technocentric approaches typically reduce complex human-environment relationships in ways that fail to account for social relations and power dynamics. This paper charts the emerging political economy of “climate AI” – the philanthropies, NGOs, private consultancies, and tech giants investing in data-driven climate initiatives. Mapping out two case studies, we show that environmental and climate crises are grist for tech solutions and find that many climate AI actors are interested in it for surveillance, greenwashing, and commodifying algorithms. We pay special attention to how neocolonial and racialized power structures manifest in climate AI and outline three ways for political ecologists and digital geographers to research its socio-materiality: how computational resources are environmentally embedded, how disasters become “shocks” that the AI industry capitalizes on, and how climate AI shapes material investment flows and landscapes. Highlighting how data-driven approaches to climate crises reproduce injustices already faced by marginalized communities, our analysis contributes to research on environmental data justice.
+ER  - 
+
+TY  - JOUR
+T1  - A systematic literature review on lake water level prediction models
+AU  - Ozdemir, Serkan
+AU  - Yaqub, Muhammad
+AU  - Yildirim, Sevgi Ozkan
+JO  - Environmental Modelling & Software
+VL  - 163
+SP  - 105684
+PY  - 2023
+DA  - 2023/05/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2023.105684
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815223000701
+KW  - Lake water level
+KW  - Reservoir water level
+KW  - Prediction
+KW  - Forecast
+KW  - Time series
+AB  - Global climate change has led to large fluctuations in lake levels in recent years as meteorological and hydrological parameters have changed and water use has been intense. Water scientists use various computer models to analyze the hydrological variables recorded in the past and make projections for all future scenarios. Based on the technological progress, six different types of algorithms were studied in this review to predict the water level in lakes. The prediction results show that Deep Learning (DL) has the highest accuracy in terms of the evaluation metrics. Since the Artificial Intelligence (AI) field is still emerging and continue to improve, this study highlights better comprehension of current applications and the problems that need to be investigated more for LWL forecasting techniques. It reveals that the studies mainly focused on lakes either in USA or China and there is room for improvement for other locations that are scarcely investigated.
+ER  - 
+
+TY  - JOUR
+T1  - Machine Learning for Hydropower Scheduling: State of the Art and Future Research Directions
+AU  - Bordin, Chiara
+AU  - Skjelbred, Hans Ivar
+AU  - Kong, Jiehong
+AU  - Yang, Zhirong
+JO  - Procedia Computer Science
+VL  - 176
+SP  - 1659
+EP  - 1668
+PY  - 2020
+DA  - 2020/01/01/
+T2  - Knowledge-Based and Intelligent Information & Engineering Systems: Proceedings of the 24th International Conference KES2020
+SN  - 1877-0509
+DO  - https://doi.org/10.1016/j.procs.2020.09.190
+UR  - https://www.sciencedirect.com/science/article/pii/S1877050920320925
+KW  - Artificial Neural Networks
+KW  - Digitalisation
+KW  - Hydropower Scheduling
+KW  - Machine Learning
+AB  - This paper investigates and discusses the current and future role of machine learning (ML) within the hydropower sector. An overview of the main applications of ML in the field of hydropower operations is presented to show the most common topics that have been addressed in the scientific literature in the last years. The objective is to provide recommendations for novel research directions that can be taken in the near future to cover those areas that have not been studied so far. The key contribution of this paper lies in a critical investigation of the state of the art of ML applications in hydropower scheduling. In light of the established literature available in the last years, this study identifies and discusses new roles that can be covered by ML, coupled with cyber-physical systems (CPSs), with a particular focus on short-term hydropower scheduling (STHS) challenges.
+ER  - 
+
+TY  - JOUR
+T1  - Enhancing environmental data imputation: A physically-constrained machine learning framework
+AU  - Pastorini, Marcos
+AU  - Rodríguez, Rafael
+AU  - Etcheverry, Lorena
+AU  - Castro, Alberto
+AU  - Gorgoglione, Angela
+JO  - Science of The Total Environment
+SP  - 171773
+PY  - 2024
+DA  - 2024/03/24/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2024.171773
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969724019168
+KW  - Environmental data
+KW  - Missing values
+KW  - Data imputation
+KW  - Machine learning
+KW  - Physical constraints
+AB  - In water resources management, new computational capabilities have made it possible to develop integrated models to jointly analyze climatic conditions and water quantity/quality of the entire watershed system. Although the value of this integrated approach has been demonstrated so far, the limited availability of field data may hinder its applicability by causing high uncertainty in the model response. In this context, before collecting additional data, it is recommended first to recognize what improvement in model performance would occur if all available records could be well exploited. This work proposes a novel machine learning framework with physical constraints capable of successfully imputing a high percentage of missing data belonging to several environmental domains (meteorology, water quantity, water quality), yielding satisfactory results. In particular, the minimum NSE computed for meteorologic variables is 0.72. For hydrometric variables, NSE is always >0.97. More than 78 % of the physical-water-quality variables is characterized by NSE > 0.45, and >66 % of the chemical-water quality variables reaches NSE > 0.35. This work's results demonstrate the proposed framework's effectiveness as a data augmentation tool to improve the performance of integrated environmental modeling.
+ER  - 
+
+TY  - JOUR
+T1  - Artificial neural networks in drought prediction in the 21st century–A scientometric analysis
+AU  - Dikshit, Abhirup
+AU  - Pradhan, Biswajeet
+AU  - Santosh, M.
+JO  - Applied Soft Computing
+VL  - 114
+SP  - 108080
+PY  - 2022
+DA  - 2022/01/01/
+SN  - 1568-4946
+DO  - https://doi.org/10.1016/j.asoc.2021.108080
+UR  - https://www.sciencedirect.com/science/article/pii/S1568494621009819
+KW  - Drought prediction
+KW  - Neural networks
+KW  - Scientometric analysis
+KW  - Deep learning
+KW  - Interpretable models
+AB  - Droughts are the most spatially complex geohazard, which often lasts for years, thereby severely impacting socio-economic sectors. One of the critical aspects of drought studies is developing a reliable and robust forecasting model, which could immensely help drought management planners in adopting adequate measures. Further, the prediction of drought events are extremely challenging due to the involvement of several hydro-meteorological factors, which are further aggravated by the effect of climate change. Among the several techniques such as statistical, physical and data-driven that are used to forecast droughts, artificial neural networks provide one of the most robust approach. As droughts are inherently non-linear and multivariate in nature, the capability of neural networks to capture the dynamic relationship easily and efficiently has seen a rise in its use. Here we evaluate the most used architectures in the last two decades, using scientometric analysis. A general framework used in drought prediction studies is explained and examples from various continents are provided, thus exploring the topic in a global context. The findings show that using sophisticated input representation, the artificial intelligence-based solutions applied to drought prediction of hydro-meteorological variables have promising success, particularly in complex geographical scenarios. The future works need to focus on interpretable models, use of deep learning architectures for long lead time forecasting and use of neural networks to predict different drought characteristics like drought propagation and flash droughts. We also summarize the most widely used neural network approaches in spatial drought prediction, which would serve as a foundation for future research in drought prediction studies.
+ER  - 
+
+TY  - JOUR
+T1  - Modeling streamflow in headwater catchments: A data-based mechanistic grounded framework
+AU  - Fernandez, Nicolas
+AU  - Camacho, Luis A.
+AU  - Nejadhashemi, A. Pouyan
+JO  - Journal of Hydrology: Regional Studies
+VL  - 44
+SP  - 101243
+PY  - 2022
+DA  - 2022/12/01/
+SN  - 2214-5818
+DO  - https://doi.org/10.1016/j.ejrh.2022.101243
+UR  - https://www.sciencedirect.com/science/article/pii/S2214581822002567
+KW  - Headwater hydrology
+KW  - Data-based mechanistic modeling
+KW  - Rainfall-runoff
+KW  - Baseflow estimation
+KW  - Transfer functions
+KW  - System identification
+AB  - Study Region
+The Lenguazaque River Basin is a 290 km2 headwater catchment of the Fuquene Lake Watershed in the Colombian Andes. Regional stakeholders are optimizing water allocations for all users, given numerous quantity related issues such as its simultaneous use for conservation, agriculture, and coal mining.
+Study Focus
+Developing hydrological models in headwater catchments is challenging, especially in developing countries where technical resources and data are limited. This study addresses these challenges by proposing strategies to develop reliable yet mathematically simple models, requiring fewer inputs than data-intensive alternatives. Three stages are proposed, focused on 1) assessing hydrological data, 2) preparing datasets for modeling, and 3) developing models in daily and sub-daily resolutions. The last stage is grounded on a data-based mechanistic modeling approach and includes a novel combination of baseflow separation with digital filters and multi-objective optimization principles. Having a hydrophysical meaning, obtained models are suitable for simulating alternative scenarios.
+New hydrological insights for the region
+Resulting daily models achieved an acceptable performance, significantly better than a semi-distributed model. The performance of sub-daily models was sub-optimal, yet it can be improved by enhancing the quality of sub-daily datasets and the efficiency of computational algorithms. Due to their mathematical nature, the proposed strategies are expected to be applicable to other headwater catchments where improving water management is an imperative need.
+ER  - 
+
+TY  - JOUR
+T1  - Advancing flood warning procedures in ungauged basins with machine learning
+AU  - Rasheed, Zimeena
+AU  - Aravamudan, Akshay
+AU  - Gorji Sefidmazgi, Ali
+AU  - Anagnostopoulos, Georgios C.
+AU  - Nikolopoulos, Efthymios I.
+JO  - Journal of Hydrology
+VL  - 609
+SP  - 127736
+PY  - 2022
+DA  - 2022/06/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.127736
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169422003110
+KW  - Flood peak
+KW  - Prediction
+KW  - Machine learning
+KW  - Ungauged basins
+KW  - Flood warning
+AB  - Flood prediction across scales and more specifically in ungauged areas remains a great challenge that limits the efficiency of flood risk mitigation strategies and disaster preparedness. Building upon the recent success of Machine Learning (ML) models on streamflow prediction, this work presents a prototype ML-based framework for flood warning and flood peak prediction. The fundamental elements of the proposed system consist of a) a Long-Short Term Memory (LSTM) model for classifying storm events to Flood/no-Flood given a threshold based on the 90th flow percentile and b) the flood peak prediction models. The selected ML-models for flood peak prediction are the Histogram based Gradient Boosting Regressor and the Random Forest. One of the strengths, and reason for selection, of these decision-tree models is their degree of interpretability. This is exploited in the study to help us spatially disentangle the role of both the static and dynamic drivers of flood peak response. Our analysis is presented for 18 distinct hydroclimatic regions across the contiguous US. Results reveal a significant regional dependence on both predictive performance and dominant flood predictors, which emphasize the variability in the complexity of a catchment’s hydrologic behavior as well as its impact on forecasting flood response. Evaluation of the drivers of flood peaks noted distinct dependencies among the dynamic and static predictors considered in our models for flood peaks of different severity. Specifically, low-moderate flood events showed a clear preponderance for the static catchment attributes over dynamic predictors like precipitation whereas precipitation was the dominant driver for the highest flood peaks. The proposed flood peak prediction models were compared against a state-of-the-art LSTM model and were shown to outperform in ungauged basins for the majority of basins. Overall, the proposed system classified storms correctly for >80% in all cases and exhibited a percent relative difference in flood peak estimates of <30% in most cases.
+ER  - 
+
+TY  - JOUR
+T1  - Need and vision for global medium-resolution Landsat and Sentinel-2 data products
+AU  - Radeloff, Volker C.
+AU  - Roy, David P.
+AU  - Wulder, Michael A.
+AU  - Anderson, Martha
+AU  - Cook, Bruce
+AU  - Crawford, Christopher J.
+AU  - Friedl, Mark
+AU  - Gao, Feng
+AU  - Gorelick, Noel
+AU  - Hansen, Matthew
+AU  - Healey, Sean
+AU  - Hostert, Patrick
+AU  - Hulley, Glynn
+AU  - Huntington, Justin L.
+AU  - Johnson, David M.
+AU  - Neigh, Chris
+AU  - Lyapustin, Alexei
+AU  - Lymburner, Leo
+AU  - Pahlevan, Nima
+AU  - Pekel, Jean-Francois
+AU  - Scambos, Theodore A.
+AU  - Schaaf, Crystal
+AU  - Strobl, Peter
+AU  - Woodcock, Curtis E.
+AU  - Zhang, Hankui K.
+AU  - Zhu, Zhe
+JO  - Remote Sensing of Environment
+VL  - 300
+SP  - 113918
+PY  - 2024
+DA  - 2024/01/01/
+SN  - 0034-4257
+DO  - https://doi.org/10.1016/j.rse.2023.113918
+UR  - https://www.sciencedirect.com/science/article/pii/S0034425723004704
+KW  - High-level data products
+KW  - Analysis Ready Data
+KW  - global change monitoring
+KW  - Harmonized Landsat Sentinel-2 data
+AB  - Global changes in climate and land use are threatening natural ecosystems, biodiversity, and the ecosystem services people rely on. This is why it is necessary to track and monitor spatiotemporal change at a level of detail that can inform science, management, and policy development. The current constellation of multiple Landsat and Sentinel-2 satellites collecting imagery at predominantly ≤30-m spatial resolution affords an opportunity for the generation of global medium- resolution products every few days. Our goal is to both identify the information needs and provide direction towards the generation of a suite of global, high-level, systematically-generated, medium-resolution products designed for both management and science. Our vision builds on the success of the NASA MODIS/VIIRS product suite, while recognizing the unique strengths of medium-resolution satellite data given their higher spatial resolution and longer time series. We propose a suite of 13 essential products that enable the characterization of the current state and changes in the biosphere, cryosphere, and hydrosphere, and would fill information needs identified by the Committee on Earth Observation Satellites for the Global Climate Observing System and the Global Terrestrial Observing System, by the National Research Council of the US National Academies in the decadal survey, and by others. These products are: land cover, land cover change, burned area, forest loss, vegetation indices, phenology, dynamic habitat indices, albedo, land surface temperature, snow cover, ice extent, surface water extent, and evapotranspiration. Furthermore, we provide a list of desirable products poised for addition to the essential products (e.g., crop type, emissivity, and ice sheet velocity). Lastly, we suggest aspirational products requiring further algorithm development (e.g., forest structure and crop yield). For the identified essential products, algorithms are in place, making it feasible to begin generating products systematically. These products should be accompanied by quality and accuracy assessments undertaken following consensus protocols. Five decades after the first Landsat satellite, and two decades after the MODIS products were first produced, it is time now for readily available, standardized, and consistent high-level products built upon medium-resolution imagery, thereby fulfilling the promise and the vision that inspired the Landsat program since its inception.
+ER  - 

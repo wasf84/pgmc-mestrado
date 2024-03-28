@@ -1,0 +1,959 @@
+TY  - JOUR
+T1  - Estimating hydrologic vulnerabilities to climate change using simulated historical data: A proof-of-concept for a rapid assessment algorithm in the Colorado River Basin
+AU  - Solander, Kurt C.
+AU  - Bennett, Katrina E.
+AU  - Fleming, Sean W.
+AU  - Middleton, Richard S.
+JO  - Journal of Hydrology: Regional Studies
+VL  - 26
+SP  - 100642
+PY  - 2019
+DA  - 2019/12/01/
+SN  - 2214-5818
+DO  - https://doi.org/10.1016/j.ejrh.2019.100642
+UR  - https://www.sciencedirect.com/science/article/pii/S2214581819301806
+KW  - Streamflow forecasting
+KW  - Snow
+KW  - Climate variability
+KW  - Modeling
+KW  - Water resources management
+AB  - Study focus
+Future climate impacts on streamflow are of critical concern due to its importance for water and energy supplies. However, rigorous studies of such impacts involve complicated modeling chains that can be time-consuming and costly to implement. We examine an alternative approach by developing a method to predict the 21st century peak March-May (MAM) streamflow response to warming from historical data alone, specifically, past observations of the Snow-to-Precipitation ratio divided by basin Area (SPA).
+Study region
+Using the Colorado River Basin (CRB) as a proving ground, we test this empirical relationship over 23 basins ranging in size from 9728 to 639,806 km2 within the CRB. Data was derived from hydrology model simulations forced by a suite of climate models, run under two emissions scenarios.
+New hydrological insights
+Our proof-of-concept study revealed useful predictive capability (r2 = 0.58) and additionally identified three response types: rain- (basin SPA < 1.2 × 10−3 km-2), snow-rain- (1.4 × 10−3 to 3 × 10−3 km-2), and snow-dominant (>3 × 10−3 km-2). The most dramatic changes occurred in snow-dominant basins where streamflow increased up to 320 % in MAM, but decreased by up to 60 % in the critical high demand months of July-September (JAS). By quantifying the relationship between historical data and future streamflow projections, our findings suggest this empirical relationship is useful to quickly and cheaply determine where and when large changes in hydrology will occur from future warming.
+ER  - 
+
+TY  - JOUR
+T1  - Assessment of hybrid machine learning algorithms using TRMM rainfall data for daily inflow forecasting in Três Marias Reservoir, eastern Brazil
+AU  - Gomaa, Ehab
+AU  - Zerouali, Bilel
+AU  - Difi, Salah
+AU  - El-Nagdy, Khaled A.
+AU  - Santos, Celso Augusto Guimarães
+AU  - Abda, Zaki
+AU  - Ghoneim, Sherif S.M.
+AU  - Bailek, Nadjem
+AU  - Silva, Richarde Marques da
+AU  - Rajput, Jitendra
+AU  - Ali, Enas
+JO  - Heliyon
+VL  - 9
+IS  - 8
+SP  - e18819
+PY  - 2023
+DA  - 2023/08/01/
+SN  - 2405-8440
+DO  - https://doi.org/10.1016/j.heliyon.2023.e18819
+UR  - https://www.sciencedirect.com/science/article/pii/S2405844023060279
+KW  - Floods
+KW  - Empirical mode decomposition (EMD)
+KW  - Brazilian river basin
+KW  - Water resource management
+KW  - Particle swarm optimization (PSO)
+KW  - Hydrological simulation
+AB  - This study investigates the application of the Gaussian Radial Basis Function Neural Network (GRNN), Gaussian Process Regression (GPR), and Multilayer Perceptron Optimized by Particle Swarm Optimization (MLP-PSO) models in analyzing the relationship between rainfall and runoff and in predicting runoff discharge. These models utilize autoregressive input vectors based on daily-observed TRMM rainfall and TMR inflow data. The performance evaluation of each model is conducted using statistical measures to compare their effectiveness in capturing the complex relationships between input and output variables. The results consistently demonstrate that the MLP-PSO model outperforms the GRNN and GPR models, achieving the lowest root mean square error (RMSE) across multiple input combinations. Furthermore, the study explores the application of the Empirical Mode Decomposition-Hilbert-Huang Transform (EMD-HHT) in conjunction with the GPR and MLP-PSO models. This combination yields promising results in streamflow prediction, with the MLP-PSO-EMD model exhibiting superior accuracy compared to the GPR-EMD model. The incorporation of different components into the MLP-PSO-EMD model significantly improves its accuracy. Among the presented scenarios, Model M4, which incorporates the simplest components, emerges as the most favorable choice due to its lowest RMSE values. Comparisons with other models reported in the literature further underscore the effectiveness of the MLP-PSO-EMD model in streamflow prediction. This study offers valuable insights into the selection and performance of different models for rainfall-runoff analysis and prediction.
+ER  - 
+
+TY  - JOUR
+T1  - Water quality prospective in Twenty First Century: Status of water quality in major river basins, contemporary strategies and impediments: A review
+AU  - Giri, Subhasis
+JO  - Environmental Pollution
+VL  - 271
+SP  - 116332
+PY  - 2021
+DA  - 2021/02/15/
+SN  - 0269-7491
+DO  - https://doi.org/10.1016/j.envpol.2020.116332
+UR  - https://www.sciencedirect.com/science/article/pii/S0269749120370214
+KW  - Water quality criteria
+KW  - Climate change
+KW  - Urbanization
+KW  - Eutrophication
+KW  - Best management practices
+KW  - Critical source areas
+KW  - Water quality index
+KW  - Machine learning algorithms
+KW  - Remote sensing
+AB  - Water quality improvement is one of the top priorities in the global agenda endorsed by United Nation. In this review manuscript, a holistic view of water quality degradation such as concerned pollutants, source of pollution, and its consequences in major river basins around the globe (at least 1 from each continent and a total of 16 basins) is presented. Additionally, nine contemporary techniques such as field scale evaluation, watershed scale evaluation, strategies to identify critical source areas, optimization strategies for placement of best management practices (BMPs), social component in watershed modeling, machine learning algorithms to address water quality problems in complex natural systems concomitant with spatial heterogeneity, establishing a total maximum daily loads (TMDLs), remote sensing in monitoring water quality, and developing water quality index are discussed. Next, the existing barriers to improve water quality are classified into primary and secondary impediments. A detail discussion of three primary impediments (climate change, urbanization and industrial activities, and agriculture) and ten secondary impediments (availability of water quality data, complexity of system, lack of skilled person, environmental legislation, fragmented mandate, limitation in resources, environmental awareness, resistance to change, alteration of nutrient ratio by river damming, and emerging pollutants) are illustrated. Finally, considering all the existing knowledge gaps pertaining to contemporary strategies, a future direction of water quality research is outlined to significantly improve the water quality around the globe.
+ER  - 
+
+TY  - JOUR
+T1  - Hypertuned temporal fusion transformer for multi-horizon time series forecasting of dam level in hydroelectric power plants
+AU  - Stefenon, Stefano Frizzo
+AU  - Seman, Laio Oriel
+AU  - da Silva, Luiza Scapinello Aquino
+AU  - Mariani, Viviana Cocco
+AU  - Coelho, Leandro dos Santos
+JO  - International Journal of Electrical Power & Energy Systems
+VL  - 157
+SP  - 109876
+PY  - 2024
+DA  - 2024/06/01/
+SN  - 0142-0615
+DO  - https://doi.org/10.1016/j.ijepes.2024.109876
+UR  - https://www.sciencedirect.com/science/article/pii/S0142061524000978
+KW  - Decision-making
+KW  - Hydroelectric power plant
+KW  - Temporal fusion transformer
+KW  - Time series forecasting
+AB  - This paper addresses the challenge of predicting dam level rise in hydroelectric power plants during floods and proposes a solution using an automatic hyperparameters tuning temporal fusion transformer (AutoTFT) model. Hydroelectric power plants play a critical role in long-term energy planning, and accurate prediction of dam level rise is crucial for maintaining operational safety and optimizing energy generation. The AutoTFT model is applied to analyze time series data representing the water storage capacity of a hydroelectric power plant, providing valuable insights for decision-making in emergency situations. The results demonstrate that the AutoTFT model surpasses other deep learning approaches, achieving high accuracy in predicting dam level rise across different prediction horizons. Having a root mean square error (RMSE) of 2.78×10−3 for short-term forecasting and 1.72 considering median-term forecasting, the AutoTFT shows to be promising for time series prediction presented in this paper. The AutoTFT had lower RMSE than the adaptive neuro-fuzzy inference system, long short-term memory, bootstrap aggregation (bagged), sequential learning (boosted), and stacked generalization ensemble learning approaches. The findings underscore the potential of the AutoTFT model for improving operational efficiency, ensuring safety, and optimizing energy generation in hydroelectric power plants during flood events.
+ER  - 
+
+TY  - JOUR
+T1  - Improving reference evapotranspiration (ETo) calculation under limited data conditions in the high Tropical Andes
+AU  - Vásquez, Cristina
+AU  - Célleri, Rolando
+AU  - Córdova, Mario
+AU  - Carrillo-Rojas, Galo
+JO  - Agricultural Water Management
+VL  - 262
+SP  - 107439
+PY  - 2022
+DA  - 2022/03/31/
+SN  - 0378-3774
+DO  - https://doi.org/10.1016/j.agwat.2021.107439
+UR  - https://www.sciencedirect.com/science/article/pii/S0378377421007162
+KW  - Páramo
+KW  - PM-ET
+KW  - Solar radiation
+KW  - Vapor pressure deficit
+KW  - Calibration
+AB  - The computation of the reference crop evapotranspiration (ETo) using the FAO56 Penman-Monteith equation (PM-ETo) requires data on maximum and minimum air temperatures (Tmax, Tmin), relative humidity (RH), solar radiation (Rs), and wind speed (u2). However, the records of meteorological variables are often incomplete or of poor quality. Frequently, in the mountain areas such as those of the Andes, environmental sensors are subject to harsh conditions, due to the diurnal/nocturnal climatic variability causing challenging conditions for meteorological monitoring, which leads to data loss. For high-elevation landscapes like the Andes, the missing variables of vapor pressure deficit and solar radiation cause a high impact on PM-ETo calculation. To assess these limitations, several methods relying on maximum and minimum temperature to estimate the missing variables have been considered in the present investigation. Based on data from three automatic weather stations in the high Tropical Andes (humid páramo, 3298 – 3955 m a.s.l.), we found that the calibration and validation of methods were essential to estimate Rs. Using the (De Jong and Stewart, 1993) (Rs-DS) method we retrieved the highest performance, a RMSE between 2.89 and 3.81 MJ m−2 day−1. Moreover, In the absence of RH observations, replacing the dew point temperature (Tdew) by Tmin was a reliable alternative, when apply the method of (Allen et al., 1998) (VPD-FAO) which showed the highest performance with RMSE between 0.08 and 0.12 kPa. These results yielded highly accurate PM-ETo estimates, with RMSE between 0.29 and 0.34 mm day−1 and RMSE between 0.12 and 0.18 mm day−1, respectively. As expected, when both variables were missing, the ETo calculation increased its error, with an RMSE between 0.32 and 0.42 mm day−1. A proper estimation of ETo in the Andean páramo contributes to improved water productivity for domestic and industrial uses, irrigated agriculture, and hydropower.
+ER  - 
+
+TY  - JOUR
+T1  - A comprehensive statistical analysis of evaporation rates under climate change in Southern Iran using WEAP (Case study: Chahnimeh Reservoirs of Sistan Plain)
+AU  - Bazzi, Hossein
+AU  - Ebrahimi, Hossein
+AU  - Aminnejad, Babak
+JO  - Ain Shams Engineering Journal
+VL  - 12
+IS  - 2
+SP  - 1339
+EP  - 1352
+PY  - 2021
+DA  - 2021/06/01/
+SN  - 2090-4479
+DO  - https://doi.org/10.1016/j.asej.2020.08.030
+UR  - https://www.sciencedirect.com/science/article/pii/S2090447920302410
+KW  - Climate change
+KW  - Evaporation
+KW  - Modeling
+KW  - Statistical analysis
+KW  - Chahnimeh Reservoirs of Sistan
+AB  - In recent decades, climate change has caused an increase in anomalies in climatic variables and endangered critical infrastructures such as water resources. This change is of paramount importance for southern Iran, especially in the low-precipitation Sistan Plain. Therefore, it is crucial to consider variations in evaporation in the past and the trends of its future changes for water resources planning and management. To manage water resources in the region, this study was conducted to estimate variation in and rate of evaporation from the surface of Chahnimeh reservoirs for future decades using effective climate change models. The SDSM model was applied in 2050–2030 and 2080–2000 periods to simulate evaporation in the coming decades. The values of evaporation under climate change indicate an overall increase of more than 300 mm. According to the results of the WEAP model, much of the Chahnimeh reservoir’s water is consumed by the Zahedan and Zabol urban sectors. A lower share of water is allocated to the agricultural sector of the Sistan Plain compared to these two nodes. The withdrawal rates from these reservoirs will increase with increasing the population growth rate in the coming years. Furthermore, the evaporation rate will also increase. Hence, assuming a constant water flow discharge into the Chahnimeh reservoirs, severe water stress will occur in Sistan Plain and Zahedan water requirement.
+ER  - 
+
+TY  - JOUR
+T1  - A systematic literature review on lake water level prediction models
+AU  - Ozdemir, Serkan
+AU  - Yaqub, Muhammad
+AU  - Yildirim, Sevgi Ozkan
+JO  - Environmental Modelling & Software
+VL  - 163
+SP  - 105684
+PY  - 2023
+DA  - 2023/05/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2023.105684
+UR  - https://www.sciencedirect.com/science/article/pii/S1364815223000701
+KW  - Lake water level
+KW  - Reservoir water level
+KW  - Prediction
+KW  - Forecast
+KW  - Time series
+AB  - Global climate change has led to large fluctuations in lake levels in recent years as meteorological and hydrological parameters have changed and water use has been intense. Water scientists use various computer models to analyze the hydrological variables recorded in the past and make projections for all future scenarios. Based on the technological progress, six different types of algorithms were studied in this review to predict the water level in lakes. The prediction results show that Deep Learning (DL) has the highest accuracy in terms of the evaluation metrics. Since the Artificial Intelligence (AI) field is still emerging and continue to improve, this study highlights better comprehension of current applications and the problems that need to be investigated more for LWL forecasting techniques. It reveals that the studies mainly focused on lakes either in USA or China and there is room for improvement for other locations that are scarcely investigated.
+ER  - 
+
+TY  - JOUR
+T1  - Massive feature extraction for explaining and foretelling hydroclimatic time series forecastability at the global scale
+AU  - Papacharalampous, Georgia
+AU  - Tyralis, Hristos
+AU  - Pechlivanidis, Ilias G.
+AU  - Grimaldi, Salvatore
+AU  - Volpi, Elena
+JO  - Geoscience Frontiers
+VL  - 13
+IS  - 3
+SP  - 101349
+PY  - 2022
+DA  - 2022/05/01/
+SN  - 1674-9871
+DO  - https://doi.org/10.1016/j.gsf.2022.101349
+UR  - https://www.sciencedirect.com/science/article/pii/S1674987122000020
+KW  - Exponential smoothing
+KW  - Predictability
+KW  - Statistical hydrology
+KW  - Time series analysis
+KW  - Time series clustering
+KW  - Time series forecasting
+AB  - Statistical analyses and descriptive characterizations are sometimes assumed to be offering information on time series forecastability. Despite the scientific interest suggested by such assumptions, the relationships between descriptive time series features (e.g., temporal dependence, entropy, seasonality, trend and linearity features) and actual time series forecastability (quantified by issuing and assessing forecasts for the past) are scarcely studied and quantified in the literature. In this work, we aim to fill in this gap by investigating such relationships, and the way that they can be exploited for understanding hydroclimatic forecastability and its patterns. To this end, we follow a systematic framework bringing together a variety of –mostly new for hydrology– concepts and methods, including 57 descriptive features and nine seasonal time series forecasting methods (i.e., one simple, five exponential smoothing, two state space and one automated autoregressive fractionally integrated moving average methods). We apply this framework to three global datasets originating from the larger Global Historical Climatology Network (GHCN) and Global Streamflow Indices and Metadata (GSIM) archives. As these datasets comprise over 13,000 monthly temperature, precipitation and river flow time series from several continents and hydroclimatic regimes, they allow us to provide trustable characterizations and interpretations of 12-month ahead hydroclimatic forecastability at the global scale. We first find that the exponential smoothing and state space methods for time series forecasting are rather equally efficient in identifying an upper limit of this forecastability in terms of Nash-Sutcliffe efficiency, while the simple method is shown to be mostly useful in identifying its lower limit. We then demonstrate that the assessed forecastability is strongly related to several descriptive features, including seasonality, entropy, (partial) autocorrelation, stability, (non)linearity, spikiness and heterogeneity features, among others. We further (i) show that, if such descriptive information is available for a monthly hydroclimatic time series, we can even foretell the quality of its future forecasts with a considerable degree of confidence, and (ii) rank the features according to their efficiency in explaining and foretelling forecastability. We believe that the obtained rankings are of key importance for understanding forecastability. Spatial forecastability patterns are also revealed through our experiments, with East Asia (Europe) being characterized by larger (smaller) monthly temperature time series forecastability and the Indian subcontinent (Australia) being characterized by larger (smaller) monthly precipitation time series forecastability, compared to other continental-scale regions, and less notable differences characterizing monthly river flow from continent to continent. A comprehensive interpretation of such patters through massive feature extraction and feature-based time series clustering is shown to be possible. Indeed, continental-scale regions characterized by different degrees of forecastability are also attributed to different clusters or mixtures of clusters (because of their essential differences in terms of descriptive features).
+ER  - 
+
+TY  - JOUR
+T1  - Long-term variability in hydrological droughts and floods in sub-Saharan Africa: New perspectives from a 65-year daily streamflow dataset
+AU  - Ekolu, Job
+AU  - Dieppois, Bastien
+AU  - Sidibe, Moussa
+AU  - Eden, Jonathan M.
+AU  - Tramblay, Yves
+AU  - Villarini, Gabriele
+AU  - Peña-Angulo, Dhais
+AU  - Mahé, Gil
+AU  - Paturel, Jean-Emmanuel
+AU  - Onyutha, Charles
+AU  - van de Wiel, Marco
+JO  - Journal of Hydrology
+VL  - 613
+SP  - 128359
+PY  - 2022
+DA  - 2022/10/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.128359
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169422009313
+KW  - Daily streamflow
+KW  - Gap-filling
+KW  - Trend
+KW  - Decadal to multidecadal variability
+KW  - Hydrological drought and floods
+KW  - Sub-Saharan Africa
+AB  - Understanding hydrological variability is of crucial importance for water resource management in sub-Saharan Africa (SSA). While existing studies typically focus on individual river basins, and suffer from incomplete records, this study provides a new perspective of trends and variability in hydrological flood and drought characteristics (frequency, duration, and intensity) across the entire SSA. This is achieved by: i) creating a 65-year long, complete daily streamflow dataset consisting of over 600 gauging stations; ii) quantifying changes in flood and drought characteristics between 1950 and 2014; iii) evaluating how decadal variability influences historical trends. Results of daily streamflow reconstructions using random forests provide satisfactory performance over most of SSA, except for parts of southern Africa. Using change-point and trend analyses, we identify-three periods that characterise historical variations affecting hydrological extremes in western and central Africa, and some parts of southern Africa: i) the 1950s–60s and after the 1980s–90s, when floods (droughts) tend to be more (less) intense, more (less) frequent and more (less) persistent; and ii) the 1970s–80s, when floods (droughts) are less (more) intense, less (more) frequent and less (more) persistent. Finally, we reveal significant decadal variations in all flood and drought characteristics, which explain aperiodic increasing and decreasing trends. This stresses the importance of considering multiple time-periods when analysing recent trends, as previous assessments may have been unrepresentative of long-term changes.
+ER  - 
+
+TY  - JOUR
+T1  - Advancing flood warning procedures in ungauged basins with machine learning
+AU  - Rasheed, Zimeena
+AU  - Aravamudan, Akshay
+AU  - Gorji Sefidmazgi, Ali
+AU  - Anagnostopoulos, Georgios C.
+AU  - Nikolopoulos, Efthymios I.
+JO  - Journal of Hydrology
+VL  - 609
+SP  - 127736
+PY  - 2022
+DA  - 2022/06/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.127736
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169422003110
+KW  - Flood peak
+KW  - Prediction
+KW  - Machine learning
+KW  - Ungauged basins
+KW  - Flood warning
+AB  - Flood prediction across scales and more specifically in ungauged areas remains a great challenge that limits the efficiency of flood risk mitigation strategies and disaster preparedness. Building upon the recent success of Machine Learning (ML) models on streamflow prediction, this work presents a prototype ML-based framework for flood warning and flood peak prediction. The fundamental elements of the proposed system consist of a) a Long-Short Term Memory (LSTM) model for classifying storm events to Flood/no-Flood given a threshold based on the 90th flow percentile and b) the flood peak prediction models. The selected ML-models for flood peak prediction are the Histogram based Gradient Boosting Regressor and the Random Forest. One of the strengths, and reason for selection, of these decision-tree models is their degree of interpretability. This is exploited in the study to help us spatially disentangle the role of both the static and dynamic drivers of flood peak response. Our analysis is presented for 18 distinct hydroclimatic regions across the contiguous US. Results reveal a significant regional dependence on both predictive performance and dominant flood predictors, which emphasize the variability in the complexity of a catchment’s hydrologic behavior as well as its impact on forecasting flood response. Evaluation of the drivers of flood peaks noted distinct dependencies among the dynamic and static predictors considered in our models for flood peaks of different severity. Specifically, low-moderate flood events showed a clear preponderance for the static catchment attributes over dynamic predictors like precipitation whereas precipitation was the dominant driver for the highest flood peaks. The proposed flood peak prediction models were compared against a state-of-the-art LSTM model and were shown to outperform in ungauged basins for the majority of basins. Overall, the proposed system classified storms correctly for >80% in all cases and exhibited a percent relative difference in flood peak estimates of <30% in most cases.
+ER  - 
+
+TY  - JOUR
+T1  - Multi-factor identification and modelling analyses for managing large river algal blooms
+AU  - Xia, Rui
+AU  - Zhang, Yuan
+AU  - Wang, Gangsheng
+AU  - Zhang, Yongyong
+AU  - Dou, Ming
+AU  - Hou, Xikang
+AU  - Qiao, Yunfeng
+AU  - Wang, Qiang
+AU  - Yang, Zhongwen
+JO  - Environmental Pollution
+VL  - 254
+SP  - 113056
+PY  - 2019
+DA  - 2019/11/01/
+SN  - 0269-7491
+DO  - https://doi.org/10.1016/j.envpol.2019.113056
+UR  - https://www.sciencedirect.com/science/article/pii/S0269749119321475
+KW  - Cause analysis
+KW  - Multifactor influence
+KW  - Modelling research
+KW  - River algal bloom
+KW  - Water project
+AB  - River algal blooms have become a newly emerging global environmental issue in recent decades. Compared with water eutrophication in lakes and reservoirs, algal blooms in large river systems can cause more severe consequences to watershed ecosystems at the watershed scale. However, reveal the causes of river algal blooms remains challenging in the interdisciplinary of hydrological-ecological-environmental research, due to its complex interaction mechanisms impacted by multiple factors. In addition, there were still considerable uncertainties on the characteristics, impacts, driving factors, as well as the applicable water system models for river algal blooms. In this paper, we reviewed existing literature to elaborate the definition and negative effects of river algal blooms. We analyzed sensitive factors including nutrient, hydrological and climatic elements. We also discussed the application of ecohydrological models under complicated hydrological conditions. Finally, we explored the essence of the river algal bloom by the interaction effects of physical and biogeochemical process impacted by of climate change and human activities. The model-data integration accounting for multi-factor effects was expected to provide scientific guidance for the prevent and control of algal blooms in large river systems.
+ER  - 
+
+TY  - JOUR
+T1  - Need and vision for global medium-resolution Landsat and Sentinel-2 data products
+AU  - Radeloff, Volker C.
+AU  - Roy, David P.
+AU  - Wulder, Michael A.
+AU  - Anderson, Martha
+AU  - Cook, Bruce
+AU  - Crawford, Christopher J.
+AU  - Friedl, Mark
+AU  - Gao, Feng
+AU  - Gorelick, Noel
+AU  - Hansen, Matthew
+AU  - Healey, Sean
+AU  - Hostert, Patrick
+AU  - Hulley, Glynn
+AU  - Huntington, Justin L.
+AU  - Johnson, David M.
+AU  - Neigh, Chris
+AU  - Lyapustin, Alexei
+AU  - Lymburner, Leo
+AU  - Pahlevan, Nima
+AU  - Pekel, Jean-Francois
+AU  - Scambos, Theodore A.
+AU  - Schaaf, Crystal
+AU  - Strobl, Peter
+AU  - Woodcock, Curtis E.
+AU  - Zhang, Hankui K.
+AU  - Zhu, Zhe
+JO  - Remote Sensing of Environment
+VL  - 300
+SP  - 113918
+PY  - 2024
+DA  - 2024/01/01/
+SN  - 0034-4257
+DO  - https://doi.org/10.1016/j.rse.2023.113918
+UR  - https://www.sciencedirect.com/science/article/pii/S0034425723004704
+KW  - High-level data products
+KW  - Analysis Ready Data
+KW  - global change monitoring
+KW  - Harmonized Landsat Sentinel-2 data
+AB  - Global changes in climate and land use are threatening natural ecosystems, biodiversity, and the ecosystem services people rely on. This is why it is necessary to track and monitor spatiotemporal change at a level of detail that can inform science, management, and policy development. The current constellation of multiple Landsat and Sentinel-2 satellites collecting imagery at predominantly ≤30-m spatial resolution affords an opportunity for the generation of global medium- resolution products every few days. Our goal is to both identify the information needs and provide direction towards the generation of a suite of global, high-level, systematically-generated, medium-resolution products designed for both management and science. Our vision builds on the success of the NASA MODIS/VIIRS product suite, while recognizing the unique strengths of medium-resolution satellite data given their higher spatial resolution and longer time series. We propose a suite of 13 essential products that enable the characterization of the current state and changes in the biosphere, cryosphere, and hydrosphere, and would fill information needs identified by the Committee on Earth Observation Satellites for the Global Climate Observing System and the Global Terrestrial Observing System, by the National Research Council of the US National Academies in the decadal survey, and by others. These products are: land cover, land cover change, burned area, forest loss, vegetation indices, phenology, dynamic habitat indices, albedo, land surface temperature, snow cover, ice extent, surface water extent, and evapotranspiration. Furthermore, we provide a list of desirable products poised for addition to the essential products (e.g., crop type, emissivity, and ice sheet velocity). Lastly, we suggest aspirational products requiring further algorithm development (e.g., forest structure and crop yield). For the identified essential products, algorithms are in place, making it feasible to begin generating products systematically. These products should be accompanied by quality and accuracy assessments undertaken following consensus protocols. Five decades after the first Landsat satellite, and two decades after the MODIS products were first produced, it is time now for readily available, standardized, and consistent high-level products built upon medium-resolution imagery, thereby fulfilling the promise and the vision that inspired the Landsat program since its inception.
+ER  - 
+
+TY  - JOUR
+T1  - Natural and anthropogenic factors and their interactions drive stream community integrity in a North American river basin at a large spatial scale
+AU  - Green, Nicholas S.
+AU  - Li, Shibin
+AU  - Maul, Jonathan D.
+AU  - Overmyer, Jay P.
+JO  - Science of The Total Environment
+VL  - 835
+SP  - 155344
+PY  - 2022
+DA  - 2022/08/20/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2022.155344
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969722024378
+KW  - Stream biomonitoring
+KW  - Macroinvertebrates
+KW  - Agriculture
+KW  - Boosted regression trees
+KW  - Biotic index
+KW  - Land use
+AB  - Urbanization, agriculture, and other human activities can exert considerable influence on the health and integrity of stream ecosystems. These influences vary greatly over space, time, and scale. We investigated trends in stream biotic integrity over 19 years (1997–2016) in relation to natural and anthropogenic factors in their spatial context using data from a stream biomonitoring program in a region dominated by agricultural land use. Macroinvertebrate and fish diversity and abundance data were used to calculate four multimetric indices (MMIs) that described biotic integrity of streams from 1997 to 2016. Boosted regression trees (BRT), a machine learning technique, were used to model how stream integrity responded to catchment-level natural and anthropogenic drivers including land use, human population density, road density, runoff potential, and natural factors such as latitude and elevation. Neither natural nor anthropogenic factors were consistently more influential on the MMIs. Macroinvertebrate indices were most responsive to time, latitude, elevation, and road density. Fish indices were driven mostly by latitude and longitude, with agricultural land cover among the most influential anthropogenic factors. We concluded that 1) stream biotic integrity was mostly stable in the study region from 1997 to 2016, although macroinvertebrate MMIs had decreased approximately 10% since 2010; 2) stream biotic integrity was driven by a mix of factors including geography, human activity, and variability over yearly time intervals; 3) MMI responses to environmental drivers were nonlinear and often nonmonotonic; 4) MMI composition could influence causal inferences; and 5) although our findings were mostly consistent with the literature on drivers of stream integrity, some commonly seen patterns were not evident. Our findings highlight the utility of large-scale, publicly available spatial data for understanding drivers of stream biodiversity and illustrate some potential pitfalls of large scale, integrative analyses.
+ER  - 
+
+TY  - JOUR
+T1  - A review on the extreme rainfall studies in India
+AU  - Samantaray, Payoshni
+AU  - Gouda, Krushna Chandra
+JO  - Natural Hazards Research
+PY  - 2023
+DA  - 2023/08/28/
+SN  - 2666-5921
+DO  - https://doi.org/10.1016/j.nhres.2023.08.005
+UR  - https://www.sciencedirect.com/science/article/pii/S2666592123000823
+KW  - Extreme rainfall event
+KW  - Cloudburst
+KW  - Thunderstorm
+KW  - Spatio temporal dynamics
+KW  - ENSO
+KW  - WRF
+AB  - Climate vulnerability in the Indian region becomes a major concern due to the frequent hydro-meteorological extreme events throughout the year. The number of extreme rainfall events (ERE) associated with monsoon, thunderstorms and short-spanned local cloudbursts which are mainly ranges from a few hours to a few days, has increased in recent decades over the subcontinent. There is a need to quantify these high impact weather events and to understand the spatio-temporal dynamics and associated physical processes for the real time prediction for pro-active disaster management. This review paper highlights the various research works carried out and suggests the need of observation, modelling efforts for simulation/prediction of the EREs in the continental India. The works starting from cloudburst in the Himalayan region (Leh, Uttarakhand, Himachal Pradesh) to the heavy rainfall in Kerala, Bangalore, Mumbai, Chennai etc. as presented by earlier researchers are being reported in this compilation. The ERE intensity and frequency distribution in India are being analyzed using IMD gridded rainfall observation for 72 years. The analysis indicates the increasing trend in the intensity of daily rainfall during the ERE in the subcontinent. The current state of research in the multi-scale study of the ERE as well as their future changes based on climate model outputs are reviewed and the challenges are also reviewed. Evaluation of the capability of the state of art meso scale models like Weather Research and Forecasting (WRF) model for the simulation of such events at high resolution using the high-performance computing and the assimilation techniques are also emphasized in the recent research in this field. Along with the impact of large-scale physical processes like El Nino Southern Oscillations (ENSO), also the sensitivity of the urbanization, topography in the simulation of the convective meso-scale events is being presented and which indicated the down-scaled data are the best tool for the ERE research. This review will surely help the interdisciplinary researchers for the extreme analysis of the high impact hydro-meteorological disaster events.
+ER  - 
+
+TY  - JOUR
+T1  - Wildfire univariate and bivariate characteristics simulation based on multiple machine learning models and applicability analysis of wildfire models
+AU  - Shi, Ke
+AU  - Touge, Yoshiya
+AU  - Dou, Yanhong
+JO  - Progress in Disaster Science
+VL  - 20
+SP  - 100301
+PY  - 2023
+DA  - 2023/12/01/
+SN  - 2590-0617
+DO  - https://doi.org/10.1016/j.pdisas.2023.100301
+UR  - https://www.sciencedirect.com/science/article/pii/S2590061723000285
+KW  - Wildfire
+KW  - Machine learning
+KW  - Copula
+KW  - Probability distributions
+KW  - Wildfire simulation
+KW  - Global
+AB  - Wildfires can significantly impact regional and global climate, human health, and ecosystems, making it necessary to model their behavior and predict their outcomes. With increasing global temperatures and changing precipitation patterns due to climate change, the frequency and intensity of wildfires are expected to increase, heightening the requirement for accurate wildfire simulation models to support wildfire management and mitigation efforts. However, the interactions between the causative variables of wildfires and the wildfire bivariate characteristics have not been explored in wildfire modeling. Therefore, the copula function was applied to solve the complicated and nonlinear relationship of the dependence structure in wildfire statistics and the relationship between wildfire causative variables. Subsequently, we modeled wildfire characteristics globally using six machine learning models and compared the performances of the models. Specifically, the main conclusions were obtained as follows: (1) among the six machine learning models, long short-term memory had the best applicability in simulating wildfire characteristics; (2) when there were 4 predictors, the accuracy of wildfire characteristic simulation reached the average level; and (3) long short-term memory achieved excellent model performance within 56% of the global climate sub-regions. Overall, this analysis provides a reference to better understand wildfire and contributes to wildfire management.
+ER  - 
+
+TY  - JOUR
+T1  - Improving global hydrological simulations through bias-correction and multi-model blending
+AU  - Chevuturi, Amulya
+AU  - Tanguy, Maliko
+AU  - Facer-Childs, Katie
+AU  - Martínez-de la Torre, Alberto
+AU  - Sarkar, Sunita
+AU  - Thober, Stephan
+AU  - Samaniego, Luis
+AU  - Rakovec, Oldrich
+AU  - Kelbling, Matthias
+AU  - Sutanudjaja, Edwin H.
+AU  - Wanders, Niko
+AU  - Blyth, Eleanor
+JO  - Journal of Hydrology
+VL  - 621
+SP  - 129607
+PY  - 2023
+DA  - 2023/06/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.129607
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423005498
+KW  - Global hydrological forecasts
+KW  - Hydrological models
+KW  - ULYSSES
+KW  - HydroSOS
+KW  - Bias-correction
+KW  - Multi-model blending
+AB  - There is an immediate need to develop accurate and reliable global hydrological forecasts in light of the future vulnerability to hydrological hazards and water scarcity under a changing climate. As a part of the World Meteorological Organization’s (WMO) Global Hydrological Status and Outlook System (HydroSOS) initiative, we investigated different approaches to blending multi-model simulations for developing holistic operational global forecasts. The ULYSSES (mULti-model hYdrological SeaSonal prEdictionS system) dataset, to be published as “Global seasonal forecasts and reforecasts of river discharge and related hydrological variables ensemble from four state-of-the-art land surface and hydrological models” is used in this study. The first step for improving these forecasts is to investigate ways to improve the model simulations, as global models are not calibrated for local conditions. The analysis was performed over 119 different catchments worldwide for the baseline period of 1981–2019 for three variables: evapotranspiration, surface soil moisture and streamflow. This study evaluated blending approaches with a performance metric based (weighted) averaging of the multi-model simulations, using the catchment’s Kling-Gupta Efficiency (KGE) for the variable to define the weight. Hydrological model simulations were also bias-corrected to improve the multi-model blending output. Weighted blending in conjunction with bias-correction provided the best improvement in performance for the catchments investigated. Applying modelled weights during blending original simulations improved performance over ungauged catchments. The results indicate that there is potential to successfully and easily implement the bias-corrected weighted blending approach to improve operational forecasts globally. This work can be used to improve water resources management and hydrological hazard mitigation, especially in data-sparse regions.
+ER  - 
+
+TY  - JOUR
+T1  - Modelling seasonal flow regime and environmental flow in Punarbhaba river of India and Bangladesh
+AU  - Pal, Swades
+AU  - Talukdar, Swapan
+JO  - Journal of Cleaner Production
+VL  - 252
+SP  - 119724
+PY  - 2020
+DA  - 2020/04/10/
+SN  - 0959-6526
+DO  - https://doi.org/10.1016/j.jclepro.2019.119724
+UR  - https://www.sciencedirect.com/science/article/pii/S0959652619345949
+KW  - Flow periodicity
+KW  - Flow prediction
+KW  - Machine learning techniques
+KW  - Degree of flow alteration and environmental flow
+AB  - Investigations of changing the flow regime and flow prediction are of vital societal and hydro-ecological importance in a transboundary river like Punarbhaba river between India and Bangladesh. The present paper investigated flow regime though advance periodicity models (Morlet’s wavelet transformation) at the seasonal scale. Flow prediction using advanced machine learning techniques like Support vector machine (SVM), Artificial Neural Network (ANN), Hybrid wavelet ANN (W-ANN), Random forest(RF) capturing the periodicity, duration, cyclic or semi-cyclic nature of flow wave or wavelet from the historical time series data (1978–2017) is very crucial for environmental flow management and estimating present and future states of environmental flow. Flow alteration modeling (using heat map) and estimation of environmental flow (using duration curve shifting and RVA methods) are another vital objectives of this work to know the present and future hydro-ecological state. The result of periodicity clearly identified two distinct flow regimes before and after 1992-93 triggered by damming over there in 1992. All the prediction models identified the declining trend of flow in all the seasons, however hybrid wavelet ANN model could be treated as the best suited because of its very high-performance level. The degree of hydrological alteration is identified very high in the post-hydrological alteration (PHA) (post-1992) period and it is likely to be intensified predicted period. The estimated environmental flow state in PHA falls under moderate to critically modified states but if alteration goes on in this way ecological deficit will be the obvious result. For the survival of the river estimated environmental flow could be released primarily.
+ER  - 
+
+TY  - JOUR
+T1  - Earth for AI: A Political Ecology of Data-Driven Climate Initiatives
+AU  - Nost, Eric
+AU  - Colven, Emma
+JO  - Geoforum
+VL  - 130
+SP  - 23
+EP  - 34
+PY  - 2022
+DA  - 2022/03/01/
+SN  - 0016-7185
+DO  - https://doi.org/10.1016/j.geoforum.2022.01.016
+UR  - https://www.sciencedirect.com/science/article/pii/S0016718522000240
+KW  - Adaptation
+KW  - Artificial intelligence
+KW  - Climate change
+KW  - Digital geographies
+KW  - Environmental data justice
+KW  - Knowledge production
+AB  - Emerging narratives around artificial intelligence (AI) and machine learning place great faith in these technologies’ ability to ameliorate threats posed by climate change. They promise the capacity to analyze vast amounts of more precise and real-time data, improving how decision-makers predict, respond, and adapt. Yet scholars in political ecology have long observed that technocentric approaches typically reduce complex human-environment relationships in ways that fail to account for social relations and power dynamics. This paper charts the emerging political economy of “climate AI” – the philanthropies, NGOs, private consultancies, and tech giants investing in data-driven climate initiatives. Mapping out two case studies, we show that environmental and climate crises are grist for tech solutions and find that many climate AI actors are interested in it for surveillance, greenwashing, and commodifying algorithms. We pay special attention to how neocolonial and racialized power structures manifest in climate AI and outline three ways for political ecologists and digital geographers to research its socio-materiality: how computational resources are environmentally embedded, how disasters become “shocks” that the AI industry capitalizes on, and how climate AI shapes material investment flows and landscapes. Highlighting how data-driven approaches to climate crises reproduce injustices already faced by marginalized communities, our analysis contributes to research on environmental data justice.
+ER  - 
+
+TY  - JOUR
+T1  - Spatial based drought assessment: Where are we heading? A review on the current status and future
+AU  - Dikshit, Abhirup
+AU  - Pradhan, Biswajeet
+AU  - Huete, Alfredo
+AU  - Park, Hyuck-Jin
+JO  - Science of The Total Environment
+VL  - 844
+SP  - 157239
+PY  - 2022
+DA  - 2022/10/20/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2022.157239
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969722043376
+KW  - Drought
+KW  - Drought modelling
+KW  - Spatial assessment
+KW  - Quantitative techniques
+KW  - Review
+AB  - Droughts are the most spatially complex natural hazards that exert global impacts and are further aggravated by climate change. The investigation of drought events is challenging as it involves numerous factors ranging from detection and assessment to modelling, management and mitigation. The analysis of these factors and their quantitative assessments have significantly evolved in recent times. In this paper, we review recent methods used to examine and model droughts from a spatial viewpoint. Our analysis was conducted at three spatial scales (point-wise, regional and global) and we evaluated how recent spatial methods have advanced our understanding of drought through case study examples. Further, we also examine and provide a broad overview of relevant case studies related to future drought occurrences under climate change. This study is a comprehensive synthesis of the various quantitative techniques used to assess the spatial characteristics of droughts at different spatial scales, and not an exhaustive review of all drought aspects. However, this serves as a basis for understanding the key milestones and advances accomplished through new spatial concepts relative to the traditional approaches to study drought. This work also aims to address the gaps in knowledge that are in need of further attention and provides recommendations to improve our understanding of droughts.
+ER  - 
+
+TY  - JOUR
+T1  - Machine Learning for Hydropower Scheduling: State of the Art and Future Research Directions
+AU  - Bordin, Chiara
+AU  - Skjelbred, Hans Ivar
+AU  - Kong, Jiehong
+AU  - Yang, Zhirong
+JO  - Procedia Computer Science
+VL  - 176
+SP  - 1659
+EP  - 1668
+PY  - 2020
+DA  - 2020/01/01/
+T2  - Knowledge-Based and Intelligent Information & Engineering Systems: Proceedings of the 24th International Conference KES2020
+SN  - 1877-0509
+DO  - https://doi.org/10.1016/j.procs.2020.09.190
+UR  - https://www.sciencedirect.com/science/article/pii/S1877050920320925
+KW  - Artificial Neural Networks
+KW  - Digitalisation
+KW  - Hydropower Scheduling
+KW  - Machine Learning
+AB  - This paper investigates and discusses the current and future role of machine learning (ML) within the hydropower sector. An overview of the main applications of ML in the field of hydropower operations is presented to show the most common topics that have been addressed in the scientific literature in the last years. The objective is to provide recommendations for novel research directions that can be taken in the near future to cover those areas that have not been studied so far. The key contribution of this paper lies in a critical investigation of the state of the art of ML applications in hydropower scheduling. In light of the established literature available in the last years, this study identifies and discusses new roles that can be covered by ML, coupled with cyber-physical systems (CPSs), with a particular focus on short-term hydropower scheduling (STHS) challenges.
+ER  - 
+
+TY  - JOUR
+T1  - Statistical downscaling of precipitation using machine learning techniques
+AU  - Sachindra, D.A.
+AU  - Ahmed, K.
+AU  - Rashid, Md. Mamunur
+AU  - Shahid, S.
+AU  - Perera, B.J.C.
+JO  - Atmospheric Research
+VL  - 212
+SP  - 240
+EP  - 258
+PY  - 2018
+DA  - 2018/11/01/
+SN  - 0169-8095
+DO  - https://doi.org/10.1016/j.atmosres.2018.05.022
+UR  - https://www.sciencedirect.com/science/article/pii/S0169809517310141
+KW  - Statistical downscaling
+KW  - Machine learning
+KW  - Precipitation
+KW  - Australia
+KW  - Floods
+KW  - Droughts
+AB  - Statistical models were developed for downscaling reanalysis data to monthly precipitation at 48 observation stations scattered across the Australian State of Victoria belonging to wet, intermediate and dry climate regimes. Downscaling models were calibrated over the period 1950–1991 and validated over the period 1992–2014 for each calendar month, for each station, using 4 machine learning techniques, (1) Genetic Programming (GP), (2) Artificial Neural Networks (ANNs), (3) Support Vector Machine (SVM), and (4) Relevance Vector Machine (RVM). It was found that, irrespective of the climate regime and the machine learning technique, downscaling models tend to better simulate the average (compared to other statistics) and under-estimate the standard deviation and the maximum of the observed precipitation. Also, irrespective of the climate regime and the machine learning technique, at the majority of stations downscaling models showed an over-estimating trend of low to mid percentiles (i.e. below the 50th percentile) of precipitation and under-estimating trend of high percentiles of precipitation (i.e. above the 90th percentile). The over-estimating trend of low to mid percentiles of precipitation was more pronounced at stations located in dryer climate, irrespective of the machine learning technique. Based on the results of this investigation the use of RVM or ANN over SVM or GP for developing downscaling models can be recommended for a study such as flood prediction which involves the consideration of high extremes of precipitation. Also, RVM can be recommended over GP, ANN or SVM in developing downscaling models for a study such as drought analysis which involves the consideration of low extremes of precipitation. Furthermore, it was found that irrespective of the climate regime, the SVM and RVM-based precipitation downscaling models showed the best performance with the Polynomial kernel.
+ER  - 
+
+TY  - JOUR
+T1  - Reservoir Assessment Tool 2.0: Stakeholder driven improvements to satellite remote sensing based reservoir monitoring
+AU  - Das, Pritam
+AU  - Hossain, Faisal
+AU  - Khan, Shahzaib
+AU  - Biswas, Nishan Kumar
+AU  - Lee, Hyongki
+AU  - Piman, Thanapon
+AU  - Meechaiya, Chinaporn
+AU  - Ghimire, Uttam
+AU  - Hosen, Kamal
+JO  - Environmental Modelling & Software
+VL  - 157
+SP  - 105533
+PY  - 2022
+DA  - 2022/11/01/
+SN  - 1364-8152
+DO  - https://doi.org/10.1016/j.envsoft.2022.105533
+UR  - https://www.sciencedirect.com/science/article/pii/S136481522200233X
+KW  - Reservoirs
+KW  - River regulation
+KW  - Satellites
+KW  - Stakeholder engagement
+AB  - In light of the rapidly increasing regulation of rivers due to planned and constructed reservoirs, monitoring reservoir operations has become very crucial. The Reservoir Assessment Tool (RAT) framework was developed to monitor reservoir operations globally, using hydrological modeling and satellite observations. With feedback from stakeholders, improvements in the RAT framework are demonstrated in this study using the Mekong River Basin as an example. A novel multi-sensor reservoir area mapping technique was developed using complementary strengths of optical and SAR sensors at a 1–5 day temporal resolution, allowing the quantification of sub-weekly reservoir operations. Additionally, the skill of radar altimeters in the RAT framework was tested using the Jason-3 altimeter. Using in-situ data from three Thai reservoirs in the Mekong Basin, consistent improvements were observed as compared to the original RAT framework. A functionality for visualizing forecasted outflow was also added using historically inferred reservoir operations or stakeholder-driven target storage expectations.
+ER  - 
+
+TY  - JOUR
+T1  - Artificial neural networks in drought prediction in the 21st century–A scientometric analysis
+AU  - Dikshit, Abhirup
+AU  - Pradhan, Biswajeet
+AU  - Santosh, M.
+JO  - Applied Soft Computing
+VL  - 114
+SP  - 108080
+PY  - 2022
+DA  - 2022/01/01/
+SN  - 1568-4946
+DO  - https://doi.org/10.1016/j.asoc.2021.108080
+UR  - https://www.sciencedirect.com/science/article/pii/S1568494621009819
+KW  - Drought prediction
+KW  - Neural networks
+KW  - Scientometric analysis
+KW  - Deep learning
+KW  - Interpretable models
+AB  - Droughts are the most spatially complex geohazard, which often lasts for years, thereby severely impacting socio-economic sectors. One of the critical aspects of drought studies is developing a reliable and robust forecasting model, which could immensely help drought management planners in adopting adequate measures. Further, the prediction of drought events are extremely challenging due to the involvement of several hydro-meteorological factors, which are further aggravated by the effect of climate change. Among the several techniques such as statistical, physical and data-driven that are used to forecast droughts, artificial neural networks provide one of the most robust approach. As droughts are inherently non-linear and multivariate in nature, the capability of neural networks to capture the dynamic relationship easily and efficiently has seen a rise in its use. Here we evaluate the most used architectures in the last two decades, using scientometric analysis. A general framework used in drought prediction studies is explained and examples from various continents are provided, thus exploring the topic in a global context. The findings show that using sophisticated input representation, the artificial intelligence-based solutions applied to drought prediction of hydro-meteorological variables have promising success, particularly in complex geographical scenarios. The future works need to focus on interpretable models, use of deep learning architectures for long lead time forecasting and use of neural networks to predict different drought characteristics like drought propagation and flash droughts. We also summarize the most widely used neural network approaches in spatial drought prediction, which would serve as a foundation for future research in drought prediction studies.
+ER  - 
+
+TY  - JOUR
+T1  - Impacts of LULC and climate changes on hydropower generation and development: A systematic review
+AU  - Ahialey, Emmanuel Kekle
+AU  - Kabo–Bah, Amos T.
+AU  - Gyamfi, Samuel
+JO  - Heliyon
+VL  - 9
+IS  - 11
+SP  - e21247
+PY  - 2023
+DA  - 2023/11/01/
+SN  - 2405-8440
+DO  - https://doi.org/10.1016/j.heliyon.2023.e21247
+UR  - https://www.sciencedirect.com/science/article/pii/S2405844023084554
+KW  - Climate change
+KW  - land use land cover (LULC)
+KW  - Streamflow
+KW  - Hydropower generation
+KW  - Hydropower development
+AB  - There is a growing concern on a global scale that the world should transition towards the utilisation of energy-efficient technologies. Hydropower plays a very significant part in the fight against climate change, and as a result, it lessens the impact that climate changewill have on our ability to achieve the Sustainable Development Goals (SDGs). Both the effectiveness of hydropower generation and the amount of streamflow are impacted by climate change as well as land use and land cover (LULC). Accordingly, the purpose of this study is to conduct a literature review on the topic of the past and future effects of climate, land use, and land cover changes on hydropower generation. This review will be based on the entries found in a number of reliable databases. A systematic literature review was carried out to analyse how LULC and climate change will affect hydropower generation and development. The research was based on 158 pieces of relevant literature that had been reviewed by experts and indexed in Scopus, Google Scholar, and ScienceDirect. The review was carried out to determine three goals in mind: the impact of climate change on hydropower generation and development; the impact of climate change on streamflow; and the combined impact of changes in climate and changes in LULC on hydropower. The findings bring to light the primary factors contributing to climate change as well as shifts in LULC which are essential to the generation of hydropower on all scales. The study identifies factors such as precipitation, temperature, floods, and droughts as examples of climate change. Deforestation, afforestation, and urbanisation are identified as the primary causes of changes in LULC over the past several decades. These changes have a negative impact on the generation and development of hydropower.
+ER  - 
+
+TY  - JOUR
+T1  - DHI-GHM: Real-time and forecasted hydrology for the entire planet
+AU  - Murray, Alexandra M.
+AU  - Jørgensen, Gregers H.
+AU  - Godiksen, Peter N.
+AU  - Anthonj, Jannik
+AU  - Madsen, Henrik
+JO  - Journal of Hydrology
+VL  - 620
+SP  - 129431
+PY  - 2023
+DA  - 2023/05/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.129431
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423003736
+KW  - Data scarce areas
+KW  - Global hydrological model
+KW  - Global parameterization
+KW  - Operational system
+KW  - Real-time forecasting
+KW  - Ungauged catchment modelling
+AB  - An operational global hydrological model (DHI-GHM) has been developed that provides historical, real-time, 10-day and seasonal forecast simulations at the global scale. DHI-GHM is comprised of a distributed gridded rainfall-runoff model with a spatial resolution of 0.1° and an agile kinematic routing model that moves water between model grid cells and sub-catchments and in the river system. Model output includes gridded hydrological variables, such as soil moisture content and different runoff components, and discharge at more than 1 million river points globally. DHI-GHM uses a novel parameterization scheme, where global data products of land surface physical characteristics are used to establish relations with model parameters, and thus DHI-GHM does not rely on local discharge data for model calibration. Multiple forcing datasets were tested, and the combination of ERA5 precipitation and Priestley-Taylor potential evaporation yielded the overall best results with a median KGE of 0.51 and average water balance error of 0.78% based on data from 1667 discharge stations worldwide. The model results and the operational system are particularly relevant for organizations with national, regional, or global scope who need information on large areas at once and for data scarce areas or projects without resources for local scale models.
+ER  - 
+
+TY  - JOUR
+T1  - Global evapotranspiration models and their performance at different spatial scales: Contrasting a latitudinal gradient against global catchments
+AU  - Fuentes, Ignacio
+AU  - Vervoort, R. Willem
+AU  - McPhee, James
+JO  - Journal of Hydrology
+VL  - 628
+SP  - 130477
+PY  - 2024
+DA  - 2024/01/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.130477
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423014191
+KW  - Evapotranspiration models
+KW  - Remote sensing
+KW  - Validation scales
+KW  - Total water storage
+AB  - Actual evapotranspiration (AET) is a key variable in the global water balance, driving agricultural production and ecosystem health. It is a complex hydrologic process that depends on vegetation, climate, and available water conditions. Different moderate resolution global AET models have been developed to quantify water resources at large scales. In this work we evaluate five of these products, including MODIS, PML, SSEBop, TerraClimate, and a Synthesis AET using point and catchment-scale datasets based on flux towers. We also contrast water balance changes with total water storage (TWS) products. These comparisons cover different radiation and precipitation regimes over catchments around the world and along a strong climatic gradient in north-central Chile. We rank the models, contrast TWS datasets, and study differences related to scale in validation and the effect of rainfall and radiation on simulated values. Additionally, we use a Budyko framework to evaluate the AET products in terms of their agreement with expected water budgets. At different evaluation scales, AET estimates and observations agreed reasonably well, with the largest mean R2 of about 0.7 and errors of approximately 15% of the magnitude of the observed variables. MODIS and Synthesis AET had the highest R2 at the point (0.62) and at the catchment scales (0.71 and 0.59 for regional and global catchments), respectively, but were closely followed by PML. PML and TerraClimate led to the lowest magnitude errors at the point (RMSE = 0.78 mm day−1) and catchment scales (mean RMSE = 1.5 mm day−1), respectively. The rainfall gradient is reflected in a performance gradient. PML, MODIS, and TerraClimate gave consistent behaviour based on the Budyko curve, with a few arid catchments exceeding the water limit. The major conclusion is that remotely sensed AET outperforms flux tower AET extrapolation for water balance calculations at the catchment scale, which means that errors in satellite-based AET products tend to cancel out at larger spatial scales, which makes them viable alternatives for regional water balance studies. However, flux data integrated into AET models, such as the FluxCom model, leads to the lowest errors. The assimilation and downscaling of Gravity Recovery and Climate Experiment (GRACE) into the Global Land Data Assimilation System (GLDAS) leads to an improvement in regional results compared with other TWS products.
+ER  - 
+
+TY  - JOUR
+T1  - Assessing spatial connectivity effects on daily streamflow forecasting using Bayesian-based graph neural network
+AU  - Liu, Guanjun
+AU  - Ouyang, Shuo
+AU  - Qin, Hui
+AU  - Liu, Shuai
+AU  - Shen, Qin
+AU  - Qu, Yuhua
+AU  - Zheng, Zhiwei
+AU  - Sun, Huaiwei
+AU  - Zhou, Jianzhong
+JO  - Science of The Total Environment
+VL  - 855
+SP  - 158968
+PY  - 2023
+DA  - 2023/01/10/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2022.158968
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969722060673
+KW  - Graph neural network
+KW  - Streamflow forecasting
+KW  - Uncertainty assessment
+KW  - Variational inference
+KW  - Deep learning
+KW  - Spatial connectivity
+AB  - Data-driven models have been widely developed and achieved impressive results in streamflow prediction. However, the existing data-driven models mostly focus on the selection of input features and the adjustment of model structure, and less on the impact of spatial connectivity on daily streamflow prediction. In this paper, a basin network based on graph-structured data is constructed by considering the spatial connectivity of different stations in the real basin. Furthermore, a novel graph neural network model, variational Bayesian edge-conditioned graph convolution model, which consists of edge-conditioned convolution networks and variational Bayesian inference, is proposed to assess the spatial connectivity effects on daily streamflow forecasting. The proposed graph neural network model is applied to forecast the next-day streamflow of a hydrological station in the Yangtze River Basin, China. Six comparative models and three comparative experimental groups are used to validate model performance. The results show that the proposed model has excellent performance in terms of deterministic prediction accuracy (NSE ≈ 0.980, RMSE≈1362.7 and MAE ≈ 745.8) and probabilistic prediction reliability (ICPC≈0.984 and CRPS≈574.1), which demonstrates that establishing appropriate connectivity and reasonably identifying connection relationships in the basin network can effectively improve the deterministic and probabilistic forecasting performance of the graph convolutional model.
+ER  - 
+
+TY  - JOUR
+T1  - Analysis of landslide explicative factors and susceptibility mapping in an andean context: The case of Azuay province (Ecuador)
+AU  - Cobos-Mora, Sandra Lucia
+AU  - Rodriguez-Galiano, Victor
+AU  - Lima, Aracely
+JO  - Heliyon
+VL  - 9
+IS  - 9
+SP  - e20170
+PY  - 2023
+DA  - 2023/09/01/
+SN  - 2405-8440
+DO  - https://doi.org/10.1016/j.heliyon.2023.e20170
+UR  - https://www.sciencedirect.com/science/article/pii/S2405844023073784
+KW  - Landslide susceptibility
+KW  - Logistic regression
+KW  - Exploratory factor analysis
+KW  - Time-series analysis
+KW  - Quantitative modeling
+AB  - Landslides are one of the natural phenomena with more negative impacts on landscape, natural resources, and human health worldwide. Andean geomorphology, urbanization, poverty, and inequality make it more vulnerable to landslides. This research focuses on understanding explanatory landslide factors and promoting quantitative susceptibility mapping. Both tasks supply valuable knowledge for the Andean region, focusing on territorial planning and risk management support. This work addresses the following questions using the province of Azuay-Ecuador as a study area: (i) How do EFA and LR assess the significance of landslide occurrence factors? (ii) Which are the most significant landslide occurrence factors for susceptibility analysis in an Andean context? (iii) What is the landslide susceptibility map for the study area? The methodological framework uses quantitative techniques to describe landslide behavior. EFA and LR models are based on a historical inventory of 665 records. Both identified NDVI, NDWI, altitude, fault density, road density, and PC2 as the most significant factors. The latter factor represents the standard deviation, maximum value of precipitation, and rainfall in the wet season (January, February, and March). The EFA model was built from 7 latent factors, which explained 55% of the accumulated variance, with a medium item complexity of 1.5, a RMSR of 0.02, and a TLI of 0.89. This technique also identified TWI, fault distance, plane curvature, and road distance as important factors. LR's model, with AIC of 964.63, residual deviance of 924.63, AUC of 0.92, accuracy of 0.84, and Kappa of 0.68, also shows statistical significance for slope, roads density, geology, and land cover factors. This research encompasses a time-series analysis of NDVI, NDWI, and precipitation, including vegetation and weather dynamism for landslide occurrence. Finally, this methodological framework replaces traditional qualitative models based on expert knowledge, for quantitative approaches for the study area and the Andean region.
+ER  - 
+
+TY  - JOUR
+T1  - Towards an Indian land data assimilation system (ILDAS): A coupled hydrologic-hydraulic system for water balance assessments
+AU  - Magotra, Bhanu
+AU  - Prakash, Ved
+AU  - Saharia, Manabendra
+AU  - Getirana, Augusto
+AU  - Kumar, Sujay
+AU  - Pradhan, Rohit
+AU  - Dhanya, C.T.
+AU  - Rajagopalan, Balaji
+AU  - Singh, Raghavendra P.
+AU  - Pandey, Ayush
+AU  - Mohapatra, Mrutyunjay
+JO  - Journal of Hydrology
+VL  - 629
+SP  - 130604
+PY  - 2024
+DA  - 2024/02/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.130604
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423015469
+KW  - Indian Land Data Assimilation System (ILDAS)
+KW  - Water balance assessments
+KW  - Streamflow
+KW  - south Asia
+AB  - Effective management of water resources requires reliable estimates of land surface states and fluxes, including water balance components. But most land surface models run in uncoupled mode and do not produce river discharge at catchment scales to be useful for water resources management applications. Such integrated systems are also rare over India where hydrometeorological extremes have wreaked havoc on the economy and people. So, an Indian Land Data Assimilation System (ILDAS) with a coupled land surface and a hydrodynamic model has been developed and driven by multiple meteorological forcings (0.1°, daily) to estimate land surface states, channel discharge, and floodplain inundation. ILDAS benefits from an integrated framework as well as the largest suite of observation records collected over India and has been used to produce a reanalysis product for 1981–2021 using four forcing datasets, namely, Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2), Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS), ECMWF’s ERA-5, and Indian Meteorological Department (IMD) gridded precipitation. We assessed the uncertainty and bias in these precipitation datasets and validated all major components of the terrestrial water balance, i.e., surface runoff, soil moisture, terrestrial water storage anomalies, evapotranspiration, and streamflow, against a combination of satellite and in situ observation datasets. Our assessment shows that ILDAS can represent the hydrological processes reasonably well over the Indian landmass with IMD precipitation showing the best relative performance. Evaluation against ESA-CCI soil moisture shows that MERRA-2 based estimates outperform the others, whereas ERA-5 performs best in simulating evapotranspiration when evaluated against MODIS ET. Evaluations against observed records show that CHIRPS-based estimates have the highest performance in reconstructing surface runoff and streamflow. Once operational, this system will be useful for supporting transboundary water management decision making in the region.
+ER  - 
+
+TY  - JOUR
+T1  - Global hydroclimatic drivers of terrestrial water storage changes in different climates
+AU  - Zhang, Xu
+AU  - Li, Jinbao
+AU  - Wang, Zifeng
+AU  - Dong, Qianjin
+JO  - CATENA
+VL  - 219
+SP  - 106598
+PY  - 2022
+DA  - 2022/12/01/
+SN  - 0341-8162
+DO  - https://doi.org/10.1016/j.catena.2022.106598
+UR  - https://www.sciencedirect.com/science/article/pii/S0341816222005847
+KW  - Terrestrial water storage
+KW  - GRACE
+KW  - Evapotranspiration
+KW  - Hydroclimatology
+AB  - The Gravity Recovery and Climate Experiment (GRACE) mission provides an unprecedented way to assess terrestrial water storage changes (TWSC) worldwide. However, hydroclimatic drivers of GRACE-derived TWSC in different climates have not been systematically examined, which hinders its applications in water resources management and hydrological model development. In this study, we derived the monthly TWSC using the GRACE dataset, and analyzed its partial correlations with precipitation (P), evapotranspiration (ET), runoff (R), and temperature (T) from 2003 to 2019 under the Köppen-Geiger world climate classification system. Relative contributions of the four hydroclimatic elements (P, ET, R, and T) to TWSC were quantified using the hierarchical partitioning method. The results indicate that P mainly controls TWSC in tropical climates, hot semi-arid climate, and temperate and continental climates with dry winter. ET is the primary driver of TWSC in mid- and high-latitude regions that feature temperate and continental climates with no dry season, subarctic climates, and polar climates. T mainly influences TWSC in cold arid climates, temperate and continental climates with dry summer or no dry season, and ice cap climate. However, TWSC in many arid climates near the Tropic of Cancer and the Tropic of Capricorn are not well explained by all four hydroclimatic variables according to their non-significant partial correlations. Large trends in annual TWSC are found in South America, western Canada, eastern contiguous United States, and Africa, which are likely due to marked changes in P based on their similar spatial pattern. In particular, decreasing TWSC are found in most continental climates, which manifests a deterioration of water resources availability in these regions. Overall, our results clarify the major hydroclimatic drivers of TWSC in different climates at a global scale, which may help improve TWSC modeling and prediction through a judicious selection of explanatory hydroclimatic variables in different climates.
+ER  - 
+
+TY  - JOUR
+T1  - Benchmarking large-scale evapotranspiration estimates: A perspective from acalibration-freecomplementary relationship approach and FLUXCOM
+AU  - Ma, Ning
+AU  - Szilagyi, Jozsef
+AU  - Jozsa, Janos
+JO  - Journal of Hydrology
+VL  - 590
+SP  - 125221
+PY  - 2020
+DA  - 2020/11/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2020.125221
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169420306818
+KW  - Complementary relationship
+KW  - FLUXCOM
+KW  - Large-scale evapotranspiration
+KW  - Benchmarking
+KW  - Water balance
+AB  - Accurately quantifying large-scale terrestrial evapotranspiration (ET) remains hampered by poor parameterization of the physical processes that relate to ET. Previous studies suggested that the calibration-free complementary relationship (CR) method that requires only routine meteorological data performed better than main-stream atmospheric reanalyses, land surface or remote sensing models in estimating large-scale ET. Here we simultaneously evaluate the latest machine learning-based upscaling of eddy-covariance measurements (FLUXCOM) and the CR estimates against the water-balance derived ET rates of 18 large Hydrologic Unit Code-2 (HUC2) and 327 medium HUC6 basins across the conterminous United States. Overall, CR and FLUXCOM perform comparably in representing the multiyear mean and temporal variations in annual ET at both, HUC2 and HUC6, scales for the 1979–2013 period. Such equally good skills also hold true for the 2003–2015 period, during which FLUXCOM was driven solely by remote sensing data. However, the CR generally captures the long-term linear tendencies in annual ET rates somewhat better than FLUXCOM. Because of its minimal data requirement, the calibration-free version of the CR may continue to serve as a benchmarking tool for large-scale ET simulations.
+ER  - 
+
+TY  - JOUR
+T1  - Drought monitoring using high spatial resolution soil moisture data over Australia in 2015–2019
+AU  - Fang, Bin
+AU  - Kansara, Prakrut
+AU  - Dandridge, Chelsea
+AU  - Lakshmi, Venkat
+JO  - Journal of Hydrology
+VL  - 594
+SP  - 125960
+PY  - 2021
+DA  - 2021/03/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2021.125960
+UR  - https://www.sciencedirect.com/science/article/pii/S002216942100007X
+KW  - Drought index
+KW  - Soil Moisture
+KW  - SMAP
+KW  - GLDAS
+KW  - ISMN
+AB  - Drought is one of the major hazards that could have a significant impact on agriculture. In this study, two drought indices at high spatial resolution: Soil Water Deficit Index (SWDI) and Soil Moisture Deficit Index (SMDI) were derived by 1 km downscaled Soil Moisture Active Passive (SMAP) soil moisture (SM), Global Land Data Assimilation System (GLDAS) long-term SM and soil attribute products, and used to analyze the drought conditions in Australia in 2015–2019. The SWDI was calculated from SMAP SM estimates and SM at field capacity/wilting point derived from soil attribute data, while the SMDI was calculated by integrating GLDAS and SMAP SM using a temporally incremental based method. We found that in the eastern and western coastal regions, the droughts occurred during spring and summer and were relieved in fall and winter. The temporal change pattern of drought conditions for the northern coastal regions was opposite of the eastern/western coasts. On the other hand, the inland regions always had more severe drought conditions. Additionally, the validation results for the 1 km SMAP SM using International Soil Moisture Network (ISMN) in situ data showed reliable accuracy and the Root Mean Square Deviation (RMSD) ranged from 0.02 to 0.09 m3/m3. Both SWDI and SMDI showed clear seasonal and interannual variability, and the drought conditions worsened in 2017–2019. From the 1 km SWDI/SMDI maps in the Murray-Darling River Basin, terrain and streamflow were found to be two deterministic factors for the drought conditions.
+ER  - 
+
+TY  - JOUR
+T1  - Bias correcting discharge simulations from the GEOGloWS global hydrologic model
+AU  - Hales, Riley C.
+AU  - Williams, Gustavious P.
+AU  - James Nelson, E.
+AU  - Sowby, Robert B.
+AU  - Ames, Daniel P.
+AU  - Lozano, Jorge Luis Sanchez
+JO  - Journal of Hydrology
+VL  - 626
+SP  - 130279
+PY  - 2023
+DA  - 2023/11/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.130279
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423012210
+KW  - GEOGloWS
+KW  - SABER
+KW  - Hydrologic Modeling
+KW  - Bias Correction
+KW  - Watershed Classification
+KW  - Validation
+AB  - The Group on Earth Observations (GEO) Global Water Sustainability (GEOGloWS) hydrologic model provides global river discharge hindcasts and daily forecasts at approximately one million subbasins worldwide. The model is meant to sustainably provide discharge data during emergency situations and to underdeveloped countries which do not have sufficient local capacity. The primary model error is biased flow magnitudes which reduce the usefulness of the results. We applied a revised implementation of the SABER bias correction method to correct GEOGloWS model results. SABER uses a combination of watershed clustering with machine learning, geospatial analysis, and statistics to generalize bias patterns in gauged basins so they can also be applied to ungauged basins. We validated the bias corrected data created using the improved SABER method at 12,965 gauges globally and showed that this method reduced the mean error at 90% of gauges. We present an analysis of the improved SABER method using several metrics including mean error, root mean squared error, and Kling Gupta Efficiency. We found that the GEOGloWS model is usually biased high but our results indicate a reduction in the bias of the GEOGloWS model worldwide. We evaluate the varied performance of the bias correction procedure and significance of the improvements which vary based on stream order the watershed classifications derived in our analysis. We provide guidance on the use of bias corrected global data to local scale applications and discuss implications for the GEOGloWS model in the future.
+ER  - 
+
+TY  - JOUR
+T1  - Predicting regional fluoride concentrations at public and domestic supply depths in basin-fill aquifers of the western United States using a random forest model
+AU  - Rosecrans, Celia Z.
+AU  - Belitz, Kenneth
+AU  - Ransom, Katherine M.
+AU  - Stackelberg, Paul E.
+AU  - McMahon, Peter B.
+JO  - Science of The Total Environment
+VL  - 806
+SP  - 150960
+PY  - 2022
+DA  - 2022/02/01/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2021.150960
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969721060381
+KW  - Fluoride concentrations
+KW  - Groundwater
+KW  - Aquifers
+KW  - Random forest
+KW  - Prediction maps
+AB  - A random forest regression (RFR) model was applied to over 12,000 wells with measured fluoride (F) concentrations in untreated groundwater to predict F concentrations at depths used for domestic and public supply in basin-fill aquifers of the western United States. The model relied on twenty-two regional-scale environmental and surficial predictor variables selected to represent factors known to control F concentrations in groundwater. The testing model fit R2 and RMSE were 0.52 and 0.78 mg/L. Comparisons of measured to predicted proportions of four F-concentrations categories (<0.7 mg/L, 0.7–2 mg/L, >2 mg/L – 4 mg/L, and > 4 mg/L) indicate that the model performed well at making regional-scale predictions. Differences between measured and predicted proportions indicate underprediction of measured F at values by between 4 and 20 mg/L, representing less than 1% of the regional scale predicted values. These residuals most often map to geographic regions where local-scale processes including evaporative discharge in closed basins or intermittent streams concentrate fluoride in shallow groundwater. Despite this, the RFR model provides spatially continuous F predictions across the basin-fill aquifers where discrete samples are missing. Further, the predictions capture documented areas that exceed the F maximum contaminant level for drinking water of 4 mg/L and areas that are below the oral-health benchmark of 0.7 mg/L. These predictions can be used to estimate fluoride concentrations in unmonitored areas and to aid in identifying geographic areas that may require further investigation at localized scales.
+ER  - 
+
+TY  - JOUR
+T1  - Large scale hydrologic and tracer aided modelling: A review
+AU  - Stadnyk, T.A.
+AU  - Holmes, T.L.
+JO  - Journal of Hydrology
+VL  - 618
+SP  - 129177
+PY  - 2023
+DA  - 2023/03/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2023.129177
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169423001191
+KW  - Surface water
+KW  - Hydrology
+KW  - Hydrologic modelling
+KW  - Isotope tracers
+KW  - Tracer aided models
+AB  - Stable isotopes in water (oxygen-18 and deuterium) are hydrologic tracers, which have been embedded into both analytical mass balance and physically based continuous simulation models, improving hydrologic process partitioning and regional source identification, resulting in early climate change detection. Recent advances in the field of isotope hydrology have improved coordinated investment in global monitoring networks, invested in integrated modelling tools to support prediction and model evaluation, and expanded the scale of analyses possible. This review focuses on the applications of isotope tracers to large scale hydrologic modelling, its inception and evolution, and future directions for advancing this field with emphasis on the utility of isotope tracers for operational water resources prediction. The hydrologic community has begun to steer toward alternative hydrologic data due to the coinciding realities of limited data records and urgent data needs. Water resources infrastructure and management requires projections of water supply beyond the 50- to 100-year design life, with the general rule of flow frequency necessitating a 100- to 200-year assessment, however, there exist few data networks globally with records sufficient to support this kind of long-term assessment, and climate change is increasing the frequency of these extreme events. Historically, large-scale, and long time series simulation has meant less attention on process function (model fidelity) due to computational constraints, however, we argue that this may no longer be adequate under increasingly complex climate-hydrologic feedbacks, and integrated system models that incorporate human decisions, environmental health and socio-economic pressures. To expand the uptake of isotope tracers in practice, we emphasize their value for extreme quantile prediction under future projections and call for the community of practice to support data networks and accessibility, support peer review of large-domain (less data intensive) applications, and employ the FAIR (findable, accessible, interoperable, reusable) scientific principles. Though still an emerging scientific field, isotope hydrology has considerable value to the practitioner community with the proper education and training necessary to build confidence, underpinned by well developed and accessible tools for deployment.
+ER  - 
+
+TY  - JOUR
+T1  - Improving the classification of flood tweets with contextual hydrological information in a multimodal neural network
+AU  - de Bruijn, Jens A.
+AU  - de Moel, Hans
+AU  - Weerts, Albrecht H.
+AU  - de Ruiter, Marleen C.
+AU  - Basar, Erkan
+AU  - Eilander, Dirk
+AU  - Aerts, Jeroen C.J.H.
+JO  - Computers & Geosciences
+VL  - 140
+SP  - 104485
+PY  - 2020
+DA  - 2020/07/01/
+SN  - 0098-3004
+DO  - https://doi.org/10.1016/j.cageo.2020.104485
+UR  - https://www.sciencedirect.com/science/article/pii/S0098300419308106
+KW  - Text classification
+KW  - Neural networks
+KW  - Multimodal fusion
+KW  - Authoritative data
+KW  - Word embeddings
+KW  - Floods
+KW  - Natural hazards
+KW  - Early warning
+AB  - While text classification can classify tweets, assessing whether a tweet is related to an ongoing flood event or not, based on its text, remains difficult. Inclusion of contextual hydrological information could improve the performance of such algorithms. Here, a multilingual multimodal neural network is designed that can effectively use both textual and hydrological information. The classification data was obtained from Twitter using flood-related keywords in English, French, Spanish and Indonesian. Subsequently, hydrological information was extracted from a global precipitation dataset based on the tweet's timestamp and locations mentioned in its text. Three experiments were performed analyzing precision, recall and F1-scores while comparing a neural network that uses hydrological information against a neural network that does not. Results showed that F1-scores improved significantly across all experiments. Most notably, when optimizing for precision the neural network with hydrological information could achieve a precision of 0.91 while the neural network without hydrological information failed to effectively optimize. Moreover, this study shows that including hydrological information can assist in the translation of the classification algorithm to unseen languages.
+ER  - 
+
+TY  - JOUR
+T1  - Enhancing environmental data imputation: A physically-constrained machine learning framework
+AU  - Pastorini, Marcos
+AU  - Rodríguez, Rafael
+AU  - Etcheverry, Lorena
+AU  - Castro, Alberto
+AU  - Gorgoglione, Angela
+JO  - Science of The Total Environment
+SP  - 171773
+PY  - 2024
+DA  - 2024/03/24/
+SN  - 0048-9697
+DO  - https://doi.org/10.1016/j.scitotenv.2024.171773
+UR  - https://www.sciencedirect.com/science/article/pii/S0048969724019168
+KW  - Environmental data
+KW  - Missing values
+KW  - Data imputation
+KW  - Machine learning
+KW  - Physical constraints
+AB  - In water resources management, new computational capabilities have made it possible to develop integrated models to jointly analyze climatic conditions and water quantity/quality of the entire watershed system. Although the value of this integrated approach has been demonstrated so far, the limited availability of field data may hinder its applicability by causing high uncertainty in the model response. In this context, before collecting additional data, it is recommended first to recognize what improvement in model performance would occur if all available records could be well exploited. This work proposes a novel machine learning framework with physical constraints capable of successfully imputing a high percentage of missing data belonging to several environmental domains (meteorology, water quantity, water quality), yielding satisfactory results. In particular, the minimum NSE computed for meteorologic variables is 0.72. For hydrometric variables, NSE is always >0.97. More than 78 % of the physical-water-quality variables is characterized by NSE > 0.45, and >66 % of the chemical-water quality variables reaches NSE > 0.35. This work's results demonstrate the proposed framework's effectiveness as a data augmentation tool to improve the performance of integrated environmental modeling.
+ER  - 
+
+TY  - JOUR
+T1  - Quality control procedures for sub-hourly rainfall data: An investigation in different spatio-temporal scales in Brazil
+AU  - Meira, Marcela A.
+AU  - Freitas, Emerson S.
+AU  - Coelho, Victor Hugo R.
+AU  - Tomasella, Javier
+AU  - Fowler, Hayley J.
+AU  - Ramos Filho, Geraldo M.
+AU  - Silva, Abner L.
+AU  - Almeida, Cristiano das N.
+JO  - Journal of Hydrology
+VL  - 613
+SP  - 128358
+PY  - 2022
+DA  - 2022/10/01/
+SN  - 0022-1694
+DO  - https://doi.org/10.1016/j.jhydrol.2022.128358
+UR  - https://www.sciencedirect.com/science/article/pii/S0022169422009301
+KW  - Quality control
+KW  - Rainfall event
+KW  - Spatial outlier
+KW  - Sub-hourly rainfall
+AB  - There has been an increase in the intensity of rainfall extreme events. These events have a high contribution to hazards in urban areas, such as flash flooding, and landslides, which lead to social, economic, and environmental damage. Sub-hourly rainfall information has a critical role in the assessment of such natural disasters. However, precipitation gauge networks in developing countries still lack high-quality data. This study presents a new automatic quality control procedure (A-QCP) for sub-hourly rainfall data in Brazil, analysing 7 years (2014–2020) of tipping bucket rain gauge (TBRG) data from over 3,000 gauges per year provided by CEMADEN’s (Brazilian National Centre for Monitoring and Early Warnings of Natural Disasters) rain gauge network as a case study. The A-QCP developed separately examines each year through a series of single-gauge tests in which each station was considered independently, going through procedures to assess possible equipment malfunctions through data analysis like long rainless periods or with constant tips due to clogging, spurious rainfall peaks, and long periods of missing data. Then, nearest neighbour analysis was performed through spatial outlier detection using Local Moran’s Index. The performance of the method was evaluated through a confusion matrix, which compared the procedures’ results with a reference dataset created using visual and independent analyses. After the application of the proposed A-QCP to the whole database, the results show that the procedure was able to correctly identify 78.6 % of faulty rain gauges for the whole period, with less than 8 % of functioning rain gauges removed from the final High-Quality database. It was also noted that the best performing filters were the first ones applied, showing that the procedure works best on the identification of gross errors, with diminished efficiency in finding malfunctions after the sequential removal of Poor-Quality rain gauges.
+ER  - 
+
+TY  - JOUR
+T1  - A global network for operational flood risk reduction
+AU  - Alfieri, Lorenzo
+AU  - Cohen, Sagy
+AU  - Galantowicz, John
+AU  - Schumann, Guy J-P.
+AU  - Trigg, Mark A.
+AU  - Zsoter, Ervin
+AU  - Prudhomme, Christel
+AU  - Kruczkiewicz, Andrew
+AU  - Coughlan de Perez, Erin
+AU  - Flamig, Zachary
+AU  - Rudari, Roberto
+AU  - Wu, Huan
+AU  - Adler, Robert F.
+AU  - Brakenridge, Robert G.
+AU  - Kettner, Albert
+AU  - Weerts, Albrecht
+AU  - Matgen, Patrick
+AU  - Islam, Saiful A.K.M
+AU  - de Groeve, Tom
+AU  - Salamon, Peter
+JO  - Environmental Science & Policy
+VL  - 84
+SP  - 149
+EP  - 158
+PY  - 2018
+DA  - 2018/06/01/
+SN  - 1462-9011
+DO  - https://doi.org/10.1016/j.envsci.2018.03.014
+UR  - https://www.sciencedirect.com/science/article/pii/S1462901117312637
+KW  - Global flood partnership (GFP)
+KW  - Disaster risk management
+KW  - Satellite remote sensing
+KW  - Flood monitoring
+KW  - Early warning systems
+AB  - Every year riverine flooding affects millions of people in developing countries, due to the large population exposure in the floodplains and the lack of adequate flood protection measures. Preparedness and monitoring are effective ways to reduce flood risk. State-of-the-art technologies relying on satellite remote sensing as well as numerical hydrological and weather predictions can detect and monitor severe flood events at a global scale. This paper describes the emerging role of the Global Flood Partnership (GFP), a global network of scientists, users, private and public organizations active in global flood risk management. Currently, a number of GFP member institutes regularly share results from their experimental products, developed to predict and monitor where and when flooding is taking place in near real-time. GFP flood products have already been used on several occasions by national environmental agencies and humanitarian organizations to support emergency operations and to reduce the overall socio-economic impacts of disasters. This paper describes a range of global flood products developed by GFP partners, and how these provide complementary information to support and improve current global flood risk management for large scale catastrophes. We also discuss existing challenges and ways forward to turn current experimental products into an integrated flood risk management platform to improve rapid access to flood information and increase resilience to flood events at global scale.
+ER  - 

@@ -1,14 +1,9 @@
-deep/machine learning
-precipitation runoff modeling/model
-flood forecasting (era flood prediction)
-time series forecasting
+Todos limitados aos anos: 2018 - 2024
 
----------
-
-Todos limitados aos anos: 2018 - 2023
+Pesquisando nos campos "article title", "abstract" e "keywords"
 
 Scopus
-( ( TITLE-ABS-KEY ( "deep learning" )  OR  TITLE-ABS-KEY ( "machine learning" ) )  AND  TITLE-ABS-KEY ( "flood forecasting" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2023 ) OR LIMIT-TO ( PUBYEAR ,  2022 )  OR  LIMIT-TO ( PUBYEAR ,  2021 )  OR  LIMIT-TO ( PUBYEAR ,  2020 )  OR  LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
+( ( TITLE-ABS-KEY ( "deep learning" )  OR  TITLE-ABS-KEY ( "machine learning" ) )  AND  TITLE-ABS-KEY ( "flood forecasting" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2024 ) OR LIMIT-TO ( PUBYEAR ,  2023 ) OR LIMIT-TO ( PUBYEAR ,  2022 )  OR  LIMIT-TO ( PUBYEAR ,  2021 )  OR  LIMIT-TO ( PUBYEAR ,  2020 )  OR  LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
 
 Web of Science
 (((TI=(deep learning) OR TI=(machine learning))) AND TI=(flood forecasting)) OR
@@ -21,7 +16,15 @@ Science Direct
 SpringerLink
 ("deep learning" OR "machine learning") AND "runoff" AND ("flood forecasting" OR "time series forecasting")
 
-ScieloBR
+
+===================================================
+
+Scopus
+("south america" OR "argentina" OR "bolivia" OR "brazil" OR "chile" OR "colombia" OR "ecuador" OR "french guiana" OR "guyana" OR "paraguay" OR "peru" OR "suriname" OR "uruguay" OR "venezuela")
+AND ("water resources" OR "riverflow" OR "streamflow")
+AND ("prediction" OR "modeling")
+AND ( "deep learning"  OR "machine learning" OR "artificial intelligence")
 
 
-Revista Mineira de Recursos Hídricos
+Web of Science (pesquisei apenas pelo campo "abstract" pois por outros campos estava retornando 0 papers; desta forma eu deixei uma possibilidade de retorno mais ampla)
+AB=("south america" OR "argentina" OR "bolivia" OR "brazil" OR "chile" OR "colombia" OR "ecuador" OR "french guiana" OR "guyana" OR "paraguay" OR "peru" OR "suriname" OR "uruguay" OR "venezuela") AND AB=("water resources" OR "riverflow" OR "streamflow") AND AB=("prediction" OR "modeling") AND  AB=( "deep learning"  OR "machine learning" OR "artificial intelligence")

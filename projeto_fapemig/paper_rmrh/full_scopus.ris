@@ -1,0 +1,2497 @@
+﻿TY  - BOOK
+AU  - Perez, G.A.C.
+AU  - Solomatine, D.P.
+TI  - ADVANCED HYDROINFORMATICS: Machine Learning and Optimization for Water Resources
+PY  - 2023
+T2  - Advanced Hydroinformatics: Machine Learning and Optimization for Water Resources
+SP  - 1
+EP  - 461
+DO  - 10.1002/9781119639268
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85183266372&doi=10.1002%2f9781119639268&partnerID=40&md5=c90981440b256525d3898d26b302f24d
+AD  - IHE Delft Institute for Water Education, Delft, Netherlands
+AD  - Water Resources Section, Delft University of Technology, Delft, Netherlands
+AD  - Water Problems Institute of the Russian Academy of Sciences, Moscow, Russian Federation
+AB  - Advanced Hydroinformatics Advanced Hydroinformatics Machine Learning and Optimization for Water Resources The rapid development of machine learning brings new possibilities for hydroinformatics research and practice with its ability to handle big data sets, identify patterns and anomalies in data, and provide more accurate forecasts. Advanced Hydroinformatics: Machine Learning and Optimization for Water Resources presents both original research and practical examples that demonstrate how machine learning can advance data analytics, accuracy of modeling and forecasting, and knowledge discovery for better water management. Volume Highlights Include: • Overview of the application of artificial intelligence and machine learning techniques in hydroinformatics • Advances in modeling hydrological systems • Different data analysis methods and models for forecasting water resources • New areas of knowledge discovery and optimization based on using machine learning techniques • Case studies from North America, South America, the Caribbean, Europe, and Asia The American Geophysical Union promotes discovery in Earth and space science for the benefit of humanity. Its publications disseminate scientific knowledge and provide resources for researchers, students, and professionals. © 2024 American Geophysical Union All rights reserved.
+PB  - wiley
+SN  - 978-111963926-8 (ISBN); 978-111963931-2 (ISBN)
+LA  - English
+J2  - Advanced Hydroinformatics: Machine Learning and Optimization for Water Resources
+M3  - Book
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Laqui, W.
+AU  - Zubieta, R.
+AU  - Rau, P.
+AU  - Mejía, A.
+AU  - Lavado, W.
+AU  - Ingol, E.
+TI  - Can artificial neural networks estimate potential evapotranspiration in Peruvian highlands?
+PY  - 2019
+T2  - Modeling Earth Systems and Environment
+VL  - 5
+IS  - 4
+SP  - 1911
+EP  - 1924
+DO  - 10.1007/s40808-019-00647-2
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85086698968&doi=10.1007%2fs40808-019-00647-2&partnerID=40&md5=3f8111c051a38689b494fa14d24af0fe
+AD  - UNALM, Programa de Doctorado en Recursos Hídricos, Universidad Nacional Agraria La Molina, Lima, Peru
+AD  - Escuela Profesional de Ingeniería Agrícola, Universidad Nacional del Altiplano, Puno, Peru
+AD  - Instituto Geofísico del Perú, IGP, Subdirección de Ciencias de la Atmósfera e Hidrósfera, Lima, Peru
+AD  - UTEC, Departamento de Ingeniería Ambiental, Universidad de Ingeniería y Tecnología, Lima, Peru
+AD  - Servicio Nacional de Meteorología e Hidrología del Perú, Lima, Peru
+AB  - Evapotranspiration (ETo) is one of the most important variables of the water cycle when water requirements for irrigation, water resource planning or hydrological applications are analyzed. In this context, models based on artificial neural networks (ANN) of the retro-propagation type can be an alternative method to estimate ETo in highland regions using a number of input variables limited. The objective of this study is to develop ANN models to estimate ETo for the Peruvian highlands using input variables such as maximum air temperature (Tmax), minimum air temperature (Tmin), hours of sunshine (Sh), relative humidity (Rh) and wind speed (Wv), as an alternative method to FAO Penman–Monteith method (FAO-PM56) and Hargreaves–Samani (HS). Daily climatic datasets recorded at 12 meteorological stations between 1963 and 2015 were selected in this study. For evaluation reason, the ETo calculated using the FAO-PM56 was also considered. The main input variable to ANN modeling is Tmax, followed by Sh and Wv or combinations between them. Hargreaves–Samani (HS) showed a poor performance in the estimation of the ETo in the Peruvian highlands compared to the 13 ANN models. Additionally, it was determined that in stations with lower thermal amplitude (< 14.2 °C) the lowest performance levels are presented in the estimation of the ETo with HS equation, which does not occur markedly with the ANN models that they estimate adequately ETo. Therefore, ANN models represent a great option to replace the FAO-PM56 and HS method, when ETo data series are scarce. © 2019, Springer Nature Switzerland AG.
+KW  - Artificial intelligence
+KW  - ETo
+KW  - Highlands
+KW  - Water requirement
+KW  - Peru
+KW  - air temperature
+KW  - artificial intelligence
+KW  - artificial neural network
+KW  - data set
+KW  - numerical model
+KW  - Penman-Monteith equation
+KW  - potential evapotranspiration
+KW  - relative humidity
+KW  - wind velocity
+PB  - Springer Science and Business Media Deutschland GmbH
+SN  - 23636203 (ISSN)
+LA  - English
+J2  - Model. Earth Syst. Environ.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 13; Correspondence Address: W. Laqui; Escuela Profesional de Ingeniería Agrícola, Universidad Nacional del Altiplano, Puno, Peru; email: 20150840@lamolina.edu.pe
+ER  -
+
+TY  - JOUR
+AU  - Chagas, V.B.P.
+AU  - Chaffe, P.L.B.
+AU  - Blöschl, G.
+TI  - Regional Low Flow Hydrology: Model Development and Evaluation
+PY  - 2024
+T2  - Water Resources Research
+VL  - 60
+IS  - 2
+C7  - e2023WR035063
+DO  - 10.1029/2023WR035063
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85185834443&doi=10.1029%2f2023WR035063&partnerID=40&md5=d6ba3a61f52b16974b42a67b19e3091a
+AD  - Department of Sanitary and Environmental Engineering, Federal University of Santa Catarina, Florianopolis, Brazil
+AD  - Institute of Hydraulic Engineering and Water Resources Management, Technische Universität Wien, Vienna, Austria
+AB  - Low flows result from the interplay of climatic variability and catchment storage dynamics, but it is unclear which of these variables is more relevant for explaining low flow spatial patterns. Here, we develop a new conceptual model that integrates process-based hydrological knowledge with statistics and test it for 1,400 Brazilian catchments. Through comparative hydrology, we isolate the low flow generating mechanisms and estimate their components using linear model trees. The model explains 58% of the spatial variance in 7-day minimum annual flows (Qmin) based on climate and catchment characteristics. The primary Qmin controls depend on the spatial scale of analysis. Catchment characteristics govern Qmin up to the continental scale (107 km2), where their relative importance matches that of climate. At subcontinental scales, catchment characteristics are twice as important as climate in predicting Qmin, suggesting that low flows are governed by the catchment's capacity to attenuate the climatic variability through water storage. Geological properties are the most important catchment characteristics, particularly bedrock type, lithology and topographic slope, determining streamflow recession rates in the dry season. Soil properties, primarily soil class and depth, are half as important as geology. Climate impacts Qmin mainly through mean annual rainfall minus evaporation, representing the potential groundwater recharge, while dry-season length has the lowest impact. These results hold mainly for highly seasonal and snow-free climates. Low flow hydrology that combines statistics with process understanding offers a promising framework for understanding regional low flow generating mechanisms and could support other estimation models than that presented here. © 2024. The Authors.
+KW  - climate
+KW  - droughts
+KW  - geology
+KW  - low flows
+KW  - machine learning
+KW  - South America
+KW  - Brazil
+KW  - Climate models
+KW  - Drought
+KW  - Lithology
+KW  - Machine learning
+KW  - Runoff
+KW  - Statistical tests
+KW  - Catchment characteristics
+KW  - Climate
+KW  - Climatic variability
+KW  - Dry seasons
+KW  - Generating mechanism
+KW  - Hydrology modeling
+KW  - Low flow
+KW  - Machine-learning
+KW  - Model evaluation
+KW  - South America
+KW  - bedrock
+KW  - catchment
+KW  - groundwater
+KW  - low flow
+KW  - rainfall
+KW  - Catchments
+PB  - John Wiley and Sons Inc
+SN  - 00431397 (ISSN)
+LA  - English
+J2  - Water Resour. Res.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: V.B.P. Chagas; Department of Sanitary and Environmental Engineering, Federal University of Santa Catarina, Florianopolis, Brazil; email: vbchagas@gmail.com; CODEN: WRERA
+ER  -
+
+TY  - JOUR
+AU  - Robson, B.A.
+AU  - Bolch, T.
+AU  - MacDonell, S.
+AU  - Hölbling, D.
+AU  - Rastner, P.
+AU  - Schaffer, N.
+TI  - Automated detection of rock glaciers using deep learning and object-based image analysis
+PY  - 2020
+T2  - Remote Sensing of Environment
+VL  - 250
+C7  - 112033
+DO  - 10.1016/j.rse.2020.112033
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85089440785&doi=10.1016%2fj.rse.2020.112033&partnerID=40&md5=63ce65d3359e47eb653cd6699f95d410
+AD  - Department of Geography, University of Bergen, Norway
+AD  - School of Geography and Sustainable Development, University of St. Andrews, United Kingdom
+AD  - Centro de Estudios Avanzados en Zonas Áridas (CEAZA), La Serena, Chile
+AD  - Department of Geoinformatics – Z_GIS, University of Salzburg, Austria
+AD  - Department of Geography, University of Zurich, Switzerland
+AB  - Rock glaciers are an important component of the cryosphere and are one of the most visible manifestations of permafrost. While the significance of rock glacier contribution to streamflow remains uncertain, the contribution is likely to be important for certain parts of the world. High-resolution remote sensing data has permitted the creation of rock glacier inventories for large regions. However, due to the spectral similarity between rock glaciers and the surrounding material, the creation of such inventories is typically conducted based on manual interpretation, which is both time consuming and subjective. Here, we present a novel method that combines deep learning (convolutional neural networks or CNNs) and object-based image analysis (OBIA) into one workflow based on freely available Sentinel-2 optical imagery (10 m spatial resolution), Sentinel-1 interferometric coherence data, and a digital elevation model (DEM). CNNs identify recurring patterns and textures and produce a prediction raster, or heatmap where each pixel indicates the probability that it belongs to a certain class (i.e. rock glacier) or not. By using OBIA we can segment the datasets and classify objects based on their heatmap value as well as morphological and spatial characteristics. We analysed two distinct catchments, the La Laguna catchment in the Chilean semi-arid Andes and the Poiqu catchment in the central Himalaya. In total, our method mapped 108 of the 120 rock glaciers across both catchments with a mean overestimation of 28%. Individual rock glacier polygons howevercontained false positives that are texturally similar, such as debris-flows, avalanche deposits, or fluvial material causing the user's accuracy to be moderate (63.9–68.9%) even if the producer's accuracy was higher (75.0–75.4%). We repeated our method on very-high-resolution Pléiades satellite imagery and a corresponding DEM (at 2 m resolution) for a subset of the Poiqu catchment to ascertain what difference image resolution makes. We found that working at a higher spatial resolution has little influence on the producer's accuracy (an increase of 1.0%), however the rock glaciers delineated were mapped with a greater user's accuracy (increase by 9.1% to 72.0%). By running all the processing within an object-based environment it was possible to both generate the deep learning heatmap and perform post-processing through image segmentation and object reshaping. Given the difficulties in differentiating rock glaciers using image spectra, deep learning combined with OBIA offers a promising method for automating the process of mapping rock glaciers over regional scales and lead to a reduction in the workload required in creating inventories. © 2020 The Author(s)
+KW  - Andes
+KW  - Chile
+KW  - Himalayas
+KW  - La Laguna
+KW  - Catchments
+KW  - Classification (of information)
+KW  - Convolutional neural networks
+KW  - Image resolution
+KW  - Image segmentation
+KW  - Learning systems
+KW  - Mapping
+KW  - Object detection
+KW  - Remote sensing
+KW  - Rocks
+KW  - Runoff
+KW  - Satellite imagery
+KW  - Surveying
+KW  - Textures
+KW  - Digital elevation model
+KW  - High resolution remote sensing
+KW  - Interferometric coherence
+KW  - Object based image analysis
+KW  - Object based image analysis (OBIA)
+KW  - Spatial characteristics
+KW  - Surrounding materials
+KW  - Very high resolution
+KW  - cryosphere
+KW  - detection method
+KW  - digital elevation model
+KW  - image analysis
+KW  - permafrost
+KW  - rock glacier
+KW  - satellite imagery
+KW  - Sentinel
+KW  - streamflow
+KW  - Deep learning
+PB  - Elsevier Inc.
+SN  - 00344257 (ISSN)
+LA  - English
+J2  - Remote Sens. Environ.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 79; Correspondence Address: B.A. Robson; Department of Geography, University of Bergen, Norway; email: benjamin.robson@uib.no; CODEN: RSEEA
+ER  -
+
+TY  - JOUR
+AU  - Liu, Y.
+AU  - Yue, Q.
+AU  - Wang, Q.
+AU  - Yu, J.
+AU  - Zheng, Y.
+AU  - Yao, X.
+AU  - Xu, S.
+TI  - A framework for actual evapotranspiration assessment and projection based on meteorological, vegetation and hydrological remote sensing products
+PY  - 2021
+T2  - Remote Sensing
+VL  - 13
+IS  - 18
+C7  - 3643
+DO  - 10.3390/rs13183643
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85115063209&doi=10.3390%2frs13183643&partnerID=40&md5=1fd7ba19b75a4efe53626afe9d5c7194
+AD  - College of Water Sciences, Beijing Normal University, Beijing, 100875, China
+AB  - As the most direct indicator of drought, the dynamic assessment and prediction of actual evapotranspiration (AET) is crucial to regional water resources management. This research aims to develop a framework for the regional AET evaluation and prediction based on multiple machine learning methods and multi-source remote sensing data, which combines Boruta algorithm, Random Forest (RF), and Support Vector Regression (SVR) models, employing datasets from CRU, GLDAS, MODIS, GRACE (-FO), and CMIP6, covering meteorological, vegetation, and hydrological variables. To verify the framework, it is applied to grids of South America (SA) as a case. The results meticulously demonstrate the tendency of AET and identify the decisive role of T, P, and NDVI on AET in SA. Regarding the projection, RF has better performance in different input strategies in SA. According to the accuracy of RF and SVR on the pixel scale, the AET prediction dataset is generated by integrating the optimal results of the two models. By using multiple parameter inputs and two models to jointly obtain the optimal output, the results become more reasonable and accurate. The framework can systematically and comprehensively evaluate and forecast AET; although prediction products generated in SA cannot calibrate relevant parameters, it provides a quite valuable reference for regional drought warning and water allocating. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - Actual evapotranspiration
+KW  - Boruta algorithm
+KW  - CMIP6
+KW  - Multi-source remote sensing data
+KW  - Random forest
+KW  - Support vector regression
+KW  - Decision trees
+KW  - Drought
+KW  - Evapotranspiration
+KW  - Forecasting
+KW  - Machine learning
+KW  - Support vector regression
+KW  - Vegetation
+KW  - Actual evapotranspiration
+KW  - Dynamic assessment
+KW  - Evaluation and predictions
+KW  - Hydrological variables
+KW  - Multiple parameters
+KW  - Regional water resources
+KW  - Remote sensing data
+KW  - Support vector regression (SVR)
+KW  - Remote sensing
+PB  - MDPI
+SN  - 20724292 (ISSN)
+LA  - English
+J2  - Remote Sens.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 9; Correspondence Address: J. Yu; College of Water Sciences, Beijing Normal University, Beijing, 100875, China; email: jingshan@bnu.edu.cn
+ER  -
+
+TY  - JOUR
+AU  - Vilaseca, F.
+AU  - Castro, A.
+AU  - Chreties, C.
+AU  - Gorgoglione, A.
+TI  - Assessing influential rainfall–runoff variables to simulate daily streamflow using random forest
+PY  - 2023
+T2  - Hydrological Sciences Journal
+VL  - 68
+IS  - 12
+SP  - 1738
+EP  - 1753
+DO  - 10.1080/02626667.2023.2232356
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85165877308&doi=10.1080%2f02626667.2023.2232356&partnerID=40&md5=07f390b3facd2b82cd1a3c1cda2c5f7d
+AD  - Department of Fluid Mechanics and Environmental Engineering, School of Engineering, Universidad de la República, Montevideo, Uruguay
+AD  - Department of Computer Science, School of Engineering, Universidad de la República, Montevideo, Uruguay
+AB  - This work aims to improve the feature selection for data-driven rainfall–runoff models by assessing the significance of each input variable in the learning process and analysing it from a physical point of view. For this purpose, a set of 14 experiments was carried out in two watersheds of the Santa Lucía Chico basin, Uruguay. A random forest model was trained and tested for daily discharge prediction in each of them using different input variables. A feature importance analysis was carried out for each model, using a non-model-biased method (Shapely additive explanations). Results showed that the most relevant variables were lagged discharges of one and two days, along with seven-day accumulated rainfall, which is interpreted as a proxy of the soil moisture condition of the watershed. The temperature was also relevant and was proven to represent the effect of the whole set of climatic variables (relative humidity, solar radiation, wind speed). © 2023 IAHS.
+KW  - data-driven modelling
+KW  - feature importance analysis
+KW  - rainfall–runoff modelling
+KW  - random forest
+KW  - Santa Lucia Basin
+KW  - Uruguay
+KW  - Forestry
+KW  - Learning systems
+KW  - Rain
+KW  - Runoff
+KW  - Watersheds
+KW  - Wind
+KW  - Data driven
+KW  - Data-driven model
+KW  - Feature importance analyse
+KW  - Features selection
+KW  - Importance analysis
+KW  - Input variables
+KW  - Learning process
+KW  - Rainfall - Runoff modelling
+KW  - Rainfall runoff
+KW  - Random forests
+KW  - algorithm
+KW  - computer simulation
+KW  - machine learning
+KW  - rainfall-runoff modeling
+KW  - soil moisture
+KW  - streamflow
+KW  - watershed
+KW  - Soil moisture
+PB  - Taylor and Francis Ltd.
+SN  - 02626667 (ISSN)
+LA  - English
+J2  - Hydrol. Sci. J.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: F. Vilaseca; Department of Fluid Mechanics and Environmental Engineering, School of Engineering, Universidad de la República, Montevideo, Uruguay; email: fvilaseca@fing.edu.uy; CODEN: HSJOD
+ER  -
+
+TY  - JOUR
+AU  - Filho, H.A.R.
+AU  - Uliana, E.M.
+AU  - Aires, U.R.V.
+AU  - da Cruz, I.F.
+AU  - Lisboa, L.
+AU  - da Silva, D.D.
+AU  - Viola, M.R.
+AU  - Duarte, V.B.R.
+TI  - Nowcast flood predictions in the Amazon watershed based on the remotely sensed rainfall product PDIRnow and artificial neural networks
+PY  - 2024
+T2  - Environmental Monitoring and Assessment
+VL  - 196
+IS  - 3
+C7  - 245
+DO  - 10.1007/s10661-024-12396-6
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85184683766&doi=10.1007%2fs10661-024-12396-6&partnerID=40&md5=0f4e0611c1a6e493d366f10c85f3392c
+AD  - Programa de Pós-Graduação Em Recursos Hídricos, Universidade Federal de Mato Grosso, MT, Cuiabá, 78060900, Brazil
+AD  - Instituto de Ciências Agrárias E Ambientais (ICAA), Universidade Federal de Mato Grosso, Sinop, 78550-728, Brazil
+AD  - Department of Agricultural and Biological Engineering, Mississippi State University, Starkville, 39759, United States
+AD  - Departamento de Engenharia Sanitária E Ambiental, Universidade Federal de Mato Grosso, MT, Cuiabá, 78060900, Brazil
+AD  - Serviço Geológico Do Brasil, Manaus, 69060000, Brazil
+AD  - Departamento de Engenharia Agrícola, Universidade Federal de Viçosa, Viçosa, 36570-000, Brazil
+AD  - Departamento de Engenharia de Água E Solo, Universidade Federal de Lavras, Lavras, 37200000, Brazil
+AD  - Programa de Pós-Graduação Em Ciências Florestais, Universidade Federal Do Espírito Santo, Jerônimo Monteiro, 29550000, Brazil
+AB  - The aim of this study was to develop artificial neural network (ANN) models to predict floods in the Branco River, Amazon basin. The input data for the models included the river levels and the average rainfall within the drainage area of the basin, which was estimated from the remotely sensed rainfall product PDIRnow. The hourly water level data used in the study were recorded by fluviometric telemetric stations belonging to the National Agency of Water. The multilayer perceptron was used as the neural framework of the ANNs, and the number of neurons in each layer of the model was determined via optimization with the SCE-UA algorithm. Most of the fitted ANN models showed Nash–Sutcliffe efficiency index values greater than 0.9. It is possible to conclude that the ANNs are effective for predicting the flood levels of the Branco River, with horizons of 6, 12 and 24 h; thus, constituting a viable option for use in river-flood warning systems in the Amazon basin. For the forecast with a 24-h horizon, it is essential to include the average rainfall of the basin that accumulated over the last 48 h as input data into the ANNs, along with the levels measured by the streamflow stations. The indirect rainfall estimates provided by PDIRnow are an excellent alternative as input data for ANN models used to predict floods and constitute a viable solution for regions where the density of rain gauge stations is low, as is the case in the Amazon basin. © The Author(s), under exclusive licence to Springer Nature Switzerland AG 2024.
+KW  - Artificial intelligence
+KW  - Civil defense
+KW  - Floods
+KW  - Hydrological model
+KW  - Warning system
+KW  - Algorithms
+KW  - Environmental Monitoring
+KW  - Floods
+KW  - Neural Networks, Computer
+KW  - Water
+KW  - Amazon Basin
+KW  - Branco River
+KW  - Brazil
+KW  - Roraima
+KW  - Catchments
+KW  - Floods
+KW  - Forecasting
+KW  - Input output programs
+KW  - Neural networks
+KW  - Rain gages
+KW  - Remote sensing
+KW  - Rivers
+KW  - Water levels
+KW  - rain
+KW  - water
+KW  - Amazon basin
+KW  - Artificial neural network modeling
+KW  - Drainage area
+KW  - Flood prediction
+KW  - Hydrological models
+KW  - Input datas
+KW  - Multilayers perceptrons
+KW  - Nowcast
+KW  - River levels
+KW  - Water-level data
+KW  - algorithm
+KW  - artificial intelligence
+KW  - artificial neural network
+KW  - disaster management
+KW  - flood forecasting
+KW  - flood frequency
+KW  - hydrological modeling
+KW  - nowcasting
+KW  - prediction
+KW  - rainfall
+KW  - raingauge
+KW  - remote sensing
+KW  - river basin
+KW  - streamflow
+KW  - warning system
+KW  - watershed
+KW  - Amazonas (Brazil)
+KW  - Article
+KW  - artificial intelligence
+KW  - artificial neural network
+KW  - catchment area (hydrology)
+KW  - civil defense
+KW  - controlled study
+KW  - environmental aspects and related phenomena
+KW  - environmental parameters
+KW  - flooding
+KW  - fluviometric telemetric station
+KW  - forecasting
+KW  - geographic distribution
+KW  - hydrological model
+KW  - meteorology
+KW  - Nash Sutcliffe efficiency
+KW  - nowcast
+KW  - perceptron
+KW  - PERSIANN Dynamic Infrared Rain Rate now
+KW  - prediction
+KW  - remote sensing
+KW  - river basin
+KW  - SCE UA algorithm
+KW  - statistical analysis
+KW  - telemetry
+KW  - warning system
+KW  - water and water related phenomena
+KW  - watershed
+KW  - algorithm
+KW  - artificial neural network
+KW  - environmental monitoring
+KW  - Rain
+PB  - Springer Science and Business Media Deutschland GmbH
+SN  - 01676369 (ISSN)
+C2  - 38326627
+LA  - English
+J2  - Environ. Monit. Assess.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: U.R.V. Aires; Department of Agricultural and Biological Engineering, Mississippi State University, Starkville, 39759, United States; email: uilson.aires@msstate.edu; CODEN: EMASD
+ER  -
+
+TY  - JOUR
+AU  - Paez-Trujilo, A.
+AU  - Cañon, J.
+AU  - Hernandez, B.
+AU  - Corzo, G.
+AU  - Solomatine, D.
+TI  - Multivariate regression trees as an "explainable machine learning" approach to explore relationships between hydroclimatic characteristics and agricultural and hydrological drought severity: case of study Cesar River basin
+PY  - 2023
+T2  - Natural Hazards and Earth System Sciences
+VL  - 23
+IS  - 12
+SP  - 3863
+EP  - 3883
+DO  - 10.5194/nhess-23-3863-2023
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85182991923&doi=10.5194%2fnhess-23-3863-2023&partnerID=40&md5=b9373cfd8829a1efc3fbde1c2504d11c
+AD  - IHE Delft Institute for Water Education, P.O. Box 3015, Delft, 2601 DA, Netherlands
+AD  - Delft University of Technology, Water Resources Section, P.O. Box 5048, Delft, 2600 GA, Netherlands
+AD  - Fundación Natura Colombia, P.O. 111311, Carrera 21 No. 39-43, Bogotá D.C., Colombia
+AD  - Water Problems Institute of RAS, Gubkina 3, Moscow, 119333, Russian Federation
+AB  - The typical drivers of drought events are lower than normal precipitation and/or higher than normal evaporation. The region's characteristics may enhance or alleviate the severity of these events. Evaluating the combined effect of the multiple factors influencing droughts requires innovative approaches. This study applies hydrological modelling and a machine learning tool to assess the relationship between hydroclimatic characteristics and the severity of agricultural and hydrological droughts. The Soil Water Assessment Tool (SWAT) is used for hydrological modelling. Model outputs, soil moisture and streamflow, are used to calculate two drought indices, namely the Soil Moisture Deficit Index and the Standardized Streamflow Index. Then, drought indices are utilised to identify the agricultural and hydrological drought events during the analysis period, and the index categories are employed to describe their severity. Finally, the multivariate regression tree technique is applied to assess the relationship between hydroclimatic characteristics and the severity of agricultural and hydrological droughts. Our research indicates that multiple parameters influence the severity of agricultural and hydrological droughts in the Cesar River basin. The upper part of the river valley is very susceptible to agricultural and hydrological drought. Precipitation shortfalls and high potential evapotranspiration drive severe agricultural drought, whereas limited precipitation influences severe hydrological drought. In the middle part of the river, inadequate rainfall partitioning and an unbalanced water cycle that favours water loss through evapotranspiration and limits percolation cause severe agricultural and hydrological drought conditions. Finally, droughts are moderate in the basin's southern part (Zapatosa marsh and the Serranía del Perijá foothills). Moderate sensitivity to agricultural and hydrological droughts is related to the capacity of the subbasins to retain water, which lowers evapotranspiration losses and promotes percolation. Results show that the presented methodology, combining hydrological modelling and a machine learning tool, provides valuable information about the interplay between the hydroclimatic factors that influence drought severity in the Cesar River basin.  © 2023 Ana Paez-Trujilo et al.
+KW  - Cesar
+KW  - Colombia
+KW  - agriculture
+KW  - drought
+KW  - hydrological modeling
+KW  - hydrometeorology
+KW  - machine learning
+KW  - multivariate analysis
+KW  - regression analysis
+KW  - soil and water assessment tool
+PB  - Copernicus Publications
+SN  - 15618633 (ISSN)
+LA  - English
+J2  - Nat. Hazards Earth Syst. Sci.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: A. Paez-Trujilo; IHE Delft Institute for Water Education, Delft, P.O. Box 3015, 2601 DA, Netherlands; email: a.m.paeztrujillo@tudelft.nl
+ER  -
+
+TY  - JOUR
+AU  - Markovich, K.H.
+AU  - Dahlke, H.E.
+AU  - Arumí, J.L.
+AU  - Maxwell, R.M.
+AU  - Fogg, G.E.
+TI  - Bayesian hydrograph separation in a minimally gauged alpine volcanic watershed in central Chile
+PY  - 2019
+T2  - Journal of Hydrology
+VL  - 575
+SP  - 1288
+EP  - 1300
+DO  - 10.1016/j.jhydrol.2019.06.014
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85067820657&doi=10.1016%2fj.jhydrol.2019.06.014&partnerID=40&md5=8468115cfa7561f0a8f00452a7127702
+AD  - Hydrologic Sciences Graduate Group, University of California, Davis, Davis, CA, United States
+AD  - Departmento de Recursos Hídricos, Universidad de Concepción, Chillán, Chile
+AD  - Department of Geology and Geological Engineering, Colorado School of Mines, Golden, CO, United States
+AD  - Climate Change, Water, and Society (CCWAS), Integrative Graduate Research Education and Traineeship (IGERT), Davis, CA, United States
+AB  - This study examines the question of how much information one can extract from a tracer-based hydrograph separation in a remote and minimally gaged alpine catchment in Chile. We combine PCA-based endmember mixing analysis to identify the sources of flow contribution to the Diguillín River with a hierarchical Bayesian mixing model to integrate spatial and temporal variability in endmember concentration and quantify the source contributions to streamflow over time. The PCA-analysis shows that precipitation isotopes do not vary by elevation (e.g. snow and rainfall had identical signatures) but vary significantly by season, and that a third endmember is necessary to bound streamflow variability at the basin outlet, which was not captured by our field sampling. One of the main advantages of Bayesian methods is the quasi-machine learning capabilities, where we treated the third endmember as a parameter from which the mixing model could both estimate proportional contributions as well as posterior estimates for the tracer concentrations. The two tracer, three endmember hydrograph separation revealed groundwater to be the largest and precipitation (rain and snow) to be the smallest contributor, on average, to streamflow with the third unknown endmember contributing around 40% of streamflow during the Winter wet season. We hypothesize that interflow is occurring as the third endmember in the Alto Diguillín subwatershed, based on inferred tracer values and the presence of alluvium atop impermeable bedrock along certain reaches. More work is necessary to observe and sample these flowpaths, which was not possible during this study. The results of this work have implications for water resource management, since groundwater sustains the majority of streamflow in the Diguillín, and climate change will impact the timing and quantity of baseflow and interflow. Overall, we demonstrate the utility of combining PCA with Bayesian statistical modeling and inference to extract maximum information from a limited field dataset in a remote alpine catchment. The findings of this work can guide future water management in the Diguillín, but also provide clear questions for future research. © 2019 Elsevier B.V.
+KW  - Alpine hydrology
+KW  - Bayesian mixing model
+KW  - Chile
+KW  - Groundwater
+KW  - Hydrograph separation
+KW  - Chile
+KW  - Bayesian networks
+KW  - Catchments
+KW  - Climate change
+KW  - Groundwater
+KW  - Groundwater resources
+KW  - Learning systems
+KW  - Mixer circuits
+KW  - Mixing
+KW  - Rain
+KW  - Runoff
+KW  - Snow
+KW  - Water management
+KW  - Bayesian statistical model
+KW  - Chile
+KW  - End-member mixing analysis
+KW  - Hydrograph separation
+KW  - Mixing models
+KW  - Spatial and temporal variability
+KW  - Streamflow variability
+KW  - Waterresource management
+KW  - alpine environment
+KW  - baseflow
+KW  - Bayesian analysis
+KW  - bedrock
+KW  - catchment
+KW  - gauge
+KW  - groundwater
+KW  - hydrograph
+KW  - hydrological modeling
+KW  - river flow
+KW  - separation
+KW  - streamflow
+KW  - water management
+KW  - watershed
+KW  - Stream flow
+PB  - Elsevier B.V.
+SN  - 00221694 (ISSN)
+LA  - English
+J2  - J. Hydrol.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 9; Correspondence Address: K.H. Markovich; Hydrologic Sciences Graduate Group, University of California, Davis, Davis, United States; email: khmarkovich@email.arizona.edu; CODEN: JHYDA
+ER  -
+
+TY  - CONF
+TI  - 12th International Conference on Environmental Science and Technology, ICEST 2021
+PY  - 2022
+T2  - IOP Conference Series: Earth and Environmental Science
+VL  - 1006
+IS  - 1
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85127955784&partnerID=40&md5=fd6056309885b738d3e395cecd0059b9
+AB  - The proceedings contain 13 papers. The topics discussed include: high-accuracy machine learning models to estimate above ground biomass over tropical closed evergreen forest areas from satellite data; design, implementation and evaluation of an industrial water treatment system in El Coca, Ecuador in accordance with national guidelines; climate change impacts on agriculture and water resource management in the north China plain; possibility for using biochar for sustainable agriculture: a case study in Bulgaria; a comparative study of geometric and exponential laws in modelling the distribution of daily precipitation durations; evaluating the effects of environmental stress on leaf chlorophyll content as an index for tree health; and contribution of constructed wetlands for reclaimed water production: a review.
+PB  - IOP Publishing Ltd
+SN  - 17551307 (ISSN)
+LA  - English
+J2  - IOP Conf. Ser. Earth Environ. Sci.
+M3  - Conference review
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Conference name: 2021 12th International Conference on Environmental Science and Technology, ICEST 2021; Conference date: 24 September 2021 through 26 September 2021; Conference code: 178312
+ER  -
+
+TY  - CONF
+AU  - García, L.
+AU  - Diaz, M.Á.
+AU  - Núnez, F.
+AU  - Sánchez, D.
+AU  - Argamasilla, M.
+AU  - Genaro, A.
+AU  - Antonaya, J.
+AU  - Bustos, E.
+TI  - Application of Machine Learning techniques for water resources forecasting in surface and groundwater systems. Demostration pilots in Mediterranean and snow-dominated basins
+PY  - 2022
+T2  - Proceedings of the IAHR World Congress
+SP  - 6165
+EP  - 6170
+DO  - 10.3850/IAHR-39WC2521716X20221784
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85178573429&doi=10.3850%2fIAHR-39WC2521716X20221784&partnerID=40&md5=f54f4c0966cd0f445687236bdce0b195
+AD  - Cetaqua - Water Technology Centre Andalucía, Malaga, Spain
+AD  - Emasagra - Empresa Municipal de Abastecimiento y Saneamiento, Granada, Spain
+AD  - Hidralia, Gestion Integral de las aguas de Andalucía S.A., Marbella, Spain
+AD  - Cetaqua Chile Corporacion Chilena de Investigación del Agua, Chile
+AB  - Water management is a complex issue, especially considering climate change forecasts. Semi-arid regions are characterized by long periods of low rainfall, temperatures are rising, water resources are becoming less available and on the other hand, water demand is increasing. An efficient management requires a proper understanding of water availability and it is a key for drought mitigation. Frequently, Physics-based models are used for exploitable water simulations and predictions, but these methods have an important limitation because they cannot be applied in cases of lack of all necessary parameters data. However, using Machine Learning techniques have the advantage that allows getting a good approach with fewer variables than the Physics- based models. To tackle these issues, we developed a data science pipeline that quantifies with high accuracy the availability of different water resources with diverse hydrodynamic behaviors such as groundwater (piezometric levels) or freshwater (reservoir volume and snowmelt flow rate) at several different locations allowing us to validate the scalability of the solution. We have applied our pipeline in the Maipo river basin in Chile (snowmelt), in Marbella- Estepona, Vega de Granada and Campo de Dalias - Sierra de Gádor Groundwater Bodies in Spain (water table levels), and for reservoir volume in Concepcion, Canales, Quéntar and Beninar dams in Málaga, Granada and Almeria respectively. The developed pipeline addresses from the beginning the typical case of missing values, so frequent in this type of resources. Once the series are completed, we have proceeded to build parallel series, both targets to predict and series that allow to explain the trends (precipitation, temperature, pumping, etc.). A set of predictions (month by month) using these series have been made with a cross validation ofthe data, to choose the algorithm that best behaves automatically. The final part of the pipeline applies the winning algorithm to three-, six-, nine- and 12-month predictions, with three precipitation options: dry, normal and wet. The results are highly satisfactory, this predictive power is reflected in the low mean SMAPE (Symmetric Mean Absolute Percentage Error) values easy to interpret (Kreinovich et al., 2014), which in our k-fold performance pipeline yielded mean scores below 10% in all folds and in the worst performing pilots did not exceed means of 15% for periods less than six months. © 2022 IAHR.
+KW  - Machine Learning
+KW  - Reservoir Volume
+KW  - Snowmelt Flow
+KW  - Water Table Prediction
+KW  - Water-Stressed Areas
+PB  - International Association for Hydro-Environment Engineering and Research
+SN  - 25217119 (ISSN)
+LA  - English
+J2  - Proc. IAHR World. Congr.
+M3  - Conference paper
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Conference name: 39th IAHR World Congress, 2022; Conference date: 19 June 2022 through 24 June 2022; Conference code: 299039
+ER  -
+
+TY  - JOUR
+AU  - Pino-Vargas, E.
+AU  - Taya-Acosta, E.
+AU  - Ingol-Blanco, E.
+AU  - Torres-Rúa, A.
+TI  - Deep Machine Learning for Forecasting Daily Potential Evapotranspiration in Arid Regions, Case: Atacama Desert Header
+PY  - 2022
+T2  - Agriculture (Switzerland)
+VL  - 12
+IS  - 12
+C7  - 1971
+DO  - 10.3390/agriculture12121971
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85144704413&doi=10.3390%2fagriculture12121971&partnerID=40&md5=d5861b44c8e63ea02b274fe8d25e8382
+AD  - Department of Civil Engineering, Jorge Basadre Grohmann National University, Tacna, 23000, Peru
+AD  - Department of Computer Engineering and Systems, Jorge Basadre Grohmann National University, Tacna, 23000, Peru
+AD  - Department of Water Resources, National Agrarian University La Molina, Lima, 15012, Peru
+AD  - Utah Water Research Laboratory, Civil and Environmental Department, Utah State University, Logan, 84322, UT, United States
+AB  - Accurately estimating and forecasting evapotranspiration is one of the most important tasks to strengthen water resource management, especially in desert areas such as La Yarada, Tacna, Peru, a region located at the head of the Atacama Desert. In this study, we used temperature, humidity, wind speed, air pressure, and solar radiation from a local weather station to forecast potential evapotranspiration (ETo) using machine learning. The Feedforward Neural Network (Multi-Layered Perceptron) algorithm for prediction was used under two approaches: “direct” and “indirect”. In the first one, the ETo is predicted based on historical records, and the second one predicts the climate variables upon which the ETo calculation depends, for which the Penman-Monteith, Hargreaves-Samani, Ritchie, and Turc equations were used. The results were evaluated using statistical criteria to calculate errors, showing remarkable precision, predicting up to 300 days of ETo. Comparing the performance of the approaches and the machine learning used, the results obtained indicate that, despite the similar performance of the two proposed approaches, the indirect approach provides better ETo forecasting capabilities for longer time intervals than the direct approach, whose values of the corresponding metrics are MAE = 0.033, MSE = 0.002, RMSE = 0.043 and RAE = 0.016. © 2022 by the authors.
+KW  - arid zones
+KW  - deep learning
+KW  - evapotranspiration
+KW  - forecasting
+KW  - machine learning
+PB  - MDPI
+SN  - 20770472 (ISSN)
+LA  - English
+J2  - Agric.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 5; Correspondence Address: E. Pino-Vargas; Department of Civil Engineering, Jorge Basadre Grohmann National University, Tacna, 23000, Peru; email: epinov@unjbg.edu.pe; E. Taya-Acosta; Department of Computer Engineering and Systems, Jorge Basadre Grohmann National University, Tacna, 23000, Peru; email: etayaa@unjbg.edu.pe
+ER  -
+
+TY  - JOUR
+AU  - Torres, F.L.R.
+AU  - Lima, L.M.M.
+AU  - Reboita, M.S.
+AU  - de Queiroz, A.R.
+AU  - Lima, J.W.M.
+TI  - Integrating Hydrological and Machine Learning Models for Enhanced Streamflow Forecasting via Bayesian Model Averaging in a Hydro-Dominant Power System
+PY  - 2024
+T2  - Water (Switzerland)
+VL  - 16
+IS  - 4
+C7  - 586
+DO  - 10.3390/w16040586
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85185717688&doi=10.3390%2fw16040586&partnerID=40&md5=a00e3a48688225a735f0271d57da725e
+AD  - Institute of Electrical and Energy Systems, Federal University of Itajubá, MG, Itajubá, 37500903, Brazil
+AD  - Nicholas School of Environment, Duke University, Durham, 27710, NC, United States
+AD  - Institute of Natural Resources, Federal University of Itajubá, MG, Itajubá, 37500903, Brazil
+AD  - Civil, Construction, and Environmental Engineering Department, NC State University, Raleigh, 27606, NC, United States
+AD  - Operations Research Graduate Program, NC State University, Raleigh, 27606, NC, United States
+AD  - Marangon Consulting and Engineering, MG, Itajubá, 37500099, Brazil
+AB  - Streamflow forecasting plays a crucial role in the operational planning of hydro-dominant power systems, providing valuable insights into future water inflows to reservoirs and hydropower plants. It relies on complex mathematical models, which, despite their sophistication, face various uncertainties affecting their performance. These uncertainties can significantly influence both short-term and long-term operational planning in hydropower systems. To mitigate these effects, this study introduces a novel Bayesian model averaging (BMA) framework to improve the accuracy of streamflow forecasts in real hydro-dominant power systems. Designed to serve as an operational tool, the proposed framework incorporates predictive uncertainty into the forecasting process, enhancing the robustness and reliability of predictions. BMA statistically combines multiple models based on their posterior probability distributions, producing forecasts from the weighted averages of predictions. This approach updates weights periodically using recent historical data of forecasted and measured streamflows. Tested on inflows to 139 reservoirs and hydropower plants in Brazil, the proposed BMA framework proved to be more skillful than individual models, showing improvements in forecasting accuracy, especially in the South and Southeast regions of Brazil. This method offers a more reliable tool for streamflow prediction, enhancing decision making in hydropower system operations. © 2024 by the authors.
+KW  - Bayesian model averaging
+KW  - hydro-dominant power systems
+KW  - multi-model ensemble
+KW  - rainfall–runoff models
+KW  - streamflow forecasting
+KW  - Bayesian networks
+KW  - Decision making
+KW  - Hydroelectric power
+KW  - Hydroelectric power plants
+KW  - Learning algorithms
+KW  - Machine learning
+KW  - Probability distributions
+KW  - Reservoirs (water)
+KW  - Stream flow
+KW  - Bayesian model averaging
+KW  - Hydro-dominant power system
+KW  - Hydropower plants
+KW  - Hydropower system
+KW  - Multi-model ensemble
+KW  - Operational planning
+KW  - Power
+KW  - Rainfall - Runoff modelling
+KW  - Streamflow forecasting
+KW  - Uncertainty
+KW  - hydrological modeling
+KW  - machine learning
+KW  - rainfall-runoff modeling
+KW  - spatiotemporal analysis
+KW  - Forecasting
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: M.S. Reboita; Institute of Natural Resources, Federal University of Itajubá, Itajubá, MG, 37500903, Brazil; email: reboita@unifei.edu.br
+ER  -
+
+TY  - JOUR
+AU  - Mejía, L.
+AU  - Barrios, M.
+TI  - Identifying watershed predictors of surface water quality through iterative input selection
+PY  - 2023
+T2  - International Journal of Environmental Science and Technology
+VL  - 20
+IS  - 7
+SP  - 7201
+EP  - 7216
+DO  - 10.1007/s13762-022-04406-2
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85141418348&doi=10.1007%2fs13762-022-04406-2&partnerID=40&md5=e9c20851b6bdb37fa016f7703586efe3
+AD  - Faculty of Forest Engineering, Universidad del Tolima, Ibagué, Colombia
+AB  - A better understanding of diffuse pollution processes distressing surface water bodies is relevant to develop actions focused on the sustainable management of water resources. This research aims to identify relevant watershed variables that explain the spatial variability patterns of surface water quality in lotic mountain water bodies. Twenty-eight candidate variables (10 land cover and land use (LCLU), 6 pedo-topographic (PT), and 12 hydrometeorological (HM)) were defined to explain the concentration of six water quality parameters temperature (T), pH, dissolved oxygen (DO), chemical oxygen demand (COD), electrical conductivity (EC), and nitrates (NO3-)) in 76 surface water streams of the Andina region, Colombia. The selection of the explanatory variables was carried out by applying an iterative input selection (IIS) algorithm based on highly randomized tree models. The results show that the variability in the concentration of each water quality parameter is explained by a combination of LCLU, HM, and PT variables. LCLU was the most important group of explanatory variables in the selection, followed by HM variables group. This is not the case for DO, where the HM variables show the highest importance. In all the implemented models, the PT variables showed the lowest incidence. This research developed a success approach for identifying basin variables able to contribute to understand non-point sources of pollution, and thus it was not oriented to create a predictive model of water quality, but rather to use machine learning modeling to expose probable relationships between watershed attributes and the quality of surface water. These results can support other water quality studies and territorial planning instruments on the role of watershed-scale variables in diffuse pollution processes in surface water bodies. The implemented algorithm provided modeling flexibility, computational efficiency, and minimum redundancy, allowing a reasonable representation of the observational data set. © 2022, The Author(s) under exclusive licence to Iranian Society of Environmentalists (IRSEN) and Science and Research Branch, Islamic Azad University.
+KW  - Diffuse pollution
+KW  - Input variable selection
+KW  - Land cover and land use
+KW  - Surface water quality
+KW  - Watershed scale
+KW  - Colombia
+KW  - Biochemical oxygen demand
+KW  - Dissolved oxygen
+KW  - Iterative methods
+KW  - Land use
+KW  - Sustainable development
+KW  - Water management
+KW  - Water pollution
+KW  - Water quality
+KW  - Watersheds
+KW  - Diffuse pollution
+KW  - Input selection
+KW  - Input variable selection
+KW  - Land cover
+KW  - Land cover and land use
+KW  - Pollution process
+KW  - Surface water body
+KW  - Surface water quality
+KW  - Water quality parameters
+KW  - Watershed scale
+KW  - land cover
+KW  - land use change
+KW  - machine learning
+KW  - pollution control
+KW  - surface water
+KW  - territorial planning
+KW  - water pollution
+KW  - water quality
+KW  - water resource
+KW  - watershed
+KW  - Surface waters
+PB  - Institute for Ionics
+SN  - 17351472 (ISSN)
+LA  - English
+J2  - Int. J. Environ. Sci. Technol.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 1; Correspondence Address: M. Barrios; Faculty of Forest Engineering, Universidad del Tolima, Ibagué, Colombia; email: mibarrios@ut.edu.co
+ER  -
+
+TY  - JOUR
+AU  - Portuguez‐maurtua, M.
+AU  - Arumi, J.L.
+AU  - Lagos, O.
+AU  - Stehr, A.
+AU  - Arquiñigo, N.M.
+TI  - Filling Gaps in Daily Precipitation Series Using Regression and Machine Learning in Inter‐Andean Watersheds
+PY  - 2022
+T2  - Water (Switzerland)
+VL  - 14
+IS  - 11
+C7  - 1799
+DO  - 10.3390/w14111799
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85131765595&doi=10.3390%2fw14111799&partnerID=40&md5=15e6c2df87769b5c19feeaeb6a822c9f
+AD  - Doctoral Program in Water Resources and Energy for Agriculture, Universidad de Concepcion, Av. Vicente Mendez 595, Chillan, 3812120, Chile
+AD  - CRHIAM Water Research Center, Universidad de Concepcion, Victoria 1295,, Concepcion, 4070386, Chile
+AD  - Water Resources Department, College of Agricultural Engineering, Universidad Nacional Agraria La Molina, Av. La Molina s/n, Lima, 15024, Peru
+AD  - Water Resources Department, College of Agriculture Engineering, Universidad de Concepción, Av. Vicente Mendez 595, Chillan, 3812120, Chile
+AD  - Centro de Ciencias Ambientales EULA‐Chile, Departamento de Sistemas Acuáticos, Facultad de Ciencias Ambientales, Universidad de Concepción, Concepcion, 4070386, Chile
+AB  - As precipitation is a fundamental component of the global hydrological cycle that governs water resource distribution, the understanding of its temporal and spatial behavior is of great interest, and exact estimates of it are crucial in multiple lines of research. Meteorological data provide input for hydroclimatic models and predictions, which generally lack complete series. Many studies have addressed techniques to fill gaps in precipitation series at annual and monthly scales, but few have provided results at a daily scale due to the complexity of orographic characteristics and in some cases the non‐linearity of precipitation. The objective of this study was to assess different methods of filling gaps in daily precipitation data using regression model (RM) and machine learning (ML) techniques. RM included linear regression (LRM) and multiple regression (MRM) algorithms, while ML included multiple regression algorithms (ML‐MRM), K‐nearest neighbors (ML‐ KNN), gradient boosting trees (ML‐GBT), and random forest (ML‐RF). This study covered the Malas, Omas, and Cañete River (MOC) watersheds, which are located on the Pacific Slope of central Peru, and a nineteen‐year period of records (2001–2019). To assess model performance, different statistical metrics were applied. The results showed that the optimized machine learning (OML) models presented the least variability in estimation errors and the best approximation of the actual data from the study zone. In addition, this investigation shows that ML interprets and analyzes non‐linear relationships between rain gauges at a daily scale and can be used as an efficient method of filling gaps in daily precipitation series. © 2022 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - gradient boosting tree
+KW  - K‐nearest neighbors
+KW  - machine learning
+KW  - precipitation gap filling
+KW  - random forest
+KW  - regression
+KW  - standard normal homogeneity test
+KW  - Andes
+KW  - Peru
+KW  - Adaptive boosting
+KW  - Filling
+KW  - Forestry
+KW  - Machine learning
+KW  - Meteorology
+KW  - Random forests
+KW  - Regression analysis
+KW  - Water resources
+KW  - Watersheds
+KW  - Boosting trees
+KW  - Filling gaps
+KW  - Gap filling
+KW  - Gradient boosting
+KW  - Gradient boosting tree
+KW  - K‐near neighbor
+KW  - Nearest-neighbour
+KW  - Precipitation gap filling
+KW  - Random forests
+KW  - Standard normal homogeneity test
+KW  - algorithm
+KW  - hydrological cycle
+KW  - hydrometeorology
+KW  - machine learning
+KW  - multiple regression
+KW  - precipitation (climatology)
+KW  - regression analysis
+KW  - water resource
+KW  - watershed
+KW  - Decision trees
+PB  - MDPI
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 10; Correspondence Address: M. Portuguez‐Maurtua; Doctoral Program in Water Resources and Energy for Agriculture, Universidad de Concepcion, Chillan, Av. Vicente Mendez 595, 3812120, Chile; email: mportuguez@lamolina.edu.pe
+ER  -
+
+TY  - JOUR
+AU  - Jimenez, A.-F.
+AU  - Cardenas, P.-F.
+AU  - Jimenez, F.
+AU  - Canales, A.
+AU  - López, A.
+TI  - A cyber-physical intelligent agent for irrigation scheduling in horticultural crops
+PY  - 2020
+T2  - Computers and Electronics in Agriculture
+VL  - 178
+C7  - 105777
+DO  - 10.1016/j.compag.2020.105777
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85090556948&doi=10.1016%2fj.compag.2020.105777&partnerID=40&md5=e3941105b4fefab3b69ffc7900071471
+AD  - Universidad Nacional de Colombia, Carrera 45 N° 26-85 - Edificio Uriel Gutiérrez, Bogotá, D.C., Colombia
+AD  - Faculty of Basic Sciences and Engineering. Macrypt, Universidad de los Llanos, Km. 12 Vía Puerto López, Villavicencio, Colombia
+AD  - Universidad Pedagógica y Tecnológica de Colombia, Avenida Central del Norte 39-115. PBX: (57+8) 7405626, Tunja, Boyacá, Colombia
+AD  - Department of Engineering. Escuela Politécnica Superior de Orihuela (EPSO), Universidad Miguel Hernández de Elche (UMH), Carretera de Beniel, km 3.2, Orihuela, 03312, Alicante, Spain
+AB  - Irrigation is one of the most important activities in crop management. The aim of irrigation scheduling is to supply the correct amount of water to the crops and define appropriate irrigation times. The rational behavior of intelligent agents added to internet of things technologies could be a strategy for improving the performance of automatic irrigation systems. This paper presents the design and implementation of a cyber-physical crop irrigation system, based on the intelligent agent concept. The system allows the acquisition of field information through sensors, the application of water according to a decision system and the activation of solenoid valves. Communication capabilities and the performance measurement, the environment, the actuation and sensing systems (PEAS) are explained. Monitoring in the farm or remotely from other locations is achieved with a central station and its internet connectivity. The performance evaluation of the system was made using crop modelling software and an experimental crop in a field located in the large-scale irrigation and drainage district of Chicamocha and Firavitoba (Usochicamocha) in Boyacá – Colombia. The developed system allowed maintaining soil moisture close to field capacity with several irrigation strategies, and avoiding losses and excesses in the use of water resources. © 2020 Elsevier B.V.
+KW  - Artificial intelligence
+KW  - Cyber-physical system
+KW  - Intelligent agent
+KW  - Irrigation
+KW  - Precision agriculture
+KW  - Boyaca
+KW  - Colombia
+KW  - Solenoidea
+KW  - Crops
+KW  - Cyber Physical System
+KW  - Intelligent agents
+KW  - Irrigation
+KW  - Scheduling
+KW  - Soil moisture
+KW  - Solenoid valves
+KW  - Water resources
+KW  - Automatic irrigation systems
+KW  - Communication capabilities
+KW  - Design and implementations
+KW  - Internet connectivity
+KW  - Internet of things technologies
+KW  - Irrigation scheduling
+KW  - Modelling softwares
+KW  - Performance measurements
+KW  - artificial intelligence
+KW  - field capacity
+KW  - horticulture
+KW  - irrigation
+KW  - performance assessment
+KW  - sensor
+KW  - soil moisture
+KW  - Large scale systems
+PB  - Elsevier B.V.
+SN  - 01681699 (ISSN)
+LA  - English
+J2  - Comput. Electron. Agric.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 20; Correspondence Address: A.-F. Jimenez; Department of Mathematics and Physics. Unillanos, Villavicencio (Meta), km. 12 Vía Puerto López, 500017, Colombia; email: ajimenez@unillanos.edu.co; CODEN: CEAGE
+ER  -
+
+TY  - JOUR
+AU  - Duarte, V.B.R.
+AU  - Viola, M.R.
+AU  - Giongo, M.
+AU  - Uliana, E.M.
+AU  - de Mello, C.R.
+TI  - Streamflow forecasting in Tocantins river basins using machine learning
+PY  - 2022
+T2  - Water Supply
+VL  - 22
+IS  - 7
+SP  - 6230
+EP  - 6244
+DO  - 10.2166/ws.2022.155
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85135962633&doi=10.2166%2fws.2022.155&partnerID=40&md5=830850fe1ecf675dd24f3d7cd0b0204d
+AD  - Center for Environmental Monitoring and Fire Management, Forest Engineering Department, Federal University of Tocantins, TO, Gurupi, 77404-970, Brazil
+AD  - Water Resources Department, Federal University of Lavras, MG, Lavras, 37200-900, Brazil
+AD  - Institute of Agrarian and Environmental Sciences, Federal University of Mato Grosso, MT, Sinop, 78557-267, Brazil
+AB  - Understanding the behavior of the river regime in watersheds is fundamental for water resources planning and management. Empirical hydrological models are powerful tools for this purpose, with the selection of input variables as one of the main steps of the modeling. Therefore, the objectives of this study were to select the best input variables using the genetic, recursive feature elimination, and vsurf algorithms, and to evaluate the performance of the random forest, artificial neural networks, support vector regression, and M5 model tree models in forecasting daily streamflow in Sono (SRB), Manuel Alves da Natividade (MRB), and Palma (PRB) River basins. Based on several performance indexes, the best model in all basins was the M5 model tree, which showed the best performances in SRB and PRB using the variables selected by the recursive feature elimination algorithm. The good performance of the evaluated models allows them to be used to assist different demands faced by the water resources management in the studied river basins, especially the M5 model tree model using streamflow lags, average rainfall, and evapotranspiration as inputs. © 2022 The Authors.
+KW  - artificial intelligence
+KW  - feature selection
+KW  - hydrological forecasting
+KW  - hydrology
+KW  - Brazil
+KW  - Tocantins Basin
+KW  - Feature extraction
+KW  - Forecasting
+KW  - Forestry
+KW  - Neural networks
+KW  - Rivers
+KW  - Stream flow
+KW  - Watersheds
+KW  - Features selection
+KW  - Hydrological forecasting
+KW  - M5 model tree
+KW  - Machine-learning
+KW  - Performance
+KW  - Recursive feature elimination
+KW  - River basins
+KW  - River regimes
+KW  - Streamflow forecasting
+KW  - Tree modeling
+KW  - artificial intelligence
+KW  - evapotranspiration
+KW  - forecasting method
+KW  - hydrological modeling
+KW  - machine learning
+KW  - rainfall
+KW  - river basin
+KW  - streamflow
+KW  - Article
+KW  - artificial neural network
+KW  - forecasting
+KW  - machine learning
+KW  - nonhuman
+KW  - random forest
+KW  - recursive feature elimination
+KW  - river basin
+KW  - support vector machine
+KW  - Tocantins
+KW  - water availability
+KW  - water flow
+KW  - water supply
+KW  - Decision trees
+PB  - IWA Publishing
+SN  - 16069749 (ISSN)
+LA  - English
+J2  - Water Supply
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 2; Correspondence Address: V.B.R. Duarte; Center for Environmental Monitoring and Fire Management, Forest Engineering Department, Federal University of Tocantins, Gurupi, TO, 77404-970, Brazil; email: victorbrduarte@gmail.com; CODEN: WSTWB
+ER  -
+
+TY  - JOUR
+AU  - Nogueira Filho, F.J.M.
+AU  - Souza Filho, F.A.
+AU  - Porto, V.C.
+AU  - Rocha, R.V.
+AU  - Estácio, Á.B.S.
+AU  - Martins, E.S.P.R.
+TI  - Deep Learning for Streamflow Regionalization for Ungauged Basins: Application of Long-Short-Term-Memory Cells in Semiarid Regions
+PY  - 2022
+T2  - Water (Switzerland)
+VL  - 14
+IS  - 9
+C7  - 1318
+DO  - 10.3390/w14091318
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85129356156&doi=10.3390%2fw14091318&partnerID=40&md5=50ec2b8b3a37ec7c4d6b1ff402572729
+AD  - Hydraulics and Environmental Engineering Department, Federal University of Ceará, Fortaleza, 60020-181, Brazil
+AB  - Rainfall-runoff modeling in ungauged basins continues to be a great hydrological research challenge. A novel approach is the Long-Short-Term-Memory neural network (LSTM) from the Deep Learning toolbox, which few works have addressed its use for rainfall-runoff regionalization. This work aims to discuss the application of LSTM as a regional method against traditional neural network (FFNN) and conceptual models in a practical framework with adverse conditions: reduced data availability, shallow soil catchments with semiarid climate, and monthly time step. For this, the watersheds chosen were located on State of Ceará, Northeast Brazil. For streamflow regionalization, both LSTM and FFNN were better than the hydrological model used as benchmark, however, the FFNN were quite superior. The neural network methods also showed the ability to aggregate process understanding from different watersheds as the performance of the neural networks trained with the regionalization data were better with the neural networks trained for single catchments. © 2022 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - Long-Short-Term-Memory
+KW  - semiarid
+KW  - streamflow
+KW  - ungauged basins
+KW  - Brazil
+KW  - Brain
+KW  - Catchments
+KW  - Climate models
+KW  - Rain
+KW  - Runoff
+KW  - Stream flow
+KW  - Watersheds
+KW  - Conceptual model
+KW  - Memory cell
+KW  - Neural-networks
+KW  - Rainfall - Runoff modelling
+KW  - Rainfall runoff
+KW  - Regionalisation
+KW  - Research challenges
+KW  - Semi-arid region
+KW  - Semiarid
+KW  - Ungaged basins
+KW  - basin
+KW  - catchment
+KW  - hydrological modeling
+KW  - rainfall-runoff modeling
+KW  - regionalization
+KW  - semiarid region
+KW  - shallow soil
+KW  - streamflow
+KW  - Long short-term memory
+PB  - MDPI
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 5; Correspondence Address: F.J.M. Nogueira Filho; Hydraulics and Environmental Engineering Department, Federal University of Ceará, Fortaleza, 60020-181, Brazil; email: franciscomatosnog@hotmail.com; V.C. Porto; Hydraulics and Environmental Engineering Department, Federal University of Ceará, Fortaleza, 60020-181, Brazil; email: victorcporto@gmail.com
+ER  -
+
+TY  - CONF
+AU  - Fernando, G.
+AU  - Pedro, G.
+TI  - Estimating the Water Level and Bathymetry of Lake Yahuarcocha, Ecuador Using ICESat-2/ATL13 Satellite Laser Altimetry, System Dynamics Model, and Machine Learning
+PY  - 2023
+T2  - Communications in Computer and Information Science
+VL  - 1781 CCIS
+SP  - 98
+EP  - 111
+DO  - 10.1007/978-3-031-35641-4_7
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85169065653&doi=10.1007%2f978-3-031-35641-4_7&partnerID=40&md5=1d0e29cf18858837cee36e37e3040f7f
+AD  - Department of Software Engineering and Artificial Intelligence, Faculty of Engineering in Applied Sciences, Technical University of the North, Avenue 17 de Julio 5-21, Ibarra, Ecuador
+AB  - Monitoring the lakes and reservoirs is crucial in managing water resources due to climate change and human interventions, where available data sets on water levels and volumes are scarce. This study aims of predicting the water level height and bathymetry of lake Yahuarcocha, Imbabura, Ecuador with the use of the NASA Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) ATL13/ATL13QL since they provide observations that are suitable for water level estimation, also combining the study with System Dynamics Modelling (SD), and machine learning technique based on the extraction of points from the laser altimetry footprint at the limits of the lake vector, according to the absolute deviation method used to eliminate the outliers of the lake elevation along the orbit, and thus obtain the average values of the water level of the lake. Yahuarcocha has been seriously affected in recent years, and the anthropic activities inherent to the wetlands have been the main cause of the effects, including land use, and other watershed activities influencing surface runoff and groundwaters. Therefore, predictions of lake level are crucial for their sustainable management. In this study, the SD model simulation with the PySD library is used to have the estimation of the level of precipitation, evapotranspiration, and volume of water the lake Yahuarcocha until 2030. The results indicate that the water level estimated from ATL13 is the same as the water level trend measured in situ, with an average estimation error of 30 cm, indicating that the ICESat-2 ATL13 laser altimetry data has high precision, thus the approach of the proposed reaches more than 95.57%. © 2023, Springer Nature Switzerland AG.
+KW  - bathymetry
+KW  - ICESat-2 ATL13
+KW  - Machine Learning
+KW  - System Dynamics Modelling
+KW  - water level estimation
+KW  - Aneroid altimeters
+KW  - Bathymetry
+KW  - Climate change
+KW  - Groundwater
+KW  - Land use
+KW  - Machine learning
+KW  - NASA
+KW  - Orbits
+KW  - Reservoirs (water)
+KW  - Water levels
+KW  - Dynamics model learning
+KW  - Ecuador
+KW  - Ice clouds
+KW  - Ice, cloud, and land elevation satellite-2 ATL13
+KW  - Lake sand reservoirs
+KW  - Land elevation satellites
+KW  - Laser altimetry
+KW  - Machine-learning
+KW  - System dynamics modelling
+KW  - Water level estimation
+KW  - Lakes
+A2  - Garg D.
+A2  - Narayana V.A.
+A2  - Koppula V.K.
+A2  - Suganthan P.N.
+A2  - Anguera J.
+A2  - Gupta S.K.
+PB  - Springer Science and Business Media Deutschland GmbH
+SN  - 18650929 (ISSN); 978-303135640-7 (ISBN)
+LA  - English
+J2  - Commun. Comput. Info. Sci.
+M3  - Conference paper
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: G. Fernando; Department of Software Engineering and Artificial Intelligence, Faculty of Engineering in Applied Sciences, Technical University of the North, Ibarra, Avenue 17 de Julio 5-21, Ecuador; email: jfgarridos@utn.edu.ec; Conference name: 12th International Advanced Computing Conference, IACC 2022; Conference date: 16 December 2022 through 17 December 2022; Conference code: 298199
+ER  -
+
+TY  - JOUR
+AU  - Larrea, P.P.
+AU  - Ríos, X.Z.
+AU  - Parra, L.C.
+TI  - Application of neural network models and anfis for water level forecasting of the salve faccha dam in the andean zone in Northern Ecuador
+PY  - 2021
+T2  - Water (Switzerland)
+VL  - 13
+IS  - 15
+C7  - 2011
+DO  - 10.3390/w13152011
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85111704867&doi=10.3390%2fw13152011&partnerID=40&md5=33729b40b8feda21e1ff8d0e56ba4937
+AD  - Departamento de Ingeniería Civil y Ambienal, Escuela Politécnica Nacional, Quito, 17-01-2579, Ecuador
+AD  - Centro de Investigación y Estudios en Recursos Hídricos (CIERHI), Escuela Politécnica Nacional, Quito, 17-01-2579, Ecuador
+AB  - Despite the importance of dams for water distribution of various uses, adequate forecasting on a day-to-day scale is still in great need of intensive study worldwide. Machine learning models have had a wide application in water resource studies and have shown satisfactory results, including the time series forecasting of water levels and dam flows. In this study, neural network models (NN) and adaptive neuro-fuzzy inference systems (ANFIS) models were generated to forecast the water level of the Salve Faccha reservoir, which supplies water to Quito, the Capital of Ecuador. For NN, a non-linear input-output net with a maximum delay of 13 days was used with variation in the number of nodes and hidden layers. For ANFIS, after up to four days of delay, the subtractive clustering algorithm was used with a hyperparameter variation from 0.5 to 0.8. The results indicate that precipitation was not influencing input in the prediction of the reservoir water level. The best neural network and ANFIS models showed high performance, with a r > 0.95, a Nash index > 0.95, and a RMSE < 0.1. The best the neural network model was t + 4, and the best ANFIS model was model t + 6. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - Machine learning
+KW  - Time series forecast
+KW  - Water level
+KW  - Andes
+KW  - Ecuador
+KW  - Pichincha
+KW  - Quito
+KW  - Clustering algorithms
+KW  - Forecasting
+KW  - Fuzzy neural networks
+KW  - Fuzzy systems
+KW  - Reservoirs (water)
+KW  - Water levels
+KW  - Water resources
+KW  - Water supply systems
+KW  - Adaptive neuro-fuzzy inference system
+KW  - Machine learning models
+KW  - Neural network model
+KW  - Reservoir water level
+KW  - Subtractive clustering algorithms
+KW  - Time series forecasting
+KW  - Water distributions
+KW  - Water level forecasting
+KW  - algorithm
+KW  - artificial neural network
+KW  - forecasting method
+KW  - fuzzy mathematics
+KW  - numerical model
+KW  - reservoir
+KW  - water level
+KW  - water resource
+KW  - Fuzzy inference
+PB  - MDPI
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 9; Correspondence Address: P.P. Larrea; Departamento de Ingeniería Civil y Ambienal, Escuela Politécnica Nacional, Quito, 17-01-2579, Ecuador; email: pablo.paliz@epn.edu.ec
+ER  -
+
+TY  - JOUR
+AU  - Veloso, M.F.
+AU  - Rodrigues, L.N.
+AU  - Filho, E.I.F.
+TI  - Evaluation of machine learning algorithms in the prediction of hydraulic conductivity and soil moisture at the Brazilian Savannah
+PY  - 2022
+T2  - Geoderma Regional
+VL  - 30
+C7  - e00569
+DO  - 10.1016/j.geodrs.2022.e00569
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85136699021&doi=10.1016%2fj.geodrs.2022.e00569&partnerID=40&md5=9eeca2d70034049f8b55b824a61b33c1
+AD  - Department of Agricultural Engineering (DEA), Federal University of Viçosa (UFV), Peter Henry Rolfs Avenue, Viçosa (MG), 36570-900, Brazil
+AD  - Brazilian Agricultural Research Corporation (EMBRAPA – Cerrados), BR-020, km 18, DF, Planaltina, 73310-970, Brazil
+AD  - Departament of Soil, Federal University of Viçosa (UFV), Peter Henry Rolfs Avenue, Viçosa (MG), 36570-900, Brazil
+AB  - The Brazilian Savannah (Cerrado biome) is the the main agricultural region in Brazil. The Cerrado has experienced a growing intensification of agriculture and an increase in disputes over water use, highlighting the need to establish strategies to reduce the water withdrawn from waterbodies, mainly through irrigation. The lack of data at a proper scale on soil hydraulic properties in the region brings uncertainties to the process of water resources management. Obtaining these data, however, is difficult and costly, thus, opening the opportunity for the use of Pedotransfer Functions (PTFs). Various methods can be used to obtain PTFs, but currently, machine learning techniques are gaining strength. In this context, it becomes important to evaluate the quality of machine learning algorithms in predicting PTFs. The present work aimed to evaluate the performance of machine learning algorithms in the prediction of saturated soil hydraulic conductivity (Ks) and soil moisture at tensions of 0, 6, 10, 33, 100, and 1500 kPa for the Cerrado Biome. Four machine learning algorithms were tested: Multiple Adaptive Regression Splines (MARS), Random Forest (RF), Support Vector Regression (SVR), and K Nearest Neighbors (KNN). Four combinations of soil data were evaluated and the predictor variables used in each set were different. In set A1, the following variables were used: sand (Sa), silt (Si), and clay (Cl) contents; in set A2: Sa, Si, Cl, and bulk density (BD); in set A3: Sa, Si, Cl, BD, particle density (Dp), total porosity (Pt), microporosity (Micro), and macroporosity (Macro); and in set A4: Sa, Si, Cl, BD, Dp, Pt, Micro, Macro, soil moisture at field capacity (θ10), and soil moisture at permanent wilting point (θ1500). The set A4 along with the RF and SVR models had the best performances in the prediction of Ks. As for soil moisture, the RF, SVR, and MARS models showed the best performances with low RMSE and ME values, and R2 above 0.8 using predictor sets A3 and A4. © 2022 Elsevier B.V.
+KW  - Hydrology
+KW  - Irrigation
+KW  - Oxisols
+KW  - Pedotransfer functions
+PB  - Elsevier B.V.
+SN  - 23520094 (ISSN)
+LA  - English
+J2  - Geoderma Reg.
+M3  - Review
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 7; Correspondence Address: M.F. Veloso; Department of Agricultural Engineering (DEA), Federal University of Viçosa (UFV), Viçosa (MG), Peter Henry Rolfs Avenue, 36570-900, Brazil; email: mariana.f.veloso@ufv.br
+ER  -
+
+TY  - CONF
+AU  - La Rosa Lama, G.
+AU  - Sanchez, I.
+TI  - Hybrid models based on mode decomposition and recurrent neural networks for streamflow forecasting in the Chira river in Peru
+PY  - 2020
+T2  - Proceedings of the 2020 IEEE Engineering International Research Conference, EIRCON 2020
+C7  - 9254035
+DO  - 10.1109/EIRCON51178.2020.9254035
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097816504&doi=10.1109%2fEIRCON51178.2020.9254035&partnerID=40&md5=50864851fc375e40730ec09621370904
+AD  - Direccion de Investigacion, Universidad de Piura, Piura, Peru
+AD  - Universidad de Piura, Departamento de Ingenieria Industrial y Sistemas, Piura, Peru
+AB  - Streamflow forecasting at short horizons is vital for the management of water resources. However, the streamflow behaviour is non-linear and not stationary. To address this challenge, artificial intelligence techniques have been used to increase accuracy. Additionally, signal decomposition techniques such as empirical mode decomposition, ensemble empirical mode decomposition, and variational mode decomposition, have been applied in different fields as a pre-processing stage prior to modelling to improve forecasting. This study evaluates the effect of the aforementioned decomposition techniques used with a recurrent neural network called long short-Term memory to increase the precision of the daily prediction of the Chira river streamflow in northern Peru, characterized by a special dynamic due to a strong seasonal behavior and the influence of the El Niño-Southern Oscillation (ENSO). © 2020 IEEE.
+KW  - LSTM
+KW  - mode decomposition signal
+KW  - streamflow forecasting
+PB  - Institute of Electrical and Electronics Engineers Inc.
+SN  - 978-172818367-1 (ISBN)
+LA  - English
+J2  - Proc. IEEE Eng. Int. Res. Conf., EIRCON
+M3  - Conference paper
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 3; Conference name: 2020 IEEE Engineering International Research Conference, EIRCON 2020; Conference date: 21 October 2020 through 23 October 2020; Conference code: 165023
+ER  -
+
+TY  - JOUR
+AU  - Souza, C.M.P.
+AU  - da Silva, L.A.P.
+AU  - Leite, M.E.
+AU  - Veloso, G.V.
+AU  - Filho, E.I.F.
+TI  - Spatial Modeling of Groundwater Potential in the North of Minas Gerais, Brazil: An Integrated Approach Using Machine Learning and Environmental Data
+ST  - Modelagem Espacial do Potencial Hídrico Subterrâneo no Norte de Minas Gerais, Brasil: Uma Abordagem Integrada Usando Machine Learning e Dados Ambientais
+PY  - 2023
+T2  - Revista Brasileira de Cartografia
+VL  - 75
+DO  - 10.14393/rbcv75n0a-65381
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85184468240&doi=10.14393%2frbcv75n0a-65381&partnerID=40&md5=b39217d89e23c90b4aba79a3bcb95042
+AD  - Universidade Estadual de Montes Claros, Montes Claros, Brazil
+AD  - Universidade Federal de Uberlândia, Uberlândia, Brazil
+AD  - Universidade Federal de Viçosa, Viçosa, Brazil
+AB  - In arid and semi-arid regions, like the North of Minas Gerais (NMG) in Brazil, groundwater serves as a crucial resource. Due to the anticipated surge in demand for these resources, devising effective strategies for managing and analyzing water resources is vital. This study aims to model the spatial distribution of potential groundwater areas in the NMG by evaluating six Machine Learning Algorithms based on water flow data from 4,028 tubular wells (Groundwater Information System - SIAGAS). The modeling was supported by environmental covariates connected with water dynamics (climate, geology, relief, soil, and vegetation). The covariate selection technique (RFE-Recursive Feature Elimination) selected the most important ones. The Random Forest (RF) model was the most efficient in the prediction (R2 0.16 and an RMSE of 17.50 m3/h). The model captured the influence of critical environmental covariates. The central and western regions of the NMG exhibited the highest groundwater potential, with flow values from tubular wells in these areas 620% higher than the eastern regions. This disparity can be attributed to the significant presence of psamitic, and carbonate sedimentary rocks characterized by high porosity and fissures, extensive plateaus (recharge zones), and higher rainfall levels observed in the central and western regions. The mapping results can serve as a valuable tool for public management, especially to define areas suitable for groundwater use in the NMG. We encourage future studies for advances and improvements in groundwater modeling processes in the region. © The Author(s) 2023.
+KW  - Hydrogeology
+KW  - Minas Gerais semiarid
+KW  - Random forest
+KW  - Spatial modeling
+KW  - Water resource
+PB  - Sociedade Brasileira de Cartografia, Geodesia, Fotogrametria e Sensoriamento Remoto
+SN  - 05604613 (ISSN)
+LA  - English
+J2  - Rev. Bras. Cartogr.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Cassalho, F.
+AU  - Beskow, S.
+AU  - de Mello, C.R.
+AU  - de Moura, M.M.
+AU  - de Oliveira, L.F.
+AU  - de Aguiar, M.S.
+TI  - Artificial intelligence for identifying hydrologically homogeneous regions: A state-of-the-art regional flood frequency analysis
+PY  - 2019
+T2  - Hydrological Processes
+VL  - 33
+IS  - 7
+SP  - 1101
+EP  - 1116
+DO  - 10.1002/hyp.13388
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85061025351&doi=10.1002%2fhyp.13388&partnerID=40&md5=a3851ade1ff07cd8e415a83e3ebe4e63
+AD  - Center for Technological Development/Water Resources Engineering, Federal University of Pelotas. Hydrology and Hydrological Modeling Laboratory, Pelotas, Brazil
+AD  - Water Resources Department, Federal University of Lavras, Lavras, Brazil
+AD  - Center for Technological Development/Computer Science Graduate Program, Federal University of Pelotas, Pelotas, Brazil
+AB  - Due to the severity related to extreme flood events, recent efforts have focused on the development of reliable methods for design flood estimation. Historical streamflow series correspond to the most reliable information source for such estimation; however, they have temporal and spatial limitations that may be minimized by means of regional flood frequency analysis (RFFA). Several studies have emphasized that the identification of hydrologically homogeneous regions is the most important and challenging step in an RFFA. This study aims to identify state-of-the-art clustering techniques (e.g., K-means, partition around medoids, fuzzy C-means, K-harmonic means, and genetic K-means) with potential to form hydrologically homogeneous regions for flood regionalization in Southern Brazil. The applicability of some probability density function, such as generalized extreme value, generalized logistic, generalized normal, and Pearson type 3, was evaluated based on the regions formed. Among all the 15 possible combinations of the aforementioned clustering techniques and the Euclidian, Mahalanobis, and Manhattan distance measures, the five best were selected. Several watersheds' physiographic and climatological attributes were chosen to derive multiple regression equations for all the combinations. The accuracy of the equations was quantified with respect to adjusted coefficient of determination, root mean square error, and Nash–Sutcliffe coefficient, whereas, a cross-validation procedure was applied to check their reliability. It was concluded that reliable results were obtained when using robust clustering techniques based on fuzzy logic (e.g., K-harmonic means), which have not been commonly used in RFFA. Furthermore, the probability density functions were capable of representing the regional annual maximum streamflows. Drainage area, main river length, and mean altitude of the watershed were the most recurrent attributes for modelling of mean annual maximum streamflow. Finally, an integration of all the five best combinations stands out as a robust, reliable, and simple tool for estimation of design floods. © 2019 John Wiley & Sons, Ltd.
+KW  - cluster analysis
+KW  - evolutionary computation
+KW  - fuzzy logic
+KW  - heterogeneity measure
+KW  - index-flood
+KW  - L-moments
+KW  - Brazil
+KW  - Euclidia
+KW  - Cluster analysis
+KW  - Computer circuits
+KW  - Evolutionary algorithms
+KW  - Flood control
+KW  - Frequency estimation
+KW  - Fuzzy logic
+KW  - K-means clustering
+KW  - Mean square error
+KW  - Probability density function
+KW  - Stream flow
+KW  - Coefficient of determination
+KW  - Generalized extreme value
+KW  - heterogeneity measure
+KW  - Index floods
+KW  - L-moments
+KW  - Multiple regression equations
+KW  - Regional flood frequency analysis
+KW  - Root mean square errors
+KW  - artificial intelligence
+KW  - cluster analysis
+KW  - flood frequency
+KW  - frequency analysis
+KW  - fuzzy mathematics
+KW  - heterogeneity
+KW  - probability density function
+KW  - Floods
+PB  - John Wiley and Sons Ltd
+SN  - 08856087 (ISSN)
+LA  - English
+J2  - Hydrol. Processes
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 23; Correspondence Address: F. Cassalho; Center for Technological Development/Water Resources Engineering, Federal University of Pelotas. Hydrology and Hydrological Modeling Laboratory, Pelotas, Brazil; email: felicioufpel@gmail.com; CODEN: HYPRE
+ER  -
+
+TY  - JOUR
+AU  - Yu, L.
+AU  - Yang, Y.
+AU  - Yang, Y.
+TI  - Evolution and frontier development of research on evaluation of satellite precipitation product
+ST  - 卫星降水产品评价研究的演进脉络与前沿进展
+PY  - 2021
+T2  - Arid Land Geography
+VL  - 44
+IS  - 2
+SP  - 471
+EP  - 483
+DO  - 10.12118/j.issn.1000-6060.2021.02.18
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85126010588&doi=10.12118%2fj.issn.1000-6060.2021.02.18&partnerID=40&md5=360b2ab22e1fc818b09ca716c67fa036
+AD  - Center for Agriculture Resources Research, Institute of Genetics and Development Biology, Chinese Academy of Science, Key Laboratory of Agriculture Water Resources, Hebei Laboratory of Agriculture Water-Saving, Hebei, Shijiazhuang, 050022, China
+AD  - Key Laboratory of Water Cycle and Related Land Surface Processes, Institute of Geographic Sciences and Natural Resources Research, Chinses Academy of Sciences, Beijing, 100011, China
+AB  - Precipitation is a critical link in the water circulation process, and it exhibits high spatiotemporal heterogeneity. Traditionally, the quality of precipitation observations was determined by the allocation and density of rain gauge networks; therefore, large areas with missing values frequently occur in the process of monitoring precipitation in remote regions such as mountains, oceans, and deserts, which are difficult to access. This issue restricts the availability of accurate rainfall information across large areas. In recent decades, continuous advances in remote sensing technology using satellites provide new ways to accurately measure global precipitation. This method of collecting data provides great promise for estimating precipitation in inaccessible areas and has been employed at regional and near-global scales, securing its role as an important tool in global hydrometeorological applications. The extensive application of satellite precipitation data has provided valuable data for hydrological simulations, rainfall analyses, and water resource management. Pre-evaluation of satellite precipitation products is the application premise in different regions because the accuracy of satellite precipitation products vary from place to place. Many published papers have demonstrated the usefulness of satellite precipitation products around the world, including China, the United States, India, and Chile. To understand the research situations and popular topics of research on the use of precipitation data from satellites, 752 articles from the core collection of Web of Science database from 1998 to 2020 were used as research objects, and bibliometrics and network analysis methods were used to analyze the pattern of evolution, the network of cooperation, research hotspots, and the continued advancement of remote sensing technology. The results of this analysis show that the number of published papers and citations increased from 1998 to 2020, and the number of cited papers increased since 2015 by nearly 2000 times a year. The United States, China and Germany are the major publishing countries in the world, with the United States and China accounting for 76.2% of the total volume published. The Chinese Academy of Sciences is the largest publishing institution in the world, accounting for 11.6% of the total volume published from 1998 to 2000. The main research direction and content cover multi-spatial and temporal evaluations, extreme precipitation events, and evaluation of large-scale drought based on precipitation data from satellites covering complex terrain. For example, the Qinghai-Tibet Plateau and La Plata Basin are areas where this type of data collection can provide information where none exists. In addition, the simulation of hydrological processes based on these data, the simulation of climate based on artificial intelligence methods, meteorological forecasts, and long-term predictions are promising areas for future research in this field. © 2021 Science Press (China). All Rights Reserved.
+KW  - Bibliometrics
+KW  - Evolution process
+KW  - Frontier progress
+KW  - Network analysis
+KW  - Satellite precipitation product
+PB  - Science Press (China)
+SN  - 10006060 (ISSN)
+LA  - Chinese
+J2  - Arid. Land. Geogr.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Rodríguez, R.
+AU  - Pastorini, M.
+AU  - Etcheverry, L.
+AU  - Chreties, C.
+AU  - Fossati, M.
+AU  - Castro, A.
+AU  - Gorgoglione, A.
+TI  - Water-quality data imputation with a high percentage of missing values: A machine learning approach
+PY  - 2021
+T2  - Sustainability (Switzerland)
+VL  - 13
+IS  - 11
+C7  - 6318
+DO  - 10.3390/su13116318
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85107905835&doi=10.3390%2fsu13116318&partnerID=40&md5=69f334c1af58d158be66d4ceb602154e
+AD  - Instituto de Mecánica de los Fluidos e Ingeniería Ambiental (IMFIA), Facultad de Ingeniería, Universidad de la República, Montevideo, 11300, Uruguay
+AD  - Instituto de Computación (InCo), Facultad de Ingeniería, Universidad de la República, Montevideo, 11300, Uruguay
+AB  - The monitoring of surface-water quality followed by water-quality modeling and analysis are essential for generating effective strategies in surface-water-resource management. However, worldwide, particularly in developing countries, water-quality studies are limited due to the lack of a complete and reliable dataset of surface-water-quality variables. In this context, several statistical and machine-learning models were assessed for imputing water-quality data at six monitoring stations located in the Santa Lucía Chico river (Uruguay), a mixed lotic and lentic river system. The challenge of this study is represented by the high percentage of missing data (between 50% and 70%) and the high temporal and spatial variability that characterizes the water-quality variables. The competing algorithms implement univariate and multivariate imputation methods (inverse distance weighting (IDW), Random Forest Regressor (RFR), Ridge (R), Bayesian Ridge (BR), AdaBoost (AB), Hubber Regressor (HR), Support Vector Regressor (SVR) and K-nearest neighbors Regressor (KNNR)). According to the results, more than 76% of the imputation outcomes are considered ‘satisfactory’ (NSE > 0.45). The imputation performance shows better results at the monitoring stations located inside the reservoir than those positioned along the mainstream. IDW was the model with the best imputation results, followed by RFR, HR and SVR. The approach proposed in this study is expected to aid water-resource researchers and managers in augmenting water-quality datasets and overcoming the missing data issue to increase the number of future studies related to the water-quality matter. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - Data scarcity
+KW  - Hydroinformatics
+KW  - Machine learning
+KW  - Missing data
+KW  - Multivariate imputation
+KW  - Univariate imputation
+KW  - Water quality
+KW  - Santa Lucia Basin
+KW  - Uruguay
+KW  - developing world
+KW  - machine learning
+KW  - reservoir
+KW  - river water
+KW  - surface water
+KW  - water quality
+PB  - MDPI AG
+SN  - 20711050 (ISSN)
+LA  - English
+J2  - Sustainability
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 28; Correspondence Address: A. Gorgoglione; Instituto de Mecánica de los Fluidos e Ingeniería Ambiental (IMFIA), Facultad de Ingeniería, Universidad de la República, Montevideo, 11300, Uruguay; email: agorgoglione@fing.edu.uy
+ER  -
+
+TY  - JOUR
+AU  - Gomaa, E.
+AU  - Zerouali, B.
+AU  - Difi, S.
+AU  - El-Nagdy, K.A.
+AU  - Santos, C.A.G.
+AU  - Abda, Z.
+AU  - Ghoneim, S.S.M.
+AU  - Bailek, N.
+AU  - Silva, R.M.D.
+AU  - Rajput, J.
+AU  - Ali, E.
+TI  - Assessment of hybrid machine learning algorithms using TRMM rainfall data for daily inflow forecasting in Três Marias Reservoir, eastern Brazil
+PY  - 2023
+T2  - Heliyon
+VL  - 9
+IS  - 8
+C7  - e18819
+DO  - 10.1016/j.heliyon.2023.e18819
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85169801599&doi=10.1016%2fj.heliyon.2023.e18819&partnerID=40&md5=a49bad61a330b9345039b355bad8a9b3
+AD  - Department of Civil Engineering, College of Engineering, Taif University, P.O. Box 11099, Taif, 21944, Saudi Arabia
+AD  - Vegetal Chemistry-Water-Energy Research Laboratory, Faculty of Civil Engineering and Architecture, Department of Hydraulic, University of Chlef, Hassiba Benbouali, B.P. 78C, Ouled Fares, Chlef, 02180, Algeria
+AD  - Department of Civil Engineering, College of Engineering, Taif University, P.O. BOX 11099, Taif, 21944, Saudi Arabia
+AD  - Department of Civil and Environmental Engineering, Federal University of Paraíba, Paraíba, João Pessoa, 58051-900, Brazil
+AD  - Research Laboratory of Water Resources, And Environment, Department of Civil Engineering, Faculty of Civil Engineering and Architecture, Amar Telidji University, Soil, P.O. Box 37.G, Laghouat, 03000, Algeria
+AD  - Electrical Engineering Department, College of Engineering, Taif University, P.O. Box 11099, Taif, 21944, Saudi Arabia
+AD  - Laboratory of Mathematics Modeling and Applications, Department of Mathematics and Computer Science, Faculty of Sciences and Technology, Ahmed Draia University of Adrar, Adrar, 01000, Algeria
+AD  - Energies and Materials Research Laboratory, Faculty of Sciences and Technology, University of Tamanghasset, Tamanghasset, Algeria
+AD  - MEU Research Unit, Middle East University, Amman, Jordan
+AD  - Department of Geosciences, Federal University of Paraíba, Paraíba, João Pessoa, 58051-900, Brazil
+AD  - Water Technology Center, ICAR-IARI, New Delhi, 110012, India
+AD  - Faculty of Engineering and Technology, Future University in Egypt, New Cairo, 11835, Egypt
+AB  - This study investigates the application of the Gaussian Radial Basis Function Neural Network (GRNN), Gaussian Process Regression (GPR), and Multilayer Perceptron Optimized by Particle Swarm Optimization (MLP-PSO) models in analyzing the relationship between rainfall and runoff and in predicting runoff discharge. These models utilize autoregressive input vectors based on daily-observed TRMM rainfall and TMR inflow data. The performance evaluation of each model is conducted using statistical measures to compare their effectiveness in capturing the complex relationships between input and output variables. The results consistently demonstrate that the MLP-PSO model outperforms the GRNN and GPR models, achieving the lowest root mean square error (RMSE) across multiple input combinations. Furthermore, the study explores the application of the Empirical Mode Decomposition-Hilbert-Huang Transform (EMD-HHT) in conjunction with the GPR and MLP-PSO models. This combination yields promising results in streamflow prediction, with the MLP-PSO-EMD model exhibiting superior accuracy compared to the GPR-EMD model. The incorporation of different components into the MLP-PSO-EMD model significantly improves its accuracy. Among the presented scenarios, Model M4, which incorporates the simplest components, emerges as the most favorable choice due to its lowest RMSE values. Comparisons with other models reported in the literature further underscore the effectiveness of the MLP-PSO-EMD model in streamflow prediction. This study offers valuable insights into the selection and performance of different models for rainfall-runoff analysis and prediction. © 2023 The Authors
+KW  - Brazilian river basin
+KW  - Empirical mode decomposition (EMD)
+KW  - Floods
+KW  - Hydrological simulation
+KW  - Particle swarm optimization (PSO)
+KW  - Water resource management
+PB  - Elsevier Ltd
+SN  - 24058440 (ISSN)
+LA  - English
+J2  - Heliyon
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 2; Correspondence Address: C.A.G. Santos; Department of Civil and Environmental Engineering, Federal University of Paraíba, João Pessoa, Paraíba, 58051-900, Brazil; email: celso@ct.ufpb.br
+ER  -
+
+TY  - JOUR
+AU  - Korsic, S.A.T.
+AU  - Notarnicola, C.
+AU  - Quirno, M.U.
+AU  - Cara, L.
+TI  - Assessing a data-driven approach for monthly runoff prediction in a mountain basin of the Central Andes of Argentina
+PY  - 2023
+T2  - Environmental Challenges
+VL  - 10
+C7  - 100680
+DO  - 10.1016/j.envc.2023.100680
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146455451&doi=10.1016%2fj.envc.2023.100680&partnerID=40&md5=6b9929d2fbd0400d251e433c6115e624
+AD  - Comisión Nacional de Actividades Espaciales (CONAE), Buenos Aires, Argentina
+AD  - Institute for Earth Observation, EURAC Research, European Academy of Bozen, Bolzano, Italy
+AD  - Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Buenos Aires, Argentina
+AD  - Departamento de Posgrado, Doctorado en Ciencias Aplicadas, Universidad Nacional de Lujan, Buenos Aires, Argentina
+AD  - Instituto Argentino de Nivología, Glaciología y Ciencias Ambientales (IANIGLA) – CONICET, Mendoza, Argentina
+AB  - In the semi-arid Central Andes of Argentina, the water from snowmelt runoff plays a fundamental role as a provider of ecosystem services. Nowadays, the global climate change has an observable negative impact on this area, due, principally, to the decrease in both liquid and solid rainfall, with the consequent decrease in water availability. In this context, runoff prediction acquires vital importance for the integrated water resources management. The aim of this study is to investigate the performance of the Support Vector Regression (SVR) technique in predicting monthly discharges with 1-month lead-time in the Tupungato River basin in the Central Andes of Argentina. This methodology has never been applied before in this mountainous region. Different inputs, like meteorological data and satellite-based snow cover area estimates from MODIS, were analyzed in order to identify the suitable inputs predictors to forecast monthly streamflow. The results were compared against the results derived from a Classification and Regression Tree (CART) model and, also, against an Auto-regressive Integrated Moving-average (ARIMA) model. Different metrics were used to evaluate the performance of the SVR tests in reproducing streamflow observations at the basin outlet. The coefficient of determination for each of the analyzed tests lays between 0.75 and 0.89 in the validation set. The comparison with the other models showed a significant improvement in performance of SVR in respect of CART and ARIMA model. SVR models proved a promising approach to support water management and decision making for productive activities, potentially also in other basins in the region. © 2023
+KW  - Machine learning techniques
+KW  - Remote sensing
+KW  - Runoff prediction
+KW  - Snow cover area
+KW  - Support vector regression
+PB  - Elsevier B.V.
+SN  - 26670100 (ISSN)
+LA  - English
+J2  - Environ. Challenge.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 7; Correspondence Address: S.A.T. Korsic; Comisión Nacional de Actividades Espaciales (CONAE), Buenos Aires, Argentina; email: skorsic@sec.conae.gov.ar
+ER  -
+
+TY  - JOUR
+AU  - Essenfelder, A.H.
+AU  - Larosa, F.
+AU  - Mazzoli, P.
+AU  - Bagli, S.
+AU  - Broccoli, D.
+AU  - Luzzi, V.
+AU  - Mysiak, J.
+AU  - Mercogliano, P.
+AU  - Dalla Valle, F.
+TI  - Smart climate hydropower tool: A machine-learning seasonal forecasting climate service to support cost–benefit analysis of reservoir management
+PY  - 2020
+T2  - Atmosphere
+VL  - 11
+IS  - 12
+C7  - 1305
+SP  - 1
+EP  - 21
+DO  - 10.3390/atmos11121305
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097513615&doi=10.3390%2fatmos11121305&partnerID=40&md5=09568a53d1f6c99d30b09b7e09b64a58
+AD  - Department of Risk Assessment and Adaptation Strategies, Ca’Foscari University of Venice, Venezia, 30123, VE, Italy
+AD  - Euro-Mediterranean Center on Climate Change, Venezia Marghera, 30175, VE, Italy
+AD  - GECOsistema Srl, Cesena, 47521, Italy
+AD  - Enel Green Power S.p.A., Rome, 00198, Italy
+AB  - This study proposes a climate service named Smart Climate Hydropower Tool (SCHT) and designed as a hybrid forecast system for supporting decision-making in a context of hydropower production. SCHT is technically designed to make use of information from state-of-art seasonal forecasts provided by the Copernicus Climate Data Store (CDS) combined with a range of different machine learning algorithms to perform the seasonal forecast of the accumulated inflow discharges to the reservoir of hydropower plants. The machine learning algorithms considered include support vector regression, Gaussian processes, long short-term memory, non-linear autoregressive neural networks with exogenous inputs, and a deep-learning neural networks model. Each machine learning model is trained over past decades datasets of recorded data, and forecast performances are validated and evaluated using separate test sets with reference to the historical average of discharge values and simpler multiparametric regressions. Final results are presented to the users through a user-friendly web interface developed from a tied connection with end-users in an effective co-design process. Methods are tested for forecasting the accumulated seasonal river discharges up to six months in advance for two catchments in Colombia, South America. Results indicate that the machine learning algorithms that make use of a complex and/or recurrent architecture can better simulate the temporal dynamic behaviour of the accumulated river discharge inflow to both case study reservoirs, thus rendering SCHT a useful tool in providing information for water resource managers in better planning the allocation of water resources for different users and for hydropower plant managers when negotiating power purchase contracts in competitive energy markets. © 2020 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - Climate service
+KW  - Hydropower
+KW  - Machine learning
+KW  - Seasonal forecasting
+KW  - Water resources management
+KW  - Colombia
+KW  - Cost benefit analysis
+KW  - Decision making
+KW  - Deep neural networks
+KW  - Forecasting
+KW  - Hydroelectric power
+KW  - Hydroelectric power plants
+KW  - Learning systems
+KW  - Managers
+KW  - Recurrent neural networks
+KW  - Reservoir management
+KW  - Reservoirs (water)
+KW  - Support vector regression
+KW  - Turing machines
+KW  - User interfaces
+KW  - Water resources
+KW  - Autoregressive neural networks
+KW  - Forecast performance
+KW  - Gaussian Processes
+KW  - Hydro power production
+KW  - Learning neural networks
+KW  - Machine learning models
+KW  - Purchase contracts
+KW  - Seasonal forecasting
+KW  - algorithm
+KW  - climate prediction
+KW  - cost-benefit analysis
+KW  - decision making
+KW  - hydroelectric power
+KW  - machine learning
+KW  - reservoir
+KW  - seasonal variation
+KW  - water management
+KW  - water resource
+KW  - Learning algorithms
+PB  - MDPI AG
+SN  - 20734433 (ISSN)
+LA  - English
+J2  - Atmosphere
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 12; Correspondence Address: A.H. Essenfelder; Department of Risk Assessment and Adaptation Strategies, Ca’Foscari University of Venice, Venezia, 30123, Italy; email: arthur.essenfelder@cmcc.it
+ER  -
+
+TY  - JOUR
+AU  - Fernando De Toledo, J.
+AU  - Valadares Siqueira, H.
+AU  - Biuk, L.H.
+AU  - Sacchi, R.
+AU  - Azambuja, R.D.R.
+AU  - Junior, R.A.
+AU  - Asano, P.T.L.
+TI  - Climate Indices Impact in Monthly Streamflow Series Forecasting
+PY  - 2023
+T2  - IEEE Access
+VL  - 11
+SP  - 21451
+EP  - 21464
+DO  - 10.1109/ACCESS.2023.3237982
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85147262025&doi=10.1109%2fACCESS.2023.3237982&partnerID=40&md5=e9ba6d0190de29d0d4a94dbc397097c5
+AD  - Universidade Federal Do Abc, Department of Energy, Santo André, 09210, Brazil
+AD  - Universidade Tecnológica Federal Do Paraná, Graduate Program in Electrical Engineering, Ponta Grossa, 84017, Brazil
+AD  - Câmara de Comercialização de Energia Elétrica, São Paulo, 01310, Brazil
+AB  - Hydroelectricity has been widely deployed in many countries for decades, and remains the main source of electricity in Canada, Norway, and Brazil. Despite the recent diversification, hydroelectricity accounts for approximately 65% of the electricity generated in Brazil. It also represents the largest non-polluting source in the country, and is important for complying with the global goals of reducing carbon emissions. Meeting energy and environmental sustainability requirements impose challenges on the hydroelectric sector in terms of resilience to climate change observed around the planet. These changes affect electricity generation by altering seasonality and increasing the variability of streamflow and evaporation losses in reservoirs. Therefore, in this study, among a set of 27 climate indices, we identified the most relevant for improving the performance of the models applied to monthly seasonal streamflow series forecasting. A database provided by the NOAA Physical Sciences Laboratory was used as exogenous variables for three machine learning models (support vector regression, extreme learning machine, and kernel ridge regression) and one linear model (seasonal autoregressive integrated moving average with exogenous factors, SARIMAX). Random forest with recursive feature elimination was used as the feature-selection technique. The results obtained allowed for the identification of the most relevant set of indices for the analyzed plants, thereby improving streamflow predictions.  © 2013 IEEE.
+KW  - Climate indices
+KW  - machine learning
+KW  - random forest
+KW  - streamflow forecasting
+KW  - Climate models
+KW  - Forecasting
+KW  - Forestry
+KW  - Hydroelectric power
+KW  - Learning systems
+KW  - Power generation
+KW  - Regression analysis
+KW  - Stream flow
+KW  - Sustainable development
+KW  - Atmospheric modeling
+KW  - Climate index
+KW  - Machine-learning
+KW  - Polluting sources
+KW  - Predictive models
+KW  - Random forests
+KW  - Regression tree analyse
+KW  - Regression trees
+KW  - Streamflow forecasting
+KW  - Climate change
+PB  - Institute of Electrical and Electronics Engineers Inc.
+SN  - 21693536 (ISSN)
+LA  - English
+J2  - IEEE Access
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 1; Correspondence Address: J. Fernando De Toledo; Universidade Federal Do Abc, Department of Energy, Santo André, 09210, Brazil; email: fernando.toledo@ufabc.edu.br
+ER  -
+
+TY  - JOUR
+AU  - Reis, G.B.
+AU  - da Silva, D.D.
+AU  - Fernandes Filho, E.I.
+AU  - Moreira, M.C.
+AU  - Veloso, G.V.
+AU  - Fraga, M.D.S.
+AU  - Pinheiro, S.A.R.
+TI  - Effect of environmental covariable selection in the hydrological modeling using machine learning models to predict daily streamflow
+PY  - 2021
+T2  - Journal of Environmental Management
+VL  - 290
+C7  - 112625
+DO  - 10.1016/j.jenvman.2021.112625
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85104810882&doi=10.1016%2fj.jenvman.2021.112625&partnerID=40&md5=7b2db7421ae0b6cdb6e680fcd95ab441
+AD  - Department of Agricultural Engineering, Federal University of Viçosa, Viçosa, 36570-900, MG, Brazil
+AD  - Department of Soil and Plant Nutrition, Federal University of Viçosa, Viçosa, 36570-900, MG, Brazil
+AD  - Water Management Institute of Minas Gerais, Belo Horizonte, 31630-900, MG, Brazil
+AB  - There are different methods for predicting streamflow, and, recently machine learning has been widely used for this purpose. This technique uses a wide set of covariables in the prediction process that must undergo a selection to increase the precision and stability of the models. Thus, this work aimed to analyze the effect of covariable selection with Recursive Feature Elimination (RFE) and Forward Feature Selection (FFS) in the performance of machine learning models to predict daily streamflow. The study was carried out in the Piranga river basin, located in the State of Minas Gerais, Brazil. The database consisted of an 18-year-old historical series (2000–2017) of streamflow data at the outlet of the basin and the covariables derived from the streamflow of affluent rivers, precipitation, land use and land cover, products from the MODIS sensors, and time. The highly correlated covariables were eliminated and the selection of covariables by the level of importance was carried out by the RFE and FFS methods for the Multivariate Adaptive Regression (EARTH), Multiple Linear Regression (MLR), and Random Forest (RF) models. The data were partitioned into two groups: 75% for training and 25% for validation. The models were run 50 times and had their performance evaluated by the Nash Sutcliffe efficiency coefficient (NSE), Determination coefficient (R2), and Root of Mean Square Error (RMSE). The three models tested showed satisfactory performance with both covariable selection methods, however, all of them proved to be inaccurate for predicting values associated with maximum streamflow events. The use of FFS, in most cases, improved the performance of the models and reduced the number of selected covariables. The use of machine learning to predict daily streamflow proved to be efficient and the use of FFS in the selection of covariables enhanced this efficiency. © 2021 Elsevier Ltd
+KW  - Environmental covariables
+KW  - Hydrological modeling
+KW  - Supervised learning
+KW  - Brazil
+KW  - Hydrology
+KW  - Linear Models
+KW  - Machine Learning
+KW  - Rivers
+KW  - Brazil
+KW  - Minas Gerais
+KW  - Piranga
+KW  - Efficiency
+KW  - Forecasting
+KW  - Forestry
+KW  - Land use
+KW  - Mean square error
+KW  - Multiple linear regression
+KW  - Stream flow
+KW  - Covariables
+KW  - Environmental covariable
+KW  - Forward feature selections
+KW  - Hydrological models
+KW  - Machine learning models
+KW  - Machine-learning
+KW  - Performance
+KW  - Prediction process
+KW  - Recursive feature elimination
+KW  - River basins
+KW  - covariance analysis
+KW  - hydrological modeling
+KW  - land cover
+KW  - machine learning
+KW  - MODIS
+KW  - precipitation (climatology)
+KW  - satellite sensor
+KW  - spatiotemporal analysis
+KW  - streamflow
+KW  - Article
+KW  - feature selection
+KW  - hydrological model
+KW  - land use
+KW  - machine learning
+KW  - Minas Gerais
+KW  - multiple linear regression analysis
+KW  - precipitation
+KW  - prediction
+KW  - random forest
+KW  - recursive feature elimination
+KW  - river
+KW  - river basin
+KW  - seasonal variation
+KW  - supervised machine learning
+KW  - vegetation
+KW  - Brazil
+KW  - hydrology
+KW  - machine learning
+KW  - river
+KW  - statistical model
+KW  - Machine learning
+PB  - Academic Press
+SN  - 03014797 (ISSN)
+C2  - 33895452
+LA  - English
+J2  - J. Environ. Manage.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 26; Correspondence Address: G.B. Reis; Department of Agricultural Engineering, Federal University of Viçosa, Viçosa, 36570-900, Brazil; email: guilherme.b.reis@ufv.br; CODEN: JEVMA
+ER  -
+
+TY  - CONF
+AU  - Valencia-Payan, C.
+AU  - Corrales, J.C.
+TI  - A rainfall prediction tool for sustainable agriculture using random forest
+PY  - 2018
+T2  - Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)
+VL  - 11288 LNAI
+SP  - 315
+EP  - 326
+DO  - 10.1007/978-3-030-04491-6_24
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85059967368&doi=10.1007%2f978-3-030-04491-6_24&partnerID=40&md5=6b0c418c6fce7cca14115d2023d4b9e2
+AD  - Universidad del Cauca, Popayán, Colombia
+AB  - In recent years world’s governments have focused its efforts on the development of the Sustainable Agriculture were all resources, especially water resources, are used in a more environmentally friendly manner. In this paper, we present an approach for estimating daily accumulated rainfall using multi-spatial scale multi-source data based on Machine Learning algorithms for three HABs in the Andean Region of Colombia where the agricultural activities are one of the main production activities. The proposed approach uses data from different rain-related variables such as vegetation index, elevation data, rain rate and temperature with the aim of the development of a rain forecast, able to respond to local or large-scale rain events. The results show that the trained model can detect local rain events event when no meteorological station data was used. © 2018, Springer Nature Switzerland AG.
+KW  - CART
+KW  - Cubist
+KW  - High Andean Basin
+KW  - Machine learning
+KW  - Multiscale data
+KW  - Rainfall
+KW  - Random forest
+KW  - Sustainable agriculture
+KW  - Agriculture
+KW  - Artificial intelligence
+KW  - Decision trees
+KW  - Learning algorithms
+KW  - Learning systems
+KW  - Soft computing
+KW  - Water resources
+KW  - CART
+KW  - Cubist
+KW  - High Andean Basin
+KW  - Multi-scale datum
+KW  - Random forests
+KW  - Sustainable agriculture
+KW  - Rain
+A2  - de Lourdes Martínez-Villaseñor M.
+A2  - Batyrshin I.
+A2  - Ponce Espinosa H.E.
+PB  - Springer Verlag
+SN  - 03029743 (ISSN); 978-303004490-9 (ISBN)
+LA  - English
+J2  - Lect. Notes Comput. Sci.
+M3  - Conference paper
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 3; Correspondence Address: C. Valencia-Payan; Universidad del Cauca, Popayán, Colombia; email: chpayan@unicauca.edu.co; Conference name: 17th Mexican International Conference on Artificial Intelligence, MICAI 2018; Conference date: 22 October 2018 through 27 October 2018; Conference code: 222749
+ER  -
+
+TY  - JOUR
+AU  - Pereira, J.M.R.
+AU  - Raimundo, C.D.C.
+AU  - Reis, D.S.
+AU  - Vasconcelos, F.D.C.
+AU  - Martins, E.S.P.R.
+TI  - Use of Climate Information in Water Allocation: A Case of Study in a Semiarid Region
+PY  - 2023
+T2  - Water (Switzerland)
+VL  - 15
+IS  - 13
+C7  - 2460
+DO  - 10.3390/w15132460
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85164792017&doi=10.3390%2fw15132460&partnerID=40&md5=25cece3e913a5d7a105f94eea13d6775
+AD  - Hydraulic and Environmental Engineering Department (DEHA), Federal University of Ceará (UFC), Fortaleza, 60400-900, Brazil
+AD  - Research Institute for Meteorology and Water Resources (FUNCEME), Fortaleza, 60115-221, Brazil
+AD  - Department of Civil and Environmental Engineering, Faculty of Technology, University of Brasilia, Brasília, 70910-900, Brazil
+AB  - The value of climate information has been explored by various scholars and in various sectors, but its operational use, particularly in water resources management, in countries like Brazil remains limited. This article describes climate and inflow forecast systems used in the process of water allocation in the state of Ceará (Brazil) and evaluates their performance at three key reservoirs in the state for forecasts issued in January for the period from January to May when most of the annual rainfall and inflows occur. To illustrate the value of forecasting in the water-allocation process, a simple experiment based on the use of a decision support system (DSS) is carried out. The use of the DSS SIGA with inflows estimated from observations and forecasts demonstrated the value of forecasts in the process of water allocation, as the forecasts allowed for better identification of end-of-the-year reservoir volumes. The use of the forecast system successfully described the variability of the percentage of demands met and the demands identified using estimated inflows, in particular for the Banabuiú and Castanhão Reservoirs. Overall, the results of this study highlight the importance of climatic-hydrological forecasting in the process of water allocation. © 2023 by the authors.
+KW  - climate and hydrological forecasts
+KW  - reservoir operations
+KW  - use of climate information
+KW  - water allocation
+KW  - Brazil
+KW  - Arid regions
+KW  - Artificial intelligence
+KW  - Forecasting
+KW  - Information management
+KW  - Information use
+KW  - Reservoirs (water)
+KW  - Water resources
+KW  - Climate forecasts
+KW  - Climate information
+KW  - Forecast systems
+KW  - Hydrological forecast
+KW  - Operational use
+KW  - Reservoir operation
+KW  - Semi-arid region
+KW  - Use of climate information
+KW  - Water allocations
+KW  - Water resources management
+KW  - climate change
+KW  - decision support system
+KW  - experimental study
+KW  - hydrological modeling
+KW  - reservoir
+KW  - resource allocation
+KW  - semiarid region
+KW  - Decision support systems
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: J.M.R. Pereira; Hydraulic and Environmental Engineering Department (DEHA), Federal University of Ceará (UFC), Fortaleza, 60400-900, Brazil; email: marcelo.rodrigues@funceme.br
+ER  -
+
+TY  - JOUR
+AU  - Pastrana-Cortés, J.D.
+AU  - Cardenas-Peña, D.A.
+AU  - Holguín-Londoño, M.
+AU  - Castellanos-Dominguez, G.
+AU  - Orozco-Gutiérrez, Á.A.
+TI  - Multi-Output Variational Gaussian Process for Daily Forecasting of Hydrological Resources †
+PY  - 2023
+T2  - Engineering Proceedings
+VL  - 39
+IS  - 1
+C7  - 83
+DO  - 10.3390/engproc2023039083
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85172783480&doi=10.3390%2fengproc2023039083&partnerID=40&md5=4ffbffe838bfc840e7d99c00dc61c96c
+AD  - Automatic Research Group, Universidad Tecnológica de Pereira, Pereira, 660003, Colombia
+AD  - Signal Processing and Recognition Group, Universidad Nacional de Colombia, Manizales, 170003, Colombia
+AB  - Water resource forecasting plays a crucial role in managing hydrological reservoirs, supporting operational decisions ranging from the economy to energy. In recent years, machine learning-based models, including sequential models such as Long Short-Term Memory (LSTM) networks, have been widely employed to address this task. Despite the significant interest in forecasting hydrological series, weather’s nonlinear and stochastic nature hampers the development of accurate prediction models. This work proposes a Variational Gaussian Process-based forecasting methodology for multiple outputs, termed MOVGP, that provides a probabilistic framework to capture the prediction uncertainty. The case study focuses on the Useful Volume and the Streamflow Contributions from 23 reservoirs in Colombia. The results demonstrate that MOVGP models outperform classical LSTM and linear models in predicting several horizons, with the added advantage of offering a predictive distribution. © 2023 by the authors.
+KW  - forecasting
+KW  - Gaussian process
+KW  - predictive distribution
+KW  - streamflow contributions
+KW  - useful volume
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 26734591 (ISSN)
+LA  - English
+J2  - Eng. Proc.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: J.D. Pastrana-Cortés; Automatic Research Group, Universidad Tecnológica de Pereira, Pereira, 660003, Colombia; email: j.pastrana@utp.edu.co
+ER  -
+
+TY  - JOUR
+AU  - Fernandez-Palomino, C.A.
+AU  - Hattermann, F.F.
+AU  - Krysanova, V.
+AU  - Lobanova, A.
+AU  - Vega-Jácome, F.
+AU  - Lavado, W.
+AU  - Santini, W.
+AU  - Aybar, C.
+AU  - Bronstert, A.
+TI  - A Novel High-Resolution Gridded Precipitation Dataset for Peruvian and Ecuadorian Watersheds: Development and Hydrological Evaluation
+PY  - 2022
+T2  - Journal of Hydrometeorology
+VL  - 23
+IS  - 3
+SP  - 309
+EP  - 336
+DO  - 10.1175/JHM-D-20-0285.1
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85126300417&doi=10.1175%2fJHM-D-20-0285.1&partnerID=40&md5=cd6159a92074be9b08339afa0382f184
+AD  - Research Department II–Climate Resilience, Potsdam Institute for Climate Impact Research, Potsdam, Germany
+AD  - Institute of Environmental Science and Geography, University of Potsdam, Potsdam, Germany
+AD  - Hidrología–Estudios e Investigaciones Hidrológicas, Servicio Nacional de Meteorología e Hidrología del Perú, Lima, Peru
+AD  - Institut de Recherche pour le Développement, Laboratoire GET (IRD, CNRS, UPS, CNES), Toulouse, France
+AD  - Department of Geoinformatics–Z_GIS, University of Salzburg, Salzburg, Austria
+AB  - A novel approach for estimating precipitation patterns is developed here and applied to generate a new hydrologically corrected daily precipitation dataset, called RAIN4PE (Rain for Peru and Ecuador), at 0.18 spatial resolution for the period 1981–2015 covering Peru and Ecuador. It is based on the application of 1) the random forest method to merge multisource precipitation estimates (gauge, satellite, and reanalysis) with terrain elevation, and 2) observed and modeled streamflow data to first detect biases and second further adjust gridded precipitation by inversely applying the simulated results of the ecohydrological model SWAT (Soil and Water Assessment Tool). Hydrological results using RAIN4PE as input for the Peruvian and Ecuadorian catchments were compared against the ones when feeding other uncorrected (CHIRP and ERA5) and gaugecorrected (CHIRPS, MSWEP, and PISCO) precipitation datasets into the model. For that, SWAT was calibrated and validated at 72 river sections for each dataset using a range of performance metrics, including hydrograph goodness of fit andflow duration curve signatures. Results showed that gauge-corrected precipitation datasets outperformed uncorrected ones for streamflow simulation. However, CHIRPS, MSWEP, and PISCO showed limitations for streamflow simulation in several catchments draining into the Pacific Ocean and the Amazon River. RAIN4PE provided the best overall performance for streamflow simulation, including flow variability (low, high, and peak flows) and water budget closure. The overall good performance of RAIN4PE as input for hydrological modeling provides a valuable criterion of its applicability for robust countrywide hydrometeorological applications, including hydroclimatic extremes such as droughts and floods. © 2022 American Meteorological Society.
+KW  - Amazon region
+KW  - Complex terrain
+KW  - Hydrology
+KW  - Inverse methods
+KW  - Machine learning
+KW  - Mountain meteorology
+KW  - Precipitation
+KW  - South America
+KW  - Streamflow
+KW  - Water budget/balance
+KW  - Amazonia
+KW  - Ecuador
+KW  - Peru
+KW  - complex terrain
+KW  - data set
+KW  - hydrological modeling
+KW  - image resolution
+KW  - inverse analysis
+KW  - machine learning
+KW  - mountain environment
+KW  - precipitation (climatology)
+KW  - precipitation assessment
+KW  - streamflow
+KW  - water budget
+KW  - watershed
+PB  - American Meteorological Society
+SN  - 1525755X (ISSN)
+LA  - English
+J2  - J. Hydrometeorol.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 14; Correspondence Address: C.A. Fernandez-Palomino; Research Department II–Climate Resilience, Potsdam Institute for Climate Impact Research, Potsdam, Germany; email: cafpxl@gmail.com
+ER  -
+
+TY  - JOUR
+AU  - Saraiva, S.V.
+AU  - Carvalho, F.D.O.
+AU  - Santos, C.A.G.
+AU  - Barreto, L.C.
+AU  - Freire, P.K.D.M.M.
+TI  - Daily streamflow forecasting in Sobradinho Reservoir using machine learning models coupled with wavelet transform and bootstrapping
+PY  - 2021
+T2  - Applied Soft Computing
+VL  - 102
+C7  - 107081
+DO  - 10.1016/j.asoc.2021.107081
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85099235295&doi=10.1016%2fj.asoc.2021.107081&partnerID=40&md5=dd7e12f4e30a2f51bc00bd0db172c37b
+AD  - University of Campinas, Brazil
+AD  - Federal University of Alagoas, Brazil
+AD  - Federal University of Paraíba, Brazil
+AB  - Improving forecasting techniques for streamflow time series is of extreme importance for water resource planning. Among the available techniques, those based on machine learning models have sparked the interest of the scientific community in recent decades due to their good adaptability and forecasting accuracy, particularly when coupled with data pretreatment methods. These algorithms include artificial neural networks (ANNs) and support vector machines (SVMs). In the present study, a comparative analysis of a set of machine learning models, namely, an ANN and an SVM coupled with wavelet transform and data resampling with the bootstrap method, was performed. The analysis of these models was performed with daily streamflow time series for Sobradinho Reservoir, which is located in northeastern Brazil, corresponding to the period between 1931 and 2015. The results show that higher accuracy is achieved by the ANN than by the SVM. Furthermore, the best combination for predicting the streamflow into the Sobradinho Reservoir was the bootstrap, wavelet and neural network (BWNN) method. For a forecast 3 to 15 days ahead, this method yielded a mean square error (MSE) 15 to 25 times lower than that of the purely neural model (ANN), and the R2 and mean absolute error (MAE) coefficients increased by more than 7 to 28% and 13 to 50%, respectively. Therefore, the BWNN is an alternative approach for future time series forecasting studies. © 2021 Elsevier B.V.
+KW  - Artificial neural networks
+KW  - Bootstrap
+KW  - Discrete wavelet transform
+KW  - Flow prediction
+KW  - SVM
+KW  - Forecasting
+KW  - Mean square error
+KW  - Neural networks
+KW  - Reservoirs (water)
+KW  - Stream flow
+KW  - Support vector machines
+KW  - Time series
+KW  - Time series analysis
+KW  - Water resources
+KW  - Wavelet transforms
+KW  - Forecasting accuracy
+KW  - Forecasting techniques
+KW  - Machine learning models
+KW  - Scientific community
+KW  - Streamflow forecasting
+KW  - Support vector machine (SVMs)
+KW  - Time series forecasting
+KW  - Water resource planning
+KW  - Learning systems
+PB  - Elsevier Ltd
+SN  - 15684946 (ISSN)
+LA  - English
+J2  - Appl. Soft Comput.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 53; Correspondence Address: C.A.G. Santos; Federal University of Paraíba, Brazil; email: celso@ct.ufpb.br
+ER  -
+
+TY  - JOUR
+AU  - Núñez, J.
+AU  - Cortés, C.B.
+AU  - Yáñez, M.A.
+TI  - Explainable Artificial Intelligence in Hydrology: Interpreting Black-Box Snowmelt-Driven Streamflow Predictions in an Arid Andean Basin of North-Central Chile
+PY  - 2023
+T2  - Water (Switzerland)
+VL  - 15
+IS  - 19
+C7  - 3369
+DO  - 10.3390/w15193369
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85173828880&doi=10.3390%2fw15193369&partnerID=40&md5=42a283769dc56b752d883b985d28fea9
+AD  - Departamento Ingeniería de Minas, Universidad de La Serena, Benavente 980, La Serena, 1700000, Chile
+AB  - In recent years, a new discipline known as Explainable Artificial Intelligence (XAI) has emerged, which has followed the growing trend experienced by Artificial Intelligence over the last decades. There are, however, important gaps in the adoption of XAI in hydrology research, in terms of application studies in the southern hemisphere, or in studies associated with snowmelt-driven streamflow prediction in arid regions, to mention a few. This paper seeks to contribute to filling these knowledge gaps through the application of XAI techniques in snowmelt-driven streamflow prediction in a basin located in the arid region of north-central Chile in South America. For this, two prediction models were built using the Random Forest algorithm, for one and four months in advance. The models show good prediction performance in the training set for one (RMSE:1.33, R2: 0.94, MAE:0.55) and four (RMSE: 5.67, R2:0.94, MAE: 1.51) months in advance. The selected interpretation techniques (importance of the variable, partial dependence plot, accumulated local effects plot, Shapley values and local interpretable model-agnostic explanations) show that hydrometeorological variables in the vicinity of the basin are more important than climate variables and this occurs both for the dataset level and for the months with the lowest streamflow records. The importance of the XAI approach adopted in this study is discussed in terms of its contribution to the understanding of hydrological processes, as well as its role in high-stakes decision-making. © 2023 by the authors.
+KW  - Chile
+KW  - Elqui River basin
+KW  - Explainable Artificial Intelligence
+KW  - hydrology
+KW  - iML
+KW  - interpretable machine learning
+KW  - streamflow prediction
+KW  - XAI
+KW  - Chile
+KW  - Arid regions
+KW  - Climate models
+KW  - Decision making
+KW  - Forecasting
+KW  - Forestry
+KW  - Hydrology
+KW  - Stream flow
+KW  - Chile
+KW  - Elqui river basin
+KW  - Explainable artificial intelligence
+KW  - IML
+KW  - Interpretable machine learning
+KW  - Machine-learning
+KW  - River basins
+KW  - Snow melt
+KW  - Streamflow prediction
+KW  - XAI
+KW  - arid region
+KW  - artificial intelligence
+KW  - climate change
+KW  - hydrology
+KW  - machine learning
+KW  - river basin
+KW  - streamflow
+KW  - Machine learning
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 1; Correspondence Address: J. Núñez; Departamento Ingeniería de Minas, Universidad de La Serena, La Serena, Benavente 980, 1700000, Chile; email: jhnunez@userena.cl
+ER  -
+
+TY  - JOUR
+AU  - Ma, K.
+AU  - Feng, D.
+AU  - Lawson, K.
+AU  - Tsai, W.-P.
+AU  - Liang, C.
+AU  - Huang, X.
+AU  - Sharma, A.
+AU  - Shen, C.
+TI  - Transferring Hydrologic Data Across Continents – Leveraging Data-Rich Regions to Improve Hydrologic Prediction in Data-Sparse Regions
+PY  - 2021
+T2  - Water Resources Research
+VL  - 57
+IS  - 5
+C7  - e2020WR028600
+DO  - 10.1029/2020WR028600
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85106880233&doi=10.1029%2f2020WR028600&partnerID=40&md5=9b2b3bff9fa2bad3e033d2d680e8a64d
+AD  - State Key Laboratory of Hydraulics and Mountain River Engineering, Sichuan University, Chengdu, Sichuan, China
+AD  - Civil and Environmental Engineering, Pennsylvania State University, University Park, PA, United States
+AD  - HydroSapient, Inc., State College, PA, United States
+AB  - There is a drastic geographic imbalance in available global streamflow gauge and catchment property data, with additional large variations in data characteristics. As a result, models calibrated in one region cannot normally be migrated to another without significant modifications. Currently in these regions, non-transferable machine learning models are habitually trained over small local data sets. Here we show that transfer learning (TL), in the senses of weight initialization and weight freezing, allows long short-term memory (LSTM) streamflow models that were pretrained over the conterminous United States (CONUS, the source data set) to be transferred to catchments on other continents (the target regions), without the need for extensive catchment attributes available at the target location. We demonstrate this possibility for regions where data are dense (664 basins in Great Britain), moderately dense (49 basins in central Chile), and scarce with only remotely sensed attributes available (5 basins in China). In both China and Chile, the TL models showed significantly elevated performance compared to locally trained models using all basins. The benefits of TL increased with the amount of available data in the source data set, and seemed to be more pronounced with greater physiographic diversity. The benefits from TL were greater than from pretraining LSTM using the outputs from an uncalibrated hydrologic model. These results suggest hydrologic data around the world have commonalities which could be leveraged by deep learning, and synergies can be had with a simple modification of the current workflows, greatly expanding the reach of existing big data. Finally, this work diversified existing global streamflow benchmarks. © 2021. American Geophysical Union. All Rights Reserved.
+KW  - data-scarce
+KW  - deep learning
+KW  - global basins
+KW  - machine learning
+KW  - streamflow
+KW  - transfer learning
+KW  - Chile
+KW  - China
+KW  - United Kingdom
+KW  - United States
+KW  - Catchments
+KW  - Deep learning
+KW  - Learning systems
+KW  - Runoff
+KW  - Stream flow
+KW  - Transfer learning
+KW  - Catchment properties
+KW  - Data characteristics
+KW  - Hydrologic modeling
+KW  - Hydrologic prediction
+KW  - Machine learning models
+KW  - Simple modifications
+KW  - Streamflow models
+KW  - Weight initialization
+KW  - catchment
+KW  - data set
+KW  - hydrological modeling
+KW  - machine learning
+KW  - river basin
+KW  - streamflow
+KW  - Long short-term memory
+PB  - Blackwell Publishing Ltd
+SN  - 00431397 (ISSN)
+LA  - English
+J2  - Water Resour. Res.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 56; Correspondence Address: C. Shen; Civil and Environmental Engineering, Pennsylvania State University, University Park, United States; email: cshen@engr.psu.edu; CODEN: WRERA
+ER  -
+
+TY  - JOUR
+AU  - Carvalho, T.M.N.
+AU  - De Souza Filho, F.D.A.
+AU  - Porto, V.C.
+TI  - Urban Water Demand Modeling Using Machine Learning Techniques: Case Study of Fortaleza, Brazil
+PY  - 2021
+T2  - Journal of Water Resources Planning and Management
+VL  - 147
+IS  - 1
+C7  - 05020026
+DO  - 10.1061/(ASCE)WR.1943-5452.0001310
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85095825640&doi=10.1061%2f%28ASCE%29WR.1943-5452.0001310&partnerID=40&md5=319ebb7dd22cff50324c13b496692954
+AD  - Dept. of Hydraulic and Environmental Engineering, Universidade Federal do Ceará, Campus do Pici, Bloco 713, Fortaleza, CEP 60455-760, Brazil
+AB  - Despite recent efforts to apply machine learning (ML) for water demand modeling, overcoming the black-box nature of these techniques to extract practical information remains a challenge, especially in developing countries. This study integrated random forest (RF), self-organizing map (SOM), and artificial neural network (ANN) techniques to assess water demand patterns and to develop a predictive model for the city of Fortaleza, Brazil. We performed the analysis at two spatial scales, with different level of information: census tracts (CTs) at the fine scale, and census blocks (CBs) at the coarse scale. At the CB scale, demand was modeled with socioeconomic, demographic, and household characteristics. The RF technique was applied to rank these variables, and the most relevant were used to cluster census blocks with SOMs. RFs and ANNs were used in an iterative approach to define the input variables for the predictive model with minimum redundancy. At the CT scale, demand was modeled using HDI and per capita income. Variables which assess the education level and economic aspects of households demonstrated a direct relationship with water demand. The analysis at the coarse scale provided more insight into the relationship between the variables; however, the predictive model performed better at the fine scale. This study demonstrates how data-driven models can be helpful for water management, especially in environments with strong socioeconomic inequalities, where urban planning decisions should be integrated and inclusive.  © 2020 American Society of Civil Engineers.
+KW  - Brazil
+KW  - Ceara
+KW  - Fortaleza
+KW  - Conformal mapping
+KW  - Decision trees
+KW  - Developing countries
+KW  - Iterative methods
+KW  - Machine learning
+KW  - Self organizing maps
+KW  - Surveys
+KW  - Water management
+KW  - Data-driven model
+KW  - Economic aspects
+KW  - Input variables
+KW  - Iterative approach
+KW  - Machine learning techniques
+KW  - Per capita income
+KW  - Predictive modeling
+KW  - Spatial scale
+KW  - developing world
+KW  - machine learning
+KW  - modeling
+KW  - planning method
+KW  - socioeconomic conditions
+KW  - urban area
+KW  - urban planning
+KW  - water demand
+KW  - water management
+KW  - water resource
+KW  - water supply
+KW  - Predictive analytics
+PB  - American Society of Civil Engineers (ASCE)
+SN  - 07339496 (ISSN)
+LA  - English
+J2  - J. Water Resour. Plann. Manage.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 18; Correspondence Address: T.M.N. Carvalho; Dept. of Hydraulic and Environmental Engineering, Universidade Federal do Ceará, Fortaleza, Campus do Pici, Bloco 713, CEP 60455-760, Brazil; email: taismarianc@gmail.com
+ER  -
+
+TY  - JOUR
+AU  - Vivas, E.
+AU  - de Guenni, L.B.
+AU  - Allende-Cid, H.
+AU  - Salas, R.
+TI  - Deep Lagged-Wavelet for monthly rainfall forecasting in a tropical region
+PY  - 2023
+T2  - Stochastic Environmental Research and Risk Assessment
+VL  - 37
+IS  - 3
+SP  - 831
+EP  - 848
+DO  - 10.1007/s00477-022-02323-x
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85140119215&doi=10.1007%2fs00477-022-02323-x&partnerID=40&md5=2684ecad49d73eecda776eea8e0ecdb0
+AD  - Escuela de Ingeniería Informática, Pontificia Universidad Católica de Valparaíso. Chile, Brasil 2950, Valparaíso, Valparaíso, 2340025, Chile
+AD  - Department of Statistics, University of Illinois at Urbana-Champaign, 703 S Wright St, Champaign, 61820, IL, United States
+AD  - Escuela de Ingeniería C. Biomédica, Universidad de Valparaíso, General Cruz 222, Valparaíso, Valparaíso, 2362905, Chile
+AD  - Millennium Institute for Intelligent Healthcare Engineering, Santiago, Chile
+AB  - Rainfall forecasting is an important input for decision-making in multiple areas, such as water resource planning and management associated with agriculture, hydropower generation, hydration in soils, and reducing vulnerability and risk in the integration of the corresponding systems. However, due to the spatial-temporal variability of rainfall amounts, it is very difficult to achieve high precision in the forecasts. This research addresses the challenge of rainfall forecasting by proposing the application of a methodology based on a combination of techniques within the framework of wavelet decomposition principles, the machine learning approach, and a lagged regression model. We implemented wavelet decomposition in a preprocessing phase followed by the use of a long short-term memory network (LSTM) and proposed a prediction enhancement phase in which the outputs were optimized by algorithms for monthly rainfall forecast corrections. The methodology was implemented at four weather stations in Venezuela, and it was compared with transfer function models, multiple regression and other powerful forecasting methods. The research results suggest that our approach improved the performance accuracy by correcting rainfall forecasting biases, achieving adjusted coefficients of determination greater than 0.76 and normalized mean absolute error (NMAE) values less than 0.31. © 2022, The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature.
+KW  - El Niño phenomenon
+KW  - Machine learning
+KW  - Rainfall forecasting
+KW  - Wavelet
+KW  - Decision making
+KW  - Long short-term memory
+KW  - Rain
+KW  - Regression analysis
+KW  - Tropics
+KW  - Weather forecasting
+KW  - Decisions makings
+KW  - El Nino phenomena
+KW  - Machine-learning
+KW  - Monthly rainfalls
+KW  - Multiple areas
+KW  - Rainfall forecasting
+KW  - Tropical regions
+KW  - Water resources planning and managements
+KW  - Wavelet
+KW  - Wavelets decomposition
+KW  - El Nino
+KW  - machine learning
+KW  - rainfall
+KW  - tropical region
+KW  - wavelet analysis
+KW  - weather forecasting
+KW  - Wavelet decomposition
+PB  - Springer Science and Business Media Deutschland GmbH
+SN  - 14363240 (ISSN)
+LA  - English
+J2  - Stoch. Environ. Res. Risk Assess.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 5; Correspondence Address: E. Vivas; Escuela de Ingeniería Informática, Pontificia Universidad Católica de Valparaíso. Chile, Valparaíso, Brasil 2950, Valparaíso, 2340025, Chile; email: eliana.vivas.r@mail.pucv.cl
+ER  -
+
+TY  - JOUR
+AU  - Ahmadi, A.
+AU  - Olyaei, M.
+AU  - Heydari, Z.
+AU  - Emami, M.
+AU  - Zeynolabedin, A.
+AU  - Ghomlaghi, A.
+AU  - Daccache, A.
+AU  - Fogg, G.E.
+AU  - Sadegh, M.
+TI  - Groundwater Level Modeling with Machine Learning: A Systematic Review and Meta-Analysis
+PY  - 2022
+T2  - Water (Switzerland)
+VL  - 14
+IS  - 6
+C7  - 949
+DO  - 10.3390/w14060949
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85127305087&doi=10.3390%2fw14060949&partnerID=40&md5=1e1e231552432684459be79a78bddf6f
+AD  - Department of Biological and Agricultural Engineering, University of California, Davis, 95616, CA, United States
+AD  - School of Civil Engineering, College of Engineering, University of Tehran, Tehran, 1417935840, Iran
+AD  - Department of Civil Environmental and Geo-Engineering, University of Minnesota, Minneapolis, 55455, MN, United States
+AD  - Department of Civil and Environmental Engineering, University of Illinois at Urbana-Champaign, Urbana, 61801, IL, United States
+AD  - Department of Water Engineering and Hydraulic Structures, Faculty of Civil Engineering, Semnan University, Semnan, 3513119111, Iran
+AD  - Hydrologic Sciences Graduate Group, University of California, Davis, 95616, CA, United States
+AD  - Department of Land, Air and Water Resources, University of California, Davis, 95616, CA, United States
+AD  - Department of Civil Engineering, Boise State University, Boise, 83706, ID, United States
+AB  - Groundwater is a vital source of freshwater, supporting the livelihood of over two billion people worldwide. The quantitative assessment of groundwater resources is critical for sustainable management of this strained resource, particularly as climate warming, population growth, and socioeconomic development further press the water resources. Rapid growth in the availability of a plethora of in-situ and remotely sensed data alongside advancements in data-driven methods and machine learning offer immense opportunities for an improved assessment of groundwater resources at the local to global levels. This systematic review documents the advancements in this field and evaluates the accuracy of various models, following the protocol developed by the Center for Evidence-Based Conservation. A total of 197 original peer-reviewed articles from 2010–2020 and from 28 countries that employ regression machine learning algorithms for groundwater monitoring or prediction are analyzed and their results are aggregated through a meta-analysis. Our analysis points to the capability of machine learning models to monitor/predict different characteristics of groundwater resources effectively and efficiently. Modeling the groundwater level is the most popular application of machine learning models, and the groundwater level in previous time steps is the most employed input data. The feed-forward artificial neural network is the most employed and accurate model, although the model performance does not exhibit a striking dependence on the model choice, but rather the information content of the input variables. Around 10–12 years of data are required to develop an acceptable machine learning model with a monthly temporal resolution. Finally, advances in machine and deep learning algorithms and computational advancements to merge them with physics-based models offer unprecedented opportunities to employ new information, e.g., InSAR data, for increased spatiotemporal resolution and accuracy of groundwater monitoring and prediction. © 2022 by the authors. Licensee MDPI, Basel, Switzerland.
+KW  - artificial neural networks
+KW  - data science
+KW  - groundwater hydrology
+KW  - hydrogeology
+KW  - regression machine learning
+KW  - water resources
+KW  - Colombia
+KW  - Meta
+KW  - Deep learning
+KW  - Feedforward neural networks
+KW  - Groundwater resources
+KW  - Hydrogeology
+KW  - Learning algorithms
+KW  - Population statistics
+KW  - Ground water level
+KW  - Ground-water hydrology
+KW  - Groundwater monitoring
+KW  - Level model
+KW  - Machine learning models
+KW  - Machine-learning
+KW  - Meta-analysis
+KW  - Regression machine learning
+KW  - Systematic Review
+KW  - Waters resources
+KW  - artificial neural network
+KW  - climate change
+KW  - groundwater
+KW  - hydrogeology
+KW  - livelihood
+KW  - machine learning
+KW  - meta-analysis
+KW  - regression analysis
+KW  - spatiotemporal analysis
+KW  - water resource
+KW  - Groundwater
+PB  - MDPI
+SN  - 20734441 (ISSN)
+LA  - English
+J2  - Water
+M3  - Review
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 36; Correspondence Address: A. Daccache; Department of Biological and Agricultural Engineering, University of California, Davis, 95616, United States; email: adaccache@ucdavis.edu
+ER  -
+
+TY  - CONF
+AU  - Teyseyre, A.
+AU  - Carmona, F.
+AU  - Holzman, M.
+AU  - Rodriguez, J.M.
+AU  - Schiaffino, S.
+AU  - Rivas, R.
+AU  - Godoy, D.
+TI  - Evaluating machine learning approaches for evapotranspiration estimation in the Pampean region of Argentina
+PY  - 2020
+T2  - 2020 IEEE Congreso Bienal de Argentina, ARGENCON 2020 - 2020 IEEE Biennial Congress of Argentina, ARGENCON 2020
+C7  - 9505501
+DO  - 10.1109/ARGENCON49523.2020.9505501
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85114016383&doi=10.1109%2fARGENCON49523.2020.9505501&partnerID=40&md5=8c838ebc2f01e7e5d32a2cdac5b4caa3
+AD  - ISISTAN (CONICET/UNCPBA), Bs. As, Tandil, Argentina
+AD  - IHLLA (CONICET/CIC/UNCPBA), Bs. As, Tandil, Argentina
+AD  - IHLLA (CONICET/CIC/UNCPBA) Azul, Bs. As, Argentina
+AB  - Evapotranspiration is an important indicator for the management and planning of water resources. The estimation of evapotranspiration is usually done trough bio-physical modeling, which requires the observation of multiple variables as well as the definition of the corresponding equations. In this paper, we evaluate the use of supervised machine learning as a strategy to get estimates of evapotranspiration from data observed in multiple meteorological stations in the Pampean region of Argentina. Particularly, we evaluate and compare regression methods for estimating the evapotranspiration from data collected during an extensive period of time, more than 40 years, from 24 stations placed in the region under study. The results obtained thus far are promising as they show the feasibility of applying a machine learning approach for obtaining accurate evapotranspiration estimates. The practical implications of these findings are relevant for the design of more efficient water monitoring systems in the country. © 2020 IEEE
+KW  - Evapotranspiration
+KW  - Hydrology
+KW  - Machine learning
+KW  - Regression methods
+KW  - Evapotranspiration
+KW  - Regression analysis
+KW  - Supervised learning
+KW  - Turing machines
+KW  - Argentina
+KW  - Machine learning approaches
+KW  - Meteorological station
+KW  - Physical model
+KW  - Regression method
+KW  - Supervised machine learning
+KW  - Water monitoring systems
+KW  - Learning systems
+PB  - Institute of Electrical and Electronics Engineers Inc.
+SN  - 978-172815957-7 (ISBN)
+LA  - English
+J2  - IEEE Congr. Bien. Argentina, ARGENCON - IEEE Bienn. Congr. Argentina, ARGENCON
+M3  - Conference paper
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Conference name: 2020 IEEE Biennial Congress of Argentina, ARGENCON 2020; Conference date: 1 December 2020 through 4 December 2020; Conference code: 171261
+ER  -
+
+TY  - JOUR
+AU  - Rodríguez-López, L.
+AU  - Usta, D.B.
+AU  - Duran-Llacer, I.
+AU  - Alvarez, L.B.
+AU  - Yépez, S.
+AU  - Bourrel, L.
+AU  - Frappart, F.
+AU  - Urrutia, R.
+TI  - Estimation of Water Quality Parameters through a Combination of Deep Learning and Remote Sensing Techniques in a Lake in Southern Chile
+PY  - 2023
+T2  - Remote Sensing
+VL  - 15
+IS  - 17
+C7  - 4157
+DO  - 10.3390/rs15174157
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85170359220&doi=10.3390%2frs15174157&partnerID=40&md5=5f8ed55b43ee83cf382db0028cd4b824
+AD  - Facultad de Ingeniería, Arquitectura y Diseño, Universidad San Sebastián, Lientur 1457, Concepción, 4030000, Chile
+AD  - Facultad de Oceanografía, Universidad de Concepción, Concepción, 4030000, Chile
+AD  - Hémera Centro de Observación de la Tierra, Facultad de Ciencias, Ingeniería y Tecnología, Universidad Mayor, Camino La Pirámide 5750, Huechuraba, 8580745, Chile
+AD  - Department of Electrical Engineering, Universidad de Concepción, Edmundo Larenas 219, Concepción, 4030000, Chile
+AD  - Department of Forest Management and Environment, Faculty of Forestry, Universidad de Concepcion, Calle Victoria, Concepción, 4030000, Chile
+AD  - Géosciences Environnement Toulouse, UMR 5563, Université de Toulouse, CNRS-IRD-OMP-CNES, Toulouse, 31000, France
+AD  - INRAE, Bordeaux Sciences Agro, UMR 1391 ISPA, Université de Bordeaux, Talence, 33604, France
+AD  - Facultad de Ciencias Ambientales, Universidad de Concepción, Concepción, 4030000, Chile
+AB  - In this study, we combined machine learning and remote sensing techniques to estimate the value of chlorophyll-a concentration in a freshwater ecosystem in the South American continent (lake in Southern Chile). In a previous study, nine artificial intelligence (AI) algorithms were tested to predict water quality data from measurements during monitoring campaigns. In this study, in addition to field data (Case A), meteorological variables (Case B) and satellite data (Case C) were used to predict chlorophyll-a in Lake Llanquihue. The models used were SARIMAX, LSTM, and RNN, all of which showed generally good statistics for the prediction of the chlorophyll-a variable. Model validation metrics showed that all three models effectively predicted chlorophyll as an indicator of the presence of algae in water bodies. Coefficient of determination values ranging from 0.64 to 0.93 were obtained, with the LSTM model showing the best statistics in any of the cases tested. The LSTM model generally performed well across most stations, with lower values for MSE (<0.260 (μg/L)2), RMSE (<0.510 ug/L), MaxError (<0.730 μg/L), and MAE (<0.442 μg/L). This model, which combines machine learning and remote sensing techniques, is applicable to other Chilean and world lakes that have similar characteristics. In addition, it is a starting point for decision-makers in the protection and conservation of water resource quality. © 2023 by the authors.
+KW  - Chile
+KW  - chlorophyll
+KW  - deep learning
+KW  - lakes
+KW  - remote sensing
+KW  - water quality
+KW  - Chlorophyll
+KW  - Decision making
+KW  - Forecasting
+KW  - Lakes
+KW  - Learning systems
+KW  - Long short-term memory
+KW  - Remote sensing
+KW  - Water conservation
+KW  - Artificial intelligence algorithms
+KW  - Chile
+KW  - Chlorophyll a
+KW  - Chlorophyll-a concentration
+KW  - Deep learning
+KW  - Freshwater ecosystem
+KW  - Machine-learning
+KW  - Remote sensing techniques
+KW  - Remote-sensing
+KW  - Water quality parameters
+KW  - Water quality
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 20724292 (ISSN)
+LA  - English
+J2  - Remote Sens.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 4; Correspondence Address: L. Rodríguez-López; Facultad de Ingeniería, Arquitectura y Diseño, Universidad San Sebastián, Concepción, Lientur 1457, 4030000, Chile; email: lien.rodriguez@uss.cl
+ER  -
+
+TY  - JOUR
+AU  - Vilanova, R.S.
+AU  - Zanetti, S.S.
+AU  - Cecílio, R.A.
+TI  - Artificial Neural Networks-Based Model Parameter Transfer in Streamflow Simulation of Brazilian Atlantic Rainforest Watersheds
+PY  - 2020
+T2  - Journal of Hydrologic Engineering
+VL  - 25
+IS  - 7
+C7  - 05020013
+DO  - 10.1061/(ASCE)HE.1943-5584.0001947
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85084632633&doi=10.1061%2f%28ASCE%29HE.1943-5584.0001947&partnerID=40&md5=811109b65a634772ca7366f5db87c1fb
+AD  - Programa de Pós-graduação em Ciências Florestais, Universidade Federal Do Espírito Santo, Av. Gov. Lindemberg, 316, Jerônimo Monteiro, ES, CEP 295000-000, Brazil
+AD  - Departamento de Ciências Florestais e da Madeira, Universidade Federal Do Espírito Santo, Av. Gov. Lindemberg, 316, Jerônimo Monteiro, ES, CEP 295000-000, Brazil
+AB  - This paper presents an assessment of the calibration and transfer of artificial neural networks (ANNs) to simulate streamflow at Brazilian Atlantic Rainforest basins. Primary data consisted of rainfall and a streamflow daily series (32 years in extent) of 12 subbasins of the Itapemirim River basin (IRB). First, data from three subbasins were used to adjust three ANNs to estimate daily specific streamflow from input parameters related to rainfall. After, the ANNs were applied to simulate the flows in all other IRB subbasins. The ANNs were able to reproduce the subbasin discharges for which they were adjusted. They also reached satisfactory performance when applied in most of the other subbasins. The obtained results demonstrate that the ANN technique is a viable alternative for simulating flows in regions lacking primary data for hydrological modeling. Besides, calibrating ANNs with subbasin data of an intermediate size or position tends to present a better overall performance than calibrating for the smaller (upstream) or the larger subbasins (downstream). © 2020 American Society of Civil Engineers.
+KW  - Artificial intelligence
+KW  - Calibration transfer
+KW  - Rainfall
+KW  - Runoff
+KW  - Brazil
+KW  - Rain
+KW  - Rivers
+KW  - Stream flow
+KW  - Watersheds
+KW  - Hydrological modeling
+KW  - Input parameter
+KW  - Model parameters
+KW  - Primary data
+KW  - River basins
+KW  - Simulating flows
+KW  - Streamflow simulations
+KW  - Subbasins
+KW  - artificial neural network
+KW  - calibration
+KW  - computer simulation
+KW  - drainage basin
+KW  - flow modeling
+KW  - numerical model
+KW  - rainforest
+KW  - streamflow
+KW  - watershed
+KW  - Neural networks
+PB  - American Society of Civil Engineers (ASCE)
+SN  - 10840699 (ISSN)
+LA  - English
+J2  - J. Hydrol. Eng.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 2; Correspondence Address: R.A. Cecílio; Departamento de Ciências Florestais e da Madeira, Universidade Federal Do Espírito Santo, Jerônimo Monteiro, ES, Av. Gov. Lindemberg, 316, CEP 295000-000, Brazil; email: roberto.cecilio@ufes.br
+ER  -
+
+TY  - JOUR
+AU  - Lujano, E.
+AU  - Lujano, R.
+AU  - Huamani, J.C.
+AU  - Lujano, A.
+TI  - Hydrological modeling based on the KNN algorithm: An application for the forecast of daily flows of the Ramis river, Peru
+ST  - Modelado hidrológico basado en el algoritmo KNN: una aplicación para el pronóstico de caudales diarios del río Ramis, Perú
+PY  - 2023
+T2  - Tecnologia y Ciencias del Agua
+VL  - 14
+IS  - 2
+SP  - 169
+EP  - 203
+DO  - 10.24850/j-tyca-14-02-05
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85152258597&doi=10.24850%2fj-tyca-14-02-05&partnerID=40&md5=744953cc1a53a593a90d56358f6deb81
+AD  - Escuela Profesional de Ingeniería Agrícola, Universidad Nacional del Altiplano, Puno, Peru
+AD  - Escuela Profesional de Ingeniería Ambiental, Universidad Peruana Unión, Juliaca, Peru
+AD  - Ingeniería de Sistemas, Universidad Nacional del Altiplano, Puno, Peru
+AD  - Servicio Nacional de Meteorología e Hidrología (SENAMHI), Lima, Peru
+AD  - Autoridad Nacional del Agua (ANA), Lima, Peru
+AB  - The forecast of river stream flows is of significant importance for the development of early warning systems. Artificial intelligence algorithms have proven to be an effective tool in hydrological modeling data-driven, since they allow establishing relationships between input and output data of a watershed and thus make decisions data-driven. This article investigates the applicability of the k-nearest neighbor (KNN) algorithm for forecasting the mean daily flows of the Ramis river, at the Ramis hydrometric station. As input to the KNN machine learning algorithm, we used a data set of mean basin precipitation and mean daily flow from hydrometeorological stations with various lags. The performance of the KNN algorithm was quantitatively evaluated with hydrological ability metrics such as mean absolute percentage error (MAPE), anomaly correlation coefficient (ACC), Nash-Sutcliffe efficiency (NSE), Kling-Gupta efficiency (KGE') and the spectral angle (SA). The results for forecasting the flows of the Ramis river with the k-nearest neighbor machine learning algorithm reached high levels of reliability with flow lags of one and two days and precipitation with three days. The algorithm used is simple but robust to make short-term flow forecasts and can be integrated as an alternative to strengthen the daily hydrological forecast of the Ramis river. © 2023 Instituto Mexicano de Tecnologia del Agua. All rights reserved.
+KW  - Artificial intelligence
+KW  - hydrological data-driven modelling
+KW  - K-Nearest Neighbor
+KW  - machine learning
+KW  - Ramis river
+KW  - Peru
+KW  - algorithm
+KW  - artificial intelligence
+KW  - hydrological modeling
+KW  - machine learning
+KW  - river basin
+KW  - streamflow
+PB  - Instituto Mexicano de Tecnologia del Agua
+SN  - 01878336 (ISSN)
+LA  - English
+J2  - Tecnologia Ciencias Agua
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: E. Lujano; Escuela Profesional de Ingeniería Agrícola, Universidad Nacional del Altiplano, Puno, Peru; email: elujano28@gmail.com
+ER  -
+
+TY  - JOUR
+AU  - Ribeiro, V.H.A.
+AU  - Reynoso-Meza, G.
+AU  - Siqueira, H.V.
+TI  - Multi-objective ensembles of echo state networks and extreme learning machines for streamflow series forecasting
+PY  - 2020
+T2  - Engineering Applications of Artificial Intelligence
+VL  - 95
+C7  - 103910
+DO  - 10.1016/j.engappai.2020.103910
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85089817082&doi=10.1016%2fj.engappai.2020.103910&partnerID=40&md5=11b8155551004b9274cdc01f8416966a
+AD  - Programa de Pós-Graduação em Engenharia de Produção e Sistemas (PPGEPS), Pontifícia Universidade Católica do Paraná (PUCPR), Rua Imaculada Conceição, 1155, Zip code 80215-901, Curitiba, PR, Brazil
+AD  - Programa de Pós-Graduação em Ciência da Computação (PPGCC), Programa de Pós-Graduação em Engenharia de Produção (PPGEP), Universidade Tecnológica Federal do Paraná (UTFPR), Rua Doutor Washington Subtil Chueire, 330, Zip code 84017-220, Ponta Grossa, PR, Brazil
+AB  - Streamflow series forecasting composes a fundamental step in planning electric energy production for hydroelectric plants. In Brazil, such plants produce almost 70% of the total energy. Therefore, it is of great importance to improve the quality of streamflow series forecasting by investigating state-of-the-art time series forecasting algorithms. To this end, this work proposes the development of ensembles of unorganized machines, namely Extreme Learning Machines (ELMs) and Echo State Networks (ESNs). Two primary contributions are proposed: (1) a new training logic for ESNs that enables the application of bootstrap aggregation (bagging); and (2) the employment of multi-objective optimization to select and adjust the weights of the ensemble's base models, taking into account the trade-off between bias and variance. Experiments are conducted on streamflow series data from five real-world Brazilian hydroelectric plants, namely those in Sobradinho, Serra da Mesa, Jiraú, Furnas and Água Vermelha. The statistical results for four different prediction horizons (1, 3, 6, and 12 months ahead) indicate that the ensembles of unorganized machines achieve better results than autoregressive (AR) models in terms of the Nash–Sutcliffe model efficiency coefficient (NSE), root mean squared error (RMSE), coefficient of determination (R2), and RMSE-observations standard deviation ratio (RSR). In such results, the ensembles with ESNs and the multi-objective optimization design procedure achieve the best scores. © 2020 Elsevier Ltd
+KW  - Echo state network
+KW  - Ensemble learning
+KW  - Extreme learning machine
+KW  - Multi-objective optimization
+KW  - Streamflow
+KW  - Time series forecasting
+KW  - Economic and social effects
+KW  - Forecasting
+KW  - Hydroelectric power plants
+KW  - Knowledge acquisition
+KW  - Machine learning
+KW  - Mean square error
+KW  - Stream flow
+KW  - Time series analysis
+KW  - Auto regressive models
+KW  - Coefficient of determination
+KW  - Echo state networks
+KW  - Extreme learning machine
+KW  - Hydroelectric plant
+KW  - Primary contribution
+KW  - Root mean squared errors
+KW  - Time series forecasting
+KW  - Multiobjective optimization
+PB  - Elsevier Ltd
+SN  - 09521976 (ISSN)
+LA  - English
+J2  - Eng Appl Artif Intell
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 35; Correspondence Address: V.H.A. Ribeiro; Programa de Pós-Graduação em Engenharia de Produção e Sistemas (PPGEPS), Pontifícia Universidade Católica do Paraná (PUCPR), Curitiba, PR, Rua Imaculada Conceição, 1155, Zip code 80215-901, Brazil; email: victor.henrique@pucpr.edu.br; CODEN: EAAIE
+ER  -
+
+TY  - JOUR
+AU  - Rodríguez-López, L.
+AU  - Alvarez, D.
+AU  - Bustos Usta, D.
+AU  - Duran-Llacer, I.
+AU  - Bravo Alvarez, L.
+AU  - Fagel, N.
+AU  - Bourrel, L.
+AU  - Frappart, F.
+AU  - Urrutia, R.
+TI  - Chlorophyll-a Detection Algorithms at Different Depths Using In Situ, Meteorological, and Remote Sensing Data in a Chilean Lake
+PY  - 2024
+T2  - Remote Sensing
+VL  - 16
+IS  - 4
+C7  - 647
+DO  - 10.3390/rs16040647
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85185711132&doi=10.3390%2frs16040647&partnerID=40&md5=b09809434d6678299ff3239723f38a32
+AD  - Facultad de Ingeniería, Arquitectura y Diseño, Universidad San Sebastián, Lientur 1457, Concepcion, 4030000, Chile
+AD  - Centro Bahía Lomas, Facultad de Ciencias, Universidad Santo Tomás, Concepcion, 4030000, Chile
+AD  - Facultad de Oceanografía, Universidad de Concepción, Concepcion, 4030000, Chile
+AD  - Hémera Centro de Observación de la Tierra, Facultad de Ciencias, Ingeniería y Tecnología, Universidad Mayor, Camino La Pirámide 5750, Santiago, 8580745, Chile
+AD  - Department of Electrical Engineering, Universidad de Concepción, Edmundo Larenas 219, Concepcion, 4030000, Chile
+AD  - UR Argile, Geochimie et Environment Sedimentary (AGEs), Geology Department, University of Liege, Liège, 4000, Belgium
+AD  - Géosciences Environnement Toulouse, UMR 5563, Université de Toulouse, CNRS-IRD-OMP-CNES, Toulouse, 31000, France
+AD  - INRAE, Bordeaux Sciences Agro, UMR 1391 ISPA, Villenave-d’Ornon, 33140, France
+AD  - Facultad de Ciencias Ambientales, Universidad de Concepción, Concepcion, 4030000, Chile
+AB  - In this study, we employ in situ, meteorological, and remote sensing data to estimate chlorophyll-a concentration at different depths in a South American freshwater ecosystem, focusing specifically on a lake in southern Chile known as Lake Maihue. For our analysis, we explored four different scenarios using three deep learning and traditional statistical models. These scenarios involved using field data (Scenario 1), meteorological variables (Scenario 2), and satellite data (Scenarios 3.1 and 3.2) to predict chlorophyll-a levels in Lake Maihue at three different depths (0, 15, and 30 m). Our choice of models included SARIMAX, DGLM, and LSTM, all of which showed promising statistical performance in predicting chlorophyll-a concentrations in this lake. Validation metrics for these models indicated their effectiveness in predicting chlorophyll levels, which serve as valuable indicators of the presence of algae in the water body. The coefficient of determination values ranged from 0.30 to 0.98, with the DGLM model showing the most favorable statistics in all scenarios tested. It is worth noting that the LSTM model yielded comparatively lower metrics, mainly due to the limitations of the available training data. The models employed, which use traditional statistical and machine learning models and meteorological and remote sensing data, have great potential for application in lakes in Chile and the rest of the world with similar characteristics. In addition, these results constitute a fundamental resource for decision-makers involved in the protection and conservation of water resource quality. © 2024 by the authors.
+KW  - chlorophyll-a at depth
+KW  - lake
+KW  - machine learning
+KW  - remote sensing
+KW  - Chlorophyll
+KW  - Conservation
+KW  - Decision making
+KW  - Forecasting
+KW  - Lakes
+KW  - Learning systems
+KW  - Long short-term memory
+KW  - Signal detection
+KW  - Chlorophyll a
+KW  - Chlorophyll-a at depth
+KW  - Chlorophyll-a concentration
+KW  - Detection algorithm
+KW  - Field data
+KW  - Freshwater ecosystem
+KW  - Machine-learning
+KW  - Remote sensing data
+KW  - Remote-sensing
+KW  - Statistic modeling
+KW  - Remote sensing
+PB  - Multidisciplinary Digital Publishing Institute (MDPI)
+SN  - 20724292 (ISSN)
+LA  - English
+J2  - Remote Sens.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 0; Correspondence Address: L. Rodríguez-López; Facultad de Ingeniería, Arquitectura y Diseño, Universidad San Sebastián, Concepcion, Lientur 1457, 4030000, Chile; email: lien.rodriguez@uss.cl
+ER  -
+
+TY  - JOUR
+AU  - de Sousa, M.F.
+AU  - Uliana, E.M.
+AU  - Aires, R.V.U.
+AU  - Rápalo, L.M.C.
+AU  - da Silva, D.D.
+AU  - Moreira, M.C.
+AU  - Lisboa, L.
+AU  - da Silva Rondon, D.
+TI  - Streamflow prediction based on machine learning models and rainfall estimated by remote sensing in the Brazilian Savanna and Amazon biomes transition
+PY  - 2024
+T2  - Modeling Earth Systems and Environment
+VL  - 10
+IS  - 1
+SP  - 1191
+EP  - 1202
+DO  - 10.1007/s40808-023-01837-9
+UR  - https://www.scopus.com/inward/record.uri?eid=2-s2.0-85164936830&doi=10.1007%2fs40808-023-01837-9&partnerID=40&md5=5e197705f0663315a8e6f9304b4303d7
+AD  - Instituto Nacional de Pesquisas Espaciais (INPE), São Jose dos Campos, 12227-010, Brazil
+AD  - Instituto de Ciências Agrárias e Ambientais, Universidade Federal de Mato Grosso, Sinop, 78557-267, Brazil
+AD  - Departament of Agricultural and Bilogical Engineering, Mississippi State University, Starkville, 39759, United States
+AD  - Departamento de Engenharia Hidráulica e Saneamento, Universidade de São Paulo, São Carlos, São Paulo, 13566-590, Brazil
+AD  - Departamento de Engenharia Agrícola, Universidade Federal de Viçosa, Viçosa, 36570-900, Brazil
+AD  - Companhia de Pesquisa de Recursos Minerais, Manaus, 69060-000, Brazil
+AD  - Programa de Pós-Graduação em Recursos Hídricos, Universidade Federal de Mato Grosso, Mato Grosso, Cuiabá, 78088-800, Brazil
+AB  - The prediction of streamflow is essential for reservoir operations, especially flood mitigation and hydroelectricity production, as it can have direct impacts on society. In this work, we aimed to apply machine learning models (MLM) to predict streamflow on a daily scale in a Brazilian transitional region of the Savanna and Amazon biomes. This region has significant exploitation of water resources, mainly for electricity production from hydroelectric plants, and lo coverage of hydrological data monitoring networks. To predict streamflow, we performed the K-nearest neighbor (kNN), support vector machine (SVM), random forest (RF), and artificial neural network (ANN). The explanatory variables used were the time-lagged streamflow, and average rainfall obtained from rain gauge stations and remote sensing products (PDIR-Now, PERSIANN, and PERSIANN-CCS). The SVM, kNN, RF, and ANN models were effective in predicting streamflow in the study area, and the RF presented fewer prediction errors. Streamflow predictions were accurate when rainfall estimated by remote sensing products was used as input, and MLM presented good predictions of streamflow for a horizon of up to three days, even in basins with limited hydrological data. This study points out the feasibility of employing MLM for streamflow predictions to aid in the planning and management of water resources in the basin, primarily in the reservoir operation of hydroelectric plants and flood mitigation. © 2023, The Author(s), under exclusive licence to Springer Nature Switzerland AG.
+KW  - Data-driven model
+KW  - Flood mitigation
+KW  - Neural network
+KW  - Rainfall-runoff
+KW  - Remote sensing
+KW  - Brazil
+KW  - artificial neural network
+KW  - flood control
+KW  - hydroelectric power
+KW  - machine learning
+KW  - nearest neighbor analysis
+KW  - prediction
+KW  - rainfall-runoff modeling
+KW  - remote sensing
+KW  - reservoir
+KW  - savanna
+KW  - streamflow
+KW  - support vector machine
+PB  - Springer Science and Business Media Deutschland GmbH
+SN  - 23636203 (ISSN)
+LA  - English
+J2  - Model. Earth Syst. Environ.
+M3  - Article
+DB  - Scopus
+N1  - Export Date: 27 March 2024; Cited By: 1; Correspondence Address: M.F. de Sousa; Instituto Nacional de Pesquisas Espaciais (INPE), São Jose dos Campos, 12227-010, Brazil; email: mariofomacajr@gmail.com
+ER  -
+
