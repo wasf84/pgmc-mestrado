@@ -1,0 +1,162 @@
+{
+    "0": {
+        "modelo": "LinearSVR",
+        "fch": 3,
+        "best_value": 0.038569165853258376,
+        "best_params": {
+            "loss": "squared_epsilon_insensitive",
+            "intercept_scaling": 0.5809969066238916,
+            "tol": 0.009354487580599308,
+            "C": 0.11565797670945992,
+            "epsilon": 0.03320561506672863,
+            "day": true,
+            "dayofyear": true,
+            "week": true,
+            "month": false,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 2,
+            "n_lags_futr": 1
+        }
+    },
+    "1": {
+        "modelo": "LinearSVR",
+        "fch": 5,
+        "best_value": 0.09422756682148332,
+        "best_params": {
+            "loss": "epsilon_insensitive",
+            "intercept_scaling": 0.0432352301420962,
+            "tol": 0.45838354562136985,
+            "C": 0.15343560396036365,
+            "epsilon": 4.407703201040391,
+            "day": true,
+            "dayofyear": false,
+            "week": false,
+            "month": true,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 2,
+            "n_lags_futr": 3
+        }
+    },
+    "2": {
+        "modelo": "LinearSVR",
+        "fch": 7,
+        "best_value": 0.21936654279355913,
+        "best_params": {
+            "loss": "epsilon_insensitive",
+            "intercept_scaling": 0.0030564575398238235,
+            "tol": 0.10140972914236877,
+            "C": 0.4458571742795908,
+            "epsilon": 4.9543709678804655,
+            "day": false,
+            "dayofyear": false,
+            "week": true,
+            "month": true,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 2,
+            "n_lags_futr": 4
+        }
+    },
+    "3": {
+        "modelo": "LinearSVR",
+        "fch": 10,
+        "best_value": 0.28987375408984534,
+        "best_params": {
+            "loss": "epsilon_insensitive",
+            "intercept_scaling": 0.440788399464552,
+            "tol": 0.024004456656283698,
+            "C": 0.38655210701908094,
+            "epsilon": 0.2402958647405249,
+            "day": true,
+            "dayofyear": false,
+            "week": false,
+            "month": true,
+            "quarter": false,
+            "year": true,
+            "n_lags_reg": 1,
+            "n_lags_futr": 5
+        }
+    },
+    "4": {
+        "modelo": "LinearSVR",
+        "fch": 15,
+        "best_value": 0.2844350806814869,
+        "best_params": {
+            "loss": "epsilon_insensitive",
+            "intercept_scaling": 0.05605161002508657,
+            "tol": 0.006896775000703198,
+            "C": 0.10588335416510798,
+            "epsilon": 0.3780338795391041,
+            "day": true,
+            "dayofyear": false,
+            "week": false,
+            "month": true,
+            "quarter": false,
+            "year": true,
+            "n_lags_reg": 7,
+            "n_lags_futr": 7
+        }
+    },
+    "5": {
+        "modelo": "LinearSVR",
+        "fch": 30,
+        "best_value": 0.2906221767715663,
+        "best_params": {
+            "loss": "squared_epsilon_insensitive",
+            "intercept_scaling": 0.5560634215723286,
+            "tol": 0.002203364809217192,
+            "C": 1.3495175444404326,
+            "epsilon": 0.0023421960303693225,
+            "day": true,
+            "dayofyear": false,
+            "week": false,
+            "month": true,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 4,
+            "n_lags_futr": 6
+        }
+    },
+    "6": {
+        "modelo": "LinearSVR",
+        "fch": 60,
+        "best_value": 0.26106630199849035,
+        "best_params": {
+            "loss": "squared_epsilon_insensitive",
+            "intercept_scaling": 0.059567472665700054,
+            "tol": 0.0018001329563767726,
+            "C": 0.11927800498563892,
+            "epsilon": 2.1105689217013315,
+            "day": true,
+            "dayofyear": true,
+            "week": false,
+            "month": true,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 1,
+            "n_lags_futr": 5
+        }
+    },
+    "7": {
+        "modelo": "LinearSVR",
+        "fch": 90,
+        "best_value": 0.35244815817675745,
+        "best_params": {
+            "loss": "squared_epsilon_insensitive",
+            "intercept_scaling": 0.014600460803975222,
+            "tol": 1.674087637866247,
+            "C": 2.0657962470963933,
+            "epsilon": 4.978783336310033,
+            "day": false,
+            "dayofyear": true,
+            "week": false,
+            "month": true,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 6,
+            "n_lags_futr": 6
+        }
+    }
+}

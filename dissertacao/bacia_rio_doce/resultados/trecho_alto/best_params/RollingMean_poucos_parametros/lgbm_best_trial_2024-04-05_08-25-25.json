@@ -1,0 +1,170 @@
+{
+    "0": {
+        "modelo": "LGBM",
+        "fch": 3,
+        "best_value": 0.06992361771623468,
+        "best_params": {
+            "num_leaves": 254,
+            "n_estimators": 93,
+            "learning_rate": 0.37762067910421954,
+            "feature_fraction": 0.36965878591303314,
+            "min_data_in_leaf": 94,
+            "bagging_fraction": 0.21292881357877635,
+            "day": false,
+            "dayofyear": false,
+            "week": false,
+            "month": false,
+            "quarter": false,
+            "year": true,
+            "n_lags_reg": 1,
+            "n_lags_futr": 3
+        }
+    },
+    "1": {
+        "modelo": "LGBM",
+        "fch": 5,
+        "best_value": 0.06301241527471524,
+        "best_params": {
+            "num_leaves": 80,
+            "n_estimators": 50,
+            "learning_rate": 0.21695954842080487,
+            "feature_fraction": 0.582509754497999,
+            "min_data_in_leaf": 33,
+            "bagging_fraction": 0.07667133847472322,
+            "day": false,
+            "dayofyear": false,
+            "week": false,
+            "month": true,
+            "quarter": false,
+            "year": true,
+            "n_lags_reg": 1,
+            "n_lags_futr": 7
+        }
+    },
+    "2": {
+        "modelo": "LGBM",
+        "fch": 7,
+        "best_value": 0.15097059254442868,
+        "best_params": {
+            "num_leaves": 252,
+            "n_estimators": 131,
+            "learning_rate": 0.03732145026757255,
+            "feature_fraction": 0.45749159168570314,
+            "min_data_in_leaf": 44,
+            "bagging_fraction": 0.06184165144551898,
+            "day": false,
+            "dayofyear": true,
+            "week": true,
+            "month": true,
+            "quarter": false,
+            "year": false,
+            "n_lags_reg": 2,
+            "n_lags_futr": 6
+        }
+    },
+    "3": {
+        "modelo": "LGBM",
+        "fch": 10,
+        "best_value": 0.19017248670059342,
+        "best_params": {
+            "num_leaves": 77,
+            "n_estimators": 147,
+            "learning_rate": 0.13615938958144488,
+            "feature_fraction": 0.1873121160369407,
+            "min_data_in_leaf": 10,
+            "bagging_fraction": 0.5300397519521322,
+            "day": false,
+            "dayofyear": false,
+            "week": true,
+            "month": false,
+            "quarter": false,
+            "year": true,
+            "n_lags_reg": 6,
+            "n_lags_futr": 6
+        }
+    },
+    "4": {
+        "modelo": "LGBM",
+        "fch": 15,
+        "best_value": 0.1991264182364459,
+        "best_params": {
+            "num_leaves": 125,
+            "n_estimators": 86,
+            "learning_rate": 0.04951729114730968,
+            "feature_fraction": 0.13416988167280947,
+            "min_data_in_leaf": 232,
+            "bagging_fraction": 0.28984332081025754,
+            "day": true,
+            "dayofyear": false,
+            "week": false,
+            "month": false,
+            "quarter": true,
+            "year": false,
+            "n_lags_reg": 4,
+            "n_lags_futr": 3
+        }
+    },
+    "5": {
+        "modelo": "LGBM",
+        "fch": 30,
+        "best_value": 0.25203196534479755,
+        "best_params": {
+            "num_leaves": 37,
+            "n_estimators": 210,
+            "learning_rate": 0.41357714098883264,
+            "feature_fraction": 0.12601624998642258,
+            "min_data_in_leaf": 176,
+            "bagging_fraction": 0.47664921809311156,
+            "day": true,
+            "dayofyear": false,
+            "week": true,
+            "month": false,
+            "quarter": true,
+            "year": true,
+            "n_lags_reg": 1,
+            "n_lags_futr": 6
+        }
+    },
+    "6": {
+        "modelo": "LGBM",
+        "fch": 60,
+        "best_value": 0.28255403546388885,
+        "best_params": {
+            "num_leaves": 171,
+            "n_estimators": 142,
+            "learning_rate": 0.05358129057941394,
+            "feature_fraction": 0.05229068078174135,
+            "min_data_in_leaf": 183,
+            "bagging_fraction": 0.23711824430991005,
+            "day": true,
+            "dayofyear": true,
+            "week": true,
+            "month": true,
+            "quarter": true,
+            "year": false,
+            "n_lags_reg": 2,
+            "n_lags_futr": 7
+        }
+    },
+    "7": {
+        "modelo": "LGBM",
+        "fch": 90,
+        "best_value": 0.3346148970739827,
+        "best_params": {
+            "num_leaves": 189,
+            "n_estimators": 202,
+            "learning_rate": 0.39657938724384945,
+            "feature_fraction": 0.03670556327036425,
+            "min_data_in_leaf": 61,
+            "bagging_fraction": 0.6239561038938444,
+            "day": false,
+            "dayofyear": false,
+            "week": true,
+            "month": false,
+            "quarter": false,
+            "year": true,
+            "n_lags_reg": 2,
+            "n_lags_futr": 5
+        }
+    }
+}
