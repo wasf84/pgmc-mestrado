@@ -1,0 +1,15 @@
+{
+    "modelo": "LGBM_opt_cv",
+    "best_value": 0.13297400161287526,
+    "best_params": {
+        "lambda_l1": 0.00014944617167930133,
+        "lambda_l2": 7.050434507180019,
+        "num_leaves": 251,
+        "n_estimators": 253,
+        "learning_rate": 0.41711350861513485,
+        "feature_fraction": 0.9522437863435854,
+        "min_data_in_leaf": 50,
+        "bagging_fraction": 0.05600350364731726,
+        "bagging_freq": 0
+    }
+}
