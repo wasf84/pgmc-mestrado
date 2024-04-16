@@ -3,5 +3,6 @@
 **/lightning_logs/
 **/*tmp*
 **/.idea/
+**/.vscode/
 .ipynb_checkpoints
 .directory
