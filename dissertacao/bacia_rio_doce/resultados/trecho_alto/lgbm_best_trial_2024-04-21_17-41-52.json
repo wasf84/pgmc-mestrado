@@ -1,0 +1,19 @@
+{
+    "modelo": "LightGBM",
+    "best_value": 0.09925324633246735,
+    "best_params": {
+        "lambda_l1": 0.06774686796040313,
+        "lambda_l2": 5.938658760876511,
+        "num_leaves": 41,
+        "n_estimators": 127,
+        "feature_fraction": 0.39185315839862145,
+        "min_data_in_leaf": 6,
+        "bagging_fraction": 0.7133199721063876,
+        "bagging_freq": 5,
+        "dayofyear": true,
+        "week": false,
+        "month": true,
+        "quarter": false,
+        "year": false
+    }
+}
