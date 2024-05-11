@@ -1,44 +1,41 @@
-# %% Imports básicos para todas as análises
+# celula 1
+"""
+    Imports básicos para todas as análises
+"""
 
-import  warnings,                   \
-        calendar,                   \
-        pandas as pd,               \
-        numpy as np,                \
-        plotly.graph_objects as go, \
-        requests as rt,             \
-        mlforecast as mlf,          \
-        optuna as opt,              \
-        hydrobr as hbr,             \
-        xml.etree.ElementTree as ET,\
-        utilsforecast.processing as ufp
+import json
+import warnings
 
-from typing import List
+import mlforecast as mlf
+import numpy as np
+import optuna as opt
+import pandas as pd
 
-from datetime import datetime, timedelta
+from plotly.offline import plot
+import plotly.graph_objects as go
 
-from io import BytesIO
-
-from functools import partial
-
+from datetime import datetime
+# from functools import partial
 from plotly.subplots import make_subplots
-
-from lightgbm import LGBMRegressor
-from sklearn.linear_model import LinearRegression
-from sklearn.svm import LinearSVR
 
 # A ser usado apenas para a análise de imputação de dados (ao invés de sempre aplicar o valor médio)
 from sklearn.impute import KNNImputer
 
-from neuralforecast import NeuralForecast
-from neuralforecast.models import LSTM, NBEATSx
-
-from statsmodels.tsa.stattools import acf, pacf
-from statsmodels.tsa.seasonal import seasonal_decompose
-
-from sktime.split import temporal_train_test_split
+from sklearn.tree import DecisionTreeRegressor
 from sktime.param_est.seasonality import SeasonalityACF
 from sktime.param_est.stationarity import StationarityADF
-from sktime.performance_metrics.forecasting import MeanSquaredError, MeanAbsolutePercentageError, MeanAbsoluteError
+from sktime.performance_metrics.forecasting import (
+    MeanAbsoluteError,
+    MeanAbsolutePercentageError,
+    MeanSquaredError,
+)
+
+from sktime.split import temporal_train_test_split
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import (
+    acf,
+    pacf
+)
 
 # Desativar as mensagens de 'warning' que ficam poluindo o output de alguns trechos de código.
 warnings.filterwarnings("ignore")
@@ -50,60 +47,151 @@ opt.logging.set_verbosity(opt.logging.WARNING)
 pd.options.plotting.backend = "plotly"
 
 # Métricas utilizadas
-smape = MeanAbsolutePercentageError(symmetric=True) # Melhor valor possível é 0.0 (SYMMETRIC Mean Absolute Percentage Error)
-rmse = MeanSquaredError(square_root=True) # Quanto menor, melhor
-mae = MeanAbsoluteError() # Quanto menor, melhor
+mape = MeanAbsolutePercentageError(symmetric=False)  # Melhor valor possível é 0.0
+rmse = MeanSquaredError(square_root=True)  # Quanto menor, melhor
+mae = MeanAbsoluteError()  # Quanto menor, melhor
 
-# %% Utilidades
+SHOW_PLOT = False
+SEED = 1984
 
-def carregar_dados(file_name : str,
-                   separator : str = "\t",
-                   adjust : bool = True,
-                   date_column : str = "ds"
-                   ) -> pd.DataFrame:
-    
-    df = pd.read_csv(file_name, sep=separator, index_col=date_column, header=0, parse_dates=[date_column])
+# %% celula 2
+"""
+    Utilidades
 
-    if adjust:
-        df = df.resample('D').first() # deixando a série contínua numa base diária
+    Todas as funções que criei e precisa usar, estão aqui.
+    Desenvolvendo de maneira modular favorece a reprodutibilidade
+"""
 
-    # Deixando ajustado para usar com as libs Nixtla
-    df['unique_id'] = 1
-    df.reset_index(inplace=True)
-
-    return df
-# ============================================================================================ #
-def decomp_series(df) -> None:
+def decomp_series(
+    df: pd.DataFrame,
+    tendencia: bool,
+    sazonalidade: bool,
+    residuo: bool,
+    show: bool = False,
+) -> None:
     # A decomposição das séries temporais ajuda a detectar padrões (tendência, sazonalidade)
     #   e identificar outras informações que podem ajudar na interpretação do que está acontecendo.
 
-    cols = df.drop(columns=['ds', 'unique_id']).columns.to_list()
+    cols = df.drop(columns=["ds", "unique_id"]).columns.to_list()
     for c in cols:
+        
         # Utilizei modelo do tipo "add" (aditivo) pois tem séries com valores 0 (zero).
         # Período de 365 dias porque o que me interessa é capturar padrões anuais.
-        decomp = seasonal_decompose(df[c], period=365, model="add")
+        decomp = seasonal_decompose(
+            df[c],
+            period=365,
+            model="add"
+        )
         fig_decomp = make_subplots(specs=[[{"secondary_y": True}]])
-        fig_decomp.add_trace(go.Scatter(x=df.ds, y=decomp.observed, name='observado', mode='lines', showlegend=True), secondary_y=False)
-        fig_decomp.add_trace(go.Scatter(x=df.ds, y=decomp.trend, name='tendência', mode='lines', showlegend=True), secondary_y=True)
-        fig_decomp.add_trace(go.Scatter(x=df.ds, y=decomp.seasonal, name='sazonalidade', mode='lines', showlegend=True), secondary_y=True)
-        fig_decomp.add_trace(go.Scatter(x=df.ds, y=decomp.resid, name='resíduo', mode='lines', showlegend=True), secondary_y=False)
 
-        fig_decomp.update_yaxes(title=dict(text="observado/resíduo", font=dict(family="system-ui", size=18)), secondary_y=False)
-        fig_decomp.update_yaxes(title=dict(text="tendência/sazonalidade", font=dict(family="system-ui", size=18)), secondary_y=True)
+        fig_decomp.add_trace(
+            go.Scatter(
+                x=df.ds,
+                y=decomp.observed,
+                name="observado",
+                mode="lines",
+                showlegend=True,
+            ),
+            secondary_y=False,
+        )
 
-        fig_decomp.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
+        if tendencia:
+            fig_decomp.add_trace(
+                go.Scatter(
+                    x=df.ds,
+                    y=decomp.trend,
+                    name="tendência",
+                    mode="lines",
+                    showlegend=True,
+                ),
+                secondary_y=True,
+            )
 
-        # fig_decomp.update_traces(hovertemplate=None)
+        if sazonalidade:
+            fig_decomp.add_trace(
+                go.Scatter(
+                    x=df.ds,
+                    y=decomp.seasonal,
+                    name="sazonalidade",
+                    mode="lines",
+                    showlegend=True,
+                ),
+                secondary_y=True,
+            )
 
-        fig_decomp.update_layout(autosize=True, height=700, #hovermode='x unified',
-                                title=dict(text="Decomposição da série temporal: {col}".format(col=c), font=dict(family="system-ui", size=24)))
-        fig_decomp.show()
-# ============================================================================================ #
-def estacionariedade(df, sp) -> None:
+        if residuo:
+            fig_decomp.add_trace(
+                go.Scatter(
+                    x=df.ds,
+                    y=decomp.resid,
+                    name="resíduo",
+                    mode="lines",
+                    showlegend=True,
+                ),
+                secondary_y=False,
+            )
+
+        fig_decomp.update_yaxes(
+            title=dict(
+                text="observado/resíduo",
+                font=dict(family="system-ui", size=18)
+            ),
+            secondary_y=False,
+            zerolinecolor="black",
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig_decomp.update_yaxes(
+            title=dict(
+                text="tendência/sazonalidade",
+                font=dict(family="system-ui", size=18)
+            ),
+            secondary_y=True,
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig_decomp.update_xaxes(
+            title=dict(
+                text="Período",
+                font=dict(family="system-ui", size=18)
+            ),
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig_decomp.update_layout(
+            width=1500,
+            height=700,
+            plot_bgcolor="#c8d4e3",
+            hovermode="x unified",
+            title=dict(
+                text="Decomposição da série temporal: {col}".format(col=c),
+                font=dict(family="system-ui", size=24),
+            ),
+        )
+
+        plot(
+            figure_or_data=fig_decomp,
+            filename="./resultados/trecho_alto/aed/decomposicao_serie_{}".format(c),
+            auto_open=show
+        )
+# =========================================================================== #
+def estacionariedade(
+    df: pd.DataFrame,
+    sp: int
+) -> None:
+
     # Avaliar a estacionariedade de cada uma das séries e a sazonalidade (se houver)
     # Existindo sazonalidade, qual a lag (ou quais lags) se encaixam nesta sazonalidade
-
-    cols = df.drop(columns=['ds', 'unique_id']).columns.to_list()
+    cols = df.drop(columns=["ds", "unique_id"]).columns.to_list()
     for c in cols:
         ts = df[c]
         sty_est = StationarityADF()
@@ -113,1214 +201,2249 @@ def estacionariedade(df, sp) -> None:
         # Este teste de sazonalidade deve ser aplicado a séries estacionárias.
         # Se precisar tornar uma série em estacionária, tem de aplicar diferenciação antes.
         if sty_est.get_fitted_params()["stationary"]:
-            sp_est = SeasonalityACF(candidate_sp=sp, nlags=len(df[c])) # Minha intenção é ter certeza de que existe sazonalidade anual (365 dias)
+            sp_est = SeasonalityACF( # Minha intenção é ter certeza de que existe sazonalidade anual (365 dias)
+                candidate_sp=sp,
+                nlags=len(df[c])
+            )
             sp_est.fit(ts)
             sp_est.get_fitted_params()
             print(c, sp_est.get_fitted_params()["sp_significant"])
-# ============================================================================================ #
-def mapa_correlacao(df) -> None:
-    corr = df.drop(columns=['ds', 'unique_id']).corr()
-    fig = go.Figure()
-    fig.add_trace(go.Heatmap(x=corr.columns, y=corr.columns, z=corr, text=corr.values,
-                            texttemplate = "%{text:.7f}",
-                            textfont = {"size": 14},
-                            colorscale="rainbow",
-                            hovertemplate = "%{y}<br>%{x}</br><extra></extra>"))
-    fig.update_layout(autosize=True, height=700,
-                        yaxis=dict(tickfont=dict(family="system-ui", size=14)),
-                        xaxis=dict(tickfont=dict(family="system-ui", size=14)),
-                        title=dict(text="Mapa de correlação", font=dict(family="system-ui", size=24)))
-    fig.show()
-# ============================================================================================ #
-def plot_linha_tabela(df_merged,
-                      regressor : str,
-                      plot_title : str,
-                      line_color : str,
-                      short_name : str
-                      ) -> None:
+# =========================================================================== #
+def mapa_correlacao(
+    df: pd.DataFrame,
+    medida: str = "dtw",
+    show: bool = False
+) -> None:
 
-    fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
+    if medida == "dtw":
+        from dtaidistance import dtw
 
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.y, mode='lines', name='observado', line=dict(color="#000000", width=4)), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged[regressor], mode='lines', name=short_name, line=dict(color=line_color)), row=1, col=1)
+        dtw_dist = dtw.distance_matrix_fast(df.drop(columns=["ds", "unique_id"]).T.values)
+        
+        df_dtw_dist = pd.DataFrame(
+            data=dtw_dist,
+            index=df.drop(columns=["ds", "unique_id"]).columns.to_list(),
+            columns=df.drop(columns=["ds", "unique_id"]).columns.to_list(),
+        )
 
-    fig.append_trace(go.Table(header=dict(values=["sMAPE", "RMSE", "MAE"], font=dict(size=14), align="left"),
-                                cells=dict(values=[smape(df_merged.y, df_merged[regressor]),
-                                                   rmse(df_merged.y, df_merged[regressor]),
-                                                   mae(df_merged.y, df_merged[regressor])],
-                                        font=dict(size=14),
-                                        height=24,
-                                        align="left")),
-                    row=2, col=1)
+        fig = go.Figure()
 
-    fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-    fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
+        fig.add_trace(
+            go.Heatmap(
+                x=df_dtw_dist.columns,
+                y=df_dtw_dist.columns,
+                z=df_dtw_dist,
+                text=df_dtw_dist.values,
+                texttemplate="%{text:.7f}",
+                textfont={"size": 14},
+                colorscale="rainbow",
+                hovertemplate="%{y}<br>%{x}</br><extra></extra>",
+            )
+        )
 
-    fig.update_layout(autosize=True, height=1000, hovermode='x unified',
-                        title=dict(text=plot_title, font=dict(family="system-ui", size=24)))
-    fig.show()
-# ============================================================================================ #
-def cria_plot_correlacao(serie : pd.Series,
-                         n_lags : int,
-                         plot_pacf : bool = False
-                         ) -> None:
-    corr_array = pacf(serie.dropna(), nlags=n_lags, alpha=0.05) if plot_pacf else acf(serie.dropna(), nlags=n_lags, alpha=0.05)
+        fig.update_yaxes(
+            tickfont=dict(family="system-ui", size=14),
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig.update_xaxes(
+            tickfont=dict(family="system-ui", size=14),
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig.update_layout(
+            width=1500,
+            height=700,
+            title=dict(text="Mapa de correlação (DTW)", font=dict(family="system-ui", size=24)),
+        )
+
+    elif medida == "pearson":
+
+        corr = df.drop(columns=["ds", "unique_id"]).corr()
+
+        fig = go.Figure()
+
+        fig.add_trace(
+            go.Heatmap(
+                x=corr.columns,
+                y=corr.columns,
+                z=corr,
+                text=corr.values,
+                texttemplate="%{text:.7f}",
+                textfont={"size": 14},
+                colorscale="rainbow",
+                hovertemplate="%{y}<br>%{x}</br><extra></extra>",
+            )
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(family="system-ui", size=14),
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig.update_xaxes(
+            tickfont=dict(family="system-ui", size=14),
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
+
+        fig.update_layout(
+            width=1500,
+            height=700,
+            title=dict(
+                text="Mapa de correlação (coeficiente de Pearson)",
+                font=dict(family="system-ui", size=24),
+            ),
+        )
+
+    else:
+        raise Exception("Opção errada. ('dtw' ou 'pearson')")
+
+    plot(
+        figure_or_data=fig,
+        filename="./resultados/trecho_alto/aed/mapa_correlacao_{medida}".format(medida=medida),
+        auto_open=show
+    )
+# =========================================================================== #
+def plot_linha_tabela(
+    df_merged: pd.DataFrame,
+    regressor: str,
+    plot_title: str,
+    line_color: str,
+    short_name: str,
+    show: bool = False,
+) -> None:
+
+    fig = make_subplots(
+        rows=2,
+        cols=1,
+        vertical_spacing=0.2,
+        specs=[[{"type": "scatter"}], [{"type": "table"}]],
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged["ds"],
+            y=df_merged["y"],
+            mode="lines+markers",
+            name="observado",
+            line=dict(color="#000000", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged["ds"],
+            y=df_merged[regressor],
+            mode="lines+markers",
+            name=short_name,
+            line=dict(color=line_color),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.append_trace(
+        go.Table(
+            header=dict(
+                values=[
+                    "MAPE",
+                    "RMSE",
+                    "MAE"
+                ],
+                font=dict(size=14),
+                align="left"
+            ),
+            cells=dict(
+                values=[
+                    mape(df_merged.y, df_merged[regressor]),
+                    rmse(df_merged.y, df_merged[regressor]),
+                    mae(df_merged.y, df_merged[regressor])
+                ],
+                font=dict(size=12),
+                height=24,
+                align="left",
+            ),
+        ),
+        row=2,
+        col=1,
+    )
+
+    fig.update_yaxes(
+        title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)),
+        zerolinecolor="black",
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_xaxes(
+        title=dict(text="Período", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_layout(
+        width=1500,
+        height=1000,
+        hovermode="x unified",
+        plot_bgcolor="#c8d4e3",
+        title=dict(text=plot_title, font=dict(family="system-ui", size=24)),
+    )
+
+    now = datetime.now()
+    plot(
+        figure_or_data=fig,
+        filename="./resultados/{reg}_{dt}".format(
+            reg=regressor,
+            dt=now.strftime("%Y-%m-%d_%H-%M-%S")
+        ),
+        auto_open=show
+    )
+# =========================================================================== #
+def cria_plot_correlacao(
+    serie: pd.Series,
+    n_lags: int,
+    plot_pacf: bool = False,
+    show: bool = False
+) -> None:
+
+    corr_array = (
+        pacf(serie.dropna(), nlags=n_lags, alpha=0.05)
+        if plot_pacf
+        else acf(serie.dropna(), nlags=n_lags, alpha=0.05)
+    )
+
     lower_y = corr_array[1][:, 0] - corr_array[0]
     upper_y = corr_array[1][:, 1] - corr_array[0]
 
     fig = go.Figure()
-    
+
     # Desenha as linhas verticais pretas
-    [fig.add_scatter(x=(x, x), y=(0, corr_array[0][x]), mode='lines', line_color='black', hovertemplate = "<extra></extra>")
-        for x in range(len(corr_array[0]))]
-    
+    [
+        fig.add_scatter(
+            x=(x, x),
+            y=(0, corr_array[0][x]),
+            mode="lines",
+            line_color="black",
+            hovertemplate="<extra></extra>",
+        )
+        for x in range(len(corr_array[0]))
+    ]
+
     # Desenha as bolinhas vermelhas
-    fig.add_scatter(x=np.arange(len(corr_array[0])), y=corr_array[0],
-                    mode='markers', marker_color='red', marker_size=12,
-                    hovertemplate = "x = %{x}<br>y = %{y}<extra></extra>")
-    
+    fig.add_scatter(
+        x=np.arange(len(corr_array[0])),
+        y=corr_array[0],
+        mode="markers",
+        marker_color="red",
+        marker_size=12,
+        hovertemplate="x = %{x}<br>y = %{y}<extra></extra>",
+    )
+
     # Desenha a 'nuvem' clarinha acima do eixo x
-    fig.add_scatter(x=np.arange(len(corr_array[0])), y=upper_y,
-                    mode='lines', line_color='rgba(255,255,255,0)',
-                    hovertemplate = "<extra></extra>")
+    fig.add_scatter(
+        x=np.arange(len(corr_array[0])),
+        y=upper_y,
+        mode="lines",
+        line_color="rgba(255,255,255,0)",
+        hovertemplate="<extra></extra>",
+    )
 
     # Desenha a 'nuvem' clarinha abaixo do eixo x
-    fig.add_scatter(x=np.arange(len(corr_array[0])), y=lower_y,
-                    mode='lines', fillcolor='rgba(32, 146, 230,0.3)', fill='tonexty', line_color='rgba(255,255,255,0)',
-                    hovertemplate = "<extra></extra>")
-    
+    fig.add_scatter(
+        x=np.arange(len(corr_array[0])),
+        y=lower_y,
+        mode="lines",
+        fillcolor="rgba(32, 146, 230,0.3)",
+        fill="tonexty",
+        line_color="rgba(255,255,255,0)",
+        hovertemplate="<extra></extra>",
+    )
+
     fig.update_traces(showlegend=False)
 
-    fig.update_xaxes(range=[-1, n_lags+1])
-    fig.update_yaxes(zerolinecolor='black') # Quando 'y=0' a linha é preta
-    
-    title = 'Autocorrelação Parcial (PACF) para n_lags={n}'.format(n=n_lags) if plot_pacf else 'Autocorrelação (ACF) para n_lags={n}'.format(n=n_lags)
-    fig.update_layout(autosize=True, height=700, title=dict(text=title, font=dict(family="system-ui", size=24)))
-    
-    fig.show()
-# ============================================================================================ #
-def cria_dataframe_futuro(df_futr, df_train, df_test, tp_valor, n_lags, cols) -> pd.DataFrame:
-    if tp_valor == 'ultimo': # Usa o último valor conhecido
+    fig.update_xaxes(
+        range=[-1, n_lags + 1],
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_yaxes(
+        zerolinecolor="black",  # Quando 'y=0' a linha é preta
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    title = (
+        "Autocorrelação Parcial (PACF) para n_lags={n}".format(n=n_lags)
+        if plot_pacf
+        else "Autocorrelação (ACF) para n_lags={n}".format(n=n_lags)
+    )
+    fig.update_layout(
+        width=1500,
+        height=700,
+        plot_bgcolor="#c8d4e3",
+        title=dict(text=title, font=dict(family="system-ui", size=24)),
+    )
+
+    (
+        plot(
+             figure_or_data=fig,
+             filename="./resultados/trecho_alto/aed/plot_pacf",
+             auto_open=show
+        ) if plot_pacf
+        else plot(
+                 figure_or_data=fig,
+                 filename="./resultados/trecho_alto/aed/plot_acf",
+                 auto_open=show
+             )
+    )
+# =========================================================================== #
+def cria_dataframe_futuro(
+    df_futr: pd.DataFrame,
+    df_train: pd.DataFrame,
+    df_test: pd.DataFrame,
+    tp_valor: str,
+    n_lags: int,
+    date_features: list,
+    cols: list,
+) -> pd.DataFrame:
+
+    if tp_valor == "ultimo":  # Usa o último valor conhecido
         for c in cols:
             df_futr[c] = df_train[c].iat[-1]
-    elif tp_valor == 'media': # Usa o valor médio de cada coluna vazão
+
+    elif tp_valor == "media":  # Usa o valor médio de cada coluna vazão
         for c in cols:
             df_futr[c] = df_train[c].mean()
-    elif tp_valor == 'ml':
-        from mlforecast import MLForecast
+
+    elif tp_valor == "ml":
         from xgboost import XGBRegressor
 
-        fcst = MLForecast(
-            models=XGBRegressor(random_state=5),
-            freq='D',
-            lags=[i+1 for i in range(n_lags)],
-            # target_transforms=[Differences([1])], # aplica uma diferenciação pra certificar de lidar com dados sem tendência
-            date_features=['year', 'month', 'quarter', 'dayofyear', 'week']
-        )
-
         for c in cols:
-            df_temp = df_train[['ds', 'unique_id', c]]
-            fcst.fit(df_temp, id_col='unique_id', time_col='ds', target_col=c, static_features=[])
-            df_preds = fcst.predict(h=len(df_futr))
-            df_futr[c] = df_preds['XGBRegressor']
+            fcst = mlf.MLForecast(
+                models=XGBRegressor(seed=5),
+                freq="D",
+                lags=[i + 1 for i in range(n_lags)],
+                date_features=date_features,
+            )
+
+            df_temp = df_train[["ds", "unique_id", c]]
+
+            fcst.fit(
+                df_temp,
+                id_col="unique_id",
+                time_col="ds",
+                target_col=c,
+                static_features=[],
+            )
+
+            df_preds = fcst.predict(h=len(df_futr)).reset_index()  # macetasso pra não dar erro de index
+            df_futr[c] = df_preds["XGBRegressor"]
+
     else:
         raise Exception("Opção inválida! (ultimo | media | ml)")
-            
-    df_futr = pd.merge(left=df_futr, right=df_test.drop(columns=cols+['y']),
-                    on=['ds', 'unique_id'], how='left')
-    
+
+    df_futr = pd.merge(
+        left=df_futr,
+        right=df_test.drop(columns=cols + ["y"]),
+        on=["ds", "unique_id"],
+        how="left",
+    )
+
     return df_futr
-# ============================================================================================ #
-def distribuicao_dados(df_original, df_media, df_knn) -> None:
-    cols = np.asarray(df_original.drop(columns=['ds', 'unique_id']).columns)
+# =========================================================================== #
+def distribuicao_dados(
+    df_original: pd.DataFrame,
+    df_media: pd.DataFrame,
+    df_knn: pd.DataFrame,
+    show: bool = False,
+) -> None:
+
+    cols = np.asarray(df_original.drop(columns=["ds", "unique_id"]).columns)
 
     for c in cols:
-
         fig = go.Figure()
 
-        fig.add_trace(go.Box(
-            y=df_original[c].values,
-            name='original',
-            marker_color='darkblue',
-            jitter=0.5,
-            pointpos=-2,
-            boxpoints='all',
-            boxmean='sd')
+        fig.add_trace(
+            go.Box(
+                y=df_original[c].values,
+                name="original",
+                marker_color="darkblue",
+                jitter=0.5,
+                pointpos=-2,
+                boxpoints="all",
+                boxmean="sd",
             )
-        fig.add_trace(go.Box(
-            y=df_media[c].values,
-            name='média',
-            marker_color='coral',
-            jitter=0.5,
-            pointpos=-2,
-            boxpoints='all',
-            boxmean='sd')
+        )
+
+        fig.add_trace(
+            go.Box(
+                y=df_media[c].values,
+                name="média",
+                marker_color="coral",
+                jitter=0.5,
+                pointpos=-2,
+                boxpoints="all",
+                boxmean="sd",
             )
-        fig.add_trace(go.Box(
-            y=df_knn[c].values,
-            name='kNN',
-            marker_color='olive',
-            jitter=0.5,
-            pointpos=-2,
-            boxpoints='all',
-            boxmean='sd')
+        )
+
+        fig.add_trace(
+            go.Box(
+                y=df_knn[c].values,
+                name="kNN",
+                marker_color="olive",
+                jitter=0.5,
+                pointpos=-2,
+                boxpoints="all",
+                boxmean="sd",
             )
+        )
 
-        fig.update_layout(autosize=True, height=900,
-                          title=dict(text="Distribuição {c}".format(c=c), font=dict(family="system-ui", size=24)))
-        fig.show()
-# ============================================================================================ #
-def get_telemetrica(codEstacao : str,
-                    dataInicio : str,
-                    dataFim : str,
-                    save : bool = False) -> pd.DataFrame:
-    # 1. Fazer a requisião ao servidor e pegar a árvore e a raiz dos dados 
-    params = {'codEstacao':codEstacao, 'dataInicio':dataInicio, 'dataFim':dataFim}
-    server = 'http://telemetriaws1.ana.gov.br/ServiceANA.asmx/DadosHidrometeorologicos'
-    response = rt.get(server, params)
-    tree = ET.ElementTree(ET.fromstring(response.content))
-    root = tree.getroot()
+        fig.update_xaxes(
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
 
-    # 2. Iteração dentro dos elementos do XML procurando os dados que são disponibilizados para a estação
-    list_vazao = []
-    list_data = []
-    list_cota = []
-    list_chuva = []
+        fig.update_yaxes(
+            zerolinecolor="black",
+            mirror=True,
+            ticks="outside",
+            showline=True,
+            linecolor="black",
+        )
 
-    for i in root.iter('DadosHidrometereologicos'):
+        fig.update_layout(
+            width=1500,
+            height=1000,
+            plot_bgcolor="#c8d4e3",
+            title=dict(
+                text="Distribuição {c}".format(c=c),
+                font=dict(family="system-ui", size=24),
+            ),
+        )
 
-        data = i.find('DataHora').text
-        try:
-            vazao = float(i.find('Vazao').text)
-        except TypeError:
-            vazao = i.find('Vazao').text
+        plot(
+            figure_or_data=fig,
+            filename="./resultados/trecho_alto/aed/distribuicao_dados_{}".format(c),
+            auto_open=show
+        )
+# =========================================================================== #
+def plot_feature_importance(
+    model: str,
+    forecaster: mlf.MLForecast,
+    fch: str = "",
+    show: bool = False
+) -> None:
 
-        try:
-            cota = float(i.find('Nivel').text)
-        except TypeError:
-            cota = i.find('Nivel').text
+    if model in ["LinearRegression", "LinearSVR"]:
+        fig = go.Figure(
+            data=[
+                go.Bar(
+                    x=forecaster.ts.features_order_,
+                    y=forecaster.models_[model].coef_,
+                    showlegend=False,
+                )
+            ]
+        )
+    elif model == "LGBMRegressor":
+        fig = go.Figure(
+            data=[
+                go.Bar(
+                    x=forecaster.ts.features_order_,
+                    y=forecaster.models_[model].feature_importances_,
+                    showlegend=False,
+                )
+            ]
+        )
+    else:
+        raise Exception("Esta opção não existe.")
 
-        try:
-            chuva = float(i.find('Chuva').text)
-        except TypeError:
-            chuva = i.find('Chuva').text
+    fig.update_yaxes(
+        title=dict(text="Pesos/Valores", font=dict(family="system-ui", size=18)),
+        zerolinecolor="black",
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-        list_vazao.append(vazao)
-        list_data.append(data)
-        list_cota.append(cota)
-        list_chuva.append(chuva)
+    fig.update_xaxes(
+        title=dict(text="Feature", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-    df = pd.DataFrame([list_data, list_cota, list_chuva, list_vazao]).transpose()
-    df.columns = ['Data', 'Cota', 'Chuva', 'Vazao']
-    df = df.sort_values(by='Data')
-    df = df.set_index('Data')
-    
-    if save == True:
-        df.to_excel(codEstacao+'_dados_tele.xlsx')
-    
-    return df
-# ============================================================================================ #
-def get_convencional(codEstacao : str,
-                     dataInicio : str,
-                     dataFim : str,
-                     tipoDados : int,
-                     nivelConsistencia : int,
-                     save : bool = False) -> pd.DataFrame:
-    """
-        Série Histórica estação - HIDRO.
-        codEstacao : Código Plu ou Flu
-        dataInicio : <YYYY-mm-dd>
-        dataFim : Caso não preenchido, trará até o último dado mais recente armazenado
-        tipoDados : 1-Cotas, 2-Chuvas ou 3-Vazões
-        nivelConsistencia : 1-Bruto ou 2-Consistido
-    """
+    fig.update_layout(
+        width=1500,
+        height=700,
+        plot_bgcolor="#c8d4e3",
+        title=dict(
+            text="Feature importance {m} (fch={fch})".format(m=model, fch=fch),
+            font=dict(family="system-ui", size=24),
+        ),
+    )
 
-    # 1. Fazer a requisião ao servidor e pegar a árvore e a raiz dos dados 
-    params = {'codEstacao':codEstacao, 'dataInicio':dataInicio, 'dataFim':dataFim,
-              'tipoDados':tipoDados, 'nivelConsistencia':nivelConsistencia}
-    
-    server = 'http://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroSerieHistorica'
-    response = rt.get(server, params)
-    tree = ET.ElementTree(ET.fromstring(response.content))
-    root = tree.getroot()
-    
-    # 2. Iteração dentro dos elementos do XML procurando os dados que são disponibilizados para a estação
-    list_data = []
-    list_consistenciaF = []
-    list_month_dates = []
+    now = datetime.now()
+    plot(
+        figure_or_data=fig,
+        filename="./resultados/trecho_alto/feature_importance/feature_importance_{m}_fch{fch}_{dt}".format(
+            m=model,
+            fch=fch,
+            dt=now.strftime("%Y-%m-%d_%H-%M-%S")
+        ),
+        auto_open=show
+    )
+# =========================================================================== #
+def exportar_dict_json(
+    v_dict: dict,
+    pasta: str,
+    nome_arq: str
+) -> None:
 
-    for i in root.iter('SerieHistorica'):
+    json_str = json.dumps(v_dict, indent=4)
+    with open(pasta + nome_arq, "w") as a:
+        a.write(json_str)
+# =========================================================================== #
+def plot_divisao_treino_teste(
+    df_treino: pd.DataFrame,
+    df_teste: pd.DataFrame,
+    col_data: str = "ds",
+    col_plot: str = "y",
+    show: bool = False,
+) -> None:
 
-        consistencia = i.find('NivelConsistencia').text
-        date = i.find('DataHora').text
-        date = datetime.strptime(date, '%Y-%m-%d %H:%M:%S')
-        last_day = calendar.monthrange(date.year, date.month)[1]
-        month_dates = [date + timedelta(days=i) for i in range(last_day)]
-        content = []
-        list_consistencia = []
+    fig = go.Figure()
 
-        for day in range(last_day):
-            if tipoDados == 1:
-                value = f'Cota{day+1:02d}'
-            if tipoDados == 2:
-                value = f'Chuva{day+1:02d}'
-            if tipoDados == 3:
-                value = f'Vazao{day+1:02d}'
-            
-            try:
-                content.append(float(i.find(value).text))
-                list_consistencia.append(int(consistencia))
-            except TypeError:
-                content.append(i.find(value).text)
-                list_consistencia.append(int(consistencia))
-            except AttributeError:
-                content.append(None)
-                list_consistencia.append(int(consistencia))
-        
-        list_data += content
-        list_consistenciaF += list_consistencia
-        list_month_dates += month_dates
-    df = pd.DataFrame([list_month_dates, list_consistenciaF, list_data]).transpose()
+    fig.add_trace(
+        go.Scatter(
+            x=df_treino[col_data],
+            y=df_treino[col_plot],
+            mode="lines",
+            name="treino"
+        )
+    )
 
-    if tipoDados == 1:
-        df.columns = ['Data','Consistencia','Cota']
-    elif tipoDados == 2:
-        df.columns = ['Data','Consistencia','Chuva']
-    else: # Vazão
-        df.columns = ['Data','Consistencia','Vazao']
-    
-    df = df.sort_values(by='Data')
-    df = df.set_index('Data')
+    fig.add_trace(
+        go.Scatter(
+            x=df_teste[col_data],
+            y=df_teste[col_plot],
+            mode="lines",
+            name="teste"
+        )
+    )
 
-    if save == True:
-        df.to_excel(codEstacao + '_dados_conv.xlsx')
-    
-    return df
-# ============================================================================================ #
-def gerar_dados_tele(estacao_principal : str,
-                    outras_estacoes : List[str],
-                    nome_arq : str,
-                    dt_inicio : str,
-                    dt_fim : str,
-                    salvar : bool = False) -> None:
-    """
-            Este método vai pegar o código da 'estacao_principal' (que o usuário já sabe previamente que é uma telemétrica), baixar os dados da estação
-        e concatenar (outer join) com os dados das outras estações telemétricas. Neste método já será realizada a conversão dos dados de 'object' para
-        os tipos de acordo, ou seja, 'float' para os campos numéricos e 'datetime' para os campos de datahora.
-            Como o desejo do trabalho é lidar com dados diários, já aproveita pra fazer a agregação dos dados desta maneira também.
-            Após tudo isso, salvar num arquivo xlsx para usos posteriores.
+    fig.update_yaxes(
+        title=dict(
+            text="Vazão (m³/s) / Precipitação (mm/dia)",
+            font=dict(family="system-ui", size=18)
+        ),
+        zerolinecolor="black",
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-        Parâmetros:
-            estacao_principal : str,
-            outras_estacoes : List[str],
-            nome_arq : str,
-            dt_inicio : str = 'YYYY-mm-dd',
-            dt_fim : str = 'YYYY-mm-dd',
-            salvar : bool = True|False
-    """
+    fig.update_xaxes(
+        title=dict(
+            text="Período",
+            font=dict(family="system-ui", size=18)
+        ),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-    df_result = get_telemetrica(codEstacao=estacao_principal, dataInicio=dt_inicio, dataFim=dt_fim)
+    fig.update_layout(
+        width=1500,
+        height=700,
+        hovermode="x unified",
+        plot_bgcolor="#c8d4e3",
+        title=dict(
+            text="Vazão 'y' (target)",
+            font=dict(family="system-ui", size=24)
+        ),
+    )
 
-    df_result.index = pd.to_datetime(df_result.index)
-    df_result.Cota = pd.to_numeric(df_result.Cota, errors='coerce')
-    df_result.Chuva = pd.to_numeric(df_result.Chuva, errors='coerce')
-    df_result.Vazao = pd.to_numeric(df_result.Vazao, errors='coerce')
+    plot(
+        figure_or_data=fig,
+        filename="./resultados/trecho_alto/aed/divisao_treino_teste_{c}".format(c=col_plot),
+        auto_open=show
+    )
+# =========================================================================== #
+# %% celula 3
+"""
+    Carregando e imputando dados
+"""
 
-    df_result = df_result.resample('D').agg({'Cota': 'mean', 'Chuva': 'sum', 'Vazao': 'mean'})
+df = pd.read_excel(
+    io="alto_rio_doce_final.xlsx",
+    sheet_name=0,
+    index_col=0,
+    header=0,
+    parse_dates=["Data"],
+)
 
-    df_result.columns = ['t_ct_'+str(estacao_principal), 't_cv_'+str(estacao_principal), 't_vz_'+str(estacao_principal)]
+# %% celula 4
+"""
+    Só reordenando a posição das colunas pra ficar mais fácil de ler e entender
+"""
 
-    # Agora que já tenho os dados da estação que considero principal na análise (target)
-    #   vou agregar com os dados das demais estações
+df = df[["c_vz_56425000", "t_cv_56425000", "t_cv_56338500", "t_cv_56338080",
+         "t_cv_56110005", "t_cv_56337200", "t_cv_56337500", "t_vz_56338500",
+         "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"]]
 
-    for e in outras_estacoes:
-        df_temp = get_telemetrica(codEstacao=e, dataInicio=dt_inicio, dataFim=dt_fim)
-
-        # Convertendo os dados
-        df_temp.index = pd.to_datetime(df_temp.index)
-        df_temp.Cota = pd.to_numeric(df_temp.Cota, errors='coerce')
-        df_temp.Chuva = pd.to_numeric(df_temp.Chuva, errors='coerce')
-        df_temp.Vazao = pd.to_numeric(df_temp.Vazao, errors='coerce')
-
-        # Para as telemétricas já agrego aqui mesmo
-        df_temp = df_temp.resample('D').agg({'Cota': 'mean', 'Chuva': 'sum', 'Vazao': 'mean'})
-
-        # Ajeito os nomes das colunas pra conter de qual estacao os dado veio
-        df_temp.columns = ['t_ct_'+e, 't_cv_'+e, 't_vz_'+e]
-
-        df_result = pd.concat([df_result, df_temp], axis=1)
-
-    if salvar:
-        df_result.to_excel(nome_arq+'_dados_tele.xlsx')
-# ============================================================================================ #
-def gerar_dados_conv(estacao_principal : str,
-                    outras_estacoes : List[str],
-                    nome_arq : str,
-                    dt_inicio : str,
-                    dt_fim : str,
-                    tp_dados : int,
-                    nvl_consistencia : str,
-                    drop_consistencia : bool = True, # Remover a coluna "NivelConsistência". Ela será irrelevante, até segunda ordem.
-                    salvar : bool = False) -> None:
-    """
-            Este método vai pegar o código da 'estacao_principal' (que o usuário já sabe previamente que é uma convencional), baixar os dados da estação
-        e concatenar (outer join) com os dados das outras estações convencionais. Neste método já será realizada a conversão dos dados de 'object' para
-        os tipos de acordo, ou seja, 'float' para os campos numéricos e 'datetime' para os campos de datahora.
-            Como o desejo do trabalho é lidar com dados diários, já aproveita pra fazer a agregação dos dados desta maneira também.
-            Após tudo isso, salvar num arquivo xlsx para usos posteriores.
-
-        Parâmetros:
-            estacao_principal : str,
-            outras_estacoes : List[str],
-            nome_arq : str,
-            dt_inicio : str = 'YYYY-mm-dd',
-            dt_fim : str = 'YYYY-mm-dd',
-            tp_dados : int (1-cota | 2-chuva | 3-vazao),
-            nvl_consistencia : int (1-bruto | 2-consistido),
-            drop_consistencia : bool = True, (Remover a coluna "NivelConsistência". Ela será irrelevante, até segunda ordem)
-            salvar : bool = False
-    """
-
-    df_result = get_convencional(codEstacao=estacao_principal, dataInicio=dt_inicio, dataFim=dt_fim, tipoDados=tp_dados, nivelConsistencia=nvl_consistencia)
-
-    df_result.index = pd.to_datetime(df_result.index)
-
-    if drop_consistencia:
-        df_result.drop(columns=['Consistencia'], inplace=True)
-
-    if tp_dados == 1:
-        df_result.Cota = pd.to_numeric(df_result.Cota, errors='coerce')
-        df_result = df_result.resample('D').agg({'Cota': 'mean'})
-        df_result.columns = ['c_ct_'+str(estacao_principal)]
-    elif tp_dados == 2:
-        df_result.Chuva = pd.to_numeric(df_result.Chuva, errors='coerce')
-        df_result = df_result.resample('D').agg({'Chuva': 'sum'})
-        df_result.columns = ['c_cv_'+str(estacao_principal)]
-    else: # Vazão
-        df_result.Vazao = pd.to_numeric(df_result.Vazao, errors='coerce')
-        df_result = df_result.resample('D').agg({'Vazao': 'mean'})
-        df_result.columns = ['c_vz_'+str(estacao_principal)]
-
-    # Agora que já tenho os dados da estação que considero principal na análise (target)
-    #   vou agregar com os dados das demais estações
-
-    for e in outras_estacoes:
-        df_temp = get_convencional(codEstacao=e, dataInicio=dt_inicio, dataFim=dt_fim, tipoDados=tp_dados, nivelConsistencia=nvl_consistencia)
-
-        # Convertendo os dados
-        df_temp.index = pd.to_datetime(df_temp.index)
-
-        if drop_consistencia:
-            df_temp.drop(columns=['Consistencia'], inplace=True)
-
-        if tp_dados == 1:
-            df_temp.Cota = pd.to_numeric(df_temp.Cota, errors='coerce')
-            df_temp = df_temp.resample('D').agg({'Cota': 'mean'})
-            df_temp.columns = ['c_ct_'+str(e)]
-        elif tp_dados == 2:
-            df_temp.Chuva = pd.to_numeric(df_temp.Chuva, errors='coerce')
-            df_temp = df_temp.resample('D').agg({'Chuva': 'sum'})
-            df_temp.columns = ['c_cv_'+str(e)]
-        else: # Vazão
-            df_temp.Vazao = pd.to_numeric(df_temp.Vazao, errors='coerce')
-            df_temp = df_temp.resample('D').agg({'Vazao': 'mean'})
-            df_temp.columns = ['c_vz_'+str(e)]
-
-        df_result = pd.concat([df_result, df_temp], axis=1)
-
-    if salvar:
-        if tp_dados == 1:
-            df_result.to_excel(nome_arq + '_dados_cota_conv.xlsx')
-        elif tp_dados == 2:
-            df_result.to_excel(nome_arq + '_dados_chuva_conv.xlsx')
-        else:
-            df_result.to_excel(nome_arq + '_dados_vazao_conv.xlsx')
-
-# %% Carregando e imputando os dados
-
-df = pd.read_excel('alto_rio_doce_final.xlsx', sheet_name=0, index_col=0, header=0, parse_dates=['Data'])
-
-# Reordenando a posição das colunas pra ficar mais fácil de ler e entender
-df = df[['c_vz_56425000', 't_cv_56425000', 't_cv_56338500', 't_cv_56338080', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500', 't_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500']]
-
-# Deixando o DataFrame no padrão que a lib MLForecast entende
-df['unique_id'] = 1
+# Deixando o DataFrame no padrão que a lib MLForecast obriga/aceita
+df["unique_id"] = 1
 df = df.reset_index()
-df = df.rename(columns={'Data' : 'ds',
-                        'c_vz_56425000' : 'y'})
+df = df.rename(columns={"Data": "ds", "c_vz_56425000": "y"})
 
-# %% Preenchendo com o KNNImputer
+# %% celula 5
+"""
+    Percentual de dados faltantes, por coluna
+"""
 
-# Recomendam aplicar um scaling antes de imputar com o KNNImputer, mas nos testes que realizei deu nenhuma diferença nos resultados
-# Então vou reduzir a engenharia de programação e não usar scaling
+print(100 * df.drop(columns=["ds", "unique_id"]).isna().sum() / len(df))
 
-imputer = KNNImputer(n_neighbors=7, weights='distance')
-df_knn = pd.DataFrame(imputer.fit_transform(df.drop(columns=['ds', 'unique_id'])), columns=df.drop(columns=['ds', 'unique_id']).columns)
-df_knn = pd.DataFrame(df_knn, columns=df.drop(columns=['ds', 'unique_id']).columns)
-df_knn = pd.concat([df[['ds', 'unique_id']], df_knn], axis=1)
+# %% celula 6
+"""
+    Preenchendo com a média
+"""
 
-# %% Vou utilizar os dados advindos do KNNImputer. Os dados ficaram melhor distribuídos utilizando essa técnica.
-# Aproveito para remover também a coluna 't_cv_56338080'. A distribuição dos dados nesta coluna continua muito ruim.
+df_media = df.fillna(df.mean())
 
-df_knn = df_knn.drop(columns=['t_cv_56338080'])
+# %% celula 7
+"""
+    Preenchendo com o KNNImputer
+"""
+# Recomendam aplicar um scaling antes de imputar com o KNNImputer,
+# mas nos testes que realizei, deu nenhuma diferença nos resultados.
+# Então vou reduzir a engenharia de programação e NÃO usar scaling
 
-# %% Separando dados para 'X' e 'y'
+imputer = KNNImputer(
+    n_neighbors=14,
+    weights="distance"
+)
+
+df_knn = pd.DataFrame(
+    data=imputer.fit_transform(df.drop(columns=["ds", "unique_id"])),
+    columns=df.drop(columns=["ds", "unique_id"]).columns,
+)
+
+df_knn = pd.DataFrame(
+    data=df_knn,
+    columns=df.drop(columns=["ds", "unique_id"]).columns
+)
+
+df_knn = pd.concat(
+    [df[["ds", "unique_id"]], df_knn],
+    axis=1
+)
+
+# %% celula 8
+"""
+    Quantos '0' existem nas colunas de vazão
+    O percentual, no caso.
+"""
+
+cols = ["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"]
+
+for c in cols:
+    print(100 * (df_knn[c] == 0).sum() / len(df_knn))
+
+# Eu pensei que tivesse mais zero. Essa quantidade, para as colunas de vazão, até que tá ok.
+
+# %% celula 9
+"""
+    Distribuição comparada
+"""
+
+distribuicao_dados(
+    df_original=df,
+    df_media=df_media,
+    df_knn=df_knn,
+    show=SHOW_PLOT
+)
+
+# %% celula 10
+"""
+    Essa coluna tá ruim demais, vou retirar.
+    Maioria dos valores está 'colada' no 0.
+"""
+
+df_knn = df_knn.drop(columns=["t_cv_56338080"])
+df_knn.columns
+
+# %% celula 11
+"""
+    Separando dados para 'X' e 'y'
+"""
+
 # Não sei se vai ser necessário usá-los, mas já deixo aqui pra caso precise
 
-df_X = df_knn.drop(columns=['y'])
-df_y = df_knn[['ds', 'y', 'unique_id']]
+df_X = df_knn.drop(columns=["y"], axis=1)
+df_y = df_knn[["ds", "y", "unique_id"]]
 
-# %% Análise exploratória dos dados
+# %% celula 12
+"""
+    ANÁLISE EXPLORATÓRIA DOS DADOS
+"""
 
-# Decomposição das Séries Temporais
+# %% celula 13
+"""
+    Decomposição das Séries Temporais
+"""
+
 # A decomposição das séries temporais ajuda a detectar padrões (tendência, sazonalidade)
-#   e identificar outras informações que podem ajudar na interpretação do que está acontecendo.
-decomp_series(df=df_knn)
+# e identificar outras informações que podem ajudar na interpretação do que está acontecendo.
+# Executei a tarefa no atributo "df" pois isso me garante que estou tratando dos dados originais,
+# sem alteração nenhuma, vindos do arquivo CSV.
 
-# Estacionariedade
-estacionariedade(df=df_knn, sp=365)
+decomp_series(
+    df=df_knn,
+    tendencia=True,
+    sazonalidade=False,
+    residuo=False,
+    show=SHOW_PLOT
+)
+
+# %% celula 14
+"""
+    Estacionariedade
+"""
+
+estacionariedade(
+    df=df_knn,
+    sp=365
+)
+
 # A série 't_vz_56337500' é estacionária, contudo, na lag 365 ela não apresenta sazonalidade.
 
-# Correlação entre as séries
-mapa_correlacao(df=df_knn)
+# %% celula 15
+"""
+    Correlação entre as séries
+"""
 
-# %% Preferi jogar os dados alterados para um novo DataFrame porque se precisar voltar no DataFrame inicial, não precisará regarregar o arquivo
+mapa_correlacao(
+    df=df_knn,
+    medida="dtw",
+    show=SHOW_PLOT
+)
+
+# %% celula 16
+# Usando o sweetviz para avaliar
+# import sweetviz as sv
+# analyze_report = sv.analyze(df_knn)
+# analyze_report.show_html('analyze.html', open_browser=True)
+
+# Apresentando os resultados (serve apenas para usar no Google Colab)
+# import IPython
+# IPython.display.HTML('analyze.html')
+# %% celula 17
+# Preferi jogar os dados alterados para um novo DataFrame porque se precisar voltar no DataFrame inicial,
+# não precisará regarregar o arquivo
+
 df_aux = df_knn.copy()
 
-# %% Análise de Autocorrelação
+# %% celula 18
 
-# Me interessa saber a sazonalidade da variável-alvo, a vazão
-cria_plot_correlacao(serie=df_aux.y, n_lags=90, plot_pacf=False)
-# É possível plotar para mais lags, mas aí o gráfico fico horroroso demais!!!
+# Uma conferida antes de continuar com o trabalho
+mapa_correlacao(
+    df=df_aux,
+    show=SHOW_PLOT
+)
 
-cria_plot_correlacao(serie=df_aux['y'], n_lags=90, plot_pacf=True)
+# %% celula 19
+"""
+    Análise de Autocorrelação - ACF
+"""
 
-# %% Gerando os gráficos das features em contraste com a vazão y (target).
-# Gerando os gráficos de vazão em conjunto com a vazão y (target) e desta com as chuvas também.
-# Minha intenção aqui é verificar, visualmente, as influências que eventualmente possam ter, de acordo com o período do ano.<br/>
-# Não é, digamos, muito científico, mas ajuda a compreender o comportamento das séries temporais.
+# Me interessa saber a sazonalidade da variável-alvo, a vazão "y"
+cria_plot_correlacao(
+    serie=df_aux.y,
+    n_lags=500,
+    plot_pacf=False,
+    show=SHOW_PLOT
+)
 
-fig_vazoes = make_subplots(rows=2, cols=1, subplot_titles=("variável endógena (vazão)", "variáveis exógenas (vazão)"))
+# Na lag 365 o gráfico volta a descer.
+# Isso nos dá uma visão da sazonalidade da série, que é de 365 dias
 
-fig_vazoes.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['y'], name='vazao_y', mode='lines', showlegend=True, line=dict(color="#000000", width=2)), row=1, col=1)
-fig_vazoes.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_vz_56338500'], name='t_vz_56338500', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_vazoes.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_vz_56110005'], name='t_vz_56110005', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_vazoes.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_vz_56337200'], name='t_vz_56337200', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_vazoes.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_vz_56337500'], name='t_vz_56337500', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
+# %% celula 20
+"""
+    Análise de Autocorrelação - PACF
+"""
 
-fig_vazoes.update_yaxes(title=dict(text="m³/s", font=dict(family="system-ui", size=18)), row=1, col=1)
-fig_vazoes.update_yaxes(title=dict(text="m³/s", font=dict(family="system-ui", size=18)), row=2, col=1)
+# vazoes = ['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500']
+# chuvas = ['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500']
 
-fig_vazoes.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)), row=1, col=1)
-fig_vazoes.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)), row=2, col=1)
+cria_plot_correlacao(
+    serie=df_aux["y"],
+    n_lags=15,
+    plot_pacf=True,
+    show=SHOW_PLOT
+)
 
-fig_vazoes.update_layout(autosize=True, height=1000,
-                         title=dict(text="Vazões", font=dict(family="system-ui", size=24)))
-fig_vazoes.show()
+# Dá pra ver que depois de 2 lags, ocorre um drop no gráfico.
+# Isso nos dá um indício de quantas lags usar em "look_back".
+# Se fosse um modelo tipo ARIMA a ser utilizado, ele seria AR(2)
 
-##########
+# %% celula 21
+"""
+    Relação entre as variáveis
+"""
 
-fig_chuvas = make_subplots(rows=2, cols=1, subplot_titles=("variável endógena (vazão)", "variáveis exógenas (chuva)"))
+vazoes = ["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"]
 
-fig_chuvas.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['y'], name='vazao_y', mode='lines', showlegend=True, line=dict(color="#000000", width=2)), row=1, col=1)
-fig_chuvas.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_cv_56425000'], name='t_cv_56425000', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_chuvas.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_cv_56338500'], name='t_cv_56338500', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_chuvas.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_cv_56110005'], name='t_cv_56110005', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_chuvas.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_cv_56337200'], name='t_cv_56337200', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
-fig_chuvas.add_trace(go.Scatter(x=df_aux['ds'], y=df_aux['t_cv_56337500'], name='t_cv_56337500', mode='lines', showlegend=True, line=dict(width=1)), row=2, col=1)
+for v in vazoes:
+    fig = go.Figure()
 
-fig_chuvas.update_yaxes(title=dict(text="m³/s", font=dict(family="system-ui", size=18)), row=1, col=1)
-fig_chuvas.update_yaxes(title=dict(text="mm/dia", font=dict(family="system-ui", size=18)), row=2, col=1)
+    fig.add_trace(
+        go.Scatter(
+            x=df_aux[v],
+            y=df_aux["y"],
+            mode="markers",
+            line=dict(color="blue"),
+            hovertemplate="eixo_x: %{x}<br>eixo_y: %{y}</br><extra></extra>",
+            showlegend=False,
+        )
+    )
 
-fig_chuvas.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)), row=1, col=1)
-fig_chuvas.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)), row=2, col=1)
+    fig.update_xaxes(
+        title=dict(
+            text=df_aux[v].name, 
+            font=dict(family="system-ui", size=18)
+        ),
+        zerolinecolor="black",
+        showspikes=True,
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-fig_chuvas.update_layout(autosize=True, height=1000, title_text="Chuvas")
-fig_chuvas.show()
+    fig.update_yaxes(
+        title=dict(
+            text=df_aux["y"].name,
+            font=dict(family="system-ui", size=18)
+        ),
+        zerolinecolor="black",
+        showspikes=True,
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-# %% Análise de delay
+    fig.update_layout(
+        width=1500,
+        height=700,
+        hovermode="closest",
+        plot_bgcolor="#c8d4e3",
+        title=dict(
+            text="Relação entre as variáveis 'y' e '{v}'".format(v=v),
+            font=dict(family="system-ui", size=24),
+        ),
+    )
 
-# PRECISA SER SÉRIES NA MESMA ESCALA
-# ISSO NÃO VAI FUNCIONAR DO JEITO QUE ESTOU PENSANDO
+    plot(
+        figure_or_data=fig,
+        auto_open=SHOW_PLOT,
+        filename="./resultados/trecho_alto/aed/relacao_y_{v}".format(v=v)
+    )
 
-# from scipy.spatial.distance import euclidean
-# from fastdtw import fastdtw
+# ============================================================================ #
 
-# # Calcula a distância dinâmica entre as séries
-# distance, path = fastdtw(df_aux.y, df_aux.chuva, dist=euclidean)
+chuvas = ["t_cv_56425000", "t_cv_56338500", "t_cv_56110005", "t_cv_56337200", "t_cv_56337500"]
 
-# print(f"Distância dinâmica entre as séries: {distance}")
+for c in chuvas:
+    fig = go.Figure()
 
-# %% Separação dos dados
+    fig.add_trace(
+        go.Scatter(
+            x=df_aux[c],
+            y=df_aux["y"],
+            mode="markers",
+            line=dict(color="green"),
+            hovertemplate="eixo_x: %{x}<br>eixo_y: %{y}</br><extra></extra>",
+            showlegend=False,
+        )
+    )
 
-df_train, df_test = temporal_train_test_split(df_aux, test_size=0.2, anchor="start")
+    fig.update_yaxes(
+        title=dict(
+            text=df_aux["y"].name,
+            font=dict(family="system-ui", size=18)
+        ),
+        zerolinecolor="black",
+        showspikes=True,
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-# %% Só precisa apresentar o gráfico para a coluna alvo, a vazão y.
+    fig.update_xaxes(
+        title=dict(
+            text=df_aux[c].name,
+            font=dict(family="system-ui", size=18)
+        ),
+        zerolinecolor="black",
+        showspikes=True,
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
 
-fig = go.Figure()
+    fig.update_layout(
+        width=1500,
+        height=700,
+        hovermode="closest",
+        plot_bgcolor="#c8d4e3",
+        title=dict(
+            text="Relação entre as variáveis 'y' e '{c}'".format(c=c),
+            font=dict(family="system-ui", size=24),
+        ),
+    )
 
-fig.add_trace(go.Scatter(x=df_train['ds'], y=df_train['y'], mode='lines', name='treino'))
-fig.add_trace(go.Scatter(x=df_test['ds'], y=df_test['y'], mode='lines', name='teste'))
+    plot(
+        figure_or_data=fig,
+        auto_open=SHOW_PLOT,
+        filename="./resultados/trecho_alto/aed/relacao_y_{c}".format(c=c)
+    )
 
-fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
+# %% celula 22
+"""
+    Análise de delay
+"""
 
-fig.update_layout(autosize=True, height=700, hovermode="x unified",
-                  title=dict(text="Vazão 'y' (target)", font=dict(family="system-ui", size=24)))
+import matplotlib.pyplot as plt
+from dtaidistance import dtw
+from dtaidistance import dtw_visualisation as dtw_vis
+
+dtw_dist = dtw.distance_matrix_fast(df_aux.drop(columns=["ds", "unique_id"]).T.values)
+
+df_dtw_dist = pd.DataFrame(
+    data=dtw_dist,
+    index=df_aux.drop(columns=["ds", "unique_id"]).columns.to_list(),
+    columns=df_aux.drop(columns=["ds", "unique_id"]).columns.to_list(),
+)
+
+fig, axs = plt.subplots(
+    nrows=2,
+    ncols=1,
+    figsize=(2560 / 96, 1440 / 96),
+)
+
+path = dtw.warping_path(
+    from_s=df_aux["t_vz_56338500"].tail(60).T.values,
+    to_s=df_aux["y"].tail(60).T.values,
+)
+
+dtw_vis.plot_warping(
+    s1=df_aux["t_vz_56338500"].tail(60).T.values,
+    s2=df_aux["y"].tail(60).T.values,
+    path=path,
+    fig=fig,
+    axs=axs,
+    series_line_options={
+        "linewidth": 3.0,
+        "color": "blue",
+        "alpha": 0.5
+    },
+    warping_line_options={
+        "linewidth": 1.0,
+        "color": "red",
+        "alpha": 1.0
+    },
+)
+
+axs[1].set_xlabel("Lags")
+axs[0].set_ylabel("Vazão ($m^3$/s) - t_vz_56338500")
+axs[1].set_ylabel("Vazão ($m^3$/s) - y")
 fig.show()
 
-# %% Estas variáveis serão empregadas tanto para os modelos de ML quanto para as redes de DL
+# %% celula 23
+"""
+    Granger-causality
+"""
 
-look_back = 7 # Lags a serem utilizadas.
-fch_v = [3, 5, 7, 10, 15, 30, 60, 90] # Horizonte de Previsão (como a frequência dos dados é diária, isso significa "fch" dias)
+from statsmodels.tsa.stattools import grangercausalitytests
 
-# %% MLForecast
-# As vazões exógenas futuras serão geradas por previsão de um modelo de ML
+# vazões ['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500']
+# chuvas ['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500']
 
-# Modelos não-otimizados
+df_granger = pd.DataFrame()
+df_granger = df_aux.drop(columns=["ds", "unique_id"]).diff(1)  # aplica essa diferenciação pra remover qq efeito de tendência
+df_granger = df_granger.dropna()
+grangercausalitytests(
+    x=df_granger[["y", "t_cv_56337500"]].tail(30),
+    maxlag=7,
+    verbose=True
+)
 
-models = [LGBMRegressor(random_state=5), # usando 'gbdt' - Gradient Boosting Decision Tree
-          LinearRegression(),
-          LinearSVR(random_state=5)]
+# %% celula 24
+"""
+    Variáveis globais
+"""
 
-fcst = mlf.MLForecast(models=models, freq='D',
-                      lags=[i+1 for i in range(look_back)],
-                      date_features=['year', 'month', 'quarter', 'dayofyear', 'week'])
+look_back = 2  # Lags a serem utilizadas. Retirei esse número do gráfico PACF.
+fh_v = [3, 5, 7, 10, 15]  # Horizonte de Previsão (como a frequência dos dados é diária, isso significa "fch" dias)
+pasta_resultados = "./resultados/trecho_alto/"
+fh_artigo = [1, 3, 7]  # Horizonte de Previsão inspirado no artigo da Alemanha
+intervalos_previsao = [50, 95]
 
-fcst.fit(df_train, static_features=[])
+# %% celula 25
+"""
+    Separação dos dados
+"""
 
-for f in fch_v:
-    df_test_futr = cria_dataframe_futuro(df_futr=fcst.make_future_dataframe(h=f),
-                                        df_train=df_train,
-                                        df_test=df_test,
-                                        tp_valor='ml',
-                                        n_lags=look_back,
-                                        cols=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'])
+# Criação de um conjunto de validação de apenas 30 registros (último mês de dados na base de dados)
+# Será com este conjunto que as previsões serão realizadas.
+# Nos conjuntos de treino/teste farei a otimização da pilha de modelos e gerarei os dados de input para o meta-regressor
+
+df_valid = df_aux.tail(30).copy()
+
+df_aux_crpd = df_aux.drop(index=df_valid.index)
+
+df_train, df_test = temporal_train_test_split(
+    df_aux_crpd,
+    test_size=0.2,
+    anchor="start"
+)
+
+plot_divisao_treino_teste(
+    df_treino=df_train,
+    df_teste=df_test,
+    col_data="ds",
+    col_plot="y",
+    show=SHOW_PLOT
+)
+
+# %% celula 26
+"""
+    StatsForecast - SeasonalNaive (baseline)
     
-    df_preds = fcst.predict(h=f, X_df=df_test_futr)
-    df_joined = pd.merge(left=df_preds, right=df_test[['ds', 'y']], on=['ds'], how='left')
+    Isso não é um preditor de fato. Ao menos, não se considera assim.
+    Serve como uma baseline a superar.
+"""
+
+from statsforecast import StatsForecast
+from statsforecast.models import SeasonalNaive
+
+for f in fh_v:
+
+    modelo = SeasonalNaive(season_length=365)
+
+    stfc = StatsForecast(
+        df=df_train,
+        models=[modelo],
+        freq="D",
+        n_jobs=-1
+    )
+
+    df_preds = stfc.forecast(
+        h=f,
+        level=intervalos_previsao)
+
+    df_merged_naive = pd.merge(
+        left=df_preds,
+        right=df_test[['ds', 'unique_id', 'y']],
+        how="left",
+        on=['ds', 'unique_id']
+    )
 
     metrics = {}
-    metrics['LGBMRegressor'] = {'sMAPE': smape(df_joined.y, df_joined.LGBMRegressor),
-                                'RMSE': rmse(df_joined.y, df_joined.LGBMRegressor),
-                                'MAE' : mae(df_joined.y, df_joined.LGBMRegressor)}
-    metrics['LinearRegression'] = {'sMAPE': smape(df_joined.y, df_joined.LinearRegression),
-                                   'RMSE': rmse(df_joined.y, df_joined.LinearRegression),
-                                   'MAE' : mae(df_joined.y, df_joined.LinearRegression)}
-    metrics['LinearSVR'] = {'sMAPE': smape(df_joined.y, df_joined.LinearSVR),
-                            'RMSE': rmse(df_joined.y, df_joined.LinearSVR),
-                            'MAE' : mae(df_joined.y, df_joined.LinearSVR)}
-    df_tbl_v = pd.DataFrame(metrics).T.reset_index(names="Modelo")
+    metrics[modelo.alias] = {
+        "MAPE": mape(df_merged_naive["y"], df_merged_naive[modelo.alias]),
+        "RMSE": rmse(df_merged_naive["y"], df_merged_naive[modelo.alias]),
+        "MAE": mae(df_merged_naive["y"], df_merged_naive[modelo.alias]),
+    }
 
-    # ============================================================================ #
+    metrics[modelo.alias+"-lo-50"] = {
+        "MAPE": mape(df_merged_naive["y"], df_merged_naive[modelo.alias+"-lo-50"]),
+        "RMSE": rmse(df_merged_naive["y"], df_merged_naive[modelo.alias+"-lo-50"]),
+        "MAE": mae(df_merged_naive["y"], df_merged_naive[modelo.alias+"-lo-50"]),
+    }
 
-    fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
+    metrics[modelo.alias+"-hi-50"] = {
+        "MAPE": mape(df_merged_naive["y"], df_merged_naive[modelo.alias+"-hi-50"]),
+        "RMSE": rmse(df_merged_naive["y"], df_merged_naive[modelo.alias+"-hi-50"]),
+        "MAE": mae(df_merged_naive["y"], df_merged_naive[modelo.alias+"-hi-50"]),
+    }
 
-    fig.add_trace(go.Scatter(x=df_joined.ds, y=df_joined.y, mode='lines', name='observado', line=dict(color="black", width=4)), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_joined.ds, y=df_joined.LGBMRegressor, mode='lines', name='LGBM', line=dict(color="red")), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_joined.ds, y=df_joined.LinearRegression, mode='lines', name='LR', line=dict(color="darkviolet")), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_joined.ds, y=df_joined.LinearSVR, mode='lines', name='LinearSVR', line=dict(color="green")), row=1, col=1)
-    
-    fig.append_trace(go.Table(header=dict(values=df_tbl_v.columns.to_list(), font=dict(size=14), align="center"),
-                                    cells=dict(values=df_tbl_v.T, font=dict(size=14), height=24, align="left")),
-                            row=2, col=1)
-    
-    fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-    fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
-    
+    metrics[modelo.alias+"-lo-95"] = {
+        "MAPE": mape(df_merged_naive["y"], df_merged_naive[modelo.alias+"-lo-95"]),
+        "RMSE": rmse(df_merged_naive["y"], df_merged_naive[modelo.alias+"-lo-95"]),
+        "MAE": mae(df_merged_naive["y"], df_merged_naive[modelo.alias+"-lo-95"]),
+    }
+
+    metrics[modelo.alias+"-hi-95"] = {
+        "MAPE": mape(df_merged_naive["y"], df_merged_naive[modelo.alias+"-hi-95"]),
+        "RMSE": rmse(df_merged_naive["y"], df_merged_naive[modelo.alias+"-hi-95"]),
+        "MAE": mae(df_merged_naive["y"], df_merged_naive[modelo.alias+"-hi-95"]),
+    }
+
+    df_tbl = pd.DataFrame(metrics).T.reset_index(names="Modelo")  # Usado para preencher a tabela com as métricas
+
+    fig = make_subplots(
+        rows=2,
+        cols=1,
+        vertical_spacing=0.2,
+        specs=[[{"type": "scatter"}], [{"type": "table"}]],
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged_naive["ds"],
+            y=df_merged_naive[modelo.alias+"-hi-95"],
+            mode="lines+markers",
+            name="SN-hi-95",
+            line=dict(color="green"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged_naive["ds"],
+            y=df_merged_naive[modelo.alias+"-lo-95"],
+            mode="lines+markers",
+            name="SN-lo-95",
+            fill="tonexty",
+            line=dict(color="green"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged_naive["ds"],
+            y=df_merged_naive[modelo.alias+"-hi-50"],
+            mode="lines+markers",
+            name="SN-hi-50",
+            line=dict(color="blue"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged_naive["ds"],
+            y=df_merged_naive[modelo.alias+"-lo-50"],
+            mode="lines+markers",
+            name="SN-lo-50",
+            fill="tonexty",
+            line=dict(color="blue"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged_naive["ds"],
+            y=df_merged_naive[modelo.alias],
+            mode="lines+markers",
+            name="SN",
+            line=dict(color="magenta", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_merged_naive["ds"],
+            y=df_merged_naive["y"],
+            mode="lines+markers",
+            name="observado",
+            line=dict(color="black", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Table(
+            header=dict(
+                values=df_tbl.columns.to_list(),
+                font=dict(size=14),
+                align="center"
+            ),
+            cells=dict(
+                values=df_tbl.T,
+                font=dict(size=12),
+                height=24,align="left"
+            ),
+        ),
+        row=2,
+        col=1,
+    )
+
+    fig.update_yaxes(
+        title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_xaxes(
+        title=dict(text="Período", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
     fig.update_traces(hovertemplate=None, row=1, col=1)
-    
-    fig.update_layout(width=1500, height=1000, hovermode='x unified',
-                                 title=dict(text="Modelos de M.L. não otimizados (fch = {f})".format(f=f),
-                                            font=dict(family="system-ui", size=24)))
-    
-    fig.write_image("./resultados/ml/fch{fh}/naoopt/resultado.png".format(fh=f))
-    # fig.show()
 
-# %% Otimizando os modelos
+    fig.update_layout(
+        width=1500,
+        height=1000,
+        plot_bgcolor="#c8d4e3",
+        hovermode="x unified",
+        title=dict(
+            text="{md} (fh={fh})".format(md=modelo.alias, fh=f),
+            font=dict(family="system-ui", size=24),
+        ),
+    )
 
-def opt_lgbm(trial, fh):
+    plot(
+        figure_or_data=fig,
+        auto_open=True, #SHOW_PLOT,
+        filename=pasta_resultados+"SeasonalNaive (fch={fch})".format(fch=f)
+    )
 
-    # Parâmetros para o LGBMRegressor
-    params = {
-        'num_leaves' : trial.suggest_int('num_leaves', 4, 256),
-        'n_estimators' : trial.suggest_int('n_estimators', 1, 100),
-        'learning_rate' : trial.suggest_loguniform('learning_rate', 1e-3, 3e-1),
-        'min_data_in_leaf' : trial.suggest_int('min_data_in_leaf', 1, 50),
-        'bagging_fraction' : trial.suggest_loguniform('bagging_fraction', 1e-2, 1.0),
-        'colsample_bytree' : trial.suggest_loguniform('colsample_bytree', 1e-2, 1.0)
+# %% celula 27
+"""
+    MLForecast - DecisionTreeRegressor (baseline)
+"""
+
+# O emprego de Árvore de Decisão deve-se à característica do modelo em ser agnóstico à escala dos dados.
+# Poderia ser um modelo Gradient Boosting. Usar DT foi apenas um acaso, neste sentido.
+
+from mlforecast.utils import PredictionIntervals
+
+for f in fh_v:
+    dt = DecisionTreeRegressor(random_state=SEED)
+
+    fcst = mlf.MLForecast(
+        models=[dt],
+        freq="D",
+        lags=[i + 1 for i in range(look_back)],
+        date_features=["dayofyear", "week", "month", "quarter", "year"],
+    )
+
+    fcst.fit(
+        df=df_train,
+        id_col="unique_id",
+        time_col="ds",
+        target_col="y",
+        static_features=[],
+        prediction_intervals=PredictionIntervals(h=f, n_windows=10),
+    )
+
+    df_futr = df_test.drop(columns=["y"])
+
+    df_p = fcst.predict(
+        h=f,
+        X_df=df_futr,
+        level=intervalos_previsao,
+    )
+
+    df_result = pd.merge(
+        left=df_p,
+        right=df_test[["ds", "y"]],
+        on=["ds"],
+        how="left"
+    )
+
+    metrics = {}
+    metrics["DecisionTreeRegressor"] = {
+        "MAPE": mape(df_result["y"], df_result["DecisionTreeRegressor"]),
+        "RMSE": rmse(df_result["y"], df_result["DecisionTreeRegressor"]),
+        "MAE": mae(df_result["y"], df_result["DecisionTreeRegressor"]),
     }
-    # Parâmetro para o Forecaster
-    n_lags = trial.suggest_int('n_lags', 1, look_back, step=1)
 
-    model = [LGBMRegressor(verbosity=-1, bagging_freq=1, random_state=5, **params)]
-    fcst = mlf.MLForecast(models=model, freq='D',
-                               lags=[i+1 for i in range(n_lags)],
-                               date_features=['year', 'month', 'quarter', 'dayofyear', 'week'])
+    metrics["DecisionTreeRegressor-lo-50"] = {
+        "MAPE": mape(df_result["y"], df_result["DecisionTreeRegressor-lo-50"]),
+        "RMSE": rmse(df_result["y"], df_result["DecisionTreeRegressor-lo-50"]),
+        "MAE": mae(df_result["y"], df_result["DecisionTreeRegressor-lo-50"]),
+    }
 
-    fcst.fit(df_train, id_col='unique_id', time_col='ds', target_col='y', static_features=[])
+    metrics["DecisionTreeRegressor-hi-50"] = {
+        "MAPE": mape(df_result["y"], df_result["DecisionTreeRegressor-hi-50"]),
+        "RMSE": rmse(df_result["y"], df_result["DecisionTreeRegressor-hi-50"]),
+        "MAE": mae(df_result["y"], df_result["DecisionTreeRegressor-hi-50"]),
+    }
 
-    _df_futr = cria_dataframe_futuro(df_futr=fcst.make_future_dataframe(h=fh),
-                                    df_train=df_train,
-                                    df_test=df_test,
-                                    tp_valor='ultimo',
-                                    n_lags=look_back,
-                                    cols=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'])
+    metrics["DecisionTreeRegressor-lo-95"] = {
+        "MAPE": mape(df_result["y"], df_result["DecisionTreeRegressor-lo-95"]),
+        "RMSE": rmse(df_result["y"], df_result["DecisionTreeRegressor-lo-95"]),
+        "MAE": mae(df_result["y"], df_result["DecisionTreeRegressor-lo-95"]),
+    }
+
+    metrics["DecisionTreeRegressor-hi-95"] = {
+        "MAPE": mape(df_result["y"], df_result["DecisionTreeRegressor-hi-95"]),
+        "RMSE": rmse(df_result["y"], df_result["DecisionTreeRegressor-hi-95"]),
+        "MAE": mae(df_result["y"], df_result["DecisionTreeRegressor-hi-95"]),
+    }
+
+    df_tbl = pd.DataFrame(metrics).T.reset_index(names="Modelo")
+
+    fig = make_subplots(
+        rows=2,
+        cols=1,
+        vertical_spacing=0.2,
+        specs=[[{"type": "scatter"}], [{"type": "table"}]],
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["DecisionTreeRegressor-hi-95"],
+            mode="lines+markers",
+            name="DT-hi-95",
+            line=dict(color="green"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["DecisionTreeRegressor-lo-95"],
+            mode="lines+markers",
+            name="DT-lo-95",
+            fill="tonexty",
+            line=dict(color="green"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["DecisionTreeRegressor-hi-50"],
+            mode="lines+markers",
+            name="DT-hi-50",
+            line=dict(color="blue"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["DecisionTreeRegressor-lo-50"],
+            mode="lines+markers",
+            name="DT-lo-50",
+            fill="tonexty",
+            line=dict(color="blue"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["DecisionTreeRegressor"],
+            mode="lines+markers",
+            name="DT",
+            line=dict(color="magenta", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["y"],
+            mode="lines+markers",
+            name="observado",
+            line=dict(color="black", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Table(
+            header=dict(
+                values=df_tbl.columns.to_list(),
+                font=dict(size=14),
+                align="center"
+            ),
+            cells=dict(
+                values=df_tbl.T,
+                font=dict(size=12),
+                height=24,
+                align="left"
+            ),
+        ),
+        row=2,
+        col=1,
+    )
+
+    fig.update_yaxes(
+        title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_xaxes(
+        title=dict(text="Período", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_traces(hovertemplate=None, row=1, col=1)
+
+    fig.update_layout(
+        width=1500,
+        height=1000,
+        plot_bgcolor="#c8d4e3",
+        hovermode="x unified",
+        title=dict(
+            text="DecisionTreeRegressor (fh={fh})".format(fh=f),
+            font=dict(family="system-ui", size=24),
+        ),
+    )
+
+    plot(
+        figure_or_data=fig,
+        auto_open=True, #SHOW_PLOT,
+        filename=pasta_resultados+"DecisionTreeRegressor (fch={fch})".format(fch=f)
+    )
+
+# %% celula 28
+"""
+    NeuralForecast - LSTM (modelo principal)
+"""
+
+# Este é o modelo que se pretende aplicar no trabalho
+
+from neuralforecast import NeuralForecast
+from neuralforecast.losses.pytorch import MQLoss, MAPE
+from neuralforecast.models import LSTM
+
+for f in fh_v:
+    lstm = LSTM(
+        h=f,
+        random_seed=SEED,
+        context_size=look_back,
+        loss=MQLoss(level=intervalos_previsao),
+        hist_exog_list=["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"],
+        futr_exog_list=["t_cv_56425000", "t_cv_56338500", "t_cv_56110005", "t_cv_56337200", "t_cv_56337500"],
+        scaler_type="minmax",
+        logger=False,
+        alias="LSTM",
+        enable_progress_bar=False,
+    )
+
+    nf = NeuralForecast(
+        models=[lstm],
+        freq="D"
+    )
+
+    nf.fit(df=df_train)
+
+    df_preds = nf.predict(
+        futr_df=df_test[["ds", "unique_id", "t_cv_56425000", "t_cv_56338500", "t_cv_56110005", "t_cv_56337200", "t_cv_56337500"]]
+    )
+
+    df_result = pd.merge(
+        left=df_preds,
+        right=df_test[["ds", "unique_id", "y"]],
+        on=["ds", "unique_id"],
+        how="left",
+    )
+
+    metrics = {}
+    metrics[lstm.alias] = {
+        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-median"]),
+        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-median"]),
+        "MAE": mae(df_result["y"], df_result[lstm.alias + "-median"]),
+    }
+
+    metrics[lstm.alias + "-lo-95"] = {
+        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-lo-95"]),
+        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-lo-95"]),
+        "MAE": mae(df_result["y"], df_result[lstm.alias + "-lo-95"]),
+    }
+
+    metrics[lstm.alias + "-lo-50"] = {
+        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-lo-50"]),
+        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-lo-50"]),
+        "MAE": mae(df_result["y"], df_result[lstm.alias + "-lo-50"]),
+    }
+
+    metrics[lstm.alias + "-hi-50"] = {
+        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-hi-50"]),
+        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-hi-50"]),
+        "MAE": mae(df_result["y"], df_result[lstm.alias + "-hi-50"]),
+    }
+
+    metrics[lstm.alias + "-hi-95"] = {
+        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-hi-95"]),
+        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-hi-95"]),
+        "MAE": mae(df_result["y"], df_result[lstm.alias + "-hi-95"]),
+    }
+
+    df_tbl = pd.DataFrame(metrics).T.reset_index(names="Modelo")
+
+    fig = make_subplots(
+        rows=2,
+        cols=1,
+        vertical_spacing=0.2,
+        specs=[[{"type": "scatter"}], [{"type": "table"}]],
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result[lstm.alias + "-hi-95"],
+            mode="lines+markers",
+            name=lstm.alias + "-hi-95",
+            line=dict(color="green"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result[lstm.alias + "-lo-95"],
+            mode="lines+markers",
+            name=lstm.alias + "-lo-95",
+            fill="tonexty",
+            line=dict(color="green"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result[lstm.alias + "-hi-50"],
+            mode="lines+markers",
+            name=lstm.alias + "-hi-50",
+            line=dict(color="blue"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result[lstm.alias + "-lo-50"],
+            mode="lines+markers",
+            name=lstm.alias + "-lo-50",
+            fill="tonexty",
+            line=dict(color="blue"),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result[lstm.alias + "-median"],
+            mode="lines+markers",
+            name=lstm.alias,
+            line=dict(color="magenta", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Scatter(
+            x=df_result["ds"],
+            y=df_result["y"],
+            mode="lines+markers",
+            name="observado",
+            line=dict(color="black", width=4),
+        ),
+        row=1,
+        col=1,
+    )
+
+    fig.add_trace(
+        go.Table(
+            header=dict(
+                values=df_tbl.columns.to_list(),
+                font=dict(size=14),
+                align="center"
+            ),
+            cells=dict(
+                values=df_tbl.T,
+                font=dict(size=12),
+                height=24,
+                align="left"
+            ),
+        ),
+        row=2,
+        col=1,
+    )
+
+    fig.update_yaxes(
+        title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_xaxes(
+        title=dict(text="Período", font=dict(family="system-ui", size=18)),
+        mirror=True,
+        ticks="outside",
+        showline=True,
+        linecolor="black",
+    )
+
+    fig.update_traces(hovertemplate=None, row=1, col=1)
+
+    fig.update_layout(
+        width=1500,
+        height=1000,
+        plot_bgcolor="#c8d4e3",
+        hovermode="x unified",
+        title=dict(
+            text="{md} (fh={fh})".format(md=modelo.alias, fh=f),
+            font=dict(family="system-ui", size=24),
+        ),
+    )
+
+    plot(
+        figure_or_data=fig,
+        auto_open=True, #SHOW_PLOT,
+        filename=pasta_resultados+"LSTM (fch={fch})".format(fch=f)
+    )
+
+# %% celula 29
+"""
+    Otimização -> DecisionTreeRegressor
+"""
+   
+def opt_dt(trial):
+    opt_prmtrs = {
+        "criterion": trial.suggest_categorical("criterion", ['squared_error', 'friedman_mse', 'absolute_error', 'poisson']),
+        "max_depth": trial.suggest_int("max_depth", 2, 20),
+        "min_samples_split": trial.suggest_int("min_samples_split", 2, 20),
+        "min_samples_leaf": trial.suggest_int("min_samples_leaf", 2, 20),
+        "min_weight_fraction_leaf": trial.suggest_float("min_weight_fraction_leaf", 0.01, 0.5, log=True),
+        "max_features": trial.suggest_categorical("max_features", ['sqrt', 'log2']),
+    }
+
+    modelo = DecisionTreeRegressor(
+        random_state=SEED,
+        **opt_prmtrs
+    )
+
+    fcst = mlf.MLForecast(
+        models=[modelo],
+        freq="D",
+        lags=[i + 1 for i in range(look_back)],
+        date_features=["dayofyear", "week", "month", "quarter", "year"],
+    )
+
+    fcst.fit(
+        df=df_train,
+        id_col="unique_id",
+        time_col="ds",
+        target_col="y",
+        static_features=[],
+    )
     
-    p = fcst.predict(h=fh, X_df=_df_futr)
-    df_result = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
+    df_p = fcst.predict(
+        h=len(df_test),
+        X_df=df_test.drop(columns=["y"]),
+    )
 
-    loss = smape(df_result['y'], df_result['LGBMRegressor'])
+    df_result = pd.merge(
+        left=df_p,
+        right=df_test[["ds", "unique_id", "y"]],
+        on=["ds", "unique_id"],
+        how="left"
+    )
     
+    loss = mape(df_result["y"], df_result["DecisionTreeRegressor"])
+
     return loss
 
-def opt_lsvr(trial, fh):
+#################################################
 
-    # Parâmetros para o LinearSVR
-    params = {
-        'loss' : trial.suggest_categorical('loss', ['epsilon_insensitive', 'squared_epsilon_insensitive']),
-        'intercept_scaling' : trial.suggest_loguniform('intercept_scaling', 1e-5, 2.0),
-        'tol' : trial.suggest_loguniform('tol', 1e-5, 2.0),
-        'C' : trial.suggest_loguniform('C', 1e-5, 2.0),
-        'epsilon' : trial.suggest_loguniform('epsilon', 1e-5, 2.0)
+# Criando o estudo e executando a otimização
+study_dt = opt.create_study(
+    direction="minimize",
+    sampler=opt.samplers.TPESampler(seed=SEED)
+)
+
+study_dt.optimize(
+    func=opt_dt,
+    n_trials=100,
+    catch=(FloatingPointError, ValueError, RuntimeError),
+    show_progress_bar=False,
+)
+
+# %% celula 30
+print("><><><><><><><><><><><><><><")
+print(study_dt.best_value)
+print(study_dt.best_params)
+print("><><><><><><><><><><><><><><")
+
+# %% celula 31
+"""
+    Otimização -> LSTM
+"""
+
+def opt_lstm(trial):
+    fixo_prmtrs = {
+        "h": len(df_test),
+        "random_seed": SEED,
+        "loss": MAPE(),
+        "hist_exog_list": ["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"],
+        "futr_exog_list": ["t_cv_56425000", "t_cv_56338500", "t_cv_56110005", "t_cv_56337200", "t_cv_56337500"],
+        "scaler_type": "minmax",
+        "logger": False,
+        "alias": "LSTM",
+        "max_steps" : 100,
+        "enable_progress_bar": False,
     }
 
-    # Parâmetro para o Forecaster
-    n_lags = trial.suggest_int('n_lags', 1, look_back, step=1)
+    opt_prmtrs = {
+        "encoder_n_layers": trial.suggest_int("encoder_n_layers", 1, 5),
+        "decoder_layers": trial.suggest_int("decoder_layers", 1, 5),
+        "encoder_hidden_size": trial.suggest_int("encoder_hidden_size", 32, 512, step=2),
+        "decoder_hidden_size": trial.suggest_int("decoder_hidden_size", 32, 512, step=2),
+        "learning_rate": trial.suggest_float("learning_rate", 0.001, 0.1, log=True),
+        "context_size": trial.suggest_int("context_size", 1, 15), # é o look back
+    }
 
-    model = [LinearSVR(random_state=5, **params)]
+    modelo = LSTM(
+        **fixo_prmtrs,
+        **opt_prmtrs
+    )
 
-    fcst = mlf.MLForecast(models=model, freq='D',
-                            lags=[i+1 for i in range(n_lags)],
-                            date_features=['year', 'month', 'quarter', 'dayofyear', 'week'])
+    nf = NeuralForecast(
+        models=[modelo],
+        freq="D"
+    )
 
-    fcst.fit(df_train, id_col='unique_id', time_col='ds', target_col='y', static_features=[])
+    nf.fit(df=df_train)
 
-    _df_futr = cria_dataframe_futuro(df_futr=fcst.make_future_dataframe(h=fh),
-                                    df_train=df_train,
-                                    df_test=df_test,
-                                    tp_valor='ultimo',
-                                    n_lags=look_back,
-                                    cols=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'])
+    df_preds = nf.predict(
+        futr_df=df_test[["ds", "unique_id", "t_cv_56425000", "t_cv_56338500",
+                         "t_cv_56110005", "t_cv_56337200", "t_cv_56337500"]]
+    )
 
-    p = fcst.predict(h=fh, X_df=_df_futr)
-    df_result = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
+    df_result = pd.merge(
+        left=df_preds,
+        right=df_test[["ds", "unique_id", "y"]],
+        on=["ds", "unique_id"],
+        how="left",
+    )
 
-    loss = smape(df_result['y'], df_result['LinearSVR'])
+    loss = mape(df_result["y"], df_result[modelo.alias])
 
     return loss
+
+#################################################
+
+# Criando o estudo e executando a otimização
+study_lstm = opt.create_study(
+    direction="minimize",
+    sampler=opt.samplers.TPESampler(seed=SEED)
+)
+
+study_lstm.optimize(
+    opt_lstm,
+    n_trials=100,
+    catch=(FloatingPointError, ValueError, RuntimeError),
+    show_progress_bar=False,
+)
+
+# %% celula 32
+print("><><><><><><><><><><><><><><")
+print(study_lstm.best_value)
+print(study_lstm.best_params)
+print("><><><><><><><><><><><><><><")
+
+# %% celula 33
+"""
+    Cross-Validation - LSTM
+"""
+# TO-DO
+
+# %%
+# def opt_lgbm(trial, fh):
+    # Parâmetros para o regressor
+    # params = {
+    #     "verbosity": -1,
+    #     "random_state": 5,
+    #     "lambda_l1": trial.suggest_loguniform("lambda_l1", 1e-5, 10.0),
+    #     "lambda_l2": trial.suggest_loguniform("lambda_l2", 1e-5, 10.0),
+    #     "num_leaves": trial.suggest_int("num_leaves", 2, 256),
+    #     "n_estimators": trial.suggest_int("n_estimators", 2, 256),
+    #     "learning_rate": trial.suggest_loguniform("learning_rate", 1e-5, 0.5),
+    #     "feature_fraction": trial.suggest_loguniform("feature_fraction", 1e-2, 0.99),
+    #     "min_data_in_leaf": trial.suggest_int("min_data_in_leaf", 2, 256),
+    #     "bagging_fraction": trial.suggest_loguniform("bagging_fraction", 1e-2, 0.99),
+    #     "bagging_freq": trial.suggest_int("bagging_freq", 0, 15),
+    # }
+
+    # modelo = [LGBMRegressor(**params)]
+
+    # Este parâmetro "date_features" da lib MLForecast pode ser otimizado
+    #   E essa coisinha simples pode melhorar bastante o resultado
+#     date_features = []
+#     dayofyear = trial.suggest_categorical("dayofyear", [True, False])
+#     week = trial.suggest_categorical("week", [True, False])
+#     month = trial.suggest_categorical("month", [True, False])
+#     quarter = trial.suggest_categorical("quarter", [True, False])
+#     year = trial.suggest_categorical("year", [True, False])
+
+#     if dayofyear:
+#         date_features.append("dayofyear")
+#     if week:
+#         date_features.append("week")
+#     if month:
+#         date_features.append("month")
+#     if quarter:
+#         date_features.append("quarter")
+#     if year:
+#         date_features.append("year")
+
+#     fcst = mlf.MLForecast(
+#         models=modelo,
+#         freq="D",
+#         lags=[i + 1 for i in range(trial.suggest_int("n_lags_reg", 1, fh))],
+#         date_features=date_features,
+#     )
+
+#     fcst.fit(
+#         df=df_train,
+#         id_col="unique_id",
+#         time_col="ds",
+#         target_col="y",
+#         static_features=[],
+#     )
+
+#     _df_futr = cria_dataframe_futuro(
+#         df_futr=fcst.make_future_dataframe(h=fh),
+#         df_train=df_train,
+#         df_test=df_test,
+#         tp_valor="ml",
+#         n_lags=trial.suggest_int("n_lags_futr", 1, fh),
+#         date_features=["dayofyear", "week", "month", "quarter", "year"],
+#         cols=["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"],
+#     )
+
+#     p = fcst.predict(h=fh, X_df=_df_futr)
+
+#     df_result = pd.merge(left=p, right=df_test[["ds", "y"]], on=["ds"], how="left")
+
+#     loss = mape(df_result["y"], df_result["LGBMRegressor"])  # y_true  # y_pred
+
+#     return loss
+
+
+# def opt_lsvr(trial, fh):
+    # Parâmetros para o regressor
+    # params = {
+    #     "loss": trial.suggest_categorical(
+    #         "loss", ["epsilon_insensitive", "squared_epsilon_insensitive"]
+    #     ),
+    #     "intercept_scaling": trial.suggest_loguniform("intercept_scaling", 1e-3, 5.0),
+    #     "tol": trial.suggest_loguniform("tol", 1e-3, 5.0),
+    #     "C": trial.suggest_loguniform("C", 1e-3, 5.0),
+    #     "epsilon": trial.suggest_loguniform("epsilon", 1e-3, 5.0),
+    # }
+
+    # model = [LinearSVR(random_state=5, **params)]
+
+    # Este parâmetro "date_features" da lib MLForecast pode ser otimizado
+    #   E essa coisinha simples pode melhorar bastante o resultado
+    # date_features = []
+    # dayofyear = trial.suggest_categorical("dayofyear", [True, False])
+    # week = trial.suggest_categorical("week", [True, False])
+    # month = trial.suggest_categorical("month", [True, False])
+    # quarter = trial.suggest_categorical("quarter", [True, False])
+    # year = trial.suggest_categorical("year", [True, False])
+
+    # if dayofyear:
+    #     date_features.append("dayofyear")
+    # if week:
+    #     date_features.append("week")
+    # if month:
+    #     date_features.append("month")
+    # if quarter:
+    #     date_features.append("quarter")
+    # if year:
+    #     date_features.append("year")
+
+    # fcst = mlf.MLForecast(
+    #     models=model,
+    #     freq="D",
+    #     lags=[i + 1 for i in range(trial.suggest_int("n_lags_reg", 1, fh))],
+    #     date_features=date_features,
+    # )
+
+    # fcst.fit(
+    #     df=df_train,
+    #     id_col="unique_id",
+    #     time_col="ds",
+    #     target_col="y",
+    #     static_features=[],
+    # )
+
+    # _df_futr = cria_dataframe_futuro(
+    #     df_futr=fcst.make_future_dataframe(h=fh),
+    #     df_train=df_train,
+    #     df_test=df_test,
+    #     tp_valor="ml",
+    #     n_lags=fh,
+    #     date_features=["dayofyear", "week", "month", "quarter", "year"],
+    #     cols=["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"],
+    # )
+
+    # p = fcst.predict(h=fh, X_df=_df_futr)
+
+    # df_result = pd.merge(left=p, right=df_test[["ds", "y"]], on=["ds"], how="left")
+
+    # loss = mape(df_result["y"], df_result["LinearSVR"])  # y_true  # y_pred
+
+    # return loss
+
 
 ############################
 
 # Guardar os parâmetros apenas das melhores trials
-lgbm_best_trial = {}
-lsvr_best_trial = {}
+# lgbm_best_trial = {}
+# lsvr_best_trial = {}
 
-for f in fch_v:
+# for f in fh_v:
+#     study_lgbm = opt.create_study(
+#         direction="minimize", sampler=opt.samplers.TPESampler(seed=5)
+#     )
 
-  study_lgbm = opt.create_study(direction='minimize', sampler=opt.samplers.TPESampler(seed=5))
-  study_lsvr = opt.create_study(direction='minimize', sampler=opt.samplers.TPESampler(seed=5))
+    # study_lsvr = opt.create_study(
+    #     direction='minimize',
+    #     sampler=opt.samplers.TPESampler(seed=5)
+    # )
 
-  opt_lgbm = partial(opt_lgbm, fh=f)
-  study_lgbm.optimize(opt_lgbm, n_trials=100, timeout=1000, catch=(FloatingPointError, ValueError, ))
+    # opt_lgbm = partial(opt_lgbm, fh=f)
+    # study_lgbm.optimize(
+    #     opt_lgbm,
+    #     timeout=600,
+    #     catch=(
+    #         FloatingPointError,
+    #         ValueError,
+    #     ),
+    # )
 
-  opt_lsvr = partial(opt_lsvr, fh=f)
-  study_lsvr.optimize(opt_lsvr, n_trials=100, timeout=1000, catch=(FloatingPointError, ValueError, ))
+    # opt_lsvr = partial(opt_lsvr, fh=f)
+    # study_lsvr.optimize(
+    #     opt_lsvr,
+    #     timeout=600,
+    #     catch=(FloatingPointError, ValueError, )
+    # )
 
-  lgbm_best_trial[fch_v.index(f)] = {'modelo' : 'LGBM',
-                                  'fch' : f,
-                                  'best_value' : study_lgbm.best_value,
-                                  'best_params' : study_lgbm.best_params}
-  
-  lsvr_best_trial[fch_v.index(f)] = {'modelo' : 'LinearSVR',
-                                    'fch' : f,
-                                    'best_value' : study_lsvr.best_value,
-                                    'best_params' : study_lsvr.best_params}
+    # lgbm_best_trial[fh_v.index(f)] = {
+    #     "modelo": "LGBM",
+    #     "fch": f,
+    #     "best_value": study_lgbm.best_value,
+    #     "best_params": study_lgbm.best_params,
+    # }
+
+    # lsvr_best_trial[fch_v.index(f)] = {
+    #     'modelo' : 'LinearSVR',
+    #     'fch' : f,
+    #     'best_value' : study_lsvr.best_value,
+    #     'best_params' : study_lsvr.best_params
+    # }
+
+# ##################################################### #
+
+# Exportar os melhores parâmetros para um arquivo JSON
+# dh = datetime.now()
+# exportar_dict_json(
+#     lgbm_best_trial,
+#     "./resultados/trecho_alto/",
+#     "lgbm_best_trial_{dt}.json".format(dt=dh.strftime("%Y-%m-%d_%H-%M-%S")),
+# )
+
+# exportar_dict_json(
+#     lsvr_best_trial,
+#     "./resultados/trecho_alto/",
+#     "lsvr_best_trial_{dt}.json".format(dt=dh.strftime("%Y-%m-%d_%H-%M-%S"))
+# )
+
+# ##################################################### #
 
 # Reproduzindo os modelos
-for f, i, _ in zip(fch_v, lgbm_best_trial, lsvr_best_trial):
+# for f, i, _ in zip(fch_v, lgbm_best_trial, lsvr_best_trial):
+# for f, i in zip(fh_v, lgbm_best_trial):
+#     m_lgbm = [
+#         LGBMRegressor(
+#             verbosity=-1,
+#             random_state=5,
+#             objective="gamma",
+#             lambda_l1=lgbm_best_trial[i]["best_params"]["lambda_l1"],
+#             lambda_l2=lgbm_best_trial[i]["best_params"]["lambda_l2"],
+#             bagging_freq=lgbm_best_trial[i]["best_params"]["bagging_freq"],
+#             num_leaves=lgbm_best_trial[i]["best_params"]["num_leaves"],
+#             n_estimators=lgbm_best_trial[i]["best_params"]["n_estimators"],
+#             learning_rate=lgbm_best_trial[i]["best_params"]["learning_rate"],
+#             min_data_in_leaf=lgbm_best_trial[i]["best_params"]["min_data_in_leaf"],
+#             bagging_fraction=lgbm_best_trial[i]["best_params"]["bagging_fraction"],
+#             feature_fraction=lgbm_best_trial[i]["best_params"]["feature_fraction"],
+#         )
+#     ]
 
-    m_lgbm = [LGBMRegressor(verbosity=-1, bagging_freq=1, random_state=5,
-                        n_estimators=lgbm_best_trial[i]['best_params']['n_estimators'],
-                        learning_rate=lgbm_best_trial[i]['best_params']['learning_rate'],
-                        num_leaves=lgbm_best_trial[i]['best_params']['num_leaves'],
-                        min_data_in_leaf=lgbm_best_trial[i]['best_params']['min_data_in_leaf'],
-                        bagging_fraction=lgbm_best_trial[i]['best_params']['bagging_fraction'],
-                        colsample_bytree=lgbm_best_trial[i]['best_params']['colsample_bytree'])]
+#     date_features = []
+#     if lgbm_best_trial[i]["best_params"]["dayofyear"]:
+#         date_features.append("dayofyear")
+#     if lgbm_best_trial[i]["best_params"]["week"]:
+#         date_features.append("week")
+#     if lgbm_best_trial[i]["best_params"]["month"]:
+#         date_features.append("month")
+#     if lgbm_best_trial[i]["best_params"]["quarter"]:
+#         date_features.append("quarter")
+#     if lgbm_best_trial[i]["best_params"]["year"]:
+#         date_features.append("year")
 
-    fcst_lgbm = mlf.MLForecast(models=m_lgbm, freq='D',
-                                lags=[i+1 for i in range(lgbm_best_trial[i]['best_params']['n_lags'])],
-                                date_features=['year', 'month', 'quarter', 'dayofyear', 'week'])
+#     fcst_lgbm = mlf.MLForecast(
+#         models=m_lgbm,
+#         freq="D",
+#         lags=[i + 1 for i in range(lgbm_best_trial[i]["best_params"]["n_lags_reg"])],
+#         date_features=date_features,
+#     )
 
-    fcst_lgbm.fit(df_train, id_col='unique_id', time_col='ds', target_col='y', static_features=[])
+#     fcst_lgbm.fit(
+#         df=df_aux, id_col="unique_id", time_col="ds", target_col="y", static_features=[]
+#     )
 
-    df_futr_gbm = cria_dataframe_futuro(df_futr=fcst_lgbm.make_future_dataframe(h=f),
-                                        df_train=df_train,
-                                        df_test=df_test,
-                                        tp_valor='ml',
-                                        n_lags=look_back,
-                                        cols=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'])
+#     gerar_feature_importance = False
+#     if gerar_feature_importance:
+#         for m in fcst_lgbm.models_.keys():
+#             plot_feature_importance(model=m, forecaster=fcst_lgbm, fch=f, salvar=False)
 
-    p = fcst_lgbm.predict(h=f, X_df=df_futr_gbm)
-    df_merged = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
+#     df_futr_gbm = cria_dataframe_futuro(
+#         df_futr=fcst_lgbm.make_future_dataframe(h=f),
+#         df_train=df_aux,
+#         df_test=df_valid,
+#         tp_valor="ml",
+#         n_lags=f,
+#         date_features=["day", "dayofyear", "week", "month", "quarter", "year"],
+#         cols=["t_vz_56338500", "t_vz_56110005", "t_vz_56337200", "t_vz_56337500"],
+#     )
+
+#     p = fcst_lgbm.predict(h=f, X_df=df_futr_gbm)
+
+#     df_merged = pd.merge(left=p, right=df_test[["ds", "y"]], on=["ds"], how="left")
 
     # ##################################################### #
 
-    m_lsvr = [LinearSVR(random_state=5,
-                    loss=lsvr_best_trial[i]['best_params']['loss'],
-                    intercept_scaling=lsvr_best_trial[i]['best_params']['intercept_scaling'],
-                    tol=lsvr_best_trial[i]['best_params']['tol'],
-                    C=lsvr_best_trial[i]['best_params']['C'],
-                    epsilon=lsvr_best_trial[i]['best_params']['epsilon'])]
+    # m_lsvr = [LinearSVR(random_state=5,
+    #                 C=lsvr_best_trial[i]['best_params']['C'],
+    #                 tol=lsvr_best_trial[i]['best_params']['tol'],
+    #                 loss=lsvr_best_trial[i]['best_params']['loss'],
+    #                 epsilon=lsvr_best_trial[i]['best_params']['epsilon'],
+    #                 intercept_scaling=lsvr_best_trial[i]['best_params']['intercept_scaling']
+    #             )]
 
-    fcst_lsvr = mlf.MLForecast(models=m_lsvr, freq='D',
-                            lags=[i+1 for i in range(lsvr_best_trial[i]['best_params']['n_lags'])],
-                            date_features=['year', 'month', 'quarter', 'dayofyear', 'week'])
+    # date_features = []
+    # if lsvr_best_trial[i]['best_params']['day']: date_features.append('day')
+    # if lsvr_best_trial[i]['best_params']['dayofyear']: date_features.append('dayofyear')
+    # if lsvr_best_trial[i]['best_params']['week']: date_features.append('week')
+    # if lsvr_best_trial[i]['best_params']['month']: date_features.append('month')
+    # if lsvr_best_trial[i]['best_params']['quarter']: date_features.append('quarter')
+    # if lsvr_best_trial[i]['best_params']['year']: date_features.append('year')
 
-    fcst_lsvr.fit(df_train, id_col='unique_id', time_col='ds', target_col='y', static_features=[])
+    # fcst_lsvr = mlf.MLForecast(models=m_lsvr, freq='D',
+    #                         lags=[i+1 for i in range(lsvr_best_trial[i]['best_params']['n_lags_reg'])],
+    #                         # lag_transforms={1: [RollingMean(lsvr_best_trial[i]['best_params']['n_lags_reg'])]},
+    #                         date_features=date_features)
 
-    df_futr_svr = cria_dataframe_futuro(df_futr=fcst_lsvr.make_future_dataframe(h=f),
-                                        df_train=df_train,
-                                        df_test=df_test,
-                                        tp_valor='ml',
-                                        n_lags=look_back,
-                                        cols=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'])
+    # fcst_lsvr.fit(df_train, id_col='unique_id', time_col='ds', target_col='y', static_features=[])
 
-    p = fcst_lsvr.predict(h=f, X_df=df_futr_svr)
-    df_merged = pd.merge(left=p, right=df_merged, on=['ds'], how='left')
+    # gerar_feature_importance = True
+    # if gerar_feature_importance:
+    #     for m in fcst_lsvr.models_.keys():
+    #         plot_feature_importance(model=m, forecaster=fcst_lsvr, fch=f, salvar=False)
+
+    # df_futr_svr = cria_dataframe_futuro(df_futr=fcst_lsvr.make_future_dataframe(h=f),
+    #                                     df_train=df_train,
+    #                                     df_test=df_test,
+    #                                     tp_valor='ml',
+    #                                     n_lags=f,
+    #                                     # n_lags=lsvr_best_trial[i]['best_params']['n_lags_futr'],
+    #                                     date_features=['day', 'dayofyear', 'week', 'month', 'quarter', 'year'],
+    #                                     cols=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'])
+
+    # p = fcst_lsvr.predict(h=f, X_df=df_futr_svr)
+    # df_merged = pd.merge(left=p, right=df_merged, on=['ds'], how='left')
 
     # ##################################################### #
 
-    metrics = {}
-    metrics['LGBMRegressor'] = {'sMAPE': smape(df_merged.y, df_merged.LGBMRegressor),
-                                'RMSE': rmse(df_merged.y, df_merged.LGBMRegressor),
-                                'MAE' : mae(df_merged.y, df_merged.LGBMRegressor)}
-    metrics['LinearSVR'] = {'sMAPE': smape(df_merged.y, df_merged.LinearSVR),
-                            'RMSE': rmse(df_merged.y, df_merged.LinearSVR),
-                            'MAE' : mae(df_merged.y, df_merged.LinearSVR)}
-
-    df_tbl = pd.DataFrame(metrics).T.reset_index(names="Modelo") # Usado para preencher a tabela com as métricas
-
-    fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
-
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.y, mode='lines', name='observado', line=dict(color="black", width=4)), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.LGBMRegressor, mode='lines', name='LGBM', line=dict(color="red")), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.LinearSVR, mode='lines', name='LinearSVR', line=dict(color="green")), row=1, col=1)
-    fig.append_trace(go.Table(header=dict(values=df_tbl.columns.to_list(), font=dict(size=14), align="center"),
-                                cells=dict(values=df_tbl.T, font=dict(size=14), height=24, align="left")),
-                            row=2, col=1)
-
-    fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-    fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
-
-    fig.update_traces(hovertemplate=None, row=1, col=1)
-    
-    fig.update_layout(width=1500, height=1000, hovermode='x unified',
-                        title=dict(text="Modelos de M.L. otimizados (fch = {f})".format(f=f),
-                                   font=dict(family="system-ui", size=24)))
-
-    fig.write_image("./resultados/ml/fch{fh}/opt/resultado.png".format(fh=f))
-    # fig.show()
-
-# %% Redes Neurais LSTM (RNN) e NBEATSx (MLP)
-# Sem vazões exógenas no horizonte de previsão
-
-# Este dataframe será utilizado por ambas as redes
-df_futr = df_test[['ds', 'unique_id', 't_cv_56425000', 't_cv_56338500', 't_cv_56110005','t_cv_56337200', 't_cv_56337500']]
-
-# %% Não otimizado
-
-for f in fch_v:
-    modelos = [
-        LSTM(random_seed=5, h=f, max_steps=100,
-            hist_exog_list=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'],
-            futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005','t_cv_56337200', 't_cv_56337500'],
-            scaler_type=None,
-            context_size=look_back,
-            logger=False),
-
-        NBEATSx(random_seed=5, h=f, max_steps=100,
-            hist_exog_list=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'],
-            futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500'],
-            input_size=look_back,
-            scaler_type=None,
-            logger=False),
-        ]
-
-    nf = NeuralForecast(models=modelos, freq='D', local_scaler_type='minmax')
-    nf.fit(df=df_train)
-
-    df_preds = nf.predict(futr_df=df_futr)
-    df_merged = pd.merge(left=df_preds, right=df_test[['ds', 'y']], on=['ds'], how='left')
-
-    # ============================================================================ #
-
-    metrics = {}
-    metrics['LSTM'] = {'sMAPE': smape(df_merged.y, df_merged.LSTM),
-                    'RMSE': rmse(df_merged.y, df_merged.LSTM),
-                    'MAE' : mae(df_merged.y, df_merged.LSTM)}
-    metrics['NBEATSx'] = {'sMAPE': smape(df_merged.y, df_merged.NBEATSx),
-                        'RMSE': rmse(df_merged.y, df_merged.NBEATSx),
-                        'MAE' : mae(df_merged.y, df_merged.NBEATSx)}
-    df_tbl_v = pd.DataFrame(metrics).T.reset_index(names="Modelo")
-
-    # ============================================================================ #
-
-    fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
-
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.y, mode='lines', name='observado', line=dict(color="black", width=4)), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.LSTM, mode='lines', name='LSTM', line=dict(color="darkorange")), row=1, col=1)
-    fig.add_trace(go.Scatter(x=df_merged.ds, y=df_merged.NBEATSx, mode='lines', name='NBEATSx', line=dict(color="olive")), row=1, col=1)
-    
-    fig.append_trace(go.Table(header=dict(values=df_tbl_v.columns.to_list(), font=dict(size=14), align="center"),
-                                    cells=dict(values=df_tbl_v.T, font=dict(size=14), height=24, align="left")),
-                            row=2, col=1)
-    
-    fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-    fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
-    
-    fig.update_traces(hovertemplate=None, row=1, col=1)
-    
-    fig.update_layout(width=1500, height=1000, hovermode='x unified',
-                    title=dict(text="Redes Neurais não otimizados (fch = {f})".format(f=f),
-                    font=dict(family="system-ui", size=24)))
-
-    fig.write_image("./resultados/dl/fch{fh}/naoopt/resultado.png".format(fh=f))
-    # fig.show()
-
-# %% Otimizado
-
-def opt_lstm(trial, fh):
-
-    params = {
-        'encoder_hidden_size': trial.suggest_categorical('encoder_hidden_size', [8, 16, 32, 64, 128, 256]),
-        'decoder_hidden_size': trial.suggest_categorical('decoder_hidden_size', [8, 16, 32, 64, 128, 256]),
-        'encoder_n_layers': trial.suggest_categorical('encoder_n_layers', [1, 2, 3, 4]),
-        'decoder_layers': trial.suggest_categorical('decoder_layers', [1, 2, 3, 4]),
-        'learning_rate': trial.suggest_loguniform('learning_rate', 1e-3, 5e-1),
-        'context_size': trial.suggest_int('context_size', 1, 3*look_back),
-    }
-
-    local_scaler_type = trial.suggest_categorical('local_scaler_type', ["standard", "robust", "minmax"])
-
-    model = [LSTM(random_seed=5, h=fh, max_steps=100,
-                  hist_exog_list=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'],
-                  futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005','t_cv_56337200', 't_cv_56337500'],
-                  scaler_type=None,
-                  logger=False,
-                  **params)]
-
-    nfc = NeuralForecast(models=model, freq='D', local_scaler_type=local_scaler_type)
-    nfc.fit(df=df_train)
-
-    p = nfc.predict(futr_df=df_futr)
-    df_result = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
-
-    loss = smape(df_result['y'], df_result['LSTM'])
-    
-    return loss
-
-# ============================ #
-
-# Guardar os parâmetros apenas das melhores trials
-lstm_best_trial = {}
-
-for f in fch_v:
-    # Criando o estudo e executando a otimização
-    study_lstm = opt.create_study(direction='minimize', sampler=opt.samplers.TPESampler(seed=5))
-    
-    opt_lstm = partial(opt_lstm, fh=f)
-    study_lstm.optimize(opt_lstm, n_trials=25, timeout=1000, catch=(FloatingPointError, ValueError, ))
-
-    lstm_best_trial[fch_v.index(f)] = {'fch' : f,
-                                    'best_value': study_lstm.best_value,
-                                    'best_params': study_lstm.best_params}
-
-# %%
-lstm_best_trial
-
-# %%
-# Reproduzindo as melhores trials
-
-for f, i in zip(fch_v, lstm_best_trial):
-        modelo = [LSTM(random_seed=5, h=f, max_steps=100,
-                        futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005','t_cv_56337200', 't_cv_56337500'],
-                        learning_rate=lstm_best_trial[i]['best_params']['learning_rate'],
-                        encoder_hidden_size=lstm_best_trial[i]['best_params']['encoder_hidden_size'],
-                        encoder_n_layers=lstm_best_trial[i]['best_params']['encoder_n_layers'],
-                        decoder_hidden_size=lstm_best_trial[i]['best_params']['decoder_hidden_size'],
-                        decoder_layers=lstm_best_trial[i]['best_params']['decoder_layers'],
-                        context_size=lstm_best_trial[i]['best_params']['context_size'],
-                        logger=False)]
-
-        nfc_opt = NeuralForecast(models=modelo, freq='D', local_scaler_type=lstm_best_trial[i]['best_params']['local_scaler_type'])
-        nfc_opt.fit(df=df_train)
-
-        p = nfc_opt.predict(futr_df=df_futr)
-        df_result = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
-
-        fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
-        fig.add_trace(go.Scatter(x=df_result['ds'], y=df_result['y'], mode='lines', name='observado', line=dict(width=4)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=df_result['ds'], y=df_result['LSTM'], mode='lines', name='LSTM', line=dict(color='darkorange')), row=1, col=1)
-
-        fig.append_trace(go.Table(header=dict(values=["sMAPE", "RMSE", "MAE"], font=dict(size=14), align="center"),
-                                        cells=dict(values=[smape(df_result['y'], df_result['LSTM']),
-                                                        rmse(df_result['y'], df_result['LSTM']),
-                                                        mae(df_result['y'], df_result['LSTM'])],
-                                                font=dict(size=14),
-                                                height=24,
-                                                align="left")),
-                                row=2, col=1)
-
-        fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-        fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
-
-        fig.update_traces(hovertemplate=None, row=1, col=1)
-
-        fig.update_layout(width=1500, height=1000, hovermode='x unified', #autosize=True
-                        title=dict(text="Rede LSTM otimizada (fch = {f})".format(f=f),
-                        font=dict(family="system-ui", size=24)))
-
-        fig.write_image("/home/wasf84/Documentos/deep_learning/fch{fh}/opt/lstm.png".format(fh=f))
-        # fig.show()
-
-# %% [markdown]
-# # NBEATSx
-
-# %% [markdown]
-# #### Não otimizado
-
-# %%
-for f in fch_v:
-        modelo = [NBEATSx(random_seed=5, h=f, max_steps=100,
-                        hist_exog_list=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'],
-                        futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500'],
-                        input_size=look_back,
-                        scaler_type=None,
-                        logger=False)]
-        nfc = NeuralForecast(models=modelo, freq='D', local_scaler_type='minmax')
-        nfc.fit(df=df_train)
-
-        df_preds = nfc.predict(futr_df=df_futr)
-        df_merged = pd.merge(left=df_preds, right=df_test[['ds', 'y']], on=['ds'], how='left')
-
-        fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
-        fig.add_trace(go.Scatter(x=df_merged['ds'], y=df_merged['y'], mode='lines', name='observado', line=dict(color="black", width=4)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=df_merged['ds'], y=df_merged['NBEATSx'], mode='lines', name='NBEATSx', line=dict(color='olive')), row=1, col=1)
-
-        fig.append_trace(go.Table(header=dict(values=["sMAPE", "RMSE", "MAE"], font=dict(size=14), align="center"),
-                                        cells=dict(values=[smape(df_merged['y'], df_merged['NBEATSx']),
-                                                        rmse(df_merged['y'], df_merged['NBEATSx']),
-                                                        mae(df_merged['y'], df_merged['NBEATSx'])],
-                                                font=dict(size=14),
-                                                height=24,
-                                                align="left")),
-                                row=2, col=1)
-
-        fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-        fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
-
-        fig.update_traces(hovertemplate=None, row=1, col=1)
-
-        fig.update_layout(width=1500, height=1000, hovermode='x unified', #autosize=True
-                          title=dict(text="Rede NBEATSx não otimizada (fch = {f})".format(f=f),
-                                     font=dict(family="system-ui", size=24)))
-
-        fig.write_image("/home/wasf84/Documentos/deep_learning/fch{fh}/naoopt/nbeatsx.png".format(fh=f))
-        # fig.show()
-
-# %% [markdown]
-# #### Otimizado
-
-# %%
-# Definindo a função objetivo para o Optuna
-def opt_nbeatsx(trial, fh):
-    learning_rate       = trial.suggest_loguniform('learning_rate', 1e-3, 3e-1)
-    activation          = trial.suggest_categorical('activation',  ["ReLU", "Softplus", "Tanh", "SELU", "LeakyReLU", "PReLU", "Sigmoid"])
-    n_blocks1           = trial.suggest_int('n_blocks1', 1, 5)
-    n_blocks2           = trial.suggest_int('n_blocks2', 1, 5)
-    n_blocks3           = trial.suggest_int('n_blocks3', 1, 5)
-    mlp_units           = trial.suggest_int('mlp_units', 16, 512, step=8)
-    n_harmonics         = trial.suggest_int('n_harmonics', 1, 5)
-    n_polynomials       = trial.suggest_int('n_polynomials', 1, 5)
-    dropout_prob_theta  = trial.suggest_loguniform('dropout_prob_theta', 0.0, 0.2)
-    input_size          = trial.suggest_int('input_size', 1, 3*look_back)
-
-    local_scaler_type = trial.suggest_categorical('local_scaler_type', ["standard", "robust", "minmax"])
-
-    modelo = [NBEATSx(random_seed=5, h=fh, max_steps=100,
-                    stack_types=['seasonality', 'trend', 'identity'],
-                    n_blocks=[n_blocks1, n_blocks2, n_blocks3],
-                    mlp_units=[[mlp_units,mlp_units], [mlp_units,mlp_units], [mlp_units,mlp_units]],
-                    n_harmonics=n_harmonics,
-                    n_polynomials=n_polynomials,
-                    dropout_prob_theta=dropout_prob_theta,
-                    activation=activation,
-                    hist_exog_list=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'],
-                    futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500'],
-                    learning_rate=learning_rate,
-                    input_size=input_size,
-                    logger=False)]
-
-    nfc_opt = NeuralForecast(models=modelo, freq='D', local_scaler_type=local_scaler_type)
-    nfc_opt.fit(df=df_train)
-
-    p = nfc_opt.predict(futr_df=df_futr)
-    df_result = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
-
-    loss = smape(df_result['y'], df_result['NBEATSx'])
-    
-    return loss
-
-# ============================ #
-
-# Guardar os parâmetros apenas das melhores trials
-nbeatsx_best_trial = {}
-
-for f in fch_v:
-    # Criando o estudo e executando a otimização
-    study_nbeatsx = opt.create_study(direction='minimize', sampler=opt.samplers.TPESampler(seed=5))
-    
-    opt_nbeatsx = partial(opt_nbeatsx, fh=f)
-    study_nbeatsx.optimize(opt_nbeatsx, n_trials=25, timeout=1000, catch=(FloatingPointError, ValueError, ))
-
-    nbeatsx_best_trial[fch_v.index(f)] = {'fch' : f,
-                                        'best_value': study_nbeatsx.best_value,
-                                        'best_params': study_nbeatsx.best_params}
-
-# %%
-nbeatsx_best_trial
-
-# %%
-# Reproduzindo o modelo otimizado
-
-for f, i in zip(fch_v, nbeatsx_best_trial):
-        m_opt = [NBEATSx(random_seed=5, h=f, max_steps=100,
-                        stack_types=['seasonality', 'trend', 'identity'],
-                        n_blocks=[nbeatsx_best_trial[i]['best_params']['n_blocks1'],
-                                nbeatsx_best_trial[i]['best_params']['n_blocks2'],
-                                nbeatsx_best_trial[i]['best_params']['n_blocks3']],
-                        mlp_units=[[nbeatsx_best_trial[i]['best_params']['mlp_units'], nbeatsx_best_trial[i]['best_params']['mlp_units']],
-                                [nbeatsx_best_trial[i]['best_params']['mlp_units'], nbeatsx_best_trial[i]['best_params']['mlp_units']],
-                                [nbeatsx_best_trial[i]['best_params']['mlp_units'], nbeatsx_best_trial[i]['best_params']['mlp_units']]],
-                        n_harmonics=nbeatsx_best_trial[i]['best_params']['n_harmonics'],
-                        n_polynomials=nbeatsx_best_trial[i]['best_params']['n_polynomials'],
-                        dropout_prob_theta=nbeatsx_best_trial[i]['best_params']['dropout_prob_theta'],
-                        activation=nbeatsx_best_trial[i]['best_params']['activation'],
-                        hist_exog_list=['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500'],
-                        futr_exog_list=['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500'],
-                        learning_rate=nbeatsx_best_trial[i]['best_params']['learning_rate'],
-                        input_size=nbeatsx_best_trial[i]['best_params']['input_size'],
-                        logger=False)]
-
-        nfc_opt = NeuralForecast(models=m_opt, freq='D', local_scaler_type=nbeatsx_best_trial[i]['best_params']['local_scaler_type'])
-        nfc_opt.fit(df=df_train)
-
-        p = nfc_opt.predict(futr_df=df_futr)
-        df_result = pd.merge(left=p, right=df_test[['ds', 'y']], on=['ds'], how='left')
-
-        fig = make_subplots(rows=2, cols=1, vertical_spacing=0.2, specs=[[{"type": "scatter"}], [{"type": "table"}]])
-        fig.add_trace(go.Scatter(x=df_result['ds'], y=df_result['y'], mode='lines', name='observado', line=dict(color="black", width=4)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=df_result['ds'], y=df_result['NBEATSx'], mode='lines', name='NBEATSx', line=dict(color='olive')), row=1, col=1)
-
-        fig.append_trace(go.Table(header=dict(values=["sMAPE", "RMSE", "MAE"], font=dict(size=14), align="center"),
-                                        cells=dict(values=[smape(df_result['y'], df_result['NBEATSx']),
-                                                        rmse(df_result['y'], df_result['NBEATSx']),
-                                                        mae(df_result['y'], df_result['NBEATSx'])],
-                                                font=dict(size=14),
-                                                height=24,
-                                                align="left")),
-                                row=2, col=1)
-
-        fig.update_yaxes(title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)))
-        fig.update_xaxes(title=dict(text="Período", font=dict(family="system-ui", size=18)))
-
-        fig.update_traces(hovertemplate=None, row=1, col=1)
-
-        fig.update_layout(width=1500, height=1000, hovermode='x unified', #autosize=True
-                          title=dict(text="Rede NBEATSx otimizada (fch = {f})".format(f=f),
-                                     font=dict(family="system-ui", size=24)))
-
-        fig.write_image("/home/wasf84/Documentos/deep_learning/fch{fh}/opt/nbeatsx.png".format(fh=f))
-        # fig.show()
-
-# %% [markdown]
-# # HydroBR
-
-# %%
-# help(hbr.get_data.ANA)
-
-# %%
-# estacoes_inmet = hbr.get_data.INMET.list_stations(station_type='both')
-
-# %%
-# estacoes_inmet
-
-# %%
-# estacoes_inmet.query("Code == 'A255'")
-
-# %%
-# cod = 'A255'
-# df_dados = hbr.get_data.INMET.daily_data(station_code=cod)
-
-# %%
-# df_dados
-
-# %%
-estacoes_ana_vazao = hbr.get_data.ANA.list_flow(state='MINAS GERAIS', source='ANA')
-
-# %%
-estacoes_ana_vazao
-
-# %%
-# estacoes de vazão tbm e cota
-# 56425000 56338500 56338080 56110005 56337200 56337500
-
-estacoes_ana_vazao.query("Code == '56337500'")
-
-# %%
-estacao_principal = '56338500'
-df_result = get_convencional(codEstacao=estacao_principal,
-                             dataInicio='2013-01-01',
-                             dataFim='2023-12-31',
-                             tipoDados=1,
-                             nivelConsistencia='')
-
-df_result
-
-# df_result.index = pd.to_datetime(df_result.index)
-# df_result.Cota = pd.to_numeric(df_result.Cota, errors='coerce')
-# df_result.Chuva = pd.to_numeric(df_result.Chuva, errors='coerce')
-# df_result.Vazao = pd.to_numeric(df_result.Vazao, errors='coerce')
-
-# df_result = df_result.resample('D').agg({'Cota': 'sum', 'Chuva': 'mean', 'Vazao': 'mean'})
-
-# df_result.index.name
-
-# df_result.columns = ['t_ct_'+str(estacao_principal), 't_cv_'+str(estacao_principal), 't_vz_'+str(estacao_principal)]
-
-# # Agora que já tenho os dados da estação que considero principal na análise (target)
-# #   vou agregar com os dados das demais estações
-# list_estacoes_tele = ['56338500', '56338080', '56110005', '56337200', '56337500']
-
-# for e in list_estacoes_tele:
-#     df_temp = get_convencional(codEstacao=e, dataInicio="2013-01-01", dataFim="2023-12-31")
-
-#     # Convertendo os dados
-#     df_temp.index = pd.to_datetime(df_temp.index)
-#     df_temp.Cota = pd.to_numeric(df_temp.Cota, errors='coerce')
-#     df_temp.Chuva = pd.to_numeric(df_temp.Chuva, errors='coerce')
-#     df_temp.Vazao = pd.to_numeric(df_temp.Vazao, errors='coerce')
-
-#     # Para as telemétricas já agrego aqui mesmo
-#     df_temp = df_temp.resample('D').agg({'Cota': 'sum', 'Chuva': 'mean', 'Vazao': 'mean'})
-
-#     # Ajeito os nomes das colunas pra conter de qual estacao os dado veio
-#     df_temp.columns = ['t_ct_'+e, 't_cv_'+e, 't_vz_'+e]
-
-#     df_result = pd.concat([df_result, df_temp], axis=1)
-
-# %%
-df_result
-
-
+    # metrics = {}
+
+    # metrics["LGBMRegressor"] = {
+    #     "MAPE": mape(df_merged.y, df_merged.LGBMRegressor),
+    #     "RMSE": rmse(df_merged.y, df_merged.LGBMRegressor),
+    #     "MAE": mae(df_merged.y, df_merged.LGBMRegressor),
+    # }
+
+    # metrics['LinearSVR'] = {
+    #     'MAPE': mape(df_merged.y, df_merged.LinearSVR),
+    #     'RMSE': rmse(df_merged.y, df_merged.LinearSVR),
+    #     'MAE' : mae(df_merged.y, df_merged.LinearSVR)
+    # }
+
+    # df_tbl = pd.DataFrame(metrics).T.reset_index(
+    #     names="Modelo"
+    # )  # Usado para preencher a tabela com as métricas
+
+    # fig = make_subplots(
+    #     rows=2,
+    #     cols=1,
+    #     vertical_spacing=0.2,
+    #     specs=[[{"type": "scatter"}], [{"type": "table"}]],
+    # )
+
+    # fig.add_trace(
+    #     go.Scatter(
+    #         x=df_merged.ds,
+    #         y=df_merged.y,
+    #         mode="lines+markers",
+    #         name="observado",
+    #         line=dict(color="black", width=4),
+    #     ),
+    #     row=1,
+    #     col=1,
+    # )
+
+    # fig.add_trace(
+    #     go.Scatter(
+    #         x=df_merged.ds,
+    #         y=df_merged.LGBMRegressor,
+    #         mode="lines+markers",
+    #         name="LGBM",
+    #         line=dict(color="red"),
+    #     ),
+    #     row=1,
+    #     col=1,
+    # )
+
+    # fig.add_trace(
+    #     go.Scatter(
+    #         x=df_merged.ds,
+    #         y=df_merged.LinearSVR,
+    #         mode="lines+markers",
+    #         name="LinearSVR",
+    #         line=dict(color="green"),
+    #     ),
+    #     row=1,
+    #     col=1,
+    # )
+
+    # fig.add_trace(
+    #     go.Table(
+    #         header=dict(
+    #             values=df_tbl.columns.to_list(), font=dict(size=14), align="center"
+    #         ),
+    #         cells=dict(values=df_tbl.T, font=dict(size=12), height=24, align="left"),
+    #     ),
+    #     row=2,
+    #     col=1,
+    # )
+
+    # fig.update_yaxes(
+    #     title=dict(text="Vazão (m³/s)", font=dict(family="system-ui", size=18)),
+    #     mirror=True,
+    #     ticks="outside",
+    #     showline=True,
+    #     linecolor="black",
+    # )
+
+    # fig.update_xaxes(
+    #     title=dict(text="Período", font=dict(family="system-ui", size=18)),
+    #     mirror=True,
+    #     ticks="outside",
+    #     showline=True,
+    #     linecolor="black",
+    # )
+
+    # fig.update_traces(hovertemplate=None, row=1, col=1)
+
+    # fig.update_layout(
+    #     width=1500,
+    #     height=1000,
+    #     hovermode="x unified",
+    #     plot_bgcolor="#c8d4e3",
+    #     title=dict(
+    #         text="Modelos de ML otimizados (fch = {f})".format(f=f),
+    #         font=dict(family="system-ui", size=24),
+    #     ),
+    # )
+
+    # salvar = False
+    # if salvar:
+    #     now = datetime.now()
+    #     fig.write_image(
+    #         "./resultados/trecho_alto/fch{fh}/opt/ml_{dt}.png".format(
+    #             fh=f, dt=now.strftime("%Y-%m-%d_%H-%M-%S")
+    #         )
+    #     )
+    # else:
+    #     fig.show()
