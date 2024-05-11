@@ -1,4 +1,4 @@
-# celula 1
+# %% imports gerais
 """
     Imports básicos para todas as análises
 """
@@ -54,7 +54,7 @@ mae = MeanAbsoluteError()  # Quanto menor, melhor
 SHOW_PLOT = False
 SEED = 1984
 
-# %% celula 2
+# %% funções de utilidade
 """
     Utilidades
 
@@ -799,7 +799,7 @@ def plot_divisao_treino_teste(
         auto_open=show
     )
 # =========================================================================== #
-# %% celula 3
+# %% carregamento dos dados
 """
     Carregando e imputando dados
 """
@@ -812,7 +812,7 @@ df = pd.read_excel(
     parse_dates=["Data"],
 )
 
-# %% celula 4
+# %% reordenamento das colunas
 """
     Só reordenando a posição das colunas pra ficar mais fácil de ler e entender
 """
@@ -826,21 +826,21 @@ df["unique_id"] = 1
 df = df.reset_index()
 df = df.rename(columns={"Data": "ds", "c_vz_56425000": "y"})
 
-# %% celula 5
+# %% percentual faltante
 """
     Percentual de dados faltantes, por coluna
 """
 
 print(100 * df.drop(columns=["ds", "unique_id"]).isna().sum() / len(df))
 
-# %% celula 6
+# %% preenchendo com a média
 """
     Preenchendo com a média
 """
 
 df_media = df.fillna(df.mean())
 
-# %% celula 7
+# %% preenchendo com o KNNImputer
 """
     Preenchendo com o KNNImputer
 """
@@ -868,7 +868,7 @@ df_knn = pd.concat(
     axis=1
 )
 
-# %% celula 8
+# %% contagem de zeros nas vazões
 """
     Quantos '0' existem nas colunas de vazão
     O percentual, no caso.
@@ -881,7 +881,7 @@ for c in cols:
 
 # Eu pensei que tivesse mais zero. Essa quantidade, para as colunas de vazão, até que tá ok.
 
-# %% celula 9
+# %% distribuição comparada
 """
     Distribuição comparada
 """
@@ -893,7 +893,7 @@ distribuicao_dados(
     show=SHOW_PLOT
 )
 
-# %% celula 10
+# %% dropando coluna t_cv_56338080
 """
     Essa coluna tá ruim demais, vou retirar.
     Maioria dos valores está 'colada' no 0.
@@ -902,7 +902,7 @@ distribuicao_dados(
 df_knn = df_knn.drop(columns=["t_cv_56338080"])
 df_knn.columns
 
-# %% celula 11
+# %% separando X e Y
 """
     Separando dados para 'X' e 'y'
 """
@@ -912,12 +912,12 @@ df_knn.columns
 df_X = df_knn.drop(columns=["y"], axis=1)
 df_y = df_knn[["ds", "y", "unique_id"]]
 
-# %% celula 12
+# %% A.E.D.
 """
     ANÁLISE EXPLORATÓRIA DOS DADOS
 """
 
-# %% celula 13
+# %% decomp das STs
 """
     Decomposição das Séries Temporais
 """
@@ -935,7 +935,7 @@ decomp_series(
     show=SHOW_PLOT
 )
 
-# %% celula 14
+# %% estacionariedade
 """
     Estacionariedade
 """
@@ -947,7 +947,7 @@ estacionariedade(
 
 # A série 't_vz_56337500' é estacionária, contudo, na lag 365 ela não apresenta sazonalidade.
 
-# %% celula 15
+# %% corr entre as STs
 """
     Correlação entre as séries
 """
@@ -958,7 +958,7 @@ mapa_correlacao(
     show=SHOW_PLOT
 )
 
-# %% celula 16
+# %% Sweetviz
 # Usando o sweetviz para avaliar
 # import sweetviz as sv
 # analyze_report = sv.analyze(df_knn)
@@ -967,13 +967,13 @@ mapa_correlacao(
 # Apresentando os resultados (serve apenas para usar no Google Colab)
 # import IPython
 # IPython.display.HTML('analyze.html')
-# %% celula 17
+# %% copiando os dados do DF
 # Preferi jogar os dados alterados para um novo DataFrame porque se precisar voltar no DataFrame inicial,
 # não precisará regarregar o arquivo
 
 df_aux = df_knn.copy()
 
-# %% celula 18
+# %% corr entre as STs
 
 # Uma conferida antes de continuar com o trabalho
 mapa_correlacao(
@@ -981,7 +981,7 @@ mapa_correlacao(
     show=SHOW_PLOT
 )
 
-# %% celula 19
+# %% plot ACF
 """
     Análise de Autocorrelação - ACF
 """
@@ -997,7 +997,7 @@ cria_plot_correlacao(
 # Na lag 365 o gráfico volta a descer.
 # Isso nos dá uma visão da sazonalidade da série, que é de 365 dias
 
-# %% celula 20
+# %% plot PACF
 """
     Análise de Autocorrelação - PACF
 """
@@ -1016,7 +1016,7 @@ cria_plot_correlacao(
 # Isso nos dá um indício de quantas lags usar em "look_back".
 # Se fosse um modelo tipo ARIMA a ser utilizado, ele seria AR(2)
 
-# %% celula 21
+# %% relação entre as variáveis
 """
     Relação entre as variáveis
 """
@@ -1141,7 +1141,7 @@ for c in chuvas:
         filename="./resultados/trecho_alto/aed/relacao_y_{c}".format(c=c)
     )
 
-# %% celula 22
+# %% análise DELAY
 """
     Análise de delay
 """
@@ -1192,7 +1192,7 @@ axs[0].set_ylabel("Vazão ($m^3$/s) - t_vz_56338500")
 axs[1].set_ylabel("Vazão ($m^3$/s) - y")
 fig.show()
 
-# %% celula 23
+# %% análise Granger causality
 """
     Granger-causality
 """
@@ -1202,8 +1202,12 @@ from statsmodels.tsa.stattools import grangercausalitytests
 # vazões ['t_vz_56338500', 't_vz_56110005', 't_vz_56337200', 't_vz_56337500']
 # chuvas ['t_cv_56425000', 't_cv_56338500', 't_cv_56110005', 't_cv_56337200', 't_cv_56337500']
 
+# DataFrame vazio
 df_granger = pd.DataFrame()
-df_granger = df_aux.drop(columns=["ds", "unique_id"]).diff(1)  # aplica essa diferenciação pra remover qq efeito de tendência
+
+# aplica essa diferenciação pra remover qq efeito de tendência
+df_granger = df_aux.drop(columns=["ds", "unique_id"]).diff(1)
+
 df_granger = df_granger.dropna()
 grangercausalitytests(
     x=df_granger[["y", "t_cv_56337500"]].tail(30),
@@ -1211,7 +1215,7 @@ grangercausalitytests(
     verbose=True
 )
 
-# %% celula 24
+# %% iniciando variáveis globais
 """
     Variáveis globais
 """
@@ -1222,17 +1226,16 @@ pasta_resultados = "./resultados/trecho_alto/"
 fh_artigo = [1, 3, 7]  # Horizonte de Previsão inspirado no artigo da Alemanha
 intervalos_previsao = [50, 95]
 
-# %% celula 25
+# %% separação dos dados
 """
     Separação dos dados
 """
 
 # Criação de um conjunto de validação de apenas 30 registros (último mês de dados na base de dados)
 # Será com este conjunto que as previsões serão realizadas.
-# Nos conjuntos de treino/teste farei a otimização da pilha de modelos e gerarei os dados de input para o meta-regressor
-
 df_valid = df_aux.tail(30).copy()
 
+# Corta onde inicia os dados de validação
 df_aux_crpd = df_aux.drop(index=df_valid.index)
 
 df_train, df_test = temporal_train_test_split(
@@ -1249,7 +1252,7 @@ plot_divisao_treino_teste(
     show=SHOW_PLOT
 )
 
-# %% celula 26
+# %% SeasonalNaive
 """
     StatsForecast - SeasonalNaive (baseline)
     
@@ -1448,7 +1451,7 @@ for f in fh_v:
         filename=pasta_resultados+"SeasonalNaive (fch={fch})".format(fch=f)
     )
 
-# %% celula 27
+# %% DecisionTreeRegressor vanilla
 """
     MLForecast - DecisionTreeRegressor (baseline)
 """
@@ -1659,7 +1662,7 @@ for f in fh_v:
         filename=pasta_resultados+"DecisionTreeRegressor (fch={fch})".format(fch=f)
     )
 
-# %% celula 28
+# %% LSTM vanilla
 """
     NeuralForecast - LSTM (modelo principal)
 """
@@ -1709,12 +1712,6 @@ for f in fh_v:
         "MAE": mae(df_result["y"], df_result[lstm.alias + "-median"]),
     }
 
-    metrics[lstm.alias + "-lo-95"] = {
-        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-lo-95"]),
-        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-lo-95"]),
-        "MAE": mae(df_result["y"], df_result[lstm.alias + "-lo-95"]),
-    }
-
     metrics[lstm.alias + "-lo-50"] = {
         "MAPE": mape(df_result["y"], df_result[lstm.alias + "-lo-50"]),
         "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-lo-50"]),
@@ -1725,6 +1722,12 @@ for f in fh_v:
         "MAPE": mape(df_result["y"], df_result[lstm.alias + "-hi-50"]),
         "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-hi-50"]),
         "MAE": mae(df_result["y"], df_result[lstm.alias + "-hi-50"]),
+    }
+
+    metrics[lstm.alias + "-lo-95"] = {
+        "MAPE": mape(df_result["y"], df_result[lstm.alias + "-lo-95"]),
+        "RMSE": rmse(df_result["y"], df_result[lstm.alias + "-lo-95"]),
+        "MAE": mae(df_result["y"], df_result[lstm.alias + "-lo-95"]),
     }
 
     metrics[lstm.alias + "-hi-95"] = {
@@ -1869,7 +1872,7 @@ for f in fh_v:
         filename=pasta_resultados+"LSTM (fch={fch})".format(fch=f)
     )
 
-# %% celula 29
+# %% DecisionTreeRegressor opt
 """
     Otimização -> DecisionTreeRegressor
 """
@@ -1892,6 +1895,7 @@ def opt_dt(trial):
     fcst = mlf.MLForecast(
         models=[modelo],
         freq="D",
+        num_threads=8,
         lags=[i + 1 for i in range(look_back)],
         date_features=["dayofyear", "week", "month", "quarter", "year"],
     )
@@ -1932,16 +1936,17 @@ study_dt.optimize(
     func=opt_dt,
     n_trials=100,
     catch=(FloatingPointError, ValueError, RuntimeError),
-    show_progress_bar=False,
+    n_jobs=4,
 )
 
-# %% celula 30
+# %% melhores parâmetros DT
+
 print("><><><><><><><><><><><><><><")
-print(study_dt.best_value)
-print(study_dt.best_params)
+print("best_value ->", study_dt.best_value)
+print("best_params ->", study_dt.best_params)
 print("><><><><><><><><><><><><><><")
 
-# %% celula 31
+# %% LSTM opt
 """
     Otimização -> LSTM
 """
@@ -1956,7 +1961,8 @@ def opt_lstm(trial):
         "scaler_type": "minmax",
         "logger": False,
         "alias": "LSTM",
-        "max_steps" : 100,
+        "max_steps": 100,
+        "num_workers_loader": 4,
         "enable_progress_bar": False,
     }
 
@@ -2009,16 +2015,17 @@ study_lstm.optimize(
     opt_lstm,
     n_trials=100,
     catch=(FloatingPointError, ValueError, RuntimeError),
-    show_progress_bar=False,
+    n_jobs=4,
 )
 
-# %% celula 32
+# %% melhores parâmetros LSTM
+
 print("><><><><><><><><><><><><><><")
-print(study_lstm.best_value)
-print(study_lstm.best_params)
+print("best_value ->", study_lstm.best_value)
+print("best_params ->", study_lstm.best_params)
 print("><><><><><><><><><><><><><><")
 
-# %% celula 33
+# %% CV LSTM
 """
     Cross-Validation - LSTM
 """
