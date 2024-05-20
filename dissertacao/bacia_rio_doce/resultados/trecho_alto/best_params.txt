@@ -1,0 +1,14 @@
+DT - Multivariada
+
+><><><><><><><><><><><><><><
+best_value -> 0.18987103212146425
+best_params -> {'criterion': 'friedman_mse', 'max_depth': 19, 'min_samples_split': 17, 'min_samples_leaf': 6, 'min_weight_fraction_leaf': 0.014884157365834816, 'max_features': 'log2'}
+><><><><><><><><><><><><><><
+
+
+LSTM - Multivariada
+
+><><><><><><><><><><><><><><
+best_value -> 0.2598234290087614
+best_params -> {'encoder_n_layers': 8, 'encoder_hidden_size': 64, 'encoder_dropout': 0.2, 'decoder_layers': 2, 'decoder_hidden_size': 128, 'learning_rate': 0.001, 'context_size': 14, 'scaler_type': 'minmax', 'max_steps': 1000}
+><><><><><><><><><><><><><><
