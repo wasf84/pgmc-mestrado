@@ -1,0 +1,132 @@
+KERAS
+
+LSTM COM TIMESERIESGENERATOR
+
+FONTE: <https://towardsdatascience.com/how-to-convert-pandas-dataframe-to-keras-rnn-and-back-to-pandas-for-multivariate-regression-dcc34c991df9>
+
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
+
+from keras.preprocessing.sequence import TimeseriesGenerator
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM as kLSTM
+
+
+
+X_train = df_train.drop(columns=['ds', 'unique_id', 'y']).copy()
+y_train = df_train[['y']].copy()
+print(X_train.shape, y_train.shape)
+
+
+
+Xscaler = MinMaxScaler(feature_range=(0, 1)) # scale so that all the X data will range from 0 to 1
+Xscaler.fit(X_train)
+scaled_X_train = Xscaler.transform(X_train)
+print(X_train.shape)
+Yscaler = MinMaxScaler(feature_range=(0, 1))
+Yscaler.fit(y_train)
+scaled_y_train = Yscaler.transform(y_train)
+print(scaled_y_train.shape)
+scaled_y_train = scaled_y_train.reshape(-1) # remove the second dimention from y so the shape changes from (n,1) to (n,)
+print(scaled_y_train.shape)
+
+scaled_y_train = np.insert(scaled_y_train, 0, 0)
+scaled_y_train = np.delete(scaled_y_train, -1)
+
+
+
+n_input = look_back #how many samples/rows/timesteps to look in the past in order to forecast the next sample
+n_features= X_train.shape[1] # how many predictors/Xs/features we have to predict y
+b_size = 8 # Number of timeseries samples in each batch
+generator = TimeseriesGenerator(
+    scaled_X_train,
+    scaled_y_train,
+    length=n_input,
+    batch_size=b_size
+)
+
+print(generator[0][0].shape)
+
+
+
+model = Sequential()
+
+model.add(
+    kLSTM(
+        256,
+        activation='relu',
+        input_shape=(n_input, n_features)
+    )
+)
+
+model.add(Dense(1))
+
+model.compile(
+    optimizer='adam',
+    loss='mse'
+)
+
+model.summary()
+
+
+
+model.fit_generator(
+    generator,
+    epochs=25
+)
+
+
+
+loss_per_epoch = model.history.history['loss']
+plt.plot(range(len(loss_per_epoch)), loss_per_epoch)
+
+
+
+X_test = df_test.drop(columns=['ds', 'unique_id', 'y']).copy()
+scaled_X_test = Xscaler.transform(X_test)
+test_generator = TimeseriesGenerator(
+    scaled_X_test,
+    np.zeros(len(X_test)),
+    length=n_input,
+    batch_size=b_size
+)
+print(test_generator[0][0].shape)
+
+
+
+y_pred_scaled = model.predict(test_generator)
+y_pred = Yscaler.inverse_transform(y_pred_scaled)
+results = pd.DataFrame(
+    {'y_true': df_test['y'].values[n_input:],
+     'y_pred': y_pred.ravel()}
+)
+
+mape(results['y_true'], results['y_pred'])
+
+
+
+X_valid = df_valid.drop(columns=['ds', 'unique_id', 'y']).copy()
+scaled_X_valid = Xscaler.transform(X_valid)
+valid_generator = TimeseriesGenerator(
+    scaled_X_valid,
+    np.zeros(len(X_valid)),
+    length=n_input,
+    batch_size=b_size
+)
+print(valid_generator[0][0].shape)
+
+
+
+y_pred_scaled = model.predict(valid_generator)
+y_pred = Yscaler.inverse_transform(y_pred_scaled)
+
+results = pd.DataFrame(
+    {'y_true': df_valid['y'].values[n_input:],
+     'y_pred': y_pred.ravel()}
+)
+
+mape(results['y_true'], results['y_pred'])
