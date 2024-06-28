@@ -1,0 +1,62 @@
+{
+    "0": {
+        "modelo": "LSTM",
+        "fh": 1,
+        "best_trial": 15,
+        "best_value": 0.0007596291260586326,
+        "best_params": {
+            "encoder_n_layers": 2,
+            "encoder_hidden_size": 64,
+            "decoder_layers": 4,
+            "decoder_hidden_size": 32,
+            "learning_rate": 0.01,
+            "context_size": 7,
+            "max_steps": 420
+        }
+    },
+    "1": {
+        "modelo": "LSTM",
+        "fh": 3,
+        "best_trial": 11,
+        "best_value": 0.042086905075862435,
+        "best_params": {
+            "encoder_n_layers": 1,
+            "encoder_hidden_size": 128,
+            "decoder_layers": 4,
+            "decoder_hidden_size": 32,
+            "learning_rate": 0.01,
+            "context_size": 28,
+            "max_steps": 430
+        }
+    },
+    "2": {
+        "modelo": "LSTM",
+        "fh": 7,
+        "best_trial": 20,
+        "best_value": 0.04395628326331315,
+        "best_params": {
+            "encoder_n_layers": 2,
+            "encoder_hidden_size": 64,
+            "decoder_layers": 1,
+            "decoder_hidden_size": 128,
+            "learning_rate": 0.01,
+            "context_size": 28,
+            "max_steps": 500
+        }
+    },
+    "3": {
+        "modelo": "LSTM",
+        "fh": 15,
+        "best_trial": 48,
+        "best_value": 0.19912151506698642,
+        "best_params": {
+            "encoder_n_layers": 4,
+            "encoder_hidden_size": 32,
+            "decoder_layers": 4,
+            "decoder_hidden_size": 64,
+            "learning_rate": 0.001,
+            "context_size": 7,
+            "max_steps": 280
+        }
+    }
+}
