@@ -1,0 +1,12 @@
+{
+    "modelo": "LSTM-CV",
+    "fh": 1,
+    "best_trial": 96,
+    "best_value": 0.05392492869565803,
+    "best_params": {
+        "encoder_n_layers": 2,
+        "encoder_hidden_size": 164,
+        "encoder_dropout": 0.16653107107005133,
+        "learning_rate": 0.0002562845093497315
+    }
+}

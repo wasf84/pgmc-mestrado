@@ -1,0 +1,12 @@
+{
+    "modelo": "LSTM",
+    "fh": 1,
+    "best_trial": 10,
+    "best_value": 0.002162085059420616,
+    "best_params": {
+        "encoder_n_layers": 6,
+        "encoder_hidden_size": 116,
+        "encoder_dropout": 0.12107151820391189,
+        "learning_rate": 0.030264299702525803
+    }
+}
