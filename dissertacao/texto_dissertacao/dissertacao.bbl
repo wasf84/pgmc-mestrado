@@ -1,0 +1,80 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brasil(2024{\natexlab{a}})]{bbc_chuvas_bahia_2024}
+BBC~News Brasil.
+\newblock Chuvas na bahia: os fenômenos extremos que causam a tragédia no
+  estado, julho 2024{\natexlab{a}}.
+\newblock URL \url{https://www.bbc.com/portuguese/brasil-59804297}.
+\newblock Acessado em: julho de 2024.
+
+\bibitem[Brasil(2024{\natexlab{b}})]{cnn_temporais_mg_2024}
+CNN Brasil.
+\newblock Temporais causam estragos em minas gerais e deixam desabrigados e
+  desalojados, julho 2024{\natexlab{b}}.
+\newblock URL
+  \url{https://www.cnnbrasil.com.br/nacional/temporais-causam-estragos-em-minas-gerais-e-deixam-desabrigados-e-desalojados/}.
+\newblock Acessado em: julho de 2024.
+
+\bibitem[de~Carvalho(2020)]{carvalho2020hydrobr}
+Wallisson~Moreira de~Carvalho.
+\newblock Hydrobr: A python package to work with brazilian hydrometeorological
+  time series, julho 2020.
+\newblock URL \url{http://doi.org/10.5281/zenodo.3931027}.
+\newblock Version 0.1.1.
+
+\bibitem[de~Juiz~de Fora(2020)]{UFJF2020}
+Universidade~Federal de~Juiz~de Fora.
+\newblock \emph{Manual de Normalização de Trabalhos Acadêmicos: Atualizado
+  conforme a ABNT NBR 14724:2011}, August 2020.
+\newblock URL
+  \url{https://www2.ufjf.br/biblioteca/wp-content/uploads/sites/56/2020/08/Manual-2020-revisado.pdf}.
+\newblock Acesso em: 11 ago. 2024.
+
+\bibitem[{Empresa de Pesquisa Energética (Brasil)}(2023)]{epe2023ben}
+{Empresa de Pesquisa Energética (Brasil)}.
+\newblock \emph{Balanço Energético Nacional 2023: Ano base 2022 / Brazilian
+  Energy Balance 2023 Year 2022}.
+\newblock Empresa de Pesquisa Energética (EPE), Rio de Janeiro, 2023.
+\newblock 274 p., 182 ill., 23 cm.
+
+\bibitem[G1(2015)]{g1_cantareira_2015}
+G1.
+\newblock Há 1 ano no volume morto, cantareira precisará de reserva até
+  final de 2015, maio 2015.
+\newblock URL
+  \url{https://g1.globo.com/sao-paulo/noticia/2015/05/ha-1-ano-no-volume-morto-cantareira-precisara-de-reserva-ate-final-de-2015.html}.
+\newblock Acessado em: julho de 2024.
+
+\bibitem[G1(2022)]{g1_temporal_petropolis_2022}
+G1.
+\newblock Temporal em petrópolis: entenda o que provocou as chuvas intensas
+  que causaram destruição na cidade, fevereiro 2022.
+\newblock URL
+  \url{https://g1.globo.com/meio-ambiente/noticia/2022/02/15/temporal-em-petropolis-entenda-o-que-provocou-as-chuvas-intensas-que-causaram-destruicao-na-cidade.ghtml}.
+\newblock Acessado em: julho de 2024.
+
+\bibitem[G1(2024)]{g1_temporal_es_2024}
+G1.
+\newblock Entenda o que causou temporal na região sul do es e o que pode ser
+  feito para evitar novas tragédias, março 2024.
+\newblock URL
+  \url{https://g1.globo.com/es/espirito-santo/noticia/2024/03/27/entenda-o-que-causou-temporal-na-regiao-sul-do-es-e-o-que-pode-ser-feito-para-evitar-novas-tragedias.ghtml}.
+\newblock Acessado em: julho de 2024.
+
+\bibitem[Petry et~al.(2023)Petry, Fan, Siqueira, Collishonn, de~Paiva, Quedi,
+  de~Araújo~Gama, Silveira, Freitas, and Paranhos]{rayyan-39677094}
+Ingrid Petry, Fernando~Mainardi Fan, Vinicius~Alencar Siqueira, Walter
+  Collishonn, Rodrigo Cauduro~Dias de~Paiva, Erik Quedi, Cléber~Henrique
+  de~Araújo~Gama, Reinaldo Silveira, Camila Freitas, and Cassia Silmara~Aver
+  Paranhos.
+\newblock Seasonal streamflow forecasting in south america’s largest rivers.
+\newblock \emph{Journal of Hydrology: Regional Studies}, 49:\penalty0 101487,
+  10 2023.
+\newblock ISSN 2214-5818.
+
+\end{thebibliography}

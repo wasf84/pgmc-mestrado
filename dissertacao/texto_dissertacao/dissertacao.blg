@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: dissertacao.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: cap1_introducao.aux
+A level-1 auxiliary file: cap2_revisao.aux
+A level-1 auxiliary file: cap3_metodologia.aux
+A level-1 auxiliary file: cap4_resultados.aux
+A level-1 auxiliary file: cap5_conclusao.aux
+A level-1 auxiliary file: citacoes.aux
+Database file #1: referencias.bib
+Warning--entry type for "bbc_chuvas_bahia_2024" isn't style-file defined
+--line 444 of file referencias.bib
+Warning--entry type for "g1_temporal_petropolis_2022" isn't style-file defined
+--line 453 of file referencias.bib
+Warning--entry type for "cnn_temporais_mg_2024" isn't style-file defined
+--line 462 of file referencias.bib
+Warning--entry type for "g1_temporal_es_2024" isn't style-file defined
+--line 480 of file referencias.bib
+Warning--entry type for "g1_cantareira_2015" isn't style-file defined
+--line 489 of file referencias.bib
+You've used 9 entries,
+            2773 wiz_defined-function locations,
+            652 strings with 7252 characters,
+and the built_in function-call counts, 3326 in all, are:
+= -- 286
+> -- 173
+< -- 8
++ -- 64
+- -- 54
+* -- 231
+:= -- 532
+add.period$ -- 36
+call.type$ -- 9
+change.case$ -- 43
+chr.to.int$ -- 8
+cite$ -- 18
+duplicate$ -- 148
+empty$ -- 289
+format.name$ -- 63
+if$ -- 684
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 3
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 111
+preamble$ -- 1
+purify$ -- 36
+quote$ -- 0
+skip$ -- 115
+stack$ -- 0
+substring$ -- 36
+swap$ -- 20
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 94
+warning$ -- 0
+while$ -- 28
+width$ -- 0
+write$ -- 135
+(There were 5 warnings)
