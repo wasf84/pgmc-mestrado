@@ -13,3 +13,20 @@ Gere um fluxograma considerando os seguintes aspectos:
 - Realizar otimização de hiperparâmetros dos modelos CatBoost e LightGBM
 - Reproduzir o uso diário do modelo ao longo do ano inteiro anteriormente reservado (Walk Forward Validation)
 - Avaliar os resultados
+
+===========================
+
+flowchart TD
+    A[Definir período de análise] --> B[Identificar estação-alvo de vazão] --> C[Identificar estações de precipitação à montante até 50km]
+    C --> D[Coletar dados de vazão e precipitação] --> E{Dados faltantes?}
+    E -->|Sim| F[Preencher com sazonalidade]
+    E -->|Não| G[Aplicar transformação logarítmica]
+    F --> G
+    G --> H[Separar dados do último ano] --> |dados restantes| I[Separar conjunto de treino e horizonte de previsão]
+    H --> |usar como conjunto validação| M
+    I --> J[Treinar modelos LinearRegression, CatBoost e LightGBM] --> K[Avaliar no horizonte de previsão]
+    K --> L[Otimizar hiperparâmetros CatBoost e LightGBM]
+    L --> |todos os dados exceto o último ano| M[Aplicar Walk Forward Validation] --> N[Avaliar resultados]
+    
+link:
+https://mermaid.live/edit#pako:eNp9U01v0zAY_iuWz93UrilNcgB17dqVtQOxCSTSHqzkbWMa25HjdFs__gsfB8SBIxeu-WO8sUsHaCKnOH6fz9hbGqsEaEgXmbqLU6YNuR3MJMGnFw1gwSXXJAddfVeJIgkQJqtPGS9gTk5OnpPzaJyANHzBY6YJFIZVX6sv6oRlazu9Zhtcutn-U7M_oKjncg0xz_kBTqqPRChpmDQoaKpvpNNcibmz1bdkg6ivMjBIlLBEFY9a5F8yJ36xHdi5BcssbfFi7-gu6u3dDRc7MoxeawAZp6BJrAQp2EZJlnFUgPmf09dIuyOjqJdnNovRTBYLpcXBfqaWDBszAncPwKF1MXKLkV1cRjeQM_0YAXP_zAwXCks-2N65LV23VbvekfERFSv5oZTG9mw0cFlnT5Xm6Bp7c62ueVF34HQvHWdZWDTqHCnWNqZ1vyNTNz220y-j25obEQIPSoZmJlwC029gia4KrmSD9Jk5V6owqD_hy9SMzqfO_lXUq5kRjOb-a-3Kzk-iV5ifbxCQcjx1GLT6LMBolH1KxGEnLpZRdVV1kbYzuI8Bk_1VKmY7_rR3LFuRodJ3TCfkrc1vMI0zfn00jiFLPDLIOKcNKgB_Mk_wvmxr7Rk1KQiY0RBfE6ZXMzqTe5xjpVE3DzKmodElNKhW5TKlIZ6-Aldljlow4GypmTh-zZl8r5T4DcElDbf0nobtbuvU91rds07Q9lp-x2836AMNn_mnQdNvNgO_HfieF-wbdGPxrdPA87utbrvT6Z75LS_wGhQSbpSeurtur_z-Fw1aY64

@@ -30,20 +30,21 @@
 \contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{26}{subsection.58}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{31}{subsection.62}%
 \contentsline {section}{\numberline {3.4}Modelos de Aprendizado de Máquina}{31}{section.68}%
+\contentsline {section}{\numberline {3.5}Modelo Proposto}{31}{section.69}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{34}{chapter.69}%
-\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{34}{section.70}%
-\contentsline {section}{\numberline {4.2}Importância das Variáveis}{34}{section.71}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{34}{section.72}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{35}{chapter.71}%
+\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{35}{section.72}%
+\contentsline {section}{\numberline {4.2}Importância das Variáveis}{35}{section.73}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{35}{section.74}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{35}{chapter.73}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{35}{section.74}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{35}{section.75}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{35}{section.76}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{36}{chapter.75}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{36}{section.76}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{36}{section.77}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{36}{section.78}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{36}{chapter.77}%
-\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{36}{section.78}%
-\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{36}{section.79}%
-\contentsline {section}{\numberline {6.3}NOTAS}{36}{section.80}%
+\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{37}{chapter.79}%
+\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{37}{section.80}%
+\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{37}{section.81}%
+\contentsline {section}{\numberline {6.3}NOTAS}{37}{section.82}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{38}{chapter*.83}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{39}{chapter*.85}%
