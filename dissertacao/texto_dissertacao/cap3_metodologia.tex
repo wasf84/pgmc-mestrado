@@ -9,7 +9,7 @@ Os dados de precipitação e vazão utilizados nesta pesquisa foram obtidos a pa
 
 O período de dados analisado compreende \textbf{de 1º de janeiro de 2013 a 31 de dezembro de 2023}, totalizando 11 anos completos.
 
-Foram utilizadas \textbf{séries temporais diárias} de precipitação e vazão. As colunas correspondentes às datas foram formatadas como 'datetime', enquanto os dados de precipitação e vazão foram representados como valores de ponto flutuante ('float'). Embora a frequência diária tenha sido adotada, é importante destacar que nem todas as séries temporais estavam originalmente nesse formato. Foi necessário lidar com quebra na continuidade das datas e com dados ausentes. Estes aspectos serão discutidos em detalhes em seções subsequentes.
+Foram utilizadas \textbf{séries temporais diárias} de precipitação e vazão. As colunas correspondentes às datas foram formatadas como '\textit{datetime}', enquanto os dados de precipitação e vazão foram representados como valores de ponto flutuante ('\textit{float}'). Embora a frequência diária tenha sido adotada, é importante destacar que nem todas as séries temporais estavam originalmente nesse formato. Foi necessário lidar com quebra na continuidade das datas e com dados ausentes. Estes aspectos serão discutidos em detalhes em seções subsequentes.
 
 Os dados de precipitação e vazão obtidos do site da ANA já estavam ajustados nas escalas padrão utilizadas em estudos hidrológicos. A precipitação foi fornecida em milímetros por dia (mm/dia), refletindo a quantidade de chuva que cai sobre uma unidade de área em um período de 24 horas e as vazões, por sua vez, foram disponibilizadas em metros cúbicos por segundo (m³/s), indicando o volume de água que passa por uma seção transversal do rio a cada segundo. Em algumas estações, foram observados valores extremamente elevados para determinados dias, tanto nas séries de precipitação quanto nas de vazão, os quais podem ser considerados \textit{outliers}. Em relação aos dados de vazão, verificou-se a ocorrência de valores nulos (vazão igual a 0), o que indicaria a interrupção completa do fluxo do rio. Esse fenômeno, no entanto, não faz sentido, considerando que não há registro de eventos de seca tão severos nos rios analisados, conforme constatado na revisão bibliográfica e em fontes jornalísticas. Apesar destas anomalias, os dados não foram descartados, pois tanto os registros de vazão quanto os de precipitação utilizados nesta pesquisa foram considerados consistidos pela ANA, ou seja, foram medidos e validados pela agência. O presente trabalho não questionou a veracidade dos dados; eles foram utilizados conforme disponibilizados pela ANA.
 
@@ -127,13 +127,13 @@ Estas são as únicas observações relevantes sobre as estações utilizadas.
 \section{Pré-processamento dos Dados}
 % Descrever os passos tomados para preparar os dados para análise (imputação de dados faltantes, gráficos de sazonalidade, etc...).
 
-Com os dados disponíveis localmente, o primeiro passo antes de qualquer análise foi garantir a continuidade temporal dos mesmos. Existiam dias faltantes, e, para garantir uma linha do tempo contínua, foi necessário preencher essas lacunas. Os 11 anos de dados diários resultaram em um total de 4.017 linhas de dados após essa etapa.
+Com os dados disponíveis localmente, o primeiro passo antes de qualquer análise foi garantir a continuidade temporal dos mesmos. Existiam dias faltantes, e, para garantir uma linha do tempo contínua, foi necessário preencher essas lacunas. Os 11 anos de dados diários resultaram em um total de 4017 linhas de dados após essa etapa.
 
 A sazonalidade é um fenômeno bem conhecido e estabelecido na análise hidrológica das bacias hidrográficas da América do Sul. O aumento da precipitação começa na primavera, em setembro, e atinge seus picos nos meses de dezembro e janeiro, durante o verão. Consequentemente, as vazões dos rios aumentam. Com a chegada do outono e, posteriormente, do inverno, os índices pluviométricos diminuem, assim como as vazões nos rios. \cite{rayyan-39677094}
 
 Considerando esse fenômeno, o preenchimento dos dados faltantes foi realizado replicando o padrão sazonal. Para preencher um dia faltante em julho, por exemplo, foi utilizado o valor correspondente ao mesmo dia nos anos anteriores. Para evitar a repetição exata do ano anterior, utilizou-se a média dos últimos três anos. As funções desenvolvidas para essa finalidade são personalizáveis, permitindo que se opte por repetir exatamente o ano anterior ou considerar mais de três anos, dependendo das necessidades do estudo.
 
-Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem sempre preenchia exatamente as lacunas. Quando havia muitos dados faltantes no início da série isso causava problema e a inserção de dados falhava. O que é o comportamente normal.
+Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem sempre preenchia exatamente as lacunas. Quando havia muitos dados faltantes no início da série isso causava problema e a inserção de dados falhava. O que é o comportamento normal.
 
 Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam faltantes. Para esses casos nulos, foi aplicada a imputação de dados utilizando o modelo kNN (k-Nearest Neighbors - k-vizinhos mais próximos), com o objetivo de garantir uma melhor dispersão dos valores imputados. O modelo kNN operou calculando a distância euclidiana dos pontos nulos utilizando os sete vizinhos mais próximos, atribuindo maior peso aos vizinhos mais próximos no cálculo. Esse método de imputação visou preservar a tendência local e o comportamento da série temporal dentro da semana em que o dado faltante estava. Após esta nova fase de imputação dos dados as séries ficaram completamente preenchidas.
 
@@ -143,203 +143,238 @@ Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidame
 
 \subsection{Rio Jequitinhonha}
 
-A estação de vazão utilizada no rio Jequitinhonha apresentava muitos dados faltantes no início da série, majoritariamente. É possivel observar a sazonalidade na série, com picos de vazão compreendendo o final e início dos anos (figura \ref{fig:jequitinhonhaSerieAlvoFaltantes}). Nas páginas a seguir serão apresentados os gráficos sem dados imputados e com dados imputados. Contrapondo a série obtida da ANA com o resultado da inserção de dados ficará mais claro. Apenas relembrando que primeiramente buscou-se repetir a sazonalidade dos 3 últimos anos através da média. O que ainda restou sem informação, executou-se o kNN para imputar o que faltou. Para esta estação havia 532 dias de dados nulos, correspondendo a cerca de 13,24\% do total de dados utilizado.
+A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade significativa de dados faltantes, especialmente no início da série temporal. Observa-se uma clara sazonalidade na série, com picos de vazão ocorrendo predominantemente no final e início de cada ano (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}). Nas páginas seguintes, serão apresentados gráficos comparativos entre a série original, sem dados imputados (incompleta), e a série após a imputação de dados (completa). Essa comparação, contrapondo a série fornecida pela ANA e os resultados após a inserção de dados, permitirá uma visualização mais clara do impacto das técnicas de preenchimento. Cabe relembrar que, inicialmente, foi aplicada a média dos últimos três anos para replicar a sazonalidade. Para os dados que permaneceram ausentes, utilizou-se o modelo kNN para completar a série. Esta estação, identificada como t\_vz\_54790000, apresentou 532 dias de dados nulos, o que corresponde a aproximadamente 13,24\% do total. Essa é a estação-alvo para a previsão das vazões.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieAlvoFaltantes.png}
-\caption{Série da estação 54790000 sem dados imputados (fonte: o autor)}
-\label{fig:jequitinhonhaSerieAlvoFaltantes}
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png}
+\caption{Série temporal incompleta da estação t\_vz\_54790000 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}
 \end{figure}
 
-Em destaque, a seguir, o trecho da série com mais dados faltantes (figura \ref{fig:jequitinhonhaSerieAlvoFaltantes_2013_2016}). Compreende o período de janeiro de 2013 a janeiro de 2016. Logo após é mostrado como ficou depois de imputar os dados (figura \ref{fig:jequitinhonhaSerieAlvoImputados_2013_2016}). Não ficou exatamente bom este trecho, evidentemente. A imputação colocou vazão zero para vários dias, o que não faz sentido concretamente, pois isso significaria que o rio secou. Ao final da análise, entretanto, estes valores zero não interferiram no resultado, visto que estavam distantes do tempo presente do trabalho. Uma opção seria remover todo trecho anterior ao ano de 2016, mas buscou-se uma uniformidade quanto ao critério de aproveitamento dos dados neste trabalho, visto que havia outros rios a serem analisados e a preocupação de um comportamento que fosse semelhante nos resultados.
+"A seguir, destaca-se o trecho da série com a maior quantidade de dados faltantes (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}), que abrange o período de janeiro de 2013 a janeiro de 2016. Em sequência, é apresentada a série após a imputação dos dados (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}). Notavelmente, essa seção não apresentou resultados ideais, uma vez que a imputação atribuiu vazões zero em vários dias, o que não é realista, pois isso indicaria a secagem completa do rio, o que é improvável. No entanto, esses valores zero não impactaram significativamente os resultados finais da análise, já que se referem a um período distante do foco principal deste estudo. Uma alternativa seria excluir todo o trecho anterior ao ano de 2016, mas optou-se por manter a uniformidade nos critérios de aproveitamento dos dados ao longo do trabalho, dado que outros rios também foram analisados, e buscava-se assegurar consistência nos resultados."
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieAlvoFaltantes_2013_2016.png}
-\caption{Série da estação de vazão 54790000 sem dados imputados de 2013 - 2016 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieAlvoFaltantes_2013_2016}
-\end{figure}
-
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieAlvoImputados_2013_2016.png}
-\caption{Série da estação de vazão 54790000 com dados imputados de 2013 - 2016 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieAlvoImputados_2013_2016}
-\end{figure}
-
-Observe também o trecho de dados faltantes mais próximo ao final dos anos analisados, em 2021 e 2022 (figura \ref{fig:jequitinhonhaSerieAlvoFaltantes_2021_2022}). Esta porção da série ficou boa visto que havia informação prévia suficiente, a inserção de dados respeitou coerentemente a sazonalidade (figura \ref{fig:jequitinhonhaSerieAlvoImputados_2021_2022}).
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieAlvoFaltantes_2021_2022.png}
-\caption{Série da estação de vazão 54790000 sem dados imputados 2021/2022 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieAlvoFaltantes_2021_2022}
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png}
+\caption{Detalhe da série temporal da estação t\_vz\_54790000, ainda sem dados imputados, de 2013 a 2016 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieAlvoImputados_2021_2022.png}
-\caption{Série da estação de vazão 54790000 com dados imputados 2021/2022 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieAlvoImputados_2021_2022}
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png}
+\caption{Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}
 \end{figure}
 
-\newpage
-Por fim, uma visão ampla de como ficou a série temporal após os procedimentos de imputação dos dados. (figura \ref{fig:jequitinhonhaSerieAlvoImputados})
+Observe também o trecho de dados faltantes mais próximo ao final dos anos analisados, em 2021 e 2022 (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}). Esta porção da série ficou boa visto que havia informação prévia suficiente, a inserção de dados respeitou coerentemente a sazonalidade (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}).
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieAlvoImputados.png}
-\caption{Série da estação 54790000 com dados imputados (fonte: o autor)}
-\label{fig:jequitinhonhaSerieAlvoImputados}
-\end{figure}
-
-A mesma análise foi realizada para as estações de chuva. Nos dados da estação telemétrica de precipitação de código 54790000 (figura \ref{fig:jequitinhonhaSerieChuvaFaltantes_t_cv_54790000}), faltavam 273 dias de dados (6,79\%). Já a estação convencional de precipitação de código 01640000 estava totalmente preenchida, sem valores nulos. (figura \ref{fig:jequitinhonhaSerieChuva_c_cv_01640000})
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieChuvaFaltantes_t_cv_54790000.png}
-\caption{Série da estação de precipitação 54790000 sem dados imputados (fonte: o autor)}
-\label{fig:jequitinhonhaSerieChuvaFaltantes_t_cv_54790000}
-\end{figure}
-
-Destaque para o trecho da série com dados faltantes, no início da série. (figura \ref{fig:jequitinhonhaSerieChuvaFaltantes_t_cv_54790000_2013})
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieChuvaFaltantes_t_cv_54790000_2013.png}
-\caption{Em detalhe, série da estação de precipitação 54790000 sem dados imputados - 2013 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieChuvaFaltantes_t_cv_54790000_2013}
-\end{figure}
-
-As séries de chuva completas ficaram desta forma. \pagebreak
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieChuvaImputados_t_cv_54790000.png}
-\caption{Série da estação de precipitação 54790000 já com dados imputados (fonte: o autor)}
-\label{fig:jequitinhonhaSerieChuvaImputados_t_cv_54790000}
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png}
+\caption{Série temporal incompleta da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieChuva_c_cv_01640000.png}
-\caption{Série completa da estação de precipitação 01640000 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieChuva_c_cv_01640000}
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png}
+\caption{Série temporal completa da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}
+\end{figure}
+
+Por fim, uma visão ampla de como ficou a série temporal após os procedimentos de imputar os dados. (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000})
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png}
+\caption{Série temporal completa da estação t\_vz\_54790000 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000}
+\end{figure}
+
+A mesma análise foi realizada para as estações de chuva. Na estação t\_cv\_54790000 (figura \ref{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}) faltavam 273 dias de dados (6,79\%). Já a estação t\_cv\_01640000 estava totalmente preenchida, sem valores nulos. (figura \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png}
+\caption{Série temporal incompleta da estação t\_cv\_54790000 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}
+\end{figure}
+
+Note que no início desta série de precipitação, o ano de 2013, não possuem dados. As séries de chuva completas ficaram desta forma (figuras \ref{fig:jequitinhonhaSerieCompleta_t_cv_54790000} e \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png}
+\caption{Série temporal completa da estação t\_cv\_54790000 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieCompleta_t_cv_54790000}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png}
+\caption{Série temporal completa da estação t\_cv\_01640000 (fonte: o autor)}
+\label{fig:jequitinhonhaSerieCompleta_t_cv_01640000}
 \end{figure}
 
 \subsection{Rio Doce}
 
-A série de vazão para o rio Doce foi a que apresentou melhor qualidade no que diz respeito aos dados obtidos. Havia falta de apenas 3 dias, dos 4017 dias do período inteiro. Apenas o preenchimento sazonal bastou para completar a série e não foi preciso mais que isso. Cabe destacar a sazonalidade da série. Ficou bastante evidente este comportamento.
+A estação alvo para o rio Doce é a estação c\_vz\_56994500. Sua série temporal foi a que apresentou melhor qualidade no que diz respeito à frequência de medições realizadas. Havia falta de apenas 3 dias, dos 4017 dias do período inteiro. Apenas o preenchimento sazonal bastou para completar a série e não foi preciso mais que isso. Cabe destacar a sazonalidade da série. Ficou bastante evidente este comportamento. (figura \ref{fig:doceSerieCompleta_c_vz_56994500})
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_c_vz_56994500_completa.png}
-\caption{Série completa da estação c\_vz\_56994500 (fonte: o autor)}
-\label{fig:rioDoceSerie_c_vz_56994500_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png}
+\caption{Série temporal completa da estação c\_vz\_56994500 (fonte: o autor)}
+\label{fig:doceSerieCompleta_c_vz_56994500}
 \end{figure}
 
-Se para os dados de vazão no rio Doce a séie foi, digamos, mais comportada, o mesmo não se pode dizer exatamente das estações de chuva. Ao menos, não para duas delas. Estas estações tiveram os dados desconsiderados e foram removidos das análise. Primeiro foi a estação t\_cv\_56990850 que possuía valores discrepantes demais para serem considerados. Valores da ordem de 7000 mm/dia, 8500 mm/dia. (\ref{fig:rioDoceSerie_t_cv_56990850_completa})
+Se para os dados de vazão no rio Doce a série foi, digamos, mais comportada, o mesmo não se pode dizer exatamente das estações de chuva. Ao menos, não para duas delas. Estas estações tiveram os dados desconsiderados e foram removidos das análises. Primeiro foi a estação t\_cv\_56990850 que possuía valores discrepantes demais para serem considerados. Valores da ordem de 7000 mm/dia, 8500 mm/dia. Além deste problema, havia ainda 3134 dias com dados nulos, o que representava 78\% do total. (figura \ref{fig:doceSerieIncompleta_t_cv_56990850})
 
-A outra estação removida foi a t\_cv\_56994500. Conforme pode ser observado (figura \ref{fig:rioDoceSerie_t_cv_56994500_completa}) nela havia um longo hiato de dados zerados, voltando à normalidade apenas mais recentemente. Como as informações de precipitação que deveria haver para a estação no período do hiato, pode ser retirado de outras estações usadas na modelagem, optou-se por remover esta estação completamente do trabalho.
+A outra estação removida foi a t\_cv\_56994500. Conforme pode ser observado na figura \ref{fig:doceSerieCompleta_t_cv_56994500}, nela havia um longo hiato de dados zerados, voltando à normalidade apenas mais recentemente. Como as informações de precipitação que deveria haver para a estação no período do hiato, pode ser retirado de outras estações usadas na modelagem, optou-se por remover esta estação completamente do trabalho.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_t_cv_56990850_completa.png}
-\caption{Série completa da estação t\_cv\_56990850 - não utilizada (fonte: o autor)}
-\label{fig:rioDoceSerie_t_cv_56990850_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png}
+\caption{Série temporal da estação t\_cv\_56990850 - não utilizada (fonte: o autor)}
+\label{fig:doceSerieIncompleta_t_cv_56990850}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_t_cv_56994500_completa.png}
-\caption{Série completa da estação t\_cv\_56994500 - não utilizada (fonte: o autor)}
-\label{fig:rioDoceSerie_t_cv_56994500_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png}
+\caption{Série temporal da estação t\_cv\_56994500 - não utilizada (fonte: o autor)}
+\label{fig:doceSerieCompleta_t_cv_56994500}
 \end{figure}
 
-As estações que, enfim, foram empregadas na modelagem foram as que estão na tabela e adiante, a série temporal de cada uma delas.
+As estações que, enfim, foram empregadas na modelagem são as que estão na tabela e, adiante, o gráfico da série temporal de cada uma delas. (figuras \ref{fig:doceSerieCompleta_c_cv_01941010}, \ref{fig:doceSerieCompleta_c_cv_01941004}, \ref{fig:doceSerieCompleta_c_cv_01941006} e \ref{fig:doceSerieCompleta_t_cv_56990005})
 
 \begin{table}[h!]
 \centering \small
 \caption{Estações de precipitação usadas - final}
 \begin{tabular}{|c|c|c|} \hline
-\textbf{Estação}&  \textbf{\# dados faltantes}& \textbf{\% dados faltantes} \\ \hline
-c\_cv\_01941010 & 153  & 3,81 \\ \hline
-c\_cv\_01941004 & 31   & 0,77 \\ \hline
-c\_cv\_01941006 & 0    & 0,00 \\ \hline
-t\_cv\_56990005 & 1395 & 34,73 \\ \hline
+\textbf{Estação} & \textbf{\# dados faltantes} & \textbf{\% dados faltantes} \\ \hline
+c\_cv\_01941010  & 153                         & 3,81 \\ \hline
+c\_cv\_01941004  & 31                          & 0,77 \\ \hline
+c\_cv\_01941006  & 0                           & 0,00 \\ \hline
+t\_cv\_56990005  & 1395                        & 34,73 \\ \hline
 \end{tabular}
 \label{tab:estacoes_chuva_usadas_final_rio_doce}
 \end{table}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_c_cv_01941010_completa.png}
-\caption{Série completa da estação c\_cv\_01941010 (fonte: o autor)}
-\label{fig:rioDoceSerie_c_cv_01941010_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png}
+\caption{Série temporal completa da estação c\_cv\_01941010 (fonte: o autor)}
+\label{fig:doceSerieCompleta_c_cv_01941010}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_c_cv_01941004_completa.png}
-\caption{Série completa da estação c\_cv\_01941004 (fonte: o autor)}
-\label{fig:rioDoceSerie_c_cv_01941004_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png}
+\caption{Série temporal completa da estação c\_cv\_01941004 (fonte: o autor)}
+\label{fig:doceSerieCompleta_c_cv_01941004}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_c_cv_01941006_completa.png}
-\caption{Série completa da estação c\_cv\_01941006 (fonte: o autor)}
-\label{fig:rioDoceSerie_c_cv_01941006_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png}
+\caption{Série temporal completa da estação c\_cv\_01941006 (fonte: o autor)}
+\label{fig:doceSerieCompleta_c_cv_01941006}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/rioDoceSerie_t_cv_56990005_completa.png}
-\caption{Série completa da estação t\_cv\_56990005 (fonte: o autor)}
-\label{fig:rioDoceSerie_t_cv_56990005_completa}
+\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png}
+\caption{Série temporal completa da estação t\_cv\_56990005 (fonte: o autor)}
+\label{fig:doceSerieCompleta_t_cv_56990005}
 \end{figure}
 
 \subsection{Rio Grande}
 
-O rio Grande foi um desafio à parte em todo trabalho. A dificuldade começou quando não foi encontrada nenhuma estação com dados para o período analisado dentro do estado de Minas Gerais, como mencionado anteriormente. Foi preciso buscar o mais próximo possível do limite da divisa com Minas, já no estado de São Paulo, no município de Ilha Solteira. E os desafios não se encerraram aí.
+O rio Grande apresentou desafios significativos ao longo de todo o desenvolvimento deste trabalho. A dificuldade inicial surgiu na ausência de dados disponíveis em estações dentro do estado de Minas Gerais para o período de análise estipulado, conforme mencionado anteriormente. Foi necessário buscar uma estação o mais próxima possível da divisa com Minas Gerais, localizada no estado de São Paulo, especificamente no município de Ilha Solteira. Entretanto, os desafios não se limitaram a essa questão geográfica.
 
-A série de vazão da estação analisada não possuía dados em todo período de 11 anos analisados e estava incompleta.(figura \ref{fig:rioGrandeSerieAlvoFaltantes}) Os dados mais antigos datavam do ano 2020. Porém, como salientado anteriormente, por definição do escopo do trabalho, realizou o preenchimento dos dados faltantes, aplicando o mesmo protocolo de respeito à sazonalidade dos dados.
+A série temporal de vazão da estação selecionada, denominada t\_vz\_62020080, estava incompleta e não abrangia todo o período de 11 anos estipulado para a análise. (figura \ref{fig:grandeSerieIncompleta_t_vz_62020080}) Os dados disponíveis mais antigos datavam de 2020. Contudo, em conformidade com o escopo estabelecido para este estudo, foi realizado o preenchimento dos dados faltantes, aplicando-se o mesmo protocolo utilizado para os demais rios analisados. Este procedimento foi necessário para garantir a consistência, integridade e comparabilidade das análises subsequentes.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_grande/rioGrandeSerieAlvoFaltantes.png}
-\caption{Série completa da estação t\_vz\_62020080 (fonte: o autor)}
-\label{fig:rioGrandeSerieAlvoFaltantes}
+\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png}
+\caption{Série temporal incompleta da estação t\_vz\_62020080 (fonte: o autor)}
+\label{fig:grandeSerieIncompleta_t_vz_62020080}
 \end{figure}
 
-O caráter ruidoso da série, infelizmente, se manteve após a aplicação do protocolo para preenchimento dos dados nulos, como pode ser visto na imagem final gerada. (figura \ref{fig:rioGrandeSerieAlvoImputados}) Esta série contava com 2099 dias faltantes, perfazendo cerca de 64\% de dados nulos. Outro número importante para essa estação é que não foram 4017 registros empregados para o trabalho. O mais distante que havia de informação começava em 2015, de modo que o total de registros para o rio Grande, excepcionalemnte, foi de 3289 registros diários.
+Infelizmente, o caráter ruidoso da série permaneceu mesmo após a aplicação do protocolo de preenchimento dos dados ausentes, conforme pode ser observado na imagem final gerada. (figura \ref{fig:grandeSerieCompleta_t_vz_62020080}) A série em questão apresentava 2099 dias faltantes, correspondendo a aproximadamente 64\% de dados nulos. Outro aspecto relevante para essa estação é que, diferentemente das outras, não foram utilizados os 4.017 registros previstos inicialmente. As informações mais antigas disponíveis datavam de 2015, resultando, assim, em um total de 3289 registros diários utilizados especificamente para o rio Grande.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_grande/rioGrandeSerieAlvoImputados.png}
-\caption{Série completa da estação t\_vz\_62020080 (fonte: o autor)}
-\label{fig:rioGrandeSerieAlvoImputados}
+\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png}
+\caption{Série temporal completa da estação t\_vz\_62020080 (fonte: o autor)}
+\label{fig:grandeSerieCompleta_t_vz_62020080}
 \end{figure}
 
-A estação de precipitação utilizada, única neste caso, foi a estação t\_cv\_61998080, pois foi a única que apresentou dados. Curiosamente, a outra estação de precipitação apresentou dados para o período analisado, contudo, apenas zeros compunham essa base. Desta forma, a estação t\_cv\_62020080 foi completamente removida do trabalho.
+A estação de precipitação utilizada, a única neste caso, foi a estação t\_cv\_61998080, pois foi a única que apresentou dados válidos. Curiosamente, outra estação de precipitação disponível também apresentou dados para o período analisado, mas a base de dados consistia exclusivamente em valores zero. Por essa razão, a estação t\_cv\_62020080 foi completamente excluída do estudo.
 
-Para a estação t\_cv\_61998080 foi preciso poucos dados a serem preenchidos pois a contagem foi de apenas 169 registros faltando, o que representava 5,14\% do total de dados. (figura \ref{fig:rioGrandeSerieImputado_t_cv_61998080}) Uma série com boa quantidade de dados, de fato, e que puderam contribuir com as análises.
+Em relação à estação t\_cv\_61998080, houve necessidade de preencher apenas um número reduzido de dados ausentes, totalizando 169 registros, o que correspondia a 5,14\% do total. (figura \ref{fig:grandeSerieCompleta_t_cv_61998080}) Trata-se de uma série com uma quantidade expressiva de dados, que efetivamente pôde contribuir de maneira significativa para as análises realizadas.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.25]{Figuras/rio_grande/rioGrandeSerieImputado_t_cv_61998080.png}
+\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png}
 \caption{Série completa da estação t\_cv\_61998080 (fonte: o autor)}
-\label{fig:rioGrandeSerieImputado_t_cv_61998080}
+\label{fig:grandeSerieCompleta_t_cv_61998080}
 \end{figure}
 
-Note que o trecho de dados faltantes está no início da série, no ano de 2015.
+Ressalta-se que o trecho de dados faltantes para a estação t\_cv\_61998080 concentrava-se no início da série temporal, especificamente no ano de 2015. No gráfico os dados já estão imputados.
+
+\subsection{Rio São Francisco}
+
+Por fim, foi realizado o procedimento de preenchimento dos dados nulos para o Rio São Francisco. A estação-alvo c\_vz\_44290002 apresentou uma série bastante completa ao longo do período de análise, com apenas 120 dias nulos em um total de 4017 dias. O trecho com dados faltantes pode ser observado em detalhe na figura (\ref{fig:franciscoSerieIncompleta_c_vz_44290002-detalhe}).
+
+Para esta estação, o preenchimento sazonal foi suficiente para suprir as lacunas existentes, não sendo necessário aplicar procedimentos adicionais de imputação de dados. (figura \ref{fig:franciscoSerieCompleta_c_vz_44290002})
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.png}
+\caption{Detalhe do trecho com dados nulos da estação c\_vz\_44290002 (fonte: o autor)}
+\label{fig:franciscoSerieIncompleta_c_vz_44290002-detalhe}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png}
+\caption{Série temporal completa da estação c\_vz\_44290002 (fonte: o autor)}
+\label{fig:franciscoSerieCompleta_c_vz_44290002}
+\end{figure}
+
+No que se refere às estações de precipitação selecionadas para a análise no rio São Francisco, não foi necessário realizar nenhuma inserção de dados, uma vez que todas as séries estavam completas, abrangendo a totalidade dos 4017 dias de registro. As séries temporais correspondentes podem ser visualizadas nos gráficos apresentados a seguir. (figuras \ref{fig:franciscoSerieCompleta_c_cv_01544017}, \ref{fig:franciscoSerieCompleta_c_cv_01544032}, \ref{fig:franciscoSerieCompleta_c_cv_01544036})
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png}
+\caption{Série temporal completa da estação c\_cv\_01544017 (fonte: o autor)}
+\label{fig:franciscoSerieCompleta_c_cv_01544017}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png}
+\caption{Série temporal completa da estação c\_cv\_01544032 (fonte: o autor)}
+\label{fig:franciscoSerieCompleta_c_cv_01544032}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png}
+\caption{Série temporal completa da estação c\_cv\_01544036 (fonte: o autor)}
+\label{fig:franciscoSerieCompleta_c_cv_01544036}
+\end{figure}
 
 
-%\section{Modelos de Aprendizado de Máquina}
+\section{Modelos de Aprendizado de Máquina}
 %Apresentar os modelos de ML utilizados (SeasonalNaive, LinearRegression, CatBoost e LightGBM) e justificativas.
-%
+
+
+
+
 %\section{Variáveis Utilizadas}
 %Listar e explicar as variáveis contínuas e categóricas utilizadas nos modelos.
 %

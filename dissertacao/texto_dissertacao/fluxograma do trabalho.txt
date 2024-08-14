@@ -1,0 +1,15 @@
+Gere um fluxograma considerando os seguintes aspectos:
+
+1. Processo para previsão de vazão de rios (variável endógena) com uso de variáveis exógenas de precipitação
+2. Etapas do protocolo:
+- Determinar o período em anos, meses, dias, que se deseja utilizar para treinamento dos modelos de previsão
+- Identificar e coletar dados da estação-alvo de vazão que se deseja realizar previsão dentro do período especificado anteriormente
+- Identificar estações de precipitação que estejam à montante até um raio de 50km a partir da estação-alvo, no mesmo período
+- Verificar se há dados faltantes na estação de vazão e nas estações de precipitação. Se sim então preencher com a sazonalidade para aquele dia faltante a partir dos anos anteriores. Se não, continuar.
+- Aplicar transformação logarítmica para retirar o comportamento de "cauda longa" dos dados
+- Separar os dados do último ano da série temporal e reservar
+- Separar os dados restantes em treino e teste
+- Treinar os modelos LinearRegression, CatBoost e LightGBM
+- Realizar otimização de hiperparâmetros dos modelos CatBoost e LightGBM
+- Reproduzir o uso diário do modelo ao longo do ano inteiro anteriormente reservado (Walk Forward Validation)
+- Avaliar os resultados

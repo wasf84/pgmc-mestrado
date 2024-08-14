@@ -26,22 +26,24 @@
 \contentsline {section}{\numberline {3.2}Dados Utilizados}{16}{section.32}%
 \contentsline {section}{\numberline {3.3}Pré-processamento dos Dados}{19}{section.38}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.1}}Rio Jequitinhonha}{20}{subsection.39}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{24}{subsection.50}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{26}{subsection.59}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{23}{subsection.49}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{26}{subsection.58}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{31}{subsection.62}%
+\contentsline {section}{\numberline {3.4}Modelos de Aprendizado de Máquina}{31}{section.68}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{32}{chapter.63}%
-\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{32}{section.64}%
-\contentsline {section}{\numberline {4.2}Importância das Variáveis}{32}{section.65}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{32}{section.66}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{34}{chapter.69}%
+\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{34}{section.70}%
+\contentsline {section}{\numberline {4.2}Importância das Variáveis}{34}{section.71}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{34}{section.72}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{33}{chapter.67}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{33}{section.68}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{33}{section.69}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{33}{section.70}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{35}{chapter.73}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{35}{section.74}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{35}{section.75}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{35}{section.76}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{34}{chapter.71}%
-\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{34}{section.72}%
-\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{34}{section.73}%
-\contentsline {section}{\numberline {6.3}NOTAS}{34}{section.74}%
+\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{36}{chapter.77}%
+\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{36}{section.78}%
+\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{36}{section.79}%
+\contentsline {section}{\numberline {6.3}NOTAS}{36}{section.80}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{36}{chapter*.77}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{38}{chapter*.83}%
