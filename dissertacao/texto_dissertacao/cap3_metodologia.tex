@@ -415,7 +415,7 @@ Esse modelo se destaca pela sua capacidade de manejar dados com muitas variávei
 
 \subsection{LightGBM}
 
-O \textbf{LightGBM} é um modelo baseado em \textit{gradient boosting} que se diferencia por sua eficiência e velocidade, sendo especialmente projetado para lidar com grandes volumes de dados. O algoritmo constrói modelos fracos (árvores de decisão) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior e otimiza o processo de treinamento com a técnica de ``Leaf-wise growth''. Esta estratégia, ao invés do tradicional Level-wise Growth, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas, porém também mais suscetíveis ao \textit{overfitting}, o que é controlado por hiperparâmetros como por exemplo a profundidade máxima (\textit{max-depth}) da árvore.
+O \textbf{LightGBM} também é um modelo baseado em \textit{gradient boosting} e em termos de comportamento é semelhante em funcionamento ao CatBoost. Contudo, o processo de treinamento aplica uma técnica denominada ``Leaf-wise growth''. Esta estratégia, ao invés do tradicional \textit{Level-wise Growth}, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas, porém também mais suscetíveis ao \textit{overfitting}, o que é controlado por hiperparâmetros como por exemplo a profundidade máxima (\textit{max-depth}) da árvore.
 
 As principais características do LightGBM incluem:
 - Alta eficiência em memória e velocidade, permitindo treinar modelos em grandes \textit{datasets};
