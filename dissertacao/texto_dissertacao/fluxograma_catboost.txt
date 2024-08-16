@@ -1,0 +1,6 @@
+graph TD
+    A[Dataset] --> B[Preprocessamento de Variáveis Categóricas]
+    B --> C[Construção de Árvores]
+    C --> D[Gradient Boosting]
+    D --> E[Predição Final Ponderada]
+    F[Regularização] --> D

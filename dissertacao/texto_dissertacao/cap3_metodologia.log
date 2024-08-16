@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.12)  13 AUG 2024 10:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  15 AUG 2024 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,14 +1187,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no ' in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1276,11 +1268,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no ( in font nullfont!
 Missing character: There is no ' in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -1568,6 +1555,16 @@ Overfull \hbox (5.00002pt too wide) in paragraph at lines 12--13
  []
 
 
+Overfull \hbox (21.72206pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 date-
+ []
+
+
+Overfull \hbox (19.16653pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 time
+ []
+
+
 Overfull \hbox (9.44446pt too wide) in paragraph at lines 12--13
 \/cmr/m/n/10 ^^Xc~a
  []
@@ -1575,6 +1572,11 @@ Overfull \hbox (9.44446pt too wide) in paragraph at lines 12--13
 
 Overfull \hbox (5.00002pt too wide) in paragraph at lines 12--13
 \/cmr/m/n/10 ~a
+ []
+
+
+Overfull \hbox (18.91096pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/it/10 float
  []
 
 
@@ -4811,7 +4813,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.26 \begin{table}
-                  [htb!]
+                  [!h]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -4824,19 +4826,17 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.26 \begin{table}[
-                   htb!]
+                   !h]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no [ in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no b in font nullfont!
 Missing character: There is no ! in font nullfont!
+Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.27     \centering \small
-                          
+l.27 \centering \small
+                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4850,8 +4850,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28     \caption
-                 {Estações usadas no rio Jequitinhonha}
+l.28 \caption
+             {Estações usadas no rio Jequitinhonha}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4893,7 +4893,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <recently read> \makecell 
                           
 l.39 ...xtit{\makecell{UHE ITAPEBI \\ MONTANTE 1}}
-                                                  & \textit{SALTO DA DIVISA}...
+                                                   & \textit{SALTO DA DIVISA...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4904,7 +4904,7 @@ and I'll forget about whatever was undefined.
 <inserted text> 
                 }
 l.39 ...xtit{\makecell{UHE ITAPEBI \\ MONTANTE 1}}
-                                                  & \textit{SALTO DA DIVISA}...
+                                                   & \textit{SALTO DA DIVISA...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -4913,7 +4913,7 @@ Try to go on, since this might almost work.
 <inserted text> 
                 }
 l.39 ...xtit{\makecell{UHE ITAPEBI \\ MONTANTE 1}}
-                                                  & \textit{SALTO DA DIVISA}...
+                                                   & \textit{SALTO DA DIVISA...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -4926,4 +4926,17 @@ Missing character: There is no N in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no N in font nullfont!
-Mis
+Missing character: There is no T in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no 1 in font nullfont!
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.39 ...xtit{\makecell{UHE ITAPEBI \\ MONTANTE 1}}
+                                                   & \textit{SALTO DA DIVISA...
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.39 ...xtit{\makecell{UHE ITAPEBI \\ MONTANTE

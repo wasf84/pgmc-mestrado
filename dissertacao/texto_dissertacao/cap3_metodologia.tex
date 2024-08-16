@@ -9,17 +9,17 @@ Os dados de precipitação e vazão utilizados nesta pesquisa foram obtidos a pa
 
 O período de dados analisado compreende \textbf{de 1º de janeiro de 2013 a 31 de dezembro de 2023}, totalizando 11 anos completos.
 
-Foram utilizadas \textbf{séries temporais diárias} de precipitação e vazão. As colunas correspondentes às datas foram formatadas como '\textit{datetime}', enquanto os dados de precipitação e vazão foram representados como valores de ponto flutuante ('\textit{float}'). Embora a frequência diária tenha sido adotada, é importante destacar que nem todas as séries temporais estavam originalmente nesse formato. Foi necessário lidar com quebra na continuidade das datas e com dados ausentes. Estes aspectos serão discutidos em detalhes em seções subsequentes.
+Foram utilizadas \textbf{séries temporais diárias} de precipitação e vazão. As colunas correspondentes às datas foram formatadas como `\textit{datetime}', enquanto os dados de precipitação e vazão foram representados como valores de ponto flutuante (`\textit{float}'). Embora a frequência diária tenha sido adotada, é importante destacar que nem todas as séries temporais estavam originalmente nesse formato. Foi necessário lidar com quebra na continuidade das datas e com dados ausentes. Estes aspectos serão discutidos em detalhes em seções subsequentes.
 
 Os dados de precipitação e vazão obtidos do site da ANA já estavam ajustados nas escalas padrão utilizadas em estudos hidrológicos. A precipitação foi fornecida em milímetros por dia (mm/dia), refletindo a quantidade de chuva que cai sobre uma unidade de área em um período de 24 horas e as vazões, por sua vez, foram disponibilizadas em metros cúbicos por segundo (m³/s), indicando o volume de água que passa por uma seção transversal do rio a cada segundo. Em algumas estações, foram observados valores extremamente elevados para determinados dias, tanto nas séries de precipitação quanto nas de vazão, os quais podem ser considerados \textit{outliers}. Em relação aos dados de vazão, verificou-se a ocorrência de valores nulos (vazão igual a 0), o que indicaria a interrupção completa do fluxo do rio. Esse fenômeno, no entanto, não faz sentido, considerando que não há registro de eventos de seca tão severos nos rios analisados, conforme constatado na revisão bibliográfica e em fontes jornalísticas. Apesar destas anomalias, os dados não foram descartados, pois tanto os registros de vazão quanto os de precipitação utilizados nesta pesquisa foram considerados consistidos pela ANA, ou seja, foram medidos e validados pela agência. O presente trabalho não questionou a veracidade dos dados; eles foram utilizados conforme disponibilizados pela ANA.
 
-É relevante destacar que a consulta prévia ao sistema \textit{on-line} da ANA foi essencial, pois frequentemente selecionavam-se códigos de estação que, ao final, não possuíam dados para o período especificado ou apresentavam códigos alterados na base de dados, sendo retornados como 'inexistentes'. Quando um código de estação não retornava resultados na consulta ao sistema, foi necessário utilizar o sistema gentilmente cedido pela Rhama Analysis para verificar se o código da estação havia sido modificado. Nos casos em que se constatava a alteração, o novo código foi adotado, enquanto o código anteriormente informado como inexistente foi descartado.
+É relevante destacar que a consulta prévia ao sistema \textit{on-line} da ANA foi essencial, pois frequentemente selecionavam-se códigos de estação que, ao final, não possuíam dados para o período especificado ou apresentavam códigos alterados na base de dados, sendo retornados como ``inexistentes''. Quando um código de estação não retornava resultados na consulta ao sistema, foi necessário utilizar o sistema gentilmente cedido pela Rhama Analysis para verificar se o código da estação havia sido modificado. Nos casos em que se constatava a alteração, o novo código foi adotado, enquanto o código anteriormente informado como inexistente foi descartado.
 
 Em cada rio analisado, a estação alvo, com a vazão que se pretendia prever, foram destacadas em itálico para ficar claro ao leitor como identificá-las.
 
 A distinção entre estação convencional e telemétrica deve-se a esta ter informações a cada quinze minutos, a cada trinta minutos ou ser do tipo horária. Onde ocorreu de ter informações tão granuladas assim, para a precipitação foi feito o somatório para um dia e a vazão foi a média de um dia.
 
-Por fim, é importante destacar a existência de estações híbridas, classificadas como 'pluviométricas/fluviométricas'. Em alguns casos, o código da estação pode indicar que se trata de uma estação de vazão (com códigos iniciados em 5 ou 6, por exemplo), mas que também possui informações de precipitação. O inverso também ocorre, onde códigos indicam estações pluviométricas (com códigos iniciados em 016 ou 019, por exemplo) que, no entanto, contêm dados de vazão. Para garantir a consistência com a nomenclatura utilizada pela ANA, manteve-se a classificação original das estações, mesmo que estas contenham apenas dados de precipitação ou vazão.
+Por fim, é importante destacar a existência de estações híbridas, classificadas como ``pluviométricas/fluviométricas''. Em alguns casos, o código da estação pode indicar que se trata de uma estação de vazão (com códigos iniciados em 5 ou 6, por exemplo), mas que também possui informações de precipitação. O inverso também ocorre, onde códigos indicam estações pluviométricas (com códigos iniciados em 016 ou 019, por exemplo) que, no entanto, contêm dados de vazão. Para garantir a consistência com a nomenclatura utilizada pela ANA, manteve-se a classificação original das estações, mesmo que estas contenham apenas dados de precipitação ou vazão.
 
 Para facilitar a visualização, as estações de vazão e precipitação utilizadas no trabalho são apresentadas abaixo. \\
 
@@ -139,7 +139,7 @@ Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam fal
 
 É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos. Isso será mostrado adiante.
 
-Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação 'c\_cv\_01941010', utilizada na análise do rio Doce. A letra 'c' designa 'convencional' e as letras 'cv' significam 'chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome 't\_cv\_54790000' significa 'estação telemétrica de precipitação, código 54790000'.
+Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome `t\_cv\_54790000' significa `estação telemétrica de precipitação, código 54790000'.
 
 \subsection{Rio Jequitinhonha}
 
@@ -152,7 +152,7 @@ A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade s
 \label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}
 \end{figure}
 
-"A seguir, destaca-se o trecho da série com a maior quantidade de dados faltantes (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}), que abrange o período de janeiro de 2013 a janeiro de 2016. Em sequência, é apresentada a série após a imputação dos dados (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}). Notavelmente, essa seção não apresentou resultados ideais, uma vez que a imputação atribuiu vazões zero em vários dias, o que não é realista, pois isso indicaria a secagem completa do rio, o que é improvável. No entanto, esses valores zero não impactaram significativamente os resultados finais da análise, já que se referem a um período distante do foco principal deste estudo. Uma alternativa seria excluir todo o trecho anterior ao ano de 2016, mas optou-se por manter a uniformidade nos critérios de aproveitamento dos dados ao longo do trabalho, dado que outros rios também foram analisados, e buscava-se assegurar consistência nos resultados."
+A seguir, destaca-se o trecho da série com a maior quantidade de dados faltantes (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}), que abrange o período de janeiro de 2013 a janeiro de 2016. Em sequência, é apresentada a série após a imputação dos dados (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}). Notavelmente, essa seção não apresentou resultados ideais, uma vez que a imputação atribuiu vazões zero em vários dias, o que não é realista, pois isso indicaria a secagem completa do rio, o que é improvável. No entanto, esses valores zero não impactaram significativamente os resultados finais da análise, já que se referem a um período distante do foco principal deste estudo. Uma alternativa seria excluir todo o trecho anterior ao ano de 2016, mas optou-se por manter a uniformidade nos critérios de aproveitamento dos dados ao longo do trabalho, dado que outros rios também foram analisados, e buscava-se assegurar consistência nos resultados.
 
 \begin{figure}[!h]
 \centering
@@ -371,6 +371,61 @@ No que se refere às estações de precipitação selecionadas para a análise n
 
 \section{Modelos de Aprendizado de Máquina}
 %Apresentar os modelos de ML utilizados (SeasonalNaive, LinearRegression, CatBoost e LightGBM) e justificativas.
+
+\subsection{Seasonal Naive}
+
+O modelo \textbf{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (baseline), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio).
+
+Esse método é útil para fornecer uma idéia inicial do comportamento esperado, permitindo que os modelos subsequentes sejam comparados a ele. Por ser um modelo simples, ele não captura tendências ou variações complexas, mas estabelece um \textit{benchmark} mínimo para o qual outros métodos mais elaborados e complexos devem se comparar.
+
+\subsection{Linear Regression}
+
+O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta. 
+
+O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o erro quadrático médio, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.
+
+Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo de base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Isso será discutido.
+
+Aqui está o fluxograma para o funcionamento do modelo de Regressão Linear
+
+\todo[inline]{INSERIR DIAGRAMA ?}
+
+\subsection{CatBoost}
+
+CatBoost é um algoritmo de aprendizado de máquina baseado em árvores de decisão que se destaca pela sua eficiência e capacidade de lidar com variáveis categóricas sem necessidade de pré-processamento extensivo. É possível especificar as variáveis categóricas já no momento de criação do objeto, de acordo com a implementação mais usual do modelo.
+
+Seu nome é uma abreviação de ``\textit{Categorical Boosting}'' e o mesmo é um tipo de modelo de \textit{gradient boosting} que cria sequencialmente árvores de decisão (modelos fracos), onde cada árvore é ajustada para corrigir os erros cometidos pelas árvores anteriores. Abaixo está uma explicação passo-a-passo de como o CatBoost funciona:
+
+\begin{itemize}
+\item Preprocessamento de Variáveis Categóricas: CatBoost pode tratar variáveis categóricas de forma automática, utilizando uma codificação baseada em permutação em que as categorias são transformadas em números levando em consideração a dependência da ordem.
+\item Construção de Árvores: O modelo cria uma série de árvores de decisão em sequência. Cada árvore tenta corrigir os erros das árvores anteriores. Elas, as árvores, são construídas utilizando uma amostra aleatória dos dados o que ajuda a reduzir o viés.
+\item Gradient Boosting: O CatBoost utiliza um método de \textit{gradient boosting}, onde o modelo tenta minimizar uma função de perda ajustando os pesos das observações e focando nos erros cometidos nas iterações anteriores.
+\item Regularização: Para evitar \textit{overfitting}, o CatBoost incorpora técnicas de regularização, como a introdução de uma pequena aleatoriedade no processo de construção das árvores e a suavização das previsões para variáveis categóricas.
+\item Predição Final: As previsões finais são uma média ponderada das previsões de todas as árvores, com cada árvore contribuindo com base na sua capacidade de reduzir o erro.
+\end{itemize}
+
+Esse modelo se destaca pela sua capacidade de manejar dados com muitas variáveis categóricas, sem perda de desempenho. Pode ser uma ótima escolha para conjuntos de dados grandes com relações complexas, como, exatamente, dados de precipitação e vazão.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.75]{Figuras/catboost_diagrama.jpg}
+\caption{Diagrama resumindo o funcionamento do CatBoost (fonte: o autor)}
+\label{fig:catboost_diagrama}
+\end{figure}
+
+\subsection{LightGBM}
+
+O \textbf{LightGBM} é um modelo baseado em \textit{gradient boosting} que se diferencia por sua eficiência e velocidade, sendo especialmente projetado para lidar com grandes volumes de dados. O algoritmo constrói modelos fracos (árvores de decisão) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior e otimiza o processo de treinamento com a técnica de ``Leaf-wise growth''. Esta estratégia, ao invés do tradicional Level-wise Growth, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas, porém também mais suscetíveis ao \textit{overfitting}, o que é controlado por hiperparâmetros como por exemplo a profundidade máxima (\textit{max-depth}) da árvore.
+
+As principais características do LightGBM incluem:
+- Alta eficiência em memória e velocidade, permitindo treinar modelos em grandes \textit{datasets};
+- Capacidade de lidar com elevado número de \textit{features};
+- Ajuste de alta precisão mesmo em cenários com dados desbalanceados.
+
+Fluxograma do funcionamento do LightGBM:
+\todo[inline]{INSERIR DIAGRAMA ?}
+
+%A escolha do modelo certo para um problema de previsão depende das características dos dados e dos objetivos do estudo. O SeasonalNaive, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma baseline confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e LightGBM são opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre esses modelos permite que se escolha a abordagem que melhor atenda às necessidades específicas da previsão, garantindo assim resultados mais robustos e precisos.
 
 %\section{Variáveis Utilizadas}
 %Listar e explicar as variáveis contínuas e categóricas utilizadas nos modelos.

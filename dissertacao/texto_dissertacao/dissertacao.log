@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.13)  14 AUG 2024 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  15 AUG 2024 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language64). Reported on input line 105.
+(babel)             (\language24). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language64). Reported on input line 108.
+(babel)             (\language24). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language43). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -1032,12 +1032,9 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count363
 \l__pdf_internal_box=\box68
 )
-(./dissertacao.aux (./cap1_introducao.aux
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-) (./cap2_revisao.aux) (./cap3_metodologia.aux) (./cap4_resultados.aux)
-(./cap5_conclusao.aux) (./citacoes.aux))
+(./dissertacao.aux (./cap1_introducao.aux) (./cap2_revisao.aux)
+(./cap3_metodologia.aux) (./cap4_resultados.aux) (./cap5_conclusao.aux)
+(./citacoes.aux))
 \openout1 = `dissertacao.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
@@ -1059,10 +1056,8 @@ LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 Package hyperref Info: Link coloring OFF on input line 72.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
@@ -1181,83 +1176,88 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ]
 (./dissertacao.lof
-Overfull \hbox (1.45839pt too wide) detected at line 13
+Overfull \hbox (1.45839pt too wide) detected at line 11
 \T1/lmr/m/n/12 Figura 3.10 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 14
+Overfull \hbox (1.45839pt too wide) detected at line 12
 \T1/lmr/m/n/12 Figura 3.11 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 15
+Overfull \hbox (1.45839pt too wide) detected at line 13
 \T1/lmr/m/n/12 Figura 3.12 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 16
+Overfull \hbox (1.45839pt too wide) detected at line 14
 \T1/lmr/m/n/12 Figura 3.13 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 17
+Overfull \hbox (1.45839pt too wide) detected at line 15
 \T1/lmr/m/n/12 Figura 3.14 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 18
+Overfull \hbox (1.45839pt too wide) detected at line 16
 \T1/lmr/m/n/12 Figura 3.15 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 19
+Overfull \hbox (1.45839pt too wide) detected at line 17
 \T1/lmr/m/n/12 Figura 3.16 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 20
+Overfull \hbox (1.45839pt too wide) detected at line 18
 \T1/lmr/m/n/12 Figura 3.17 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 21
+Overfull \hbox (1.45839pt too wide) detected at line 19
 \T1/lmr/m/n/12 Figura 3.18 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 22
+Overfull \hbox (1.45839pt too wide) detected at line 20
 \T1/lmr/m/n/12 Figura 3.19 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 23
+Overfull \hbox (1.45839pt too wide) detected at line 21
 \T1/lmr/m/n/12 Figura 3.20 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 24
+Overfull \hbox (1.45839pt too wide) detected at line 22
 \T1/lmr/m/n/12 Figura 3.21 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 25
+Overfull \hbox (1.45839pt too wide) detected at line 23
 \T1/lmr/m/n/12 Figura 3.22 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 26
+Overfull \hbox (1.45839pt too wide) detected at line 24
 \T1/lmr/m/n/12 Figura 3.23 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 27
+Overfull \hbox (1.45839pt too wide) detected at line 25
 \T1/lmr/m/n/12 Figura 3.24 ^^U  
  []
 
 
-Overfull \hbox (1.45839pt too wide) detected at line 28
+Overfull \hbox (1.45839pt too wide) detected at line 26
 \T1/lmr/m/n/12 Figura 3.25 ^^U  
+ []
+
+
+Overfull \hbox (1.45839pt too wide) detected at line 27
+\T1/lmr/m/n/12 Figura 3.26 ^^U  
  []
 
 ) [8
@@ -1270,31 +1270,20 @@ Overfull \hbox (1.45839pt too wide) detected at line 28
 ] [11
 
 
-] (./dissertacao.toc) [12
+] (./dissertacao.toc [12
 
-]
+]) [13]
 \openout2 = `cap1_introducao.aux'.
 
 
-(./cap1_introducao.tex
-* abntbibufjf: Il 
-<Figuras/google.png, id=240, 391.4625pt x 129.48375pt>
-File: Figuras/google.png Graphic file (type png)
-<use Figuras/google.png>
-Package pdftex.def Info: Figuras/google.png  used on input line 11.
-(pdftex.def)             Requested size: 227.5pt x 75.25076pt.
-File: Figuras/google.png Graphic file (type png)
-<use Figuras/google.png>
-Package pdftex.def Info: Figuras/google.png  used on input line 18.
-(pdftex.def)             Requested size: 117.43965pt x 38.84541pt.
-[13
+(./cap1_introducao.tex [14
 
 
 
- <./Figuras/google.png (PNG copy)>]) [14]
+]) [15]
 \openout2 = `cap2_revisao.aux'.
 
- (./cap2_revisao.tex) [15
+ (./cap2_revisao.tex) [16
 
 
 
@@ -1310,7 +1299,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 0.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [16
+) [17
 
 
 
@@ -1331,8 +1320,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17] [18] [19]
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png, id=292, 1505.6
+[18] [19] [20]
+* abntbibufjf: Il 
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png, id=301, 1505.6
 25pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png Graphic fi
 le (type png)
@@ -1341,11 +1331,10 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
 0000.png  used on input line 150.
 (pdftex.def)             Requested size: 376.40533pt x 250.93689pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png, id=2
-96, 1505.625pt x 1003.75pt>
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png, id=3
+05, 1505.625pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png 
 Graphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png>
@@ -1355,7 +1344,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png, id=297
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png, id=306
 , 1505.625pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png Gr
 aphic file (type png)
@@ -1367,7 +1356,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png, id=3
-00, 1505.625pt x 1003.75pt>
+09, 1505.625pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png 
 Graphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png>
@@ -1377,7 +1366,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png, id=301
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png, id=310
 , 1505.625pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png Gr
 aphic file (type png)
@@ -1388,8 +1377,8 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20]
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png, id=308, 1505.625
+[21]
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png, id=317, 1505.625
 pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png Graphic file
  (type png)
@@ -1401,7 +1390,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png, id=311, 1505.6
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png, id=320, 1505.6
 25pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png Graphic fi
 le (type png)
@@ -1412,9 +1401,9 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_5479
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png> <./Figur
+[22 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png> <./Figur
 as/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png>]
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png, id=320, 1505.625
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png, id=329, 1505.625
 pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png Graphic file
  (type png)
@@ -1426,7 +1415,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_547900
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png, id=321, 1505.625
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png, id=330, 1505.625
 pt x 1003.75pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png Graphic file
  (type png)
@@ -1437,9 +1426,9 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_016400
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png> 
+[23 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png> 
 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png>]
-<Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png, id=329, 1505.625pt x 100
+<Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png, id=339, 1505.625pt x 100
 3.75pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png Graphic file (type p
 ng)
@@ -1448,14 +1437,14 @@ Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png
 used on input line 227.
 (pdftex.def)             Requested size: 376.40533pt x 250.93689pt.
 
-[23 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png> 
+[24 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png> 
 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png> <./Figur
+[25 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png> <./Figur
 as/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png>]
-<Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png, id=345, 1505.625pt x 1
+<Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png, id=354, 1505.625pt x 1
 003.75pt>
 File: Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png Graphic file (type
  png)
@@ -1467,7 +1456,7 @@ Package pdftex.def Info: Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png, id=346, 1505.625pt x 100
+<Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png, id=355, 1505.625pt x 100
 3.75pt>
 File: Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png Graphic file (type p
 ng)
@@ -1478,12 +1467,12 @@ used on input line 245.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png> <./Figuras
+[26 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png> <./Figuras
 /rio_doce/doceSerieCompleta_c_vz_56994500.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png, id=357, 1505.625pt x 100
+<Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png, id=366, 1505.625pt x 100
 3.75pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png Graphic file (type p
 ng)
@@ -1494,7 +1483,7 @@ used on input line 267.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png, id=358, 1505.625pt x 100
+<Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png, id=367, 1505.625pt x 100
 3.75pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png Graphic file (type p
 ng)
@@ -1505,7 +1494,7 @@ used on input line 274.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png, id=359, 1505.625pt x 100
+<Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png, id=368, 1505.625pt x 100
 3.75pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png Graphic file (type p
 ng)
@@ -1516,7 +1505,7 @@ used on input line 281.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png, id=360, 1505.625pt x 100
+<Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png, id=369, 1505.625pt x 100
 3.75pt>
 File: Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png Graphic file (type p
 ng)
@@ -1527,15 +1516,15 @@ used on input line 288.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26 <./Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png> <./Figuras/rio_d
+[27 <./Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png> <./Figuras/rio_d
 oce/doceSerieCompleta_t_cv_56994500.png>]
 
-LaTeX Warning: Text page 27 contains only floats.
+LaTeX Warning: Text page 28 contains only floats.
 
-[27 <./Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png> <./Figuras/rio_doc
-e/doceSerieCompleta_c_cv_01941004.png>] [28 <./Figuras/rio_doce/doceSerieComple
+[28 <./Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png> <./Figuras/rio_doc
+e/doceSerieCompleta_c_cv_01941004.png>] [29 <./Figuras/rio_doce/doceSerieComple
 ta_c_cv_01941006.png> <./Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png>]
-<Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png, id=380, 1505.625pt
+<Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png, id=390, 1505.625pt
  x 1003.75pt>
 File: Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png Graphic file (
 type png)
@@ -1543,7 +1532,7 @@ type png)
 Package pdftex.def Info: Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080
 .png  used on input line 301.
 (pdftex.def)             Requested size: 376.40533pt x 250.93689pt.
-<Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png, id=382, 1505.625pt x
+<Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png, id=392, 1505.625pt x
  1003.75pt>
 File: Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png Graphic file (ty
 pe png)
@@ -1554,7 +1543,7 @@ ng  used on input line 310.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png, id=384, 1505.625pt x
+<Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png, id=394, 1505.625pt x
  1003.75pt>
 File: Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png Graphic file (ty
 pe png)
@@ -1571,11 +1560,11 @@ Overfull \hbox (8.42604pt too wide) in paragraph at lines 326--327
 s-ta-ção t_cv_61998080 concentrava-
  []
 
-[29 <./Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png>] [30 <./Figu
+[30 <./Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png>] [31 <./Figu
 ras/rio_grande/grandeSerieCompleta_t_vz_62020080.png> <./Figuras/rio_grande/gra
 ndeSerieCompleta_t_cv_61998080.png>]
 <Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.png, 
-id=399, 1505.625pt x 1003.75pt>
+id=408, 1505.625pt x 1003.75pt>
 File: Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.
 png Graphic file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.p
@@ -1583,7 +1572,7 @@ ng>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_v
 z_44290002-detalhe.png  used on input line 336.
 (pdftex.def)             Requested size: 376.40533pt x 250.93689pt.
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png, id=400, 15
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png, id=409, 15
 05.625pt x 1003.75pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png Graphi
 c file (type png)
@@ -1595,7 +1584,7 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png, id=404, 15
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png, id=413, 15
 05.625pt x 1003.75pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png Graphi
 c file (type png)
@@ -1606,7 +1595,7 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png, id=405, 15
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png, id=414, 15
 05.625pt x 1003.75pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png Graphi
 c file (type png)
@@ -1617,7 +1606,7 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png, id=406, 15
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png, id=415, 15
 05.625pt x 1003.75pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png Graphi
 c file (type png)
@@ -1628,23 +1617,29 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/flowchart.png, id=407, 903.375pt x 2041.6275pt>
+[32 <./Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe
+.png>] [33 <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.pn
+g> <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png>]
+[34 <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png> <./F
+iguras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png>] [35]
+<Figuras/catboost_diagrama.jpg, id=440, 431.6125pt x 387.4475pt>
+File: Figuras/catboost_diagrama.jpg Graphic file (type jpg)
+<use Figuras/catboost_diagrama.jpg>
+Package pdftex.def Info: Figuras/catboost_diagrama.jpg  used on input line 411.
+
+(pdftex.def)             Requested size: 323.70857pt x 290.5849pt.
+
+[36 <./Figuras/catboost_diagrama.jpg>]
+<Figuras/flowchart.png, id=446, 574.145pt x 1355.0625pt>
 File: Figuras/flowchart.png Graphic file (type png)
 <use Figuras/flowchart.png>
-Package pdftex.def Info: Figuras/flowchart.png  used on input line 385.
-(pdftex.def)             Requested size: 271.01459pt x 612.49298pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [31 <./Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detal
-he.png>] [32 <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.
-png> <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png>]
-[33 <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png> <./F
-iguras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png>] [34 <./Figu
-ras/flowchart.png>]
+Package pdftex.def Info: Figuras/flowchart.png  used on input line 440.
+(pdftex.def)             Requested size: 172.24483pt x 406.5219pt.
+) [37 <./Figuras/flowchart.png>]
 \openout2 = `cap4_resultados.aux'.
 
- (./cap4_resultados.tex) [35
+
+(./cap4_resultados.tex) [38
 
 
 
@@ -1652,8 +1647,7 @@ ras/flowchart.png>]
 ]
 \openout2 = `cap5_conclusao.aux'.
 
- (./cap5_conclusao.tex)
-[36
+ (./cap5_conclusao.tex) [39
 
 
 
@@ -1664,7 +1658,8 @@ ras/flowchart.png>]
  (./citacoes.tex
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
 .
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1677,15 +1672,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 23.
-) [37
+) [40
 
 
 
 
-] [38]
-(./dissertacao.bbl) 
+] [41] (./dissertacao.bbl)
+
 AED: lastpage setting LastPage
-[39
+[42
 
 
 
@@ -1701,32 +1696,28 @@ AED: lastpage setting LastPage
 
  (./dissertacao.aux (./cap1_introducao.aux) (./cap2_revisao.aux)
 (./cap3_metodologia.aux) (./cap4_resultados.aux) (./cap5_conclusao.aux)
-(./citacoes.aux))
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+(./citacoes.aux)) ) 
 Here is how much of TeX's memory you used:
- 28409 strings out of 478287
- 523660 string characters out of 5849289
- 877920 words of memory out of 5000000
- 45749 multiletter control sequences out of 15000+600000
- 534204 words of font info for 149 fonts, out of 8000000 for 9000
+ 28435 strings out of 478287
+ 524033 string characters out of 5849289
+ 878091 words of memory out of 5000000
+ 45756 multiletter control sequences out of 15000+600000
+ 534773 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,94p,1475b,822s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/shar
-e/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmtt12.pfb>
-Output written on dissertacao.pdf (41 pages, 3087766 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-math
+sy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on dissertacao.pdf (44 pages, 3092175 bytes).
 PDF statistics:
- 705 PDF objects out of 1000 (max. 8388607)
- 583 compressed objects within 6 object streams
- 148 named destinations out of 1000 (max. 500000)
- 37895 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 739 PDF objects out of 1000 (max. 8388607)
+ 614 compressed objects within 7 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 37927 words of extra memory for PDF output out of 42996 (max. 10000000)
 
