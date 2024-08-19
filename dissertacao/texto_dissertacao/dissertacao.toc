@@ -21,35 +21,36 @@
 \contentsline {section}{\numberline {2.4}Dados de Precipitação e Vazão}{17}{section.26}%
 \contentsline {section}{\numberline {2.5}Modelos de Previsão de Vazão}{17}{section.27}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}METODOLOGIA}{18}{chapter.28}%
+\contentsline {chapter}{\chapternumberline {3}PROCEDIMENTOS METODOLÓGICOS}{18}{chapter.28}%
 \contentsline {section}{\numberline {3.1}Descrição da Área de Estudo}{18}{section.29}%
 \contentsline {section}{\numberline {3.2}Dados Utilizados}{18}{section.30}%
 \contentsline {section}{\numberline {3.3}Pré-processamento dos Dados}{21}{section.36}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.1}}Rio Jequitinhonha}{22}{subsection.37}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{24}{subsection.47}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{27}{subsection.47}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{29}{subsection.56}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{32}{subsection.60}%
-\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{35}{section.66}%
-\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{37}{section.71}%
-\contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{41}{section.81}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive}{41}{subsection.82}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear}{41}{subsection.83}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost e LightGBM}{42}{subsection.85}%
-\contentsline {section}{\numberline {3.7}Modelo Proposto}{42}{section.86}%
+\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{37}{section.66}%
+\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{39}{section.71}%
+\contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{46}{section.88}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive}{46}{subsection.89}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear}{46}{subsection.90}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost e LightGBM}{46}{subsection.92}%
+\contentsline {section}{\numberline {3.7}Métricas de Avaliação}{47}{section.93}%
+\contentsline {section}{\numberline {3.8}Modelo Proposto}{48}{section.98}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{44}{chapter.88}%
-\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{44}{section.89}%
-\contentsline {section}{\numberline {4.2}Importância das Variáveis}{44}{section.90}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{44}{section.91}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{50}{chapter.100}%
+\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{50}{section.101}%
+\contentsline {section}{\numberline {4.2}Importância das Variáveis}{50}{section.102}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{50}{section.103}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{45}{chapter.92}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{45}{section.93}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{45}{section.94}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{45}{section.95}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{51}{chapter.104}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{51}{section.105}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{51}{section.106}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{51}{section.107}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{46}{chapter.96}%
-\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{46}{section.97}%
-\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{46}{section.98}%
-\contentsline {section}{\numberline {6.3}NOTAS}{46}{section.99}%
+\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{52}{chapter.108}%
+\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{52}{section.109}%
+\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{52}{section.110}%
+\contentsline {section}{\numberline {6.3}NOTAS}{52}{section.111}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{48}{chapter*.102}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{54}{chapter*.114}%
