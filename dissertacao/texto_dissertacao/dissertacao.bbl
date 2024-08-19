@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -66,6 +66,43 @@ G1.
   \url{https://g1.globo.com/es/espirito-santo/noticia/2024/03/27/entenda-o-que-causou-temporal-na-regiao-sul-do-es-e-o-que-pode-ser-feito-para-evitar-novas-tragedias.ghtml}.
 \newblock Acessado em: julho de 2024.
 
+\bibitem[Harris et~al.(2020)Harris, Millman, van~der Walt, Gommers, Virtanen,
+  Cournapeau, Wieser, Taylor, Berg, Smith, Kern, Picus, Hoyer, van Kerkwijk,
+  Brett, Haldane, del R{\'{i}}o, Wiebe, Peterson, G{\'{e}}rard-Marchant,
+  Sheppard, Reddy, Weckesser, Abbasi, Gohlke, and Oliphant]{numpyref}
+Charles~R. Harris, K.~Jarrod Millman, St{\'{e}}fan~J. van~der Walt, Ralf
+  Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor,
+  Sebastian Berg, Nathaniel~J. Smith, Robert Kern, Matti Picus, Stephan Hoyer,
+  Marten~H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime~Fern{\'{a}}ndez
+  del R{\'{i}}o, Mark Wiebe, Pearu Peterson, Pierre G{\'{e}}rard-Marchant,
+  Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph
+  Gohlke, and Travis~E. Oliphant.
+\newblock Array programming with {NumPy}.
+\newblock \emph{Nature}, 585\penalty0 (7825):\penalty0 357--362, 2020.
+\newblock \doi{10.1038/s41586-020-2649-2}.
+\newblock URL \url{https://doi.org/10.1038/s41586-020-2649-2}.
+
+\bibitem[L{\"o}ning et~al.(2019)L{\"o}ning, Bagnall, Ganesh, Kazakov, Lines,
+  and Kir{\'a}ly]{loning2019sktime}
+Markus L{\"o}ning, Anthony Bagnall, Sajaysurya Ganesh, Viktor Kazakov, Jason
+  Lines, and Franz~J Kir{\'a}ly.
+\newblock sktime: A unified interface for machine learning with time series.
+\newblock \emph{arXiv preprint arXiv:1909.07872}, 2019.
+
+\bibitem[Macdonald et~al.(2023)Macdonald, Merz, Guse, Nguyen, Guan, and
+  Vorogushyn]{elena_macdonald_2023}
+Elena Macdonald, Bruno Merz, Björn Guse, Viet~D. Nguyen, Xiaoxiang Guan, and
+  Sergiy Vorogushyn.
+\newblock What controls the tail behaviour of flood series: Rainfall or runoff
+  generation?, 2023.
+
+\bibitem[McKinney et~al.(2011)]{mckinney2011pandas}
+Wes McKinney et~al.
+\newblock pandas: a foundational python library for data analysis and
+  statistics.
+\newblock \emph{Python for high performance and scientific computing},
+  14\penalty0 (9):\penalty0 1--9, 2011.
+
 \bibitem[Petry et~al.(2023)Petry, Fan, Siqueira, Collishonn, de~Paiva, Quedi,
   de~Araújo~Gama, Silveira, Freitas, and Paranhos]{rayyan-39677094}
 Ingrid Petry, Fernando~Mainardi Fan, Vinicius~Alencar Siqueira, Walter
@@ -76,5 +113,9 @@ Ingrid Petry, Fernando~Mainardi Fan, Vinicius~Alencar Siqueira, Walter
 \newblock \emph{Journal of Hydrology: Regional Studies}, 49:\penalty0 101487,
   10 2023.
 \newblock ISSN 2214-5818.
+
+\bibitem[Seabold and Perktold(2010)]{seabold2010statsmodels}
+Skipper Seabold and Josef Perktold.
+\newblock statsmodels: Econometric and statistical modeling with python, 2010.
 
 \end{thebibliography}
