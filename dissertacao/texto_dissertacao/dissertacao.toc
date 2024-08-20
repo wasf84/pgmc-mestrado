@@ -34,23 +34,23 @@
 \contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{46}{section.88}%
 \contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive}{46}{subsection.89}%
 \contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear}{46}{subsection.90}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost e LightGBM}{46}{subsection.92}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost e LightGBM}{47}{subsection.92}%
 \contentsline {section}{\numberline {3.7}Métricas de Avaliação}{47}{section.93}%
-\contentsline {section}{\numberline {3.8}Modelo Proposto}{48}{section.98}%
+\contentsline {section}{\numberline {3.8}Modelo proposto}{49}{section.98}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{50}{chapter.100}%
-\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{50}{section.101}%
-\contentsline {section}{\numberline {4.2}Importância das Variáveis}{50}{section.102}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{50}{section.103}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{51}{chapter.100}%
+\contentsline {section}{\numberline {4.1}Desempenho dos Modelos}{51}{section.101}%
+\contentsline {section}{\numberline {4.2}Importância das Variáveis}{51}{section.102}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos Resultados}{51}{section.103}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{51}{chapter.104}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{51}{section.105}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{51}{section.106}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{51}{section.107}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{52}{chapter.104}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{52}{section.105}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{52}{section.106}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{52}{section.107}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{52}{chapter.108}%
-\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{52}{section.109}%
-\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{52}{section.110}%
-\contentsline {section}{\numberline {6.3}NOTAS}{52}{section.111}%
+\contentsline {chapter}{\chapternumberline {6}CITA\c {C}\~{O}ES}{53}{chapter.108}%
+\contentsline {section}{\numberline {6.1}SISTEMA AUTOR-DATA}{53}{section.109}%
+\contentsline {section}{\numberline {6.2}SISTEMA NUM\'ERICO}{53}{section.110}%
+\contentsline {section}{\numberline {6.3}NOTAS}{53}{section.111}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{54}{chapter*.114}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{55}{chapter*.114}%

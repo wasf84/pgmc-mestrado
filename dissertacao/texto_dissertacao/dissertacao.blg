@@ -4,7 +4,7 @@ The top-level auxiliary file: dissertacao.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: cap1_introducao.aux
 A level-1 auxiliary file: cap2_revisao.aux
-A level-1 auxiliary file: cap3_metodologia.aux
+A level-1 auxiliary file: cap3_procedimentos_metodologicos.aux
 A level-1 auxiliary file: cap4_resultados.aux
 A level-1 auxiliary file: cap5_conclusao.aux
 A level-1 auxiliary file: citacoes.aux
@@ -21,43 +21,43 @@ Warning--entry type for "g1_cantareira_2015" isn't style-file defined
 --line 489 of file referencias.bib
 You've used 14 entries,
             2773 wiz_defined-function locations,
-            685 strings with 8764 characters,
-and the built_in function-call counts, 6877 in all, are:
-= -- 558
-> -- 565
+            692 strings with 8874 characters,
+and the built_in function-call counts, 6880 in all, are:
+= -- 568
+> -- 547
 < -- 10
-+ -- 195
-- -- 180
-* -- 574
-:= -- 1118
-add.period$ -- 51
++ -- 189
+- -- 174
+* -- 578
+:= -- 1114
+add.period$ -- 53
 call.type$ -- 14
-change.case$ -- 99
+change.case$ -- 97
 chr.to.int$ -- 13
 cite$ -- 28
-duplicate$ -- 240
-empty$ -- 462
-format.name$ -- 197
-if$ -- 1383
+duplicate$ -- 241
+empty$ -- 470
+format.name$ -- 191
+if$ -- 1387
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 6
-newline$ -- 87
+newline$ -- 89
 num.names$ -- 56
-pop$ -- 226
+pop$ -- 218
 preamble$ -- 1
-purify$ -- 87
+purify$ -- 85
 quote$ -- 0
-skip$ -- 222
+skip$ -- 220
 stack$ -- 0
-substring$ -- 84
+substring$ -- 103
 swap$ -- 25
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 149
 warning$ -- 0
-while$ -- 47
+while$ -- 49
 width$ -- 0
-write$ -- 197
+write$ -- 202
 (There were 5 warnings)

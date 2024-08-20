@@ -66,6 +66,15 @@ G1.
   \url{https://g1.globo.com/es/espirito-santo/noticia/2024/03/27/entenda-o-que-causou-temporal-na-regiao-sul-do-es-e-o-que-pode-ser-feito-para-evitar-novas-tragedias.ghtml}.
 \newblock Acessado em: julho de 2024.
 
+\bibitem[Gupta et~al.(2009)Gupta, Kling, Yilmaz, and Martinez]{Gupta2009}
+Hoshin~V. Gupta, Harald Kling, Koray~K. Yilmaz, and Guillermo~F. Martinez.
+\newblock Decomposition of the mean squared error and nse performance criteria:
+  Implications for improving hydrological modelling.
+\newblock \emph{Journal of Hydrology}, 377\penalty0 (1-2):\penalty0 80--91,
+  2009.
+\newblock \doi{10.1016/j.jhydrol.2009.08.003}.
+\newblock URL \url{https://doi.org/10.1016/j.jhydrol.2009.08.003}.
+
 \bibitem[Harris et~al.(2020)Harris, Millman, van~der Walt, Gommers, Virtanen,
   Cournapeau, Wieser, Taylor, Berg, Smith, Kern, Picus, Hoyer, van Kerkwijk,
   Brett, Haldane, del R{\'{i}}o, Wiebe, Peterson, G{\'{e}}rard-Marchant,
@@ -81,13 +90,6 @@ Charles~R. Harris, K.~Jarrod Millman, St{\'{e}}fan~J. van~der Walt, Ralf
 \newblock \emph{Nature}, 585\penalty0 (7825):\penalty0 357--362, 2020.
 \newblock \doi{10.1038/s41586-020-2649-2}.
 \newblock URL \url{https://doi.org/10.1038/s41586-020-2649-2}.
-
-\bibitem[L{\"o}ning et~al.(2019)L{\"o}ning, Bagnall, Ganesh, Kazakov, Lines,
-  and Kir{\'a}ly]{loning2019sktime}
-Markus L{\"o}ning, Anthony Bagnall, Sajaysurya Ganesh, Viktor Kazakov, Jason
-  Lines, and Franz~J Kir{\'a}ly.
-\newblock sktime: A unified interface for machine learning with time series.
-\newblock \emph{arXiv preprint arXiv:1909.07872}, 2019.
 
 \bibitem[Macdonald et~al.(2023)Macdonald, Merz, Guse, Nguyen, Guan, and
   Vorogushyn]{elena_macdonald_2023}

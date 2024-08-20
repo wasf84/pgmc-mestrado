@@ -12,6 +12,7 @@
 
 \usepackage{lmodern} %no caso do modelo Latex, pode-se usar a fam\'ilia de fontes lmodern como aqui indicado, no lugar de Arial e Times New Roman.
 
+\usepackage{amsmath} % Pacote para melhorar a formatação de equações
 \usepackage{lastpage}
 \usepackage{indentfirst}
 \usepackage{color}
@@ -71,8 +72,10 @@ Modelagem Computacional. %%Trocar Matem\'atica por outro, se precisar.
 
 \begin{document}
 
-%% ELEMENTOS PR\'E-TEXTUAIS
+\renewcommand{\labelitemi}{$\bullet$}  % Marcador de itens no nível 1
+\renewcommand{\labelitemii}{$\diamond$}
 
+%% ELEMENTOS PR\'E-TEXTUAIS
 
 %% Capa. N\~ao entra na contagem da pagina\c{c}\~ao.
 \inserecapa

@@ -621,13 +621,47 @@ A escolha do algoritmo certo para um problema de previsão desta natureza depend
 Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, foram adotadas quatro métricas: MAPE (\textit{Mean Absolute Percentage Error}), RMSE (\textit{Root Mean Square Error}), PBIAS (\textit{Percent Bias}) e KGE (\textit{Kling-Gupta Efficiency}). A escolha dessas métricas baseia-se na necessidade de uma avaliação abrangente que considere diferentes aspectos da qualidade das previsões, como precisão, erro médio, tendência e correlação.
 
 \begin{itemize}
-\item \textbf{MAPE (\textit{Mean Absolute Percentage Error})}: O MAPE é uma métrica amplamente utilizada para medir a precisão das previsões em termos percentuais. O algoritmo calcula a média das diferenças absolutas entre os valores observados e previstos, normalizadas pelos valores observados. O bom desta métrica MAPE é a sua facilidade de interpretação, já que expressa o erro em termos percentuais, tornando os resultados comparáveis entre diferentes séries temporais e modelos. Contudo, o MAPE pode ser sensível a valores muito baixos e esta característica deve ser considerada ao interpretar os resultados. \todo[inline]{inserir a fórmula matemática e citação}
+\item \textbf{MAPE (\textit{Mean Absolute Percentage Error})}: O MAPE é uma métrica amplamente utilizada para medir a precisão das previsões em termos percentuais. O algoritmo calcula a média das diferenças absolutas entre os valores observados e previstos, normalizadas pelos valores observados. O bom desta métrica MAPE é a sua facilidade de interpretação, já que expressa o erro em termos percentuais, tornando os resultados comparáveis entre diferentes séries temporais e modelos. Contudo, o MAPE pode ser sensível a valores muito baixos e esta característica deve ser considerada ao interpretar os resultados. Quanto mais próximo de zero, melhor.
+\begin{equation}
+MAPE = \frac{100}{n} \sum_{i=1}^{n} \left| \frac{O_i - P_i}{O_i} \right|
+\end{equation}
+\begin{itemize}
+	\item $O_i$ valores observados
+	\item $P_i$ valores previstos
+	\item $n$ o número total de observações
+\end{itemize}
 
-\item \textbf{RMSE (\textit{Root Mean Square Error})}: O RMSE mede o erro médio das previsões, penalizando erros maiores devido à sua formulação quadrática. Essa métrica é amplamente utilizada por sua sensibilidade a grandes desvios entre as previsões e os valores observados, o que a torna adequada para identificar erros extremos. O RMSE é uma escolha natural quando se deseja minimizar grandes erros e garantir maior precisão nas previsões. \todo[inline]{inserir a fórmula matemática e citação}
+\item \textbf{RMSE (\textit{Root Mean Square Error})}: O RMSE mede o erro médio das previsões, penalizando erros maiores devido à sua formulação quadrática. Essa métrica é amplamente utilizada por sua sensibilidade a grandes desvios entre as previsões e os valores observados, o que a torna adequada para identificar erros extremos. O RMSE é uma escolha natural quando se deseja minimizar grandes erros e garantir maior precisão nas previsões. Quanto menor, melhor.
+\begin{equation}
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (P_i - O_i)^2}
+\end{equation}
+\begin{itemize}
+	\item $O_i$ valores observados
+	\item $P_i$ valores previstos
+	\item $n$ o número total de observações
+\end{itemize}
 
-\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS positivo) ou subestimar (PBIAS negativo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja zero, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos. \todo[inline]{inserir a fórmula matemática e citação}
+\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS negativo) ou subestimar (PBIAS positivo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja zero, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos.
+\begin{equation}
+PBIAS = 100 \times \frac{\sum_{i=1}^{n} (O_i - P_i)}{\sum_{i=1}^{n} O_i}
+\end{equation}
+\begin{itemize}
+	\item $O_i$ valores observados
+	\item $P_i$ valores previstos
+	\item $n$ o número total de observações
+\end{itemize}
 
-\item \textbf{KGE (\textit{Kling-Gupta Efficiency})}: O KGE foi desenvolvido para fornecer uma avaliação integrada do desempenho do modelo, considerando simultaneamente três componentes: correlação, viés e variabilidade relativa entre os valores previstos e observados. O KGE é uma métrica robusta que combina esses três fatores de forma equilibrada, fornecendo uma visão holística da qualidade das previsões. Essa métrica é especialmente útil em estudos hidrológicos, pois tem capacidade de capturar a complexidade das relações entre variáveis hidrológicas de maneira mais eficaz do que métricas tradicionais focadas em um único aspecto. Um resultado próximo de 1 denota que as previsões estão bastante aproximadas com os dados observados. \todo[inline]{inserir a fórmula matemática e citação}
+\item \textbf{KGE (\textit{Kling-Gupta Efficiency})}: O KGE fornece uma avaliação integrada do desempenho do modelo, considerando simultaneamente três componentes: correlação, viés e variabilidade relativa entre os valores previstos e observados. O KGE é uma métrica robusta que combina esses três fatores de forma equilibrada, fornecendo um entendimento geral da qualidade das previsões. Essa métrica é especialmente útil em estudos hidrológicos, pois tem capacidade de capturar a complexidade das relações entre variáveis hidrológicas de maneira mais eficaz do que métricas tradicionais focadas em um único aspecto. Quanto mais próximo de 1, melhor o desempenho do modelo.\cite{Gupta2009}
+
+\begin{equation}
+KGE = 1 - \sqrt{(r - 1)^2 + (\alpha - 1)^2 + (\beta - 1)^2}
+\end{equation}
+\begin{itemize}
+	\item $r$ é o coeficiente de correlação linear entre os valores observados e previstos 
+	\item $\alpha = \frac{\sigma_p}{\sigma_o}$ é a variabilidade relativa, sendo $\sigma_p$ o desvio-padrão das previsões e $\sigma_o$ o desvio-padrão das observações
+	\item $\beta = \frac{\mu_p}{\mu_o}$ é o viés, em que $\mu_p$ é a média dos valores previstos e $\mu_o$ a média dos valores observados		
+\end{itemize}
+
 \end{itemize}
 
 %\section{Treinamento e Validação dos Modelos}
