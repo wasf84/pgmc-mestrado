@@ -26,11 +26,11 @@
 \contentsline {section}{\numberline {3.2}Dados Utilizados}{19}{section.37}%
 \contentsline {section}{\numberline {3.3}Pré-processamento dos Dados}{22}{section.43}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.1}}Rio Jequitinhonha}{23}{subsection.47}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{27}{subsection.59}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{30}{subsection.68}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{34}{subsection.72}%
-\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{38}{section.78}%
-\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{40}{section.83}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{26}{subsection.59}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{27}{subsection.68}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{33}{subsection.72}%
+\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{37}{section.78}%
+\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{39}{section.83}%
 \contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{47}{section.100}%
 \contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive}{47}{subsection.101}%
 \contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear}{47}{subsection.103}%
