@@ -5,13 +5,13 @@
 \section{Dados Utilizados}
 \todo[inline]{FAZER IMAGEM DE ONDE ESTÃO AS ESTAÇÕES}
 
-Os dados de precipitação e vazão utilizados nesta pesquisa foram obtidos a partir do site da Agência Nacional de Águas e Saneamento Básico (ANA), por meio da biblioteca HydroBR \cite{carvalho2020hydrobr}. Esta biblioteca permitiu a listagem de todas as estações hidrométricas disponíveis, como, por exemplo, as estações convencionais de medição de vazão. Após a identificação e seleção das estações de interesse, cujos códigos estavam disponíveis na base de dados da ANA, desenvolveu-se um conjunto de funções para automatizar o processo de extração. Essas funções permitiram o \textit{download} dos dados referentes ao período especificado diretamente do \textit{webservice} fornecido pela ANA.
+A coleta dos dados foi realizada com um misto da biblioteca HydroBR \cite{carvalho2020hydrobr} e funções próprias de extração de dados. A biblioteca permitiu a listagem de todas as estações hidrométricas disponíveis, como, por exemplo, as estações convencionais de medição de vazão. Após a identificação e seleção das estações de interesse, cujos códigos estavam disponíveis na base de dados da ANA, desenvolveu-se um conjunto de funções para automatizar o processo de extração. Essas funções permitiram o \textit{download} dos dados referentes ao período especificado diretamente do \textit{webservice} fornecido pela ANA.
 
 O período de dados analisado compreende \textbf{de 1º de janeiro de 2013 a 31 de dezembro de 2023}, totalizando 11 anos completos.
 
-Foram utilizadas \textbf{séries temporais diárias} de precipitação e vazão. As colunas correspondentes às datas foram formatadas como `\textit{datetime}', enquanto os dados de precipitação e vazão foram representados como valores de ponto flutuante (`\textit{float}'). Embora a frequência diária tenha sido adotada, é importante destacar que nem todas as séries temporais estavam originalmente nesse formato. Foi necessário lidar com quebra na continuidade das datas e com dados ausentes. Estes aspectos serão discutidos em detalhes em seções subsequentes.
+Foram utilizadas \textbf{séries temporais diárias} de precipitação e vazão. As colunas correspondentes às datas foram formatadas como ``\textit{datetime}'', enquanto os dados de precipitação e vazão foram representados como valores de ponto flutuante (``\textit{float}''). Embora a frequência diária tenha sido adotada, é importante destacar que nem todas as séries temporais estavam originalmente nesse formato. Foi necessário lidar com quebra na continuidade das datas e com dados ausentes. Estes aspectos serão discutidos em detalhes em seções subsequentes.
 
-Os dados de precipitação e vazão obtidos do site da ANA já estavam ajustados nas escalas padrão utilizadas em estudos hidrológicos. A precipitação foi fornecida em milímetros por dia (mm/dia), refletindo a quantidade de chuva que cai sobre uma unidade de área em um período de 24 horas e as vazões, por sua vez, foram disponibilizadas em metros cúbicos por segundo (m³/s), indicando o volume de água que passa por uma seção transversal do rio a cada segundo. Em algumas estações, foram observados valores extremamente elevados para determinados dias, tanto nas séries de precipitação quanto nas de vazão, os quais podem ser considerados \textit{outliers}. Em relação aos dados de vazão, verificou-se a ocorrência de valores nulos (vazão igual a 0), o que indicaria a interrupção completa do fluxo do rio. Esse fenômeno, no entanto, não faz sentido, considerando que não há registro de eventos de seca tão severos nos rios analisados, conforme constatado na revisão bibliográfica e em fontes jornalísticas. Apesar destas anomalias, os dados não foram descartados, pois tanto os registros de vazão quanto os de precipitação utilizados nesta pesquisa foram considerados consistidos pela ANA, ou seja, foram medidos e validados pela agência. O presente trabalho não questionou a veracidade dos dados; eles foram utilizados conforme disponibilizados pela ANA.
+Os dados de precipitação e vazão obtidos do site da ANA já estavam ajustados nas escalas padrão utilizadas em estudos hidrológicos. A precipitação foi fornecida em milímetros por dia (mm/dia), refletindo a quantidade de chuva que cai sobre uma unidade de área em um período de 24 horas e as vazões, por sua vez, foram disponibilizadas em metros cúbicos por segundo (m³/s), indicando o volume de água que passa por uma seção transversal do rio a cada segundo. Em algumas estações, foram observados valores extremamente elevados para determinados dias, tanto nas séries de precipitação quanto nas de vazão, os quais podem ser considerados \textit{outliers}. Em relação aos dados de vazão, verificou-se a ocorrência de valores nulos (vazão igual a 0), o que indicaria a interrupção completa do fluxo do rio. Esse fenômeno, no entanto, não faz sentido, considerando que não há registro de eventos de seca tão severos nos rios analisados. Apesar destas anomalias, os dados não foram descartados, pois tanto os registros de vazão quanto os de precipitação utilizados nesta pesquisa foram considerados consistidos pela ANA, ou seja, foram medidos e validados pela agência. O presente trabalho não questionou a veracidade dos dados; eles foram utilizados conforme disponibilizados pela ANA.
 
 É relevante destacar que a consulta prévia ao sistema \textit{on-line} da ANA foi essencial, pois frequentemente selecionavam-se códigos de estação que, ao final, não possuíam dados para o período especificado ou apresentavam códigos alterados na base de dados, sendo retornados como ``inexistentes''. Quando um código de estação não retornava resultados na consulta ao sistema, foi necessário utilizar o sistema gentilmente cedido pela Rhama Analysis para verificar se o código da estação havia sido modificado. Nos casos em que se constatava a alteração, o novo código foi adotado, enquanto o código anteriormente informado como inexistente foi descartado.
 
@@ -21,101 +21,71 @@ A distinção entre estação convencional e telemétrica deve-se a esta ter inf
 
 Por fim, é importante destacar a existência de estações híbridas, classificadas como ``pluviométricas/fluviométricas''. Em alguns casos, o código da estação pode indicar que se trata de uma estação de vazão (com códigos iniciados em 5 ou 6, por exemplo), mas que também possui informações de precipitação. O inverso também ocorre, onde códigos indicam estações pluviométricas (com códigos iniciados em 016 ou 019, por exemplo) que, no entanto, contêm dados de vazão. Para garantir a consistência com a nomenclatura utilizada pela ANA, manteve-se a classificação original das estações, mesmo que estas contenham apenas dados de precipitação ou vazão.
 
-Para facilitar a visualização, as estações de vazão e precipitação utilizadas no trabalho são apresentadas abaixo. \\
+Para facilitar a visualização, as estações de vazão e precipitação utilizadas no trabalho são apresentadas abaixo. 
 
 \begin{table}[!h]
-\centering \small
-\caption{Estações usadas no rio Jequitinhonha}
-\begin{tabular}{|c|c|c|c|c|} \hline 
-%\multicolumn{5}{|c|}{\textbf{Rio Jequitinhonha}}\\ \hline \hline
-%\multicolumn{5}{|c|}{\textbf{Convencionais}}\\ \hline 
-%\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\ \hline
-%\textbf{Código}&  \textbf{Nome}& \textbf{Município}& \textbf{Latitude}& \textbf{Longitude}\\\hline
-%54780000& JACINTO& JACINTO& -16,1358& -40,3061\\\hline
-%\multicolumn{5}{|c|}{}\\\hline
-\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
-\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\\hline
-\textbf{Código}   & \textbf{Nome}                                 & \textbf{Município}       & \textbf{Latitude} & \textbf{Longitude}\\\hline
-\textit{54790000} & \textit{\makecell{UHE ITAPEBI \\ MONTANTE 1}} & \textit{SALTO DA DIVISA} & \textit{-16,08}   & \textit{-40,0521}\\\hline
-01640000          & JACINTO                                       & JACINTO                  & -16,1386          & -40,2903\\\hline
-\end{tabular}
-\label{tab:estacoes_jequitinhonha}
+	\centering \small
+	\caption{Estações usadas no rio Jequitinhonha \\(fonte: o autor)}
+	\begin{tabular}{|c|c|c|c|c|} \hline 
+		\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
+		\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\\hline
+		\textbf{Código}   & \textbf{Nome}                                 & \textbf{Município}       & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		\textit{54790000} & \textit{\makecell{UHE Itapebi \\ montante 1}} & \textit{Salto da Divisa} & \textit{-16,08}   & \textit{-40,0521}\\\hline
+		01640000          & Jacinto                                       & Jacinto                  & -16,1386          & -40,2903\\\hline
+	\end{tabular}
+	\label{tab:estacoes_jequitinhonha}
 \end{table}
 
 \begin{table}[!h]
-\centering \small
-\caption{Estações usadas no rio Doce}
-\begin{tabular}{|c|c|c|c|c|} \hline 
-%\multicolumn{5}{|c|}{\textbf{Rio Doce}}\\ \hline \hline
-\multicolumn{5}{|c|}{\textbf{Convencionais}}\\ \hline 
-\multicolumn{5}{|c|}{\textbf{Pluviométricas}}\\ \hline
-\textbf{Código} & \textbf{Nome}                               & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
-01941010        & \makecell{SÃO SEBASTIÃO \\ DA ENCRUZILHADA} & AIMORÉS            & -19,4925          & -41,1617 \\\hline
-01941004        & \makecell{RESPLENDOR - JUSANTE}             & RESPLENDOR         & -19,3431          & -41,2461 \\\hline
-01941006        & \makecell{ASSARAI - MONTANTE}               & POCRANE            & -19,5947          & -41,4581 \\\hline
-%\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\ \hline
-%\textbf{Código}&  \textbf{Nome}& \textbf{Município}& \textbf{Latitude}& \textbf{Longitude}\\\hline
-%56990000 & \makecell{SÃO SEBASTIÃO \\ DA ENCRUZILHADA} & AIMORÉS & -19,4925 & -41,1617 \\\hline
-%56989900 & \makecell{BARRA DO CAPIM} & AIMORÉS & -19,4903 & -41,2033 \\\hline
-%56989400 & \makecell{ASSARAI - MONTANTE} & POCRANE & -19,5947 & -41,4581 \\\hline
-\multicolumn{5}{|c|}{}\\\hline
-\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
-%\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\\hline
-%\textbf{Código}& \textbf{Nome}& \textbf{Município}& \textbf{Latitude}& \textbf{Longitude}\\\hline
-%56990850 & \makecell{UHE AIMORÉS \\ BARRAMENTO} & AIMORÉS & -19,4564 & -41,0954 \\\hline
-%56990005 & \makecell{UHE AIMORÉS \\ RIO MANHUAÇU} & AIMORÉS & -19,4917 & -41,1614 \\\hline 
-\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\\hline
-\textbf{Código}   & \textbf{Nome}                          & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
-56990005          & \makecell{UHE AIMORÉS \\ RIO MANHUAÇU} & AIMORÉS            & -19,4917          & -41,1614 \\\hline 
-\textit{56994500} & \textit{\makecell{COLATINA PONTE}}     & \textit{COLATINA}  & \textit{-19,5333} & \textit{-40,6297} \\\hline
-\end{tabular}
-\label{tab:estacoes_rio_doce}
+	\centering \small
+	\caption{Estações usadas no rio Doce \\(fonte: o autor)}
+	\begin{tabular}{|c|c|c|c|c|} \hline 
+		\multicolumn{5}{|c|}{\textbf{Convencionais}}\\ \hline 
+		\multicolumn{5}{|c|}{\textbf{Pluviométricas}}\\ \hline
+		\textbf{Código} & \textbf{Nome}                               & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		01941010        & \makecell{São Sebastião \\ da Encruzilhada} & Aimorés            & -19,4925          & -41,1617 \\\hline
+		01941004        & \makecell{Resplendor - jusante}             & Resplendor         & -19,3431          & -41,2461 \\\hline
+		01941006        & \makecell{Assarai - montante}               & Pocrane            & -19,5947          & -41,4581 \\\hline
+		\multicolumn{5}{|c|}{}\\\hline
+		\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
+		\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\\hline
+		\textbf{Código}   & \textbf{Nome}                          & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		56990005          & \makecell{UHE Aimorés \\ rio Manhuaçu} & Aimorés            & -19,4917          & -41,1614 \\\hline 
+		\textit{56994500} & \textit{\makecell{Colatina ponte}}     & \textit{Colatina}  & \textit{-19,5333} & \textit{-40,6297} \\\hline
+	\end{tabular}
+	\label{tab:estacoes_rio_doce}
 \end{table}
 
 \begin{table}[!h]
-\centering \small
-\caption{Estações usadas no rio Grande}
-\begin{tabular}{|c|c|c|c|c|} \hline 
-%\multicolumn{5}{|c|}{\textbf{Rio Grande}}\\ \hline \hline
-%\multicolumn{5}{|c|}{\textbf{Convencionais}}\\ \hline 
-%\multicolumn{5}{|c|}{\textbf{Pluviométricas}}\\ \hline
-%\textbf{Código}&  \textbf{Nome}& \textbf{Município}& \textbf{Latitude}& \textbf{Longitude}\\\hline
-%01950006 & \makecell{UHE ÁGUA VERMELHA \\ BARRAMENTO} & OUROESTE & -19,8619 & -50,3456 \\\hline
-%02050001 & \makecell{SANTA ALBERTINA} & SANTA ALBERTINA & -20,0333 & -50,7333 \\\hline
-%\multicolumn{5}{|c|}{}\\\hline
-\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
-\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\\hline
-\textbf{Código}   & \textbf{Nome}                                       & \textbf{Município}     & \textbf{Latitude} & \textbf{Longitude}\\\hline
-\textit{62020080} & \textit{\makecell{UHE ILHA SOLTEIRA \\ BARRAMENTO}} & \textit{ILHA SOLTEIRA} & \textit{-20,3797} & \textit{-51,3686} \\\hline 
-\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\ \hline
-\textbf{Código} & \textbf{Nome}                              & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
-61998080        & \makecell{UHE ÁGUA VERMELHA \\ BARRAMENTO} & OUROESTE           & -19,8628          & -50,3475 \\\hline
-\end{tabular}
-\label{tab:estacoes_rio_grande}
+	\centering \small
+	\caption{Estações usadas no rio Grande \\(fonte: o autor)}
+	\begin{tabular}{|c|c|c|c|c|} \hline 
+		\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
+		\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\\hline
+		\textbf{Código}   & \textbf{Nome}                                       & \textbf{Município}     & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		\textit{62020080} & \textit{\makecell{UHE Ilha Solteira \\ barramento}} & \textit{Ilha Solteira} & \textit{-20,3797} & \textit{-51,3686} \\\hline 
+		\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\ \hline
+		\textbf{Código} & \textbf{Nome}                              & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		61998080        & \makecell{UHE Água Vermelha\\ barramento} & Ouroeste           & -19,8628          & -50,3475 \\\hline
+	\end{tabular}
+	\label{tab:estacoes_rio_grande}
 \end{table}
 
 \begin{table}[!h]
-\centering \small
-\caption{Estações usadas no rio São Francisco}
-\begin{tabular}{|c|c|c|c|c|} \hline 
-%\multicolumn{5}{|c|}{\textbf{Rio São Francisco}}\\ \hline \hline
-\multicolumn{5}{|c|}{\textbf{Convencionais}}\\ \hline 
-\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\ \hline
-\textbf{Código}   & \textbf{Nome}                                 & \textbf{Município}                            & \textbf{Latitude} & \textbf{Longitude}\\\hline
-\textit{44290002} & \textit{\makecell{PEDRAS DE MARIA\\ DA CRUZ}} & \textit{\makecell{PEDRAS DE MARIA\\ DA CRUZ}} & \textit{-15,6011} & \textit{-44,3967} \\\hline
-%44250000 & \makecell{USINA DO PANDEIROS\\ MONTANTE} & JANUÁRIA & -15,4831 & -44,7681 \\\hline
-\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\ \hline
-\textbf{Código} & \textbf{Nome}                            & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
-01544017        & \makecell{PEDRAS DE MARIA\\ DA CRUZ}     & JANUÁRIA           & -15,5978          & -44,3903 \\\hline
-01544032        & \makecell{USINA DO PANDEIROS\\ MONTANTE} & JANUÁRIA           & -15,4831          & -44,7672 \\\hline
-01544036        & \makecell{LONTRA}                        & LONTRA             & -15,9056          & -44,3072 \\\hline
-%\multicolumn{5}{|c|}{}\\\hline
-%\multicolumn{5}{|c|}{\textbf{Telemétricas}}\\\hline
-%\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\\hline
-%\textbf{Código}& \textbf{Nome}& \textbf{Município}& \textbf{Latitude}& \textbf{Longitude}\\\hline
-%44252000 & \makecell{USINA DO PANDEIROS\\ JUSANTE} & JANUÁRIA & -15,5136 & -44,7537 \\\hline
-\end{tabular}
-\label{tab:estacoes_rio_sao_francisco}
+	\centering \small
+	\caption{Estações usadas no rio São Francisco \\(fonte: o autor)}
+	\begin{tabular}{|c|c|c|c|c|} \hline 
+		\multicolumn{5}{|c|}{\textbf{Convencionais}}\\ \hline 
+		\multicolumn{5}{|c|}{\textbf{Fluviométricas}}\\ \hline
+		\textbf{Código}   & \textbf{Nome}                                 & \textbf{Município}                            & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		\textit{44290002} & \textit{\makecell{Pedras de Maria\\ da Cruz}} & \textit{\makecell{Pedras de Maria\\ da Cruz}} & \textit{-15,6011} & \textit{-44,3967} \\\hline
+		\multicolumn{5}{|c|}{\textbf{Pluviométricas/Fluviométricas}}\\ \hline
+		\textbf{Código} & \textbf{Nome}                            & \textbf{Município} & \textbf{Latitude} & \textbf{Longitude}\\\hline
+		01544017        & \makecell{Pedras de Maria\\ da Cruz}     & Januária           & -15,5978          & -44,3903 \\\hline
+		01544032        & \makecell{Usina do Pandeiros\\ montante} & Januária           & -15,4831          & -44,7672 \\\hline
+		01544036        & \makecell{Lontra}                        & Lontra             & -15,9056          & -44,3072 \\\hline
+	\end{tabular}
+	\label{tab:estacoes_rio_sao_francisco}
 \end{table}
 \clearpage
 
@@ -132,91 +102,94 @@ Com os dados disponíveis localmente, o primeiro passo antes de qualquer anális
 
 A sazonalidade é um fenômeno bem conhecido e estabelecido na análise hidrológica das bacias hidrográficas da América do Sul. O aumento da precipitação começa na primavera, em setembro, e atinge seus picos nos meses de dezembro e janeiro, durante o verão. Consequentemente, as vazões dos rios aumentam. Com a chegada do outono e, posteriormente, do inverno, os índices pluviométricos diminuem, assim como as vazões nos rios. \cite{rayyan-39677094}
 
-Considerando esse fenômeno, o preenchimento dos dados faltantes foi realizado replicando o padrão sazonal. Para preencher um dia faltante em julho, por exemplo, foi utilizado o valor correspondente ao mesmo dia nos anos anteriores. Para evitar a repetição exata do ano anterior, utilizou-se a média dos últimos três anos. As funções desenvolvidas para essa finalidade são personalizáveis, permitindo que se opte por repetir exatamente o ano anterior ou considerar mais de três anos, dependendo das necessidades do estudo.
+Considerando esse fenômeno, o preenchimento dos dados faltantes foi realizado replicando o padrão sazonal. Para preencher um dia faltante em julho, por exemplo, foi utilizado o valor correspondente ao mesmo dia nos anos anteriores. Para evitar a repetição exata do ano anterior, utilizou-se a média dos últimos três anos. As funções desenvolvidas para essa finalidade são personalizáveis, permitindo que se opte por repetir exatamente o ano anterior ou considerar mais de três anos, dependendo das necessidades do estudo. 
+\todo[inline, color=blue, textcolor=white]{Duvida minha que pode ser da banca também: ocorreu o caso de ter o mesmo mês faltando dois anos consecutivos, nesse caso qual estratégia vc usou? vc utilizou o valor da media do ano anterior ou buscou em outros anos anteriores?}
 
 Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem sempre preenchia exatamente as lacunas. Quando havia muitos dados faltantes no início da série isso causava problema e a inserção de dados falhava. O que é o comportamento normal.
 
 Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam faltantes. Para esses casos nulos, foi aplicada a imputação de dados utilizando o modelo kNN (k-Nearest Neighbors - k-vizinhos mais próximos), com o objetivo de garantir uma melhor dispersão dos valores imputados. O modelo kNN operou calculando a distância euclidiana dos pontos nulos utilizando os sete vizinhos mais próximos, atribuindo maior peso aos vizinhos mais próximos no cálculo. Esse método de imputação visou preservar a tendência local e o comportamento da série temporal dentro da semana em que o dado faltante estava. Após esta nova fase de imputação dos dados as séries ficaram completamente preenchidas.
 
-É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos. Isso será mostrado adiante.
+É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos. Isso será mostrado adiante. \todo[color=blue, textcolor=white]{coloque a seção onde sera mostrado, ou remova esta frase.}
 
-Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome `t\_cv\_54790000' significa `estação telemétrica de precipitação, código 54790000'.
+Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010'\todo[color=blue, textcolor=white]{é toque mas sugiro trocar as crases por aspas simples}, utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome `t\_cv\_54790000' significa `estação telemétrica de precipitação, código 54790000'.
 
 \subsection{Rio Jequitinhonha}
 
-A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade significativa de dados faltantes, especialmente no início da série temporal. Observa-se uma clara sazonalidade na série, com picos de vazão ocorrendo predominantemente no final e início de cada ano (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}). Nas páginas seguintes, serão apresentados gráficos comparativos entre a série original, sem dados imputados (incompleta), e a série após a imputação de dados (completa). Essa comparação, contrapondo a série fornecida pela ANA e os resultados após a inserção de dados, permitirá uma visualização mais clara do impacto das técnicas de preenchimento. Cabe relembrar que, inicialmente, foi aplicada a média dos últimos três anos para replicar a sazonalidade. Para os dados que permaneceram ausentes, utilizou-se o modelo kNN para completar a série. Esta estação, identificada como t\_vz\_54790000, apresentou 532 dias de dados nulos, o que corresponde a aproximadamente 13,24\% do total. Essa é a estação-alvo para a previsão das vazões.
+A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade significativa de dados faltantes, especialmente no início da série temporal. Observa-se uma clara sazonalidade na série, com picos de vazão ocorrendo predominantemente no final e início de cada ano (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}). {\color{red}Nas páginas seguintes}\todo[inline,color=blue, textcolor=white]{Troque ''Nas paginas seguinte'' por ''As figuras (1,2,3,4..)'' e troque ''serão apresentados'' por ''apresentam''. Desta forma você evita que possíveis mudanças na posição do texto interfiram no contexto e sentido da oratoria apresentada.}, {\color{red}serão apresentados} gráficos comparativos entre a série original, sem dados imputados (incompleta), e a série após a imputação de dados (completa). Essa comparação, contrapondo a série fornecida pela ANA e os resultados após a inserção de dados, permitirá uma visualização mais clara do impacto das técnicas de preenchimento. Cabe relembrar que, inicialmente, foi aplicada a média dos últimos três anos para replicar a sazonalidade. Para os dados que permaneceram ausentes, utilizou-se o modelo kNN para completar a série. Esta estação, identificada como t\_vz\_54790000, apresentou 532 dias de dados nulos, o que corresponde a aproximadamente 13,24\% do total. Essa é a estação-alvo para a previsão das vazões.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png}
-\caption{Série temporal incompleta da estação t\_vz\_54790000 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png}
+	\caption{Série temporal incompleta da estação t\_vz\_54790000 \\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}
 \end{figure}
+
+\todo[inline, color=blue, textcolor=white]{da muito trabalho aumentar a fonte dos eixos dos gráficos? elas estão muito pequenas e ruins de ler, a banca vai reclamar!}
 
 A seguir, destaca-se o trecho da série com a maior quantidade de dados faltantes (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}), que abrange o período de janeiro de 2013 a janeiro de 2016. Em sequência, é apresentada a série após a imputação dos dados (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}). Notavelmente, essa seção não apresentou resultados ideais, uma vez que a imputação atribuiu vazões zero em vários dias, o que não é realista, pois isso indicaria a secagem completa do rio, o que é improvável. No entanto, esses valores zero não impactaram significativamente os resultados finais da análise, já que se referem a um período distante do foco principal deste estudo. Uma alternativa seria excluir todo o trecho anterior ao ano de 2016, mas optou-se por manter a uniformidade nos critérios de aproveitamento dos dados ao longo do trabalho, dado que outros rios também foram analisados, e buscava-se assegurar consistência nos resultados.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png}
-\caption{Detalhe da série temporal da estação t\_vz\_54790000, ainda sem dados imputados, de 2013 a 2016 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png}
+	\caption{Detalhe da série temporal da estação t\_vz\_54790000, ainda sem dados imputados, de 2013 a 2016 \\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png}
-\caption{Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png}
+	\caption{Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}
 \end{figure}
 
 Observe também o trecho de dados faltantes mais próximo ao final dos anos analisados, em 2021 e 2022 (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}). Esta porção da série ficou boa visto que havia informação prévia suficiente, a inserção de dados respeitou coerentemente a sazonalidade (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}).
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png}
-\caption{Série temporal incompleta da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png}
+	\caption{Série temporal incompleta da estação t\_vz\_54790000 no detalhe entre 2021 e 2022\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png}
-\caption{Série temporal completa da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png}
+	\caption{Série temporal completa da estação t\_vz\_54790000 no detalhe entre 2021 e 2022\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}
 \end{figure}
 
 Por fim, uma visão ampla de como ficou a série temporal após os procedimentos de imputar os dados. (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png}
-\caption{Série temporal completa da estação t\_vz\_54790000 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png}
+	\caption{Série temporal completa da estação t\_vz\_54790000\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000}
 \end{figure}
 
 A mesma análise foi realizada para as estações de chuva. Na estação t\_cv\_54790000 (figura \ref{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}) faltavam 273 dias de dados (6,79\%). Já a estação t\_cv\_01640000 estava totalmente preenchida, sem valores nulos. (figura \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png}
-\caption{Série temporal incompleta da estação t\_cv\_54790000 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png}
+	\caption{Série temporal incompleta da estação t\_cv\_54790000\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}
 \end{figure}
 
 Note que no início desta série de precipitação, o ano de 2013, não possuem dados. As séries de chuva completas ficaram desta forma (figuras \ref{fig:jequitinhonhaSerieCompleta_t_cv_54790000} e \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png}
-\caption{Série temporal completa da estação t\_cv\_54790000 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieCompleta_t_cv_54790000}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png}
+	\caption{Série temporal completa da estação t\_cv\_54790000\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieCompleta_t_cv_54790000}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png}
-\caption{Série temporal completa da estação t\_cv\_01640000 (fonte: o autor)}
-\label{fig:jequitinhonhaSerieCompleta_t_cv_01640000}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png}
+	\caption{Série temporal completa da estação t\_cv\_01640000\\(fonte: o autor)}
+	\label{fig:jequitinhonhaSerieCompleta_t_cv_01640000}
 \end{figure}
 
 \subsection{Rio Doce}
@@ -224,10 +197,10 @@ Note que no início desta série de precipitação, o ano de 2013, não possuem 
 A estação alvo para o rio Doce é a estação c\_vz\_56994500. Sua série temporal foi a que apresentou melhor qualidade no que diz respeito à frequência de medições realizadas. Havia falta de apenas 3 dias, dos 4017 dias do período inteiro. Apenas o preenchimento sazonal bastou para completar a série e não foi preciso mais que isso. Cabe destacar a sazonalidade da série. Ficou bastante evidente este comportamento. (figura \ref{fig:doceSerieCompleta_c_vz_56994500})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png}
-\caption{Série temporal completa da estação c\_vz\_56994500 (fonte: o autor)}
-\label{fig:doceSerieCompleta_c_vz_56994500}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png}
+	\caption{Série temporal completa da estação c\_vz\_56994500\\(fonte: o autor)}
+	\label{fig:doceSerieCompleta_c_vz_56994500}
 \end{figure}
 
 Se para os dados de vazão no rio Doce a série foi, digamos, mais comportada, o mesmo não se pode dizer exatamente das estações de chuva. Ao menos, não para duas delas. Estas estações tiveram os dados desconsiderados e foram removidos das análises. Primeiro foi a estação t\_cv\_56990850 que possuía valores discrepantes demais para serem considerados. Valores da ordem de 7000 mm/dia, 8500 mm/dia. Além deste problema, havia ainda 3134 dias com dados nulos, o que representava 78\% do total. (figura \ref{fig:doceSerieIncompleta_t_cv_56990850})
@@ -235,60 +208,60 @@ Se para os dados de vazão no rio Doce a série foi, digamos, mais comportada, o
 A outra estação removida foi a t\_cv\_56994500. Conforme pode ser observado na figura \ref{fig:doceSerieCompleta_t_cv_56994500}, nela havia um longo hiato de dados zerados, voltando à normalidade apenas mais recentemente. Como as informações de precipitação que deveria haver para a estação no período do hiato, pode ser retirado de outras estações usadas na modelagem, optou-se por remover esta estação completamente do trabalho.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png}
-\caption{Série temporal da estação t\_cv\_56990850 - não utilizada (fonte: o autor)}
-\label{fig:doceSerieIncompleta_t_cv_56990850}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png}
+	\caption{Série temporal da estação t\_cv\_56990850 - não utilizada\\(fonte: o autor)}
+	\label{fig:doceSerieIncompleta_t_cv_56990850}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png}
-\caption{Série temporal da estação t\_cv\_56994500 - não utilizada (fonte: o autor)}
-\label{fig:doceSerieCompleta_t_cv_56994500}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png}
+	\caption{Série temporal da estação t\_cv\_56994500 - não utilizada\\(fonte: o autor)}
+	\label{fig:doceSerieCompleta_t_cv_56994500}
 \end{figure}
 
 As estações que, enfim, foram empregadas na modelagem são as que estão na tabela e, adiante, o gráfico da série temporal de cada uma delas. (figuras \ref{fig:doceSerieCompleta_c_cv_01941010}, \ref{fig:doceSerieCompleta_c_cv_01941004}, \ref{fig:doceSerieCompleta_c_cv_01941006} e \ref{fig:doceSerieCompleta_t_cv_56990005})
 
 \begin{table}[h!]
-\centering \small
-\caption{Estações de precipitação usadas - final}
-\begin{tabular}{|c|c|c|} \hline
-\textbf{Estação} & \textbf{\# dados faltantes} & \textbf{\% dados faltantes} \\ \hline
-c\_cv\_01941010  & 153                         & 3,81 \\ \hline
-c\_cv\_01941004  & 31                          & 0,77 \\ \hline
-c\_cv\_01941006  & 0                           & 0,00 \\ \hline
-t\_cv\_56990005  & 1395                        & 34,73 \\ \hline
-\end{tabular}
-\label{tab:estacoes_chuva_usadas_final_rio_doce}
+	\centering \small
+	\caption{Estações de precipitação usadas - final \\(fonte: o autor)}
+	\begin{tabular}{|c|c|c|} \hline
+		\textbf{Estação} & \textbf{\# dados faltantes} & \textbf{\% dados faltantes} \\ \hline
+		c\_cv\_01941010  & 153                         & 3,81 \\ \hline
+		c\_cv\_01941004  & 31                          & 0,77 \\ \hline
+		c\_cv\_01941006  & 0                           & 0,00 \\ \hline
+		t\_cv\_56990005  & 1395                        & 34,73 \\ \hline
+	\end{tabular}
+	\label{tab:estacoes_chuva_usadas_final_rio_doce}
 \end{table}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png}
-\caption{Série temporal completa da estação c\_cv\_01941010 (fonte: o autor)}
-\label{fig:doceSerieCompleta_c_cv_01941010}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png}
+	\caption{Série temporal completa da estação c\_cv\_01941010\\(fonte: o autor)}
+	\label{fig:doceSerieCompleta_c_cv_01941010}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png}
-\caption{Série temporal completa da estação c\_cv\_01941004 (fonte: o autor)}
-\label{fig:doceSerieCompleta_c_cv_01941004}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png}
+	\caption{Série temporal completa da estação c\_cv\_01941004\\(fonte: o autor)}
+	\label{fig:doceSerieCompleta_c_cv_01941004}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png}
-\caption{Série temporal completa da estação c\_cv\_01941006 (fonte: o autor)}
-\label{fig:doceSerieCompleta_c_cv_01941006}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png}
+	\caption{Série temporal completa da estação c\_cv\_01941006\\(fonte: o autor)}
+	\label{fig:doceSerieCompleta_c_cv_01941006}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png}
-\caption{Série temporal completa da estação t\_cv\_56990005 (fonte: o autor)}
-\label{fig:doceSerieCompleta_t_cv_56990005}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png}
+	\caption{Série temporal completa da estação t\_cv\_56990005\\(fonte: o autor)}
+	\label{fig:doceSerieCompleta_t_cv_56990005}
 \end{figure}
 
 \subsection{Rio Grande}
@@ -298,19 +271,19 @@ O rio Grande apresentou desafios significativos ao longo de todo o desenvolvimen
 A série temporal de vazão da estação selecionada, denominada t\_vz\_62020080, estava incompleta e não abrangia todo o período de 11 anos estipulado para a análise. (figura \ref{fig:grandeSerieIncompleta_t_vz_62020080}) Os dados disponíveis mais antigos datavam de 2020. Contudo, em conformidade com o escopo estabelecido para este estudo, foi realizado o preenchimento dos dados faltantes, aplicando-se o mesmo protocolo utilizado para os demais rios analisados. Este procedimento foi necessário para garantir a consistência, integridade e comparabilidade das análises subsequentes.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png}
-\caption{Série temporal incompleta da estação t\_vz\_62020080 (fonte: o autor)}
-\label{fig:grandeSerieIncompleta_t_vz_62020080}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png}
+	\caption{Série temporal incompleta da estação t\_vz\_62020080\\(fonte: o autor)}
+	\label{fig:grandeSerieIncompleta_t_vz_62020080}
 \end{figure}
 
 Infelizmente, o caráter ruidoso da série permaneceu mesmo após a aplicação do protocolo de preenchimento dos dados ausentes, conforme pode ser observado na imagem final gerada. (figura \ref{fig:grandeSerieCompleta_t_vz_62020080}) A série em questão apresentava 2099 dias faltantes, correspondendo a aproximadamente 64\% de dados nulos. Outro aspecto relevante para essa estação é que, diferentemente das outras, não foram utilizados os 4.017 registros previstos inicialmente. As informações mais antigas disponíveis datavam de 2015, resultando, assim, em um total de 3289 registros diários utilizados especificamente para o rio Grande.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png}
-\caption{Série temporal completa da estação t\_vz\_62020080 (fonte: o autor)}
-\label{fig:grandeSerieCompleta_t_vz_62020080}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png}
+	\caption{Série temporal completa da estação t\_vz\_62020080\\(fonte: o autor)}
+	\label{fig:grandeSerieCompleta_t_vz_62020080}
 \end{figure}
 
 A estação de precipitação utilizada, a única neste caso, foi a estação t\_cv\_61998080, pois foi a única que apresentou dados válidos. Curiosamente, outra estação de precipitação disponível também apresentou dados para o período analisado, mas a base de dados consistia exclusivamente em valores zero. Por essa razão, a estação t\_cv\_62020080 foi completamente excluída do estudo.
@@ -318,10 +291,10 @@ A estação de precipitação utilizada, a única neste caso, foi a estação t\
 Em relação à estação t\_cv\_61998080, houve necessidade de preencher apenas um número reduzido de dados ausentes, totalizando 169 registros, o que correspondia a 5,14\% do total. (figura \ref{fig:grandeSerieCompleta_t_cv_61998080}) Trata-se de uma série com uma quantidade expressiva de dados, que efetivamente pôde contribuir de maneira significativa para as análises realizadas.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png}
-\caption{Série completa da estação t\_cv\_61998080 (fonte: o autor)}
-\label{fig:grandeSerieCompleta_t_cv_61998080}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png}
+	\caption{Série completa da estação t\_cv\_61998080\\(fonte: o autor)}
+	\label{fig:grandeSerieCompleta_t_cv_61998080}
 \end{figure}
 
 Ressalta-se que o trecho de dados faltantes para a estação t\_cv\_61998080 concentrava-se no início da série temporal, especificamente no ano de 2015. No gráfico os dados já estão imputados.
@@ -333,41 +306,41 @@ Por fim, foi realizado o procedimento de preenchimento dos dados nulos para o Ri
 Para esta estação, o preenchimento sazonal foi suficiente para suprir as lacunas existentes, não sendo necessário aplicar procedimentos adicionais de imputação de dados. (figura \ref{fig:franciscoSerieCompleta_c_vz_44290002})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.png}
-\caption{Detalhe do trecho com dados nulos da estação c\_vz\_44290002 (fonte: o autor)}
-\label{fig:franciscoSerieIncompleta_c_vz_44290002-detalhe}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.png}
+	\caption{Detalhe do trecho com dados nulos da estação c\_vz\_44290002\\(fonte: o autor)}
+	\label{fig:franciscoSerieIncompleta_c_vz_44290002-detalhe}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png}
-\caption{Série temporal completa da estação c\_vz\_44290002 (fonte: o autor)}
-\label{fig:franciscoSerieCompleta_c_vz_44290002}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png}
+	\caption{Série temporal completa da estação c\_vz\_44290002\\(fonte: o autor)}
+	\label{fig:franciscoSerieCompleta_c_vz_44290002}
 \end{figure}
 \clearpage
 
 No que se refere às estações de precipitação selecionadas para a análise no rio São Francisco, não foi necessário realizar nenhuma inserção de dados, uma vez que todas as séries estavam completas, abrangendo a totalidade dos 4017 dias de registro. As séries temporais correspondentes podem ser visualizadas nos gráficos apresentados a seguir. (figuras \ref{fig:franciscoSerieCompleta_c_cv_01544017}, \ref{fig:franciscoSerieCompleta_c_cv_01544032}, \ref{fig:franciscoSerieCompleta_c_cv_01544036})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png}
-\caption{Série temporal completa da estação c\_cv\_01544017 (fonte: o autor)}
-\label{fig:franciscoSerieCompleta_c_cv_01544017}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png}
+	\caption{Série temporal completa da estação c\_cv\_01544017\\(fonte: o autor)}
+	\label{fig:franciscoSerieCompleta_c_cv_01544017}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png}
-\caption{Série temporal completa da estação c\_cv\_01544032 (fonte: o autor)}
-\label{fig:franciscoSerieCompleta_c_cv_01544032}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png}
+	\caption{Série temporal completa da estação c\_cv\_01544032\\(fonte: o autor)}
+	\label{fig:franciscoSerieCompleta_c_cv_01544032}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png}
-\caption{Série temporal completa da estação c\_cv\_01544036 (fonte: o autor)}
-\label{fig:franciscoSerieCompleta_c_cv_01544036}
+	\centering
+	\includegraphics[scale=0.25]{Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png}
+	\caption{Série temporal completa da estação c\_cv\_01544036\\(fonte: o autor)}
+	\label{fig:franciscoSerieCompleta_c_cv_01544036}
 \end{figure}
 \clearpage
 
@@ -379,53 +352,53 @@ As variáveis do trabalho, exceto as categóricas, obviamente, são todas contí
 Para que se tenha uma noção melhor, abaixo seguem alguns dados estatísticos relevantes que informam sobre os dados de vazão e precipitação utilizados. Conste-se que as unidades de precipitação estão em mm/dia e vazão em $m^3/s$.
 
 \begin{table}[!h]
-\centering \small
-\caption{Rio Jequitinhonha}
-\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
-\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
-t\_cv\_01640000     & 4017        & 1,58           & 6,85                   & 0,00         & 0,00            & 166,60       \\\hline
-t\_cv\_54790000     & 4017        & 1,68           & 6,31                   & 0,00         & 0,00            & 102,60       \\\hline
-t\_vz\_54790000 (y) & 4017        & 160,95         & 267,90                 & 0,00         & 95,95           & 3716,65      \\\hline
-\end{tabular}
-\label{tab:variaveis_jequitinhonha}
+	\centering \small
+	\caption{Variáveis utilizadas - Rio Jequitinhonha \\(fonte: o autor)}
+	\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
+		\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
+		t\_cv\_01640000     & 4017        & 1,58           & 6,85                   & 0,00         & 0,00            & 166,60       \\\hline
+		t\_cv\_54790000     & 4017        & 1,68           & 6,31                   & 0,00         & 0,00            & 102,60       \\\hline
+		t\_vz\_54790000 (y) & 4017        & 160,95         & 267,90                 & 0,00         & 95,95           & 3716,65      \\\hline
+	\end{tabular}
+	\label{tab:variaveis_jequitinhonha}
 \end{table}
 
 \begin{table}[!h]
-\centering \small
-\caption{Rio Doce}
-\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
-\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
-c\_cv\_01941010     & 4017        & 2,21           & 8,41                   & 0,00         & 0,00            & 125,60       \\\hline
-c\_cv\_01941004     & 4017        & 2,59           & 9,83                   & 0,00         & 0,00            & 131,00       \\\hline
-c\_cv\_01941006     & 4017        & 2,44           & 9,76                   & 0,00         & 0,00            & 156,60       \\\hline
-t\_cv\_56990005     & 4017        & 1,15           & 5,19                   & 0,00         & 0,00            & 124,80       \\\hline
-c\_vz\_56994500 (y) & 4017        & 542,05         & 656,99                 & 75,15        & 341,26          & 11655,20     \\\hline
-\end{tabular}
-\label{tab:variaveis_rio_doce}
+	\centering \small
+	\caption{Variáveis utilizadas - Rio Doce \\(fonte: o autor)}
+	\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
+		\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
+		c\_cv\_01941010     & 4017        & 2,21           & 8,41                   & 0,00         & 0,00            & 125,60       \\\hline
+		c\_cv\_01941004     & 4017        & 2,59           & 9,83                   & 0,00         & 0,00            & 131,00       \\\hline
+		c\_cv\_01941006     & 4017        & 2,44           & 9,76                   & 0,00         & 0,00            & 156,60       \\\hline
+		t\_cv\_56990005     & 4017        & 1,15           & 5,19                   & 0,00         & 0,00            & 124,80       \\\hline
+		c\_vz\_56994500 (y) & 4017        & 542,05         & 656,99                 & 75,15        & 341,26          & 11655,20     \\\hline
+	\end{tabular}
+	\label{tab:variaveis_rio_doce}
 \end{table}
 
 \begin{table}[!h]
-\centering \small
-\caption{Rio Grande}
-\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
-\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
-t\_cv\_61998080     & 3289        & 3,13           & 13,92                  & 0,00         & 0,00            & 330,40       \\\hline
-t\_vz\_62020080 (y) & 3289        & 3405,27        & 873,88                 & 1603,58      & 3170,08         & 11939,49     \\\hline
-\end{tabular}
-\label{tab:variaveis_rio_grande}
+	\centering \small
+	\caption{Variáveis utilizadas - Rio Grande \\(fonte: o autor)}
+	\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
+		\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
+		t\_cv\_61998080     & 3289        & 3,13           & 13,92                  & 0,00         & 0,00            & 330,40       \\\hline
+		t\_vz\_62020080 (y) & 3289        & 3405,27        & 873,88                 & 1603,58      & 3170,08         & 11939,49     \\\hline
+	\end{tabular}
+	\label{tab:variaveis_rio_grande}
 \end{table}
 
 \begin{table}[!h]
-\centering \small
-\caption{Rio São Francisco}
-\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
-\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
-c\_cv\_01544017     & 4017        & 1,60           & 7,39                   & 0,00         & 0,00            & 110,00       \\\hline
-c\_cv\_01544032     & 4017        & 2,30           & 8,13                   & 0,00         & 0,00            & 125,40       \\\hline
-c\_cv\_01544036     & 4017        & 1,99           & 7,59                   & 0,00         & 0,00            & 112,00       \\\hline
-c\_vz\_44290002 (y) & 4017        & 1115,88        & 998,40                 & 254,75       & 812,26          & 7338,65      \\\hline
-\end{tabular}
-\label{tab:variaveis_rio_sao_francisco}
+	\centering \small
+	\caption{Variáveis utilizadas - Rio São Francisco \\(fonte: o autor)}
+	\begin{tabular}{|l|r|r|r|r|r|r|} \hline 
+		\textbf{Variável}   & \textbf{\#} & \textbf{Média} & \textbf{Desvio-padrão} & \textbf{Mín} & \textbf{< 50\%} & \textbf{Máx} \\\hline
+		c\_cv\_01544017     & 4017        & 1,60           & 7,39                   & 0,00         & 0,00            & 110,00       \\\hline
+		c\_cv\_01544032     & 4017        & 2,30           & 8,13                   & 0,00         & 0,00            & 125,40       \\\hline
+		c\_cv\_01544036     & 4017        & 1,99           & 7,59                   & 0,00         & 0,00            & 112,00       \\\hline
+		c\_vz\_44290002 (y) & 4017        & 1115,88        & 998,40                 & 254,75       & 812,26          & 7338,65      \\\hline
+	\end{tabular}
+	\label{tab:variaveis_rio_sao_francisco}
 \end{table}
 \clearpage
 
@@ -446,59 +419,59 @@ O primeiro passo foi verificar a sazonalidade dos dados. Foram avaliadas apenas 
 A decomposição das séries temporais foi realizada utilizando a biblioteca StatsModels, aplicando o modelo aditivo.\cite{seabold2010statsmodels} A série temporal do rio Grande apresentou o pior desempenho em termos de autocorrelação.(figura \ref{fig:acf_rio_grande}) A decomposição da série também revelou um comportamento mais ruidoso, o que pode ser atribuído ao fato de esta série conter mais lacunas e apresentar maiores desafios no preenchimento dos dados ausentes.(figura \ref{fig:sazonalidade_rio_grande}) Nos gráficos de autocorrelação, o \textit{lag} de 365 dias – correspondente a um ano – foi destacado com uma linha preta vertical.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/acf_jequitinhonha.png}
-\caption{Autocorrelação para a vazão do rio Jequitinhonha (fonte: o autor)}
-\label{fig:acf_jequitinhonha}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/acf_jequitinhonha.png}
+	\caption{Autocorrelação para a vazão do rio Jequitinhonha\\(fonte: o autor)}
+	\label{fig:acf_jequitinhonha}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/sazonalidade_jequitinhonha.png}
-\caption{Componente sazonal da série de vazão do rio Jequitinhonha (fonte: o autor)}
-\label{fig:sazonalidade_jequitinhonha}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/sazonalidade_jequitinhonha.png}
+	\caption{Componente sazonal da série de vazão do rio Jequitinhonha\\(fonte: o autor)}
+	\label{fig:sazonalidade_jequitinhonha}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/acf_rio_doce.png}
-\caption{Autocorrelação para a vazão do rio Doce (fonte: o autor)}
-\label{fig:acf_rio_doce}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/acf_rio_doce.png}
+	\caption{Autocorrelação para a vazão do rio Doce\\(fonte: o autor)}
+	\label{fig:acf_rio_doce}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/sazonalidade_rio_doce.png}
-\caption{Componente sazonal da série de vazão do rio Doce (fonte: o autor)}
-\label{fig:sazonalidade_rio_doce}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/sazonalidade_rio_doce.png}
+	\caption{Componente sazonal da série de vazão do rio Doce\\(fonte: o autor)}
+	\label{fig:sazonalidade_rio_doce}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/acf_rio_grande.png}
-\caption{Autocorrelação para a vazão do rio Grande (fonte: o autor)}
-\label{fig:acf_rio_grande}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/acf_rio_grande.png}
+	\caption{Autocorrelação para a vazão do rio Grande\\(fonte: o autor)}
+	\label{fig:acf_rio_grande}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/sazonalidade_rio_grande.png}
-\caption{Componente sazonal da série de vazão do rio Grande (fonte: o autor)}
-\label{fig:sazonalidade_rio_grande}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/sazonalidade_rio_grande.png}
+	\caption{Componente sazonal da série de vazão do rio Grande\\(fonte: o autor)}
+	\label{fig:sazonalidade_rio_grande}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/acf_rio_sao_francisco.png}
-\caption{Autocorrelação para a vazão do rio São Francisco (fonte: o autor)}
-\label{fig:acf_rio_sao_francisco}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/acf_rio_sao_francisco.png}
+	\caption{Autocorrelação para a vazão do rio São Francisco\\(fonte: o autor)}
+	\label{fig:acf_rio_sao_francisco}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/sazonalidade_rio_sao_francisco.png}
-\caption{Componente sazonal da série de vazão do rio São Francisco (fonte: o autor)}
-\label{fig:sazonalidade_rio_sao_francisco}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/sazonalidade_rio_sao_francisco.png}
+	\caption{Componente sazonal da série de vazão do rio São Francisco\\(fonte: o autor)}
+	\label{fig:sazonalidade_rio_sao_francisco}
 \end{figure}
 \clearpage
 
@@ -519,65 +492,65 @@ Dado que os dados contêm valores iguais a zero, a transformação pelo logaritm
 Após a transformação a distribuição dos eventos ficou menos assimétrica, como pode ser visto nas figuras \ref{fig:jequitinhonha_antes_log}, \ref{fig:jequitinhonha_depois_log}, \ref{fig:rio_doce_antes_log}, \ref{fig:rio_doce_depois_log}, \ref{fig:rio_grande_antes_log}, \ref{fig:rio_grande_depois_log}, \ref{fig:rio_sao_francisco_antes_log}, \ref{fig:rio_sao_francisco_depois_log}. Para o rio Grande, visualmente, parece não ter havido tanta diferença, mas quando se analisa os valores, houve um achatamento na distância entre os valores máximo e o mínimo da série.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequitinhonha_antes_log.png}
-\caption{Dados originais para o rio Jequitinhonha (fonte: o autor)}
-\label{fig:jequitinhonha_antes_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequitinhonha_antes_log.png}
+	\caption{Dados originais para o rio Jequitinhonha\\(fonte: o autor)}
+	\label{fig:jequitinhonha_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequitinhonha_depois_log.png}
-\caption{Dados transformados para o rio Jequitinhonha (fonte: o autor)}
-\label{fig:jequitinhonha_depois_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequitinhonha_depois_log.png}
+	\caption{Dados transformados para o rio Jequitinhonha\\(fonte: o autor)}
+	\label{fig:jequitinhonha_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce_antes_log.png}
-\caption{Dados originais para o rio Doce (fonte: o autor)}
-\label{fig:rio_doce_antes_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce_antes_log.png}
+	\caption{Dados originais para o rio Doce\\(fonte: o autor)}
+	\label{fig:rio_doce_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce_depois_log.png}
-\caption{Dados transformados para o rio Doce (fonte: o autor)}
-\label{fig:rio_doce_depois_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce_depois_log.png}
+	\caption{Dados transformados para o rio Doce\\(fonte: o autor)}
+	\label{fig:rio_doce_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande_antes_log.png}
-\caption{Dados originais para o rio Grande (fonte: o autor)}
-\label{fig:rio_grande_antes_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande_antes_log.png}
+	\caption{Dados originais para o rio Grande\\(fonte: o autor)}
+	\label{fig:rio_grande_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande_depois_log.png}
-\caption{Dados transformados para o rio Grande (fonte: o autor)}
-\label{fig:rio_grande_depois_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande_depois_log.png}
+	\caption{Dados transformados para o rio Grande\\(fonte: o autor)}
+	\label{fig:rio_grande_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_sao_francisco_antes_log.png}
-\caption{Dados originais para o rio São Francisco (fonte: o autor)}
-\label{fig:rio_sao_francisco_antes_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco_antes_log.png}
+	\caption{Dados originais para o rio São Francisco\\(fonte: o autor)}
+	\label{fig:rio_sao_francisco_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_sao_francisco_depois_log.png}
-\caption{Dados transformados para o rio São Francisco (fonte: o autor)}
-\label{fig:rio_sao_francisco_depois_log}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco_depois_log.png}
+	\caption{Dados transformados para o rio São Francisco\\(fonte: o autor)}
+	\label{fig:rio_sao_francisco_depois_log}
 \end{figure}
 \clearpage
 
-Para finalizar, uma análise comumente realizada em séries temporais é a verificação de sua estacionariedade. No entanto, neste estudo, essa avaliação não foi realizada, pois séries temporais de dados ambientais, como precipitação e vazão, geralmente apresentam sazonalidade e tendências que violam o conceito de estacionariedade.
+Para finalizar, uma análise comumente realizada em séries temporais é a verificação de sua estacionariedade. No entanto, neste estudo, essa avaliação não foi realizada, pois séries temporais de dados ambientais, como precipitação e vazão, geralmente apresentam sazonalidade e tendências que violam o conceito de estacionariedade conforme explicado em \citet{hyndman_fpp3_2024}.
 
-A estacionariedade pressupõe que as características estatísticas da série, como média, variância e autocorrelação, permaneçam constantes ao longo do tempo. (REF) No entanto, dados ambientais, especialmente os relacionados a fenômenos hidrológicos, costumam exibir padrões sazonais marcados e eventos extremos, o que torna inadequada a aplicação de testes de estacionariedade tradicionais. As séries de precipitação podem ser influenciadas por fatores externos, como mudanças climáticas ou eventos meteorológicos excepcionais, resultando em variações significativas ao longo do tempo. No caso da vazão, variações no uso e ocupação do solo causam impacto no escoamento.
+A estacionariedade pressupõe que as características estatísticas da série, como média, variância e autocorrelação, permaneçam constantes ao longo do tempo. No entanto, dados ambientais, especialmente os relacionados a fenômenos hidrológicos, costumam exibir padrões sazonais marcados e eventos extremos, o que torna inadequada a aplicação de testes de estacionariedade tradicionais. As séries de precipitação podem ser influenciadas por fatores externos, como mudanças climáticas ou eventos meteorológicos excepcionais, resultando em variações significativas ao longo do tempo. No caso da vazão, variações no uso e ocupação do solo causam impacto no escoamento.
 
 Essas características, longe de serem consideradas como ruído ou anomalias, fazem parte da própria natureza dos dados ambientais e são cruciais para a modelagem e previsão. Assim, em vez de tentar forçar a estacionariedade, este trabalho optou por lidar com a sazonalidade e as tendências diretamente, utilizando técnicas que captam essas dinâmicas, visando garantir previsões mais realistas e representativas dos processos hidrológicos.
 
@@ -586,7 +559,7 @@ Essas características, longe de serem consideradas como ruído ou anomalias, fa
 
 \subsection{Seasonal Naive}
 
-O modelo \textbf{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (baseline), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio).
+O modelo \textbf{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (baseline), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio) \todo[color=blue, textcolor=white]{referência}.
 
 Esse método é útil para fornecer uma idéia inicial do comportamento esperado, permitindo que os modelos subsequentes sejam comparados a ele. Por ser um modelo simples, ele não captura tendências ou variações complexas, mas estabelece um \textit{benchmark} mínimo para o qual outros métodos mais elaborados e complexos devem se comparar.
 
@@ -594,7 +567,7 @@ Esse método é útil para fornecer uma idéia inicial do comportamento esperado
 
 O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta. 
 
-O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o erro quadrático médio, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.
+O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o erro quadrático médio, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.\todo[color=blue, textcolor=white]{referência}
 
 Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo-base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Isso será discutido.
 
@@ -602,7 +575,7 @@ Aqui está o fluxograma para o funcionamento do modelo de Regressão Linear \tod
 
 \subsection{CatBoost e LightGBM}
 
-Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia no mesmo princípio: ambos algoritmos constroem modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. Contudo, o LightGBM adota uma estratégia denominada ``Leaf-wise Growth'' ao invés da forma de construção tradicional ``Level-wise Growth''. Nesta estratégia, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas. O revés nessa estretégia é que fica mais suscetível a \textit{overfitting}, mas existem parâmetros no modelo algoritmo que cuidam para que isso seja evitado. O CatBoost, por sua vez, adota uma estratégia denominada ``Ordered Boosting'', em que a construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para esta construção. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelos, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também podem ser empregados.
+Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia no mesmo princípio: ambos algoritmos constroem modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. Contudo, o LightGBM adota uma estratégia denominada ``Leaf-wise Growth'' ao invés da forma de construção tradicional ``Level-wise Growth'' \todo[color=blue, textcolor=white]{referência}. Nesta estratégia, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas \todo[color=blue, textcolor=white]{referência}. O revés nessa estretégia é que fica mais suscetível a \textit{overfitting}, mas existem parâmetros no modelo algoritmo que cuidam para que isso seja evitado \todo[color=blue, textcolor=white]{quais parâmetros}. O CatBoost, por sua vez, adota uma estratégia denominada ``Ordered Boosting'', em que a construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para esta construção \todo[color=blue, textcolor=white]{referência}. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelos, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também podem ser empregados.
 
 %\begin{figure}[!h]
 %	\centering
@@ -611,9 +584,11 @@ Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia
 %	\label{fig:boosting_diagrama}
 %\end{figure}
 
-A escolha do algoritmo certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O SeasonalNaive, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e LightGBM foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
+A escolha do modelo \todo[color=blue, textcolor=white]{algoritmo ou modelo?} certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O SeasonalNaive, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e LightGBM foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
 
 \section{Métricas de Avaliação}
+
+\todo[inline, textcolor=white, color=blue]{faltou as referências bibliográficas de todas as métricas}
 %Listar as métricas usadas para avaliar o desempenho dos modelos (MAPE, RMSE, PBias* e KGE não-paramétrico**).
 %(*: PBias ajuda a ver se o modelo está subestimando as previsões ou superestimando)
 %(**: KGEnp (não paramétrico) é uma métrica comum e muito consagrada na hidrologia. Ela tem resiliência a outliers ao avaliar a qualidade do modelo)
@@ -621,47 +596,47 @@ A escolha do algoritmo certo para um problema de previsão desta natureza depend
 Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, foram adotadas quatro métricas: MAPE (\textit{Mean Absolute Percentage Error}), RMSE (\textit{Root Mean Square Error}), PBIAS (\textit{Percent Bias}) e KGE (\textit{Kling-Gupta Efficiency}). A escolha dessas métricas baseia-se na necessidade de uma avaliação abrangente que considere diferentes aspectos da qualidade das previsões, como precisão, erro médio, tendência e correlação.
 
 \begin{itemize}
-\item \textbf{MAPE (\textit{Mean Absolute Percentage Error})}: O MAPE é uma métrica amplamente utilizada para medir a precisão das previsões em termos percentuais. O algoritmo calcula a média das diferenças absolutas entre os valores observados e previstos, normalizadas pelos valores observados. O bom desta métrica MAPE é a sua facilidade de interpretação, já que expressa o erro em termos percentuais, tornando os resultados comparáveis entre diferentes séries temporais e modelos. Contudo, o MAPE pode ser sensível a valores muito baixos e esta característica deve ser considerada ao interpretar os resultados. Quanto mais próximo de zero, melhor.
-\begin{equation}
-MAPE = \frac{100}{n} \sum_{i=1}^{n} \left| \frac{O_i - P_i}{O_i} \right|
-\end{equation}
-\begin{itemize}
-	\item $O_i$ valores observados
-	\item $P_i$ valores previstos
-	\item $n$ o número total de observações
-\end{itemize}
-
-\item \textbf{RMSE (\textit{Root Mean Square Error})}: O RMSE mede o erro médio das previsões, penalizando erros maiores devido à sua formulação quadrática. Essa métrica é amplamente utilizada por sua sensibilidade a grandes desvios entre as previsões e os valores observados, o que a torna adequada para identificar erros extremos. O RMSE é uma escolha natural quando se deseja minimizar grandes erros e garantir maior precisão nas previsões. Quanto menor, melhor.
-\begin{equation}
-RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (P_i - O_i)^2}
-\end{equation}
-\begin{itemize}
-	\item $O_i$ valores observados
-	\item $P_i$ valores previstos
-	\item $n$ o número total de observações
-\end{itemize}
-
-\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS negativo) ou subestimar (PBIAS positivo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja zero, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos.
-\begin{equation}
-PBIAS = 100 \times \frac{\sum_{i=1}^{n} (O_i - P_i)}{\sum_{i=1}^{n} O_i}
-\end{equation}
-\begin{itemize}
-	\item $O_i$ valores observados
-	\item $P_i$ valores previstos
-	\item $n$ o número total de observações
-\end{itemize}
-
-\item \textbf{KGE (\textit{Kling-Gupta Efficiency})}: O KGE fornece uma avaliação integrada do desempenho do modelo, considerando simultaneamente três componentes: correlação, viés e variabilidade relativa entre os valores previstos e observados. O KGE é uma métrica robusta que combina esses três fatores de forma equilibrada, fornecendo um entendimento geral da qualidade das previsões. Essa métrica é especialmente útil em estudos hidrológicos, pois tem capacidade de capturar a complexidade das relações entre variáveis hidrológicas de maneira mais eficaz do que métricas tradicionais focadas em um único aspecto. Quanto mais próximo de 1, melhor o desempenho do modelo.\cite{Gupta2009}
-
-\begin{equation}
-KGE = 1 - \sqrt{(r - 1)^2 + (\alpha - 1)^2 + (\beta - 1)^2}
-\end{equation}
-\begin{itemize}
-	\item $r$ é o coeficiente de correlação linear entre os valores observados e previstos 
-	\item $\alpha = \frac{\sigma_p}{\sigma_o}$ é a variabilidade relativa, sendo $\sigma_p$ o desvio-padrão das previsões e $\sigma_o$ o desvio-padrão das observações
-	\item $\beta = \frac{\mu_p}{\mu_o}$ é o viés, em que $\mu_p$ é a média dos valores previstos e $\mu_o$ a média dos valores observados		
-\end{itemize}
-
+	\item \textbf{MAPE (\textit{Mean Absolute Percentage Error})}: O MAPE é uma métrica amplamente utilizada para medir a precisão das previsões em termos percentuais. O algoritmo calcula a média das diferenças absolutas entre os valores observados e previstos, normalizadas pelos valores observados. O bom da métrica MAPE é a sua facilidade de interpretação, já que expressa o erro em termos percentuais, e por ser ``livre de escala'', ou seja, independente da escala dos dados, tornando os resultados comparáveis entre diferentes séries temporais e modelos. Contudo, o MAPE pode ser sensível a valores muito baixos e esta característica deve ser considerada ao interpretar os resultados. Quanto mais próximo de 0, melhor.\cite{hyndman_fpp3_2024}
+	\begin{equation}
+		MAPE = \frac{100}{n} \sum_{i=1}^{n} \left| \frac{O_i - P_i}{O_i} \right|
+	\end{equation}
+	\begin{itemize}
+		\item $O_i$ valores observados
+		\item $P_i$ valores previstos
+		\item $n$ o número total de observações
+	\end{itemize}
+	
+	\item \textbf{RMSE (\textit{Root Mean Square Error})}: O RMSE mede o erro médio das previsões, penalizando erros maiores devido à sua formulação quadrática. Essa métrica é amplamente utilizada por sua sensibilidade a grandes desvios entre as previsões e os valores observados, o que a torna adequada para identificar erros extremos. O RMSE é uma escolha natural quando se deseja minimizar grandes erros e garantir maior precisão nas previsões. Quanto menor, melhor.\cite{hyndman_fpp3_2024}
+	\begin{equation}
+		RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (P_i - O_i)^2}
+	\end{equation}
+	\begin{itemize}
+		\item $O_i$ valores observados
+		\item $P_i$ valores previstos
+		\item $n$ o número total de observações
+	\end{itemize}
+	
+	\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS positivo) ou subestimar (PBIAS negativo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja 0, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos.\cite{rayyan-33388455}
+	\begin{equation}
+		PBIAS = 100 \times \frac{\sum_{i=1}^{n} (P_i - O_i)}{\sum_{i=1}^{n} O_i}
+	\end{equation}
+	\begin{itemize}
+		\item $O_i$ valores observados
+		\item $P_i$ valores previstos
+		\item $n$ o número total de observações
+	\end{itemize}
+	
+	\item \textbf{KGE (\textit{Kling-Gupta Efficiency})}: O KGE fornece uma avaliação integrada do desempenho do modelo, considerando simultaneamente três componentes: correlação, viés e variabilidade relativa entre os valores previstos e observados. O KGE é uma métrica robusta que combina esses três fatores de forma equilibrada, fornecendo um entendimento geral da qualidade das previsões. Essa métrica é especialmente útil em estudos hidrológicos, pois tem capacidade de capturar a complexidade das relações entre variáveis hidrológicas de maneira mais eficaz do que métricas tradicionais focadas em um único aspecto. Quanto mais próximo de 1, melhor o desempenho do modelo.\cite{Gupta2009}
+	
+	\begin{equation}
+		KGE = 1 - \sqrt{(r - 1)^2 + (\alpha - 1)^2 + (\beta - 1)^2}
+	\end{equation}
+	\begin{itemize}
+		\item $r$ é o coeficiente de correlação linear entre os valores observados e previstos 
+		\item $\alpha = \frac{\sigma_p}{\sigma_o}$ é a variabilidade relativa, sendo $\sigma_p$ o desvio-padrão das previsões e $\sigma_o$ o desvio-padrão das observações
+		\item $\beta = \frac{\mu_p}{\mu_o}$ é o viés, em que $\mu_p$ é a média dos valores previstos e $\mu_o$ a média dos valores observados		
+	\end{itemize}
+	
 \end{itemize}
 
 %\section{Treinamento e Validação dos Modelos}
@@ -670,11 +645,84 @@ KGE = 1 - \sqrt{(r - 1)^2 + (\alpha - 1)^2 + (\beta - 1)^2}
 \section{Modelo proposto}
 % Detalhar os procedimentos de treinamento e validação dos modelos.
 
-Tudo detalhado até aqui, agora é preciso descrever o fluxo de trabalho. Consequentemente, será descrito como o treinamento fora realizado, bem como a validação dos modelos.
+Tudo detalhado até aqui, agora é preciso descrever o fluxo de trabalho. Por fim, será apresentado o fluxograma do modelo proposto para uma rápida depreensão visual.
+	
+Primeiramente é necessário especificar o período histórico de análise. Depois de estipulado o período, deve-se identificar as estações de vazão para as quais serão realizadas as previsões.
+
+Identificadas estas estações de vazão, verifica-se em linha reta, em sentido montante da estação de vazão, as estações de precipitação a 50km nas sub-bacias que deságuam no corpo hídrico analisado. Para este passo foi utilizado o programa QGis com \textit{shapefiles} das ottobacias.\cite{snirh_ottobacia_2024} Para o \textit{shapefile} de todas as estações do estado de Minas Gerais foi preciso acesso ao sistema da empresa Rhama Analysis. Sistema fechado este, no caso.
+
+%{\color{red}No passo de verificação dos dados faltantes, o preenchimento foi realizado aplicando a média dos últimos 3 anos para os dias faltantes. O que ainda restou faltando, um modelo kNN finalizou o preenchimento usando os 7 vizinhos mais próximos.} \todo[inline, color = blue, textcolor=white]{já foi dito}
+
+Aqui uma importante etapa: aplicar transformação logarítmica nos dados de vazão e precipitação para tratar o fenômeno de ``cauda'' longa dos dados.
+
+A separação dos dados do último ano, 2023, foi para posteriormente simular o uso dos modelos ao longo de um ano. Realizar ajuste (`\textit{fit}') e previsão (`predict'), dia-a-dia, durante um ano inteiro, para avaliar a estabilidade dos modelos. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`direct forecasting'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`recursive forecasting'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `backtesting' \cite{skforecast})
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.4]{Figuras/flowchart.png}
-\caption{Fluxo de trabalho (fonte: o autor)}
-\label{fig:fluxo_trabalho}
+	\centering
+	\includegraphics[scale=0.3]{Figuras/skforecast-diagram-backtesting-refit.png}
+	\caption{Diagrama mostrando a divisão dos dados de treino/teste com \textit{refit}.\\(fonte: \cite{skforecast})}
+	\label{fig:skforecast-diagram-backtesting-refit}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/imagem1_skforecast-backtesting-refit.png}
+	\caption{WFV com janela expandida e \textit{refit} - imagem 1.\\(fonte: \cite{skforecast})}
+	\label{fig:imagem1_skforecast-backtesting-refit}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/imagem2_skforecast-backtesting-refit.png}
+	\caption{WFV com janela expandida e \textit{refit} - imagem 2.\\(fonte: \cite{skforecast})}
+	\label{fig:imagem2_skforecast-backtesting-refit}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/imagem3_skforecast-backtesting-refit.png}
+	\caption{WFV com janela expandida e \textit{refit} - imagem 3.\\(fonte: \cite{skforecast})}
+	\label{fig:imagem3_skforecast-backtesting-refit}
+\end{figure}
+
+Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações em alguns horizontes de previsão antes de partir para a análise mais complexa (WFV). A intenção era compreender o comportamento da modelagem em horizontes curtos e médios. Foram escolhidos os horizontes de previsão de 1, 3, 7 e 15 dias. As previsões utilizaram a previsão multietapas, com modelos diretos, ou seja, após feito o ajuste, cada dia foi previsto reiteradamente sem reajuste dos pesos e parâmetros internos dos modelos (``direct forecast''). Veja a seguir o procedimento.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/skforecast-diagram-backtesting-no-refit.png}
+	\caption{Diagrama mostrando a divisão dos dados de treino/teste sem \textit{refit}.\\(fonte: \cite{skforecast})}
+	\label{fig:skforecast-diagram-backtesting-no-refit}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/imagem1_skforecast-backtesting-no-refit.png}
+	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 1.\\(fonte: \cite{skforecast})}
+	\label{fig:imagem1_skforecast-backtesting-no-refit}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/imagem2_skforecast-backtesting-no-refit.png}
+	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 2.\\(fonte: \cite{skforecast})}
+	\label{fig:imagem2_skforecast-backtesting-no-refit}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/imagem3_skforecast-backtesting-no-refit.png}
+	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 3.\\(fonte: \cite{skforecast})}
+	\label{fig:imagem3_skforecast-backtesting-no-refit}
+\end{figure}
+
+Evidentemente que para o horizonte de previsão de 1 dia não há reexecução do modelo, apenas para os outros horizontes.
+
+Os resultados são avaliados com as métricas 
+\clearpage
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.4]{Figuras/flowchart.png}
+	\caption{Fluxo de trabalho\\(fonte: o autor)}
+	\label{fig:fluxo_trabalho}
 \end{figure}

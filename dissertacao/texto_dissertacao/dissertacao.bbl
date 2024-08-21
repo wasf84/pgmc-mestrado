@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -34,6 +34,11 @@ Universidade~Federal de~Juiz~de Fora.
 \newblock URL
   \url{https://www2.ufjf.br/biblioteca/wp-content/uploads/sites/56/2020/08/Manual-2020-revisado.pdf}.
 \newblock Acesso em: 11 ago. 2024.
+
+\bibitem[e~Javier Escobar~Ortiz(2024)]{skforecast}
+Joaquin Amat~Rodrigo e~Javier Escobar~Ortiz.
+\newblock skforecast, 8 2024.
+\newblock URL \url{https://skforecast.org/}.
 
 \bibitem[{Empresa de Pesquisa Energética (Brasil)}(2023)]{epe2023ben}
 {Empresa de Pesquisa Energética (Brasil)}.
@@ -91,6 +96,27 @@ Charles~R. Harris, K.~Jarrod Millman, St{\'{e}}fan~J. van~der Walt, Ralf
 \newblock \doi{10.1038/s41586-020-2649-2}.
 \newblock URL \url{https://doi.org/10.1038/s41586-020-2649-2}.
 
+\bibitem[Hyndman and Athanasopoulos(2024)]{hyndman_fpp3_2024}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock Forecasting: Principles and practice (3rd ed.), 2024.
+\newblock URL \url{https://otexts.com/fpp3/}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[{Instituto Mineiro de Gestão das Águas
+  (IGAM)}(2024)]{igam_site_2024}
+{Instituto Mineiro de Gestão das Águas (IGAM)}.
+\newblock Instituto mineiro de gestão das Águas, 2024.
+\newblock URL \url{http://www.igam.mg.gov.br/}.
+\newblock Acessado em: agosto de 2024.
+
+\bibitem[Kolling~Neto et~al.(2023)Kolling~Neto, Siqueira, Gama, Paiva, Fan,
+  Collischonn, Silveira, Paranhos, and Freitas]{rayyan-33388455}
+A.~Kolling~Neto, V.A. Siqueira, C.H.D.A. Gama, R.C.D.D. Paiva, F.M. Fan,
+  W.~Collischonn, R.~Silveira, C.S.A. Paranhos, and C.~Freitas.
+\newblock Advancing medium-range streamflow forecasting for large hydropower
+  reservoirs in brazil by means of continental-scale hydrological modeling.
+\newblock \emph{Water (Switzerland)}, 15\penalty0 (9), 2023.
+
 \bibitem[Macdonald et~al.(2023)Macdonald, Merz, Guse, Nguyen, Guan, and
   Vorogushyn]{elena_macdonald_2023}
 Elena Macdonald, Bruno Merz, Björn Guse, Viet~D. Nguyen, Xiaoxiang Guan, and
@@ -119,5 +145,13 @@ Ingrid Petry, Fernando~Mainardi Fan, Vinicius~Alencar Siqueira, Walter
 \bibitem[Seabold and Perktold(2010)]{seabold2010statsmodels}
 Skipper Seabold and Josef Perktold.
 \newblock statsmodels: Econometric and statistical modeling with python, 2010.
+
+\bibitem[{Sistema Nacional de Informações sobre Recursos Hídricos
+  (SNIRH)}(2024)]{snirh_ottobacia_2024}
+{Sistema Nacional de Informações sobre Recursos Hídricos (SNIRH)}.
+\newblock Portal de metadados snirh - pesquisa por ottobacia, 2024.
+\newblock URL
+  \url{https://metadados.snirh.gov.br/geonetwork/srv/search?keyword=Ottobacia}.
+\newblock Acessado em: abril de 2024.
 
 \end{thebibliography}
