@@ -2,6 +2,13 @@
 \section{Descrição da Área de Estudo}
 %Detalhar a localização e características da minha área de estudo.
 
+As bacias de estudo são as bacias dos rios Jequitinhonha, Doce, Grande e São Francisco. Em todas estas, o corpo d'água principal da bacia, seus respectivos rios, passam dentro do estado de Minas Gerais, por isso a escolha. Isso é para distinguir do não uso do rio Paraíba do Sul no estudo, visto que parte de sua bacia está nos limites do estado, mas o rio não passa dentro dos limites administrativos estaduais.
+
+O rio Jequitinhonha, com sua bacia hidrográfica abrangendo cerca de 65 mil quilômetros quadrados, é uma peça fundamental na paisagem e na vida socioeconômica de Minas Gerais. Seu curso percorre 82 municípios mineiros, abrigando uma população de aproximadamente 939 mil habitantes que dependem diretamente de suas águas.\cite{ibge} \cite{jequiti_igam_mg_1} \cite{jequiti_igam_mg_2} \cite{jequiti_igam_mg_3}
+
+Apesar da Mata Atlântica ser o bioma predominante, a atividade econômica principal na região é a agropecuária, ocupando uma área considerável de 2.625.985 hectares, em contraste com os 3.872.212 hectares de floresta. Essa dinâmica evidencia a pressão exercida sobre o ecossistema, demandando um olhar atento para a gestão sustentável dos recursos hídricos.\cite{mapbiomas}
+
+
 \section{Dados Utilizados}
 \todo[inline]{FAZER IMAGEM DE ONDE ESTÃO AS ESTAÇÕES}
 
@@ -570,7 +577,7 @@ O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as 
 
 Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo-base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Isso será discutido.
 
-Aqui está o fluxograma para o funcionamento do modelo de Regressão Linear \todo[inline]{INSERIR DIAGRAMA ?}
+% Aqui está o fluxograma para o funcionamento do modelo de Regressão Linear \todo[inline]{INSERIR DIAGRAMA ?}
 
 \subsection{CatBoost e LightGBM}
 
@@ -635,7 +642,7 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $\alpha = \frac{\sigma_p}{\sigma_o}$ é a variabilidade relativa, sendo $\sigma_p$ o desvio-padrão das previsões e $\sigma_o$ o desvio-padrão das observações
 		\item $\beta = \frac{\mu_p}{\mu_o}$ é o viés, em que $\mu_p$ é a média dos valores previstos e $\mu_o$ a média dos valores observados		
 	\end{itemize}
-
+	
 \end{itemize}
 
 %\section{Treinamento e Validação dos Modelos}
@@ -645,7 +652,7 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 % Detalhar os procedimentos de treinamento e validação dos modelos.
 
 Tudo detalhado até aqui, agora é preciso descrever o fluxo de trabalho. Por fim, será apresentado o fluxograma do modelo proposto para uma rápida depreensão visual.
-	
+
 Primeiramente é necessário especificar o período histórico de análise. Depois de estipulado o período, deve-se identificar as estações de vazão para as quais serão realizadas as previsões.
 
 Identificadas estas estações de vazão, verifica-se em linha reta, em sentido montante da estação de vazão, as estações de precipitação a 50km nas sub-bacias que deságuam no corpo hídrico analisado. Para este passo foi utilizado o programa QGis com \textit{shapefiles} das ottobacias.\cite{snirh_ottobacia_2024} Para o \textit{shapefile} de todas as estações do estado de Minas Gerais foi preciso acesso ao sistema da empresa Rhama Analysis. Sistema fechado este, no caso.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -35,6 +35,12 @@ CNN Brasil.
   \url{https://www.cnnbrasil.com.br/nacional/temporais-causam-estragos-em-minas-gerais-e-deixam-desabrigados-e-desalojados/}.
 \newblock Acessado em: julho de 2024.
 
+\bibitem[Brasil(2024{\natexlab{c}})]{mapbiomas}
+MapBiomas Brasil.
+\newblock Plataforma mapbiomas uso e cobertura, 2024{\natexlab{c}}.
+\newblock URL \url{https://plataforma.brasil.mapbiomas.org/cobertura}.
+\newblock Acessado em: junho de 2024.
+
 \bibitem[Corporation(2024)]{LightGBM}
 Microsoft Corporation.
 \newblock \emph{LightGBM Documentation}, 2024.
@@ -47,6 +53,34 @@ Wallisson~Moreira de~Carvalho.
   time series, julho 2020.
 \newblock URL \url{http://doi.org/10.5281/zenodo.3931027}.
 \newblock Version 0.1.1.
+
+\bibitem[de~Geografia~e Estatística(2024)]{ibge}
+Instituto~Brasileiro de~Geografia~e Estatística.
+\newblock Brasil | cidades e estados | ibge brasil |, 2024.
+\newblock URL \url{https://cidades.ibge.gov.br/}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[de~Gestão~das Águas(2024{\natexlab{a}})]{jequiti_igam_mg_1}
+Instituto~Mineiro de~Gestão~das Águas.
+\newblock Comitê da bacia hidrográfica do rio jequitinhonha - alto rio
+  jequitinhonha, 2024{\natexlab{a}}.
+\newblock URL
+  \url{https://comites.igam.mg.gov.br/comites-estaduais-mg/jq1-cbh-do-alto-rio-jequitinhonha}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[de~Gestão~das Águas(2024{\natexlab{b}})]{jequiti_igam_mg_2}
+Instituto~Mineiro de~Gestão~das Águas.
+\newblock Comitê da bacia hidrográfica do rio araçuai, 2024{\natexlab{b}}.
+\newblock URL
+  \url{https://comites.igam.mg.gov.br/comites-estaduais-mg/jq2-cbh-do-rio-aracuai}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[de~Gestão~das Águas(2024{\natexlab{c}})]{jequiti_igam_mg_3}
+Instituto~Mineiro de~Gestão~das Águas.
+\newblock Comitê da bacia hidrográfica do rio jequitinhonha - médio e baixo
+  rio jequitinhonha, 2024{\natexlab{c}}.
+\newblock URL
+  \url{https://comites.igam.mg.gov.br/comites-estaduais-mg/jq3-cbh-do-medio-e-baixo-rio-jequitinhonha}.
 
 \bibitem[Dorogush et~al.(2018)Dorogush, Ershov, and
   Gulin]{dorogush2018catboost}
