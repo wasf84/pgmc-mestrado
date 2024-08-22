@@ -103,19 +103,19 @@ Com os dados disponíveis localmente, o primeiro passo antes de qualquer anális
 A sazonalidade é um fenômeno bem conhecido e estabelecido na análise hidrológica das bacias hidrográficas da América do Sul. O aumento da precipitação começa na primavera, em setembro, e atinge seus picos nos meses de dezembro e janeiro, durante o verão. Consequentemente, as vazões dos rios aumentam. Com a chegada do outono e, posteriormente, do inverno, os índices pluviométricos diminuem, assim como as vazões nos rios. \cite{rayyan-39677094}
 
 Considerando esse fenômeno, o preenchimento dos dados faltantes foi realizado replicando o padrão sazonal. Para preencher um dia faltante em julho, por exemplo, foi utilizado o valor correspondente ao mesmo dia nos anos anteriores. Para evitar a repetição exata do ano anterior, utilizou-se a média dos últimos três anos. As funções desenvolvidas para essa finalidade são personalizáveis, permitindo que se opte por repetir exatamente o ano anterior ou considerar mais de três anos, dependendo das necessidades do estudo. 
-\todo[inline, color=blue, textcolor=white]{Duvida minha que pode ser da banca também: ocorreu o caso de ter o mesmo mês faltando dois anos consecutivos, nesse caso qual estratégia vc usou? vc utilizou o valor da media do ano anterior ou buscou em outros anos anteriores?}
 
-Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem sempre preenchia exatamente as lacunas. Quando havia muitos dados faltantes no início da série isso causava problema e a inserção de dados falhava. O que é o comportamento normal.
+Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem sempre preenchia exatamente as lacunas. Quando havia muitos dados faltantes no início da série, por exemplo, isso causava problema e a inserção de dados falhava. O que é o comportamento normal.
 
 Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam faltantes. Para esses casos nulos, foi aplicada a imputação de dados utilizando o modelo kNN (k-Nearest Neighbors - k-vizinhos mais próximos), com o objetivo de garantir uma melhor dispersão dos valores imputados. O modelo kNN operou calculando a distância euclidiana dos pontos nulos utilizando os sete vizinhos mais próximos, atribuindo maior peso aos vizinhos mais próximos no cálculo. Esse método de imputação visou preservar a tendência local e o comportamento da série temporal dentro da semana em que o dado faltante estava. Após esta nova fase de imputação dos dados as séries ficaram completamente preenchidas.
 
-É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos. Isso será mostrado adiante. \todo[color=blue, textcolor=white]{coloque a seção onde sera mostrado, ou remova esta frase.}
+É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos.
 
-Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010'\todo[color=blue, textcolor=white]{é toque mas sugiro trocar as crases por aspas simples}, utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome `t\_cv\_54790000' significa `estação telemétrica de precipitação, código 54790000'.
+Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome `t\_cv\_54790000' significa `estação telemétrica de precipitação, código 54790000'.
 
 \subsection{Rio Jequitinhonha}
 
-A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade significativa de dados faltantes, especialmente no início da série temporal. Observa-se uma clara sazonalidade na série, com picos de vazão ocorrendo predominantemente no final e início de cada ano (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}). {\color{red}Nas páginas seguintes}\todo[inline,color=blue, textcolor=white]{Troque ''Nas paginas seguinte'' por ''As figuras (1,2,3,4..)'' e troque ''serão apresentados'' por ''apresentam''. Desta forma você evita que possíveis mudanças na posição do texto interfiram no contexto e sentido da oratoria apresentada.}, {\color{red}serão apresentados} gráficos comparativos entre a série original, sem dados imputados (incompleta), e a série após a imputação de dados (completa). Essa comparação, contrapondo a série fornecida pela ANA e os resultados após a inserção de dados, permitirá uma visualização mais clara do impacto das técnicas de preenchimento. Cabe relembrar que, inicialmente, foi aplicada a média dos últimos três anos para replicar a sazonalidade. Para os dados que permaneceram ausentes, utilizou-se o modelo kNN para completar a série. Esta estação, identificada como t\_vz\_54790000, apresentou 532 dias de dados nulos, o que corresponde a aproximadamente 13,24\% do total. Essa é a estação-alvo para a previsão das vazões.
+A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade significativa de dados faltantes, especialmente no início da série temporal. Observa-se uma clara sazonalidade na série, com picos de vazão ocorrendo predominantemente no final e início de cada ano (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}).
+As figuras (\ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}), (\ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000}), (\ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}), (\ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}), (\ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}) e (\ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}) apresentam gráficos comparativos entre a série original, sem dados imputados (incompleta), e a série após a imputação de dados (completa). Essa comparação, contrapondo a série fornecida pela ANA e os resultados após a inserção de dados, permitirá uma visualização mais clara do impacto das técnicas de preenchimento. Cabe relembrar que, inicialmente, foi aplicada a média dos últimos três anos para replicar a sazonalidade. Para os dados que permaneceram ausentes, utilizou-se o modelo kNN para completar a série. Esta estação, identificada como t\_vz\_54790000, apresentou 532 dias de dados nulos, o que corresponde a aproximadamente 13,24\% do total. Essa é a estação-alvo para a previsão das vazões.
 
 \begin{figure}[!h]
 	\centering
@@ -124,21 +124,19 @@ A estação de vazão utilizada no rio Jequitinhonha apresentou uma quantidade s
 	\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000}
 \end{figure}
 
-\todo[inline, color=blue, textcolor=white]{da muito trabalho aumentar a fonte dos eixos dos gráficos? elas estão muito pequenas e ruins de ler, a banca vai reclamar!}
-
 A seguir, destaca-se o trecho da série com a maior quantidade de dados faltantes (figura \ref{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}), que abrange o período de janeiro de 2013 a janeiro de 2016. Em sequência, é apresentada a série após a imputação dos dados (figura \ref{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}). Notavelmente, essa seção não apresentou resultados ideais, uma vez que a imputação atribuiu vazões zero em vários dias, o que não é realista, pois isso indicaria a secagem completa do rio, o que é improvável. No entanto, esses valores zero não impactaram significativamente os resultados finais da análise, já que se referem a um período distante do foco principal deste estudo. Uma alternativa seria excluir todo o trecho anterior ao ano de 2016, mas optou-se por manter a uniformidade nos critérios de aproveitamento dos dados ao longo do trabalho, dado que outros rios também foram analisados, e buscava-se assegurar consistência nos resultados.
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png}
-	\caption{Detalhe da série temporal da estação t\_vz\_54790000, ainda sem dados imputados, de 2013 a 2016 \\(fonte: o autor)}
+	\caption{Detalhe da série temporal da estação t\_vz\_54790000, ainda sem dados imputados, de 2013 a 2016 (fonte: o autor)}
 	\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png}
-	\caption{Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016\\(fonte: o autor)}
+	\caption{Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016 (fonte: o autor)}
 	\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016}
 \end{figure}
 
@@ -147,14 +145,14 @@ Observe também o trecho de dados faltantes mais próximo ao final dos anos anal
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png}
-	\caption{Série temporal incompleta da estação t\_vz\_54790000 no detalhe entre 2021 e 2022\\(fonte: o autor)}
+	\caption{Série temporal incompleta da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}
 	\label{fig:jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.25]{Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png}
-	\caption{Série temporal completa da estação t\_vz\_54790000 no detalhe entre 2021 e 2022\\(fonte: o autor)}
+	\caption{Série temporal completa da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}
 	\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022}
 \end{figure}
 
@@ -264,6 +262,7 @@ As estações que, enfim, foram empregadas na modelagem são as que estão na ta
 	\label{fig:doceSerieCompleta_t_cv_56990005}
 \end{figure}
 
+\clearpage
 \subsection{Rio Grande}
 
 O rio Grande apresentou desafios significativos ao longo de todo o desenvolvimento deste trabalho. A dificuldade inicial surgiu na ausência de dados disponíveis em estações dentro do estado de Minas Gerais para o período de análise estipulado, conforme mencionado anteriormente. Foi necessário buscar uma estação o mais próxima possível da divisa com Minas Gerais, localizada no estado de São Paulo, especificamente no município de Ilha Solteira. Entretanto, os desafios não se limitaram a essa questão geográfica.
@@ -277,7 +276,7 @@ A série temporal de vazão da estação selecionada, denominada t\_vz\_62020080
 	\label{fig:grandeSerieIncompleta_t_vz_62020080}
 \end{figure}
 
-Infelizmente, o caráter ruidoso da série permaneceu mesmo após a aplicação do protocolo de preenchimento dos dados ausentes, conforme pode ser observado na imagem final gerada. (figura \ref{fig:grandeSerieCompleta_t_vz_62020080}) A série em questão apresentava 2099 dias faltantes, correspondendo a aproximadamente 64\% de dados nulos. Outro aspecto relevante para essa estação é que, diferentemente das outras, não foram utilizados os 4.017 registros previstos inicialmente. As informações mais antigas disponíveis datavam de 2015, resultando, assim, em um total de 3289 registros diários utilizados especificamente para o rio Grande.
+Infelizmente, o caráter ruidoso da série permaneceu mesmo após a aplicação do protocolo de preenchimento dos dados ausentes, conforme pode ser observado na imagem final gerada.(figura \ref{fig:grandeSerieCompleta_t_vz_62020080}) A série em questão apresentava 2099 dias faltantes, correspondendo a aproximadamente 64\% de dados nulos. Outro aspecto relevante para essa estação é que, diferentemente das outras, não foram utilizados os 4.017 registros previstos inicialmente. As informações mais antigas disponíveis datavam de 2015, resultando, assim, em um total de 3289 registros diários utilizados especificamente para o rio Grande.
 
 \begin{figure}[!h]
 	\centering
@@ -299,6 +298,7 @@ Em relação à estação t\_cv\_61998080, houve necessidade de preencher apenas
 
 Ressalta-se que o trecho de dados faltantes para a estação t\_cv\_61998080 concentrava-se no início da série temporal, especificamente no ano de 2015. No gráfico os dados já estão imputados.
 
+\clearpage
 \subsection{Rio São Francisco}
 
 Por fim, foi realizado o procedimento de preenchimento dos dados nulos para o Rio São Francisco. A estação-alvo c\_vz\_44290002 apresentou uma série bastante completa ao longo do período de análise, com apenas 120 dias nulos em um total de 4017 dias. O trecho com dados faltantes pode ser observado em detalhe na figura (\ref{fig:franciscoSerieIncompleta_c_vz_44290002-detalhe}).
@@ -473,7 +473,6 @@ A decomposição das séries temporais foi realizada utilizando a biblioteca Sta
 	\caption{Componente sazonal da série de vazão do rio São Francisco\\(fonte: o autor)}
 	\label{fig:sazonalidade_rio_sao_francisco}
 \end{figure}
-\clearpage
 
 As séries temporais consideradas, digamos, mais bem comportadas foram as dos rios Doce e São Francisco. A decomposição sazonal da série do rio Jequitinhonha apresentou algum nível de ruído, embora a sazonalidade tenha sido identificada de forma clara.
 
@@ -559,7 +558,7 @@ Essas características, longe de serem consideradas como ruído ou anomalias, fa
 
 \subsection{Seasonal Naive}
 
-O modelo \textbf{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (baseline), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio) \todo[color=blue, textcolor=white]{referência}.
+O modelo \textbf{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (baseline), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio).\cite{hyndman_fpp3_2024}
 
 Esse método é útil para fornecer uma idéia inicial do comportamento esperado, permitindo que os modelos subsequentes sejam comparados a ele. Por ser um modelo simples, ele não captura tendências ou variações complexas, mas estabelece um \textit{benchmark} mínimo para o qual outros métodos mais elaborados e complexos devem se comparar.
 
@@ -567,7 +566,7 @@ Esse método é útil para fornecer uma idéia inicial do comportamento esperado
 
 O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta. 
 
-O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o erro quadrático médio, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.\todo[color=blue, textcolor=white]{referência}
+O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o erro quadrático médio, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.\cite{hyndman_fpp3_2024}
 
 Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo-base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Isso será discutido.
 
@@ -575,7 +574,9 @@ Aqui está o fluxograma para o funcionamento do modelo de Regressão Linear \tod
 
 \subsection{CatBoost e LightGBM}
 
-Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia no mesmo princípio: ambos algoritmos constroem modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. Contudo, o LightGBM adota uma estratégia denominada ``Leaf-wise Growth'' ao invés da forma de construção tradicional ``Level-wise Growth'' \todo[color=blue, textcolor=white]{referência}. Nesta estratégia, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas \todo[color=blue, textcolor=white]{referência}. O revés nessa estretégia é que fica mais suscetível a \textit{overfitting}, mas existem parâmetros no modelo algoritmo que cuidam para que isso seja evitado \todo[color=blue, textcolor=white]{quais parâmetros}. O CatBoost, por sua vez, adota uma estratégia denominada ``Ordered Boosting'', em que a construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para esta construção \todo[color=blue, textcolor=white]{referência}. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelos, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também podem ser empregados.
+Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia no mesmo princípio: ambos algoritmos constroem modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. Contudo, o LightGBM adota uma estratégia denominada ``Leaf-wise Growth'' ao invés da forma de construção tradicional ``Level-wise Growth''. Nesta estratégia, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas.\cite{ke2017lightgbm}\cite{LightGBM} O revés nessa estretégia é que fica mais suscetível a \textit{overfitting}, mas existem parâmetros no modelo, como por exemplo `min\_data\_in\_leaf' (quantidade mínima de dados em cada folha) que cuidam para que isso seja evitado.
+
+O CatBoost, por sua vez, adota uma estratégia denominada ``Ordered Boosting'', em que a construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para esta construção. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelos, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também estão presentes e o pesquisador tem controle sobre eles.\cite{catboost_docs}\cite{dorogush2018catboost}\cite{prokhorenkova2018catboost}
 
 %\begin{figure}[!h]
 %	\centering
@@ -584,11 +585,9 @@ Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia
 %	\label{fig:boosting_diagrama}
 %\end{figure}
 
-A escolha do modelo \todo[color=blue, textcolor=white]{algoritmo ou modelo?} certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O SeasonalNaive, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e LightGBM foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
+A escolha do modelo certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O SeasonalNaive, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e LightGBM foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
 
 \section{Métricas de Avaliação}
-
-\todo[inline, textcolor=white, color=blue]{faltou as referências bibliográficas de todas as métricas}
 %Listar as métricas usadas para avaliar o desempenho dos modelos (MAPE, RMSE, PBias* e KGE não-paramétrico**).
 %(*: PBias ajuda a ver se o modelo está subestimando as previsões ou superestimando)
 %(**: KGEnp (não paramétrico) é uma métrica comum e muito consagrada na hidrologia. Ela tem resiliência a outliers ao avaliar a qualidade do modelo)
@@ -636,7 +635,7 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $\alpha = \frac{\sigma_p}{\sigma_o}$ é a variabilidade relativa, sendo $\sigma_p$ o desvio-padrão das previsões e $\sigma_o$ o desvio-padrão das observações
 		\item $\beta = \frac{\mu_p}{\mu_o}$ é o viés, em que $\mu_p$ é a média dos valores previstos e $\mu_o$ a média dos valores observados		
 	\end{itemize}
-	
+
 \end{itemize}
 
 %\section{Treinamento e Validação dos Modelos}
@@ -717,7 +716,15 @@ Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações e
 
 Evidentemente que para o horizonte de previsão de 1 dia não há reexecução do modelo, apenas para os outros horizontes.
 
-Os resultados são avaliados com as métricas propostas
+O desempenho dos resultados são avaliados com as métricas propostas, para cada modelo do trablaho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 90\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de 90\% (``\textit{lo-90}'' e ``\textit{hi-90}''), o valor real observado futuro tem 90\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024}
+
+Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a Walk-Forward Validation.
+
+Antes, porém, foi realizada uma busca de hiperpâmetros nos modelos LightGBM e CatBoost. A busca de hiperparâmetros visa otimizar o desempenho dos modelos ao encontrar a melhor combinação de hiperparâmetros, adequadamente ajustados aos dados. Este processo foi realizado utilizando o \textit{framework} Optuna e validação-cruzada dividindo os dados de 10 anos (2013 a 2022) em 10 segmentos (\textit{folds}).\cite{akiba2019optuna}\cite{optuna_docs}\cite{skforecast}
+
+Com os melhores hiperparâmetros encontrados, aí sim procedeu-se para a última etapa da análise: aplicar Walk-Forward Validation.
+
+Os resultados serão apresentados no \hyperref[cap:capitulo4]{capítulo 4}.
 \clearpage
 
 \begin{figure}[!h]

@@ -1,9 +1,24 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Akiba et~al.(2019{\natexlab{a}})Akiba, Sano, Yanase, Ohta, and
+  Koyama]{akiba2019optuna}
+Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama.
+\newblock Optuna: A next-generation hyperparameter optimization framework.
+\newblock In \emph{Proceedings of the 25th ACM SIGKDD international conference
+  on knowledge discovery \& data mining}, pages 2623--2631, 2019{\natexlab{a}}.
+
+\bibitem[Akiba et~al.(2019{\natexlab{b}})Akiba, Sano, Yanase, Ohta, and
+  Koyama]{optuna_docs}
+Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama.
+\newblock \emph{Optuna: A Next-generation Hyperparameter Optimization
+  Framework}, 2019{\natexlab{b}}.
+\newblock URL \url{https://optuna.readthedocs.io/en/stable/index.html}.
+\newblock Acessado em: agosto de 2024.
 
 \bibitem[Brasil(2024{\natexlab{a}})]{bbc_chuvas_bahia_2024}
 BBC~News Brasil.
@@ -20,6 +35,12 @@ CNN Brasil.
   \url{https://www.cnnbrasil.com.br/nacional/temporais-causam-estragos-em-minas-gerais-e-deixam-desabrigados-e-desalojados/}.
 \newblock Acessado em: julho de 2024.
 
+\bibitem[Corporation(2024)]{LightGBM}
+Microsoft Corporation.
+\newblock \emph{LightGBM Documentation}, 2024.
+\newblock URL \url{https://lightgbm.readthedocs.io/en/stable/index.html}.
+\newblock Accessed: 2024-08-17.
+
 \bibitem[de~Carvalho(2020)]{carvalho2020hydrobr}
 Wallisson~Moreira de~Carvalho.
 \newblock Hydrobr: A python package to work with brazilian hydrometeorological
@@ -27,13 +48,11 @@ Wallisson~Moreira de~Carvalho.
 \newblock URL \url{http://doi.org/10.5281/zenodo.3931027}.
 \newblock Version 0.1.1.
 
-\bibitem[de~Juiz~de Fora(2020)]{UFJF2020}
-Universidade~Federal de~Juiz~de Fora.
-\newblock \emph{Manual de Normalização de Trabalhos Acadêmicos: Atualizado
-  conforme a ABNT NBR 14724:2011}, August 2020.
-\newblock URL
-  \url{https://www2.ufjf.br/biblioteca/wp-content/uploads/sites/56/2020/08/Manual-2020-revisado.pdf}.
-\newblock Acesso em: 11 ago. 2024.
+\bibitem[Dorogush et~al.(2018)Dorogush, Ershov, and
+  Gulin]{dorogush2018catboost}
+Anna~Veronika Dorogush, Vasily Ershov, and Andrey Gulin.
+\newblock Catboost: gradient boosting with categorical features support.
+\newblock \emph{arXiv preprint arXiv:1810.11363}, 2018.
 
 \bibitem[e~Javier Escobar~Ortiz(2024)]{skforecast}
 Joaquin Amat~Rodrigo e~Javier Escobar~Ortiz.
@@ -109,6 +128,16 @@ Rob~J. Hyndman and George Athanasopoulos.
 \newblock URL \url{http://www.igam.mg.gov.br/}.
 \newblock Acessado em: agosto de 2024.
 
+\bibitem[Ke et~al.(2017)Ke, Meng, Finely, Wang, Chen, Ma, Ye, and
+  Liu]{ke2017lightgbm}
+Guolin Ke, Qi~Meng, Thomas Finely, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+  Ye, and Tie-Yan Liu.
+\newblock Lightgbm: A highly efficient gradient boosting decision tree.
+\newblock In \emph{Advances in Neural Information Processing Systems 30 (NIP
+  2017)}, December 2017.
+\newblock URL
+  \url{https://www.microsoft.com/en-us/research/publication/lightgbm-a-highly-efficient-gradient-boosting-decision-tree/}.
+
 \bibitem[Kolling~Neto et~al.(2023)Kolling~Neto, Siqueira, Gama, Paiva, Fan,
   Collischonn, Silveira, Paranhos, and Freitas]{rayyan-33388455}
 A.~Kolling~Neto, V.A. Siqueira, C.H.D.A. Gama, R.C.D.D. Paiva, F.M. Fan,
@@ -142,6 +171,13 @@ Ingrid Petry, Fernando~Mainardi Fan, Vinicius~Alencar Siqueira, Walter
   10 2023.
 \newblock ISSN 2214-5818.
 
+\bibitem[Prokhorenkova et~al.(2018)Prokhorenkova, Gusev, Vorobev, Dorogush, and
+  Gulin]{prokhorenkova2018catboost}
+Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna~Veronika Dorogush,
+  and Andrey Gulin.
+\newblock Catboost: unbiased boosting with categorical features.
+\newblock \emph{Advances in neural information processing systems}, 31, 2018.
+
 \bibitem[Seabold and Perktold(2010)]{seabold2010statsmodels}
 Skipper Seabold and Josef Perktold.
 \newblock statsmodels: Econometric and statistical modeling with python, 2010.
@@ -153,5 +189,11 @@ Skipper Seabold and Josef Perktold.
 \newblock URL
   \url{https://metadados.snirh.gov.br/geonetwork/srv/search?keyword=Ottobacia}.
 \newblock Acessado em: abril de 2024.
+
+\bibitem[Yandex(2024)]{catboost_docs}
+Yandex.
+\newblock \emph{CatBoost Documentation}, 2024.
+\newblock URL \url{https://catboost.ai/en/docs/}.
+\newblock Acessado em: junho de 2024.
 
 \end{thebibliography}
