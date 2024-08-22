@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.16)  22 AUG 2024 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  22 AUG 2024 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 105.
+(babel)             (\language24). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 108.
+(babel)             (\language24). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language46). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -1486,23 +1486,20 @@ LaTeX Warning: Marginpar on page 15 moved by 25.36215pt.
 \openout2 = `cap3_procedimentos_metodologicos.aux'.
 
  (./cap3_procedimentos_metodologicos.tex
-[18
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+7.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [18
 
 
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-1.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [19]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 40.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+(Font)              <10.95> on input line 36.
+ [19]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1516,7 +1513,7 @@ File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png Graphic fi
 le (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
-0000.png  used on input line 133.
+0000.png  used on input line 129.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1528,7 +1525,7 @@ File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png
 Graphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
-0000-2013_2016.png  used on input line 142.
+0000-2013_2016.png  used on input line 138.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png, id=458
 , 1154.3125pt x 552.0625pt>
@@ -1536,7 +1533,7 @@ File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png Gr
 aphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
-00-2013_2016.png  used on input line 149.
+00-2013_2016.png  used on input line 145.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
  [24 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png> <./Figu
 ras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png> <./Figura
@@ -1547,7 +1544,7 @@ File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png
 Graphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
-0000-2021_2022.png  used on input line 158.
+0000-2021_2022.png  used on input line 154.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png, id=469
 , 1154.3125pt x 552.0625pt>
@@ -1555,7 +1552,7 @@ File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png Gr
 aphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
-00-2021_2022.png  used on input line 165.
+00-2021_2022.png  used on input line 161.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png, id=471, 1154.312
 5pt x 552.0625pt>
@@ -1563,7 +1560,7 @@ File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png Graphic file
  (type png)
 <use Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
-00.png  used on input line 174.
+00.png  used on input line 170.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
  [25 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.pn
 g> <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png> <
@@ -1574,7 +1571,7 @@ File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png Graphic fi
 le (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_5479
-0000.png  used on input line 183.
+0000.png  used on input line 179.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png, id=484, 1154.312
 5pt x 552.0625pt>
@@ -1582,7 +1579,7 @@ File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png Graphic file
  (type png)
 <use Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_547900
-00.png  used on input line 192.
+00.png  used on input line 188.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png, id=485, 1154.312
 5pt x 552.0625pt>
@@ -1590,7 +1587,7 @@ File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png Graphic file
  (type png)
 <use Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_016400
-00.png  used on input line 199.
+00.png  used on input line 195.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
  [26 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png> <./Figu
 ras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png> <./Figuras/jequiti/je
@@ -1601,7 +1598,7 @@ File: Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png  
-used on input line 210.
+used on input line 206.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png, id=497, 1154.3125pt x 
 552.0625pt>
@@ -1609,7 +1606,7 @@ File: Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png Graphic file (type
  png)
 <use Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png
-  used on input line 221.
+  used on input line 217.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 
@@ -1621,7 +1618,7 @@ File: Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png  
-used on input line 228.
+used on input line 224.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1632,7 +1629,7 @@ File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png  
-used on input line 250.
+used on input line 246.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1643,7 +1640,7 @@ File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png  
-used on input line 257.
+used on input line 253.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1654,7 +1651,7 @@ File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png  
-used on input line 264.
+used on input line 260.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1665,7 +1662,7 @@ File: Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png>
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png  
-used on input line 271.
+used on input line 267.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1682,7 +1679,7 @@ File: Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png Graphic file (
 type png)
 <use Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png>
 Package pdftex.def Info: Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080
-.png  used on input line 285.
+.png  used on input line 281.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png, id=530, 1154.3125pt 
 x 552.0625pt>
@@ -1690,7 +1687,7 @@ File: Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png Graphic file (ty
 pe png)
 <use Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png>
 Package pdftex.def Info: Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.p
-ng  used on input line 294.
+ng  used on input line 290.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
 
@@ -1705,10 +1702,10 @@ File: Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png Graphic file (ty
 pe png)
 <use Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png>
 Package pdftex.def Info: Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.p
-ng  used on input line 305.
+ng  used on input line 301.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
-Overfull \hbox (8.42604pt too wide) in paragraph at lines 310--311
+Overfull \hbox (8.42604pt too wide) in paragraph at lines 306--307
 []\T1/lmr/m/n/12 (-20) Ressalta-se que o tre-cho de da-dos fal-tan-tes para a e
 s-ta-ção t_cv_61998080 concentrava-
  []
@@ -1722,7 +1719,7 @@ png Graphic file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.p
 ng>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_v
-z_44290002-detalhe.png  used on input line 321.
+z_44290002-detalhe.png  used on input line 317.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png, id=547, 11
 54.3125pt x 552.0625pt>
@@ -1730,7 +1727,7 @@ File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png Graphi
 c file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_
-44290002.png  used on input line 328.
+44290002.png  used on input line 324.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
  [32
 
@@ -1742,7 +1739,7 @@ File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png Graphi
 c file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
-01544017.png  used on input line 338.
+01544017.png  used on input line 334.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png, id=558, 11
 54.3125pt x 552.0625pt>
@@ -1750,7 +1747,7 @@ File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png Graphi
 c file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
-01544032.png  used on input line 345.
+01544032.png  used on input line 341.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 <Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png, id=559, 11
 54.3125pt x 552.0625pt>
@@ -1758,7 +1755,7 @@ File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png Graphi
 c file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
-01544036.png  used on input line 352.
+01544036.png  used on input line 348.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
  [33
 
@@ -1773,14 +1770,14 @@ sao_francisco/franciscoSerieCompleta_c_cv_01544036.png>] [34
 File: Figuras/jequiti/acf_jequitinhonha.png Graphic file (type png)
 <use Figuras/jequiti/acf_jequitinhonha.png>
 Package pdftex.def Info: Figuras/jequiti/acf_jequitinhonha.png  used on input l
-ine 434.
+ine 430.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 <Figuras/jequiti/sazonalidade_jequitinhonha.png, id=587, 1154.3125pt x 552.0625
 pt>
 File: Figuras/jequiti/sazonalidade_jequitinhonha.png Graphic file (type png)
 <use Figuras/jequiti/sazonalidade_jequitinhonha.png>
 Package pdftex.def Info: Figuras/jequiti/sazonalidade_jequitinhonha.png  used o
-n input line 441.
+n input line 437.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 
@@ -1790,7 +1787,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_doce/acf_rio_doce.png Graphic file (type png)
 <use Figuras/rio_doce/acf_rio_doce.png>
 Package pdftex.def Info: Figuras/rio_doce/acf_rio_doce.png  used on input line 
-448.
+444.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1799,7 +1796,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_doce/sazonalidade_rio_doce.png Graphic file (type png)
 <use Figuras/rio_doce/sazonalidade_rio_doce.png>
 Package pdftex.def Info: Figuras/rio_doce/sazonalidade_rio_doce.png  used on in
-put line 455.
+put line 451.
 (pdftex.def)             Requested size: 331.23853pt x 165.61925pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1808,7 +1805,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_grande/acf_rio_grande.png Graphic file (type png)
 <use Figuras/rio_grande/acf_rio_grande.png>
 Package pdftex.def Info: Figuras/rio_grande/acf_rio_grande.png  used on input l
-ine 462.
+ine 458.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1818,7 +1815,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_grande/sazonalidade_rio_grande.png Graphic file (type png)
 <use Figuras/rio_grande/sazonalidade_rio_grande.png>
 Package pdftex.def Info: Figuras/rio_grande/sazonalidade_rio_grande.png  used o
-n input line 469.
+n input line 465.
 (pdftex.def)             Requested size: 331.23853pt x 165.61925pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1829,7 +1826,7 @@ File: Figuras/rio_sao_francisco/acf_rio_sao_francisco.png Graphic file (type pn
 g)
 <use Figuras/rio_sao_francisco/acf_rio_sao_francisco.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/acf_rio_sao_francisco.png  u
-sed on input line 476.
+sed on input line 472.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1840,7 +1837,7 @@ File: Figuras/rio_sao_francisco/sazonalidade_rio_sao_francisco.png Graphic file
  (type png)
 <use Figuras/rio_sao_francisco/sazonalidade_rio_sao_francisco.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/sazonalidade_rio_sao_francis
-co.png  used on input line 483.
+co.png  used on input line 479.
 (pdftex.def)             Requested size: 331.23853pt x 165.61925pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1859,20 +1856,20 @@ onalidade_rio_sao_francisco.png>]
 File: Figuras/jequiti/jequitinhonha_antes_log.png Graphic file (type png)
 <use Figuras/jequiti/jequitinhonha_antes_log.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonha_antes_log.png  used on i
-nput line 506.
+nput line 502.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 <Figuras/jequiti/jequitinhonha_depois_log.png, id=632, 1154.3125pt x 552.0625pt
 >
 File: Figuras/jequiti/jequitinhonha_depois_log.png Graphic file (type png)
 <use Figuras/jequiti/jequitinhonha_depois_log.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonha_depois_log.png  used on 
-input line 513.
+input line 509.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 <Figuras/rio_doce/rio_doce_antes_log.png, id=633, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_doce/rio_doce_antes_log.png Graphic file (type png)
 <use Figuras/rio_doce/rio_doce_antes_log.png>
 Package pdftex.def Info: Figuras/rio_doce/rio_doce_antes_log.png  used on input
- line 520.
+ line 516.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 
@@ -1882,7 +1879,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_doce/rio_doce_depois_log.png Graphic file (type png)
 <use Figuras/rio_doce/rio_doce_depois_log.png>
 Package pdftex.def Info: Figuras/rio_doce/rio_doce_depois_log.png  used on inpu
-t line 527.
+t line 523.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1892,7 +1889,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_grande/rio_grande_antes_log.png Graphic file (type png)
 <use Figuras/rio_grande/rio_grande_antes_log.png>
 Package pdftex.def Info: Figuras/rio_grande/rio_grande_antes_log.png  used on i
-nput line 534.
+nput line 530.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1902,7 +1899,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/rio_grande/rio_grande_depois_log.png Graphic file (type png)
 <use Figuras/rio_grande/rio_grande_depois_log.png>
 Package pdftex.def Info: Figuras/rio_grande/rio_grande_depois_log.png  used on 
-input line 541.
+input line 537.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1913,7 +1910,7 @@ File: Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png Graphic file (t
 ype png)
 <use Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.
-png  used on input line 548.
+png  used on input line 544.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1924,7 +1921,7 @@ File: Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png Graphic file (
 type png)
 <use Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/rio_sao_francisco_depois_log
-.png  used on input line 555.
+.png  used on input line 551.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1942,21 +1939,21 @@ _francisco_depois_log.png>] [43
 File: Figuras/skforecast-diagram-backtesting-refit.png Graphic file (type png)
 <use Figuras/skforecast-diagram-backtesting-refit.png>
 Package pdftex.def Info: Figuras/skforecast-diagram-backtesting-refit.png  used
- on input line 672.
+ on input line 668.
 (pdftex.def)             Requested size: 333.04681pt x 98.46863pt.
 <Figuras/imagem1_skforecast-backtesting-refit.png, id=710, 903.375pt x 401.5pt>
 
 File: Figuras/imagem1_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem1_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem1_skforecast-backtesting-refit.png  used
- on input line 679.
+ on input line 675.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 <Figuras/imagem2_skforecast-backtesting-refit.png, id=713, 903.375pt x 401.5pt>
 
 File: Figuras/imagem2_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem2_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem2_skforecast-backtesting-refit.png  used
- on input line 686.
+ on input line 682.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 
@@ -1967,7 +1964,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/imagem3_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem3_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem3_skforecast-backtesting-refit.png  used
- on input line 693.
+ on input line 689.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1980,7 +1977,7 @@ File: Figuras/skforecast-diagram-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/skforecast-diagram-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/skforecast-diagram-backtesting-no-refit.png  u
-sed on input line 702.
+sed on input line 698.
 (pdftex.def)             Requested size: 332.44456pt x 96.36073pt.
 <Figuras/imagem1_skforecast-backtesting-no-refit.png, id=731, 903.375pt x 401.5
 pt>
@@ -1988,7 +1985,7 @@ File: Figuras/imagem1_skforecast-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/imagem1_skforecast-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/imagem1_skforecast-backtesting-no-refit.png  u
-sed on input line 709.
+sed on input line 705.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 
@@ -2000,7 +1997,7 @@ File: Figuras/imagem2_skforecast-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/imagem2_skforecast-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/imagem2_skforecast-backtesting-no-refit.png  u
-sed on input line 716.
+sed on input line 712.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2011,7 +2008,7 @@ File: Figuras/imagem3_skforecast-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/imagem3_skforecast-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/imagem3_skforecast-backtesting-no-refit.png  u
-sed on input line 723.
+sed on input line 719.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2024,7 +2021,7 @@ ktesting-no-refit.png>] [50]
 <Figuras/flowchart.png, id=765, 574.145pt x 1355.0625pt>
 File: Figuras/flowchart.png Graphic file (type png)
 <use Figuras/flowchart.png>
-Package pdftex.def Info: Figuras/flowchart.png  used on input line 743.
+Package pdftex.def Info: Figuras/flowchart.png  used on input line 739.
 (pdftex.def)             Requested size: 229.65393pt x 542.0154pt.
 ) [51
 
@@ -2079,7 +2076,7 @@ AED: lastpage setting LastPage
 Here is how much of TeX's memory you used:
  29422 strings out of 478287
  544894 string characters out of 5849289
- 902100 words of memory out of 5000000
+ 903101 words of memory out of 5000000
  46661 multiletter control sequences out of 15000+600000
  519293 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2098,7 +2095,7 @@ xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pf
 b>
-Output written on dissertacao.pdf (58 pages, 2851257 bytes).
+Output written on dissertacao.pdf (58 pages, 2850460 bytes).
 PDF statistics:
  1096 PDF objects out of 1200 (max. 8388607)
  891 compressed objects within 9 object streams
