@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -40,6 +40,12 @@ MapBiomas Brasil.
 \newblock Plataforma mapbiomas uso e cobertura, 2024{\natexlab{c}}.
 \newblock URL \url{https://plataforma.brasil.mapbiomas.org/cobertura}.
 \newblock Acessado em: junho de 2024.
+
+\bibitem[Clarke(2007)]{rayyan-33388453}
+R.T. Clarke.
+\newblock Hydrological prediction in a non-stationary world.
+\newblock \emph{Hydrology and Earth System Sciences}, 11\penalty0 (1):\penalty0
+  408--414, 2007.
 
 \bibitem[Corporation(2024)]{LightGBM}
 Microsoft Corporation.
@@ -149,10 +155,45 @@ Charles~R. Harris, K.~Jarrod Millman, St{\'{e}}fan~J. van~der Walt, Ralf
 \newblock \doi{10.1038/s41586-020-2649-2}.
 \newblock URL \url{https://doi.org/10.1038/s41586-020-2649-2}.
 
-\bibitem[Hyndman and Athanasopoulos(2024)]{hyndman_fpp3_2024}
+\bibitem[Hyndman(2014)]{RobHyndman_prediction_intervals}
+Rob~J. Hyndman.
+\newblock Prediction intervals too narrow, 2014.
+\newblock URL \url{https://robjhyndman.com/hyndsight/narrow-pi/}.
+\newblock Acessado em: agosto de 2024.
+
+\bibitem[Hyndman and Athanasopoulos(2024a)]{hyndman_fpp3_2024a}
 Rob~J. Hyndman and George Athanasopoulos.
-\newblock Forecasting: Principles and practice (3rd ed.), 2024.
-\newblock URL \url{https://otexts.com/fpp3/}.
+\newblock Forecasting: Principles and practice (3rd ed.) - 5.5 distributional
+  forecasts and prediction intervals, 2024a.
+\newblock URL \url{https://otexts.com/fpp3/prediction-intervals.html}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[Hyndman and Athanasopoulos(2024b)]{hyndman_fpp3_2024b}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock Forecasting: Principles and practice (3rd ed.) - 5.8 evaluating point
+  forecast accuracy, 2024b.
+\newblock URL \url{https://otexts.com/fpp3/accuracy.html}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[Hyndman and Athanasopoulos(2024c)]{hyndman_fpp3_2024c}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock Forecasting: Principles and practice (3rd ed.) - 7.2 least squares
+  estimation, 2024c.
+\newblock URL \url{https://otexts.com/fpp3/least-squares.html}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[Hyndman and Athanasopoulos(2024d)]{hyndman_fpp3_2024d}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock Forecasting: Principles and practice (3rd ed.) - 5.2 some simple
+  forecasting methods, 2024d.
+\newblock URL \url{https://otexts.com/fpp3/simple-methods.html}.
+\newblock Acessado em: junho de 2024.
+
+\bibitem[Hyndman and Athanasopoulos(2024e)]{hyndman_fpp3_2024e}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock Forecasting: Principles and practice (3rd ed.) - 9.1 stationarity and
+  differencing, 2024e.
+\newblock URL \url{https://otexts.com/fpp3/stationarity.html}.
 \newblock Acessado em: junho de 2024.
 
 \bibitem[{Instituto Mineiro de Gestão das Águas
