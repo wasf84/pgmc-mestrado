@@ -640,6 +640,17 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $P_i$ valores previstos
 		\item $n$ o número total de observações
 	\end{itemize}
+
+	\item \textbf{$R^2$ (\textit{Coefficient of Determination})}: O Coeficiente de Determinação, que é o quadrado do coeficiente de correlação de Pearson, mede a proporção da variância total nos dados observados que pode ser explicada pelo modelo. Ele varia de 0,0 a 1,0, com valores mais alto indicando uma melhor concordância entre os dados observados e os previstos. Embora o $R^2$ seja amplamente utilizado, ele apresenta limitações que podem resultar em uma avaliação imprecisa do desempenho de modelos hidrológicos, tal como ser uma métrica sensível a valores discrepantes (\textit{outliers}) e avaliar apenas relações lineares. Deve ser empregado com outras métricas para garantir uma boa interpretabilidade dos resultados dos modelos.\cite{legates1999goodness}
+	\begin{equation}
+		R^2 = 1 - \frac{\sum_{i=1}^{n} (O_i - {P_i})^2}{\sum_{i=1}^{n} (O_i - \bar{O})^2}
+	\end{equation}
+	\begin{itemize}
+		\item $O_i$ valores observados
+		\item $P_i$ valores previstos
+		\item $\bar{O}$ média dos valores observados
+		\item $n$ o número total de observações
+	\end{itemize}
 	
 	\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS positivo) ou subestimar (PBIAS negativo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja 0, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos.\cite{rayyan-33388455}
 	\begin{equation}

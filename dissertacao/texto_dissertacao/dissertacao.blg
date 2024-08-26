@@ -20,45 +20,45 @@ Warning--entry type for "g1_cantareira_2015" isn't style-file defined
 --line 489 of file referencias.bib
 Warning--entry type for "skforecast" isn't style-file defined
 --line 660 of file referencias.bib
-You've used 36 entries,
+You've used 37 entries,
             2773 wiz_defined-function locations,
-            793 strings with 12701 characters,
-and the built_in function-call counts, 15780 in all, are:
-= -- 1340
-> -- 1095
-< -- 27
-+ -- 383
-- -- 342
-* -- 1217
-:= -- 2495
-add.period$ -- 134
-call.type$ -- 36
-change.case$ -- 217
-chr.to.int$ -- 31
-cite$ -- 72
-duplicate$ -- 625
-empty$ -- 1201
-format.name$ -- 391
-if$ -- 3253
+            803 strings with 13007 characters,
+and the built_in function-call counts, 16264 in all, are:
+= -- 1390
+> -- 1116
+< -- 28
++ -- 390
+- -- 348
+* -- 1258
+:= -- 2569
+add.period$ -- 139
+call.type$ -- 37
+change.case$ -- 222
+chr.to.int$ -- 32
+cite$ -- 74
+duplicate$ -- 645
+empty$ -- 1241
+format.name$ -- 400
+if$ -- 3355
 int.to.chr$ -- 6
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 214
-num.names$ -- 144
-pop$ -- 509
+missing$ -- 13
+newline$ -- 221
+num.names$ -- 148
+pop$ -- 515
 preamble$ -- 1
-purify$ -- 185
+purify$ -- 189
 quote$ -- 0
-skip$ -- 561
+skip$ -- 577
 stack$ -- 0
-substring$ -- 208
-swap$ -- 69
+substring$ -- 235
+swap$ -- 70
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 391
+type$ -- 402
 warning$ -- 0
-while$ -- 119
+while$ -- 124
 width$ -- 0
-write$ -- 500
+write$ -- 517
 (There were 6 warnings)
