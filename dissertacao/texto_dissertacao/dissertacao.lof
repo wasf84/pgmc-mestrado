@@ -47,20 +47,20 @@
 \contentsline {figure}{\numberline {3.46}{\ignorespaces Previsão multietapas sem reajuste (\textit {refit}) - imagem 1.\\(fonte: \cite {skforecast})}}{52}{figure.112}%
 \contentsline {figure}{\numberline {3.47}{\ignorespaces Previsão multietapas sem reajuste (\textit {refit}) - imagem 2.\\(fonte: \cite {skforecast})}}{52}{figure.113}%
 \contentsline {figure}{\numberline {3.48}{\ignorespaces Previsão multietapas sem reajuste (\textit {refit}) - imagem 3.\\(fonte: \cite {skforecast})}}{53}{figure.114}%
-\contentsline {figure}{\numberline {3.49}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{54}{figure.115}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{56}{figure.119}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{56}{figure.120}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{57}{figure.121}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{57}{figure.122}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Regressão Linear para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{58}{figure.123}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Regressão Linear para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{58}{figure.124}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Regressão Linear para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{59}{figure.125}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Regressão Linear para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{59}{figure.126}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces CatBoost para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.127}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces LightGBM para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.128}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces CatBoost para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{61}{figure.129}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces LightGBM para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{61}{figure.130}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces CatBoost para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{62}{figure.131}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces LightGBM para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{62}{figure.132}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces CatBoost para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{63}{figure.133}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces LightGBM para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{63}{figure.134}%
+\contentsline {figure}{\numberline {3.49}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{54}{figure.116}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{56}{figure.120}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{56}{figure.121}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{57}{figure.122}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Seasonal Naive} para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{57}{figure.123}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Regressão Linear para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{58}{figure.124}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Regressão Linear para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{58}{figure.125}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Regressão Linear para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{59}{figure.126}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Regressão Linear para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{59}{figure.127}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces CatBoost para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.128}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces LightGBM para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.129}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces CatBoost para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{61}{figure.130}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces LightGBM para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{61}{figure.131}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces CatBoost para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{62}{figure.132}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces LightGBM para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{62}{figure.133}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces CatBoost para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{63}{figure.134}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces LightGBM para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{63}{figure.135}%

@@ -755,14 +755,16 @@ Evidentemente que para o horizonte de previsão de 1 dia não há reexecução d
 
 O desempenho dos resultados são avaliados com as métricas propostas, para cada modelo do trablaho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 90\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de 90\% (``\textit{lo-90}'' e ``\textit{hi-90}''), o valor real observado futuro tem 90\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a}
 
-Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a Walk-Forward Validation.
+Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a Walk-Forward Validation. E finalmente, análise das variáveis do trabalho, buscando entendimento quanto à importância desemepenhada por cada uma, empregando o método SHAP.
 
-Antes, porém, foi realizada uma busca de hiperpâmetros nos modelos LightGBM e CatBoost. A busca de hiperparâmetros visa otimizar o desempenho dos modelos ao encontrar a melhor combinação de hiperparâmetros, adequadamente ajustados aos dados. Este processo foi realizado utilizando o \textit{framework} Optuna e validação-cruzada dividindo os dados de 10 anos (2013 a 2022) em 10 segmentos (\textit{folds}).\cite{akiba2019optuna}\cite{optuna_docs}\cite{skforecast}
+%Antes, porém, foi realizada uma busca de hiperpâmetros nos modelos LightGBM e CatBoost. A busca de hiperparâmetros visa otimizar o desempenho dos modelos ao encontrar a melhor combinação de hiperparâmetros, adequadamente ajustados aos dados. Este processo foi realizado utilizando o \textit{framework} Optuna e validação-cruzada dividindo os dados de 10 anos (2013 a 2022) em 10 segmentos (\textit{folds}).\cite{akiba2019optuna}\cite{optuna_docs}\cite{skforecast}
 
-Com os melhores hiperparâmetros encontrados, aí sim procedeu-se para a última etapa da análise: aplicar Walk-Forward Validation.
+%Com os melhores hiperparâmetros encontrados, aí sim procedeu-se para a última etapa da análise: aplicar Walk-Forward Validation.
 
 Os resultados serão apresentados no \hyperref[cap:capitulo4]{capítulo 4}.
 \clearpage
+
+\todo[inline]{REFAZER O FLUXOGRAMA}
 
 \begin{figure}[!h]
 	\centering
