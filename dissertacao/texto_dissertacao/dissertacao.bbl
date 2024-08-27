@@ -1,24 +1,9 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Akiba et~al.(2019{\natexlab{a}})Akiba, Sano, Yanase, Ohta, and
-  Koyama]{akiba2019optuna}
-Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama.
-\newblock Optuna: A next-generation hyperparameter optimization framework.
-\newblock In \emph{Proceedings of the 25th ACM SIGKDD international conference
-  on knowledge discovery \& data mining}, pages 2623--2631, 2019{\natexlab{a}}.
-
-\bibitem[Akiba et~al.(2019{\natexlab{b}})Akiba, Sano, Yanase, Ohta, and
-  Koyama]{optuna_docs}
-Takuya Akiba, Shotaro Sano, Toshihiko Yanase, Takeru Ohta, and Masanori Koyama.
-\newblock \emph{Optuna: A Next-generation Hyperparameter Optimization
-  Framework}, 2019{\natexlab{b}}.
-\newblock URL \url{https://optuna.readthedocs.io/en/stable/index.html}.
-\newblock Acessado em: agosto de 2024.
 
 \bibitem[Brasil(2024{\natexlab{a}})]{bbc_chuvas_bahia_2024}
 BBC~News Brasil.
@@ -46,12 +31,6 @@ R.T. Clarke.
 \newblock Hydrological prediction in a non-stationary world.
 \newblock \emph{Hydrology and Earth System Sciences}, 11\penalty0 (1):\penalty0
   408--414, 2007.
-
-\bibitem[Corporation(2024)]{LightGBM}
-Microsoft Corporation.
-\newblock \emph{LightGBM Documentation}, 2024.
-\newblock URL \url{https://lightgbm.readthedocs.io/en/stable/index.html}.
-\newblock Accessed: 2024-08-17.
 
 \bibitem[de~Carvalho(2020)]{carvalho2020hydrobr}
 Wallisson~Moreira de~Carvalho.
@@ -203,16 +182,6 @@ Rob~J. Hyndman and George Athanasopoulos.
 \newblock URL \url{http://www.igam.mg.gov.br/}.
 \newblock Acessado em: agosto de 2024.
 
-\bibitem[Ke et~al.(2017)Ke, Meng, Finely, Wang, Chen, Ma, Ye, and
-  Liu]{ke2017lightgbm}
-Guolin Ke, Qi~Meng, Thomas Finely, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
-  Ye, and Tie-Yan Liu.
-\newblock Lightgbm: A highly efficient gradient boosting decision tree.
-\newblock In \emph{Advances in Neural Information Processing Systems 30 (NIP
-  2017)}, December 2017.
-\newblock URL
-  \url{https://www.microsoft.com/en-us/research/publication/lightgbm-a-highly-efficient-gradient-boosting-decision-tree/}.
-
 \bibitem[Kolling~Neto et~al.(2023)Kolling~Neto, Siqueira, Gama, Paiva, Fan,
   Collischonn, Silveira, Paranhos, and Freitas]{rayyan-33388455}
 A.~Kolling~Neto, V.A. Siqueira, C.H.D.A. Gama, R.C.D.D. Paiva, F.M. Fan,
@@ -262,6 +231,21 @@ Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna~Veronika Dorogush,
   and Andrey Gulin.
 \newblock Catboost: unbiased boosting with categorical features.
 \newblock \emph{Advances in neural information processing systems}, 31, 2018.
+
+\bibitem[Salman et~al.(2024)Salman, Kalakech, and
+  Steiti]{hasan_ahmed_salman_2024}
+Hasan~Ahmed Salman, Ali Kalakech, and Amani Steiti.
+\newblock Random forest algorithm overview.
+\newblock \emph{Babylonian Journal of Machine Learning}, 2024:\penalty0 69--79,
+  2024.
+\newblock \doi{10.58496/bjml/2024/007}.
+
+\bibitem[Scikit-learn(2024)]{sklearn_random_forest_2024}
+Scikit-learn.
+\newblock Randomforestregressor - scikit-learn documentation, 2024.
+\newblock URL
+  \url{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html}.
+\newblock Acessado em: abril de 2024.
 
 \bibitem[Seabold and Perktold(2010)]{seabold2010statsmodels}
 Skipper Seabold and Josef Perktold.

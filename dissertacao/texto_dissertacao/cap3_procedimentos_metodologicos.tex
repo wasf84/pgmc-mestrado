@@ -510,64 +510,68 @@ Outra característica investigada neste estudo foi a presença de `cauda longa' 
 
 A `cauda longa' refere-se a uma distribuição de frequência na qual uma proporção significativa dos eventos ocorre em uma região distante do centro ou da média da distribuição. Em uma distribuição normal, a maioria dos eventos se concentra em torno da média, com poucas ocorrências nas extremidades (caudas). No entanto, na distribuição com cauda longa, essas extremidades contêm uma quantidade substancial de eventos, que, somados, podem representar uma fração importante do total. A análise de cauda longa é um campo específico da estatística, desenvolvido para lidar com eventos de baixa frequência, mas de alta magnitude. No entanto, este trabalho não se aprofundou nas técnicas avançadas de análise de cauda longa; o foco aqui foi identificar a presença desse fenômeno e determinar um tratamento adequado para os dados.
 
-A mitigação do efeito de cauda longa é particularmente relevante para modelos como a Regressão Linear, que pressupõe uma distribuição normal dos dados. Uma distribuição assimétrica pode comprometer a convergência do modelo. Embora os modelos baseados em \textit{boosting} utilizados neste estudo, como o CatBoost e o LightGBM, não sejam tão sensíveis a esse efeito, pois captam relações não-lineares e complexas de forma eficiente, optou-se por aplicar o mesmo tratamento a todos os modelos para garantir uma padronização na apresentação dos dados.
+A mitigação do efeito de cauda longa é particularmente relevante para modelos como a Regressão Linear, que pressupõe uma distribuição normal dos dados. Uma distribuição assimétrica pode comprometer a convergência do modelo. Os dados transformados foram utilizados para todos os modelos, indistintamente, visando garantir uma padronização do estudo.
 
-Dado que os dados contêm valores iguais a zero, a transformação pelo logaritmo natural (ln(.)) não foi aplicada, pois o cálculo de logaritmo não é definido para valores zero. Em vez disso, foi utilizada a transformação `log1p(.)' da biblioteca NumPy \cite{numpyref}, que adiciona 1 ao valor antes da transformação, evitando erros relacionados ao logaritmo de zero.
+%Embora os modelos baseados em \textit{boosting} utilizados neste estudo, como o CatBoost e o LightGBM, não sejam tão sensíveis a esse efeito, pois captam relações não-lineares e complexas de forma eficiente, optou-se por aplicar o mesmo tratamento a todos os modelos para garantir uma padronização na apresentação dos dados.
 
-Após a transformação a distribuição dos eventos ficou menos assimétrica, como pode ser visto nas figuras \ref{fig:jequitinhonha_antes_log}, \ref{fig:jequitinhonha_depois_log}, \ref{fig:rio_doce_antes_log}, \ref{fig:rio_doce_depois_log}, \ref{fig:rio_grande_antes_log}, \ref{fig:rio_grande_depois_log}, \ref{fig:rio_sao_francisco_antes_log}, \ref{fig:rio_sao_francisco_depois_log}. Para o rio Grande, visualmente, parece não ter havido tanta diferença, mas quando se analisa os valores, houve um achatamento na distância entre os valores máximo e o mínimo da série.
+Posto que os dados contêm valores iguais a zero, a transformação pelo logaritmo natural (ln(.)) não foi aplicada, pois o cálculo de logaritmo não é definido para valores zero. Ao invés disso, foi utilizada a transformação `log1p(.)' da biblioteca NumPy \cite{numpyref}, que adiciona 1 ao valor antes da transformação, evitando erros relacionados ao logaritmo de zero.
+
+Existem outras formas de ajustar a distribuição dos dados, tais como Box-Cox, Yeo-Johnson e transformação por quantis, mas é necessário que haja reversibilidade nos valores finais preditos e que garanta interpretabilidade, por isso optou-se por uma transformação simples mas que atendeu satisfatoriamente ao próposito. [REF REF]
+
+Após a transformação a distribuição dos eventos ficou menos assimétrica, mais próximo de 0, como pode ser visto nas figuras \ref{fig:jequitinhonha_antes_log}, \ref{fig:jequitinhonha_depois_log}, \ref{fig:rio_doce_antes_log}, \ref{fig:rio_doce_depois_log}, \ref{fig:rio_grande_antes_log}, \ref{fig:rio_grande_depois_log}, \ref{fig:rio_sao_francisco_antes_log}, \ref{fig:rio_sao_francisco_depois_log}. Para o rio Grande, visualmente, parece não ter havido tanta diferença, mas quando se analisa os valores originais e transformados, houve um achatamento na distância entre os valores máximo e o mínimo da série.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/jequitinhonha_antes_log.png}
+	\includegraphics[scale=0.8]{Figuras/jequiti/jequitinhonha_antes_log.png}
 	\caption{Dados originais para o rio Jequitinhonha\\(fonte: o autor)}
 	\label{fig:jequitinhonha_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/jequitinhonha_depois_log.png}
+	\includegraphics[scale=0.8]{Figuras/jequiti/jequitinhonha_depois_log.png}
 	\caption{Dados transformados para o rio Jequitinhonha\\(fonte: o autor)}
 	\label{fig:jequitinhonha_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_doce/rio_doce_antes_log.png}
+	\includegraphics[scale=0.8]{Figuras/rio_doce/rio_doce_antes_log.png}
 	\caption{Dados originais para o rio Doce\\(fonte: o autor)}
 	\label{fig:rio_doce_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_doce/rio_doce_depois_log.png}
+	\includegraphics[scale=0.8]{Figuras/rio_doce/rio_doce_depois_log.png}
 	\caption{Dados transformados para o rio Doce\\(fonte: o autor)}
 	\label{fig:rio_doce_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_grande/rio_grande_antes_log.png}
+	\includegraphics[scale=0.8]{Figuras/rio_grande/rio_grande_antes_log.png}
 	\caption{Dados originais para o rio Grande\\(fonte: o autor)}
 	\label{fig:rio_grande_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_grande/rio_grande_depois_log.png}
+	\includegraphics[scale=0.8]{Figuras/rio_grande/rio_grande_depois_log.png}
 	\caption{Dados transformados para o rio Grande\\(fonte: o autor)}
 	\label{fig:rio_grande_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png}
+	\includegraphics[scale=0.8]{Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png}
 	\caption{Dados originais para o rio São Francisco\\(fonte: o autor)}
 	\label{fig:rio_sao_francisco_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png}
+	\includegraphics[scale=0.8]{Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png}
 	\caption{Dados transformados para o rio São Francisco\\(fonte: o autor)}
 	\label{fig:rio_sao_francisco_depois_log}
 \end{figure}
@@ -584,25 +588,37 @@ Essas características, longe de serem consideradas como ruído ou anomalias, fa
 
 \subsection{Seasonal Naive}
 
-O modelo \textbf{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (baseline), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio).\cite{hyndman_fpp3_2024d}
+O modelo \textit{Seasonal Naive} não pode ser considerado um modelo de previsão sofisticado. Em vez disso, ele funciona como uma linha de base (\textit{baseline}), servindo como ponto de partida para avaliar o desempenho de outros modelos de previsão. Este modelo simplesmente repete a sazonalidade observada no período anterior, ou seja, assume que o comportamento do próximo ciclo sazonal será o mesmo do anterior, com um possível ajuste por \textit{drift} (desvio).\cite{hyndman_fpp3_2024d}
 
 Esse método é útil para fornecer uma idéia inicial do comportamento esperado, permitindo que os modelos subsequentes sejam comparados a ele. Por ser um modelo simples, ele não captura tendências ou variações complexas, mas estabelece um \textit{benchmark} mínimo para o qual outros métodos mais elaborados e complexos devem se comparar.
 
 \subsection{Regressão Linear}
 
-O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta. 
+O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta.
 
-O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o erro quadrático médio, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.\cite{hyndman_fpp3_2024c}
+\begin{equation}
+y_{t} = \beta_{0} + \beta_{1} x_{1,t} + \beta_{2} x_{2,t} + \cdots +
+\beta_{k} x_{k,t} + \varepsilon_{t}
+\end{equation}
+
+O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o somatório do erro quadrático, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.\cite{hyndman_fpp3_2024c}
+
+\begin{equation}
+	\sum_{t=1}^n \varepsilon_t^2 = \sum_{t=1}^n (y_t -
+	\beta_{0} - \beta_{1} x_{1,t} - \beta_{2} x_{2,t} - \cdots - \beta_{k} x_{k,t})^2.
+\end{equation}
+\begin{itemize}
+	\item $y_t$ valores observados
+	\item $\beta_{0} , \beta_{1} , \cdots , \beta_{k}$ coeficientes para as variáveis independentes
+	\item $x_{1,t} , x_{2,t} , \cdots , x_{k,t}$ variáveis independentes
+	\item $n$ número de observações
+\end{itemize}
 
 Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo-base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Isso será discutido.
 
-% Aqui está o fluxograma para o funcionamento do modelo de Regressão Linear \todo[inline]{INSERIR DIAGRAMA ?}
+\subsection{CatBoost}
 
-\subsection{CatBoost e LightGBM}
-
-Estes dois modelos são descritos juntos pois o funcionamento de ambos se baseia no mesmo princípio: ambos algoritmos constroem modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. Contudo, o LightGBM adota uma estratégia denominada ``Leaf-wise Growth'' ao invés da forma de construção tradicional ``Level-wise Growth''. Nesta estratégia, o crescimento ocorre folha a folha, a árvore expande as folhas com a maior redução de erro, resultando em árvores mais profundas e precisas.\cite{ke2017lightgbm}\cite{LightGBM} O revés nessa estretégia é que fica mais suscetível a \textit{overfitting}, mas existem parâmetros no modelo, como por exemplo `min\_data\_in\_leaf' (quantidade mínima de dados em cada folha) que cuidam para que isso seja evitado.
-
-O CatBoost, por sua vez, adota uma estratégia denominada ``Ordered Boosting'', em que a construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para esta construção. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelos, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também estão presentes e o pesquisador tem controle sobre eles.\cite{catboost_docs}\cite{dorogush2018catboost}\cite{prokhorenkova2018catboost}
+CatBoost tem o funcionamento baseado no princípio da construção de modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. A estratégia do CatBoost, no entanto, tem um nome: ``\textit{Ordered Boosting}''. A construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para isso. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelo, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também estão presentes e o pesquisador tem controle sobre eles.\cite{catboost_docs}\cite{dorogush2018catboost}\cite{prokhorenkova2018catboost}
 
 %\begin{figure}[!h]
 %	\centering
@@ -611,7 +627,13 @@ O CatBoost, por sua vez, adota uma estratégia denominada ``Ordered Boosting'', 
 %	\label{fig:boosting_diagrama}
 %\end{figure}
 
-A escolha do modelo certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O SeasonalNaive, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e LightGBM foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
+\subsection{Floresta Aleatória}
+
+Floresta Aleatória (\textit{Random Forest}) é um modelo que também é baseado em árvores de decisão e é amplamente utilizado em tarefas de regressão e classificação. O modelo combina diversas árvores de decisão para aprimorar a precisão e a estabilidade dos resultados.
+
+O modelo cria diversas árvores de decisão independentemente, e cada destas árvores é treinada com partições aleatórias dos dados de treinamento, garantindo que as árvores sejam distintas entre si (\textit{Bootstrapping}). Na seleção dos dados pode haver reposição, ou seja, os mesmos dados podem ser utilizados para treinar árvores diferentes ou até mesmo dados podem nunca ser utilizados em nenhuma árvore. Isso é para garantir diversidade entre as árvores. Durante a criação de cada nó da árvore, um subcojunto aleatório dos dados de treinamento é utilizado e isso vai até não ser mais possível criar novas divisões (\textit{Depth-wise Growth}). Ao fim, quando cada árvore foi treinada, a agregação dos resultados se dá calculando a média entre todas elas (\textit{bagging}).\cite{hasan_ahmed_salman_2024}\cite{sklearn_random_forest_2024}
+
+A escolha do modelo certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O \textit{Seasonal Naive}, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e Floresta Aleatória foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
 
 \section{Métricas de Avaliação}
 %Listar as métricas usadas para avaliar o desempenho dos modelos (MAPE, RMSE, PBias* e KGE não-paramétrico**).
@@ -689,9 +711,9 @@ Identificadas estas estações de vazão, verifica-se em linha reta, em sentido 
 
 %{\color{red}No passo de verificação dos dados faltantes, o preenchimento foi realizado aplicando a média dos últimos 3 anos para os dias faltantes. O que ainda restou faltando, um modelo kNN finalizou o preenchimento usando os 7 vizinhos mais próximos.} \todo[inline, color = blue, textcolor=white]{já foi dito}
 
-Aqui uma importante etapa: aplicar transformação logarítmica nos dados de vazão e precipitação para tratar o fenômeno de ``cauda'' longa dos dados.
+Aqui uma importante etapa: aplicar transformação logarítmica nos dados de vazão e precipitação para tratar o fenômeno de ``cauda longa'' dos dados.
 
-A separação dos dados do último ano, 2023, foi para posteriormente simular o uso dos modelos ao longo de um ano. Realizar ajuste (`\textit{fit}') e previsão (`predict'), dia-a-dia, durante um ano inteiro, para avaliar a estabilidade dos modelos. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`direct forecasting'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`recursive forecasting'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `backtesting' \cite{skforecast})
+A separação dos dados do último ano, 2023, foi para posteriormente simular o uso dos modelos ao longo de um ano. Realizar ajuste (`\textit{fit}') e previsão (`\textit{predict}'), dia-a-dia, durante um ano inteiro, para avaliar a estabilidade dos modelos. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`\textit{direct forecasting}'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`\textit{recursive forecasting}'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `\textit{backtesting}' \cite{skforecast})
 
 \begin{figure}[!h]
 	\centering
@@ -721,7 +743,7 @@ A separação dos dados do último ano, 2023, foi para posteriormente simular o 
 	\label{fig:imagem3_skforecast-backtesting-refit}
 \end{figure}
 
-Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações em alguns horizontes de previsão antes de partir para a análise mais complexa (WFV). A intenção era compreender o comportamento da modelagem em horizontes curtos e médios. Foram escolhidos os horizontes de previsão de 1, 3, 7 e 15 dias. As previsões utilizaram a previsão multietapas, com modelos diretos, ou seja, após feito o ajuste, cada dia foi previsto reiteradamente sem reajuste dos pesos e parâmetros internos dos modelos (``direct forecast''). Veja a seguir o procedimento.
+Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações em alguns horizontes de previsão antes de partir para a análise mais complexa (WFV). A intenção era compreender o comportamento da modelagem em horizontes curtos e médios. Foram escolhidos os horizontes de previsão de 1, 3, 7 e 15 dias. As previsões utilizaram a previsão multietapas, com modelos diretos, ou seja, após feito o ajuste, cada dia foi previsto reiteradamente sem reajuste dos pesos e parâmetros internos dos modelos (``\textit{direct forecast}''). Veja a seguir o procedimento.
 
 \begin{figure}[!h]
 	\centering
@@ -753,9 +775,9 @@ Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações e
 
 Evidentemente que para o horizonte de previsão de 1 dia não há reexecução do modelo, apenas para os outros horizontes.
 
-O desempenho dos resultados são avaliados com as métricas propostas, para cada modelo do trablaho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 90\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de 90\% (``\textit{lo-90}'' e ``\textit{hi-90}''), o valor real observado futuro tem 90\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a}
+O desempenho dos resultados são avaliados com as métricas propostas, para cada modelo do trabalho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 90\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de 90\% (``\textit{lo-90}'' e ``\textit{hi-90}''), o valor real observado futuro tem 90\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a}
 
-Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a Walk-Forward Validation. E finalmente, análise das variáveis do trabalho, buscando entendimento quanto à importância desemepenhada por cada uma, empregando o método SHAP.
+Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a \textit{Walk-Forward Validation}. E finalmente, análise das variáveis do trabalho, buscando entendimento quanto à importância desempenhada por cada uma, empregando o método SHAP.
 
 %Antes, porém, foi realizada uma busca de hiperpâmetros nos modelos LightGBM e CatBoost. A busca de hiperparâmetros visa otimizar o desempenho dos modelos ao encontrar a melhor combinação de hiperparâmetros, adequadamente ajustados aos dados. Este processo foi realizado utilizando o \textit{framework} Optuna e validação-cruzada dividindo os dados de 10 anos (2013 a 2022) em 10 segmentos (\textit{folds}).\cite{akiba2019optuna}\cite{optuna_docs}\cite{skforecast}
 

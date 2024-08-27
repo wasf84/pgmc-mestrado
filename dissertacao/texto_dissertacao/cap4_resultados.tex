@@ -8,9 +8,9 @@ Os resultados obtidos pelos modelos variaram significativamente em termos de pre
 
 \subsection{Rio Jequitinhonha}
 
-Começando pela menor bacia estudada, os resultados mostraram-se bastante satisfatórios, especialmente no que tange à Regressão Linear, que se destacou com boas previsões tanto em termos pontuais quanto nos intervalos de previsão. Este modelo demonstrou uma boa capacidade de capturar a dinâmica hidrológica do rio, refletindo precisão nas métricas e um desempenho consistente para o horizonte de curto prazo. E com um tempo de execução baixo. O modelo simples \textit{Seasonal Naive} apresentou resultados aquém do esperado em todas as situações avaliadas, incluindo previsões pontuais e intervalos de previsão. Independentemente do horizonte de previsão considerado, o modelo gerou valores previstos que se distanciaram significativamente dos valores reais observados.
+Começando pela menor bacia estudada, os resultados mostraram-se bastante satisfatórios, especialmente no que tange à Regressão Linear, que se destacou com boas previsões tanto em termos pontuais quanto nos intervalos de previsão. Este modelo demonstrou uma boa capacidade de capturar a dinâmica hidrológica do rio, refletindo precisão nas métricas e um desempenho consistente para o horizonte de curto prazo. E com um tempo de execução baixo. O modelo simples \textit{Seasonal Naive} apresentou resultados aquém do esperado em todas as situações avaliadas, considerando a previsão pontual, porém, quando se considera os intervalos de previsão ele teve um bom desempenho, capturando o valor observado.
 
-Saltando de 1 dia para 3 dias, o modelo piorou consideravelmente o resultado, praticamente dobrando o MAPE, porém, à medida que o horizonte foi aumentando a partir de 3 dias, os resultados melhoraram, chegando ao ponto de a previsão de 15 dias superar até mesmo a previsão de 1 dia. É provável que o preenchimento de dados realizado aplicando a sazonalidade de anos anteriores tenha influenciado neste desempenho. Os intervalos de previsão estreitos denotam que a previsão não captou todas as incertezas presentes na dinâmica do fenômeno.\cite{RobHyndman_prediction_intervals}
+Saltando de 1 dia para 3 dias e depois para 7 dias, o modelo foi melhorando o resultado, tornando a piorar quando da previsão de 15 dias. É provável que o preenchimento de dados realizado aplicando a sazonalidade de anos anteriores tenha influenciado neste desempenho.
 
 \begin{figure}[!h]
 	\centering
@@ -144,8 +144,9 @@ Quando aumentou o horizonte para 3 dias, o CatBoost apresentou melhor desempenho
 	\caption{LightGBM para o horizonte de previsão de 15 dias\\(fonte: o autor)}
 	\label{fig:jequiti_LGBMRegressor_fh15}
 \end{figure}
-
 \clearpage
+
+Os intervalos de previsão estreitos denotam que a previsão não captou todas as incertezas presentes na dinâmica do fenômeno.\cite{RobHyndman_prediction_intervals}
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
