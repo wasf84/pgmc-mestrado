@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  26 AUG 2024 21:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.16)  27 AUG 2024 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language24). Reported on input line 105.
+(babel)             (\language13). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language24). Reported on input line 108.
+(babel)             (\language13). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language4). Reported on input line 111.
+(babel)             (\language46). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -1973,21 +1973,21 @@ o_sao_francisco_depois_log.png>] [47
 File: Figuras/skforecast-diagram-backtesting-refit.png Graphic file (type png)
 <use Figuras/skforecast-diagram-backtesting-refit.png>
 Package pdftex.def Info: Figuras/skforecast-diagram-backtesting-refit.png  used
- on input line 720.
+ on input line 722.
 (pdftex.def)             Requested size: 333.04681pt x 98.46863pt.
 <Figuras/imagem1_skforecast-backtesting-refit.png, id=796, 903.375pt x 401.5pt>
 
 File: Figuras/imagem1_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem1_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem1_skforecast-backtesting-refit.png  used
- on input line 727.
+ on input line 729.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 <Figuras/imagem2_skforecast-backtesting-refit.png, id=799, 903.375pt x 401.5pt>
 
 File: Figuras/imagem2_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem2_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem2_skforecast-backtesting-refit.png  used
- on input line 734.
+ on input line 736.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 
@@ -1998,7 +1998,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figuras/imagem3_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem3_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem3_skforecast-backtesting-refit.png  used
- on input line 741.
+ on input line 743.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2009,7 +2009,7 @@ File: Figuras/skforecast-diagram-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/skforecast-diagram-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/skforecast-diagram-backtesting-no-refit.png  u
-sed on input line 750.
+sed on input line 752.
 (pdftex.def)             Requested size: 332.44456pt x 96.36073pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2020,7 +2020,7 @@ File: Figuras/imagem1_skforecast-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/imagem1_skforecast-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/imagem1_skforecast-backtesting-no-refit.png  u
-sed on input line 757.
+sed on input line 759.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2031,7 +2031,7 @@ File: Figuras/imagem2_skforecast-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/imagem2_skforecast-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/imagem2_skforecast-backtesting-no-refit.png  u
-sed on input line 764.
+sed on input line 766.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2042,7 +2042,7 @@ File: Figuras/imagem3_skforecast-backtesting-no-refit.png Graphic file (type pn
 g)
 <use Figuras/imagem3_skforecast-backtesting-no-refit.png>
 Package pdftex.def Info: Figuras/imagem3_skforecast-backtesting-no-refit.png  u
-sed on input line 771.
+sed on input line 773.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2060,7 +2060,7 @@ ktesting-no-refit.png>]
 <Figuras/flowchart.png, id=841, 574.145pt x 1355.0625pt>
 File: Figuras/flowchart.png Graphic file (type png)
 <use Figuras/flowchart.png>
-Package pdftex.def Info: Figuras/flowchart.png  used on input line 793.
+Package pdftex.def Info: Figuras/flowchart.png  used on input line 795.
 (pdftex.def)             Requested size: 229.65393pt x 542.0154pt.
 ) [55
 
@@ -2118,155 +2118,147 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [57 <./Figuras/jequiti/resultados/SeasonalNaive_fh1.png> <./Figuras/jequiti/r
 esultados/SeasonalNaive_fh3.png>] [58 <./Figuras/jequiti/resultados/SeasonalNai
 ve_fh7.png> <./Figuras/jequiti/resultados/SeasonalNaive_fh15.png>]
-<Figuras/jequiti/resultados/LinearRegression_fh1.png, id=872, 1204.5pt x 702.62
-5pt>
+<Figuras/jequiti/resultados/LinearRegression_fh1.png, id=872, 1154.3125pt x 702
+.625pt>
 File: Figuras/jequiti/resultados/LinearRegression_fh1.png Graphic file (type pn
 g)
 <use Figuras/jequiti/resultados/LinearRegression_fh1.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/LinearRegression_fh1.png  u
 sed on input line 60.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
-<Figuras/jequiti/resultados/LinearRegression_fh3.png, id=873, 1204.5pt x 702.62
-5pt>
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
+<Figuras/jequiti/resultados/LinearRegression_fh3.png, id=873, 1154.3125pt x 702
+.625pt>
 File: Figuras/jequiti/resultados/LinearRegression_fh3.png Graphic file (type pn
 g)
 <use Figuras/jequiti/resultados/LinearRegression_fh3.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/LinearRegression_fh3.png  u
 sed on input line 67.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
-<Figuras/jequiti/resultados/LinearRegression_fh7.png, id=874, 1204.5pt x 702.62
-5pt>
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
+<Figuras/jequiti/resultados/LinearRegression_fh7.png, id=874, 1154.3125pt x 702
+.625pt>
 File: Figuras/jequiti/resultados/LinearRegression_fh7.png Graphic file (type pn
 g)
 <use Figuras/jequiti/resultados/LinearRegression_fh7.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/LinearRegression_fh7.png  u
 sed on input line 74.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LinearRegression_fh15.png, id=875, 1204.5pt x 702.6
-25pt>
+<Figuras/jequiti/resultados/LinearRegression_fh15.png, id=875, 1154.3125pt x 70
+2.625pt>
 File: Figuras/jequiti/resultados/LinearRegression_fh15.png Graphic file (type p
 ng)
 <use Figuras/jequiti/resultados/LinearRegression_fh15.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/LinearRegression_fh15.png  
 used on input line 81.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [59 <./Figuras/jequiti/resultados/LinearRegression_fh1.png> <./Figuras/jequiti/
 resultados/LinearRegression_fh3.png>]
-<Figuras/jequiti/resultados/CatBoostRegressor_fh1.png, id=886, 1204.5pt x 702.6
-25pt>
-File: Figuras/jequiti/resultados/CatBoostRegressor_fh1.png Graphic file (type p
-ng)
-<use Figuras/jequiti/resultados/CatBoostRegressor_fh1.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/CatBoostRegressor_fh1.png  
-used on input line 94.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/CatBoost_fh1.png, id=886, 1154.3125pt x 702.625pt>
+File: Figuras/jequiti/resultados/CatBoost_fh1.png Graphic file (type png)
+<use Figuras/jequiti/resultados/CatBoost_fh1.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/CatBoost_fh1.png  used on i
+nput line 94.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LGBMRegressor_fh1.png, id=887, 1204.5pt x 702.625pt
->
-File: Figuras/jequiti/resultados/LGBMRegressor_fh1.png Graphic file (type png)
-<use Figuras/jequiti/resultados/LGBMRegressor_fh1.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/LGBMRegressor_fh1.png  used
- on input line 101.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/RandomForest_fh1.png, id=887, 1154.3125pt x 702.625
+pt>
+File: Figuras/jequiti/resultados/RandomForest_fh1.png Graphic file (type png)
+<use Figuras/jequiti/resultados/RandomForest_fh1.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/RandomForest_fh1.png  used 
+on input line 101.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/CatBoostRegressor_fh3.png, id=888, 1204.5pt x 702.6
-25pt>
-File: Figuras/jequiti/resultados/CatBoostRegressor_fh3.png Graphic file (type p
-ng)
-<use Figuras/jequiti/resultados/CatBoostRegressor_fh3.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/CatBoostRegressor_fh3.png  
-used on input line 108.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/CatBoost_fh3.png, id=888, 1154.3125pt x 702.625pt>
+File: Figuras/jequiti/resultados/CatBoost_fh3.png Graphic file (type png)
+<use Figuras/jequiti/resultados/CatBoost_fh3.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/CatBoost_fh3.png  used on i
+nput line 108.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LGBMRegressor_fh3.png, id=889, 1204.5pt x 702.625pt
->
-File: Figuras/jequiti/resultados/LGBMRegressor_fh3.png Graphic file (type png)
-<use Figuras/jequiti/resultados/LGBMRegressor_fh3.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/LGBMRegressor_fh3.png  used
- on input line 115.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/RandomForest_fh3.png, id=889, 1154.3125pt x 702.625
+pt>
+File: Figuras/jequiti/resultados/RandomForest_fh3.png Graphic file (type png)
+<use Figuras/jequiti/resultados/RandomForest_fh3.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/RandomForest_fh3.png  used 
+on input line 115.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/CatBoostRegressor_fh7.png, id=890, 1204.5pt x 702.6
-25pt>
-File: Figuras/jequiti/resultados/CatBoostRegressor_fh7.png Graphic file (type p
-ng)
-<use Figuras/jequiti/resultados/CatBoostRegressor_fh7.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/CatBoostRegressor_fh7.png  
-used on input line 122.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/CatBoost_fh7.png, id=890, 1154.3125pt x 702.625pt>
+File: Figuras/jequiti/resultados/CatBoost_fh7.png Graphic file (type png)
+<use Figuras/jequiti/resultados/CatBoost_fh7.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/CatBoost_fh7.png  used on i
+nput line 122.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LGBMRegressor_fh7.png, id=891, 1204.5pt x 702.625pt
->
-File: Figuras/jequiti/resultados/LGBMRegressor_fh7.png Graphic file (type png)
-<use Figuras/jequiti/resultados/LGBMRegressor_fh7.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/LGBMRegressor_fh7.png  used
- on input line 129.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/RandomForest_fh7.png, id=891, 1154.3125pt x 702.625
+pt>
+File: Figuras/jequiti/resultados/RandomForest_fh7.png Graphic file (type png)
+<use Figuras/jequiti/resultados/RandomForest_fh7.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/RandomForest_fh7.png  used 
+on input line 129.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/CatBoostRegressor_fh15.png, id=892, 1204.5pt x 702.
-625pt>
-File: Figuras/jequiti/resultados/CatBoostRegressor_fh15.png Graphic file (type 
-png)
-<use Figuras/jequiti/resultados/CatBoostRegressor_fh15.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/CatBoostRegressor_fh15.png 
- used on input line 136.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/CatBoost_fh15.png, id=892, 1154.3125pt x 702.625pt>
+
+File: Figuras/jequiti/resultados/CatBoost_fh15.png Graphic file (type png)
+<use Figuras/jequiti/resultados/CatBoost_fh15.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/CatBoost_fh15.png  used on 
+input line 136.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LGBMRegressor_fh15.png, id=893, 1204.5pt x 702.625p
-t>
-File: Figuras/jequiti/resultados/LGBMRegressor_fh15.png Graphic file (type png)
-
-<use Figuras/jequiti/resultados/LGBMRegressor_fh15.png>
-Package pdftex.def Info: Figuras/jequiti/resultados/LGBMRegressor_fh15.png  use
-d on input line 143.
-(pdftex.def)             Requested size: 397.48624pt x 231.86696pt.
+<Figuras/jequiti/resultados/RandomForest_fh15.png, id=893, 1154.3125pt x 702.62
+5pt>
+File: Figuras/jequiti/resultados/RandomForest_fh15.png Graphic file (type png)
+<use Figuras/jequiti/resultados/RandomForest_fh15.png>
+Package pdftex.def Info: Figuras/jequiti/resultados/RandomForest_fh15.png  used
+ on input line 143.
+(pdftex.def)             Requested size: 380.9243pt x 231.86696pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [60 <./Figuras/jequiti/resultados/LinearRegression_fh7.png> <./Figuras/jequiti/
 resultados/LinearRegression_fh15.png>] [61 <./Figuras/jequiti/resultados/CatBoo
-stRegressor_fh1.png> <./Figuras/jequiti/resultados/LGBMRegressor_fh1.png>]
-[62 <./Figuras/jequiti/resultados/CatBoostRegressor_fh3.png> <./Figuras/jequiti
-/resultados/LGBMRegressor_fh3.png>] [63 <./Figuras/jequiti/resultados/CatBoostR
-egressor_fh7.png> <./Figuras/jequiti/resultados/LGBMRegressor_fh7.png>]
-[64 <./Figuras/jequiti/resultados/CatBoostRegressor_fh15.png> <./Figuras/jequit
-i/resultados/LGBMRegressor_fh15.png>]) [65
+st_fh1.png> <./Figuras/jequiti/resultados/RandomForest_fh1.png>] [62 <./Figuras
+/jequiti/resultados/CatBoost_fh3.png> <./Figuras/jequiti/resultados/RandomFores
+t_fh3.png>] [63 <./Figuras/jequiti/resultados/CatBoost_fh7.png> <./Figuras/jequ
+iti/resultados/RandomForest_fh7.png>] [64 <./Figuras/jequiti/resultados/CatBoos
+t_fh15.png> <./Figuras/jequiti/resultados/RandomForest_fh15.png>]) [65
 
 ]
 \openout2 = `cap5_conclusao.aux'.
 
- (./cap5_conclusao.tex) [66
+
+(./cap5_conclusao.tex) [66
 
 
 
 
-]
-(./dissertacao.bbl
+] (./dissertacao.bbl
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 2.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2295,8 +2287,8 @@ AED: lastpage setting LastPage
 (./cap5_conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
  29613 strings out of 478287
- 552257 string characters out of 5849289
- 908069 words of memory out of 5000000
+ 551975 string characters out of 5849289
+ 907068 words of memory out of 5000000
  46796 multiletter control sequences out of 15000+600000
  519164 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2315,7 +2307,7 @@ xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pf
 b>
-Output written on dissertacao.pdf (71 pages, 4099081 bytes).
+Output written on dissertacao.pdf (71 pages, 4068639 bytes).
 PDF statistics:
  1274 PDF objects out of 1440 (max. 8388607)
  1022 compressed objects within 11 object streams
