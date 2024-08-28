@@ -432,7 +432,7 @@ Para que se tenha uma noção melhor, abaixo seguem alguns dados estatísticos r
 
 As variáveis de precipitação, mesmo considerando o somatório diário de precipitação, tiveram muitos dados zero. Nota-se isso a partir da análise da coluna ``< 50\%'', que significa metade de toda massa de dados de precipitação estavam abaixo deste valor, ou seja, metade de todos os dados de precipitação estavam em 0,00 mm/dia. Não foi, no entanto, um problema tamanha quantidade de valores zero. Para precipitação é até esperado, mas não foi possível ter certeza se de fato não houve precipitação na sub-bacia onde a estação estava inserida ou se isso reflete a dificuldade em se obter dados de medição.
 
-Quanto aos dados categóricos utilizados neste estudo, foram extraídas do campo de data as informações de dia do ano (`\textit{dayofyear}'), semana do ano (`\textit{week}'), mês (`\textit{month}'), trimestre (`\textit{quarter}') e estação do ano. Com exceção da variável `estação do ano', para a qual foi desenvolvido um algoritmo específico, as demais informações foram extraídas utilizando a biblioteca Pandas.\cite{mckinney2011pandas} Essas variáveis categóricas foram incorporadas com o objetivo de capturar o comportamento sazonal da série temporal. Observa-se que os regimes de precipitação e vazão tendem a se repetir nas estações de primavera e verão, com uma redução significativa durante o outono e inverno. A inclusão das variáveis `semana do ano' e `dia do ano' visa também identificar possíveis variações pontuais que possam ocorrer ao longo do tempo.
+Quanto aos dados categóricos utilizados neste estudo, foram extraídas do campo de data as informações de dia do ano (`\textit{dayofyear}'), semana do ano (`\textit{week}'), mês (`\textit{month}') e estação do ano. Com exceção da variável `estação do ano', para a qual foi desenvolvido um algoritmo específico, as demais informações foram extraídas utilizando a biblioteca Pandas.\cite{mckinney2011pandas} Essas variáveis categóricas foram incorporadas com o objetivo de capturar o comportamento sazonal da série temporal. Observa-se que os regimes de precipitação e vazão tendem a se repetir nas estações de primavera e verão, com uma redução significativa durante o outono e inverno. A inclusão das variáveis `semana do ano' e `dia do ano' visa também identificar possíveis variações pontuais que possam ocorrer ao longo do tempo. Todas foram codificadas no esquema ``label encoding'' e desta forma, as faixas de valores foram de 1 a 365 para `dayofyear', de 1 a 53 para `week', 1 a 12 para `month' e por fim, de 1 a 4 para `estacao'.
 
 \section{Análise exploratória dos dados}
 
@@ -599,8 +599,8 @@ Por ser um modelo simples, ele não captura tendências ou variações complexas
 O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta.
 
 \begin{equation}
-y_{t} = \beta_{0} + \beta_{1} x_{1,t} + \beta_{2} x_{2,t} + \cdots +
-\beta_{k} x_{k,t} + \varepsilon_{t}
+	y_{t} = \beta_{0} + \beta_{1} x_{1,t} + \beta_{2} x_{2,t} + \cdots +
+	\beta_{k} x_{k,t} + \varepsilon_{t}
 \end{equation}
 
 O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as variáveis independentes, que determinam o peso de cada uma destas variáveis na previsão da variável dependente. O objetivo do modelo é minimizar o somatório do erro quadrático, ou seja, a soma dos quadrados das diferenças entre os valores previstos e os valores reais.\cite{hyndman_fpp3_2024c}
@@ -664,7 +664,7 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $P_i$ valores previstos
 		\item $n$ o número total de observações
 	\end{itemize}
-
+	
 	\item \textbf{$R^2$ (\textit{Coefficient of Determination})}: O Coeficiente de Determinação, que é o quadrado do coeficiente de correlação de Pearson, mede a proporção da variância total nos dados observados que pode ser explicada pelo modelo. Ele varia de $-\inf$ a 1, com valores mais alto indicando uma melhor concordância entre os dados observados e os previstos. Embora o $R^2$ seja amplamente utilizado, ele apresenta limitações que podem resultar em uma avaliação imprecisa do desempenho de modelos hidrológicos, tal como ser uma métrica sensível a valores discrepantes (\textit{outliers}) e avaliar apenas relações lineares. Deve ser empregado com outras métricas para garantir uma boa interpretabilidade dos resultados dos modelos.\cite{legates1999goodness}
 	\begin{equation}
 		R^2 = 1 - \frac{\sum_{i=1}^{n} (O_i - {P_i})^2}{\sum_{i=1}^{n} (O_i - \bar{O})^2}
@@ -715,33 +715,33 @@ Identificadas estas estações de vazão, verifica-se em linha reta, em sentido 
 
 Aqui uma importante etapa: aplicar transformação logarítmica nos dados de vazão e precipitação para tratar o fenômeno de ``cauda longa'' dos dados.
 
-A separação dos dados do último ano, 2023, foi para posteriormente simular o uso dos modelos ao longo de um ano. Realizar ajuste (`\textit{fit}') e previsão (`\textit{predict}'), dia-a-dia, durante um ano inteiro, para avaliar a estabilidade dos modelos. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`\textit{direct forecasting}'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`\textit{recursive forecasting}'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `\textit{backtesting}' \cite{skforecast})
+A separação dos dados do último ano, 2023, foi para posteriormente simular o uso dos modelos ao longo de um ano. Realizar ajuste (`\textit{fit}') e previsão (`\textit{predict}'), dia-a-dia, durante um ano inteiro, para avaliar a estabilidade dos modelos. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`\textit{direct forecasting}'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`\textit{recursive forecasting}'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `\textit{backtesting}' \cite{skforecast_a})
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/skforecast-diagram-backtesting-refit.png}
-	\caption{Diagrama mostrando a divisão dos dados de treino/teste com \textit{refit}.\\(fonte: \cite{skforecast})}
+	\caption{Diagrama mostrando a divisão dos dados de treino/teste com \textit{refit}.\\(fonte: \cite{skforecast_a})}
 	\label{fig:skforecast-diagram-backtesting-refit}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/imagem1_skforecast-backtesting-refit.png}
-	\caption{WFV com janela expandida e \textit{refit} - imagem 1.\\(fonte: \cite{skforecast})}
+	\caption{WFV com janela expandida e \textit{refit} - imagem 1.\\(fonte: \cite{skforecast_a})}
 	\label{fig:imagem1_skforecast-backtesting-refit}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/imagem2_skforecast-backtesting-refit.png}
-	\caption{WFV com janela expandida e \textit{refit} - imagem 2.\\(fonte: \cite{skforecast})}
+	\caption{WFV com janela expandida e \textit{refit} - imagem 2.\\(fonte: \cite{skforecast_a})}
 	\label{fig:imagem2_skforecast-backtesting-refit}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/imagem3_skforecast-backtesting-refit.png}
-	\caption{WFV com janela expandida e \textit{refit} - imagem 3.\\(fonte: \cite{skforecast})}
+	\caption{WFV com janela expandida e \textit{refit} - imagem 3.\\(fonte: \cite{skforecast_a})}
 	\label{fig:imagem3_skforecast-backtesting-refit}
 \end{figure}
 
@@ -750,34 +750,55 @@ Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações e
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/skforecast-diagram-backtesting-no-refit.png}
-	\caption{Diagrama mostrando a divisão dos dados de treino/teste sem \textit{refit}.\\(fonte: \cite{skforecast})}
+	\caption{Diagrama mostrando a divisão dos dados de treino/teste sem \textit{refit}.\\(fonte: \cite{skforecast_a})}
 	\label{fig:skforecast-diagram-backtesting-no-refit}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/imagem1_skforecast-backtesting-no-refit.png}
-	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 1.\\(fonte: \cite{skforecast})}
+	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 1.\\(fonte: \cite{skforecast_a})}
 	\label{fig:imagem1_skforecast-backtesting-no-refit}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/imagem2_skforecast-backtesting-no-refit.png}
-	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 2.\\(fonte: \cite{skforecast})}
+	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 2.\\(fonte: \cite{skforecast_a})}
 	\label{fig:imagem2_skforecast-backtesting-no-refit}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.3]{Figuras/imagem3_skforecast-backtesting-no-refit.png}
-	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 3.\\(fonte: \cite{skforecast})}
+	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 3.\\(fonte: \cite{skforecast_a})}
 	\label{fig:imagem3_skforecast-backtesting-no-refit}
 \end{figure}
 
 Evidentemente que para o horizonte de previsão de 1 dia não há reexecução do modelo, apenas para os outros horizontes.
 
-O desempenho dos resultados são avaliados com algumas das métricas propostas, para cada modelo do trabalho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 90\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de previsão de 90\% (``\textit{lo-90}'' e ``\textit{hi-90}''), o valor real observado futuro tem 90\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a} Mais sobre intervalos de previsão será discutido à medida que os resultados dos modelos forem apresentados.
+Após cada previsão, em cada horizonte proposto, os dados são retornados para a escala original, a transformação log é desfeita. Isso foi realizado para facilitar a leitura e interpretação dos gráficos.
+
+O desempenho dos resultados são avaliados com algumas das métricas propostas, para cada modelo do trabalho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 95\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de previsão de 95\% (``\textit{lo-95}'' e ``\textit{hi-95}''), o valor real observado futuro tem 95\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a} Apesar de estar sendo usado intervalo de previsão de 95\% na análise, nem sempre o valor real é capturado. Existe uma incerteza quanto à previsão. Esta incerteza advém da própria incerteza dos dados hidrológicos e também por assumir que os erros do passado se manterão parecidos nas previsões. Estes erros são os chamados ``in sample residuals'', resíduos das previsões realizadas no passo de treinamento dos dados. É com estes resíduos, que são sorteados da massa de resíduos e geram novas prováveis previsões, que, no final, comporão o cálculo do intervalo de previsão.(figura \ref{fig:diagram-bootstrapping-prediction-intervals})
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{Figuras/diagram-bootstrapping-prediction-intervals.png}
+	\caption{Diagrama de intervalo de previsão.\\(fonte: \cite{skforecast_b})}
+	\label{fig:diagram-bootstrapping-prediction-intervals}
+\end{figure}
+
+
+Um fenômeno que pode acontecer é os intervalos de previsão serem estreitos.\cite{RobHyndman_prediction_intervals} Isso porque os modelos não conseguem capturar todos as fontes de incerteza à partir dos dados, a saber:
+
+\begin{itemize}
+	\item O termo de erro aleatório
+	\item As estimativas dos parâmetros dos modelos
+	\item A escolha do modelo para trabalhar os dados históricos
+	\item A continuação, no futuro, do processo que gerou os dados históricos
+\end{itemize}
+
+Ao produzir intervalos de previsão para modelos de séries temporais, geralmente apenas a primeira dessas fontes é levada em consideração. Portanto, foi criada uma métrica para avaliar a qualidade dos intervalos de previsão, que verificou a cobertura empírica dos intervalos. Não confiou-se apenas na cobertura esperada para os intervalos. Ficou assim: para cada dia previsto foi feito um teste lógico para verificar se o valor real observado (`y\_true') esteve acima do valor mínimo do intervalo (`lo-95') \textbf{e} abaixo do valor máximo (`hi-95'). Para quando estes dois testes lógicos fossem verdadeiros, adicionava o valor 1 a um vetor, e 0 quando um destes testes lógicos falhasse, ou seja, o `y\_true' estava de algum modo fora do intervalo. Ao final, calculou a média deste vetor e multiplicou por 100 para uma saída percentual. Se o número final fosse 95\% a 100\% então significa que os intervalos de previsão capturaram perfeitamente o valor real futuro. Se abaixo de 95\% significa que em algum ponto da previsão, o valor real ficou para fora destes limites, ou abaixo do valor mínimo ou acima do valor máximo. Isso ficará mais claro quando os resultados forem discutidos.
 
 Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a \textit{Walk-Forward Validation}. E finalmente, análise das variáveis do trabalho, buscando entendimento quanto à importância desempenhada por cada uma, empregando o método SHAP.
 

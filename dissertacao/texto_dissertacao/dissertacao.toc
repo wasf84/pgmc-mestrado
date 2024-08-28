@@ -39,15 +39,15 @@
 \contentsline {section}{\numberline {3.7}Métricas de Avaliação}{49}{section.103}%
 \contentsline {section}{\numberline {3.8}Modelo proposto}{51}{section.109}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{56}{chapter.120}%
-\contentsline {section}{\numberline {4.1}Desempenho dos modelos}{56}{section.121}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{56}{subsection.122}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{65}{section.139}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{65}{section.140}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{58}{chapter.121}%
+\contentsline {section}{\numberline {4.1}Desempenho dos modelos}{58}{section.122}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{58}{subsection.123}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{67}{section.140}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{67}{section.141}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{66}{chapter.141}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{66}{section.142}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{66}{section.143}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{66}{section.144}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{68}{chapter.142}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{68}{section.143}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{68}{section.144}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{68}{section.145}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{67}{chapter*.146}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{69}{chapter*.147}%

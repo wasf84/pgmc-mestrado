@@ -18,47 +18,49 @@ Warning--entry type for "g1_temporal_es_2024" isn't style-file defined
 --line 480 of file referencias.bib
 Warning--entry type for "g1_cantareira_2015" isn't style-file defined
 --line 489 of file referencias.bib
-Warning--entry type for "skforecast" isn't style-file defined
+Warning--entry type for "skforecast_a" isn't style-file defined
 --line 660 of file referencias.bib
-You've used 35 entries,
+Warning--entry type for "skforecast_b" isn't style-file defined
+--line 671 of file referencias.bib
+You've used 36 entries,
             2773 wiz_defined-function locations,
-            792 strings with 12450 characters,
-and the built_in function-call counts, 14789 in all, are:
-= -- 1271
-> -- 975
-< -- 27
-+ -- 342
-- -- 303
-* -- 1119
-:= -- 2342
-add.period$ -- 132
-call.type$ -- 35
-change.case$ -- 203
-chr.to.int$ -- 31
-cite$ -- 70
-duplicate$ -- 587
-empty$ -- 1162
-format.name$ -- 353
-if$ -- 3056
+            796 strings with 12629 characters,
+and the built_in function-call counts, 15088 in all, are:
+= -- 1297
+> -- 985
+< -- 28
++ -- 346
+- -- 306
+* -- 1136
+:= -- 2387
+add.period$ -- 135
+call.type$ -- 36
+change.case$ -- 207
+chr.to.int$ -- 32
+cite$ -- 72
+duplicate$ -- 602
+empty$ -- 1194
+format.name$ -- 357
+if$ -- 3120
 int.to.chr$ -- 5
 int.to.str$ -- 1
 missing$ -- 12
-newline$ -- 210
-num.names$ -- 140
-pop$ -- 473
+newline$ -- 215
+num.names$ -- 144
+pop$ -- 485
 preamble$ -- 1
-purify$ -- 170
+purify$ -- 173
 quote$ -- 0
-skip$ -- 526
+skip$ -- 539
 stack$ -- 0
-substring$ -- 206
-swap$ -- 50
+substring$ -- 208
+swap$ -- 52
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 380
+type$ -- 391
 warning$ -- 0
-while$ -- 116
+while$ -- 119
 width$ -- 0
-write$ -- 491
-(There were 6 warnings)
+write$ -- 503
+(There were 7 warnings)

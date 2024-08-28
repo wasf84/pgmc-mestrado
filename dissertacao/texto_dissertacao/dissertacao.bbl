@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -73,10 +73,17 @@ Anna~Veronika Dorogush, Vasily Ershov, and Andrey Gulin.
 \newblock Catboost: gradient boosting with categorical features support.
 \newblock \emph{arXiv preprint arXiv:1810.11363}, 2018.
 
-\bibitem[e~Javier Escobar~Ortiz(2024)]{skforecast}
+\bibitem[e~Javier Escobar~Ortiz(2024a)]{skforecast_a}
 Joaquin Amat~Rodrigo e~Javier Escobar~Ortiz.
-\newblock skforecast, 8 2024.
+\newblock skforecast, 8 2024a.
 \newblock URL \url{https://skforecast.org/}.
+
+\bibitem[e~Javier Escobar~Ortiz(2024b)]{skforecast_b}
+Joaquin Amat~Rodrigo e~Javier Escobar~Ortiz.
+\newblock skforecast - probabilistic forecasting: prediction intervals and
+  prediction distribution, 8 2024b.
+\newblock URL
+  \url{https://skforecast.org/0.13.0/user_guides/probabilistic-forecasting}.
 
 \bibitem[{Empresa de Pesquisa Energética (Brasil)}(2023)]{epe2023ben}
 {Empresa de Pesquisa Energética (Brasil)}.
