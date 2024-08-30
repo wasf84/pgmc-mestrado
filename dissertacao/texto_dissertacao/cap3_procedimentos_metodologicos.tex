@@ -132,11 +132,11 @@ Considerando esse fenômeno, o preenchimento dos dados faltantes foi realizado r
 
 Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem sempre preenchia exatamente as lacunas. Quando havia muitos dados faltantes no início da série, por exemplo, isso causava problema e a inserção de dados falhava. O que é o comportamento normal.
 
-Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam faltantes. Para esses casos nulos, foi aplicada a imputação de dados utilizando o modelo kNN (k-Nearest Neighbors - k-vizinhos mais próximos), com o objetivo de garantir uma melhor dispersão dos valores imputados. O modelo kNN operou calculando a distância euclidiana dos pontos nulos utilizando os sete vizinhos mais próximos, atribuindo maior peso aos vizinhos mais próximos no cálculo. Esse método de imputação visou preservar a tendência local e o comportamento da série temporal dentro da semana em que o dado faltante estava. Após esta nova fase de imputação dos dados as séries ficaram completamente preenchidas.
+Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam faltantes. Para esses casos nulos, foi aplicada a imputação de dados utilizando o modelo kNN (k-Nearest Neighbors - k-vizinhos mais próximos), com o objetivo de garantir uma melhor dispersão dos valores imputados. O modelo kNN operou calculando a distância euclidiana dos pontos nulos \underline{utilizando os sete vizinhos mais próximos}, atribuindo maior peso aos vizinhos mais próximos no cálculo. Esse método de imputação visou preservar a tendência local e o comportamento da série temporal dentro da semana em que o dado faltante estava. Após esta nova fase de imputação dos dados as séries ficaram completamente preenchidas.
 
 É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos.
 
-Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação registrado nos sistemas da ANA. A mesma analogia serve para as estações telemétricas. O nome `t\_cv\_54790000' significa `estação telemétrica de precipitação, código 54790000'.
+Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação em questão. A mesma analogia serve para as estações telemétricas. O nome `t\_vz\_54790000' significa `estação telemétrica de vazão, código 54790000'.
 
 \subsection{Rio Jequitinhonha}
 
@@ -218,7 +218,7 @@ Note que no início desta série de precipitação, o ano de 2013, não possuem 
 
 \subsection{Rio Doce}
 
-A estação alvo para o rio Doce é a estação c\_vz\_56994500. Sua série temporal foi a que apresentou melhor qualidade no que diz respeito à frequência de medições realizadas. Havia falta de apenas 3 dias, dos 4017 dias do período inteiro. Apenas o preenchimento sazonal bastou para completar a série e não foi preciso mais que isso. Cabe destacar a sazonalidade da série. Ficou bastante evidente este comportamento. (figura \ref{fig:doceSerieCompleta_c_vz_56994500})
+A estação alvo para o rio Doce é a estação c\_vz\_56994500. Sua série temporal foi a que apresentou melhor qualidade no que diz respeito à frequência de medições realizadas. Faltavam apenas 3 dias dos 4017 dias do período inteiro. Apenas o preenchimento sazonal bastou para completar a série e não foi preciso mais que isso. Cabe destacar a sazonalidade da série. Ficou bastante evidente este comportamento. (figura \ref{fig:doceSerieCompleta_c_vz_56994500})
 
 \begin{figure}[!h]
 	\centering
@@ -229,7 +229,7 @@ A estação alvo para o rio Doce é a estação c\_vz\_56994500. Sua série temp
 
 Se para os dados de vazão no rio Doce a série foi, digamos, mais comportada, o mesmo não se pode dizer exatamente das estações de chuva. Ao menos, não para duas delas. Estas estações tiveram os dados desconsiderados e foram removidos das análises. Primeiro foi a estação t\_cv\_56990850 que possuía valores discrepantes demais para serem considerados. Valores da ordem de 7000 mm/dia, 8500 mm/dia. Além deste problema, havia ainda 3134 dias com dados nulos, o que representava 78\% do total. (figura \ref{fig:doceSerieIncompleta_t_cv_56990850})
 
-A outra estação removida foi a t\_cv\_56994500. Conforme pode ser observado na figura \ref{fig:doceSerieCompleta_t_cv_56994500}, nela havia um longo hiato de dados zerados, voltando à normalidade apenas mais recentemente. Como as informações de precipitação que deveria haver para a estação no período do hiato, pode ser retirado de outras estações usadas na modelagem, optou-se por remover esta estação completamente do trabalho.
+A outra estação removida foi a t\_cv\_56994500. Conforme pode ser observado na figura \ref{fig:doceSerieCompleta_t_cv_56994500}, nela havia um longo hiato de dados zerados, voltando à normalidade apenas mais recentemente. Como as informações de precipitação que deveria haver para a estação no período do hiato podem ser retiradas de outras estações usadas na modelagem, optou-se por remover esta estação completamente do trabalho.
 
 \begin{figure}[!h]
 	\centering
@@ -428,19 +428,35 @@ Para que se tenha uma noção melhor, abaixo seguem alguns dados estatísticos r
 \end{table}
 \clearpage
 
-É possível identificar algumas questões importantes sobre a massa de dados a partir destas tabelas. Observe que para o rio Jequitinhonha (tabela \ref{tab:variaveis_jequitinhonha}) a vazão mínima foi 0,00 $m^3/s$, o que denotaria que o rio passou por um período de seca. Porém não foi encontrado, seja em artigos científicos sobre o rio, quanto em matérias de jornais, que o rio Jequitinhonha tenha passado por isso no período analisado. Não é de se surpreender, contudo, que estes valores zero tenham sido inseridos quando da imputação dos dados, visto que este trecho da série temporal era onde estava a maior lacuna. No entanto, não foi feita substituição dos valores zero por, por exemplo, a média de vazão. Problemas com falta de dados e crítica quanto aos dados inseridos não foram feitas. Estas e outras incertezas que permearam todas análises foram, onde puder e couber, discutidas, mas manteve-se o trabalho mesmo com estas questões levantadas, sem fazer um tratamento específico. Uma observação geral sobre os dados de vazão é que existe uma amplitude elevada entre o mínimo e o máximo, em todas as estações utilizadas, com uma pequena variação para o rio Grande. Contudo, com este rio especificamente, os dados de vazão tiveram alguns problemas e dificuldades e é provável que estes números não estejam coerentes com a realidade. Mas o rio Doce é realmente considerável. (tabela \ref{tab:variaveis_rio_doce}) Vale destacar, no entanto, que esta amplitude não especifica se foi dentro de um ano. É ao longo de toda série temporal, ou seja, ao longo dos 11 anos de dados considerados.
+É possível identificar algumas questões importantes sobre a massa de dados a partir destas tabelas. Observe que para o rio Jequitinhonha (tabela \ref{tab:variaveis_jequitinhonha}) a vazão mínima foi 0,00 $m^3/s$, o que denotaria que o rio passou por um período de seca. Porém não foi encontrado, seja em artigos científicos sobre o rio, quanto em matérias de jornais, que o rio Jequitinhonha tenha passado por isso no período analisado. Não é de se surpreender, contudo, que estes valores zero tenham sido inseridos quando da imputação dos dados, visto que este trecho da série temporal era onde estava a maior lacuna. No entanto, não foi feita substituição dos valores zero por, digamos, a média de vazão. Estas e outras incertezas que permearam todas análises foram, onde puder e couber, discutidas, mas manteve-se o trabalho mesmo com estas questões levantadas, sem fazer um tratamento específico. Uma observação geral sobre os dados de vazão é que existe uma amplitude elevada entre o mínimo e o máximo, em todas as estações utilizadas, com uma pequena variação para o rio Grande. Contudo, com este rio especificamente, os dados de vazão tiveram alguns problemas e dificuldades e é provável que estes números não estejam coerentes com a realidade. Mas o rio Doce é realmente considerável. (tabela \ref{tab:variaveis_rio_doce}) Vale destacar, no entanto, que esta amplitude não especifica se foi dentro de um ano. É ao longo de toda série temporal, ou seja, ao longo dos 11 anos de dados considerados.
 
-As variáveis de precipitação, mesmo considerando o somatório diário de precipitação, tiveram muitos dados zero. Nota-se isso a partir da análise da coluna ``< 50\%'', que significa metade de toda massa de dados de precipitação estavam abaixo deste valor, ou seja, metade de todos os dados de precipitação estavam em 0,00 mm/dia. Não foi, no entanto, um problema tamanha quantidade de valores zero. Para precipitação é até esperado, mas não foi possível ter certeza se de fato não houve precipitação na sub-bacia onde a estação estava inserida ou se isso reflete a dificuldade em se obter dados de medição.
+As variáveis de precipitação, mesmo considerando o somatório diário de precipitação, tiveram muitos dados zero. Nota-se isso a partir da análise da coluna ``< 50\%'', que significa metade de toda massa de dados de precipitação estavam abaixo deste valor, ou seja, metade de todos os dados de precipitação estavam em 0,00 mm/dia. Isso reflete a dificuldade em se obter dados de precipitação. Essa enorme quantidade de valores zerados poderiam prejudicar as análises. Foi então que algumas variáveis adicionais foram inseridas para todos os rios deste trablho em vias de aflorar a importância das precipitações nas análises, tentar dar um peso significativo à elas no treinamento dos modelos. As novas variáveis foram:
 
-Quanto aos dados categóricos utilizados neste estudo, foram extraídas do campo de data as informações de dia do ano (`\textit{dayofyear}'), semana do ano (`\textit{week}'), mês (`\textit{month}') e estação do ano. Com exceção da variável `estação do ano', para a qual foi desenvolvido um algoritmo específico, as demais informações foram extraídas utilizando a biblioteca Pandas.\cite{mckinney2011pandas} Essas variáveis categóricas foram incorporadas com o objetivo de capturar o comportamento sazonal da série temporal. Observa-se que os regimes de precipitação e vazão tendem a se repetir nas estações de primavera e verão, com uma redução significativa durante o outono e inverno. A inclusão das variáveis `semana do ano' e `dia do ano' visa também identificar possíveis variações pontuais que possam ocorrer ao longo do tempo. Todas foram codificadas no esquema ``label encoding'' e desta forma, as faixas de valores foram de 1 a 365 para `dayofyear', de 1 a 53 para `week', 1 a 12 para `month' e por fim, de 1 a 4 para `estacao'.
+\begin{table}[!h]
+	\centering \small
+	\caption{Variáveis acumuladas para as precipitações \\(fonte: o autor)}
+	\begin{tabular}{|l|l|} \hline 
+		\textbf{Nome da variável}    & \textbf{Descrição}                          \\\hline
+		<ESTAÇÃO>\_soma\_3\_dias     & Soma das precipitações dos últimos 3 dias   \\\hline
+		<ESTAÇÃO>\_soma\_7\_dias     & Soma das precipitações dos últimos 7 dias   \\\hline
+		<ESTAÇÃO>\_media\_30\_dias   & Média das precipitações dos últimos 30 dias \\\hline
+	\end{tabular}
+	\label{tab:variaveis_acumuladas}
+\end{table}
+
+Quanto aos dados categóricos utilizados neste estudo, inicialmente foi pensado utilizar as informações de dia do ano (`\textit{dayofyear}'), semana do ano (`\textit{week}'), mês (`\textit{month}') e estação do ano. Com exceção da variável de estação do ano (`estacao'), para a qual foi desenvolvido um algoritmo específico, as demais informações foram extraídas utilizando a biblioteca Pandas.\cite{mckinney2011pandas} Porém, as variáveis `\textit{week}' e `\textit{dayofyear}' possuem uma elevada cardinalidade, que vão de 1 a 53 e de 1 a 365 (366 em ano bissexto), respectivamente. Isso poderia representar um problema para o modelo de regressão linear, causar um enviesamento do modelo devido a estes valores ficarem numa escala superior às demais variáveis, fosse com os dados log-transformados, fosse com os dados normalizados de 0 a 1 (MinMax). E estas variáveis não devem ser transformadas pois isso tiraria o caráter categórico delas. Como prática comum, aplica-se transformações apenas nas variáveis contínuas.
+
+Pois bem, havia uma dificuldade aqui, uma vez que essas variáveis categóricas seriam incorporadas com o objetivo de capturar o comportamento sazonal da série temporal. Numa análise mais aprofundada, optou-se por retirar ambas as variáveis `\textit{week}' e `\textit{dayofyear}' pois as informações que elas guardam poderiam estar contidas nas variáveis de `estacao' e `\textit{month}'. Há uma correlação elevada entre o dia do ano, a semana do ano e o mês do ano e como o problema era a cardinalidade daquelas variáveis, mês do ano passou, desta forma, a representar também a informação de que se precisava.
+
+Observa-se que os regimes de precipitação e vazão tendem a se repetir nas estações de primavera e verão, com uma redução significativa durante o outono e inverno. Por isso `estacao' foi utilizada. Todas variáveis foram codificadas no esquema ``\textit{label encoding}'' e desta forma as faixas de valores foram 1 a 12 para `\textit{month}' e de 1 a 4 para `estacao'.
 
 \section{Análise exploratória dos dados}
 
 Com os dados ajustados, algumas variáveis removidas e as séries temporais contínuas, deu-se início à análise exploratória dos dados. Esta etapa é fundamental para compreender o comportamento das séries temporais.
 
-As análises realizadas foram idênticas para todos os rios estudados, de modo que a descrição desta fase será apresentada de forma geral, sem a necessidade de subdivisão por bacia hidrográfica.
+As análises realizadas foram idênticas para todos os rios estudados, de modo que a descrição desta fase será apresentada de forma geral, sem a necessidade de subdivisão por rio.
 
-O primeiro passo foi verificar a sazonalidade dos dados. Foram avaliadas apenas as variáveis endógenas, ou seja, as vazões. Um teste de autocorrelação foi suficiente para identificar a presença de sazonalidade. Além disso, realizou-se a decomposição das séries temporais em suas componentes sazonais para uma análise mais detalhada. A autocorrelação é uma ferramenta essencial para identificar como os valores passados influenciam os valores futuros em uma série temporal, permitindo a detecção de padrões sazonais, ciclos e tendências.
+O primeiro passo foi verificar a sazonalidade dos dados. Foram avaliadas apenas as variáveis endógenas, ou seja, as vazões. Um teste de autocorrelação foi suficiente para identificar a presença de sazonalidade. Além disso, realizou-se a decomposição das séries temporais em suas componentes sazonais para uma análise mais detalhada. A função de autocorrelação (ACF) é uma ferramenta essencial para identificar como os valores passados influenciam os valores futuros em uma série temporal, permitindo a detecção de padrões sazonais, ciclos e tendências.
 
 A decomposição das séries temporais foi realizada utilizando a biblioteca StatsModels, aplicando o modelo aditivo.\cite{seabold2010statsmodels} A série temporal do rio Grande apresentou o pior desempenho em termos de autocorrelação.(figura \ref{fig:acf_rio_grande}) A decomposição da série também revelou um comportamento mais ruidoso, o que pode ser atribuído ao fato de esta série conter mais lacunas e apresentar maiores desafios no preenchimento dos dados ausentes.(figura \ref{fig:sazonalidade_rio_grande}) Nos gráficos de autocorrelação, o \textit{lag} de 365 dias – correspondente a um ano – foi destacado com uma linha preta vertical.
 
@@ -500,7 +516,7 @@ A decomposição das séries temporais foi realizada utilizando a biblioteca Sta
 	\label{fig:sazonalidade_rio_sao_francisco}
 \end{figure}
 
-As séries temporais consideradas, digamos, mais bem comportadas foram as dos rios Doce e São Francisco. A decomposição sazonal da série do rio Jequitinhonha apresentou algum nível de ruído, embora a sazonalidade tenha sido identificada de forma clara.
+As séries temporais consideradas, digamos, mais bem comportadas foram as dos rios Doce e São Francisco.(figuras (\ref{fig:acf_rio_doce}), (\ref{fig:acf_rio_sao_francisco})) A decomposição sazonal da série do rio Jequitinhonha apresentou algum nível de ruído, embora a sazonalidade tenha sido caracterizada de forma clara.
 
 %Além da sazonalidade, a análise exploratória também incluiu a verificação da estacionariedade das séries temporais. Embora modelos estatísticos como o ARIMA não tenham sido aplicados neste trabalho, a identificação da estacionariedade é um aspecto relevante para qualquer modelo que venha a ser utilizado. Uma série estacionária possui propriedades estatísticas, como média, variância e autocorrelação, que permanecem constantes ao longo do tempo. Isso pode favorecer a convergência dos modelos preditivos e melhorar sua capacidade de previsão.
 %
@@ -516,72 +532,70 @@ A mitigação do efeito de cauda longa é particularmente relevante para modelos
 
 Posto que os dados contêm valores iguais a zero, a transformação pelo logaritmo natural (ln(.)) não foi aplicada, pois o cálculo de logaritmo não é definido para valores zero. Ao invés disso, foi utilizada a transformação `log1p(.)' da biblioteca NumPy \cite{numpyref}, que adiciona 1 ao valor antes da transformação, evitando erros relacionados ao logaritmo de zero.
 
-Existem outras formas de ajustar a distribuição dos dados, tais como Box-Cox, Yeo-Johnson e transformação por quantis, mas é necessário que haja reversibilidade nos valores finais preditos e que garanta interpretabilidade, por isso optou-se por uma transformação simples mas que atendeu satisfatoriamente ao próposito. [REF REF]
+Existem outras formas de ajustar a distribuição dos dados, tais como Box-Cox, Yeo-Johnson e transformação por quantis [REF REF], mas era necessário que houvesse fácil reversibilidade nos valores finais preditos e que garantisse interpretabilidade, por isso optou-se por uma transformação simples mas que atendeu satisfatoriamente ao próposito.
 
-Após a transformação a distribuição dos eventos ficou menos assimétrica, mais próximo de 0, como pode ser visto nas figuras \ref{fig:jequitinhonha_antes_log}, \ref{fig:jequitinhonha_depois_log}, \ref{fig:rio_doce_antes_log}, \ref{fig:rio_doce_depois_log}, \ref{fig:rio_grande_antes_log}, \ref{fig:rio_grande_depois_log}, \ref{fig:rio_sao_francisco_antes_log}, \ref{fig:rio_sao_francisco_depois_log}. Para o rio Grande, visualmente, parece não ter havido tanta diferença, mas quando se analisa os valores originais e transformados, houve um achatamento na distância entre os valores máximo e o mínimo da série.
+Após a transformação a distribuição dos eventos ficou menos assimétrica, como pode ser visto nas figuras \ref{fig:jequitinhonha_antes_log}, \ref{fig:jequitinhonha_depois_log}, \ref{fig:rio_doce_antes_log}, \ref{fig:rio_doce_depois_log}, \ref{fig:rio_grande_antes_log}, \ref{fig:rio_grande_depois_log}, \ref{fig:rio_sao_francisco_antes_log}, \ref{fig:rio_sao_francisco_depois_log}. Para o rio Grande, visualmente, parece não ter havido tanta diferença, mas quando se analisa os valores originais e transformados, houve um achatamento na distância entre os valores máximo e o mínimo da série.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/jequiti/jequitinhonha_antes_log.png}
+	\includegraphics[scale=0.33]{Figuras/jequiti/jequitinhonha_antes_log.png}
 	\caption{Dados originais para o rio Jequitinhonha\\(fonte: o autor)}
 	\label{fig:jequitinhonha_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/jequiti/jequitinhonha_depois_log.png}
-	\caption{Dados transformados para o rio Jequitinhonha\\(fonte: o autor)}
+	\includegraphics[scale=0.33]{Figuras/jequiti/jequitinhonha_depois_log.png}
+	\caption{Dados log-transformados para o rio Jequitinhonha\\(fonte: o autor)}
 	\label{fig:jequitinhonha_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/rio_doce/rio_doce_antes_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_doce/rio_doce_antes_log.png}
 	\caption{Dados originais para o rio Doce\\(fonte: o autor)}
 	\label{fig:rio_doce_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/rio_doce/rio_doce_depois_log.png}
-	\caption{Dados transformados para o rio Doce\\(fonte: o autor)}
+	\includegraphics[scale=0.33]{Figuras/rio_doce/rio_doce_depois_log.png}
+	\caption{Dados log-transformados para o rio Doce\\(fonte: o autor)}
 	\label{fig:rio_doce_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/rio_grande/rio_grande_antes_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_grande/rio_grande_antes_log.png}
 	\caption{Dados originais para o rio Grande\\(fonte: o autor)}
 	\label{fig:rio_grande_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/rio_grande/rio_grande_depois_log.png}
-	\caption{Dados transformados para o rio Grande\\(fonte: o autor)}
+	\includegraphics[scale=0.33]{Figuras/rio_grande/rio_grande_depois_log.png}
+	\caption{Dados log-transformados para o rio Grande\\(fonte: o autor)}
 	\label{fig:rio_grande_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png}
 	\caption{Dados originais para o rio São Francisco\\(fonte: o autor)}
 	\label{fig:rio_sao_francisco_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png}
-	\caption{Dados transformados para o rio São Francisco\\(fonte: o autor)}
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png}
+	\caption{Dados log-transformados para o rio São Francisco\\(fonte: o autor)}
 	\label{fig:rio_sao_francisco_depois_log}
 \end{figure}
 \clearpage
 
-Para finalizar, uma análise comumente realizada em séries temporais é a verificação de sua estacionariedade. No entanto, neste estudo, essa avaliação não foi realizada, pois séries temporais de dados ambientais, como precipitação e vazão, geralmente apresentam sazonalidade e tendências que violam o conceito de estacionariedade conforme explicado em \citet{hyndman_fpp3_2024e}. Outros desafios a esta análise também incluem a rápida mudança no uso do solo e remoção de cobertura vegetal original, alterando significativamente a dinâmica hidrológica da região.\cite{rayyan-33388453}
+Para finalizar, uma análise comumente realizada em séries temporais é a verificação de sua estacionariedade. A estacionariedade pressupõe que características estatísticas da série, como média e variância, permaneçam constantes ao longo do tempo. No entanto, neste estudo, essa avaliação não foi realizada, pois séries temporais de dados ambientais, como precipitação e vazão, geralmente apresentam sazonalidade e tendências que violam o conceito de estacionariedade, conforme explicado em \citet{hyndman_fpp3_2024e}. Outros desafios a esta análise também incluem a rápida mudança do uso do solo e remoção de cobertura vegetal original, alterando significativamente a dinâmica hidrológica da região.\cite{rayyan-33388453}
 
-A estacionariedade pressupõe que as características estatísticas da série, como média, variância e autocorrelação, permaneçam constantes ao longo do tempo. No entanto, dados ambientais, especialmente os relacionados a fenômenos hidrológicos, costumam exibir padrões sazonais marcados e eventos extremos, o que torna inadequada a aplicação de testes de estacionariedade tradicionais. As séries de precipitação podem ser influenciadas por fatores externos, como mudanças climáticas ou eventos meteorológicos excepcionais, resultando em variações significativas ao longo do tempo. No caso da vazão, variações no uso e ocupação do solo causam impacto no escoamento.
-
-Essas características, longe de serem consideradas como ruído ou anomalias, fazem parte da própria natureza dos dados ambientais e são cruciais para a modelagem e previsão. Assim, em vez de tentar forçar a estacionariedade, este trabalho optou por lidar com a sazonalidade e as tendências diretamente, utilizando técnicas que captam essas dinâmicas, visando garantir previsões mais realistas e representativas dos processos hidrológicos.
+Essas características, longe de serem consideradas como ruído ou anomalias, fazem parte da própria natureza dos dados ambientais e são cruciais para a modelagem e previsão. Assim, em oposição a tentar forçar a estacionariedade, este trabalho optou por lidar com a sazonalidade e as tendências diretamente, utilizando técnicas que captam essas dinâmicas, visando garantir previsões mais realistas e representativas dos processos hidrológicos.
 
 \section{Modelos de Aprendizado de Máquina}
 %Apresentar os modelos de ML utilizados (SeasonalNaive, LinearRegression, CatBoost e LightGBM) e justificativas.
@@ -665,16 +679,16 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $n$ o número total de observações
 	\end{itemize}
 	
-	\item \textbf{$R^2$ (\textit{Coefficient of Determination})}: O Coeficiente de Determinação, que é o quadrado do coeficiente de correlação de Pearson, mede a proporção da variância total nos dados observados que pode ser explicada pelo modelo. Ele varia de $-\inf$ a 1, com valores mais alto indicando uma melhor concordância entre os dados observados e os previstos. Embora o $R^2$ seja amplamente utilizado, ele apresenta limitações que podem resultar em uma avaliação imprecisa do desempenho de modelos hidrológicos, tal como ser uma métrica sensível a valores discrepantes (\textit{outliers}) e avaliar apenas relações lineares. Deve ser empregado com outras métricas para garantir uma boa interpretabilidade dos resultados dos modelos.\cite{legates1999goodness}
-	\begin{equation}
-		R^2 = 1 - \frac{\sum_{i=1}^{n} (O_i - {P_i})^2}{\sum_{i=1}^{n} (O_i - \bar{O})^2}
-	\end{equation}
-	\begin{itemize}
-		\item $O_i$ valores observados
-		\item $P_i$ valores previstos
-		\item $\bar{O}$ média dos valores observados
-		\item $n$ o número total de observações
-	\end{itemize}
+%	\item \textbf{$R^2$ (\textit{Coefficient of Determination})}: O Coeficiente de Determinação, que é o quadrado do coeficiente de correlação de Pearson, mede a proporção da variância total nos dados observados que pode ser explicada pelo modelo. Ele varia de $-\inf$ a 1, com valores mais alto indicando uma melhor concordância entre os dados observados e os previstos. Embora o $R^2$ seja amplamente utilizado, ele apresenta limitações que podem resultar em uma avaliação imprecisa do desempenho de modelos hidrológicos, tal como ser uma métrica sensível a valores discrepantes (\textit{outliers}) e avaliar apenas relações lineares. Deve ser empregado com outras métricas para garantir uma boa interpretabilidade dos resultados dos modelos.\cite{legates1999goodness}
+%	\begin{equation}
+%		R^2 = 1 - \frac{\sum_{i=1}^{n} (O_i - {P_i})^2}{\sum_{i=1}^{n} (O_i - \bar{O})^2}
+%	\end{equation}
+%	\begin{itemize}
+%		\item $O_i$ valores observados
+%		\item $P_i$ valores previstos
+%		\item $\bar{O}$ média dos valores observados
+%		\item $n$ o número total de observações
+%	\end{itemize}
 	
 	\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS positivo) ou subestimar (PBIAS negativo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja 0, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos.\cite{rayyan-33388455}
 	\begin{equation}
@@ -715,7 +729,7 @@ Identificadas estas estações de vazão, verifica-se em linha reta, em sentido 
 
 Aqui uma importante etapa: aplicar transformação logarítmica nos dados de vazão e precipitação para tratar o fenômeno de ``cauda longa'' dos dados.
 
-A separação dos dados do último ano, 2023, foi para posteriormente simular o uso dos modelos ao longo de um ano. Realizar ajuste (`\textit{fit}') e previsão (`\textit{predict}'), dia-a-dia, durante um ano inteiro, para avaliar a estabilidade dos modelos. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`\textit{direct forecasting}'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`\textit{recursive forecasting}'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `\textit{backtesting}' \cite{skforecast_a})
+O conjunto teste corresponde aos dados do último ano, 2023, e os demais correspondem ao conjunto treino. Realizar ajuste (`\textit{fit}') e previsão (`\textit{predict}'), dia-a-dia, durante um ano inteiro, para avaliar a qualidade das previsões e a estabilidade dos modelos simulando o uso futuro de um sistema, em que o usuário vai treinar e prever (\textit{fit}/\textit{predict}) diariamente. Este procedimento é referido na literatura como \textit{Walk-Forward Validation} (WFV) e pode ser por uma janela deslizante ou por janela expandida, que foi a técnica aplicada neste trabalho. Além disso, tem duas formas de realizar as previsões: criando vários modelos que irão prever cada um dos dias futuros (`\textit{direct forecasting}'), o que geraria 365 modelos distintos e, consequentemente, consumiria muita mémoria, ou o que foi adotado neste trabalho que foi realizar reajustes (`\textit{refit}') ao modelo inicial num processo recursivo (`\textit{recursive forecasting}'). Esse processo de WFV permite capturar mudanças ao longo do tempo e avaliar a capacidade do modelo de generalizar para o futuro de forma mais realista. Perceba o funcionamento nas imagens a seguir (observação: a fonte de onde as imagens foram retiradas nomeia o processo de Walk-Forward Validation como `\textit{backtesting}' \cite{skforecast_a})
 
 \begin{figure}[!h]
 	\centering
@@ -745,46 +759,46 @@ A separação dos dados do último ano, 2023, foi para posteriormente simular o 
 	\label{fig:imagem3_skforecast-backtesting-refit}
 \end{figure}
 
-Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações em alguns horizontes de previsão antes de partir para a análise mais complexa (WFV). A intenção era compreender o comportamento da modelagem em horizontes curtos e médios. Foram escolhidos os horizontes de previsão de 1, 3, 7 e 15 dias. As previsões utilizaram a previsão multietapas, com modelos diretos, ou seja, após feito o ajuste, cada dia foi previsto reiteradamente sem reajuste dos pesos e parâmetros internos dos modelos (``\textit{direct forecast}''). Veja a seguir o procedimento.
+%Com os dados restantes, a saber, de 2013 a 2022, foram realizadas avaliações em alguns horizontes de previsão antes de partir para a análise mais complexa (WFV). A intenção era compreender o comportamento da modelagem em horizontes curtos e médios. Foram escolhidos os horizontes de previsão de 1, 3, 7 e 15 dias. As previsões utilizaram a previsão multietapas, com modelos diretos, ou seja, após feito o ajuste, cada dia foi previsto reiteradamente sem reajuste dos pesos e parâmetros internos dos modelos (``\textit{direct forecast}''). Veja a seguir o procedimento.
+
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=0.3]{Figuras/skforecast-diagram-backtesting-no-refit.png}
+%	\caption{Diagrama mostrando a divisão dos dados de treino/teste sem \textit{refit}.\\(fonte: \cite{skforecast_a})}
+%	\label{fig:skforecast-diagram-backtesting-no-refit}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=0.3]{Figuras/imagem1_skforecast-backtesting-no-refit.png}
+%	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 1.\\(fonte: \cite{skforecast_a})}
+%	\label{fig:imagem1_skforecast-backtesting-no-refit}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=0.3]{Figuras/imagem2_skforecast-backtesting-no-refit.png}
+%	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 2.\\(fonte: \cite{skforecast_a})}
+%	\label{fig:imagem2_skforecast-backtesting-no-refit}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%	\centering
+%	\includegraphics[scale=0.3]{Figuras/imagem3_skforecast-backtesting-no-refit.png}
+%	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 3.\\(fonte: \cite{skforecast_a})}
+%	\label{fig:imagem3_skforecast-backtesting-no-refit}
+%\end{figure}
+
+%Evidentemente que para o horizonte de previsão de 1 dia não há reexecução do modelo, apenas para os outros horizontes.
+
+%Após cada previsão, em cada horizonte proposto, os dados são retornados para a escala original, a transformação log é desfeita. Isso foi realizado para facilitar a leitura e interpretação dos gráficos.
+
+Foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 95\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de previsão de 95\% (``\textit{lo-95}'' e ``\textit{hi-95}''), o valor real observado futuro tem 95\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a} Apesar de estar sendo usado intervalo de previsão de 95\% na análise, nem sempre o valor real é capturado. Existe uma incerteza quanto à previsão. Esta incerteza advém da própria natureza dos dados hidrológicos e também por assumir que os erros do passado se manterão semelhantes nas previsões. Estes erros são os chamados ``\textit{in sample residuals}'', resíduos das previsões realizadas no passo de treinamento dos dados. É com estes resíduos, que são sorteados da massa de resíduos e geram novas prováveis previsões, que, no final, comporão o cálculo do intervalo de previsão.(figura \ref{fig:diagram-bootstrapping-prediction-intervals})
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.3]{Figuras/skforecast-diagram-backtesting-no-refit.png}
-	\caption{Diagrama mostrando a divisão dos dados de treino/teste sem \textit{refit}.\\(fonte: \cite{skforecast_a})}
-	\label{fig:skforecast-diagram-backtesting-no-refit}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.3]{Figuras/imagem1_skforecast-backtesting-no-refit.png}
-	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 1.\\(fonte: \cite{skforecast_a})}
-	\label{fig:imagem1_skforecast-backtesting-no-refit}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.3]{Figuras/imagem2_skforecast-backtesting-no-refit.png}
-	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 2.\\(fonte: \cite{skforecast_a})}
-	\label{fig:imagem2_skforecast-backtesting-no-refit}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.3]{Figuras/imagem3_skforecast-backtesting-no-refit.png}
-	\caption{Previsão multietapas sem reajuste (\textit{refit}) - imagem 3.\\(fonte: \cite{skforecast_a})}
-	\label{fig:imagem3_skforecast-backtesting-no-refit}
-\end{figure}
-
-Evidentemente que para o horizonte de previsão de 1 dia não há reexecução do modelo, apenas para os outros horizontes.
-
-Após cada previsão, em cada horizonte proposto, os dados são retornados para a escala original, a transformação log é desfeita. Isso foi realizado para facilitar a leitura e interpretação dos gráficos.
-
-O desempenho dos resultados são avaliados com algumas das métricas propostas, para cada modelo do trabalho e para cada horizonte de previsão. Para cada horizonte de previsão foram calculados intervalos de previsão (``\textit{prediction intervals}'') de 95\%. A interpretação do intervalo de previsão é: calculados os valores inferior e superior do intervelo de previsão de 95\% (``\textit{lo-95}'' e ``\textit{hi-95}''), o valor real observado futuro tem 95\% de probabilidade de estar dentro destes limites.\cite{hyndman_fpp3_2024a} Apesar de estar sendo usado intervalo de previsão de 95\% na análise, nem sempre o valor real é capturado. Existe uma incerteza quanto à previsão. Esta incerteza advém da própria incerteza dos dados hidrológicos e também por assumir que os erros do passado se manterão parecidos nas previsões. Estes erros são os chamados ``in sample residuals'', resíduos das previsões realizadas no passo de treinamento dos dados. É com estes resíduos, que são sorteados da massa de resíduos e geram novas prováveis previsões, que, no final, comporão o cálculo do intervalo de previsão.(figura \ref{fig:diagram-bootstrapping-prediction-intervals})
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.3]{Figuras/diagram-bootstrapping-prediction-intervals.png}
-	\caption{Diagrama de intervalo de previsão.\\(fonte: \cite{skforecast_b})}
+	\includegraphics[scale=0.17]{Figuras/diagram-bootstrapping-prediction-intervals.png}
+	\caption{Diagrama de como se calcula o intervalo de previsão.\\(fonte: \cite{skforecast_b})}
 	\label{fig:diagram-bootstrapping-prediction-intervals}
 \end{figure}
 
@@ -798,7 +812,31 @@ Um fenômeno que pode acontecer é os intervalos de previsão serem estreitos.\c
 	\item A continuação, no futuro, do processo que gerou os dados históricos
 \end{itemize}
 
-Ao produzir intervalos de previsão para modelos de séries temporais, geralmente apenas a primeira dessas fontes é levada em consideração. Portanto, foi criada uma métrica para avaliar a qualidade dos intervalos de previsão, que verificou a cobertura empírica dos intervalos. Não confiou-se apenas na cobertura esperada para os intervalos. Ficou assim: para cada dia previsto foi feito um teste lógico para verificar se o valor real observado (`y\_true') esteve acima do valor mínimo do intervalo (`lo-95') \textbf{e} abaixo do valor máximo (`hi-95'). Para quando estes dois testes lógicos fossem verdadeiros, adicionava o valor 1 a um vetor, e 0 quando um destes testes lógicos falhasse, ou seja, o `y\_true' estava de algum modo fora do intervalo. Ao final, calculou a média deste vetor e multiplicou por 100 para uma saída percentual. Se o número final fosse 95\% a 100\% então significa que os intervalos de previsão capturaram perfeitamente o valor real futuro. Se abaixo de 95\% significa que em algum ponto da previsão, o valor real ficou para fora destes limites, ou abaixo do valor mínimo ou acima do valor máximo. Isso ficará mais claro quando os resultados forem discutidos.
+Ao produzir intervalos de previsão para modelos de séries temporais, geralmente apenas a primeira dessas fontes é levada em consideração. Portanto, foi criada uma métrica para avaliar a qualidade dos intervalos de previsão, que verificou a cobertura empírica dos intervalos. Não confiou-se apenas na cobertura esperada para os intervalos.
+
+Ficou assim: para cada dia previsto foi feito um teste lógico para verificar se o valor real observado (`y\_true') esteve acima do valor mínimo do intervalo (`lo-95') \textbf{e} abaixo do valor máximo (`hi-95'). Para quando estes dois testes lógicos fossem verdadeiros, adicionava o valor 1 a um vetor, e 0 quando um destes testes lógicos falhasse, ou seja, o `y\_true' estava de algum modo fora do intervalo. Ao final, calculou a média deste vetor e multiplicou por 100 para uma saída percentual. Se o número final fosse 95\% a 100\% então significa que os intervalos de previsão capturaram perfeitamente o valor real futuro. Se abaixo de 95\%, significa que em algum ponto da previsão o valor real ficou para fora destes limites, ou abaixo do valor mínimo ou acima do valor máximo. Veja uma demonstração.
+
+\begin{Verbatim}[frame=single, numbers=left]
+def cobertura_empirica(y, lower_bound, upper_bound):
+   media = np.mean(np.logical_and(y >= lower_bound, y <= upper_bound))
+   return f"{round(100*media, 2)} %"
+\end{Verbatim}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.40]{Figuras/intervalo_previsao_1.png}
+	\caption{Previsão com valor fora dos limites\\(fonte: o autor)}
+	\label{fig:intervalo_previsao_1}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.40]{Figuras/intervalo_previsao_2.png}
+	\caption{Previsão completamente nos limites\\(fonte: o autor)}
+	\label{fig:intervalo_previsao_2}
+\end{figure}
+
+Aplicando esta função à figura \ref{fig:intervalo_previsao_1} retornou 42,86\%, ou seja, o intervalo de previsão pretendido de 95\% só conseguiu, empiricamente, capturar 43\% dos valores reais do horizonte de previsão em questão.
 
 Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a \textit{Walk-Forward Validation}. E finalmente, análise das variáveis do trabalho, buscando entendimento quanto à importância desempenhada por cada uma, empregando o método SHAP.
 

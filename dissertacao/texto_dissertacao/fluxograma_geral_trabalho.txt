@@ -17,16 +17,23 @@ Gere um fluxograma considerando os seguintes aspectos:
 ===========================
 
 flowchart TD
-    A[Definir período de análise] --> B[Identificar estação-alvo de vazão] --> C[Identificar estações de precipitação à montante até 50km]
-    C --> D[Coletar dados de vazão e precipitação] --> E{Dados faltantes?}
-    E -->|Sim| F[Preencher com sazonalidade]
-    E -->|Não| G[Aplicar transformação logarítmica]
-    F --> G
-    G --> H[Separar dados do último ano] --> |dados restantes| I[Separar conjunto de treino e horizonte de previsão]
-    H --> |usar como conjunto validação| M
-    I --> J[Treinar modelos LinearRegression, CatBoost e LightGBM] --> K[Avaliar no horizonte de previsão]
-    K --> L[Otimizar hiperparâmetros CatBoost e LightGBM]
-    L --> |todos os dados exceto o último ano| M[Aplicar Walk Forward Validation] --> N[Avaliar resultados]
+    P{{INÍCIO}} --> A
+    A(Definir período de análise) --> B(Identificar estação-alvo de vazão) --> C(Identificar estações de precipitação à montante até 50km)
+    C --> D(Coletar dados de vazão e precipitação) --> E{Dados faltantes?}
+    E -->|Sim| F(Preencher com sazonalidade)
+    F --> G{Ainda faltam dados?}
+    G --> |Sim| H(Preencher com modelo kNN)
+    H --> I(Aplicar transformação logarítmica)
+    E --> |Não| I
+    I --> J(Separar em conjuntos treino e teste)
+    J --> K(Realizar Walk-Forward Validation) <-- Ao longo do ano de 2023 --> K
+    K --> L(Gerar gráficos e analisar os resultados)
+    L --> M(Analisar os resíduos)
+    M --> N(Analisar importância dos atributos)
+    N --> O{{FIM}}
 
 link:
-https://mermaid.live/edit#pako:eNp9U8tu2kAU_ZXRrAmCGgPxolWAhKQhSdVErVTDYmRf8DT2XGs8JgmPf-ljUXXRZTfd-sd6PUNJWkVlxdWce16eWfMIY-ABn6d4FyVCG3YzmipGv6NwBHOppGY56OoHxshiYEJVn1NZwIwdHLxkg_AsBmXkXEZCMyiMqL5VX_FApEuLXooVjQ47fA77E4oal2uIZC5366z6xDJURihDgqb6zvzWbTZztoaWbBQOMQVDRLGIsXjUYv-SOfHj9cji5iK1tMWrraM7ro831zLbsJPwjQZQUQKaRZixQqxQiVSSAsyeoi-JdsPG4VGe2ixGC1XMUWc7-ykuBDVmMjrdLZ5YF2M3jO1wGl5DLvRjBMr9KzUyQyp5Z3vjjnTdVu16w872WxGqj6UytmejQao6e4JakmvqzbW6lEXdgdM9dZxlYbdJZ0-xtDGt-w27cOgzi34d3tTctJHRRUnJzEQqEPotLMhVIVE12FCYAWJhSH8iF4kZDy6c_fPwqGamZTL3X2vnFj8Jryi_XNFCIunWUdDqSwZGk-xzIm534mIZrKuqi7SdwX0ElOyvUinb_qO9F-ktO0F9J3TM3tn8htI445d74xSypCtDjDPe4BnQR5YxvZd1rT3lJoEMpjygv2ntasqnaktAURq8flARD4wuocE1louEB3T9CprKnMRgJMVCi-wPJBfqA-LTkQdrfs8Dz_ObrV7Pa7VbL3zvsNVt8AcetNtes9fz216_73cO-61Ob9vgK0vQbvp-p9vxO36f9rp-12twiKVBfeEeu33z2999k2Po
+https://mermaid.live/edit#pako:eNptk91u2jAUx1_F8lWQSEUCDSGaNjEobdpCqzFt0sSNlxjwGtuR4_SDkEfYO6zbxbSLXu4J8mI7cYBu1XKVc_w_v_NlFziSMcUBXibyLloTpdH78UIg-K6LIpxVX0fhVVki236Nho1_aI3pkgmmUEpV9SRjiWKKiKgeE5bRlpG-tcKYCs2WLCIK0UyT6mf1Q9okuTXqW7IBs9GO_qf9TbNalyoasZTtwlH1DXEpNBEaEurqFzru3PBWU9bIwMbWSCZUAygmscyec6GXsCb5STE2uiVJDDZ7Uza4k_p4O2d8iybWtaJURGuqUCQ5yshGCpIwyEB3yScGdloMmYhJA-NNBXveqVE0wLMXQA4rSCS6mc12uDMjDq1hmpihaEVEtpSK7-aQyBWB0WsOp62_6kXbGRxvUdj4QuM7t-Y0JaqeLYd04ksuNHSsFWWiHgs0rfd9nJuIC-sdhf42EPKRJDf2RKo7omL0wTStmRQt9Mq20bCuRKxgoxL2bxbrdtxuw2iAF8a4tE5pXcBKVY-wZsheXxigZeAES9Esh5HBuHZ1XJqwqTX8V1Q9xflBMzWa2bOG8VQqXX0XESOoXirRin3O9SFiZiKuimISTssStzGnMFIWw_UvasUC6zXldIED-I3pkkBRC7wQtZQAZ_4gIhxoldM2VjJfrXEAq87AylOYCx0zslKEH7w0ZlqqafPAzDtr45SIT1LyPQZMHBT4HgfuwDvq-z3P891ev-c77nEbP-DAdhx_cNRxugNvMOh03eNet2zjjUG4R57TcbyO7_a9rtd3fL_8A18_Q0w
+
+markdown:
+https://mermaid.ink/img/pako:eNptk91u2jAUx1_F8lWQSEUCDSGaNjEobdpCqzFt0sSNlxjwGtuR4_SDkEfYO6zbxbSLXu4J8mI7cYBu1XKVc_w_v_NlFziSMcUBXibyLloTpdH78UIg-K6LIpxVX0fhVVki236Nho1_aI3pkgmmUEpV9SRjiWKKiKgeE5bRlpG-tcKYCs2WLCIK0UyT6mf1Q9okuTXqW7IBs9GO_qf9TbNalyoasZTtwlH1DXEpNBEaEurqFzru3PBWU9bIwMbWSCZUAygmscyec6GXsCb5STE2uiVJDDZ7Uza4k_p4O2d8iybWtaJURGuqUCQ5yshGCpIwyEB3yScGdloMmYhJA-NNBXveqVE0wLMXQA4rSCS6mc12uDMjDq1hmpihaEVEtpSK7-aQyBWB0WsOp62_6kXbGRxvUdj4QuM7t-Y0JaqeLYd04ksuNHSsFWWiHgs0rfd9nJuIC-sdhf42EPKRJDf2RKo7omL0wTStmRQt9Mq20bCuRKxgoxL2bxbrdtxuw2iAF8a4tE5pXcBKVY-wZsheXxigZeAES9Esh5HBuHZ1XJqwqTX8V1Q9xflBMzWa2bOG8VQqXX0XESOoXirRin3O9SFiZiKuimISTssStzGnMFIWw_UvasUC6zXldIED-I3pkkBRC7wQtZQAZ_4gIhxoldM2VjJfrXEAq87AylOYCx0zslKEH7w0ZlqqafPAzDtr45SIT1LyPQZMHBT4HgfuwDvq-z3P891ev-c77nEbP-DAdhx_cNRxugNvMOh03eNet2zjjUG4R57TcbyO7_a9rtd3fL_8A18_Q0w?type=png)](https://mermaid.live/edit#pako:eNptk91u2jAUx1_F8lWQSEUCDSGaNjEobdpCqzFt0sSNlxjwGtuR4_SDkEfYO6zbxbSLXu4J8mI7cYBu1XKVc_w_v_NlFziSMcUBXibyLloTpdH78UIg-K6LIpxVX0fhVVki236Nho1_aI3pkgmmUEpV9SRjiWKKiKgeE5bRlpG-tcKYCs2WLCIK0UyT6mf1Q9okuTXqW7IBs9GO_qf9TbNalyoasZTtwlH1DXEpNBEaEurqFzru3PBWU9bIwMbWSCZUAygmscyec6GXsCb5STE2uiVJDDZ7Uza4k_p4O2d8iybWtaJURGuqUCQ5yshGCpIwyEB3yScGdloMmYhJA-NNBXveqVE0wLMXQA4rSCS6mc12uDMjDq1hmpihaEVEtpSK7-aQyBWB0WsOp62_6kXbGRxvUdj4QuM7t-Y0JaqeLYd04ksuNHSsFWWiHgs0rfd9nJuIC-sdhf42EPKRJDf2RKo7omL0wTStmRQt9Mq20bCuRKxgoxL2bxbrdtxuw2iAF8a4tE5pXcBKVY-wZsheXxigZeAES9Esh5HBuHZ1XJqwqTX8V1Q9xflBMzWa2bOG8VQqXX0XESOoXirRin3O9SFiZiKuimISTssStzGnMFIWw_UvasUC6zXldIED-I3pkkBRC7wQtZQAZ_4gIhxoldM2VjJfrXEAq87AylOYCx0zslKEH7w0ZlqqafPAzDtr45SIT1LyPQZMHBT4HgfuwDvq-z3P891ev-c77nEbP-DAdhx_cNRxugNvMOh03eNet2zjjUG4R57TcbyO7_a9rtd3fL_8A18_Q0w
