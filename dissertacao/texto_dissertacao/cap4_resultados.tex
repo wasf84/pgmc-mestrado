@@ -4,38 +4,21 @@
 \section{Desempenho dos modelos}
 %Apresentar e comparar os resultados dos diferentes modelos utilizados.
 
-Os resultados obtidos pelos modelos variaram significativamente em termos de precisão, tanto nas previsões pontuais quanto nos intervalos de previsão, refletindo diferentes graus de precisão para cada cenário analisado. Observou-se que a capacidade dos modelos em captar a variabilidade dos dados e as incertezas associadas às previsões foi particularmente sensível ao horizonte temporal considerado. Em horizontes mais curtos, como o de 1 dia, os modelos tenderam a apresentar um desempenho satisfatório, com baixos valores de erro e intervalos de previsão bem ajustados aos dados observados. No entanto, à medida que o horizonte de previsão foi expandido para 7 e 15 dias, notou-se um aumento substancial no erro percentual e uma maior discrepância entre os valores previstos e observados, indicando dificuldades dos modelos em capturar variações de longo prazo com a mesma precisão. Contudo, quando se avalia os horizontes de previsão, bons resultados foram alcançados, mostrando que aplicar esta técnica trouxe boa capacidade de previsibilidade acerca do fenômeno. Essa dinâmica de variação dos resultados será discutida em maior detalhe, dividida por bacia hidrográfica, o que permitirá uma análise mais específica das particularidades de cada região e a identificação de padrões específicos que possam influenciar o desempenho dos modelos.
+Os resultados obtidos pelos modelos variaram significativamente em termos de precisão, tanto nas previsões pontuais quanto nos intervalos de previsão, refletindo diferentes graus para cada cenário analisado. Observar o comportamento dos resíduos foi interessante pois dependendo da época do ano, houve um comportamento bastante destacado.
 
 \subsection{Rio Jequitinhonha}
 
-Começando pela menor bacia estudada, os resultados mostraram-se bastante satisfatórios, especialmente no que tange à Regressão Linear, que se destacou com boas previsões tanto em termos pontuais quanto nos intervalos de previsão. Este modelo demonstrou uma boa capacidade de capturar a dinâmica hidrológica do rio, refletindo precisão nas métricas e um desempenho consistente para o horizonte de curto prazo. E com um tempo de execução baixo. O modelo simples SeasonalNaive apresentou resultados aquém do esperado em todas as situações avaliadas, considerando a previsão pontual. Quando se considera os intervalos de previsão ele teve um bom desempenho muito genérico, com largos intervalos, o que nada contribui para o entendimento e previsibilidade do fenômeno. Afinal, se o intervalo calculado para as previsões estão em limites absurdos, qualquer valor futuro então fará sentido de se encaixar na previsão. Isso não é gerenciável. Chegou-se a calcular até um limite máximo de 120 mil $m^3/s$ de vazão!
+Começando pela menor bacia estudada, os resultados mostraram-se bastante satisfatórios, especialmente no que tange à Regressão Linear, que se destacou com boas previsões tanto em termos pontuais quanto nos intervalos de previsão. Este modelo demonstrou uma boa capacidade de capturar a dinâmica hidrológica do rio, refletindo precisão nas métricas e um desempenho consistente. E com um tempo de execução muito baixo. O modelo simples \textit{SeasonalNaive} apresentou resultados aquém do esperado em todas as situações avaliadas, considerando a previsão pontual e os intervalos de previsão.
+
+Com um MAPE muito elevado de 150\%, o resultado mostrou viés de superestimação dos resultados, conforme a métrica PBIAS aponta. Olhando para a qualidade dos intervalos de previsão pode-se acreditar que o modelo teve um comportamento satisfatório, contudo, com mais atenção, é possível ver que o valor inferior do intervalo (lo-95) foram calculados números abaixo de zero. O atraso (\textit{delay}) da série prevista foi de elevados 56,88 dias, com um desvio-padrão de 61,3 dias, de onde se observa que um evento pode levar mais de 60 dias para ser percebido na previsão do modelo.
+
+Como o modelo SN a análise termina aqui, não se procedeu com análise de resíduos nem com importância de variáveis uma vez que o desempenho do modelo foi ruim. Está aqui para comparação. A análise mais aprofundada mesmo ficará por conta dos modelos mais complexos.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/SeasonalNaive_fh1.png}
-	\caption{SeasonalNaive para o horizonte de previsão de 1 dia\\(fonte: o autor)}
-	\label{fig:jequiti_SeasonalNaive_fh1}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/SeasonalNaive_fh3.png}
-	\caption{SeasonalNaive para o horizonte de previsão de 3 dias\\(fonte: o autor)}
-	\label{fig:jequiti_SeasonalNaive_fh3}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/SeasonalNaive_fh7.png}
-	\caption{SeasonalNaive para o horizonte de previsão de 7 dias\\(fonte: o autor)}
-	\label{fig:jequiti_SeasonalNaive_fh7}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/SeasonalNaive_fh15.png}
-	\caption{SeasonalNaive para o horizonte de previsão de 15 dias\\(fonte: o autor)}
-	\label{fig:jequiti_SeasonalNaive_fh15}
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/SN_WFV.png}
+	\caption{Resultado do SeasonalNaive no teste \textit{Walk-Forward Validation}\\(fonte: o autor)}
+	\label{fig:jequiti_SN_WFV}
 \end{figure}
 
 %\begin{table}[!h]
@@ -51,34 +34,13 @@ Começando pela menor bacia estudada, os resultados mostraram-se bastante satisf
 %	\label{tab:sn_jequitinhonha_resultados}
 %\end{table}
 
-Os resultados obtidos utilizando o modelo de Regressão Linear mostraram-se promissores. Para o horizonte de previsão de 1 dia, o modelo apresentou uma superestimação nos valores previstos, conforme indicado pelo PBias positivo, e obteve um MAPE de apenas 4,15\%.(figura \ref{fig:jequiti_LinearRegression_fh1}) Este resultado demonstra uma precisão bastante elevada, com um erro percentual baixo, o que é muito satisfatório. À medida que o horizonte de previsão foi ampliado, observou-se um aumento no erro. No horizonte de 3 dias, o modelo manteve a tendência de superestimação e registrou um MAPE de 14,9\%, ainda dentro de um intervalo de erro que pode ser considerado aceitável, mas bastante superior ao do horizonte de 1 dia.(figura \ref{fig:jequiti_LinearRegression_fh3}) Para o horizonte de 7 dias, o modelo continuou a superestimar os valores e obteve um MAPE de 24,9\%, indicando um erro mais pronunciado à medida que o período de previsão aumentou.(figura \ref{fig:jequiti_LinearRegression_fh7}) No horizonte de 15 dias, pela primeira vez, o modelo subestimou as previsões, refletido por um PBias negativo, e apresentou um MAPE de 60,6\%, o que representa um erro bastamte elevado.(figura \ref{fig:jequiti_LinearRegression_fh15}) Além disso, foi observado que, para os horizontes de 1, 3 e 7 dias, os intervalos de previsão capturaram os valores observados, enquanto que, para o horizonte de 15 dias, algumas poucas vezes o valor observado esteve fora da faixa de previsão calculada. Isso sugere que o modelo enfrentou dificuldades em captar as incertezas a partir dos dados de treinamento para previsões de longo prazo, mesmo ao considerar os intervalos de previsão, o que reflete uma limitação na capacidade de generalização do modelo para horizontes mais extensos.
+Os resultados obtidos utilizando o modelo de Regressão Linear mostraram-se bastante promissores.
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LinearRegression_fh1.png}
 	\caption{Regressão Linear para o horizonte de previsão de 1 dia\\(fonte: o autor)}
 	\label{fig:jequiti_LinearRegression_fh1}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LinearRegression_fh3.png}
-	\caption{Regressão Linear para o horizonte de previsão de 3 dias\\(fonte: o autor)}
-	\label{fig:jequiti_LinearRegression_fh3}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LinearRegression_fh7.png}
-	\caption{Regressão Linear para o horizonte de previsão de 7 dias\\(fonte: o autor)}
-	\label{fig:jequiti_LinearRegression_fh7}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LinearRegression_fh15.png}
-	\caption{Regressão Linear para o horizonte de previsão de 15 dias\\(fonte: o autor)}
-	\label{fig:jequiti_LinearRegression_fh15}
 \end{figure}
 
 Continuando a análise, agora os modelos principais do trabalho, ajustados com variáveis categóricas para melhor realizar as previsões a partir da sazonalidade.

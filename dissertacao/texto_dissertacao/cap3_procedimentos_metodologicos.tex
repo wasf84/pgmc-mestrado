@@ -600,7 +600,7 @@ Essas características, longe de serem consideradas como ruído ou anomalias, fa
 \section{Modelos de Aprendizado de Máquina}
 %Apresentar os modelos de ML utilizados (SeasonalNaive, LinearRegression, CatBoost e LightGBM) e justificativas.
 
-\subsection{Seasonal Naive}
+\subsection{Seasonal Naive - SN}
 
 Um método que é similar ao \textit{Naive}, contudo, usa a última observação conhecida do mesmo período de tempo (por exemplo, mesmo dia do mês anterior, mesma semana do ano anterior) numa tentativa de capturar o comportamento sazonal.
 
@@ -608,9 +608,11 @@ O \textit{Seasonal Naive} não pode ser considerado um modelo de previsão sofis
 
 Por ser um modelo simples, ele não captura tendências ou variações complexas, mas estabelece um \textit{benchmark} mínimo com o qual outros métodos mais elaborados e complexos devem ser comparados.
 
-\subsection{Regressão Linear}
+Para este modelo ser executado foi preciso ajustar o hiperparâmetro de sazonalidade, que é de 365 dias.
 
-O modelo de Regressão Linear (\textit{Linear Regression}) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta.
+\subsection{Regressão Linear - LR}
+
+O modelo de Regressão Linear (\textit{Linear Regression} - LR) é uma abordagem estatística simples, porém poderosa, que busca modelar o relacionamento entre uma variável dependente e uma ou mais variáveis independentes através de uma linha reta.
 
 \begin{equation}
 	y_{t} = \beta_{0} + \beta_{1} x_{1,t} + \beta_{2} x_{2,t} + \cdots +
@@ -630,11 +632,27 @@ O funcionamento da Regressão Linear envolve o cálculo de coeficientes para as 
 	\item $n$ número de observações
 \end{itemize}
 
-Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo-base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Isso será discutido.
+Os resultados obtidos com este modelo mostraram-se muito bons, e na verdade, ele se destacou como um modelo-base robusto para os outros modelos mais complexos. Sua simplicidade e eficácia tornam-no uma escolha bastante sólida. Não houve nenhuma seleção de hiperparâmetro para executar este modelo, foi utilizado conforme o padrão da biblioteca.
 
-\subsection{CatBoost}
+\subsection{CatBoost - CB}
 
-CatBoost tem o funcionamento baseado no princípio da construção de modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. A estratégia do CatBoost, no entanto, tem um nome: ``\textit{Ordered Boosting}''. A construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para isso. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelo, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também estão presentes e o pesquisador tem controle sobre eles.\cite{catboost_docs}\cite{dorogush2018catboost}\cite{prokhorenkova2018catboost}
+CatBoost (\textit{Categorical Boosting}) tem o funcionamento baseado no princípio da construção de modelos fracos de árvores de decisão (\textit{decision tree}) de forma sequencial, onde cada árvore sucessiva é treinada para corrigir os erros da árvore anterior. A estratégia do CatBoost, no entanto, tem um nome: ``\textit{Ordered Boosting}''. A construção das árvores se dá de maneira sequencial, porém não se usa todos os dados disponíveis para isso. Os dados de treinamento são ordenados de maneira aleatória e apenas partições destes dados são utilizados no processo. Por trabalhar sempre com uma amostra dos dados de treinamento, e a apresentação aleatória destes dados ao modelo, o CatBoost tem resiliência ao \textit{overfitting}, mas parâmetros que realizam ajustes nas árvores de decisão também estão presentes e o pesquisador tem controle sobre eles.\cite{catboost_docs}\cite{dorogush2018catboost}\cite{prokhorenkova2018catboost}
+
+Os hiperparâmetros para execução do modelo foram escolhidos para que o modelo executasse sem escrever (`\textit{allow\_writing\_files}') cada passo de treinamento em disco durante a execução, pra salvar espaço em disco e evitar \textit{overhead} dessa escrita desnecessária. As variáveis categóricas foram passadas através do hiperparâmetro `\textit{cat\_features}' e `\textit{thread\_count}' para executar em paralelo, pra acelerar o treinamento do modelo. O hiperparâmetro `verbose' é pra não escrever cada passo de treinamento na saída de texto do sistema e `\textit{random\_seed}' é pra garantir reprodutibilidade dos resultados em todas as execuções do modelo. Apenas estes hiperparâmetros foram selecionados, tudo mais ficou de acordo com o padrão da biblioteca.
+
+\begin{table}[!h]
+	\centering \small
+	\caption{Hiperparâmetros para o modelo CatBoost\\(fonte: o autor)}
+	\begin{tabular}{|l|l|} \hline 
+		\textbf{Hiperparâmetro} & \textbf{Valor} \\\hline
+		random\_seed            & 1984                 \\\hline
+		cat\_features           & ['estacao', 'month'] \\\hline
+		verbose                 & False                \\\hline
+		allow\_writing\_files   & False                \\\hline
+		thread\_count           & os.cpu\_count()//2   \\\hline
+	\end{tabular}
+	\label{tab:hiperparametros_catboost}
+\end{table}
 
 %\begin{figure}[!h]
 %	\centering
@@ -643,13 +661,28 @@ CatBoost tem o funcionamento baseado no princípio da construção de modelos fr
 %	\label{fig:boosting_diagrama}
 %\end{figure}
 
-\subsection{Floresta Aleatória}
+\subsection{Floresta Aleatória - RF}
 
 Floresta Aleatória (\textit{Random Forest}) é um modelo que também é baseado em árvores de decisão e é amplamente utilizado em tarefas de regressão e classificação. O modelo combina diversas árvores de decisão para aprimorar a precisão e a estabilidade dos resultados.
 
-O modelo cria diversas árvores de decisão independentemente, e cada destas árvores é treinada com partições aleatórias dos dados de treinamento, garantindo que as árvores sejam distintas entre si (\textit{Bootstrapping}). Na seleção dos dados pode haver reposição, ou seja, os mesmos dados podem ser utilizados para treinar árvores diferentes ou até mesmo dados podem nunca ser utilizados em nenhuma árvore. Isso é para garantir diversidade entre as árvores. Durante a criação de cada nó da árvore, um subcojunto aleatório dos dados de treinamento é utilizado e isso vai até não ser mais possível criar novas divisões (\textit{Depth-wise Growth}). Ao fim, quando cada árvore foi treinada, a agregação dos resultados se dá calculando a média entre todas elas (\textit{bagging}).\cite{hasan_ahmed_salman_2024}\cite{sklearn_random_forest_2024}
+O modelo cria diversas árvores de decisão independentemente, e cada destas árvores é treinada com partições aleatórias dos dados de treinamento, garantindo que as árvores sejam distintas entre si. Na seleção dos dados pode haver reposição (\textit{bootstrapping}), ou seja, os mesmos dados podem ser utilizados para treinar árvores diferentes ou até mesmo dados podem nunca ser utilizados em nenhuma árvore. Isso é para garantir diversidade entre as árvores. Durante a criação de cada nó da árvore, um subcojunto aleatório dos dados de treinamento é utilizado e isso vai até não ser mais possível criar novas divisões (\textit{Depth-wise Growth}). Ao fim, quando cada árvore foi treinada, a agregação dos resultados se dá calculando a média entre todas elas (\textit{bagging}).\cite{hasan_ahmed_salman_2024}\cite{sklearn_random_forest_2024}
 
 A escolha do modelo certo para um problema de previsão desta natureza depende das características dos dados e dos objetivos do estudo. O \textit{Seasonal Naive}, embora simples, é um importante ponto de referência inicial. O modelo de Regressão Linear serve como uma \textit{baseline} confiável devido à sua eficácia e simplicidade. Já os modelos CatBoost e Floresta Aleatória foram opções mais avançadas, capazes de lidar com a complexidade dos dados e oferecer previsões precisas e eficientes. A comparação entre todos estes modelos permitiu que se escolhesse a abordagem que melhor atendesse às necessidades específicas da previsão de vazões.
+
+Seguindo a mesma intenção de antes, `\textit{random\_state}' está aqui para garantir reprodutbilidade dos resultados entre diversas execuções. Por fim, `\textit{verbose}' é para não ficar escrevendo na saída de texto do sistema e `\textit{n\_jobs}' para executar com paralelismo o treinamento do modelo. O modelo RandomForest não trata variáveis categóricas diretamente, por isso não tem nenhum hiperparâmetro a respeito disso.
+
+\begin{table}[!h]
+	\centering \small
+	\caption{Hiperparâmetros para o modelo RandomForest\\(fonte: o autor)}
+	\begin{tabular}{|l|l|} \hline 
+		\textbf{Hiperparâmetro} & \textbf{Valor}     \\\hline
+		random\_state           & 1984               \\\hline
+		verbose                 & 0                  \\\hline
+		n\_jobs                 & os.cpu\_count()//2 \\\hline
+	\end{tabular}
+	\label{tab:hiperparametros_randomforest}
+\end{table}
+
 
 \section{Métricas de Avaliação}
 %Listar as métricas usadas para avaliar o desempenho dos modelos (MAPE, RMSE, PBias* e KGE não-paramétrico**).
@@ -836,9 +869,17 @@ def cobertura_empirica(y, lower_bound, upper_bound):
 	\label{fig:intervalo_previsao_2}
 \end{figure}
 
-Aplicando esta função à figura \ref{fig:intervalo_previsao_1} retornou 42,86\%, ou seja, o intervalo de previsão pretendido de 95\% só conseguiu, empiricamente, capturar 43\% dos valores reais do horizonte de previsão em questão.
+Aplicando a função à figura \ref{fig:intervalo_previsao_1} retornou 42,86\%, os 3 pontos da linha preta, os valores reais observados, de um total de 7. Isso significa que o intervalo de previsão pretendido de 95\% só conseguiu, empiricamente, capturar cerca de 43\% dos valores reais do horizonte de previsão em questão. Na figura \ref{fig:intervalo_previsao_2}, por sua vez, o intervalo capturou 100\% dos valores observados. Ambas figuras mostram previsão de 7 dias, e sem considerar a linha rosa, que foi a previsão que os modelos geraram, o modelo da figura \ref{fig:intervalo_previsao_2} teve um desempenho melhor, segundo essa métrica criada. É mais uma questão a ser considerada quando avaliar a qualidade dos modelos, mas deve ser empregada com parcimônia. Isso porque os intervalos de previsão podem ser simplesmente faixas de valores muito absurdos. Se por exemplo o modelo calcular intervalos de previsão que vão de 0 $m^3/s$ a 200 mil $m^3/s$, então qualquer valor observado seria capturado, de fato, mas isso não ajudaria em nada na tomada de decisão.
 
-Estes resultados encerram a análise para o comportamento de curto e médio prazo da modelagem proposta para os modelos propostos. Na sequência foi empreendida uma análise quanto à forma de uso que este trabalho pode vir a ter na prática, que é a \textit{Walk-Forward Validation}. E finalmente, análise das variáveis do trabalho, buscando entendimento quanto à importância desempenhada por cada uma, empregando o método SHAP.
+Em cada resultado será discutido o atraso (\textit{delay}) da série prevista em relação à série original, quando houver, a partir da aplicação do algoritmo FastDTW. [REF] \textit{Dynamic Time Warping} (DTW) é uma forma de avaliar a similaridade entre duas sequências quaisquer, neste caso, duas séries temporais: a série temporal dos dados observados e a série temporal dos dados previstos. O algoritmo calcula as distâncias entre os pontos de duas séries esticando e comprimindo-as para descobrir o melhor alinhamento (\textit{warping path}) entre ambas. Esta análise ajudará a compreender a dinâmica das vazões, fornecendo interpretação sobre quando os eventos passados irão ser percebidos pelos modelos no futuro. E como as análises são na base diária, o resultado do \textit{delay} é a expressão em dias do atraso (\textit{lag}) ou adiantamento (\textit{lead}) de quando um evento (vazão) será percebido pelo modelo e expresso na série gerada por este. [REF]
+
+Encerrada a discussão do \textit{delay}, procede-se com a análise dos resíduos. Os modelos não-lineares CatBoost e RandomForest não necessitam que haja normalidade, nem para os dados de entrada, nem para os resíduos. Diferentemente do modelo de \textit{Linear Regression}, em que é necessário realizar tal avaliação em busca de compreender o funcionamento do modelo.
+
+Analisar os resíduos permite verificar a estabilidade do modelo quanto às previsões. Uma distribuição normal dos resíduos é um indício de que os coeficientes do modelo conseguiram capturar as relações temporais dos dados de entrada. [REF]
+
+A última análise é avaliação da importância das variáveis. Neste momento, \underline{apenas os melhores resultados} serão analisado de cada modelo. Serão apresentados os \textit{Shapley Values} (SHAP) das variáveis dos modelos e discussão sobre o comportamento de cada uma delas para a qualidade dos modelos.
+
+Não consta no fluxograma do modelo proposto, mas para todos os modelos teve também uma rodada de execução com os dados originais \underline{sem transformação logarítmica}, apenas havendo aplicação de normalização de dados usando MinMax para o LinearRegression. Mas isso é obrigatório para este tipo de modelo pois a escala dos dados é muito discrepante, com vazão em $m^3/s$ e precipitação em $mm/dia$. Essas comparações serão importantes para chegar em uma melhor interpretação dos fenômenos e dar direcionamentos sobre quais modelos e como utilizar os modelos pensando na gestão dos recursos hídricos.
 
 %Antes, porém, foi realizada uma busca de hiperpâmetros nos modelos LightGBM e CatBoost. A busca de hiperparâmetros visa otimizar o desempenho dos modelos ao encontrar a melhor combinação de hiperparâmetros, adequadamente ajustados aos dados. Este processo foi realizado utilizando o \textit{framework} Optuna e validação-cruzada dividindo os dados de 10 anos (2013 a 2022) em 10 segmentos (\textit{folds}).\cite{akiba2019optuna}\cite{optuna_docs}\cite{skforecast}
 
@@ -846,8 +887,6 @@ Estes resultados encerram a análise para o comportamento de curto e médio praz
 
 Os resultados serão apresentados no \hyperref[cap:capitulo4]{capítulo 4}.
 \clearpage
-
-\todo[inline]{REFAZER O FLUXOGRAMA}
 
 \begin{figure}[!h]
 	\centering
