@@ -4,15 +4,15 @@
 \section{Desempenho dos modelos}
 %Apresentar e comparar os resultados dos diferentes modelos utilizados.
 
-Os resultados obtidos pelos modelos variaram significativamente em termos de precisão, tanto nas previsões pontuais quanto nos intervalos de previsão, refletindo diferentes graus para cada cenário analisado. Observar o comportamento dos resíduos foi interessante pois dependendo da época do ano, houve um comportamento bastante destacado.
+Os resultados obtidos pelos modelos apresentaram variações significativas em termos de precisão, tanto nas previsões pontuais quanto nos intervalos de confiança, refletindo diferentes graus de precisão para cada cenário analisado. A análise dos resíduos revelou-se particularmente interessante, pois evidenciou comportamentos distintos em função da sazonalidade, com variações marcantes observadas em diferentes períodos do ano.
 
 \subsection{Rio Jequitinhonha}
 
-Começando pela menor bacia estudada, os resultados mostraram-se bastante satisfatórios, especialmente no que tange à Regressão Linear, que se destacou com boas previsões tanto em termos pontuais quanto nos intervalos de previsão. Este modelo demonstrou uma boa capacidade de capturar a dinâmica hidrológica do rio, refletindo precisão nas métricas e um desempenho consistente. E com um tempo de execução muito baixo. O modelo simples \textit{SeasonalNaive} apresentou resultados aquém do esperado em todas as situações avaliadas, considerando a previsão pontual e os intervalos de previsão.
+Iniciando pela menor bacia hidrográfica estudada, os resultados revelaram-se bastante satisfatórios, especialmente no que se refere ao modelo de Regressão Linear, que se destacou com previsões precisas, tanto em termos pontuais quanto nos intervalos de confiança. Este modelo demonstrou uma capacidade robusta de capturar a dinâmica hidrológica do rio, refletindo precisão nas métricas e desempenho consistente, aliado a um tempo de execução significativamente reduzido. Em contrapartida, o modelo (simples) SeasonalNaive apresentou resultados abaixo das expectativas em todas as situações avaliadas. (figura \ref{fig:jequiti_SN_WFV})
 
-Com um MAPE muito elevado de 150\%, o resultado mostrou viés de superestimação dos resultados, conforme a métrica PBIAS aponta. Olhando para a qualidade dos intervalos de previsão pode-se acreditar que o modelo teve um comportamento satisfatório, contudo, com mais atenção, é possível ver que o valor inferior do intervalo (lo-95) foram calculados números abaixo de zero. O atraso (\textit{delay}) da série prevista foi de elevados 56,88 dias, com um desvio-padrão de 61,3 dias, de onde se observa que um evento pode levar mais de 60 dias para ser percebido na previsão do modelo.
+Com um MAPE extremamente elevado, de 150\%, os resultados indicaram um viés significativo de superestimação, conforme evidenciado pela métrica PBIAS. Verificando a KGE, ficou negativa. Em outras palavras, isso significa que o modelo não apenas falha em capturar a variabilidade dos dados observados, mas também introduz erros que o tornam menos eficaz do que uma abordagem simplista, como prever a média histórica. Embora a análise superficial da qualidade dos intervalos de confiança pudesse sugerir um desempenho satisfatório do modelo, uma inspeção mais detalhada revela uma incongruência: os valores inferiores do intervalo (lo-95) foram calculados abaixo de zero, o que não faz sentido para o rio em questão, pois implicaria na ausência total de vazão, algo inviável para as condições medidas pela estação. Além disso, o atraso (\textit{delay}) da série prevista foi considerável, atingindo 56,88 dias, com um desvio-padrão de 61,3 dias, sugerindo que um evento pode demorar mais de 60 dias para ser refletido na previsão do modelo.
 
-Como o modelo SN a análise termina aqui, não se procedeu com análise de resíduos nem com importância de variáveis uma vez que o desempenho do modelo foi ruim. Está aqui para comparação. A análise mais aprofundada mesmo ficará por conta dos modelos mais complexos.
+Considerando o desempenho insatisfatório do modelo SN, a análise foi encerrada neste ponto, sem proceder com a avaliação dos resíduos ou a análise da importância das variáveis. O modelo foi incluído apenas para fins comparativos. A análise mais aprofundada será dedicada aos modelos mais complexos, que apresentaram desempenho superior.
 
 \begin{figure}[!h]
 	\centering
@@ -34,20 +34,31 @@ Como o modelo SN a análise termina aqui, não se procedeu com análise de resí
 %	\label{tab:sn_jequitinhonha_resultados}
 %\end{table}
 
-Os resultados obtidos utilizando o modelo de Regressão Linear mostraram-se bastante promissores.
+Os resultados obtidos com o modelo de Regressão Linear apresentaram-se bastante promissores. Nesta fase inicial de avaliação os dados foram log-transformados, conforme indicado no título, que menciona a condição ``destransformados''. A destransformação foi aplicada para garantir que o gráfico estivesse em uma escala mais acessível e interpretável para o leitor. \underline{Esta nomenclatura será mantida ao longo de todo o trabalho}.
+
+Os resultados obtidos utilizando o modelo de Regressão Linear mostraram-se bastante promissores. Nesta primeira avaliação, os dados foram log-transformados. Isso é verificável no título, com o uso de ``(destransformados)''. Os dados foram log-transformados e destransformados para desenhar o gráfico, para ficar numa escala acessível para quem lê. Essa dinâmica no título se manterá por todo trabalho.
+
+Partindo pela KGE calculada, o resultado mostrou-se excelente. Recordando: quanto mais próxima de 1, melhor. Este valor sugere que o modelo é eficaz na previsão do comportamento hidrológico do sistema em análise, oferecendo previsões que estão bem alinhadas com os dados observados. A MAPE de 14\% sugere que o modelo tem uma precisão razoável e é bastante confiável. O modelo apresentou um viés sistemático de subestimar os resultados, conforme aponta a PBIAS de -1,76\%. Considerando todas as métricas, o resultado indica que o modelo teve um desempenho global muito bom. A KGE alta é particularmente indicativa de um bom ajuste global, com o modelo capturando bem tanto a dinâmica quanto a magnitude dos dados observados.
+
+Considerando a qualidade dos intervalos de previsão, a cobertura observada de 97,81\% excedeu o intervalo teórico calculado de 95\%, o que, à primeira vista, poderia ser interpretado como um desempenho satisfatório. No entanto, o limite superior do intervalo (hi-95) mostrou-se excessivamente elevado nos meses de janeiro e fevereiro, o que pode comprometer a interpretação dos resultados. Isso ocorre porque intervalos de previsão excessivamente amplos podem capturar praticamente qualquer valor observado, reduzindo a utilidade prática da previsão.
+
+É importante destacar que os intervalos de previsão são calculados a partir dos erros do modelo durante a etapa de treinamento (\textit{in-sample residuals}). Para uma análise mais aprofundada desse comportamento, é necessário examinar os dados anteriores a 2023. A Figura \ref{fig:jequiti_LR_final_2022_detalhe} revela que, nos últimos dias de 2022, houve observações significativamente elevadas. É provável que os erros associados a esse período mais próximo tenham influenciado a amplitude dos intervalos de previsão subsequentes. Essa interpretação é suportada pela observação de que o comportamento ao final de 2023 foi mais estável, possivelmente devido à ausência de eventos ruidosos imediatamente anteriores.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LinearRegression_fh1.png}
-	\caption{Regressão Linear para o horizonte de previsão de 1 dia\\(fonte: o autor)}
-	\label{fig:jequiti_LinearRegression_fh1}
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_LOG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG}
 \end{figure}
 
-Continuando a análise, agora os modelos principais do trabalho, ajustados com variáveis categóricas para melhor realizar as previsões a partir da sazonalidade.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_final_2022_detalhe.png}
+	\caption{Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_final_2022_detalhe}
+\end{figure}
 
-Houve uma intercalação no desempenho dos resultados. Para o horizonte de 1 dia, o RandomForest apresentou um resultado melhor em relação ao CatBoost em todas as métricas. O intervalo de previsão também foi melhor pois capturou o valor observado, coisa que o CatBoost não fez.(figuras \ref{fig:jequiti_RandomForest_fh1} e \ref{fig:jequiti_CatBoostRegressor_fh1})
-
-Quando aumentou o horizonte para 3 dias, o CatBoost apresentou melhor desempenho, inclusive nos intervalos de previsão.(figura \ref{fig:jequiti_CatBoostRegressor_fh3})
+A análise de delay mostrou um resultado médio de $-0,87$. Considerando que os dados estão numa frequência diária, isso pode ser interpretado como o modelo atrasando a previsão em 0,87 dias, o que seria menos d2 24 horas entre o evento ocorrer e ele ser percebido na previsão. Acredito que afirmar que o modelo está atrasado 20,88 horas não converge com a realidade, por isso que se considerar o desvio-padrão no resultado, confere mais coerência, pois indicaria que o atraso percebido no fenômeno é de cerca de um dia e meio, dois dias. Se pegar a série prevista pelo modelo e comprimir linearmente em -0,87, ambas as sequências serão idênticas, ou seja, a série prevista será a série observada.
 
 \begin{figure}[!h]
 	\centering

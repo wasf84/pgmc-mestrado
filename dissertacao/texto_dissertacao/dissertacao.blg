@@ -19,10 +19,10 @@ Warning--entry type for "g1_temporal_es_2024" isn't style-file defined
 Warning--entry type for "g1_cantareira_2015" isn't style-file defined
 --line 489 of file referencias.bib
 Warning--entry type for "skforecast_a" isn't style-file defined
---line 660 of file referencias.bib
+--line 672 of file referencias.bib
 Warning--entry type for "skforecast_b" isn't style-file defined
---line 671 of file referencias.bib
-I was expecting a `,' or a `}'---line 847 of file referencias.bib
+--line 683 of file referencias.bib
+I was expecting a `,' or a `}'---line 859 of file referencias.bib
  : 
  : isbn      = {978-3-030-57321-8}
 (Error may have been on previous line)
