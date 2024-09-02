@@ -22,45 +22,52 @@ Warning--entry type for "skforecast_a" isn't style-file defined
 --line 660 of file referencias.bib
 Warning--entry type for "skforecast_b" isn't style-file defined
 --line 671 of file referencias.bib
-You've used 36 entries,
+I was expecting a `,' or a `}'---line 847 of file referencias.bib
+ : 
+ : isbn      = {978-3-030-57321-8}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in belloto1985residual
+Warning--empty year in belloto1985residual
+You've used 39 entries,
             2773 wiz_defined-function locations,
-            796 strings with 12629 characters,
-and the built_in function-call counts, 15088 in all, are:
-= -- 1297
-> -- 985
-< -- 28
-+ -- 346
-- -- 306
-* -- 1136
-:= -- 2387
-add.period$ -- 135
-call.type$ -- 36
-change.case$ -- 207
-chr.to.int$ -- 32
-cite$ -- 72
-duplicate$ -- 602
-empty$ -- 1194
-format.name$ -- 357
-if$ -- 3120
+            812 strings with 13089 characters,
+and the built_in function-call counts, 16554 in all, are:
+= -- 1438
+> -- 1037
+< -- 33
++ -- 364
+- -- 321
+* -- 1234
+:= -- 2589
+add.period$ -- 144
+call.type$ -- 39
+change.case$ -- 221
+chr.to.int$ -- 35
+cite$ -- 80
+duplicate$ -- 681
+empty$ -- 1329
+format.name$ -- 379
+if$ -- 3449
 int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 215
-num.names$ -- 144
-pop$ -- 485
+missing$ -- 15
+newline$ -- 230
+num.names$ -- 156
+pop$ -- 519
 preamble$ -- 1
-purify$ -- 173
+purify$ -- 184
 quote$ -- 0
-skip$ -- 539
+skip$ -- 603
 stack$ -- 0
-substring$ -- 208
-swap$ -- 52
-text.length$ -- 0
+substring$ -- 291
+swap$ -- 72
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 391
-warning$ -- 0
-while$ -- 119
+type$ -- 424
+warning$ -- 2
+while$ -- 135
 width$ -- 0
-write$ -- 503
-(There were 7 warnings)
+write$ -- 541
+(There was 1 error message)

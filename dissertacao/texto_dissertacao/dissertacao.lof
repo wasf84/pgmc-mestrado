@@ -46,14 +46,14 @@
 \contentsline {figure}{\numberline {3.45}{\ignorespaces Diagrama de como se calcula o intervalo de previsão.\\(fonte: \cite {skforecast_b})}}{54}{figure.116}%
 \contentsline {figure}{\numberline {3.46}{\ignorespaces Previsão com valor fora dos limites\\(fonte: o autor)}}{55}{figure.117}%
 \contentsline {figure}{\numberline {3.47}{\ignorespaces Previsão completamente nos limites\\(fonte: o autor)}}{55}{figure.118}%
-\contentsline {figure}{\numberline {3.48}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{57}{figure.119}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Resultado do SeasonalNaive no teste \textit {Walk-Forward Validation}\\(fonte: o autor)}}{59}{figure.123}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Regressão Linear para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{59}{figure.124}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces CatBoost para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.125}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces RandomForest para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.126}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces CatBoost para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{61}{figure.127}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces RandomForest para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{61}{figure.128}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces CatBoost para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{62}{figure.129}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces RandomForest para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{62}{figure.130}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces CatBoost para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{63}{figure.131}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces RandomForest para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{63}{figure.132}%
+\contentsline {figure}{\numberline {3.48}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{58}{figure.119}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Resultado do SeasonalNaive no teste \textit {Walk-Forward Validation}\\(fonte: o autor)}}{60}{figure.123}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Regressão Linear para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{60}{figure.124}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CatBoost para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{61}{figure.125}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RandomForest para o horizonte de previsão de 1 dia\\(fonte: o autor)}}{61}{figure.126}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces CatBoost para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{62}{figure.127}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces RandomForest para o horizonte de previsão de 3 dias\\(fonte: o autor)}}{62}{figure.128}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces CatBoost para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{63}{figure.129}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces RandomForest para o horizonte de previsão de 7 dias\\(fonte: o autor)}}{63}{figure.130}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces CatBoost para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{64}{figure.131}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces RandomForest para o horizonte de previsão de 15 dias\\(fonte: o autor)}}{64}{figure.132}%

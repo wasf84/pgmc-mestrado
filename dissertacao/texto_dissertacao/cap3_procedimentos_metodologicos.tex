@@ -375,6 +375,8 @@ No que se refere às estações de precipitação selecionadas para a análise n
 
 As variáveis do trabalho, exceto as categóricas, obviamente, são todas contínuas. Todas as séries temporais foram ajustadas para estarem completas dentro do período trabalhado, totalizando 4017 registros diários. A exceção ficou por conta dos dados do rio Grande, em que o dado mais antigo foi o dia 30 de dezembro de 2014.
 
+De início, os valores passados (\textit{lags}) de vazão da estação alvo foram utilizados como variáveis preditoras. Utilizou-se 7 dias passados, ou seja, o valor de uma semana passada para capturar o comportamento mais imediatamente próximo da vazão medida na estação.
+
 Para que se tenha uma noção melhor, abaixo seguem alguns dados estatísticos relevantes que informam sobre os dados de vazão e precipitação utilizados. Conste-se que as unidades de precipitação estão em mm/dia e vazão em $m^3/s$.
 
 \begin{table}[!h]
@@ -712,16 +714,16 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $n$ o número total de observações
 	\end{itemize}
 	
-%	\item \textbf{$R^2$ (\textit{Coefficient of Determination})}: O Coeficiente de Determinação, que é o quadrado do coeficiente de correlação de Pearson, mede a proporção da variância total nos dados observados que pode ser explicada pelo modelo. Ele varia de $-\inf$ a 1, com valores mais alto indicando uma melhor concordância entre os dados observados e os previstos. Embora o $R^2$ seja amplamente utilizado, ele apresenta limitações que podem resultar em uma avaliação imprecisa do desempenho de modelos hidrológicos, tal como ser uma métrica sensível a valores discrepantes (\textit{outliers}) e avaliar apenas relações lineares. Deve ser empregado com outras métricas para garantir uma boa interpretabilidade dos resultados dos modelos.\cite{legates1999goodness}
-%	\begin{equation}
-%		R^2 = 1 - \frac{\sum_{i=1}^{n} (O_i - {P_i})^2}{\sum_{i=1}^{n} (O_i - \bar{O})^2}
-%	\end{equation}
-%	\begin{itemize}
-%		\item $O_i$ valores observados
-%		\item $P_i$ valores previstos
-%		\item $\bar{O}$ média dos valores observados
-%		\item $n$ o número total de observações
-%	\end{itemize}
+	%	\item \textbf{$R^2$ (\textit{Coefficient of Determination})}: O Coeficiente de Determinação, que é o quadrado do coeficiente de correlação de Pearson, mede a proporção da variância total nos dados observados que pode ser explicada pelo modelo. Ele varia de $-\inf$ a 1, com valores mais alto indicando uma melhor concordância entre os dados observados e os previstos. Embora o $R^2$ seja amplamente utilizado, ele apresenta limitações que podem resultar em uma avaliação imprecisa do desempenho de modelos hidrológicos, tal como ser uma métrica sensível a valores discrepantes (\textit{outliers}) e avaliar apenas relações lineares. Deve ser empregado com outras métricas para garantir uma boa interpretabilidade dos resultados dos modelos.\cite{legates1999goodness}
+	%	\begin{equation}
+		%		R^2 = 1 - \frac{\sum_{i=1}^{n} (O_i - {P_i})^2}{\sum_{i=1}^{n} (O_i - \bar{O})^2}
+		%	\end{equation}
+	%	\begin{itemize}
+		%		\item $O_i$ valores observados
+		%		\item $P_i$ valores previstos
+		%		\item $\bar{O}$ média dos valores observados
+		%		\item $n$ o número total de observações
+		%	\end{itemize}
 	
 	\item \textbf{PBIAS (\textit{Percent Bias})}: O PBIAS avalia o viés das previsões, ou seja, a tendência do modelo em superestimar (PBIAS positivo) ou subestimar (PBIAS negativo) os valores observados. Ele expressa a diferença percentual entre a soma dos valores previstos e observados, permitindo identificar se o modelo apresenta uma tendência sistemática de erro. Um valor de PBIAS próximo de zero indica que o modelo não possui viés significativo. Não se espera que esta métrica seja 0, senão indicaria que a previsão foi exatamente o valor observado, mas ao mostrar o viés das previsões, isso tem impacto diretamente nas decisões de gestão de recursos hídricos.\cite{rayyan-33388455}
 	\begin{equation}
@@ -743,8 +745,9 @@ Para avaliar o desempenho dos modelos de previsão utilizados neste estudo, fora
 		\item $\alpha = \frac{\sigma_p}{\sigma_o}$ é a variabilidade relativa, sendo $\sigma_p$ o desvio-padrão das previsões e $\sigma_o$ o desvio-padrão das observações
 		\item $\beta = \frac{\mu_p}{\mu_o}$ é o viés, em que $\mu_p$ é a média dos valores previstos e $\mu_o$ a média dos valores observados		
 	\end{itemize}
-	
 \end{itemize}
+
+Os modelos serão qualificados quanto ao seu desempenho seguindo a seguinte ordem de métricas: 1. KGE, 2. MAPE, 3. PBIAS.
 
 %\section{Treinamento e Validação dos Modelos}
 %Detalhar os procedimentos de treinamento e validação dos modelos.
@@ -850,9 +853,9 @@ Ao produzir intervalos de previsão para modelos de séries temporais, geralment
 Ficou assim: para cada dia previsto foi feito um teste lógico para verificar se o valor real observado (`y\_true') esteve acima do valor mínimo do intervalo (`lo-95') \textbf{e} abaixo do valor máximo (`hi-95'). Para quando estes dois testes lógicos fossem verdadeiros, adicionava o valor 1 a um vetor, e 0 quando um destes testes lógicos falhasse, ou seja, o `y\_true' estava de algum modo fora do intervalo. Ao final, calculou a média deste vetor e multiplicou por 100 para uma saída percentual. Se o número final fosse 95\% a 100\% então significa que os intervalos de previsão capturaram perfeitamente o valor real futuro. Se abaixo de 95\%, significa que em algum ponto da previsão o valor real ficou para fora destes limites, ou abaixo do valor mínimo ou acima do valor máximo. Veja uma demonstração.
 
 \begin{Verbatim}[frame=single, numbers=left]
-def cobertura_empirica(y, lower_bound, upper_bound):
-   media = np.mean(np.logical_and(y >= lower_bound, y <= upper_bound))
-   return f"{round(100*media, 2)} %"
+	def cobertura_empirica(y, lower_bound, upper_bound):
+	media = np.mean(np.logical_and(y >= lower_bound, y <= upper_bound))
+	return f"{round(100*media, 2)} %"
 \end{Verbatim}
 
 \begin{figure}[!h]
@@ -869,15 +872,17 @@ def cobertura_empirica(y, lower_bound, upper_bound):
 	\label{fig:intervalo_previsao_2}
 \end{figure}
 
-Aplicando a função à figura \ref{fig:intervalo_previsao_1} retornou 42,86\%, os 3 pontos da linha preta, os valores reais observados, de um total de 7. Isso significa que o intervalo de previsão pretendido de 95\% só conseguiu, empiricamente, capturar cerca de 43\% dos valores reais do horizonte de previsão em questão. Na figura \ref{fig:intervalo_previsao_2}, por sua vez, o intervalo capturou 100\% dos valores observados. Ambas figuras mostram previsão de 7 dias, e sem considerar a linha rosa, que foi a previsão que os modelos geraram, o modelo da figura \ref{fig:intervalo_previsao_2} teve um desempenho melhor, segundo essa métrica criada. É mais uma questão a ser considerada quando avaliar a qualidade dos modelos, mas deve ser empregada com parcimônia. Isso porque os intervalos de previsão podem ser simplesmente faixas de valores muito absurdos. Se por exemplo o modelo calcular intervalos de previsão que vão de 0 $m^3/s$ a 200 mil $m^3/s$, então qualquer valor observado seria capturado, de fato, mas isso não ajudaria em nada na tomada de decisão.
+Aplicando a função à figura \ref{fig:intervalo_previsao_1} retornou 42,86\%, os 3 pontos da linha preta, os valores reais observados, de um total de 7. Isso significa que o intervalo de previsão pretendido de 95\% só conseguiu, empiricamente, capturar cerca de 43\% dos valores reais do horizonte de previsão em questão. Na figura \ref{fig:intervalo_previsao_2}, por sua vez, o intervalo capturou 100\% dos valores observados. Ambas figuras mostram previsão de 7 dias, e sem considerar a linha rosa, que foi a previsão que os modelos geraram, o modelo da figura \ref{fig:intervalo_previsao_2} teve um desempenho melhor, segundo essa métrica criada. É mais uma questão a ser considerada quando avaliar a qualidade dos modelos, mas deve ser empregada com parcimônia. Isso porque os intervalos de previsão podem assumir faixas de valores muito elevados. Se por exemplo o modelo calcular intervalos de previsão que vão de 0 $m^3/s$ a 200 mil $m^3/s$, então qualquer valor observado seria capturado, de fato, mas isso não ajudaria em nada na tomada de decisão.
 
-Em cada resultado será discutido o atraso (\textit{delay}) da série prevista em relação à série original, quando houver, a partir da aplicação do algoritmo FastDTW. [REF] \textit{Dynamic Time Warping} (DTW) é uma forma de avaliar a similaridade entre duas sequências quaisquer, neste caso, duas séries temporais: a série temporal dos dados observados e a série temporal dos dados previstos. O algoritmo calcula as distâncias entre os pontos de duas séries esticando e comprimindo-as para descobrir o melhor alinhamento (\textit{warping path}) entre ambas. Esta análise ajudará a compreender a dinâmica das vazões, fornecendo interpretação sobre quando os eventos passados irão ser percebidos pelos modelos no futuro. E como as análises são na base diária, o resultado do \textit{delay} é a expressão em dias do atraso (\textit{lag}) ou adiantamento (\textit{lead}) de quando um evento (vazão) será percebido pelo modelo e expresso na série gerada por este. [REF]
+Em cada resultado será discutido o atraso (\textit{delay}) da série prevista em relação à série original, quando houver, a partir da aplicação do algoritmo FastDTW.\cite{salvador2007toward} \textit{Dynamic Time Warping} (DTW) é uma forma de avaliar a similaridade entre duas sequências quaisquer, neste caso, duas séries temporais: a série temporal dos dados observados e a série temporal dos dados previstos. O algoritmo calcula as distâncias entre os pontos de duas séries esticando e comprimindo-as no eixo do tempo para descobrir o melhor caminho de alinhamento (\textit{warping path}) entre ambas.\cite{dtw_berndt_clifford_1994} No caso aqui utilizado, o algoritmo FastDTW é uma implementação do conceito original de DTW de ordem de complexidade O($n$) que resulta numa aproximação, visto que o algoritmo de DTW é de ordem O($n^2$). Ele escala com a quantidade de dados de entrada, podendo facilmente demandar \textit{terabytes} de memória.\cite{salvador2007toward} Esta análise ajudará a compreender a dinâmica das vazões, fornecendo interpretação sobre quando os eventos passados irão ser percebidos pelos modelos no futuro. E como as análises são na base diária, o resultado do \textit{delay} é a expressão em dias do atraso (\textit{lag}) ou adiantamento (\textit{lead}) de quando um evento (vazão) será percebido pelo modelo e expresso na série gerada por este. Apenas os melhores resultados terão o \textit{delay} discutido.
 
 Encerrada a discussão do \textit{delay}, procede-se com a análise dos resíduos. Os modelos não-lineares CatBoost e RandomForest não necessitam que haja normalidade, nem para os dados de entrada, nem para os resíduos. Diferentemente do modelo de \textit{Linear Regression}, em que é necessário realizar tal avaliação em busca de compreender o funcionamento do modelo.
 
-Analisar os resíduos permite verificar a estabilidade do modelo quanto às previsões. Uma distribuição normal dos resíduos é um indício de que os coeficientes do modelo conseguiram capturar as relações temporais dos dados de entrada. [REF]
+Analisar os resíduos permite verificar a estabilidade do modelo quanto às previsões. Uma distribuição normal dos resíduos é um indício de que os coeficientes do modelo conseguiram capturar as relações temporais dos dados de entrada. Além disso, analisar os resíduos permite avaliar se o modelo assumiu uma correta relação entre a variável alvo e as variáveis independentes.\cite{belloto1985residual}
 
-A última análise é avaliação da importância das variáveis. Neste momento, \underline{apenas os melhores resultados} serão analisado de cada modelo. Serão apresentados os \textit{Shapley Values} (SHAP) das variáveis dos modelos e discussão sobre o comportamento de cada uma delas para a qualidade dos modelos.
+A última análise é avaliação da importância das variáveis. Como na análise de \textit{delay}, \underline{apenas os melhores resultados} serão analisados de cada modelo. Serão apresentados os valores SHAP das variáveis dos modelos e discussão sobre o comportamento de cada uma delas para a qualidade dos modelos.
+
+\textit{SHAP values} (\textit{SHapley Additive exPlanations}) constituem uma metodologia robusta, derivada da teoria dos jogos cooperativos, com o propósito de elucidar o funcionamento de modelos de aprendizado de máquina, frequentemente caracterizados como ``caixas pretas''. A premissa fundamental reside na atribuição de um valor a cada característica preditiva, quantificando sua contribuição individual para a predição final do modelo, considerando todas as interações possíveis com demais características. Essa abordagem viabiliza a compreensão dos fatores determinantes na tomada de decisão do modelo e como cada um impacta o resultado, seja de forma positiva ou negativa, promovendo assim a interpretabilidade e transparência.\cite{merrick_taly_2020}
 
 Não consta no fluxograma do modelo proposto, mas para todos os modelos teve também uma rodada de execução com os dados originais \underline{sem transformação logarítmica}, apenas havendo aplicação de normalização de dados usando MinMax para o LinearRegression. Mas isso é obrigatório para este tipo de modelo pois a escala dos dados é muito discrepante, com vazão em $m^3/s$ e precipitação em $mm/dia$. Essas comparações serão importantes para chegar em uma melhor interpretação dos fenômenos e dar direcionamentos sobre quais modelos e como utilizar os modelos pensando na gestão dos recursos hídricos.
 
