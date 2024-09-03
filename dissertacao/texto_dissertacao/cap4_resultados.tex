@@ -58,64 +58,51 @@ Considerando a qualidade dos intervalos de previsão, a cobertura observada de 9
 	\label{fig:jequiti_LR_final_2022_detalhe}
 \end{figure}
 
-A análise de \textit{delay} mostrou um resultado médio de $-0,87$. Considerando que os dados estão numa frequência diária, isso pode ser interpretado como o modelo atrasando a previsão em 0,87 dias, o que seria menos de 24 horas entre o evento ocorrer e ele ser percebido na previsão. Acredito que afirmar que o modelo está atrasado 20,88 horas não converge com a realidade, por isso que se considerar o desvio-padrão no resultado, confere mais coerência, pois indicaria que o atraso percebido no fenômeno é de cerca de um dia e meio, dois dias. Se pegar a série prevista pelo modelo e comprimir linearmente em $-0,87$, ambas as sequências serão idênticas, ou seja, a série prevista será a série observada.
+A análise de \textit{delay} mostrou um resultado médio de $-0,87$. Se pegar a série prevista pelo modelo e comprimir linearmente em $-0,87$, ambas as sequências serão idênticas, ou seja, a série prevista será a série observada. Considerando que os dados estão numa frequência diária, isso pode ser interpretado como o modelo atrasando a previsão em $0,87$ dias, o que seria menos de 24 horas entre o evento ocorrer e ele ser percebido na previsão. Acredito que afirmar que o modelo está atrasado 20,88 horas não converge com a realidade, por isso que se considerar o desvio-padrão no resultado, confere mais coerência, pois indicaria que o atraso percebido no fenômeno é de cerca de um dia e meio, dois dias.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CatBoost_fh1.png}
-	\caption{CatBoost para o horizonte de previsão de 1 dia\\(fonte: o autor)}
-	\label{fig:jequiti_CatBoostRegressor_fh1}
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_PREV.png}
+	\caption{Resíduos da previsão versus os valores das previsões.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_x_PREV}
+\end{figure}
+
+Na figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_PREV} podemos observar a concentração dos resíduos em torno de zero. A linha vermelha tracejada é onde o valor previsto e observado são iguais, designando a previsão perfeita, com resíduo $0$. Este é o comportamento que se espera, idealmente, os resíduos estarem distribuídos aleatoriamente em torno de zero, sem padrões evidentes (nenhuma tendência clara de curvatura ou cone). Contudo, à medida que se caminha sobre a linha vermelha tracejada, aumentando o valor no eixo x, há um aumento na dispersão dos resíduos. A faixa sombreada demarcada são os valores calculados para \textit{upper fence} e \textit{lower fence} no \textit{boxplot}, que aqui são $68,53$ e $-63,94$, respectivamente. Nesta faixa de valores é onde se espera que os resíduos estejam distribuídos, o que fica de fora dessas faixas pode ser interpretado como um \textit{outlier}. Considerando que os dados de treinamento não foram tratados para valores \textit{outliers}, isso parece estar se refletindo neste resultado, mesmo com a transformação logarítmica. O modelo não captou corretamente os valores elevados nos dados observados, por isso resíduos tão grandes assim, ainda que tenha apresentado um comportamento geral bom, como visto nas métricas anteriormente.
+
+Veja na figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO} como os resíduos estão dispersos ao longo do tempo. No início do ano e final do ano, exatamente quando os eventos de chuva mais ocorrem, o modelo tende a se dispersar. No início do ano, como discutido anteriormente, pode ser que devido às vazões elevadas do final do ano de 2022, isso tenha causado ruídos em excesso na previsão do modelo. Quando houve vazões mais moderadas, os resíduos foram também mais moderados, como pode-se observar no final do ano de 2023, em que a influência imediata é o meio do ano, meses de inverno, e início de primavera. Quando da estação de baixa dos rios, os meses de outono e inverno, os resíduos estiveram bem alinhados em torno do $0$. Para encerrar essa análise, a figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_CURVA_NORMAL} apresenta que os resíduos estão próximos da normalidade quanto à distribuição destes em torno de $0$, com uma assimetria de $1,46$, o que pode ser considerada baixa, mas não descartável. A assimetria sugere que pode haver alguns casos em que o modelo subestima ou superestima os valores. O que combina com os gráficos anteriores de dispersão. Mas cabe destacar que os resíduos não estão significativamente desviados em nenhuma direção, apresentam distribuição aleatória e não sistemática e este é um comportamento desejado. A análise da função de autocorrelação (ACF) está na figura \ref{fig:jequiti_LR_WFV_LOG_RESID_ACF} e aqui é analisado se existe independência ou dependência temporal entre os resíduos. A área sombreada representa a faixa ideal de permanência dos resíduos, onde se espera que a maioria dos resíduos esteja concentrada caso não haja autocorrelação significativa. Algumas \textit{lags} estão fora destes limites (picos), mais precisamente, \textit{lags} que estão mais próximas da \textit{lag} de referência. Este comportamento indica que o modelo pode ser refinado para melhor capturar dinâmicas temporais, possivelmente incorporando termos sazonais ou de tendência. Mas no aspecto geral do resultado, está bom o comportamento dos resíduos. Para melhorar os resíduos com valores tão elevados um tratamento de \textit{outliers} pode verter bons resultados.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_TEMPO.png}
+	\caption{Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RandomForest_fh1.png}
-	\caption{RandomForest para o horizonte de previsão de 1 dia\\(fonte: o autor)}
-	\label{fig:jequiti_RandomForest_fh1}
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CatBoost_fh3.png}
-	\caption{CatBoost para o horizonte de previsão de 3 dias\\(fonte: o autor)}
-	\label{fig:jequiti_CatBoostRegressor_fh3}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RandomForest_fh3.png}
-	\caption{RandomForest para o horizonte de previsão de 3 dias\\(fonte: o autor)}
-	\label{fig:jequiti_RandomForest_fh3}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CatBoost_fh7.png}
-	\caption{CatBoost para o horizonte de previsão de 7 dias\\(fonte: o autor)}
-	\label{fig:jequiti_CatBoostRegressor_fh7}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RandomForest_fh7.png}
-	\caption{RandomForest para o horizonte de previsão de 7 dias\\(fonte: o autor)}
-	\label{fig:jequiti_RandomForest_fh7}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CatBoost_fh15.png}
-	\caption{CatBoost para o horizonte de previsão de 15 dias\\(fonte: o autor)}
-	\label{fig:jequiti_CatBoostRegressor_fh15}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RandomForest_fh15.png}
-	\caption{RandomForest para o horizonte de previsão de 15 dias\\(fonte: o autor)}
-	\label{fig:jequiti_RandomForest_fh15}
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_LOG_RESID_ACF.png}
+	\caption{Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_ACF}
 \end{figure}
 \clearpage
+
+Agora os resultados sem emprego da log-transformação, com os dados originais. Salientando que para o modelo LR não é correto aplicar os dados originais na escala em que se encontram, foi precisar realizar normalização antes empregando algoritmo MinMax. Este algoritmo coloca todos os dados em valores entre $0$ e $1$, sendo o valor mínimo correspondente a cada série temporal passado para $0$ e o valor máximo é passado para $1$. Com os demais valores é feito, basicamente, uma regra de três para achar o valor correspondente na escala entre $0$ e $1$.
+
+Dito isso, o resultado para os dados originais ficou levemente inferior ao modelo com os dados log-transformados. Em todas as métricas que se avaliar o resultado ficou piorado. Um comportamento destacado foi as faixas nos valores dos intervalos de previsão. Diferentemente do comportamento anterior (figura \ref{fig:jequiti_LR_WFV_LOG})
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_SCLD.png}
+	\caption{{Walk-Forward Validation} para o modelo Regressão Linear.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_SCLD}
+\end{figure}
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
