@@ -42,12 +42,12 @@
 \contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{58}{chapter.120}%
 \contentsline {section}{\numberline {4.1}Desempenho dos modelos}{58}{section.121}%
 \contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{58}{subsection.122}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{67}{section.135}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{67}{section.136}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{71}{section.141}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{71}{section.142}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{68}{chapter.137}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{68}{section.138}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{68}{section.139}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{68}{section.140}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{72}{chapter.143}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{72}{section.144}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{72}{section.145}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{72}{section.146}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{69}{chapter*.142}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{73}{chapter*.148}%

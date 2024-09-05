@@ -45,7 +45,7 @@ Considerando a qualidade dos intervalos de previsão, a cobertura observada de 9
 \begin{figure}[!h]
 	\centering
 	\includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_LOG.png}
-	\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear\\(fonte: o autor)}
+	\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}
 	\label{fig:jequiti_LR_WFV_LOG}
 \end{figure}
 
@@ -95,7 +95,7 @@ Agora os resultados sem emprego da log-transformação, com os dados originais. 
 
 Dito isso, o resultado para os dados originais ficou levemente inferior ao modelo com os dados log-transformados. Em todas as métricas que se avaliar o resultado ficou piorado. Um comportamento destacado foi as faixas nos valores dos intervalos de previsão. Diferentemente do comportamento anterior (figura \ref{fig:jequiti_LR_WFV_LOG}), em que houve uma prevalência de faixas elevadas no início do ano, neste resultado o início do ano esteve, digamos, bem comportado. Ao decorrer do ano que os intervalos incrementaram, ali a partir do mês de fevereiro, e foram aumentando até o fim do ano. Isso pode ser um indicativo de que o modelo teve problemas na estabilidade de longo prazo, acumulando incertezas no período.
 
-Ainda que tenha apresentado uma KGE inferior, bem como nas demais métricas, quando se observa o comportamento dos resíduos, houve uma prevalência de $'90,96\%$ dos resíduos na área sombreada no gráfico de dispersão.(figura \ref{fig:jequiti_LR_WFV_SCLD_RESID_x_PREV}) Isso significa que houve menos \textit{outliers} nas previsões. Pode-se verificar também este resultado na figura \ref{fig:jequiti_LR_WFV_SCLD_RESID_x_TEMPO}, no início do ano, em que menos \textit{outliers} estão presentes, ainda que na porção final do ano tenha aparecido alguns a mais que não foram vistos na análise anterior (figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}). Para os dados originais, ainda que nas métricas pareça piorado, pela análise dos resíduos o modelo mostrou boa estabilidade nas previsões pontuais. Quando se considera os intervalos de previsão, precisa considerar com parcimônia, visto que o crescimento dos valores superioes (hi-95) e valores de vazão $0 m^3/s$ na faixa inferior (lo-95) indicam instabilidade de longo prazo.
+Ainda que tenha apresentado uma KGE inferior, bem como nas demais métricas, quando se observa o comportamento dos resíduos, houve uma prevalência de $90,96\%$ dos resíduos na área sombreada no gráfico de dispersão.(figura \ref{fig:jequiti_LR_WFV_SCLD_RESID_x_PREV}) Isso significa que houve menos \textit{outliers} nas previsões. Pode-se verificar também este resultado na figura \ref{fig:jequiti_LR_WFV_SCLD_RESID_x_TEMPO}, no início do ano, em que menos \textit{outliers} estão presentes, ainda que na porção final do ano tenha aparecido alguns a mais que não foram vistos na análise anterior (figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}). Para os dados originais, ainda que nas métricas pareça piorado, pela análise dos resíduos o modelo mostrou boa estabilidade nas previsões pontuais. Quando se considera os intervalos de previsão, precisa considerar com parcimônia, visto que o crescimento dos valores superioes (hi-95) e valores de vazão $0 m^3/s$ na faixa inferior (lo-95) indicam instabilidade de longo prazo.
 
 Para a análise de \textit{delay}, o mesmo feito anteriormente serve para este: aplicar o valor do desvio-padrão parece ser mais coerente com o comportamento real, sendo que aqui houve uma piora significativa no atraso, passando para mais de 3 dias ($3,78$).
 
@@ -104,7 +104,7 @@ Caminhando para o fim, o histograma e curva-normal apresentou uma assimetria con
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.33]{Figuras/jequiti/resultados/LR_WFV_SCLD.png}
-\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear.\\(fonte: o autor)}
+\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}
 \label{fig:jequiti_LR_WFV_SCLD}
 \end{figure}
 
@@ -137,9 +137,64 @@ Caminhando para o fim, o histograma e curva-normal apresentou uma assimetria con
 \end{figure}
 \clearpage
 
-Partindo para os modelos principais proposto no trabalho, CatBoost e RandomForest, as análises serão feitas juntas pois ambos apresentaram comportamento assemelhado.
+Passando agora à análise dos modelos principais deste trabalho, cujos resultados serão comparados ao modelo de referência, optou-se por realizar a análise de forma concomitante, uma vez que ambos os modelos apresentaram comportamentos similares, embora o modelo RandomForest tenha demonstrado um desempenho superior ao CatBoost.
 
+Na métrica KGE, comparando-se os resultados com o comportamento ilustrado na figura \ref{fig:jequiti_LR_WFV_LOG}, observa-se que ambos os modelos não conseguiram superar o modelo de referência, com destaque para o CB, que apresentou uma performance consideravelmente inferior. No entanto, ao considerar a precisão percentual média, avaliada pela métrica MAPE, ambos os modelos baseados em árvores apresentaram melhorias em relação ao modelo de referência, evidenciando um desempenho superior em termos de erro percentual médio.
 
+A KGE, relembrando, combina três aspectos fundamentais: variabilidade, viés e correlação entre os dados observados e previstos. Considerando esses fatores, com os dados log-transformados, o modelo LR capturou de forma mais eficaz os três aspectos mencionados. É provável que a linearização tenha sido um fator determinante para o bom desempenho deste modelo olhando por esta métrica, uma vez que, ao analisar a MAPE, os modelos não-lineares (CB e RF) apresentaram desempenhos melhores. Um desempenho médio percentual melhor pode dever-se à resiliência dos modelos não-lineares à sua robustez diante de valores discrepantes, aos quais o modelo linear é mais sensível.
+
+Observa-se que tanto o CB quanto o RF apresentaram intervalos de previsão menos amplos no início do ano, em comparação com o modelo LR, mesmo impactados pelas vazões elevadas no final de 2022 (figura \ref{fig:jequiti_LR_final_2022_detalhe}). Em termos de previsão pontual, ambos os modelos não lineares demonstraram-se robustos. No entanto, ao analisar a cobertura empírica dos intervalos de previsão, o modelo RF mostrou-se consideravelmente defasado em relação aos modelos LR e CB. Isso pode ser explicado pela possível ``otimização'' excessiva do modelo ao calcular os intervalos, ao presumir uma repetição dos eventos e erros passados, resultando em intervalos estreitos. Esse fenômeno é descrito por \citet{RobHyndman_prediction_intervals}. Apesar disso, a cobertura empírica de $80\%$ do modelo RF ainda pode ser considerada satisfatória, e a cobertura de $88\%$ obtida pelo CB demonstra um bom desempenho.
+
+Pode-se inferir que os modelos CB e RF conseguiram equilibrar a previsão pontual, indicada pela MAPE de $0,12$, com os intervalos de previsão. Um ajuste de hiperparâmetros poderia potencialmente melhorar esse desempenho. Em relação ao PBIAS, ambos os modelos apresentaram um desvio sistemático, subestimando os valores previstos. No que diz respeito ao \textit{delay}, todos os modelos, incluindo o LR, apresentaram um comportamento semelhante, com um atraso de aproximadamente 1 a 2 dias para que um evento na série observada fosse captado nas previsões. Essa análise leva em consideração o desvio-padrão.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CB_WFV_LOG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+\label{fig:jequiti_CB_WFV_LOG}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RF_WFV_LOG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+\label{fig:jequiti_RF_WFV_LOG}
+\end{figure}
+
+Os resíduos em modelos não-lineares podem ser mais difíceis de interpretar porque esses modelos capturam interações e padrões complexos. Porém, mesmo assim, detectar padrões sistemáticos nos resíduos ajuda a elucidar se os modelos conseguiram capturar todas as nuances dos dados.
+
+Em ambos os casos, não houve prevalência de comportamento anormal para os resíduos. Estiveram aleatoriamente distribuídos em torno de $0$, com uma menção importante para a maior dispersão de possíveis valores \textit{outliers} para o modelo CB à medida que as medições aumentaram.(figura \ref{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}).
+
+A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, com resíduos de valor elevado mais presentes no início da série. (figuras \ref{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO} \ref{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}) Aqui vale a interpretação usada para o modelo de referência, de que os valores elevados aferidos em final de 2022 possam ter interferido. Houve uma prevalência de $84,11\%$ e $86,03\%$, respectivamente CB e RF, dos resíduos na área sombreada, correspondente à área de erro aceitável.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png}
+\caption{Resíduos da previsão \textit{versus} os valores das previsões.\\(fonte: o autor)}
+\label{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_PREV.png}
+\caption{Resíduos da previsão \textit{versus} os valores das previsões.\\(fonte: o autor)}
+\label{fig:jequiti_RF_WFV_LOG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_TEMPO.png}
+\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+\label{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_TEMPO.png}
+\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+\label{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}
+\end{figure}
+\clearpage
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
