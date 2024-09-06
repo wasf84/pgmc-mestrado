@@ -160,12 +160,11 @@ Pode-se inferir que os modelos CB e RF conseguiram equilibrar a previsão pontua
 \caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
 \label{fig:jequiti_RF_WFV_LOG}
 \end{figure}
+\clearpage
 
 Os resíduos em modelos não-lineares podem ser mais difíceis de interpretar porque esses modelos capturam interações e padrões complexos. Porém, mesmo assim, detectar padrões sistemáticos nos resíduos ajuda a elucidar se os modelos conseguiram capturar todas as nuances dos dados.
 
 Em ambos os casos, não houve prevalência de comportamento anormal para os resíduos. Estiveram aleatoriamente distribuídos em torno de $0$, com uma menção importante para a maior dispersão de possíveis valores \textit{outliers} para o modelo CB à medida que as medições aumentaram.(figura \ref{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}).
-
-A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, com resíduos de valor elevado mais presentes no início da série. (figuras \ref{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO} \ref{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}) Aqui vale a interpretação usada para o modelo de referência, de que os valores elevados aferidos em final de 2022 possam ter interferido. Houve uma prevalência de $84,11\%$ e $86,03\%$, respectivamente CB e RF, dos resíduos na área sombreada, correspondente à área de erro aceitável.
 
 \begin{figure}[!h]
 \centering
@@ -180,6 +179,9 @@ A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, c
 \caption{Resíduos da previsão \textit{versus} os valores das previsões.\\(fonte: o autor)}
 \label{fig:jequiti_RF_WFV_LOG_RESID_x_PREV}
 \end{figure}
+\clearpage
+
+A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, com resíduos de valor elevado mais presentes no início da série. (figuras \ref{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO} \ref{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}) Aqui vale a interpretação usada para o modelo de referência, de que os valores elevados aferidos em final de 2022 possam ter interferido. Houve uma prevalência de $84,11\%$ e $86,03\%$, respectivamente CB e RF, dos resíduos na área sombreada, correspondente à área de erro aceitável. Uma leve melhor prevalência para o modelo RF, que pode ser vista também em menos dispersão de resíduos para fora dos limites da área sombreada no início do ano.
 
 \begin{figure}[!h]
 \centering
@@ -193,6 +195,37 @@ A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, c
 \includegraphics[scale=0.33]{Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_TEMPO.png}
 \caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
 \label{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}
+\end{figure}
+\clearpage
+
+dghfdhfdghdfhfdgh
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+\label{fig:jequiti_CB_WFV_LOG_RESID_x_CURVA_NORMAL}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+\label{fig:jequiti_RF_WFV_LOG_RESID_x_CURVA_NORMAL}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/CB_WFV_LOG_RESID_ACF.png}
+\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+\label{fig:jequiti_CB_WFV_LOG_RESID_ACF}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/jequiti/resultados/RF_WFV_LOG_RESID_ACF.png}
+\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+\label{fig:jequiti_RF_WFV_LOG_RESID_ACF}
 \end{figure}
 \clearpage
 
