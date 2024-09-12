@@ -49,10 +49,10 @@
 \contentsline {figure}{\numberline {3.48}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{58}{figure.119}%
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Resultado do SeasonalNaive no teste \textit {Walk-Forward Validation}\\(fonte: o autor)}}{60}{figure.123}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}}{61}{figure.124}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}}{62}{figure.125}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}}{61}{figure.125}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{62}{figure.126}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{63}{figure.127}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Histograma dos resíduos.\\(fonte: o autor)}}{64}{figure.128}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Histograma dos resíduos.\\(fonte: o autor)}}{63}{figure.128}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{64}{figure.129}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}}{66}{figure.130}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{66}{figure.131}%
