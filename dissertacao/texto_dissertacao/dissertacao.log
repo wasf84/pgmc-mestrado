@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.9.10)  13 SEP 2024 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  21 SEP 2024 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language41). Reported on input line 105.
+(babel)             (\language24). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language41). Reported on input line 108.
+(babel)             (\language24). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language52). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -2065,21 +2065,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [50] [51] [52]
-<Figuras/skforecast-diagram-backtesting-refit.png, id=851, 1110.1475pt x 328.22
+<Figuras/skforecast-diagram-backtesting-refit.png, id=854, 1110.1475pt x 328.22
 626pt>
 File: Figuras/skforecast-diagram-backtesting-refit.png Graphic file (type png)
 <use Figuras/skforecast-diagram-backtesting-refit.png>
 Package pdftex.def Info: Figuras/skforecast-diagram-backtesting-refit.png  used
  on input line 772.
 (pdftex.def)             Requested size: 333.04681pt x 98.46863pt.
-<Figuras/imagem1_skforecast-backtesting-refit.png, id=854, 903.375pt x 401.5pt>
+<Figuras/imagem1_skforecast-backtesting-refit.png, id=857, 903.375pt x 401.5pt>
 
 File: Figuras/imagem1_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem1_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem1_skforecast-backtesting-refit.png  used
  on input line 779.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
-<Figuras/imagem2_skforecast-backtesting-refit.png, id=857, 903.375pt x 401.5pt>
+<Figuras/imagem2_skforecast-backtesting-refit.png, id=860, 903.375pt x 401.5pt>
 
 File: Figuras/imagem2_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem2_skforecast-backtesting-refit.png>
@@ -2090,7 +2090,7 @@ Package pdftex.def Info: Figuras/imagem2_skforecast-backtesting-refit.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/imagem3_skforecast-backtesting-refit.png, id=860, 903.375pt x 401.5pt>
+<Figuras/imagem3_skforecast-backtesting-refit.png, id=863, 903.375pt x 401.5pt>
 
 File: Figuras/imagem3_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem3_skforecast-backtesting-refit.png>
@@ -2102,7 +2102,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [53 <./Figuras/skforecast-diagram-backtesting-refit.png> <./Figuras/imagem1_skf
 orecast-backtesting-refit.png>]
-<Figuras/diagram-bootstrapping-prediction-intervals.png, id=874, 1988.42876pt x
+<Figuras/diagram-bootstrapping-prediction-intervals.png, id=877, 1988.42876pt x
  1109.14375pt>
 File: Figuras/diagram-bootstrapping-prediction-intervals.png Graphic file (type
  png)
@@ -2123,13 +2123,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<Figuras/intervalo_previsao_1.png, id=885, 929.4725pt x 210.7875pt>
+<Figuras/intervalo_previsao_1.png, id=889, 929.4725pt x 210.7875pt>
 File: Figuras/intervalo_previsao_1.png Graphic file (type png)
 <use Figuras/intervalo_previsao_1.png>
 Package pdftex.def Info: Figuras/intervalo_previsao_1.png  used on input line 8
 63.
 (pdftex.def)             Requested size: 371.78242pt x 84.3135pt.
-<Figuras/intervalo_previsao_2.png, id=886, 928.46875pt x 210.7875pt>
+<Figuras/intervalo_previsao_2.png, id=890, 928.46875pt x 210.7875pt>
 File: Figuras/intervalo_previsao_2.png Graphic file (type png)
 <use Figuras/intervalo_previsao_2.png>
 Package pdftex.def Info: Figuras/intervalo_previsao_2.png  used on input line 8
@@ -2139,14 +2139,9 @@ Package pdftex.def Info: Figuras/intervalo_previsao_2.png  used on input line 8
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[55 <./Figuras/intervalo_previsao_1.png>]
-Overfull \hbox (25.80768pt too wide) in paragraph at lines 887--888
-[]\T1/lmr/m/n/12 (-20) A úl-tima aná-lise é ava-li-a-ção da im-por-tân-cia das 
-va-riá-veis. $[]$
- []
-
-[56 <./Figuras/intervalo_previsao_2.png>] [57]
-<Figuras/flowchart.png, id=912, 570.13pt x 1645.14626pt>
+[55 <./Figuras/intervalo_previsao_1.png>] [56 <./Figuras/intervalo_previsao_2.p
+ng>] [57]
+<Figuras/flowchart.png, id=915, 570.13pt x 1645.14626pt>
 File: Figuras/flowchart.png Graphic file (type png)
 <use Figuras/flowchart.png>
 Package pdftex.def Info: Figuras/flowchart.png  used on input line 919.
@@ -2159,7 +2154,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 \openout2 = `cap4_resultados.aux'.
 
  (./cap4_resultados.tex
-<Figuras/jequiti/resultados/SN_WFV.png, id=918, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/resultados/SN_WFV.png, id=921, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/resultados/SN_WFV.png Graphic file (type png)
 <use Figuras/jequiti/resultados/SN_WFV.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/SN_WFV.png  used on input l
@@ -2176,13 +2171,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ] [60 <./Figuras/jequiti/resultados/SN_WFV.png>]
-<Figuras/jequiti/resultados/LR_WFV_LOG.png, id=931, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/resultados/LR_WFV_LOG.png, id=934, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/resultados/LR_WFV_LOG.png Graphic file (type png)
 <use Figuras/jequiti/resultados/LR_WFV_LOG.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/LR_WFV_LOG.png  used on inp
 ut line 49.
 (pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
-<Figuras/jequiti/resultados/LR_final_2022_detalhe.png, id=932, 1154.3125pt x 55
+<Figuras/jequiti/resultados/LR_final_2022_detalhe.png, id=935, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/resultados/LR_final_2022_detalhe.png Graphic file (type p
 ng)
@@ -2190,7 +2185,7 @@ ng)
 Package pdftex.def Info: Figuras/jequiti/resultados/LR_final_2022_detalhe.png  
 used on input line 56.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_PREV.png, id=933, 1154.3125pt x 
+<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_PREV.png, id=936, 1154.3125pt x 
 552.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_PREV.png Graphic file (type
  png)
@@ -2205,7 +2200,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [61 <./Figuras/jequiti/resultados/LR_WFV_LOG.png> <./Figuras/jequiti/resultados
 /LR_final_2022_detalhe.png>] [62 <./Figuras/jequiti/resultados/LR_WFV_LOG_RESID
 _x_PREV.png>]
-<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_TEMPO.png, id=949, 1154.3125pt x
+<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_TEMPO.png, id=952, 1154.3125pt x
  552.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_TEMPO.png Graphic file (typ
 e png)
@@ -2213,7 +2208,7 @@ e png)
 Package pdftex.def Info: Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_TEMPO.pn
 g  used on input line 76.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=950, 1154.3
+<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=953, 1154.3
 125pt x 552.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic fi
 le (type png)
@@ -2221,7 +2216,7 @@ le (type png)
 Package pdftex.def Info: Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_CURVA_NO
 RMAL.png  used on input line 83.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_ACF.png, id=951, 1154.3125pt x 552
+<Figuras/jequiti/resultados/LR_WFV_LOG_RESID_ACF.png, id=954, 1154.3125pt x 552
 .0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_LOG_RESID_ACF.png Graphic file (type pn
 g)
@@ -2236,7 +2231,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [63 <./Figuras/jequiti/resultados/LR_WFV_LOG_RESID_x_TEMPO.png> <./Figuras/jequ
 iti/resultados/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png>] [64 <./Figuras/jequiti/res
 ultados/LR_WFV_LOG_RESID_ACF.png>]
-<Figuras/jequiti/resultados/LR_WFV_SCLD.png, id=969, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/resultados/LR_WFV_SCLD.png, id=972, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/resultados/LR_WFV_SCLD.png Graphic file (type png)
 <use Figuras/jequiti/resultados/LR_WFV_SCLD.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/LR_WFV_SCLD.png  used on in
@@ -2246,7 +2241,7 @@ put line 108.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_PREV.png, id=970, 1154.3125pt x
+<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_PREV.png, id=973, 1154.3125pt x
  552.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_PREV.png Graphic file (typ
 e png)
@@ -2257,7 +2252,7 @@ g  used on input line 115.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_TEMPO.png, id=971, 1154.3125pt 
+<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_TEMPO.png, id=974, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_TEMPO.png Graphic file (ty
 pe png)
@@ -2268,7 +2263,7 @@ ng  used on input line 122.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_CURVA_NORMAL.png, id=972, 1154.
+<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_CURVA_NORMAL.png, id=975, 1154.
 3125pt x 552.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_CURVA_NORMAL.png Graphic f
 ile (type png)
@@ -2279,7 +2274,7 @@ ORMAL.png  used on input line 129.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_ACF.png, id=973, 1154.3125pt x 55
+<Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_ACF.png, id=976, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_ACF.png Graphic file (type p
 ng)
@@ -2296,7 +2291,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 dos/LR_WFV_SCLD_RESID_x_PREV.png>] [67 <./Figuras/jequiti/resultados/LR_WFV_SCL
 D_RESID_x_TEMPO.png> <./Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_x_CURVA_NO
 RMAL.png> <./Figuras/jequiti/resultados/LR_WFV_SCLD_RESID_ACF.png>]
-<Figuras/jequiti/resultados/CB_WFV_LOG.png, id=995, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/resultados/CB_WFV_LOG.png, id=998, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/resultados/CB_WFV_LOG.png Graphic file (type png)
 <use Figuras/jequiti/resultados/CB_WFV_LOG.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_LOG.png  used on inp
@@ -2306,12 +2301,12 @@ ut line 156.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/RF_WFV_LOG.png, id=996, 1154.3125pt x 903.375pt>
+<Figuras/jequiti/resultados/RF_WFV_LOG.png, id=999, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/resultados/RF_WFV_LOG.png Graphic file (type png)
 <use Figuras/jequiti/resultados/RF_WFV_LOG.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/RF_WFV_LOG.png  used on inp
 ut line 163.
-(pdftex.def)             Requested size: 380.9243pt x 298.11467pt.
+(pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2319,7 +2314,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [69 <./Figuras/jequiti/resultados/CB_WFV_LOG.png> <./Figuras/jequiti/resultad
 os/RF_WFV_LOG.png>]
-<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png, id=1009, 1154.3125pt x
+<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png, id=1012, 1154.3125pt x
  552.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png Graphic file (type
  png)
@@ -2327,7 +2322,7 @@ File: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png Graphic file (type
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png
   used on input line 175.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_PREV.png, id=1010, 1154.3125pt x
+<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_PREV.png, id=1013, 1154.3125pt x
  552.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_PREV.png Graphic file (type
  png)
@@ -2339,7 +2334,7 @@ Package pdftex.def Info: Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_PREV.png
 
  <./Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_PREV.png> <./Figuras/jequiti/
 resultados/RF_WFV_LOG_RESID_x_PREV.png>]
-<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_TEMPO.png, id=1019, 1154.3125pt 
+<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_TEMPO.png, id=1022, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_TEMPO.png Graphic file (typ
 e png)
@@ -2347,7 +2342,7 @@ e png)
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_TEMPO.pn
 g  used on input line 192.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_TEMPO.png, id=1020, 1154.3125pt 
+<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_TEMPO.png, id=1023, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_TEMPO.png Graphic file (typ
 e png)
@@ -2359,7 +2354,7 @@ g  used on input line 199.
 
  <./Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_TEMPO.png> <./Figuras/jequiti
 /resultados/RF_WFV_LOG_RESID_x_TEMPO.png>]
-<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1028, 1154.
+<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1031, 1154.
 3125pt x 552.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic fi
 le (type png)
@@ -2367,7 +2362,7 @@ le (type png)
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_CURVA_NO
 RMAL.png  used on input line 209.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1029, 1154.
+<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1032, 1154.
 3125pt x 552.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic fi
 le (type png)
@@ -2379,7 +2374,7 @@ RMAL.png  used on input line 216.
 
  <./Figuras/jequiti/resultados/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./Figuras/
 jequiti/resultados/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_ACF.png, id=1036, 1154.3125pt x 55
+<Figuras/jequiti/resultados/CB_WFV_LOG_RESID_ACF.png, id=1039, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_ACF.png Graphic file (type pn
 g)
@@ -2387,7 +2382,7 @@ g)
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_LOG_RESID_ACF.png  u
 sed on input line 228.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_ACF.png, id=1037, 1154.3125pt x 55
+<Figuras/jequiti/resultados/RF_WFV_LOG_RESID_ACF.png, id=1040, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_LOG_RESID_ACF.png Graphic file (type pn
 g)
@@ -2403,30 +2398,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  <./Figuras/jequiti/resultados/CB_WFV_LOG_RESID_ACF.png>] [74 <./Figuras/jequit
 i/resultados/RF_WFV_LOG_RESID_ACF.png>]
-<Figuras/jequiti/resultados/CB_WFV_ORIG.png, id=1048, 1154.3125pt x 903.375pt>
+<Figuras/jequiti/resultados/CB_WFV_ORIG.png, id=1051, 1154.3125pt x 752.8125pt>
+
 File: Figuras/jequiti/resultados/CB_WFV_ORIG.png Graphic file (type png)
 <use Figuras/jequiti/resultados/CB_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_ORIG.png  used on in
 put line 247.
-(pdftex.def)             Requested size: 380.9243pt x 298.11467pt.
+(pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
+<Figuras/jequiti/resultados/RF_WFV_ORIG.png, id=1052, 1154.3125pt x 752.8125pt>
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Figuras/jequiti/resultados/RF_WFV_ORIG.png, id=1049, 1154.3125pt x 903.375pt>
 File: Figuras/jequiti/resultados/RF_WFV_ORIG.png Graphic file (type png)
 <use Figuras/jequiti/resultados/RF_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/jequiti/resultados/RF_WFV_ORIG.png  used on in
 put line 254.
-(pdftex.def)             Requested size: 380.9243pt x 298.11467pt.
+(pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [75
 
-] [76 <./Figuras/jequiti/resultados/CB_WFV_ORIG.png> <./Figuras/jequiti/resulta
+ <./Figuras/jequiti/resultados/CB_WFV_ORIG.png>] [76 <./Figuras/jequiti/resulta
 dos/RF_WFV_ORIG.png>]
-<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_PREV.png, id=1060, 1154.3125pt 
+<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_PREV.png, id=1063, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_PREV.png Graphic file (typ
 e png)
@@ -2434,7 +2428,7 @@ e png)
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_PREV.pn
 g  used on input line 266.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_PREV.png, id=1061, 1154.3125pt 
+<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_PREV.png, id=1064, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_PREV.png Graphic file (typ
 e png)
@@ -2450,7 +2444,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  <./Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_PREV.png>] [78 <./Figuras/je
 quiti/resultados/RF_WFV_ORIG_RESID_x_PREV.png>]
-<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1073, 1154.3125pt
+<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1076, 1154.3125pt
  x 552.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_TEMPO.png Graphic file (ty
 pe png)
@@ -2458,7 +2452,7 @@ pe png)
 Package pdftex.def Info: Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_TEMPO.p
 ng  used on input line 287.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1074, 1154.3125pt
+<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1077, 1154.3125pt
  x 552.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_TEMPO.png Graphic file (ty
 pe png)
@@ -2474,7 +2468,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  <./Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_TEMPO.png>] [80 <./Figuras/j
 equiti/resultados/RF_WFV_ORIG_RESID_x_TEMPO.png>]
-<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1087, 1154
+<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1090, 1154
 .3125pt x 552.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic f
 ile (type png)
@@ -2486,7 +2480,7 @@ ORMAL.png  used on input line 309.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1088, 1154
+<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1091, 1154
 .3125pt x 552.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic f
 ile (type png)
@@ -2501,7 +2495,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [82 <./Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png> <./Fi
 guras/jequiti/resultados/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_ACF.png, id=1101, 1154.3125pt x 5
+<Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_ACF.png, id=1104, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/jequiti/resultados/CB_WFV_ORIG_RESID_ACF.png Graphic file (type p
 ng)
@@ -2513,7 +2507,7 @@ used on input line 332.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_ACF.png, id=1102, 1154.3125pt x 5
+<Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_ACF.png, id=1105, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/jequiti/resultados/RF_WFV_ORIG_RESID_ACF.png Graphic file (type p
 ng)
@@ -2558,11 +2552,11 @@ AED: lastpage setting LastPage
 (./cap3_procedimentos_metodologicos.aux) (./cap4_resultados.aux)
 (./cap5_conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 30243 strings out of 478287
- 566228 string characters out of 5849289
- 917112 words of memory out of 5000000
+ 30241 strings out of 478287
+ 566206 string characters out of 5849289
+ 917111 words of memory out of 5000000
  47306 multiletter control sequences out of 15000+600000
- 525067 words of font info for 167 fonts, out of 8000000 for 9000
+ 524938 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,94p,2310b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
@@ -2579,10 +2573,10 @@ xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pf
 b>
-Output written on dissertacao.pdf (92 pages, 4715354 bytes).
+Output written on dissertacao.pdf (92 pages, 4739179 bytes).
 PDF statistics:
- 1480 PDF objects out of 1728 (max. 8388607)
- 1178 compressed objects within 12 object streams
+ 1483 PDF objects out of 1728 (max. 8388607)
+ 1181 compressed objects within 12 object streams
  307 named destinations out of 1000 (max. 500000)
  30013 words of extra memory for PDF output out of 35830 (max. 10000000)
 
