@@ -293,7 +293,7 @@ As estações que, enfim, foram empregadas na modelagem são as que estão na ta
 
 O rio Grande apresentou desafios significativos ao longo de todo o desenvolvimento deste trabalho. A dificuldade inicial surgiu na ausência de dados disponíveis em estações dentro do estado de Minas Gerais para o período de análise estipulado, conforme mencionado anteriormente. Foi necessário buscar uma estação o mais próxima possível da divisa com Minas Gerais, localizada no estado de São Paulo, especificamente no município de Ilha Solteira. Entretanto, os desafios não se limitaram a essa questão geográfica.
 
-A série temporal de vazão da estação selecionada, denominada t\_vz\_62020080, estava incompleta e não abrangia todo o período de 11 anos estipulado para a análise. (figura \ref{fig:grandeSerieIncompleta_t_vz_62020080}) Os dados disponíveis mais antigos datavam de 2020. Contudo, em conformidade com o escopo estabelecido para este estudo, foi realizado o preenchimento dos dados faltantes, aplicando-se o mesmo protocolo utilizado para os demais rios analisados. Este procedimento foi necessário para garantir a consistência, integridade e comparabilidade das análises subsequentes.
+A série temporal de vazão da estação selecionada, denominada t\_vz\_62020080, estava incompleta e não abrangia todo o período de 11 anos estipulado para a análise. (figura \ref{fig:grandeSerieIncompleta_t_vz_62020080}) Os dados disponíveis mais antigos datavam de 2020. Desta forma, para evitar problemas com a análise deste trabalho, optou-se por utilizar apenas os dados a partir de 2020 mesmo, sem realizar preenchimento anterior à data de setembro de 2020, que é de quando os dados mais antigos datam.
 
 \begin{figure}[!h]
 	\centering
@@ -302,29 +302,27 @@ A série temporal de vazão da estação selecionada, denominada t\_vz\_62020080
 	\label{fig:grandeSerieIncompleta_t_vz_62020080}
 \end{figure}
 
-Infelizmente, o caráter ruidoso da série permaneceu mesmo após a aplicação do protocolo de preenchimento dos dados ausentes, conforme pode ser observado na imagem final gerada.(figura \ref{fig:grandeSerieCompleta_t_vz_62020080}) A série em questão apresentava 2099 dias faltantes, correspondendo a aproximadamente 64\% de dados nulos. Outro aspecto relevante para essa estação é que, diferentemente das outras, não foram utilizados os 4.017 registros previstos inicialmente. As informações mais antigas disponíveis datavam de 2015, resultando, assim, em um total de 3289 registros diários utilizados especificamente para o rio Grande.
+Após o corte, a série ficou com 1217 registros totais. (figura \ref{fig:serie_completa_estacao_t_vz_62020080})
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_vz_62020080.png}
-	\caption{Série temporal completa da estação t\_vz\_62020080\\(fonte: o autor)}
-	\label{fig:grandeSerieCompleta_t_vz_62020080}
+	\includegraphics[scale=0.25]{Figuras/rio_grande/serie_completa_estacao_t_vz_62020080.png}
+	\caption{Série temporal completa (cortada) da estação t\_vz\_62020080\\(fonte: o autor)}
+	\label{fig:serie_completa_estacao_t_vz_62020080}
 \end{figure}
 
-A estação de precipitação utilizada, a única neste caso, foi a estação t\_cv\_61998080, pois foi a única que apresentou dados válidos. Curiosamente, outra estação de precipitação disponível também apresentou dados para o período analisado, mas a base de dados consistia exclusivamente em valores zero. Por essa razão, a estação t\_cv\_62020080 foi completamente excluída do estudo.
+A estação de precipitação utilizada, a única neste caso, foi a estação t\_cv\_61998080, pois foi a única que apresentou dados válidos. Curiosamente, outra estação de precipitação disponível também apresentou dados para o período analisado, mas a base de dados consistia totalmente de valores zero. Por essa razão, a estação t\_cv\_62020080 foi completamente excluída do estudo.
 
-Em relação à estação t\_cv\_61998080, houve necessidade de preencher apenas um número reduzido de dados ausentes, totalizando 169 registros, o que correspondia a 5,14\% do total. (figura \ref{fig:grandeSerieCompleta_t_cv_61998080}) Trata-se de uma série com uma quantidade expressiva de dados, que efetivamente pôde contribuir de maneira significativa para as análises realizadas.
+Em relação à estação t\_cv\_61998080, houve necessidade de preencher apenas um número reduzido de dados ausentes, totalizando 169 registros, o que correspondia a 5,14\% do total. Trata-se de uma série com uma quantidade expressiva de dados, que efetivamente pôde contribuir de maneira significativa para as análises realizadas. Seguindo o disposto para a série de vazões, os dados de precipitação foram removidos no período pré-setembro de 2020. A figura \ref{fig:serie_completa_estacao_t_cv_61998080} já consta o período ajustado.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.25]{Figuras/rio_grande/grandeSerieCompleta_t_cv_61998080.png}
-	\caption{Série completa da estação t\_cv\_61998080\\(fonte: o autor)}
-	\label{fig:grandeSerieCompleta_t_cv_61998080}
+	\includegraphics[scale=0.25]{Figuras/rio_grande/serie_completa_estacao_t_cv_61998080.png}
+	\caption{Série temporal completa (cortada) da estação t\_cv\_61998080\\(fonte: o autor)}
+	\label{fig:serie_completa_estacao_t_cv_61998080}
 \end{figure}
-
-Ressalta-se que o trecho de dados faltantes para a estação t\_cv\_61998080 concentrava-se no início da série temporal, especificamente no ano de 2015. No gráfico os dados já estão imputados.
-
 \clearpage
+
 \subsection{Rio São Francisco}
 
 Por fim, foi realizado o procedimento de preenchimento dos dados nulos para o rio São Francisco. A estação-alvo c\_vz\_44290002 apresentou uma série bastante completa ao longo do período de análise, com apenas 120 dias nulos em um total de 4017 dias. O trecho com dados faltantes pode ser observado em detalhe na figura (\ref{fig:franciscoSerieIncompleta_c_vz_44290002-detalhe}).
@@ -446,11 +444,11 @@ As variáveis de precipitação, mesmo considerando o somatório diário de prec
 	\label{tab:variaveis_acumuladas}
 \end{table}
 
-Quanto aos dados categóricos utilizados neste estudo, inicialmente foi pensado utilizar as informações de dia do ano (`\textit{dayofyear}'), semana do ano (`\textit{week}'), mês (`\textit{month}') e estação do ano. Com exceção da variável de estação do ano (`estacao'), para a qual foi desenvolvido um algoritmo específico, as demais informações foram extraídas utilizando a biblioteca Pandas.\cite{mckinney2011pandas} Porém, as variáveis `\textit{week}' e `\textit{dayofyear}' possuem uma elevada cardinalidade, que vão de 1 a 53 e de 1 a 365 (366 em ano bissexto), respectivamente. Isso poderia representar um problema para o modelo de regressão linear, causar um enviesamento do modelo devido a estes valores ficarem numa escala superior às demais variáveis, fosse com os dados log-transformados, fosse com os dados normalizados de 0 a 1 (MinMax). E estas variáveis não devem ser transformadas pois isso tiraria o caráter categórico delas. Como prática comum, aplica-se transformações apenas nas variáveis contínuas.
+Quanto aos dados categóricos utilizados neste estudo, inicialmente foi pensado utilizar as informações de dia do ano (`\textit{dayofyear}'), semana do ano (`\textit{week}'), mês (`\textit{month}') e estação do ano. Com exceção da variável de estação do ano (`estacao'), para a qual foi desenvolvido um algoritmo específico, as demais informações foram extraídas utilizando a biblioteca Pandas.\cite{mckinney2011pandas} Porém, as variáveis `\textit{week}' e `\textit{dayofyear}' possuem uma elevada cardinalidade, que vão de 1 a 53 e de 1 a 365 (366 em ano bissexto), respectivamente. Isso poderia representar um problema para o modelo de regressão linear, causar um enviesamento do modelo devido a estes valores ficarem numa escala superior às demais variáveis, fosse com os dados log-transformados, fosse com os dados normalizados de 0 a 1 (MinMax). E estas variáveis não devem ser transformadas pois isso tiraria o caráter categórico delas. Como prática comum, aplica-se transformações apenas nas variáveis contínuas  e para as variáveis categóricas aplica-se codificações. Foi realizada Codificação Ordinal (`\textit{Ordinal Encoding}')\footnote{Codifica a variável categórica como uma sequência de números inteiros, ou seja, 1 para verão, 2 para outono, 3 para inverno e assim por diante.} e em seguida, Codificação \textit{One-Hot} (\textit{One Hot Encoding})\footnote{Cria-se uma coluna para cada valor distinto de uma variável categórica da seguinte maneira: `estacao\_verao', `estacao\_outono' e assim por diante. Nas colunas criadas terão apenas valores 0 e 1, sendo 1 para quando a data corresponder ao período de verão e 0 no caso contrário, por exemplo} nas variáveis categóricas. Mas a codificação `\textit{one-hot}' cria uma dificuldade que é a elevação da dimensionalidade, ou seja, possivelmente muitas novas colunas são inseridas nos dados de treinamento.
 
-Pois bem, havia uma dificuldade aqui, uma vez que essas variáveis categóricas seriam incorporadas com o objetivo de capturar o comportamento sazonal da série temporal. Numa análise mais aprofundada, optou-se por retirar ambas as variáveis `\textit{week}' e `\textit{dayofyear}' pois as informações que elas guardam poderiam estar contidas nas variáveis de `estacao' e `\textit{month}'. Há uma correlação elevada entre o dia do ano, a semana do ano e o mês do ano e como o problema era a cardinalidade daquelas variáveis, mês do ano passou, desta forma, a representar também a informação de que se precisava.
+Pois bem, havia uma dificuldade aqui, uma vez que essas variáveis categóricas seriam incorporadas com o objetivo de capturar o comportamento sazonal da série temporal, mas o incremento na dimensionalidade imporia um maior esforço computacional. Numa análise mais aprofundada, optou-se por retirar ambas as variáveis `\textit{week}' e `\textit{dayofyear}' pois as informações que elas guardam poderiam estar contidas nas variáveis de `estacao' e `\textit{month}'. Há uma correlação elevada entre o dia do ano, a semana do ano e o mês do ano e como o problema era a cardinalidade, e consequentemente a dimensionalidade, daquelas variáveis, mês do ano (`\textit{month}') passou, desta forma, a representar também a informação de que se precisava.
 
-Observa-se que os regimes de precipitação e vazão tendem a se repetir nas estações de primavera e verão, com uma redução significativa durante o outono e inverno. Por isso `estacao' foi utilizada. Todas variáveis foram codificadas no esquema ``\textit{label encoding}'' e desta forma as faixas de valores foram 1 a 12 para `\textit{month}' e de 1 a 4 para `estacao'.
+Observa-se que os regimes de precipitação e vazão tendem a se repetir nas estações de primavera e verão, com uma redução significativa durante o outono e inverno. Por isso `estacao' foi utilizada. Todas variáveis foram codificadas primeiro no esquema ``\textit{ordinal encoding}'', ficando assim as faixas de valores foram 1 a 12 para `\textit{month}' e de 1 a 4 para `estacao'. Depois deste passo, foi aplicado `\textit{One-Hot Encoding}', criando 12 colunas para `\textit{month}' e 4 colunas para 'estacao' totalizando 16 colunas novas. Observe: se as variáveis para `\textit{week}' e `\textit{dayofyear}' fossem utilizadas, além das 16 novas colunas mencionadas antes, mais 418 novas colunas (419 em ano bissexto) seriam criadas. Isso colocaria dificuldades não apenas no pré-processamento dos dados e na execução dos modelos, mas também na própria interpretabilidade dos resultados e na análise SHAP das variáveis dos modelos.
 
 \section{Análise exploratória dos dados}
 
@@ -478,42 +476,42 @@ A decomposição das séries temporais foi realizada utilizando a biblioteca Sta
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_doce/acf_rio_doce.png}
+	\includegraphics[scale=0.33]{Figuras/rio_doce/acf_doce.png}
 	\caption{Autocorrelação para a vazão do rio Doce\\(fonte: o autor)}
 	\label{fig:acf_rio_doce}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_doce/sazonalidade_rio_doce.png}
+	\includegraphics[scale=0.33]{Figuras/rio_doce/decomposicao_serie_c_vz_56994500.png}
 	\caption{Componente sazonal da série de vazão do rio Doce\\(fonte: o autor)}
 	\label{fig:sazonalidade_rio_doce}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_grande/acf_rio_grande.png}
+	\includegraphics[scale=0.33]{Figuras/rio_grande/acf_grande.png}
 	\caption{Autocorrelação para a vazão do rio Grande\\(fonte: o autor)}
 	\label{fig:acf_rio_grande}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_grande/sazonalidade_rio_grande.png}
+	\includegraphics[scale=0.33]{Figuras/rio_grande/decomposicao_serie_t_vz_62020080.png}
 	\caption{Componente sazonal da série de vazão do rio Grande\\(fonte: o autor)}
 	\label{fig:sazonalidade_rio_grande}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/acf_rio_sao_francisco.png}
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/acf_sao_francisco.png}
 	\caption{Autocorrelação para a vazão do rio São Francisco\\(fonte: o autor)}
 	\label{fig:acf_rio_sao_francisco}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/sazonalidade_rio_sao_francisco.png}
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/decomposicao_serie_c_vz_44290002.png}
 	\caption{Componente sazonal da série de vazão do rio São Francisco\\(fonte: o autor)}
 	\label{fig:sazonalidade_rio_sao_francisco}
 \end{figure}
@@ -568,28 +566,28 @@ Após a transformação a distribuição dos eventos ficou menos assimétrica, c
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_grande/rio_grande_antes_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_grande/grande_estacao_t_vz_62020080_original.png}
 	\caption{Dados originais para o rio Grande\\(fonte: o autor)}
 	\label{fig:rio_grande_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_grande/rio_grande_depois_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_grande/grande_estacao_t_vz_62020080_log.png}
 	\caption{Dados log-transformados para o rio Grande\\(fonte: o autor)}
 	\label{fig:rio_grande_depois_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/rio_sao_francisco_antes_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_original.png}
 	\caption{Dados originais para o rio São Francisco\\(fonte: o autor)}
 	\label{fig:rio_sao_francisco_antes_log}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/rio_sao_francisco_depois_log.png}
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_log.png}
 	\caption{Dados log-transformados para o rio São Francisco\\(fonte: o autor)}
 	\label{fig:rio_sao_francisco_depois_log}
 \end{figure}
