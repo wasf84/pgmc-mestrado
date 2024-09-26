@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.16)  25 SEP 2024 10:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  25 SEP 2024 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 105.
+(babel)             (\language24). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 108.
+(babel)             (\language24). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language46). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -2569,7 +2569,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  30314 strings out of 478287
  567066 string characters out of 5849289
- 918168 words of memory out of 5000000
+ 918169 words of memory out of 5000000
  47339 multiletter control sequences out of 15000+600000
  542912 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
