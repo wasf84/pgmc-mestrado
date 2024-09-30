@@ -350,7 +350,108 @@ Adiante.
 
 \subsection{Rio Doce}
 
-xxxxxxxxxxxxxxxxxxxxxXxxxxxxxxxxxxxxxxxxxxxxxxxx
+Os resultados para o rio Doce apresentaram-se muito bons, considerando-se todas as métricas do trabalho. Isso possivelmente se deve à qualidade dos dados de treinamento, em que não foi preciso preencher tantos dados faltantes de vazão. Relembre: de 4017 registros, apenas 3 faltavam.
+
+O modelo CB apresentou um desempenho muito bom, com a KGE de $0,89$ sugerindo alta correlação entre os valores previstos e os observados. Quando se observa a MAPE, foi a mais baixa entre os três modelos, indicando uma precisão elevada nas previsões, o que demonstra robustez do modelo. A PBIAS de $-3.73\%$ indica um leve viés geral para subestimar as previsões, e a cobertura empírica de $91,23\%$ mostra que o intervalo de previsão captura bem a variabilidade dos dados observados.
+
+O gráfico revela ainda que o modelo acompanha bem os picos de vazão e que os intervalos de previsão foram particularmente estreitos quando no período de vazões elevadas e relativamente amplos nos períodos de menores vazões. Ao que parece, as medições de precipitação nos períodos chuvosos conferem mais precisão ao comportamento médio do modelo. Em outras palavras: o modelo fica mais ``otimista'' quando os dados de chuva não estão zerados, o que ocorre nos períodos de outono e inverno. Tanto que nestes períodos mencionados, quando há uma profusão de valores $0$ na precipitação, os intervalos de previsão ficaram amplos, o que indica a tentativa do modelo de ``acertar'' a medida. Comportamento este que o modelo RF também apresentou em relação aos intervalos de previsão. A cobertura empírica dos intervalos de previsão de ambos os modelos ficaram próximas, com uma leve vantagem para o modelo CB - o modelo RF obteve $88,77\%$. (figuras \ref{fig:doce_CB_WFV_ORIG} e \ref{fig:doce_RF_WFV_ORIG})
+
+O modelo LR, mesmo sendo um modelo simples, apresentou um desempenho notável, com uma MAPE ligeiramente maior, de $0,084$ do que o do CatBoost, mas ainda assim baixo. O KGE foi o maior dos três modelos, alcançando $0,94$, o que indica uma ótima correlação e menor erro de variância. O PBIAS de $-2,75\%$ sugere um viés de subestimação, mas é o menor viés dentre os modelos. A cobertura empírica de $96,71\%$ mostra que o intervalo de confiança captura quase a totalidade da variabilidade dos dados observados.
+
+O gráfico também mostra que a regressão linear consegue capturar os picos de vazão de forma eficaz, com intervalos de confiança mais apertados comparados ao CatBoost.
+
+O modelo RandomForest também teve um bom desempenho, com um MAPE intermediário entre os outros dois modelos e um KGE de $0,93$, o que é muito próximo ao da regressão linear. O PBIAS de $-1,44\%$ indica o menor viés de subestimação entre os três modelos. No entanto, a cobertura empírica foi a menor, com $88,77\%$, sugerindo que o intervalo de confiança não abrange tanto a variabilidade observada quanto nos outros modelos.
+
+No gráfico, os picos de vazão são bem capturados, com um comportamento semelhante ao do CatBoost em termos de previsões.
+
+**Comparação Geral**
+- **Precisão (MAPE)**: O CatBoost apresentou o melhor desempenho (0.08207), seguido de perto por RandomForest (0.08355) e LinearRegression (0.08434). A diferença é muito pequena, mostrando que todos os modelos têm alta precisão.
+
+- **Kling-Gupta Efficiency (KGE)**: O modelo de Regressão Linear foi o melhor nesse critério, com 0.94579, seguido pelo RandomForest (0.9375) e o CatBoost (0.8933). Isso sugere que, apesar de ser um modelo linear, a regressão conseguiu capturar bem a dinâmica não-linear das vazões do rio.
+
+- **Bias (\%)**: Todos os modelos apresentaram um leve viés de subestimação, com RandomForest (-1.44\%) sendo o mais equilibrado, seguido por LinearRegression (-2.75\%) e CatBoost (-3.73\%).
+
+- **Intervalos de Confiança**: O CatBoost teve a maior amplitude nos intervalos de confiança, enquanto a regressão linear apresentou os intervalos mais estreitos. Isso se reflete nas coberturas empíricas: a LinearRegression cobre 96.71\% da variabilidade, enquanto o CatBoost cobre 91.23\% e o RandomForest 88.77\%.
+
+**Conclusão**
+No geral, todos os três modelos apresentam bons resultados, mas com características específicas:
+- O **CatBoost** é ligeiramente melhor em precisão, mas com intervalos de confiança mais amplos e um viés de subestimação mais acentuado.
+- A **Regressão Linear** surpreendentemente teve o melhor desempenho no **KGE**, menor viés e a maior cobertura empírica, o que demonstra que pode ser uma alternativa interessante mesmo para dados não transformados.
+- O **RandomForest** é competitivo em precisão e viés, mas com uma menor cobertura empírica, sugerindo que os intervalos de confiança são menos eficazes para capturar a incerteza nas previsões.
+
+A escolha do modelo pode depender do equilíbrio entre precisão, viés e a capacidade de capturar a variabilidade dos dados observados, com a regressão linear se mostrando surpreendentemente forte para esse conjunto de dados.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+\label{fig:doce_CB_WFV_ORIG}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
+\label{fig:doce_LR_WFV_LOG}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+\label{fig:doce_RF_WFV_ORIG}
+\end{figure}
+\clearpage
+
+A análise dos gráficos de resíduos para os três modelos (CatBoost, Regressão Linear e RandomForest) ajuda a avaliar o comportamento dos erros das previsões em função dos valores previstos. Vou destacar as características e interpretações para cada um deles:
+
+1. **CatBoost**
+- **Padrão dos Resíduos**: O gráfico mostra uma concentração de resíduos em torno de 0 para previsões de até aproximadamente 500 \(m^3/s\), o que indica que o modelo está prevendo bem para valores mais baixos de vazão. No entanto, à medida que os valores previstos aumentam, os resíduos começam a se espalhar mais, o que indica que o modelo tem uma maior dificuldade em capturar picos de vazão mais altos.
+- **Outliers**: Existem alguns resíduos que excedem os limites de 1,5 IQR (Interquartile Range), especialmente para previsões mais altas, com resíduos acima de 100 e abaixo de -200, sugerindo a presença de outliers em picos de vazão.
+- **Tendência**: Não parece haver uma tendência clara nos resíduos, o que é positivo, pois indica que o modelo não está sistematicamente superestimando ou subestimando em uma faixa específica de valores previstos.
+
+2. **LinearRegression**
+- **Padrão dos Resíduos**: Para a Regressão Linear, observa-se um comportamento semelhante ao do CatBoost no que se refere à concentração de resíduos em torno de 0 para valores previstos mais baixos. Contudo, a dispersão dos resíduos é ligeiramente maior para previsões acima de 1000 \(m^3/s\), indicando uma leve perda de precisão em valores mais altos.
+- **Outliers**: O modelo de Regressão Linear também mostra alguns outliers em valores previstos mais altos, especialmente entre 2500 e 4000 \(m^3/s\). Isso é esperado, dado que a regressão linear pode ter dificuldades em capturar não-linearidades e picos extremos de vazão.
+- **Tendência**: Assim como no CatBoost, não há uma tendência evidente, o que significa que o modelo está relativamente bem ajustado, mas com uma dispersão maior à medida que os valores previstos aumentam.
+
+3. **RandomForest**
+- **Padrão dos Resíduos**: O RandomForest apresenta um padrão semelhante ao do CatBoost e da Regressão Linear. A concentração dos resíduos em torno de 0 para previsões menores também está presente, mas há uma maior dispersão dos resíduos para previsões acima de 1000 \(m^3/s\). Isso indica que, assim como os outros modelos, o RandomForest tem dificuldade em capturar corretamente os picos mais altos de vazão.
+- **Outliers**: Notam-se outliers para valores previstos mais altos, com resíduos que variam de 300 a mais de 1000 para previsões maiores que 2500 \(m^3/s\). Esses outliers são mais pronunciados que nos outros dois modelos.
+- **Tendência**: Novamente, não há uma tendência clara nos resíduos, mas a dispersão dos erros aumenta com os valores previstos, indicando que o modelo perde precisão nos valores de pico.
+
+**Comparação entre os Modelos**
+- **Concentração de Resíduos**: Todos os três modelos apresentam uma concentração de resíduos razoavelmente próxima de 0 para valores de vazão previstos abaixo de 1000 \(m^3/s\), sugerindo que eles conseguem modelar bem as vazões mais comuns e de baixa intensidade.
+- **Dispersão dos Resíduos**: À medida que os valores previstos aumentam, todos os modelos mostram uma dispersão crescente nos resíduos, com picos de vazão sendo mais difíceis de prever corretamente. Contudo, o **RandomForest** parece ter a maior dispersão, seguido pela **Regressão Linear**, enquanto o **CatBoost** mostra uma dispersão ligeiramente menor, embora ainda presente.
+- **Outliers**: Os três modelos possuem outliers, especialmente em previsões mais altas, o que é um desafio típico em dados de vazão de rios, que têm picos esporádicos. O **RandomForest** tem os outliers mais extremos, seguidos pela **Regressão Linear** e, por fim, o **CatBoost**.
+- **Tendências**: Nenhum dos modelos apresentou tendências claras de superestimação ou subestimação, o que é positivo. Entretanto, a crescente dispersão dos resíduos em valores previstos mais altos sugere que todos os modelos enfrentam desafios em prever valores de vazão muito elevados.
+
+**Conclusão**
+Os três modelos têm desempenho similar em termos de concentração de resíduos para valores baixos de previsão, mas divergem nos valores mais altos. O **CatBoost** se destaca por ter uma menor dispersão de resíduos em previsões elevadas, seguido pela **Regressão Linear**. O **RandomForest** tem a maior dispersão de resíduos e mais outliers, sugerindo que pode não ser a melhor escolha para prever picos extremos de vazão.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
+\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+\label{fig:doce_CB_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png}
+\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+\label{fig:doce_LR_WFV_LOG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
+\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+\label{fig:doce_RF_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+\clearpage
+
+\subsection{Rio Grande}
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).

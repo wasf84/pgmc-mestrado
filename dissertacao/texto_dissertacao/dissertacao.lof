@@ -1,81 +1,87 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Série temporal incompleta da estação t\_vz\_54790000 \\(fonte: o autor)}}{28}{figure.46}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Detalhe da série temporal da estação t\_vz\_54790000, ainda sem dados imputados, de 2013 a 2016 (fonte: o autor)}}{28}{figure.47}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016 (fonte: o autor)}}{28}{figure.48}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Detalhe da série temporal da estação t\_vz\_54790000, com dados imputados, de 2013 a 2016 (fonte: o autor)}}{29}{figure.48}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Série temporal incompleta da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}}{29}{figure.49}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Série temporal completa da estação t\_vz\_54790000 no detalhe entre 2021 e 2022 (fonte: o autor)}}{29}{figure.50}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Série temporal completa da estação t\_vz\_54790000\\(fonte: o autor)}}{29}{figure.51}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Série temporal completa da estação t\_vz\_54790000\\(fonte: o autor)}}{30}{figure.51}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Série temporal incompleta da estação t\_cv\_54790000\\(fonte: o autor)}}{30}{figure.52}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Série temporal completa da estação t\_cv\_54790000\\(fonte: o autor)}}{30}{figure.53}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Série temporal completa da estação t\_cv\_01640000\\(fonte: o autor)}}{30}{figure.54}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Série temporal completa da estação c\_vz\_56994500\\(fonte: o autor)}}{31}{figure.56}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Série temporal da estação t\_cv\_56990850 - não utilizada\\(fonte: o autor)}}{32}{figure.57}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Série temporal da estação t\_cv\_56994500 - não utilizada\\(fonte: o autor)}}{32}{figure.58}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Série temporal completa da estação c\_cv\_01941010\\(fonte: o autor)}}{32}{figure.60}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Série temporal completa da estação c\_cv\_01941004\\(fonte: o autor)}}{33}{figure.61}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Série temporal completa da estação c\_cv\_01941006\\(fonte: o autor)}}{33}{figure.62}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Série temporal completa da estação t\_cv\_56990005\\(fonte: o autor)}}{33}{figure.63}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Série temporal incompleta da estação t\_vz\_62020080\\(fonte: o autor)}}{34}{figure.65}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Série temporal completa (cortada) da estação t\_vz\_62020080\\(fonte: o autor)}}{34}{figure.66}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Série temporal completa (cortada) da estação t\_cv\_61998080\\(fonte: o autor)}}{35}{figure.67}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Detalhe do trecho com dados nulos da estação c\_vz\_44290002\\(fonte: o autor)}}{36}{figure.69}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Série temporal completa da estação c\_vz\_44290002\\(fonte: o autor)}}{36}{figure.70}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Série temporal completa da estação c\_cv\_01544017\\(fonte: o autor)}}{37}{figure.71}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Série temporal completa da estação c\_cv\_01544032\\(fonte: o autor)}}{37}{figure.72}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Série temporal completa da estação c\_cv\_01544036\\(fonte: o autor)}}{37}{figure.73}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Autocorrelação para a vazão do rio Jequitinhonha\\(fonte: o autor)}}{41}{figure.83}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Componente sazonal da série de vazão do rio Jequitinhonha\\(fonte: o autor)}}{42}{figure.84}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Autocorrelação para a vazão do rio Doce\\(fonte: o autor)}}{42}{figure.85}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Componente sazonal da série de vazão do rio Doce\\(fonte: o autor)}}{43}{figure.86}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces Autocorrelação para a vazão do rio Grande\\(fonte: o autor)}}{43}{figure.87}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Componente sazonal da série de vazão do rio Grande\\(fonte: o autor)}}{44}{figure.88}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Autocorrelação para a vazão do rio São Francisco\\(fonte: o autor)}}{44}{figure.89}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces Componente sazonal da série de vazão do rio São Francisco\\(fonte: o autor)}}{45}{figure.90}%
-\contentsline {figure}{\numberline {3.33}{\ignorespaces Dados originais para o rio Jequitinhonha\\(fonte: o autor)}}{45}{figure.91}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces Dados log-transformados para o rio Jequitinhonha\\(fonte: o autor)}}{45}{figure.92}%
-\contentsline {figure}{\numberline {3.35}{\ignorespaces Dados originais para o rio Doce\\(fonte: o autor)}}{46}{figure.93}%
-\contentsline {figure}{\numberline {3.36}{\ignorespaces Dados log-transformados para o rio Doce\\(fonte: o autor)}}{46}{figure.94}%
-\contentsline {figure}{\numberline {3.37}{\ignorespaces Dados originais para o rio Grande\\(fonte: o autor)}}{46}{figure.95}%
-\contentsline {figure}{\numberline {3.38}{\ignorespaces Dados log-transformados para o rio Grande\\(fonte: o autor)}}{47}{figure.96}%
-\contentsline {figure}{\numberline {3.39}{\ignorespaces Dados originais para o rio São Francisco\\(fonte: o autor)}}{47}{figure.97}%
-\contentsline {figure}{\numberline {3.40}{\ignorespaces Dados log-transformados para o rio São Francisco\\(fonte: o autor)}}{47}{figure.98}%
-\contentsline {figure}{\numberline {3.41}{\ignorespaces Diagrama mostrando a divisão dos dados de treino/teste com \textit {refit}.\\(fonte: \cite {skforecast_a})}}{53}{figure.113}%
-\contentsline {figure}{\numberline {3.42}{\ignorespaces WFV com janela expandida e \textit {refit} - imagem 1.\\(fonte: \cite {skforecast_a})}}{53}{figure.114}%
-\contentsline {figure}{\numberline {3.43}{\ignorespaces WFV com janela expandida e \textit {refit} - imagem 2.\\(fonte: \cite {skforecast_a})}}{54}{figure.115}%
-\contentsline {figure}{\numberline {3.44}{\ignorespaces WFV com janela expandida e \textit {refit} - imagem 3.\\(fonte: \cite {skforecast_a})}}{54}{figure.116}%
-\contentsline {figure}{\numberline {3.45}{\ignorespaces Diagrama de como se calcula o intervalo de previsão.\\(fonte: \cite {skforecast_b})}}{54}{figure.117}%
-\contentsline {figure}{\numberline {3.46}{\ignorespaces Previsão com valor fora dos limites\\(fonte: o autor)}}{55}{figure.118}%
-\contentsline {figure}{\numberline {3.47}{\ignorespaces Previsão completamente nos limites\\(fonte: o autor)}}{56}{figure.119}%
-\contentsline {figure}{\numberline {3.48}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{58}{figure.121}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Resultado do SeasonalNaive no teste \textit {Walk-Forward Validation}\\(fonte: o autor)}}{60}{figure.125}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}}{61}{figure.126}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}}{61}{figure.127}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{62}{figure.128}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{63}{figure.129}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Histograma dos resíduos.\\(fonte: o autor)}}{63}{figure.130}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{64}{figure.131}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}}{66}{figure.132}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{66}{figure.133}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{67}{figure.134}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{67}{figure.135}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{67}{figure.136}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{69}{figure.137}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{69}{figure.138}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{70}{figure.139}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{70}{figure.140}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{71}{figure.141}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{71}{figure.142}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{72}{figure.143}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{72}{figure.144}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{73}{figure.145}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{74}{figure.146}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{75}{figure.147}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{76}{figure.148}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{77}{figure.149}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{78}{figure.150}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{79}{figure.151}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{80}{figure.152}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{82}{figure.153}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{82}{figure.154}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{84}{figure.155}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{84}{figure.156}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Série temporal completa da estação t\_cv\_01640000\\(fonte: o autor)}}{31}{figure.54}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Série temporal completa da estação c\_vz\_56994500\\(fonte: o autor)}}{32}{figure.56}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Série temporal da estação t\_cv\_56990850 - não utilizada\\(fonte: o autor)}}{33}{figure.57}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Série temporal da estação t\_cv\_56994500 - não utilizada\\(fonte: o autor)}}{33}{figure.58}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Série temporal completa da estação c\_cv\_01941010\\(fonte: o autor)}}{33}{figure.60}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Série temporal completa da estação c\_cv\_01941004\\(fonte: o autor)}}{34}{figure.61}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Série temporal completa da estação c\_cv\_01941006\\(fonte: o autor)}}{34}{figure.62}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Série temporal completa da estação t\_cv\_56990005\\(fonte: o autor)}}{34}{figure.63}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Série temporal incompleta da estação t\_vz\_62020080\\(fonte: o autor)}}{35}{figure.65}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Série temporal completa (cortada) da estação t\_vz\_62020080\\(fonte: o autor)}}{35}{figure.66}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Série temporal completa (cortada) da estação t\_cv\_61998080\\(fonte: o autor)}}{36}{figure.67}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Detalhe do trecho com dados nulos da estação c\_vz\_44290002\\(fonte: o autor)}}{37}{figure.69}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Série temporal completa da estação c\_vz\_44290002\\(fonte: o autor)}}{37}{figure.70}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Série temporal completa da estação c\_cv\_01544017\\(fonte: o autor)}}{38}{figure.71}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Série temporal completa da estação c\_cv\_01544032\\(fonte: o autor)}}{38}{figure.72}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Série temporal completa da estação c\_cv\_01544036\\(fonte: o autor)}}{38}{figure.73}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Autocorrelação para a vazão do rio Jequitinhonha\\(fonte: o autor)}}{42}{figure.83}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Componente sazonal da série de vazão do rio Jequitinhonha\\(fonte: o autor)}}{43}{figure.84}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Autocorrelação para a vazão do rio Doce\\(fonte: o autor)}}{43}{figure.85}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Componente sazonal da série de vazão do rio Doce\\(fonte: o autor)}}{44}{figure.86}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Autocorrelação para a vazão do rio Grande\\(fonte: o autor)}}{44}{figure.87}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Componente sazonal da série de vazão do rio Grande\\(fonte: o autor)}}{45}{figure.88}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Autocorrelação para a vazão do rio São Francisco\\(fonte: o autor)}}{45}{figure.89}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Componente sazonal da série de vazão do rio São Francisco\\(fonte: o autor)}}{46}{figure.90}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Dados originais para o rio Jequitinhonha\\(fonte: o autor)}}{46}{figure.91}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Dados log-transformados para o rio Jequitinhonha\\(fonte: o autor)}}{46}{figure.92}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Dados originais para o rio Doce\\(fonte: o autor)}}{47}{figure.93}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Dados log-transformados para o rio Doce\\(fonte: o autor)}}{47}{figure.94}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Dados originais para o rio Grande\\(fonte: o autor)}}{47}{figure.95}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Dados log-transformados para o rio Grande\\(fonte: o autor)}}{48}{figure.96}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Dados originais para o rio São Francisco\\(fonte: o autor)}}{48}{figure.97}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Dados log-transformados para o rio São Francisco\\(fonte: o autor)}}{48}{figure.98}%
+\contentsline {figure}{\numberline {3.41}{\ignorespaces Diagrama mostrando a divisão dos dados de treino/teste com \textit {refit}.\\(fonte: \cite {skforecast_a})}}{54}{figure.113}%
+\contentsline {figure}{\numberline {3.42}{\ignorespaces WFV com janela expandida e \textit {refit} - imagem 1.\\(fonte: \cite {skforecast_a})}}{54}{figure.114}%
+\contentsline {figure}{\numberline {3.43}{\ignorespaces WFV com janela expandida e \textit {refit} - imagem 2.\\(fonte: \cite {skforecast_a})}}{55}{figure.115}%
+\contentsline {figure}{\numberline {3.44}{\ignorespaces WFV com janela expandida e \textit {refit} - imagem 3.\\(fonte: \cite {skforecast_a})}}{55}{figure.116}%
+\contentsline {figure}{\numberline {3.45}{\ignorespaces Diagrama de como se calcula o intervalo de previsão.\\(fonte: \cite {skforecast_b})}}{55}{figure.117}%
+\contentsline {figure}{\numberline {3.46}{\ignorespaces Previsão com valor fora dos limites\\(fonte: o autor)}}{56}{figure.118}%
+\contentsline {figure}{\numberline {3.47}{\ignorespaces Previsão completamente nos limites\\(fonte: o autor)}}{57}{figure.119}%
+\contentsline {figure}{\numberline {3.48}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{59}{figure.121}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Resultado do SeasonalNaive no teste \textit {Walk-Forward Validation}\\(fonte: o autor)}}{61}{figure.125}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}}{62}{figure.126}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}}{62}{figure.127}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{63}{figure.128}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{64}{figure.129}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Histograma dos resíduos.\\(fonte: o autor)}}{64}{figure.130}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{65}{figure.131}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}}{67}{figure.132}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{67}{figure.133}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{68}{figure.134}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{68}{figure.135}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{68}{figure.136}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{70}{figure.137}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{70}{figure.138}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{71}{figure.139}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{71}{figure.140}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{72}{figure.141}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{72}{figure.142}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{73}{figure.143}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{73}{figure.144}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{74}{figure.145}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{75}{figure.146}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{76}{figure.147}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{77}{figure.148}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{78}{figure.149}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{79}{figure.150}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{80}{figure.151}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{81}{figure.152}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{83}{figure.153}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{83}{figure.154}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{85}{figure.155}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{85}{figure.156}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{88}{figure.158}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{89}{figure.159}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{89}{figure.160}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{91}{figure.161}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{92}{figure.162}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{92}{figure.163}%

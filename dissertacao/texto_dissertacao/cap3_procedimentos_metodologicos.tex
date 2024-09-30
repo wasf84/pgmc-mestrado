@@ -41,7 +41,7 @@ Os dados de precipitação e vazão obtidos do site da ANA já estavam ajustados
 
 É relevante destacar que a consulta prévia ao sistema \textit{on-line} da ANA foi essencial, pois frequentemente selecionavam-se códigos de estação que, ao final, não possuíam dados para o período especificado ou apresentavam códigos alterados na base de dados, sendo retornados como ``inexistentes''. Quando um código de estação não retornava resultados na consulta ao sistema, foi necessário utilizar o sistema gentilmente cedido pela Rhama Analysis para verificar se o código da estação havia sido modificado. Nos casos em que se constatava a alteração, o novo código foi adotado, enquanto o código anteriormente informado como inexistente foi descartado.
 
-Em cada rio analisado, a estação alvo, com a vazão que se pretendia prever, foram destacadas em itálico para ficar claro ao leitor como identificá-las.
+Em cada rio analisado, a estação-alvo, com a vazão que se pretendia prever, foram destacadas em itálico para ficar claro ao leitor como identificá-las.
 
 A distinção entre estação convencional e telemétrica deve-se a esta ter informações a cada quinze minutos, a cada trinta minutos ou ser do tipo horária. Onde ocorreu de ter informações tão granuladas assim, para a precipitação foi feito o somatório para um dia e a vazão foi a média de um dia.
 
@@ -134,9 +134,9 @@ Note que a estratégia de realizar a média, para o dia, dos anos anteriores nem
 
 Foi então que realizou-se uma nova contagem dos dados que ainda permaneciam faltantes. Para esses casos nulos, foi aplicada a imputação de dados utilizando o modelo kNN (k-Nearest Neighbors - k-vizinhos mais próximos), com o objetivo de garantir uma melhor dispersão dos valores imputados. O modelo kNN operou calculando a distância euclidiana dos pontos nulos \underline{utilizando os sete vizinhos mais próximos}, atribuindo maior peso aos vizinhos mais próximos no cálculo. Esse método de imputação visou preservar a tendência local e o comportamento da série temporal dentro da semana em que o dado faltante estava. Após esta nova fase de imputação dos dados as séries ficaram completamente preenchidas.
 
-É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais, de tendência e estacionariedade. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos.
+É muito importante o destaque para esta fase de preenchimento de dados faltantes, e os desafios que isso apresentou ao trabalho, porque a escassez de informação foi um problema. Quando o período faltante era curto, o comportamento da série temporal preservou coerentemente os padrões sazonais e de tendência. Contudo, mais especificamente para o rio Grande, isso tudo ainda não foi suficiente. A série temporal de vazão não preservou o comportamento sazonal esperado, ficando com muitos ruídos, a ponto de ser preciso remover grande trecho dos dados, ficando apenas com dados de 2020 até o ano de 2023. Isso será melhor detalhado quando se tratar especificamente da análise do rio Grande.
 
-Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação em questão. A mesma analogia serve para as estações telemétricas. O nome `t\_vz\_54790000' significa `estação telemétrica de vazão, código 54790000'.
+Neste momento cabe explicar uma nomenclatura utilizada no trabalho para rapidamente identificar o tipo de estação, se convencional ou telemétrica, de que dado ela trata (chuva ou vazão) e o código da estação. Tomemos dois exemplos que serão vistos nesta seção. Esta é a estação `c\_cv\_01941010', utilizada na análise do rio Doce. A letra `c' designa `convencional' e as letras `cv' significam `chuva', consequentemente, a sequência numérica é o código da estação em questão. A mesma analogia serve para as estações telemétricas. O nome `t\_vz\_54790000' significa `estação telemétrica (t) de vazão (vz), código 54790000'.
 
 \subsection{Rio Jequitinhonha}
 
@@ -191,7 +191,7 @@ Por fim, uma visão ampla de como ficou a série temporal após os procedimentos
 	\label{fig:jequitinhonhaSerieCompleta_t_vz_54790000}
 \end{figure}
 
-A mesma análise foi realizada para as estações de chuva. Na estação t\_cv\_54790000 (figura \ref{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}) faltavam 273 dias de dados (6,79\%). Já a estação t\_cv\_01640000 estava totalmente preenchida, sem valores nulos. (figura \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
+A mesma análise foi realizada para as estações de chuva. Na estação t\_cv\_54790000 (figura \ref{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}) faltavam 273 dias de dados (6,79\%), no início do ano de 2013 em sua vasta maioria. Já a estação t\_cv\_01640000 estava totalmente preenchida, sem valores nulos. (figura \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
 
 \begin{figure}[!h]
 	\centering
@@ -200,7 +200,7 @@ A mesma análise foi realizada para as estações de chuva. Na estação t\_cv\_
 	\label{fig:jequitinhonhaSerieIncompleta_t_cv_54790000}
 \end{figure}
 
-Note que no início desta série de precipitação, o ano de 2013, não possuem dados. As séries de chuva completas ficaram desta forma (figuras \ref{fig:jequitinhonhaSerieCompleta_t_cv_54790000} e \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
+As séries de chuva completas ficaram desta forma (figuras \ref{fig:jequitinhonhaSerieCompleta_t_cv_54790000} e \ref{fig:jequitinhonhaSerieCompleta_t_cv_01640000})
 
 \begin{figure}[!h]
 	\centering
@@ -215,6 +215,7 @@ Note que no início desta série de precipitação, o ano de 2013, não possuem 
 	\caption{Série temporal completa da estação t\_cv\_01640000\\(fonte: o autor)}
 	\label{fig:jequitinhonhaSerieCompleta_t_cv_01640000}
 \end{figure}
+\clearpage
 
 \subsection{Rio Doce}
 

@@ -26,29 +26,30 @@
 \contentsline {section}{\numberline {3.2}Dados Utilizados}{22}{section.38}%
 \contentsline {section}{\numberline {3.3}Pré-processamento dos Dados}{26}{section.44}%
 \contentsline {subsection}{\numberline {\textbf {{3.3}.1}}Rio Jequitinhonha}{27}{subsection.45}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{31}{subsection.55}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{34}{subsection.64}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{36}{subsection.68}%
-\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{38}{section.74}%
-\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{40}{section.82}%
-\contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{48}{section.99}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive - SN}{48}{subsection.100}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear - LR}{48}{subsection.101}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost - CB}{49}{subsection.104}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.4}}Floresta Aleatória - RF}{50}{subsection.106}%
-\contentsline {section}{\numberline {3.7}Métricas de Avaliação}{51}{section.108}%
-\contentsline {section}{\numberline {3.8}Modelo proposto}{52}{section.112}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{32}{subsection.55}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{35}{subsection.64}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{37}{subsection.68}%
+\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{39}{section.74}%
+\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{41}{section.82}%
+\contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{49}{section.99}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive - SN}{49}{subsection.100}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear - LR}{49}{subsection.101}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost - CB}{50}{subsection.104}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.4}}Floresta Aleatória - RF}{51}{subsection.106}%
+\contentsline {section}{\numberline {3.7}Métricas de Avaliação}{52}{section.108}%
+\contentsline {section}{\numberline {3.8}Modelo proposto}{53}{section.112}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{59}{chapter.122}%
-\contentsline {section}{\numberline {4.1}Desempenho dos modelos}{59}{section.123}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{59}{subsection.124}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{85}{subsection.157}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{85}{section.158}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{85}{section.159}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{60}{chapter.122}%
+\contentsline {section}{\numberline {4.1}Desempenho dos modelos}{60}{section.123}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{60}{subsection.124}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{86}{subsection.157}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{93}{subsection.164}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{93}{section.165}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{93}{section.166}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{86}{chapter.160}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{86}{section.161}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{86}{section.162}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{86}{section.163}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{94}{chapter.167}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{94}{section.168}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{94}{section.169}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{94}{section.170}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{87}{chapter*.165}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{95}{chapter*.172}%
