@@ -531,7 +531,7 @@ A mitigação do efeito de cauda longa é particularmente relevante para modelos
 
 %Embora os modelos baseados em \textit{boosting} utilizados neste estudo, como o CatBoost e o LightGBM, não sejam tão sensíveis a esse efeito, pois captam relações não-lineares e complexas de forma eficiente, optou-se por aplicar o mesmo tratamento a todos os modelos para garantir uma padronização na apresentação dos dados.
 
-Posto que os dados contêm valores iguais a zero, a transformação pelo logaritmo natural (ln(.)) não foi aplicada, pois o cálculo de logaritmo não é definido para valores zero. Ao invés disso, foi utilizada a transformação `log1p(.)' da biblioteca NumPy \cite{numpyref}, que adiciona 1 ao valor antes da transformação, evitando erros relacionados ao logaritmo de zero.
+Posto que os dados contêm valores iguais a zero, a transformação pelo logaritmo natural (ln(.)) não foi aplicada, pois o cálculo de logaritmo não é definido para valores zero e negativos. Ao invés disso, foi utilizada a transformação `log1p(.)' da biblioteca NumPy \cite{numpyref}, que adiciona 1 ao valor antes da transformação, evitando erros relacionados ao logaritmo de zero.
 
 Existem outras formas de ajustar a distribuição dos dados, tais como Box-Cox, Yeo-Johnson e transformação por quantis [REF REF], mas era necessário que houvesse fácil reversibilidade nos valores finais preditos e que garantisse interpretabilidade, por isso optou-se por uma transformação simples mas que atendeu satisfatoriamente ao próposito.
 
