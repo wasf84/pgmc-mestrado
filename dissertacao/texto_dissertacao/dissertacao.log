@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  29 SEP 2024 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  30 SEP 2024 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2588,63 +2588,66 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [85 <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png> <./Figuras/jequiti/w
 fv/RF/RF_WFV_ORIG_RESID_ACF.png>] [86
 
-] [87]
-<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png, id=1151, 1154.3125pt x 752.8125pt>
+]
+<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png, id=1148, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png  used on input
- line 388.
+ line 377.
 (pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
-<Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png, id=1152, 1154.3125pt x 752.8125pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png, id=1149, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png  used on input 
-line 395.
+line 384.
 (pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png, id=1153, 1154.3125pt x 752.8125pt>
+<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png, id=1150, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png  used on input
- line 402.
+ line 391.
 (pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[88 <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png>] [89 <./Figuras/rio_doce/wfv/LR
-/LR_WFV_LOG.png> <./Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png>] [90
+[87] [88 <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png> <./Figuras/rio_doce/wfv/LR
+/LR_WFV_LOG.png>] [89 <./Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png>] [90
 
 ]
-<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png, id=1171, 1154.3125pt x 5
+<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png, id=1173, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png  
-used on input line 438.
+used on input line 423.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png, id=1172, 1154.3125pt x 55
+<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png, id=1174, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png Graphic file (type pn
 g)
 <use Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png  u
-sed on input line 445.
+sed on input line 430.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png, id=1173, 1154.3125pt x 5
+<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png, id=1175, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png Graphic file (type p
 ng)
 <use Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png  
-used on input line 452.
+used on input line 437.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2686,17 +2689,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 30375 strings out of 478287
- 569280 string characters out of 5849289
- 919079 words of memory out of 5000000
+ 30381 strings out of 478287
+ 569344 string characters out of 5849289
+ 919084 words of memory out of 5000000
  47382 multiletter control sequences out of 15000+600000
- 542912 words of font info for 191 fonts, out of 8000000 for 9000
+ 543173 words of font info for 194 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,94p,2310b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/f
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb>
@@ -2706,11 +2709,11 @@ are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmtt12.pfb>
-Output written on dissertacao.pdf (100 pages, 4855304 bytes).
+/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on dissertacao.pdf (100 pages, 4858190 bytes).
 PDF statistics:
- 1560 PDF objects out of 1728 (max. 8388607)
- 1235 compressed objects within 13 object streams
+ 1566 PDF objects out of 1728 (max. 8388607)
+ 1239 compressed objects within 13 object streams
  324 named destinations out of 1000 (max. 500000)
  40291 words of extra memory for PDF output out of 42996 (max. 10000000)
 
