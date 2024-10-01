@@ -467,29 +467,7 @@ Em suma. O comportamento dos resíduos ao longo do tempo indica que, para perío
 
 A assimetria dos resíduos para o modelo CB - figura \ref{fig:doce_CB_WFV_ORIG_RESID_x_CURVA_NORMAL} - é de $4,16$, o que indica uma distribuição altamente assimétrica à direita - positiva. Isso quer dizer que os erros positivos são mais frequentes ou mais intensos do que os erros negativos. Isso combina com o viés sistemático de todos os modelos em que o PBIAS indicou subestimação - visto em \ref{fig:doce_CB_WFV_ORIG}, \ref{fig:doce_LR_WFV_LOG} e \ref{fig:doce_RF_WFV_ORIG}. Posto que o cálculo do resíduo é ``$observado - previsto$'' e trazendo o gráfico \ref{fig:doce_CB_WFV_ORIG_RESID_x_TEMPO} à vista aqui novamente, percebe-se que esta cauda longa de valores positivos ocorreu principalmente no início do ano, exatamente quando as variações nas vazões foram mais intensas. Este fenômeno também ocorreu com os outros modelos - figuras \ref{fig:doce_LR_WFV_LOG_RESID_x_CURVA_NORMAL} e \ref{fig:doce_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}. Contudo, para o modelo LR com dados log-transformados, a assimetria se mostrou menor - $2,71$ - do que em relação aos modelos não-lineares, restando a assimetria de $3,24$ para o modelo RF.
  
-%- **Distribuição**: A maior parte dos resíduos se concentra ao redor de 0, o que é esperado para um bom modelo preditivo. No entanto, há uma cauda longa no lado direito (valores positivos maiores que $200$), sugerindo que o CB tem dificuldades em prever os valores de maior magnitude, superestimando-os.
-%
-%- **Ajuste à Curva Normal**: A curva normal (em vermelho) está visivelmente deslocada para a direita, devido à alta assimetria dos dados. Isso mostra que os resíduos não seguem uma distribuição normal, com muitos valores concentrados à direita de zero, o que pode indicar que o modelo não captura bem as dinâmicas dos extremos.
-%
-%- **Distribuição**: A distribuição dos resíduos da LR também mostra uma concentração próxima a zero, mas com uma cauda menos pronunciada do que o CB. Isso sugere que a LR também enfrenta dificuldades para prever picos de vazão, mas de forma um pouco menos grave em comparação ao CB.
-%- **Ajuste à Curva Normal**: A curva normal ajustada está mais próxima da distribuição real dos resíduos, mas ainda assim o ajuste é prejudicado pela assimetria. A cauda direita indica que o modelo, mesmo linear, não consegue capturar as características não lineares das vazões extremas.
-%
-%### 3. **RandomForest (RF)**:
-%- **Assimetria**: A assimetria dos resíduos é de **3.24**, indicando uma assimetria também significativa à direita, mas menor do que a do CB. Isso mostra que o RF tem menos tendência a superestimar os valores, embora a cauda direita ainda esteja presente.
-%- **Distribuição**: A maior parte dos resíduos do RF se concentra ao redor de zero, com uma distribuição mais simétrica do que o CB, mas ainda apresenta uma cauda mais alongada para valores positivos. Isso implica que o RF, assim como os outros modelos, enfrenta desafios ao lidar com picos de vazão.
-%- **Ajuste à Curva Normal**: O ajuste à curva normal é razoável para os resíduos concentrados próximos de zero, mas a assimetria à direita faz com que a curva não se ajuste bem aos valores de resíduos maiores. Ainda assim, o RF parece lidar melhor com a dispersão dos resíduos em comparação ao CB.
-%
-%### **Comparação Geral**:
-%- **Assimetria**: O CB tem a maior assimetria, sugerindo uma maior tendência a erros positivos e, consequentemente, maior dificuldade em prever vazões extremas de alta magnitude. O RF, com uma assimetria intermediária, lida melhor com essa questão, enquanto a LR tem a menor assimetria, mas ainda com uma clara predominância de erros positivos.
-%- **Distribuição dos Resíduos**: Todos os modelos têm a maior parte dos resíduos próximos de zero, o que é um bom sinal de previsões acuradas para valores de vazão moderada. Contudo, as caudas à direita indicam que os três modelos superestimam os valores de pico de vazão.
-%- **Ajuste à Curva Normal**: Nenhum dos modelos apresenta resíduos normalmente distribuídos, como esperado, dada a natureza assimétrica dos dados. A LR tem o ajuste mais próximo de uma normal, seguido pelo RF, enquanto o CB apresenta o pior ajuste devido à alta assimetria.
-%
-%### **Conclusão**:
-%- O **CB** parece enfrentar mais dificuldades com a previsão de valores extremos, refletido na alta assimetria e nos resíduos mais dispersos. Isso pode ser um indicativo de que o modelo necessita de melhorias para capturar melhor as dinâmicas de picos de vazão.
-%- A **LR**, apesar de ser um modelo linear, tem um desempenho razoável, com menos assimetria que o CB, mas ainda assim apresenta dificuldades com picos.
-%- O **RF** se posiciona como o modelo intermediário, com uma assimetria menor do que o CB e melhor ajuste geral, embora também apresente problemas com superestimação de valores extremos.
-%
-%A tendência de superestimar os picos é um padrão comum nos três modelos, sugerindo a necessidade de refinamento nas técnicas de modelagem, ou talvez a inclusão de mais variáveis explicativas para lidar com esses eventos extremos.
+A curva normal - em vermelho - está visivelmente deslocada à direita, devido a assimetria dos dados, para todos os modelos, porém um pouco menos para o modelo LR. Todos os modelos possuem resíduos concentrados, majoritariamente, entre $-200$ e $200$, contudo, para os modelos não-lineares CB e RF, a variação total dos resíduos oscila entre $-400$ e $1000$, ao passo que o modelo LR, mostrando melhor comportamento, oscila entre $-400$ e $800$. Isso tudo mostra que os resíduos não seguem uma distribuição normal, com valores concentrados à direita de zero, o que indica que os modelos não capturaram bem as dinâmicas quando de valores mais elevados de vazão.
 
 \begin{figure}[!h]
 \centering
@@ -513,30 +491,11 @@ A assimetria dos resíduos para o modelo CB - figura \ref{fig:doce_CB_WFV_ORIG_R
 \end{figure}
 \clearpage
 
-%A análise dos gráficos de autocorrelação (ACF) dos resíduos para os modelos CB, LR e RF fornece informações valiosas sobre a independência dos erros de previsão ao longo do tempo. Se os resíduos forem autocorrelacionados, isso indica que o modelo pode não estar capturando adequadamente a dependência temporal nos dados. Vamos analisar cada gráfico individualmente:
-%
-%### 1. **CatBoost (CB)**
-%- **Padrão de Autocorrelação**: O gráfico mostra uma autocorrelação muito forte no lag 0, o que é esperado, já que os resíduos no lag 0 são sempre autocorrelacionados com eles mesmos. Nos primeiros lags (até o lag 10), observamos picos significativos de autocorrelação positiva. Isso indica que há alguma correlação temporal nos resíduos, o que sugere que o modelo CB não está capturando totalmente a dependência temporal em curtos intervalos de tempo.
-%- **Dissipação da Autocorrelação**: Após o lag 10, a autocorrelação diminui rapidamente, e a maioria dos valores cai dentro do intervalo de confiança (área sombreada). No entanto, há algumas pequenas flutuações ao longo dos lags, embora elas não ultrapassem significativamente os limites do intervalo de confiança. Isso indica que o comportamento temporal dos resíduos tende a se estabilizar para lags mais longos.
-%- **Conclusão**: A presença de autocorrelação significativa nos primeiros lags sugere que o CB pode não estar modelando adequadamente a dependência temporal de curto prazo nos dados de vazão.
-%
-%### 2. **Regressão Linear (LR)**
-%- **Padrão de Autocorrelação**: O gráfico da LR apresenta um comportamento semelhante ao do CB, com uma forte autocorrelação no lag 0 e picos significativos de autocorrelação positiva nos primeiros lags, embora de menor magnitude. Isso indica que o modelo de Regressão Linear também não está capturando completamente as dependências temporais de curto prazo nos resíduos, mas com menor intensidade do que o CB.
-%- **Dissipação da Autocorrelação**: Assim como no CB, a autocorrelação diminui rapidamente após o lag 10, e a maioria dos valores fica dentro do intervalo de confiança. Isso sugere que o comportamento temporal dos resíduos é relativamente estável após os primeiros lags.
-%- **Conclusão**: A LR também apresenta alguma autocorrelação nos resíduos de curto prazo, mas menos intensa do que no CB. Isso pode indicar que a Regressão Linear captura um pouco melhor a dependência temporal dos dados em comparação ao CB.
-%
-%### 3. **RandomForest (RF)**
-%- **Padrão de Autocorrelação**: O gráfico da RF mostra um padrão muito semelhante ao do CB e LR, com uma forte autocorrelação no lag 0, seguida de picos nos primeiros lags. No entanto, a magnitude desses picos é ainda menor do que nos outros dois modelos, sugerindo que o RF tem um desempenho ligeiramente melhor em capturar a dependência temporal de curto prazo.
-%- **Dissipação da Autocorrelação**: A autocorrelação diminui rapidamente após os primeiros lags, com a maioria dos valores caindo dentro do intervalo de confiança. Assim como nos outros modelos, há uma leve flutuação nos lags mais altos, mas nada que ultrapasse os limites do intervalo de confiança.
-%- **Conclusão**: O RF parece lidar um pouco melhor com a dependência temporal dos resíduos em comparação ao CB e LR, apresentando picos de autocorrelação menos pronunciados. No entanto, ainda há algum grau de correlação nos resíduos de curto prazo.
-%
-%### **Comparação Geral**
-%- **Autocorrelação de Curto Prazo**: Os três modelos (CB, LR e RF) mostram picos de autocorrelação positiva nos primeiros lags, sugerindo que nenhum deles está capturando totalmente a dependência temporal de curto prazo dos dados de vazão. No entanto, o RF apresenta menor autocorrelação em comparação ao CB e LR, o que sugere que o modelo de RF pode estar lidando melhor com a dependência temporal nos dados.
-%- **Estabilização de Longo Prazo**: Em todos os modelos, a autocorrelação se dissipa rapidamente após os primeiros 10 lags, com a maioria dos valores caindo dentro do intervalo de confiança. Isso sugere que, para lags mais longos, os resíduos são independentes do tempo, o que é desejável.
-%- **Diferenciação entre Modelos**: O CB parece ter a maior dificuldade em capturar a dependência temporal, seguido de perto pela LR. O RF, embora também apresente picos nos primeiros lags, se sai ligeiramente melhor, com menor magnitude de autocorrelação.
-%
-%### **Conclusão**
-%A presença de autocorrelação nos primeiros lags em todos os modelos sugere que há uma dependência temporal que os modelos não estão capturando totalmente, especialmente em intervalos de curto prazo. O **RF** se destaca por ter uma autocorrelação de menor magnitude, o que sugere um desempenho ligeiramente superior em termos de lidar com dependências temporais nos dados de vazão. No entanto, em todos os casos, há espaço para melhorar a captura de dependências temporais de curto prazo, talvez através de técnicas de modelagem mais sofisticadas que considerem explicitamente a autocorrelação residual.
+O CB apresenta autocorrelação significativa nos primeiros \textit{lags} - até aproximadamente o \textit{lag} 10 -, com picos consideráveis de correlação positiva, indicando que o modelo não está capturando totalmente as dependências temporais de curto prazo - figura \ref{fig:doce_CB_WFV_ORIG_RESID_ACF}. Este comportamento sugere que, após as previsões imediatas, os resíduos ainda carregam dependências de eventos passados, o que não deveria ocorrer. O LR também mostra autocorrelação nos primeiros \textit{lags}, repetindo o comportamento do CB, embora de menor magnitude quando comparado a este - figura \ref{fig:doce_LR_WFV_LOG_RESID_ACF}. Ainda que o modelo LR também não esteja capturando completamente as dependências de curto prazo, ele o faz de forma um pouco mais eficiente que o CB. Por sua vez, o RF apresenta picos de autocorrelação ainda menores que CB e LR nos primeiros \textit{lags} - figura \ref{fig:doce_RF_WFV_ORIG_RESID_ACF} -, o que indica que o RF consegue capturar melhor as dependências temporais imediatas dos dados. No entanto, ainda persiste alguma autocorrelação, com uma magnitude relativamente baixa, sugerindo que o RF está capturando a dinâmica temporal, se não de forma mais eficiente, com certeza menos deficitária.
+
+Avançando no estudo, a autocorrelação do modelo CB diminui rapidamente após os primeiros \textit{lags} e por volta do \textit{lag} 10, a maioria dos resíduos já se estabiliza dentro do intervalo de confiança - a área azul esmaecida. Isso é um sinal de que, a partir de \textit{lags} maiores, os resíduos são independentes, um comportamento esperado e positivo para previsões de longo prazo. Perceba, no entanto, que tanto o LR quanto o RF apresentam uma dissipação rápida da autocorrelação, diferentemente do CB, e seus resíduos se estabilizam rapidamente dentro do intervalo de confiança após os primeiros \textit{lags}.
+
+Todos os modelos mostraram alguma autocorrelação nos resíduos de curto prazo, indicando que nenhum deles conseguiu eliminar completamente as dependências temporais (de curto prazo). Esse fenômeno é mais acentuado no CB, seguido pela LR e, por fim, pelo RF, que apresenta a menor autocorrelação nos primeiros \textit{lags}. Essa presença presistente de autocorrelação nos resíduos significa que as previsões de curto prazo são influenciadas pelos eventos passados, sugerindo que os modelos não estão capturando eventos imediatamente próximos de maneira ideal.
 
 \begin{figure}[!h]
 \centering
@@ -558,9 +517,103 @@ A assimetria dos resíduos para o modelo CB - figura \ref{fig:doce_CB_WFV_ORIG_R
 \caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
 \label{fig:doce_RF_WFV_ORIG_RESID_ACF}
 \end{figure}
+
+Toda essa análise demonstrou aspectos importantes acerca dos modelos. Todos apresentaram uma tendência de subestimar os picos, com o modelo LR tendo uma oscilação levemente menor - de $-400$ a $800$ -, o período do ano que foi complicado para os modelos foi o período inicial do ano, verão, quando as vazões são fortemente impactadas pelas oscilações nas precipitações e o gráfico ACF deixou claro que os resíduos carregam dependência temporal de curto prazo. Isso sugere a necessidade de inclusão de mais variáveis explicativas para lidar com esses eventos extremos, refinamento nos hiperparâmetros - para os modelos não-lineares -, ou mesmo de refinamento nas técnicas de modelagem - isso não pode ser descartado.
+
 \clearpage
 
 \subsection{Rio Grande}
+
+%A análise dos resultados para os três modelos — CatBoost (CB), Regressão Linear (LR) e RandomForest (RF) — aplicados à previsão de vazão no rio Grande oferece uma visão clara de suas respectivas performances ao longo de 365 dias consecutivos. Vou detalhar e comparar os modelos em termos de métricas de desempenho, comportamento visual das previsões, e características dos intervalos de confiança, para chegar a conclusões importantes.
+%
+%### 1. **Métricas de Desempenho**
+%
+%#### **Erro Percentual Médio Absoluto (MAPE)**:
+%- **CB**: 0.12605
+%- **LR**: 0.13353
+%- **RF**: 0.123
+%
+%O **RF** apresentou o menor valor de MAPE, o que indica que esse modelo tem a melhor precisão geral nas previsões, superando ligeiramente o CB e o LR. Contudo, a diferença entre os valores é pequena, sugerindo que todos os três modelos oferecem previsões de boa qualidade.
+%
+%#### **Kling-Gupta Efficiency (KGE)**:
+%- **CB**: 0.76212
+%- **LR**: 0.83365
+%- **RF**: 0.83524
+%
+%Aqui, o **RF** novamente lidera, seguido de muito perto pelo **LR**. Ambos têm valores de KGE superiores ao **CB**, sugerindo que capturam melhor a correlação, viés e variabilidade dos dados de vazão. O **CB** apresenta um valor de KGE menor, indicando uma menor correspondência entre as previsões e os valores observados.
+%
+%#### **Percentual de BIAS (PBIAS)**:
+%- **CB**: -4.44499\%
+%- **LR**: -1.99105\%
+%- **RF**: -2.18939\%
+%
+%O **LR** tem o menor PBIAS, indicando que suas previsões estão mais equilibradas, com menos tendência a subestimar ou superestimar os valores de vazão. O **CB** e o **RF** também têm PBIAS relativamente baixos, mas o **CB** apresenta o maior valor negativo, sugerindo uma subestimação maior comparado aos outros modelos.
+%
+%### 2. **Intervalo de Confiança e Cobertura Empírica**
+%- **CB**: Cobertura empírica de 63.56\%
+%- **LR**: Cobertura empírica de 84.38\%
+%- **RF**: Cobertura empírica de 63.01\%
+%
+%A cobertura empírica do **LR** é significativamente maior do que a dos outros dois modelos, com 84.38\%, o que indica que o intervalo de confiança capturou com mais precisão a variabilidade das observações. Tanto o **CB** quanto o **RF** têm valores de cobertura mais baixos, sugerindo que seus intervalos de confiança são mais estreitos e não conseguem captar toda a variabilidade observada nos dados.
+%
+%### 3. **Comportamento Visual das Previsões**
+%
+%#### **CatBoost (CB)**:
+%- A previsão geral segue de perto a série observada, mas a subestimação das vazões mais altas é evidente. O intervalo de confiança parece ser estreito em momentos de pico, o que pode estar contribuindo para a baixa cobertura empírica.
+%- Os maiores desvios nas previsões ocorrem em períodos de alta vazão (por volta de março e maio de 2023), onde o modelo apresenta dificuldade em acompanhar as flutuações.
+%
+%#### **Regressão Linear (LR)**:
+%- O modelo de Regressão Linear, como esperado, consegue capturar razoavelmente bem as flutuações de vazão, mas tende a subestimar os picos mais extremos.
+%- O intervalo de confiança do **LR** é o mais amplo dos três modelos, resultando em uma cobertura empírica maior. Isso pode refletir uma maior margem de erro nas previsões em momentos de maior incerteza.
+%
+%#### **RandomForest (RF)**:
+%- As previsões do **RF** são visualmente bastante próximas dos valores observados, com o modelo conseguindo capturar bem tanto as vazões mais baixas quanto as mais altas. No entanto, assim como o **CB**, ele tende a subestimar os picos mais intensos.
+%- O intervalo de confiança é mais estreito do que o do **LR**, o que pode explicar a menor cobertura empírica.
+%
+%### 4. **Interpretação dos Resultados**
+%
+%#### **Precisão e Desempenho Geral**:
+%- O **RF** foi o modelo que obteve o melhor equilíbrio entre precisão (MAPE), correlação (KGE) e viés (PBIAS), mostrando um desempenho consistente. No entanto, sua cobertura empírica baixa sugere que o intervalo de confiança não captura toda a incerteza associada aos dados, o que pode ser um ponto a melhorar.
+%- O **LR**, embora tenha um MAPE ligeiramente maior, apresentou o melhor valor de PBIAS, sugerindo que ele tem a menor tendência a viés sistemático entre os modelos. Além disso, sua maior cobertura empírica sugere que ele é mais conservador e captura melhor a variabilidade dos dados.
+%- O **CB**, apesar de ser um modelo poderoso, mostrou desempenho inferior em termos de KGE e PBIAS, o que pode indicar dificuldades em capturar corretamente as variações sazonais e os picos extremos de vazão.
+%
+%#### **Intervalos de Confiança e Cobertura**:
+%- A maior cobertura do intervalo de confiança no **LR** sugere que ele oferece previsões mais robustas em termos de variabilidade, embora isso venha ao custo de uma menor precisão em algumas situações.
+%- Tanto o **CB** quanto o **RF** apresentam intervalos de confiança mais estreitos, resultando em menor cobertura empírica. Isso indica que, embora sejam mais precisos em média, podem não ser tão confiáveis em situações de alta variabilidade.
+%
+%### **Conclusões Importantes**
+%
+%- **RandomForest** se destaca como o melhor modelo geral, com a maior precisão e boa correlação com os dados observados. No entanto, sua menor cobertura empírica sugere que ele pode não capturar adequadamente a incerteza associada a eventos extremos.
+%
+%- **Regressão Linear** tem a vantagem de oferecer previsões balanceadas com o menor viés entre os modelos, além de apresentar o maior intervalo de confiança, o que o torna mais conservador em termos de variabilidade. No entanto, sua menor precisão em relação aos outros dois modelos indica que ele pode ser menos confiável em previsões de curto prazo.
+%
+%- **CatBoost** apresentou um desempenho sólido, mas ficou atrás dos outros dois modelos em termos de correlação e viés. Sua subestimação das vazões mais altas e a menor cobertura empírica indicam que ele pode precisar de ajustes ou maior parametrização para capturar melhor as dinâmicas complexas dos dados.
+%
+%A escolha do modelo pode depender do foco desejado: se a precisão for a prioridade, o **RandomForest** seria a melhor escolha; no entanto, se a captura de variabilidade e redução de viés forem mais importantes, o **Regressão Linear** pode ser mais adequado. O **CatBoost** pode precisar de ajustes para melhorar sua captura de picos de vazão.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+\label{fig:grande_CB_WFV_ORIG}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
+\label{fig:grande_LR_WFV_ORIG}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png}
+\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+\label{fig:grande_RF_WFV_ORIG}
+\end{figure}
+\clearpage
+
+\subsection{Rio São Francisco}
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
