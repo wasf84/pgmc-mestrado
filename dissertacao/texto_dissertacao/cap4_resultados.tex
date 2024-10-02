@@ -405,7 +405,7 @@ O RF apresentou um padrão semelhante aos dos modelos anteriores. A concentraç�
 
 Notam-se \textit{outliers} para valores previstos mais altos, com resíduos que variam de $300$ a mais de $1000$ para previsões maiores que $2500 m^3/s$. Esses \textit{outliers} são mais pronunciados que nos outros dois modelos. Estes valores elevados indicando outliers denotam que este modelo, bem como os outros anteriores, perde precisão em alguns valores de pico de vazão observados. Por fim, não houve uma tendência clara nos resíduos.
 
-Em geral, todos os três modelos apresentam uma concentração de resíduos razoavelmente próxima de $0$ para valores de vazão previstos abaixo de $1000 m^3/s$, sugerindo que eles conseguem modelar bem as vazões mais comuns e de baixa intensidade. À medida que os valores previstos aumentam, todos os modelos mostram uma dispersão crescente nos resíduos, com picos de vazão sendo mais difíceis de prever corretamente. Contudo, o RF parece ter a maior dispersão, seguido por LR, enquanto que o CB apresentou uma dispersão ligeiramente menor, embora ainda presente.
+Em geral, todos os três modelos apresentam uma concentração de resíduos razoavelmente próxima de $0$ para valores de vazão previstos abaixo de $1000 m^3/s$ - prevalência de $87,4\%$ para resíduos do CB e RF e de $88,22\%$ para LR dentro da faixa $1,5 \pm IQR$ -, sugerindo que eles conseguem modelar bem as vazões mais comuns e de baixa intensidade. À medida que os valores previstos aumentam, todos os modelos mostram uma dispersão crescente nos resíduos, com picos de vazão sendo mais difíceis de prever corretamente. Contudo, o RF parece ter a maior dispersão, seguido por LR, enquanto que o CB apresentou uma dispersão ligeiramente menor, embora ainda presente.
 
 Os três modelos possuem \textit{outliers}, especialmente em previsões mais altas, mostrando que isso é um desafio em dados de vazão de rios, que apresentam picos esporádicos. O RF tem os \textit{outliers} mais extremos, seguidos por LR e, por fim, CB. A crescente dispersão dos resíduos em valores previstos mais altos sugere que \underline{todos os modelos} enfrentaram desafios em prever valores de vazão muito elevados, ainda que tenham acompanhado os picos de vazão.
 
@@ -524,72 +524,62 @@ Toda essa análise demonstrou aspectos importantes acerca dos modelos. Todos apr
 
 \subsection{Rio Grande}
 
-%A análise dos resultados para os três modelos — CatBoost (CB), Regressão Linear (LR) e RandomForest (RF) — aplicados à previsão de vazão no rio Grande oferece uma visão clara de suas respectivas performances ao longo de 365 dias consecutivos. Vou detalhar e comparar os modelos em termos de métricas de desempenho, comportamento visual das previsões, e características dos intervalos de confiança, para chegar a conclusões importantes.
-%
-%### 1. **Métricas de Desempenho**
-%
-%#### **Erro Percentual Médio Absoluto (MAPE)**:
-%- **CB**: 0.12605
-%- **LR**: 0.13353
-%- **RF**: 0.123
-%
-%O **RF** apresentou o menor valor de MAPE, o que indica que esse modelo tem a melhor precisão geral nas previsões, superando ligeiramente o CB e o LR. Contudo, a diferença entre os valores é pequena, sugerindo que todos os três modelos oferecem previsões de boa qualidade.
-%
-%#### **Kling-Gupta Efficiency (KGE)**:
-%- **CB**: 0.76212
-%- **LR**: 0.83365
-%- **RF**: 0.83524
-%
-%Aqui, o **RF** novamente lidera, seguido de muito perto pelo **LR**. Ambos têm valores de KGE superiores ao **CB**, sugerindo que capturam melhor a correlação, viés e variabilidade dos dados de vazão. O **CB** apresenta um valor de KGE menor, indicando uma menor correspondência entre as previsões e os valores observados.
-%
-%#### **Percentual de BIAS (PBIAS)**:
-%- **CB**: -4.44499\%
-%- **LR**: -1.99105\%
-%- **RF**: -2.18939\%
-%
-%O **LR** tem o menor PBIAS, indicando que suas previsões estão mais equilibradas, com menos tendência a subestimar ou superestimar os valores de vazão. O **CB** e o **RF** também têm PBIAS relativamente baixos, mas o **CB** apresenta o maior valor negativo, sugerindo uma subestimação maior comparado aos outros modelos.
-%
-%### 2. **Intervalo de Confiança e Cobertura Empírica**
-%- **CB**: Cobertura empírica de 63.56\%
-%- **LR**: Cobertura empírica de 84.38\%
-%- **RF**: Cobertura empírica de 63.01\%
-%
-%A cobertura empírica do **LR** é significativamente maior do que a dos outros dois modelos, com 84.38\%, o que indica que o intervalo de confiança capturou com mais precisão a variabilidade das observações. Tanto o **CB** quanto o **RF** têm valores de cobertura mais baixos, sugerindo que seus intervalos de confiança são mais estreitos e não conseguem captar toda a variabilidade observada nos dados.
-%
-%### 3. **Comportamento Visual das Previsões**
-%
-%#### **CatBoost (CB)**:
-%- A previsão geral segue de perto a série observada, mas a subestimação das vazões mais altas é evidente. O intervalo de confiança parece ser estreito em momentos de pico, o que pode estar contribuindo para a baixa cobertura empírica.
-%- Os maiores desvios nas previsões ocorrem em períodos de alta vazão (por volta de março e maio de 2023), onde o modelo apresenta dificuldade em acompanhar as flutuações.
-%
-%#### **Regressão Linear (LR)**:
-%- O modelo de Regressão Linear, como esperado, consegue capturar razoavelmente bem as flutuações de vazão, mas tende a subestimar os picos mais extremos.
-%- O intervalo de confiança do **LR** é o mais amplo dos três modelos, resultando em uma cobertura empírica maior. Isso pode refletir uma maior margem de erro nas previsões em momentos de maior incerteza.
-%
-%#### **RandomForest (RF)**:
-%- As previsões do **RF** são visualmente bastante próximas dos valores observados, com o modelo conseguindo capturar bem tanto as vazões mais baixas quanto as mais altas. No entanto, assim como o **CB**, ele tende a subestimar os picos mais intensos.
-%- O intervalo de confiança é mais estreito do que o do **LR**, o que pode explicar a menor cobertura empírica.
-%
-%### 4. **Interpretação dos Resultados**
-%
-%#### **Precisão e Desempenho Geral**:
-%- O **RF** foi o modelo que obteve o melhor equilíbrio entre precisão (MAPE), correlação (KGE) e viés (PBIAS), mostrando um desempenho consistente. No entanto, sua cobertura empírica baixa sugere que o intervalo de confiança não captura toda a incerteza associada aos dados, o que pode ser um ponto a melhorar.
-%- O **LR**, embora tenha um MAPE ligeiramente maior, apresentou o melhor valor de PBIAS, sugerindo que ele tem a menor tendência a viés sistemático entre os modelos. Além disso, sua maior cobertura empírica sugere que ele é mais conservador e captura melhor a variabilidade dos dados.
-%- O **CB**, apesar de ser um modelo poderoso, mostrou desempenho inferior em termos de KGE e PBIAS, o que pode indicar dificuldades em capturar corretamente as variações sazonais e os picos extremos de vazão.
-%
-%#### **Intervalos de Confiança e Cobertura**:
-%- A maior cobertura do intervalo de confiança no **LR** sugere que ele oferece previsões mais robustas em termos de variabilidade, embora isso venha ao custo de uma menor precisão em algumas situações.
-%- Tanto o **CB** quanto o **RF** apresentam intervalos de confiança mais estreitos, resultando em menor cobertura empírica. Isso indica que, embora sejam mais precisos em média, podem não ser tão confiáveis em situações de alta variabilidade.
-%
-%### **Conclusões Importantes**
-%
-%- **RandomForest** se destaca como o melhor modelo geral, com a maior precisão e boa correlação com os dados observados. No entanto, sua menor cobertura empírica sugere que ele pode não capturar adequadamente a incerteza associada a eventos extremos.
-%
-%- **Regressão Linear** tem a vantagem de oferecer previsões balanceadas com o menor viés entre os modelos, além de apresentar o maior intervalo de confiança, o que o torna mais conservador em termos de variabilidade. No entanto, sua menor precisão em relação aos outros dois modelos indica que ele pode ser menos confiável em previsões de curto prazo.
-%
-%- **CatBoost** apresentou um desempenho sólido, mas ficou atrás dos outros dois modelos em termos de correlação e viés. Sua subestimação das vazões mais altas e a menor cobertura empírica indicam que ele pode precisar de ajustes ou maior parametrização para capturar melhor as dinâmicas complexas dos dados.
-%
-%A escolha do modelo pode depender do foco desejado: se a precisão for a prioridade, o **RandomForest** seria a melhor escolha; no entanto, se a captura de variabilidade e redução de viés forem mais importantes, o **Regressão Linear** pode ser mais adequado. O **CatBoost** pode precisar de ajustes para melhorar sua captura de picos de vazão.
+O rio Grande foi o único que a análise foi feita em uma massa reduzida de dados. Conforme já detalhado, apenas dados de setembro de 2020 até dezembro de 2023. Feita esta ressalva, os resultados mostraram-se bons e os modelos foram estáveis quando da análise dos resíduos.
+
+Iniciando pela métrica KGE, aqui, o RF saiu-se melhor, seguido próximo pelo LR - figuras \ref{fig:grande_RF_WFV_ORIG} e \ref{fig:grande_LR_WFV_ORIG}, respectivamente. Ambos tiveram valores superiores ao CB - figura \ref{fig:grande_CB_WFV_ORIG} -, indicando que capturaram melhor correlação, viés e variabilidade dos dados de vazão ao longo do período.
+
+Sobre o erro médio (MAPE), o RF e o CB apresentaram os menores valores e próximos entre si, ou seja, ambos tiveram comportamento semelhante
+
+ Contudo, a diferença entre os valores é pequena, sugerindo que todos os três modelos oferecem previsões de boa qualidade.
+
+#### **Percentual de BIAS (PBIAS)**:
+- **CB**: -4.44499\%
+- **LR**: -1.99105\%
+- **RF**: -2.18939\%
+
+O **LR** tem o menor PBIAS, indicando que suas previsões estão mais equilibradas, com menos tendência a subestimar ou superestimar os valores de vazão. O **CB** e o **RF** também têm PBIAS relativamente baixos, mas o **CB** apresenta o maior valor negativo, sugerindo uma subestimação maior comparado aos outros modelos.
+
+### 2. **Intervalo de Confiança e Cobertura Empírica**
+- **CB**: Cobertura empírica de 63.56\%
+- **LR**: Cobertura empírica de 84.38\%
+- **RF**: Cobertura empírica de 63.01\%
+
+A cobertura empírica do **LR** é significativamente maior do que a dos outros dois modelos, com 84.38\%, o que indica que o intervalo de confiança capturou com mais precisão a variabilidade das observações. Tanto o **CB** quanto o **RF** têm valores de cobertura mais baixos, sugerindo que seus intervalos de confiança são mais estreitos e não conseguem captar toda a variabilidade observada nos dados.
+
+### 3. **Comportamento Visual das Previsões**
+
+#### **CatBoost (CB)**:
+- A previsão geral segue de perto a série observada, mas a subestimação das vazões mais altas é evidente. O intervalo de confiança parece ser estreito em momentos de pico, o que pode estar contribuindo para a baixa cobertura empírica.
+- Os maiores desvios nas previsões ocorrem em períodos de alta vazão (por volta de março e maio de 2023), onde o modelo apresenta dificuldade em acompanhar as flutuações.
+
+#### **Regressão Linear (LR)**:
+- O modelo de Regressão Linear, como esperado, consegue capturar razoavelmente bem as flutuações de vazão, mas tende a subestimar os picos mais extremos.
+- O intervalo de confiança do **LR** é o mais amplo dos três modelos, resultando em uma cobertura empírica maior. Isso pode refletir uma maior margem de erro nas previsões em momentos de maior incerteza.
+
+#### **RandomForest (RF)**:
+- As previsões do **RF** são visualmente bastante próximas dos valores observados, com o modelo conseguindo capturar bem tanto as vazões mais baixas quanto as mais altas. No entanto, assim como o **CB**, ele tende a subestimar os picos mais intensos.
+- O intervalo de confiança é mais estreito do que o do **LR**, o que pode explicar a menor cobertura empírica.
+
+### 4. **Interpretação dos Resultados**
+
+#### **Precisão e Desempenho Geral**:
+- O **RF** foi o modelo que obteve o melhor equilíbrio entre precisão (MAPE), correlação (KGE) e viés (PBIAS), mostrando um desempenho consistente. No entanto, sua cobertura empírica baixa sugere que o intervalo de confiança não captura toda a incerteza associada aos dados, o que pode ser um ponto a melhorar.
+- O **LR**, embora tenha um MAPE ligeiramente maior, apresentou o melhor valor de PBIAS, sugerindo que ele tem a menor tendência a viés sistemático entre os modelos. Além disso, sua maior cobertura empírica sugere que ele é mais conservador e captura melhor a variabilidade dos dados.
+- O **CB**, apesar de ser um modelo poderoso, mostrou desempenho inferior em termos de KGE e PBIAS, o que pode indicar dificuldades em capturar corretamente as variações sazonais e os picos extremos de vazão.
+
+#### **Intervalos de Confiança e Cobertura**:
+- A maior cobertura do intervalo de confiança no **LR** sugere que ele oferece previsões mais robustas em termos de variabilidade, embora isso venha ao custo de uma menor precisão em algumas situações.
+- Tanto o **CB** quanto o **RF** apresentam intervalos de confiança mais estreitos, resultando em menor cobertura empírica. Isso indica que, embora sejam mais precisos em média, podem não ser tão confiáveis em situações de alta variabilidade.
+
+### **Conclusões Importantes**
+
+- **RandomForest** se destaca como o melhor modelo geral, com a maior precisão e boa correlação com os dados observados. No entanto, sua menor cobertura empírica sugere que ele pode não capturar adequadamente a incerteza associada a eventos extremos.
+
+- **Regressão Linear** tem a vantagem de oferecer previsões balanceadas com o menor viés entre os modelos, além de apresentar o maior intervalo de confiança, o que o torna mais conservador em termos de variabilidade. No entanto, sua menor precisão em relação aos outros dois modelos indica que ele pode ser menos confiável em previsões de curto prazo.
+
+- **CatBoost** apresentou um desempenho sólido, mas ficou atrás dos outros dois modelos em termos de correlação e viés. Sua subestimação das vazões mais altas e a menor cobertura empírica indicam que ele pode precisar de ajustes ou maior parametrização para capturar melhor as dinâmicas complexas dos dados.
+
+A escolha do modelo pode depender do foco desejado: se a precisão for a prioridade, o **RandomForest** seria a melhor escolha; no entanto, se a captura de variabilidade e redução de viés forem mais importantes, o **Regressão Linear** pode ser mais adequado. O **CatBoost** pode precisar de ajustes para melhorar sua captura de picos de vazão.
 
 \begin{figure}[!h]
 \centering
