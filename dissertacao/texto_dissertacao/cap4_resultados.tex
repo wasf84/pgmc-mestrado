@@ -524,7 +524,7 @@ Toda essa análise demonstrou aspectos importantes acerca dos modelos. Todos apr
 
 \subsection{Rio Grande}
 
-O rio Grande foi o único que a análise foi feita em uma massa reduzida de dados. Conforme já detalhado, apenas dados de setembro de 2020 até dezembro de 2023. Feita esta ressalva, os resultados mostraram-se bons e os modelos foram estáveis quando da análise dos resíduos.
+O rio Grande foi o único que a análise foi feita em uma massa reduzida de dados. Conforme já detalhado, apenas dados de setembro de 2020 até dezembro de 2023. Feita esta ressalva, os resultados mostraram-se bons e os modelos foram estáveis quando da análise dos resíduos. Perceba que aqui, para o modelo LR, os melhores resultados foram com os dados escalados MinMax e não os dados log-transformados. O comportamento ruidoso da série de vazão e a quantidade reduzida de registros (cerca de 1200) explicam este comportamento diferenciado.
 
 Iniciando pela métrica KGE, aqui, o RF saiu-se melhor, seguido próximo pelo LR - figuras \ref{fig:grande_RF_WFV_ORIG} e \ref{fig:grande_LR_WFV_ORIG}, respectivamente. Ambos tiveram valores superiores ao CB - figura \ref{fig:grande_CB_WFV_ORIG} -, indicando que capturaram melhor correlação, viés e variabilidade dos dados de vazão ao longo do período.
 
@@ -562,24 +562,18 @@ O RF foi o modelo que obteve o melhor equilíbrio entre precisão (MAPE), correl
 \end{figure}
 \clearpage
 
-%A análise dos gráficos de resíduos versus valores previstos para os três modelos — CatBoost (CB), Regressão Linear (LR) e RandomForest (RF) — revela importantes diferenças no comportamento dos resíduos em relação às previsões. Esses gráficos são fundamentais para entender como cada modelo lida com erros em diferentes intervalos de previsão e identificar padrões ou tendências que possam indicar deficiências nos modelos.
-%
-%### 1. **Distribuição Geral dos Resíduos**
-%
-%- **CatBoost (CB)**: 
-%- Os resíduos estão relativamente concentrados em torno de zero para a maioria dos valores previstos. No entanto, à medida que os valores previstos aumentam, os resíduos se tornam mais dispersos, especialmente para previsões acima de 6.000 \(m^3/s\). Isso indica que o CB tende a subestimar ou superestimar mais frequentemente as previsões para valores maiores de vazão.
-%- Existem vários outliers positivos e negativos, com valores de resíduos superiores a 2.000 \(m^3/s\) e inferiores a -1.000 \(m^3/s\), principalmente para as previsões mais altas (acima de 6.000 \(m^3/s\)).
-%- **Conclusão**: O CB lida bem com vazões mais baixas e moderadas, mas apresenta maior dificuldade com picos extremos de vazão, como indicado pela dispersão e pelos outliers em previsões de alta magnitude.
-%
-%- **Regressão Linear (LR)**:
-%- A LR apresenta uma distribuição de resíduos semelhante ao CB em termos de concentração em torno de zero para valores previstos mais baixos. No entanto, a dispersão dos resíduos é maior, e há uma maior quantidade de outliers, especialmente para previsões de valores mais altos (acima de 7.000 \(m^3/s\)).
-%- O modelo parece ter dificuldade em lidar com previsões extremas, como indicado pela alta dispersão dos resíduos tanto para previsões muito baixas quanto para previsões muito altas.
-%- **Conclusão**: A LR tende a apresentar maior variabilidade nos erros, o que sugere que o modelo linear não é capaz de capturar adequadamente as não linearidades presentes em picos de vazão, resultando em uma quantidade significativa de outliers em valores extremos.
-%
-%- **RandomForest (RF)**:
-%- O RF apresenta uma distribuição de resíduos relativamente mais compacta em torno de zero para a maioria dos valores previstos. No entanto, também há uma dispersão crescente à medida que os valores previstos aumentam, semelhante ao CB. Apesar disso, o RF parece lidar um pouco melhor com os valores extremos, já que a quantidade de outliers é menor em comparação com a LR.
-%- Para previsões acima de 6.000 \(m^3/s\), os resíduos começam a se dispersar mais, mas a variabilidade é ligeiramente menor do que no CB e significativamente menor do que na LR.
-%- **Conclusão**: O RF lida melhor com as previsões extremas em comparação com os outros dois modelos, embora ainda apresente uma tendência de dispersão dos resíduos em valores de pico.
+A análise dos gráficos de resíduos \textit{versus} valores previstos para os três modelos revela importantes diferenças no comportamento dos resíduos em relação às previsões. De início é possível notar as largas faixas de valores em que os resíduos se concentraram. O CB teve valores de \textit{lower fence} e \textit{upper fence} de $-1328,72$ e $1492,10$, respectivamente, uma amplitude de $2820$, o que lhe conferiu uma prevalência de $89,32\%$ dos resíduos dentro destes limites. De antemão, o menor valor dentre os modelos. Continuando para o modelo LR, tendo $-1628,38$ para o valor da faixa mínima e $1687,81$ para a máxima - amplitude de $3315$ - teve prevalência de 92,60\% dos resíduos. Isso parece realmente bom, mas com uma ampla faixa assim deixa indicado que o modelo oscilou muito nas previsões realizadas, demostrando incerteza. Finalmente, o RF, ficou ``no meio do caminho'' entre os modelos anteriores. Tendo os valores de $-1422,62$ para \textit{lower fence} e $1531,92$ para \textit{upper fence}, perfazendo uma amplitude de $2953$, o modelo teve prevalência de $90,68\%$ dos resíduos dentro destes limites.
+
+Olhando mais atentamente ao gráfico do modelo CB - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV} -, os resíduos estão relativamente concentrados em torno de $0$ para a maioria dos valores previstos. Contudo, à medida que os valores previstos aumentam, os resíduos se tornam mais dispersos, especialmente para previsões acima de $6000 m^3/s$. O CB tende a subestimar ou superestimar mais frequentemente as previsões para valores elevados de vazão. Existem vários \textit{outliers} positivos e negativos, com valores de resíduos superiores a $2000 m^3/s$ e inferiores a $-1.000 m^3/s$, principalmente para as previsões mais altas, donde pode-se inferir que o CB lidou bem com vazões mais baixas e moderadas, mas apresentou maior dificuldade com picos extremos de vazão, como indicado pela dispersão e pelos \textit{outliers} em previsões de alta magnitude.
+
+O modelo LR apresentou uma distribuição de resíduos semelhante ao CB em termos de concentração em torno de zero para valores previstos mais baixos - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_PREV}. No entanto, a dispersão dos resíduos é maior dentro do intervalo mostrado no gráfico, e há uma maior quantidade de \textit{outliers}, especialmente para previsões de valores extremamente altos (acima de $7000 m^3/s$).
+- O modelo parece ter dificuldade em lidar com previsões extremas, como indicado pela alta dispersão dos resíduos tanto para previsões muito baixas quanto para previsões muito altas.
+- **Conclusão**: A LR tende a apresentar maior variabilidade nos erros, o que sugere que o modelo linear não é capaz de capturar adequadamente as não linearidades presentes em picos de vazão, resultando em uma quantidade significativa de outliers em valores extremos.
+
+- **RandomForest (RF)**:
+- O RF apresenta uma distribuição de resíduos relativamente mais compacta em torno de zero para a maioria dos valores previstos. No entanto, também há uma dispersão crescente à medida que os valores previstos aumentam, semelhante ao CB. Apesar disso, o RF parece lidar um pouco melhor com os valores extremos, já que a quantidade de outliers é menor em comparação com a LR.
+- Para previsões acima de 6.000 \(m^3/s\), os resíduos começam a se dispersar mais, mas a variabilidade é ligeiramente menor do que no CB e significativamente menor do que na LR.
+- **Conclusão**: O RF lida melhor com as previsões extremas em comparação com os outros dois modelos, embora ainda apresente uma tendência de dispersão dos resíduos em valores de pico.
 %
 %### 2. **Tendências nos Resíduos**
 %
