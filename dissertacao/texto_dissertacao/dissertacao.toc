@@ -44,13 +44,13 @@
 \contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{61}{subsection.124}%
 \contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{87}{subsection.157}%
 \contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{100}{subsection.173}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{112}{subsection.189}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{112}{section.190}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{112}{section.191}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{115}{subsection.189}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{118}{section.193}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{118}{section.194}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{113}{chapter.192}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{113}{section.193}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{113}{section.194}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{113}{section.195}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{119}{chapter.195}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{119}{section.196}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{119}{section.197}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{119}{section.198}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{114}{chapter*.197}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{120}{chapter*.200}%
