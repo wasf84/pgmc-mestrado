@@ -1,14 +1,14 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {table}{\numberline {3.1}{\ignorespaces Estações usadas no rio Jequitinhonha \\(fonte: o autor)}}{26}{table.40}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Estações usadas no rio Doce \\(fonte: o autor)}}{26}{table.41}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Estações usadas no rio Grande \\(fonte: o autor)}}{27}{table.42}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Estações usadas no rio São Francisco \\(fonte: o autor)}}{27}{table.43}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Estações de precipitação usadas - final \\(fonte: o autor)}}{34}{table.59}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Variáveis utilizadas - rio Jequitinhonha \\(fonte: o autor)}}{41}{table.75}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Variáveis utilizadas - rio Doce \\(fonte: o autor)}}{41}{table.76}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Variáveis utilizadas - rio Grande \\(fonte: o autor)}}{41}{table.77}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces Variáveis utilizadas - rio São Francisco \\(fonte: o autor)}}{41}{table.78}%
-\contentsline {table}{\numberline {3.10}{\ignorespaces Variáveis acumuladas para as precipitações \\(fonte: o autor)}}{42}{table.79}%
-\contentsline {table}{\numberline {3.11}{\ignorespaces Hiperparâmetros para o modelo CatBoost\\(fonte: o autor)}}{53}{table.105}%
-\contentsline {table}{\numberline {3.12}{\ignorespaces Hiperparâmetros para o modelo RandomForest\\(fonte: o autor)}}{54}{table.107}%
-\contentsline {table}{\numberline {3.13}{\ignorespaces Configurações do computador usado nos experimentos\\(fonte: o autor)}}{60}{table.120}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Estações usadas no rio Jequitinhonha \\(fonte: o autor)}}{25}{table.40}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Estações usadas no rio Doce \\(fonte: o autor)}}{25}{table.41}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Estações usadas no rio Grande \\(fonte: o autor)}}{26}{table.42}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Estações usadas no rio São Francisco \\(fonte: o autor)}}{26}{table.43}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Estações de precipitação usadas - final \\(fonte: o autor)}}{33}{table.59}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Variáveis utilizadas - rio Jequitinhonha \\(fonte: o autor)}}{40}{table.75}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Variáveis utilizadas - rio Doce \\(fonte: o autor)}}{40}{table.76}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Variáveis utilizadas - rio Grande \\(fonte: o autor)}}{40}{table.77}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Variáveis utilizadas - rio São Francisco \\(fonte: o autor)}}{40}{table.78}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces Variáveis acumuladas para as precipitações \\(fonte: o autor)}}{41}{table.79}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces Hiperparâmetros para o modelo CatBoost\\(fonte: o autor)}}{52}{table.105}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces Hiperparâmetros para o modelo RandomForest\\(fonte: o autor)}}{53}{table.107}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces Configurações do computador usado nos experimentos\\(fonte: o autor)}}{59}{table.120}%
