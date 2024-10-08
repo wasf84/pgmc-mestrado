@@ -7,50 +7,50 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}INTRODU\c {C}\~AO}{19}{chapter.16}%
-\contentsline {section}{\numberline {1.1}Contextualização}{20}{section.20}%
-\contentsline {section}{\numberline {1.2}Justificativa}{20}{section.21}%
-\contentsline {section}{\numberline {1.3}Problema de pesquisa}{20}{section.22}%
-\contentsline {section}{\numberline {1.4}Objetivos}{20}{section.23}%
-\contentsline {section}{\numberline {1.5}Estrutura da Dissertação}{20}{section.27}%
+\contentsline {chapter}{\chapternumberline {1}INTRODU\c {C}\~AO}{20}{chapter.16}%
+\contentsline {section}{\numberline {1.1}Contextualização}{21}{section.20}%
+\contentsline {section}{\numberline {1.2}Justificativa}{21}{section.21}%
+\contentsline {section}{\numberline {1.3}Problema de pesquisa}{21}{section.22}%
+\contentsline {section}{\numberline {1.4}Objetivos}{21}{section.23}%
+\contentsline {section}{\numberline {1.5}Estrutura da Dissertação}{21}{section.27}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}REVIS\~AO DA LITERATURA SOBRE O TEMA}{21}{chapter.29}%
-\contentsline {section}{\numberline {2.1}Conceitos Teóricos Fundamentais}{21}{section.30}%
-\contentsline {section}{\numberline {2.2}Estudos Relacionados}{21}{section.31}%
-\contentsline {section}{\numberline {2.3}Aprendizado de Máquina na Hidrologia}{21}{section.32}%
-\contentsline {section}{\numberline {2.4}Dados de Precipitação e Vazão}{21}{section.33}%
-\contentsline {section}{\numberline {2.5}Modelos de Previsão de Vazão}{21}{section.34}%
+\contentsline {chapter}{\chapternumberline {2}REVIS\~AO DA LITERATURA SOBRE O TEMA}{22}{chapter.29}%
+\contentsline {section}{\numberline {2.1}Conceitos Teóricos Fundamentais}{22}{section.30}%
+\contentsline {section}{\numberline {2.2}Estudos Relacionados}{22}{section.31}%
+\contentsline {section}{\numberline {2.3}Aprendizado de Máquina na Hidrologia}{22}{section.32}%
+\contentsline {section}{\numberline {2.4}Dados de Precipitação e Vazão}{22}{section.33}%
+\contentsline {section}{\numberline {2.5}Modelos de Previsão de Vazão}{22}{section.34}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}PROCEDIMENTOS METODOLÓGICOS}{22}{chapter.35}%
-\contentsline {section}{\numberline {3.1}Descrição da Área de Estudo}{22}{section.36}%
-\contentsline {section}{\numberline {3.2}Dados Utilizados}{23}{section.38}%
-\contentsline {section}{\numberline {3.3}Pré-processamento dos Dados}{27}{section.44}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.1}}Rio Jequitinhonha}{28}{subsection.45}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{33}{subsection.55}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{36}{subsection.64}%
-\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{38}{subsection.68}%
-\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{40}{section.74}%
-\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{42}{section.82}%
-\contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{50}{section.99}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive - SN}{50}{subsection.100}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear - LR}{50}{subsection.101}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost - CB}{51}{subsection.104}%
-\contentsline {subsection}{\numberline {\textbf {{3.6}.4}}Floresta Aleatória - RF}{52}{subsection.106}%
-\contentsline {section}{\numberline {3.7}Métricas de Avaliação}{53}{section.108}%
-\contentsline {section}{\numberline {3.8}Modelo proposto}{54}{section.112}%
+\contentsline {chapter}{\chapternumberline {3}PROCEDIMENTOS METODOLÓGICOS}{23}{chapter.35}%
+\contentsline {section}{\numberline {3.1}Descrição da Área de Estudo}{23}{section.36}%
+\contentsline {section}{\numberline {3.2}Dados Utilizados}{24}{section.38}%
+\contentsline {section}{\numberline {3.3}Pré-processamento dos Dados}{28}{section.44}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.1}}Rio Jequitinhonha}{29}{subsection.45}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.2}}Rio Doce}{34}{subsection.55}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.3}}Rio Grande}{37}{subsection.64}%
+\contentsline {subsection}{\numberline {\textbf {{3.3}.4}}Rio São Francisco}{39}{subsection.68}%
+\contentsline {section}{\numberline {3.4}Variáveis Utilizadas}{41}{section.74}%
+\contentsline {section}{\numberline {3.5}Análise exploratória dos dados}{43}{section.82}%
+\contentsline {section}{\numberline {3.6}Modelos de Aprendizado de Máquina}{51}{section.99}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.1}}Seasonal Naive - SN}{51}{subsection.100}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.2}}Regressão Linear - LR}{51}{subsection.101}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.3}}CatBoost - CB}{52}{subsection.104}%
+\contentsline {subsection}{\numberline {\textbf {{3.6}.4}}Floresta Aleatória - RF}{53}{subsection.106}%
+\contentsline {section}{\numberline {3.7}Métricas de Avaliação}{54}{section.108}%
+\contentsline {section}{\numberline {3.8}Modelo proposto}{55}{section.112}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{61}{chapter.122}%
-\contentsline {section}{\numberline {4.1}Desempenho dos modelos}{61}{section.123}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{61}{subsection.124}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{87}{subsection.157}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{100}{subsection.173}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{113}{subsection.189}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{117}{section.193}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{117}{section.194}%
+\contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{62}{chapter.122}%
+\contentsline {section}{\numberline {4.1}Desempenho dos modelos}{62}{section.123}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{62}{subsection.124}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{88}{subsection.157}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{101}{subsection.173}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{114}{subsection.189}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{120}{section.196}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{120}{section.197}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{118}{chapter.195}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{118}{section.196}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{118}{section.197}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{118}{section.198}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{121}{chapter.198}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{121}{section.199}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{121}{section.200}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{121}{section.201}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{119}{chapter*.200}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{122}{chapter*.203}%

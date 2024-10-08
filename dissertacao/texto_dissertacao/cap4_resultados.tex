@@ -722,17 +722,42 @@ O LR destacou-se como o modelo com maior eficiência na replicação do comporta
 \end{figure}
 \clearpage
 
-A análise dos gráficos de dispersão dos resíduos em relação aos valores previstos para o rio São Francisco, com base nos modelos CatBoost (CB), Regressão Linear (LR) e RandomForest (RF), revelou padrões distintos no comportamento dos resíduos, fornecendo insights importantes sobre o desempenho de cada modelo.
+A análise dos gráficos de dispersão dos resíduos em relação aos valores previstos revelou padrões distintos no comportamento dos resíduos, fornecendo entendimentos importantes sobre o desempenho de cada modelo.
 
-No modelo CatBoost, a maioria dos resíduos concentrou-se dentro da faixa delimitada pelo intervalo interquartílico (IQR), com poucos pontos ultrapassando os limites superiores e inferiores. Observou-se uma leve tendência de aumento da variabilidade dos resíduos conforme os valores previstos aumentavam, sugerindo que o modelo enfrentava maior dificuldade em capturar corretamente os picos de vazão. No entanto, de maneira geral, os resíduos estavam bem distribuídos em torno da linha de referência zero, indicando um bom ajuste global. A presença de alguns outliers, ainda que em menor quantidade, reforçou a estabilidade do CB, especialmente para vazões mais moderadas.
+No modelo CB, a maioria dos resíduos concentrou-se dentro da faixa delimitada por $\pm 1,5\times IQR$, com pontos ultrapassando mais o limite superior (\textit{upper fence}) do que o inferior (\textit{lower fence}). Isso remete à subestimação nas previsões, como apontando na métrica PBIAS, vista anteriormente. Nota-se uma tendência de aumento da variabilidade dos resíduos conforme os valores previstos aumentavam, sugerindo que o modelo enfrenta maior dificuldade em capturar corretamente vazões extremas. No entanto, de maneira geral, os resíduos ficaram bem distribuídos em torno da linha de referência, o que pode ser encarado como um bom ajuste global. Mesmo que tenha havido \textit{outliers}, o modelo mostrou-se estável, especialmente para vazões moderadas - figura \ref{fig:francisco_CB_WFV_ORIG_RESID_x_PREV}.
 
-Em contrapartida, a Regressão Linear apresentou um comportamento semelhante em termos de distribuição dos resíduos, com uma leve concentração em torno de zero para a maioria dos valores previstos. Contudo, identificou-se uma maior quantidade de resíduos dispersos, indicando uma variação mais ampla dos erros. Essa dispersão sugeriu que o modelo linear possuía limitações em capturar a complexidade dos dados, especialmente para valores de vazão mais elevados, onde o modelo tendia a subestimar ou superestimar os valores observados com maior frequência. Embora a LR apresentasse uma cobertura mais ampla dos intervalos de previsão, a quantidade de resíduos fora do intervalo interquartílico (IQR) foi superior à do CatBoost, indicando uma menor robustez.
+O LR apresentou uma leve concentração em torno de $0$ para a grande parte dos valores previstos.
+
+Contudo, identificou-se uma maior quantidade de resíduos dispersos, indicando uma variação mais ampla dos erros. Essa dispersão sugeriu que o modelo linear possuía limitações em capturar a complexidade dos dados, especialmente para valores de vazão mais elevados, onde o modelo tendia a subestimar ou superestimar os valores observados com maior frequência. Embora a LR apresentasse uma cobertura mais ampla dos intervalos de previsão, a quantidade de resíduos fora do intervalo interquartílico (IQR) foi superior à do CatBoost, indicando uma menor robustez.
 
 O modelo RandomForest, por sua vez, demonstrou uma distribuição de resíduos bastante controlada, semelhante à do CatBoost, com a maioria dos resíduos concentrados dentro da faixa de ±100 m³/s em torno da linha de referência zero. O RF destacou-se por apresentar menos outliers, evidenciando uma maior estabilidade, principalmente para previsões de menor magnitude. No entanto, assim como nos outros modelos, foi possível notar uma dispersão um pouco maior à medida que os valores previstos aumentavam, o que indicou que o modelo enfrentava desafios em prever picos de vazão com precisão absoluta.
 
 Em termos comparativos, o modelo CatBoost apresentou um bom equilíbrio entre variabilidade e precisão, com resíduos bem distribuídos, mas com alguns outliers presentes, especialmente para valores previstos maiores. A Regressão Linear, embora mostrasse uma boa cobertura de intervalo, exibiu maior dispersão nos resíduos e uma quantidade mais expressiva de outliers, refletindo suas limitações em prever vazões em cenários mais extremos. Já o RandomForest mostrou-se o mais estável dos três modelos, com uma boa concentração de resíduos próximos a zero e menos outliers, sugerindo que ele lidava melhor com a variabilidade das vazões ao longo do tempo.
 
 Concluiu-se que o RandomForest parecia ser o modelo mais robusto e estável, especialmente no que diz respeito à captura de picos de vazão com menos outliers. O CatBoost também demonstrou um bom desempenho, mas com uma leve tendência a apresentar maior variabilidade para picos de vazão, o que poderia requerer ajustes adicionais. A Regressão Linear, por outro lado, apresentou limitações significativas em relação à complexidade dos dados, com uma maior dispersão dos resíduos e mais outliers, tornando-se o modelo menos indicado para prever vazões de maneira precisa e consistente.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
+\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_CB_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_PREV.png}
+\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_LR_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
+\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_RF_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+\clearpage
+
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
