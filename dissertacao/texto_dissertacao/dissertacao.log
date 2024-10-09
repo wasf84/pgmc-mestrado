@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.16)  8 OCT 2024 11:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  8 OCT 2024 20:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 105.
+(babel)             (\language24). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 108.
+(babel)             (\language24). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language46). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -3087,13 +3087,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 30610 strings out of 478287
- 578830 string characters out of 5849289
- 925846 words of memory out of 5000000
+ 30608 strings out of 478287
+ 578806 string characters out of 5849289
+ 925847 words of memory out of 5000000
  47537 multiletter control sequences out of 15000+600000
- 544601 words of font info for 208 fonts, out of 8000000 for 9000
+ 544472 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,15n,94p,2377b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,15n,94p,2433b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -3108,7 +3108,7 @@ lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on dissertacao.pdf (119 pages, 6135518 bytes).
+Output written on dissertacao.pdf (119 pages, 6135701 bytes).
 PDF statistics:
  1808 PDF objects out of 2073 (max. 8388607)
  1414 compressed objects within 15 object streams
