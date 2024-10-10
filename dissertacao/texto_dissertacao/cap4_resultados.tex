@@ -15,10 +15,10 @@ Com a MAPE extremamente elevada, de $150\%$, os resultados indicaram um viés si
 Considerando o desempenho insatisfatório do modelo SN, a análise foi encerrada neste ponto, sem proceder com a avaliação dos resíduos ou a análise da importância das variáveis. O modelo foi incluído apenas para fins comparativos. A análise mais aprofundada será dedicada aos modelos mais complexos, que apresentaram desempenho superior.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png}
-\caption{Resultado do SeasonalNaive no teste \textit{Walk-Forward Validation}\\(fonte: o autor)}
-\label{fig:jequiti_SN_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png}
+	\caption{Resultado do SeasonalNaive no teste \textit{Walk-Forward Validation}\\(fonte: o autor)}
+	\label{fig:jequiti_SN_WFV_ORIG}
 \end{figure}
 
 %\begin{table}[!h]
@@ -43,17 +43,17 @@ Considerando a qualidade dos intervalos de previsão, a cobertura observada de $
 É importante destacar que os intervalos de previsão são calculados a partir dos erros do modelo durante a etapa de treinamento (\textit{bootstrap in-sample residuals}). Para uma análise mais aprofundada desse comportamento, é necessário examinar os dados anteriores a $2023$. A figura \ref{fig:jequiti_LR_final_2022_detalhe} revela que, nos últimos dias de $2022$, houve observações significativamente elevadas. É provável que os erros associados a esse período mais próximo tenham influenciado a amplitude dos intervalos de previsão subsequentes. Essa interpretação é suportada pela observação de que o comportamento ao final de $2023$ foi mais estável, possivelmente devido à ausência de eventos ruidosos imediatamente anteriores - meses de maio a agosto.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_LOG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/LR_final_2022_detalhe.png}
-\caption{Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}
-\label{fig:jequiti_LR_final_2022_detalhe}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/LR_final_2022_detalhe.png}
+	\caption{Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_final_2022_detalhe}
 \end{figure}
 
 %A análise de \textit{delay} mostrou um resultado médio de $-0,87$. Se pegar a série prevista pelo modelo e comprimir linearmente em $-0,87$, ambas as sequências serão idênticas, ou seja, a série prevista será a série observada. Considerando que os dados estão numa frequência diária, isso pode ser interpretado como o modelo atrasando a previsão em $0,87$ dias, o que seria menos de 24 horas entre o evento ocorrer e ele ser percebido na previsão. Afirmar que o modelo está atrasado 20,88 horas, talvez, não convirja com a realidade, por isso que se considerar o desvio-padrão no resultado, confere mais coerência, pois indicaria que o atraso percebido no fenômeno é de cerca de um dia e meio, dois dias.
@@ -72,24 +72,24 @@ A área sombreada demarcada na figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}
 Nesta mesma figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO} vê-se como os resíduos estão dispersos ao longo do tempo. Isso ajuda a compreender a estabilidade do modelo. No início do ano e final do ano, exatamente quando os eventos de chuva mais ocorrem, o comportamento geral de vazões torna-se incerto e o modelo tende a se espalhar mais. No início do ano, como discutido anteriormente, pode ser que devido às vazões elevadas do final do ano de $2022$, isso tenha causado ruídos em excesso na previsão do modelo. Quando houve vazões mais moderadas, os resíduos foram também mais moderados, como pode-se observar no final do ano de 2023, em que a influência imediata é o meio do ano, meses de inverno, e início de primavera. Quando da estação de baixa dos rios, os meses de outono e inverno, os resíduos estiveram bem alinhados em torno do $0$. Para encerrar essa análise, a figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_CURVA_NORMAL} apresenta que os resíduos estão próximos da normalidade quanto à distribuição destes em torno de $0$, com uma assimetria de $0,48$. O valor positivo para assimetria sugere que houve casos em que o modelo subestimou os valores na previsão (existe uma cauda à direita do centro dos dados), o que combina com a métrica PBIAS. Mas cabe destacar que os resíduos não estão significativamente desviados em nenhuma direção, apresentam distribuição concentrada em torno de $0$ e este é um comportamento desejado. A análise da função de autocorrelação (ACF) está na figura \ref{fig:jequiti_LR_WFV_LOG_RESID_ACF} e aqui é analisado se existe independência ou dependência temporal entre os resíduos. A área sombreada representa a faixa ideal de permanência dos resíduos, onde se espera que a maioria dos resíduos esteja concentrada caso não haja autocorrelação significativa. Algumas \textit{lags} estão fora destes limites (picos), mais precisamente, \textit{lags} que estão mais próximas da \textit{lag} de referência. Este comportamento indica que o modelo pode ser refinado para melhor capturar dinâmicas temporais, possivelmente incorporando termos de tendência. Mas no aspecto geral, está bom o comportamento dos resíduos. Para melhorar os resíduos com valores tão elevados um tratamento de \textit{outliers} pode verter bons resultados.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png}
-\caption{Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png}
+	\caption{Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_LOG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_ACF.png}
-\caption{Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_LOG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_ACF.png}
+	\caption{Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_LOG_RESID_ACF}
 \end{figure}
 \clearpage
 
@@ -99,47 +99,45 @@ Dito isso, o resultado para os dados originais ficou levemente inferior ao model
 
 Ainda que tenha apresentado uma KGE inferior, bem como nas demais métricas, quando se observa o comportamento dos resíduos, houve uma prevalência de $91,78\%$ dos resíduos na área sombreada no gráfico \ref{fig:jequiti_LR_WFV_ORIG_RESID_x_TEMPO}. Isso significa que houve menos \textit{outliers} nas previsões. Pode-se verificar que no início do ano menos \textit{outliers} estão presentes, ainda que na porção final do ano tenha aparecido alguns a mais que não foram vistos na análise anterior (figura \ref{fig:jequiti_LR_WFV_LOG_RESID_x_TEMPO}). Para os dados originais, ainda que nas métricas pareça piorado, pela análise dos resíduos o modelo mostrou boa estabilidade nas previsões pontuais. Quando se considera os intervalos de previsão, precisa considerar com parcimônia, visto que o crescimento dos valores superioes (hi-95) e valores de vazão $0 m^3/s$ na faixa inferior (lo-95) indicam instabilidade de longo prazo.
 
-%Para a análise de \textit{delay}, o mesmo feito anteriormente serve para este: aplicar o valor do desvio-padrão parece ser mais coerente com o comportamento real, sendo que aqui houve uma piora significativa no atraso, passando para mais de 3 dias ($3,78$).
-
-Caminhando para o fim, o histograma e curva-normal apresentou uma assimetria consideravelmente superior ($3,37$) ao resultado de antes, com presença de cauda longa à direita.(figura \ref{fig:jequiti_LR_WFV_SCLD_RESID_x_CURVA_NORMAL}) O modelo teve tendência de subestimar os resultados, o que é verificável pelo PBIAS. Na figura \ref{fig:jequiti_LR_WFV_SCLD_RESID_ACF} é possível perceber picos fora do intervalo de confiança. Depois de cerca de 10 lags, os pontos de autocorrelação ficam dentro desta faixa, indicando que a maioria dos resíduos após esse ponto não está significativamente correlacionada com valores anteriores. Este pontos vermelhos no início do gráfico indicam que pode haver correlações significativas entre os resíduos com pequenos \textit{lags}, o que sugere, nos primeiros períodos, que os resíduos estão correlacionados com os valores anteriores. Isso é indicativo de que o modelo pode não estar capturando totalmente a estrutura temporal dos dados. Pode ser necessário ajustar o modelo, adicionar variáveis que expliquem essa dependência temporal, ainda que variáveis de valor acumulado tenham sido inseridas exatamente na intenção de capturar tais comportamentos. Mas claramente precisaria aprimorar.
+Caminhando para o fim, o histograma e curva-normal apresentou uma assimetria consideravelmente superior ($3,37$) ao resultado de antes, com presença de cauda longa à direita.(figura \ref{fig:jequiti_LR_WFV_ORIG_RESID_x_CURVA_NORMAL}) O modelo teve tendência de subestimar os resultados, o que é verificável pelo PBIAS. Na figura \ref{fig:jequiti_LR_WFV_ORIG_RESID_ACF} é possível perceber picos fora do intervalo de confiança. Depois de cerca de 10 lags, os pontos de autocorrelação ficam dentro desta faixa, indicando que a maioria dos resíduos após esse ponto não está significativamente correlacionada com valores anteriores. Este pontos vermelhos no início do gráfico indicam que pode haver correlações significativas entre os resíduos com pequenos \textit{lags}, o que sugere, nos primeiros períodos, que os resíduos estão correlacionados com os valores anteriores. Isso é indicativo de que o modelo pode não estar capturando totalmente a estrutura temporal dos dados. Pode ser necessário ajustar o modelo, adicionar variáveis que expliquem essa dependência temporal, ainda que variáveis de valor acumulado tenham sido inseridas exatamente na intenção de capturar tais comportamentos. Mas claramente precisaria aprimorar.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_ORIG}
+\end{figure}
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:jequiti_LR_WFV_ORIG_RESID_x_PREV}
+%\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_ORIG_RESID_x_PREV}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_ORIG_RESID_x_TEMPO}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_ORIG_RESID_x_CURVA_NORMAL}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_LR_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_LR_WFV_ORIG_RESID_ACF}
 \end{figure}
 \clearpage
 
-Passando agora à análise dos modelos principais deste trabalho, cujos resultados serão comparados ao modelo de referência, optou-se por realizar a análise de forma concomitante, uma vez que ambos os modelos apresentaram comportamentos similares, embora o modelo RandomForest tenha demonstrado um desempenho superior ao CatBoost.
+Passando agora à análise dos modelos principais deste trabalho, cujos resultados serão comparados ao modelo de referência, optou-se por realizar a análise de forma concomitante, uma vez que ambos os modelos apresentaram comportamentos similares, embora o modelo RandomForest tenha demonstrado um desempenho superior ao CB.
 
 Na métrica KGE, comparando-se os resultados com o comportamento ilustrado na figura \ref{fig:jequiti_LR_WFV_LOG}, observa-se que ambos os modelos não conseguiram superar o modelo de referência, com destaque para o CB, que apresentou uma performance consideravelmente inferior. No entanto, ao considerar a precisão percentual média, avaliada pela métrica MAPE, ambos os modelos baseados em árvores apresentaram melhorias em relação ao modelo de referência, evidenciando um desempenho superior em termos de erro percentual médio.
 
@@ -149,155 +147,152 @@ Observa-se que tanto o CB quanto o RF apresentaram intervalos de previsão menos
 
 Pode-se inferir que os modelos CB e RF conseguiram equilibrar a previsão pontual, indicada pela MAPE de $0,12$, com os intervalos de previsão. Um ajuste de hiperparâmetros poderia potencialmente melhorar esse desempenho. Em relação ao PBIAS, ambos os modelos apresentaram um desvio sistemático, subestimando os valores previstos.
 
-%No que diz respeito ao \textit{delay}, todos os modelos, incluindo o LR, apresentaram um comportamento semelhante, com um atraso de aproximadamente 1 a 2 dias para que um evento na série observada fosse captado nas previsões. Essa análise leva em consideração o desvio-padrão.
-
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_LOG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_LOG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_LOG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_LOG}
 \end{figure}
 \clearpage
 
 Os resíduos em modelos não-lineares podem ser mais difíceis de interpretar porque esses modelos capturam interações e padrões complexos. Porém, mesmo assim, detectar padrões sistemáticos nos resíduos ajuda a elucidar se os modelos conseguiram capturar todas as nuances dos dados.
 
-Em ambos os casos, não houve prevalência de comportamento anormal para os resíduos. Estiveram aleatoriamente distribuídos em torno de $0$, com uma menção importante para a maior dispersão de possíveis valores \textit{outliers} para o modelo CB à medida que as medições aumentaram.(figura \ref{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}).
+%Em ambos os casos, não houve prevalência de comportamento anormal para os resíduos. Estiveram aleatoriamente distribuídos em torno de $0$, com uma menção importante para a maior dispersão de possíveis valores \textit{outliers} para o modelo CB à medida que as medições aumentaram.(figura \ref{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}).
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:jequiti_RF_WFV_LOG_RESID_x_PREV}
+%\end{figure}
+%\clearpage
+
+A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, com resíduos de valor elevado mais presentes no início da série - figuras \ref{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO} e \ref{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}. Aqui vale a interpretação usada para o modelo de referência, de que os valores elevados aferidos em final de $2022$ possam ter interferido. Houve uma prevalência de $84,11\%$ e $86,03\%$, respectivamente CB e RF, dos resíduos na área sombreada, correspondente a $\pm 1,5 \times IQR$, que é onde se espera que todos os resíduos estejam - \textit{upper fence} e \textit{lower fence} do boxplot. Uma leve melhor prevalência para o modelo RF, que pode ser vista também em menos dispersão de resíduos para fora dos limites da área sombreada no início do ano.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_LOG_RESID_x_PREV}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_LOG_RESID_x_PREV}
-\end{figure}
-\clearpage
-
-A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, com resíduos de valor elevado mais presentes no início da série. (figuras \ref{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO} \ref{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}) Aqui vale a interpretação usada para o modelo de referência, de que os valores elevados aferidos em final de 2022 possam ter interferido. Houve uma prevalência de $84,11\%$ e $86,03\%$, respectivamente CB e RF, dos resíduos na área sombreada, correspondente à área de erro aceitável. Uma leve melhor prevalência para o modelo RF, que pode ser vista também em menos dispersão de resíduos para fora dos limites da área sombreada no início do ano.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_LOG_RESID_x_TEMPO}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}
-\end{figure}
-\clearpage
-
-Em termos de assimetria da distribuição dos resíduos, ambos modelos comportaram-se iguais, com assimetria positiva indicando cauda à direita. Com valores de $2,56$ para o modelo CB e $2,54$ para o RF, isso mostra tendência de subestimar as previsões (visto no PBIAS de ambos os modelos).
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_LOG_RESID_x_CURVA_NORMAL}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_LOG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_LOG_RESID_x_TEMPO}
 \end{figure}
 \clearpage
 
-Observando os gráficos de autocorrelação dos modelos, houve um comportamento parecido nas \textit{lags} iniciais. Nas primeiras \textit{lags}, os gráficos mostram pontos de autocorrelação que ultrapassam a faixa de confiança (sombreada em azul), indicando que os resíduos possuem dependência temporal significativa nos primeiros períodos. Esse padrão sugere que os modelos não conseguiram capturar totalmente a estrutura temporal dos dados, resultando em resíduos correlacionados em curtos períodos de tempo. Uma possível explicação pode ser a presença de componentes sazonais ou padrões de curto prazo que não foram completamente modelados.
-
-A partir de aproximadamente a \textit{lag} 20, a autocorrelação dos resíduos cai para valores próximos de zero e permanece dentro da faixa de confiança para as \textit{lags} seguintes até a \textit{lag} 365. Este é um comportamento esperado para um bom modelo, onde os resíduos devem ser independentes e distribuídos aleatoriamente ao longo do tempo. A presença de resíduos com baixa autocorrelação em \textit{lags} maiores indica que, em períodos mais longos, os modelos não apresentam problemas de dependência temporal.
+Em termos de assimetria da distribuição dos resíduos, ambos modelos comportaram-se iguais, com assimetria positiva indicando cauda à direita. Com valores de $2,56$ para o modelo CB e $2,54$ para o RF, isso mostra tendência de subestimar as previsões, como visto anteriormente pelo PBIAS de ambos os modelos.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_LOG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_LOG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_LOG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_LOG_RESID_x_CURVA_NORMAL}
 \end{figure}
 \clearpage
 
-Neste momento será apresentado o resultado dos modelos CB e RF para os dados em sua escala original, sem a log-transformação. Recapitulando: a log-transformação lineariza os dados e para o modelo LR ela realmente resultou em melhora do comportamento do modelo. Esperava-se que o mesmo pudesse, eventualmente, ocorrer com estes modelos não-lineares, pois simplificaria as relações entre as variáveis. Porém, aconteceu o oposto. Permanecer com os dados originais, \textit{in natura} por assim dizer, foi o que fez ambos se comportarem melhor.
+Observando os gráficos de autocorrelação dos modelos, houve um comportamento parecido nas \textit{lags} iniciais. Nas primeiras \textit{lags}, os gráficos mostram pontos de autocorrelação que ultrapassam a faixa de confiança - sombreada em azul -, indicando que os resíduos possuem dependência temporal significativa nos primeiros períodos. Esse padrão sugere que os modelos não conseguiram capturar totalmente a estrutura temporal dos dados, resultando em resíduos correlacionados em curtos períodos de tempo. Uma possível explicação pode ser a presença de componentes sazonais ou padrões de curto prazo que não foram completamente modelados e capturados pelos modelos.
+
+A partir de aproximadamente a \textit{lag} $20$, a autocorrelação dos resíduos cai para valores próximos de $0$ e permanece dentro da faixa de confiança para as \textit{lags} seguintes até a \textit{lag} $365$. Este é um comportamento esperado para um bom modelo, onde os resíduos devem ser independentes e distribuídos aleatoriamente ao longo do tempo. A presença de resíduos com baixa autocorrelação em \textit{lags} maiores indica que, em períodos mais longos, os modelos não apresentam problemas de dependência temporal.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_LOG_RESID_ACF}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_LOG_RESID_ACF}
+\end{figure}
+\clearpage
+
+Neste momento será apresentado o resultado dos modelos CB e RF para os dados em sua escala original, sem a log-transformação. Recapitulando: a log-transformação lineariza os dados e para o modelo LR ela realmente resultou em melhora dos resultados. Esperava-se que o mesmo pudesse, eventualmente, ocorrer com estes modelos não-lineares, pois simplificaria as relações entre as variáveis. Porém, aconteceu o oposto. Permanecer com os dados originais, sem nenhum tipo de transformação, foi o que fez ambos se comportarem melhor.
 
 Veja o comportamento do \textit{walk-forward validation}. Houve melhoras em todas métricas nos dois modelos, com exceção para o modelo RF, que a MAPE piorou com os dados originais em relação aos dados log-transformados, ficando $1,4\%$ acima. É ínfimo, porém não descartável. Mas a KGE, uma métrica mais robusta, melhorou bastante entre o resultado anterior e este resultado em tela. Aplicando os modelos CB e RF nos dados originais, melhorou também o viés sistemático (PBIAS). O modelo CB continuou mostrando tendência de subestimar as previsões mas aqui o modelo RF inverteu, passando a apresentar tendência de superestimar as previsões. A cobertura empírica dos intervalos de previsão melhoraram, sendo o CB pouco mais de $1\%$ melhor, mas o RF melhorou mais de $4\%$ nos cálculos dos intervalos. À respeito dos intervalos de previsão, os modelos mostraram tendência de aumento das faixas ao longo do ano. Diferentemente da análise log-transformada, aqui os modelos parecem ter demostrado incerteza quanto aos erros calculados em eventos anteriores, ainda que no início do ano, para ambos, pareça ter ficado mais estável o cálculo dos intervalos.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_ORIG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_ORIG}
-\end{figure}
-\clearpage
-
-Observa-se que a maior parte dos resíduos está concentrada em torno da linha de referência $y=0$, o que indica que os modelos CatBoost foram capazes de produzir previsões relativamente boas para a maioria dos dados. Ambos apresentaram também valores extremos, \textit{outliers}, e essa presença pode indicar que os modelos enfrentaram dificuldades em prever corretamente alguns valores mais extremos, resultando em erros maiores para certas previsões. O modelo RF apresenta uma distribuição de resíduos um pouco mais ampla que o CB, com alguns pontos chegando a resíduos superiores a $400$ e abaixo de $-300$.
-
-Ambos os modelos apresentaram bom desempenho geral, com a maioria dos resíduos concentrados em torno da linha de $y=0$, indicando previsões razoáveis. No entanto, também apresentaram \textit{outliers} e tendência dos resíduos aumentarem em magnitude para previsões maiores. Isso indica que tanto o modelo CB quanto o RF podem enfrentar dificuldades em prever valores extremos com precisão, um comportamento já demonstrado anteriormente.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_ORIG_RESID_x_PREV}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_ORIG_RESID_x_PREV}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_ORIG}
 \end{figure}
 \clearpage
 
-A maior parte dos resíduos está concentrada em torno da linha de referência $y=0$, indicando que os modelos mantiveram um desempenho geral estável ao longo do tempo. Porém, há \textit{outliers} significativos no início de 2023 (valores de resíduos acima de $400$ e abaixo de $-400$ para o CB e acima de $500$ e abaixo de $-300$ para o RF). Esses outliers indicam que, durante o início do ano, ambos tiveram dificuldades em prever alguns eventos específicos, resultando em erros grandes.
+%Observa-se que a maior parte dos resíduos está concentrada em torno da linha de referência $y=0$, o que indica que os modelos CatBoost foram capazes de produzir previsões relativamente boas para a maioria dos dados. Ambos apresentaram também valores extremos, \textit{outliers}, e essa presença pode indicar que os modelos enfrentaram dificuldades em prever corretamente alguns valores mais extremos, resultando em erros maiores para certas previsões. O modelo RF apresenta uma distribuição de resíduos um pouco mais ampla que o CB, com alguns pontos chegando a resíduos superiores a $400$ e abaixo de $-300$.
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:jequiti_CB_WFV_ORIG_RESID_x_PREV}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:jequiti_RF_WFV_ORIG_RESID_x_PREV}
+%\end{figure}
+%\clearpage
 
-Para o modelo CB, após fevereiro de 2023 (março para o modelo RF), os resíduos parecem estar melhor distribuídos dentro da faixa delimitada pelas faixas, com menos \textit{outliers} extremos, sugerindo que os modelos ajustaram-se melhor aos dados ao longo do tempo.
+A maior parte dos resíduos está concentrada em torno da linha de referência $y=0$, indicando que os modelos mantiveram um desempenho geral estável ao longo do tempo. Porém, há \textit{outliers} significativos no início de $2023$ - valores de resíduos acima de $400$ e abaixo de $-400$ para o CB e acima de $500$ e abaixo de $-300$ para o RF. Esses \textit{outliers} ocorreram em períodos de vazões mais elevadas durante o início do ano, momentos de maiores picos de vazão, indicando que ambos tiveram dificuldades em prever alguns eventos específicos, resultando em erros grandes.
 
-Em geral, ambos os modelos apresentaram um padrão de melhora ao longo do ano, com resíduos mais bem distribuídos após o primeiro trimestre de 2023. No entanto, os \textit{outliers} iniciais indicam que os modelos podem ter dificuldades com eventos específicos de sazonalidade ou anomalias no início do ano. O CB parece ter uma leve vantagem em termos de previsões mais consistentes ao longo do tempo (valores menos extremos). Ajustes de hiperparâmetros podem ajudar os modelos nos períodos mais desafiadores do ano, como no início do ano, ou adição de componentes de tendência e sazonalidade localizada.
+Para o modelo CB, após fevereiro de $2023$ e março para o modelo RF, os resíduos parecem estar melhor distribuídos dentro da área delimitada pelas faixas, com menos \textit{outliers}, sugerindo que os modelos ajustaram-se melhor aos dados ao longo do tempo e permaneceram estáveis.
+
+Em geral, ambos os modelos apresentaram um padrão de melhora ao longo do ano, com resíduos mais bem distribuídos após o primeiro trimestre de $2023$. No entanto, os \textit{outliers} iniciais indicam que os modelos podem ter dificuldades com eventos específicos de sazonalidade ou anomalias no início do ano. O CB parece ter uma leve vantagem em termos de previsões mais consistentes ao longo do tempo, com valores menos extremos. Ajustes de hiperparâmetros podem ajudar os modelos nos períodos mais desafiadores do ano, como no início do ano, ou adição de componentes de tendência e sazonalidade localizada.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 \clearpage
 
 A distribuição dos resíduos do modelo CB (figura \ref{fig:jequiti_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}) apresenta uma assimetria positiva de $1,33$, o que indica que a cauda direita da distribuição é mais longa que a esquerda. Isso significa que há um maior número de resíduos positivos mais elevados (erros positivos grandes) do que negativos. A curva normal ajustada (em vermelho) não se ajusta perfeitamente à distribuição observada, especialmente nas caudas, o que indica que a distribuição dos resíduos não é perfeitamente normal. Esse comportamento é esperado, dado o valor da assimetria. A maior parte dos resíduos está concentrada em torno de $y=0$, com uma contagem elevada próxima a zero. Isso é um bom sinal, pois sugere que o modelo fez previsões razoavelmente precisas para a maior parte dos dados.
+
 No entanto, a presença de resíduos elevados tanto na cauda direita (acima de $200$) quanto na cauda esquerda (abaixo de $-100$) indica que o modelo teve dificuldades em prever com precisão alguns valores mais extremos. A distribuição assimétrica com cauda longa à direita indica que o modelo CB teve mais dificuldades com previsões que resultaram em grandes erros positivos. Esses erros podem ser atribuídos a eventos atípicos ou extremos nos dados, que o modelo não conseguiu prever corretamente.
 
 A distribuição dos resíduos do modelo RF (\ref{fig:jequiti_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}) apresenta uma assimetria positiva de $0,49$, o que indica que a cauda direita é um pouco mais longa, mas a assimetria é menos pronunciada do que no modelo CB. A curva normal ajustada se aproxima mais da distribuição observada do que no gráfico do CB, o que sugere que os resíduos do RF seguem uma distribuição mais próxima de uma normal, apesar da pequena assimetria positiva. Assim como no gráfico do CB, a maior parte dos resíduos está concentrada em torno de zero, com a maioria das previsões sendo razoavelmente precisas. No entanto, o RF apresenta uma distribuição ligeiramente mais equilibrada, com menos resíduos extremos do que o CB. As caudas, tanto à esquerda quanto à direita, são menos pronunciadas, com menos resíduos extremos (acima de $200$ e abaixo de $-200$). Isso indica que o RF teve um desempenho mais estável e com menos erros em eventos extremos.
@@ -305,17 +300,17 @@ A distribuição dos resíduos do modelo RF (\ref{fig:jequiti_RF_WFV_ORIG_RESID_
 O RF tem um comportamento de resíduos mais próximo de uma distribuição normal, com menos assimetria e menos resíduos extremos. Isso indica que o modelo é mais estável e robusto em termos de previsões para a maioria dos dados. O CB mostrou maior sensibilidade a eventos extremos, com resíduos mais dispersos e uma assimetria maior, indicando que o modelo enfrenta dificuldades em capturar corretamente os valores mais extremos, resultando em erros maiores. Mas em geral, ambos os modelos apresentam uma boa concentração de resíduos em torno de zero, mostrando que a maioria das previsões está correta, ainda que o CB tenha se apresentado mais suscetível a \textit{outliers}.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 \clearpage
 
@@ -328,17 +323,17 @@ Ambos os modelos CB e RF apresentam autocorrelações significativas nas primeir
 Para \textit{lags} maiores (acima de 20), tanto o CB quanto o RF apresentaram resíduos que se comportaram de maneira aleatória, com autocorrelações dentro da faixa de confiança e próximas de zero. Considernado as previsões de longo prazo, ambos os modelos estão funcionando de forma satisfatória e não apresentaram padrões remanescentes nos resíduos.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_CB_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_CB_WFV_ORIG_RESID_ACF}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:jequiti_RF_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:jequiti_RF_WFV_ORIG_RESID_ACF}
 \end{figure}
 \clearpage
 
@@ -363,33 +358,33 @@ O modelo RF também teve um bom desempenho, com uma MAPE intermediária entre os
 Em termos de precisão média (MAPE), o CB apresentou o melhor desempenho - valor de $0,082$ -, seguido de perto por RF - valor de $0,083$ - e LR - MAPE de $0,084$. A diferença foi muito pequena, na casa de $10^{-3}$, mostrando que todos os modelos tiveram alta precisão. Analisando a KGE - a mais complexa das métricas, que avalia a correlação, a variabilidade e o viés -, o modelo LR foi o melhor nesse critério, seguido pelo RF e CB. Isso sugere que, apesar de ser um modelo linear, a regressão conseguiu capturar bem a dinâmica não-linear das vazões do rio. Mas, novamente, os valores ficaram muito próximos, não havendo discrepância entre as medições.
 
 \begin{itemize}
-\item No geral, todos os três modelos apresentam bons resultados, mas com características específicas:
-\begin{itemize}
-\item O modelo CB saiu-se ligeiramente melhor em precisão - MAPE -, mas com um viés de subestimação mais acentuado;
-\item O modelo LR surpreendentemente teve o melhor desempenho na KGE, um viés mediano e a melhor cobertura empírica; e
-\item O modelo RF mostrou-se competitivo em precisão e viés, porém, com uma menor cobertura empírica, o que sugere que os intervalos de previsão são menos eficazes para capturar a incerteza nas previsões quando comparado aos demais modelos.
-\end{itemize}
+	\item No geral, todos os três modelos apresentam bons resultados, mas com características específicas:
+	\begin{itemize}
+		\item O modelo CB saiu-se ligeiramente melhor em precisão - MAPE -, mas com um viés de subestimação mais acentuado;
+		\item O modelo LR surpreendentemente teve o melhor desempenho na KGE, um viés mediano e a melhor cobertura empírica; e
+		\item O modelo RF mostrou-se competitivo em precisão e viés, porém, com uma menor cobertura empírica, o que sugere que os intervalos de previsão são menos eficazes para capturar a incerteza nas previsões quando comparado aos demais modelos.
+	\end{itemize}
 \end{itemize}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
-\label{fig:doce_CB_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+	\label{fig:doce_CB_WFV_ORIG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
-\label{fig:doce_LR_WFV_LOG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
+	\label{fig:doce_LR_WFV_LOG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
-\label{fig:doce_RF_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+	\label{fig:doce_RF_WFV_ORIG}
 \end{figure}
 \clearpage
 
@@ -444,50 +439,50 @@ Os três modelos enfrentaram desafios semelhantes durante o período inicial do 
 Em suma. O comportamento dos resíduos ao longo do tempo indica que, para períodos com picos sazonais, pode ser necessário um refinamento adicional nos modelos ou mesmo refinamento nos dados de entrada para melhor capturar estes eventos.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:doce_CB_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:doce_CB_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:doce_LR_WFV_LOG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:doce_LR_WFV_LOG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:doce_RF_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:doce_RF_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 \clearpage
 
 A assimetria dos resíduos para o modelo CB - figura \ref{fig:doce_CB_WFV_ORIG_RESID_x_CURVA_NORMAL} - é de $4,16$, o que indica uma distribuição altamente assimétrica à direita - positiva. Isso quer dizer que os erros positivos são mais frequentes ou mais intensos do que os erros negativos. Isso combina com o viés sistemático de todos os modelos em que o PBIAS indicou subestimação - visto em \ref{fig:doce_CB_WFV_ORIG}, \ref{fig:doce_LR_WFV_LOG} e \ref{fig:doce_RF_WFV_ORIG}. Posto que o cálculo do resíduo é ``$observado - previsto$'' e trazendo o gráfico \ref{fig:doce_CB_WFV_ORIG_RESID_x_TEMPO} à vista aqui novamente, percebe-se que esta cauda longa de valores positivos ocorreu principalmente no início do ano, exatamente quando as variações nas vazões foram mais intensas. Este fenômeno também ocorreu com os outros modelos - figuras \ref{fig:doce_LR_WFV_LOG_RESID_x_CURVA_NORMAL} e \ref{fig:doce_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}. Contudo, para o modelo LR com dados log-transformados, a assimetria se mostrou menor - $2,71$ - do que em relação aos modelos não-lineares, restando a assimetria de $3,24$ para o modelo RF.
- 
+
 A curva normal - em vermelho - está visivelmente deslocada à direita, devido a assimetria dos dados, para todos os modelos, porém um pouco menos para o modelo LR. Todos os modelos possuem resíduos concentrados, majoritariamente, entre $-200$ e $200$, contudo, para os modelos não-lineares CB e RF, a variação total dos resíduos oscila entre $-400$ e $1000$, ao passo que o modelo LR, mostrando melhor comportamento, oscila entre $-400$ e $800$. Isso tudo mostra que os resíduos não seguem uma distribuição normal, com valores concentrados à direita de zero, o que indica que os modelos não capturaram bem as dinâmicas quando de valores mais elevados de vazão.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:doce_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:doce_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:doce_LR_WFV_LOG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:doce_LR_WFV_LOG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:doce_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:doce_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 \clearpage
 
@@ -498,24 +493,24 @@ Avançando no estudo, a autocorrelação do modelo CB diminui rapidamente após 
 Todos os modelos mostraram alguma autocorrelação nos resíduos de curto prazo, indicando que nenhum deles conseguiu eliminar completamente as dependências temporais (de curto prazo). Esse fenômeno é mais acentuado no CB, seguido pela LR e, por fim, pelo RF, que apresenta a menor autocorrelação nos primeiros \textit{lags}. Essa presença presistente de autocorrelação nos resíduos significa que as previsões de curto prazo são influenciadas pelos eventos passados, sugerindo que os modelos não estão capturando eventos imediatamente próximos de maneira ideal.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:doce_CB_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:doce_CB_WFV_ORIG_RESID_ACF}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:doce_LR_WFV_LOG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:doce_LR_WFV_LOG_RESID_ACF}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:doce_RF_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:doce_RF_WFV_ORIG_RESID_ACF}
 \end{figure}
 
 Toda essa análise demonstrou aspectos importantes acerca dos modelos. Todos apresentaram uma tendência de subestimar os picos, com o modelo LR tendo uma oscilação levemente menor - de $-400$ a $800$ -, o período do ano que foi complicado para os modelos foi o período inicial do ano, verão, quando as vazões são fortemente impactadas pelas oscilações nas precipitações e o gráfico ACF deixou claro que os resíduos carregam dependência temporal de curto prazo. Isso sugere a necessidade de inclusão de mais variáveis explicativas para lidar com esses eventos extremos, refinamento nos hiperparâmetros - para os modelos não-lineares -, ou mesmo de refinamento nas técnicas de modelagem - isso não pode ser descartado.
@@ -541,90 +536,90 @@ O modelo LR consegue capturar razoavelmente bem as flutuações de vazão, mas t
 O RF foi o modelo que obteve o melhor equilíbrio entre precisão (MAPE), correlação/variabilidade (KGE) e viés (PBIAS), mostrando um desempenho consistente. No entanto, a cobertura empírica baixa sugere que o intervalo de previsão não captura toda a incerteza associada aos dados, mostrando uma característica que pode melhorar. O LR, embora tenha uma MAPE ligeiramente maior, apresentou o melhor valor de PBIAS, denotando que ele tem a menor tendência a viés sistemático entre os modelos. Além disso, sua maior cobertura empírica sugere que o modelo captura melhor a variabilidade dos dados. Finalmente, o CB, ainda que seja um modelo robusto, mostrou desempenho inferior em termos de KGE e PBIAS, o que pode indicar dificuldades em capturar corretamente as variações sazonais e os picos extremos de vazão. Contudo, vale salientar, é um modelo altamente parametrizável e um procedimento de otimização dos hiperparâmetros pode verter melhores resultados.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
-\label{fig:grande_CB_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+	\label{fig:grande_CB_WFV_ORIG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
-\label{fig:grande_LR_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
+	\label{fig:grande_LR_WFV_ORIG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
-\label{fig:grande_RF_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+	\label{fig:grande_RF_WFV_ORIG}
 \end{figure}
 \clearpage
 
-%A análise dos gráficos de resíduos \textit{versus} valores previstos para os três modelos revela importantes diferenças no comportamento dos resíduos em relação às previsões. De início é possível notar as largas faixas de valores em que os resíduos se concentraram. O CB teve valores de \textit{lower fence} e \textit{upper fence} de $-1328,72$ e $1492,10$, respectivamente, uma amplitude de $2820$, o que lhe conferiu uma prevalência de $89,32\%$ dos resíduos dentro destes limites. De antemão, o menor valor dentre os modelos. Continuando para o modelo LR, tendo $-1628,38$ para o valor da faixa mínima e $1687,81$ para a máxima - amplitude de $3315$ - teve prevalência de 92,60\% dos resíduos. Isso parece realmente bom, mas com uma ampla faixa assim deixa indicado que o modelo oscilou muito nas previsões realizadas, demostrando incerteza. Finalmente, o RF, ficou ``no meio do caminho'' entre os modelos anteriores. Tendo os valores de $-1422,62$ para \textit{lower fence} e $1531,92$ para \textit{upper fence}, perfazendo uma amplitude de $2953$, o modelo teve prevalência de $90,68\%$ dos resíduos dentro destes limites.
-%
-%Olhando mais atentamente o gráfico do modelo CB - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV} -, os resíduos estão relativamente concentrados em torno de $0$ para a maioria dos valores previstos. Contudo, à medida que os valores previstos aumentam, os resíduos se tornam mais dispersos, especialmente para previsões acima de $6000 m^3/s$. 
-%
-%O CB tende a subestimar mais frequentemente as previsões - maior presença de resíduos acima de \textit{upper fence} - para valores elevados de vazão. Existem vários \textit{outliers} positivos e negativos, com valores de resíduos superiores a $2000 m^3/s$ e inferiores a $-1.000 m^3/s$, principalmente para as previsões mais altas, donde pode-se inferir que o CB lidou bem com vazões mais baixas e moderadas, mas apresentou maior dificuldade com picos extremos de vazão, como indicado pela dispersão e pelos \textit{outliers} em previsões de alta magnitude.
-%
-%O modelo LR também apresentou distribuição de resíduos concentrada em torno de $0$ para valores previstos mais baixos - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_PREV}. No entanto, a \underline{dispersão} dos resíduos é maior em torno de $0$ e dentro do intervalo mostrado no gráfico, e houve alguns \textit{outliers} para previsões extremamente altas (acima de $7000 m^3/s$). Essa maior dispersão e alguns destes \textit{outliers} extremos indicam dificuldades do modelo em lidar com previsões de vazões de moderadas a extremas.
-%
-%O RF apresenta uma distribuição de resíduos relativamente mais compacta em torno de $0$ para a maioria dos valores previstos. No entanto, também há uma dispersão crescente à medida que os valores previstos aumentam, semelhante ao CB e ao LR. Um fato importante a se observar, colocando de lado os gráficos \ref{fig:grande_RF_WFV_ORIG_RESID_x_PREV} e \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV}, em que ambos os comportamentos se assemelham, apesar da faixa levemente larga e da menor prevalência dos resíduos dentro desta, o modelo CB apresentou menos resíduos de valores elevados \underline{abaixo} de \textit{lower fence}, ou seja, o modelo superestimou muito menos as previsões. Porém, acima de \textit{upper fence}, o CB teve mais pontos fora, reforçando o que já tinha sido apresentado antes através da PBIAS, de que este modelo teve tendência sistemática para subestimar as previsões. O modelo RF apresentou uma distribuição acima de \textit{upper fence} e abaixo de \textit{lower fence} mais equilibrada, uma amplitude mediana - quando vista ao lado dos outros modelos -, elevada concentração dos resíduos próximo a $0$, o que faz indicar um comportamento estável holisticamente. Também teve problemas em captar vazões extremas, de certo, mas quando se considera outros parâmetros para mensurar a qualidade, este modelo ficou em um ponto central. E, assim como o CB, ainda pode ser melhorado por otimização de hiperparâmetros.
-%
-%Quando fala-se em precisão, todos os três modelos - CB, LR e RF - apresentaram resíduos concentrados em torno de $0$ para valores previstos moderados (entre $3000$ e $6000 m^3/s$), indicando que eles conseguem lidar bem com a previsão de vazões nessa faixa, mas para valores extremos, ainda que eventualmente um modelo tenha sido melhor que o outro, foi muito pequena a variação, deixando claro que as previsões extremas foram problemáticas para todos os modelos.
-%
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
-%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-%\label{fig:grande_CB_WFV_ORIG_RESID_x_PREV}
-%\end{figure}
-%
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_PREV.png}
-%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-%\label{fig:grande_LR_WFV_ORIG_RESID_x_PREV}
-%\end{figure}
-%
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
-%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-%\label{fig:grande_RF_WFV_ORIG_RESID_x_PREV}
-%\end{figure}
-%\clearpage
+A análise dos gráficos de resíduos \textit{versus} valores previstos para os três modelos revela importantes diferenças no comportamento dos resíduos em relação às previsões. De início é possível notar as largas faixas de valores em que os resíduos se concentraram. O CB teve valores de \textit{lower fence} e \textit{upper fence} de $-1328,72$ e $1492,10$, respectivamente, uma amplitude de $2820$, o que lhe conferiu uma prevalência de $89,32\%$ dos resíduos dentro destes limites. De antemão, o menor valor dentre os modelos. Continuando para o modelo LR, tendo $-1628,38$ para o valor da faixa mínima e $1687,81$ para a máxima - amplitude de $3315$ - teve prevalência de 92,60\% dos resíduos. Isso parece realmente bom, mas com uma ampla faixa assim deixa indicado que o modelo oscilou muito nas previsões realizadas, demostrando incerteza. Finalmente, o RF, ficou ``no meio do caminho'' entre os modelos anteriores. Tendo os valores de $-1422,62$ para \textit{lower fence} e $1531,92$ para \textit{upper fence}, perfazendo uma amplitude de $2953$, o modelo teve prevalência de $90,68\%$ dos resíduos dentro destes limites.
 
-A análise dos gráficos de dispersão dos resíduos ao longo do tempo para os modelos revela informações importantes sobre a evolução do desempenho de cada modelo em termos de erro durante o período analisado para o rio Grande, o ano de $2023$. Aqui é possível identificar padrões de erro, presença de \textit{outliers} e a estabilidade dos resíduos ao longo do tempo.
+Olhando mais atentamente o gráfico do modelo CB - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV} -, os resíduos estão relativamente concentrados em torno de $0$ para a maioria dos valores previstos. Contudo, à medida que os valores previstos aumentam, os resíduos se tornam mais dispersos, especialmente para previsões acima de $6000 m^3/s$. 
+
+O CB tende a subestimar mais frequentemente as previsões - maior presença de resíduos acima de \textit{upper fence} - para valores elevados de vazão. Existem vários \textit{outliers} positivos e negativos, com valores de resíduos superiores a $2000 m^3/s$ e inferiores a $-1.000 m^3/s$, principalmente para as previsões mais altas, donde pode-se inferir que o CB lidou bem com vazões mais baixas e moderadas, mas apresentou maior dificuldade com picos extremos de vazão, como indicado pela dispersão e pelos \textit{outliers} em previsões de alta magnitude.
+
+O modelo LR também apresentou distribuição de resíduos concentrada em torno de $0$ para valores previstos mais baixos - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_PREV}. No entanto, a \underline{dispersão} dos resíduos é maior em torno de $0$ e dentro do intervalo mostrado no gráfico, e houve alguns \textit{outliers} para previsões extremamente altas (acima de $7000 m^3/s$). Essa maior dispersão e alguns destes \textit{outliers} extremos indicam dificuldades do modelo em lidar com previsões de vazões de moderadas a extremas.
+
+O RF apresenta uma distribuição de resíduos relativamente mais compacta em torno de $0$ para a maioria dos valores previstos. No entanto, também há uma dispersão crescente à medida que os valores previstos aumentam, semelhante ao CB e ao LR. Um fato importante a se observar, colocando de lado os gráficos \ref{fig:grande_RF_WFV_ORIG_RESID_x_PREV} e \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV}, em que ambos os comportamentos se assemelham, apesar da faixa levemente larga e da menor prevalência dos resíduos dentro desta, o modelo CB apresentou menos resíduos de valores elevados \underline{abaixo} de \textit{lower fence}, ou seja, o modelo superestimou muito menos as previsões. Porém, acima de \textit{upper fence}, o CB teve mais pontos fora, reforçando o que já tinha sido apresentado antes através da PBIAS, de que este modelo teve tendência sistemática para subestimar as previsões. O modelo RF apresentou uma distribuição acima de \textit{upper fence} e abaixo de \textit{lower fence} mais equilibrada, uma amplitude mediana - quando vista ao lado dos outros modelos -, elevada concentração dos resíduos próximo a $0$, o que faz indicar um comportamento estável holisticamente. Também teve problemas em captar vazões extremas, de certo, mas quando se considera outros parâmetros para mensurar a qualidade, este modelo ficou em um ponto central. E, assim como o CB, ainda pode ser melhorado por otimização de hiperparâmetros.
+
+Quando fala-se em precisão, todos os três modelos - CB, LR e RF - apresentaram resíduos concentrados em torno de $0$ para valores previstos moderados (entre $3000$ e $6000 m^3/s$), indicando que eles conseguem lidar bem com a previsão de vazões nessa faixa, mas para valores extremos, ainda que eventualmente um modelo tenha sido melhor que o outro, foi muito pequena a variação, deixando claro que as previsões extremas foram problemáticas para todos os modelos.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
+	\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_CB_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_PREV.png}
+	\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_LR_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
+	\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_RF_WFV_ORIG_RESID_x_PREV}
+\end{figure}
+\clearpage
+
+A análise dos gráficos de dispersão dos resíduos ao longo do tempo para os modelos revela informações importantes sobre a evolução do desempenho de cada modelo em termos de erro durante o período analisado para o rio Grande, o ano de 2023. Aqui é possível identificar padrões de erro, presença de \textit{outliers} e a estabilidade dos resíduos ao longo do tempo.
 
 O CB demonstra uma concentração dos resíduos dentro da faixa de $\pm 1000 m^3/s$ na maior parte do período estudado - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_TEMPO}. Contudo, nos primeiros meses, de janeiro a maio de 2023, observa-se um maior espalhamento dos resíduos, com vários pontos excedendo os $2000 m^3/s$. Após esse intervalo inicial, os resíduos do CB tendem à estabilidade, permanecendo majoritariamente dentro dos limites estabelecidos. No entanto, a presença de \textit{outliers} entre março e maio de 2023 indica que o modelo enfrentou dificuldades para lidar com picos de vazão nesse período, ocasionando erros elevados. Apesar disso, após o pico de erro em maio, os resíduos do CB tornaram-se mais constantes, com variações menores e mais previsíveis, embora alguns \textit{outliers} persistam no final do ano, demonstrando, desta forma, que há desafios na captura de variações extremas.
 
 Em contraste, o LR apresenta uma dispersão dos resíduos significativamente maior ao longo do tempo quando comparada ao CB - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_TEMPO}. Mesmo nos períodos de menor erro, como de julho a novembro de 2023, os resíduos ainda exibem uma variação considerável, ainda muito dispersos, com pontos ultrapassando $\pm 1000 m^3/s$. A estabilidade dos resíduos da LR ficou também comprometida, exibindo elevada dispersão mesmo em períodos onde a série observada apresentou comportamento mais estável. Essa variabilidade reflete a limitação do LR em capturar a complexidade dos dados de vazão, revelando que o LR não lidou adequadamente com eventos extremos de vazão.
 
-Por sua vez, o RF apresenta uma dispersão dos resíduos semelhante à do CB - figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_TEMPO} -, porém com uma quantidade menor de \textit{outliers}, considerando acima de \textit{upper fence} e abaixo de \textit{lower fence}. A maior parte dos resíduos do RF está confinada à faixa de $\pm 1000 m^3/s$, com algumas exceções nos meses de março e abril e também os meses de novembro e dezembro de 2023, onde o modelo aparentou maior dificuldade em prever corretamente as vazões. A presença reduzida de \textit{outliers} no RF, em comparação ao LR e CB, bem como uma faixa menos extensa entre o menor \textit{outlier} e o maior \textit{outlier}, sugere uma maior robustez na captura das variações de vazão ao longo do tempo, embora alguns \textit{outliers} ocorram durante períodos de maior instabilidade nas vazões. A estabilidade dos resíduos do RF é notavelmente superior, com menor dispersão e uma tendência clara de erros mais baixos em comparação com a LR, embora ainda sejam observados alguns picos de erro nos primeiros meses de $2023$.
+Por sua vez, o RF apresenta uma dispersão dos resíduos semelhante à do CB - figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_TEMPO} -, porém com uma quantidade menor de \textit{outliers}, considerando acima de \textit{upper fence} e abaixo de \textit{lower fence}. A maior parte dos resíduos do RF está confinada à faixa de $\pm 1000 m^3/s$, com algumas exceções nos meses de março e abril e também os meses de novembro e dezembro de 2023, onde o modelo aparentou maior dificuldade em prever corretamente as vazões. A presença reduzida de \textit{outliers} no RF, em comparação ao LR e CB, bem como uma faixa menos extensa entre o menor \textit{outlier} e o maior \textit{outlier} (figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_PREV}), sugere uma maior robustez na captura das variações de vazão ao longo do tempo, embora alguns \textit{outliers} ocorram durante períodos de maior instabilidade nas vazões. A estabilidade dos resíduos do RF é notavelmente superior, com menor dispersão e uma tendência clara de erros mais baixos em comparação com a LR, embora ainda sejam observados alguns picos de erro nos primeiros meses de 2023.
 
 De maneira geral, tanto o CB quanto o RF demonstram um padrão de erro mais estável ao longo do tempo, com a maioria dos resíduos concentrados dentro de uma faixa controlada de $\pm 1000 m^3/s$. Ambos os modelos apresentaram períodos de erro maior, especialmente no início do ano, mas tendem a estabilizar conforme o tempo avança. Em contrapartida, o LR exibiu elevada variabilidade nos resíduos, indicando uma menor capacidade de lidar com as flutuações nas vazões independentemente do período analisado.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:grande_CB_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:grande_CB_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:grande_LR_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:grande_LR_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
-\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-\label{fig:grande_RF_WFV_ORIG_RESID_x_TEMPO}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
+	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+	\label{fig:grande_RF_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 \clearpage
 
@@ -635,24 +630,24 @@ Em contraste, o LR apresentou uma assimetria de $0,97$, ou seja, a distribuiçã
 O RF, por sua vez, apresentou a menor assimetria entre os três modelos, com um valor de $0,82$, a distribuição de resíduos mais simétrica dentre todos. O RF lidou melhor com os erros, distribuindo-os de maneira mais uniforme em torno de $0$ e teve a distribuição dos resíduos mais precisa, seguindo a forma da curva normal em comparação com o CB e o LR, o que indica que o modelo RF teve uma maior capacidade de gerar previsões com erros menores e menos dispersos. Este comportamento e todo este entendimento sugerem ao modelo RF uma maior robustez na gestão de valores extremos de vazão - figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_LR_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_LR_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
-\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+	\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
 \end{figure}
 \clearpage
 
@@ -665,24 +660,24 @@ As conclusões gerais indicam que todos os modelos apresentaram algum nível de 
 Resultados visíveis nas figuras \ref{fig:grande_CB_WFV_ORIG_RESID_ACF}, \ref{fig:grande_LR_WFV_ORIG_RESID_ACF} e \ref{fig:grande_RF_WFV_ORIG_RESID_ACF}.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_CB_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_CB_WFV_ORIG_RESID_ACF}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_LR_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_LR_WFV_ORIG_RESID_ACF}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
-\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_RF_WFV_ORIG_RESID_ACF}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
+	\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+	\label{fig:grande_RF_WFV_ORIG_RESID_ACF}
 \end{figure}
 \clearpage
 
@@ -701,24 +696,24 @@ Por fim, quanto à cobertura empírica. O CB cobriu $90,68\%$ dos dados, demonst
 O LR destacou-se como o modelo com maior eficiência na replicação do comportamento hidrológico observado, evidenciado pelo maior valor de KGE, a MAPE e PBIAS medianas entre os modelos e pela cobertura empírica mais alta. Porém, de forma geral, todos os modelos apresentaram resultados competitivos e para os dados do rio São Francisco se mostraram altamente eficientes.
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
-\label{fig:francisco_CB_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}
+	\label{fig:francisco_CB_WFV_ORIG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
-\label{fig:francisco_LR_WFV_LOG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}
+	\label{fig:francisco_LR_WFV_LOG}
 \end{figure}
 
 \begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png}
-\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
-\label{fig:francisco_RF_WFV_ORIG}
+	\centering
+	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png}
+	\caption{\textit{Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}
+	\label{fig:francisco_RF_WFV_ORIG}
 \end{figure}
 \clearpage
 
