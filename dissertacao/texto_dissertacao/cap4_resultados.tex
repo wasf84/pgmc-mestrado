@@ -137,9 +137,9 @@ Caminhando para o fim, o histograma e curva-normal apresentou uma assimetria con
 \end{figure}
 \clearpage
 
-Passando agora à análise dos modelos principais deste trabalho, cujos resultados serão comparados ao modelo de referência, optou-se por realizar a análise de forma concomitante, uma vez que ambos os modelos apresentaram comportamentos similares, embora o modelo RandomForest tenha demonstrado um desempenho superior ao CB.
+Passando agora à análise dos modelos principais deste trabalho, cujos resultados serão comparados ao modelo de referência, optou-se por realizar a análise de forma concomitante, uma vez que ambos os modelos apresentaram comportamentos similares, embora o modelo RF tenha demonstrado um desempenho superior ao CB.
 
-Na métrica KGE, comparando-se os resultados com o comportamento ilustrado na figura \ref{fig:jequiti_LR_WFV_LOG}, observa-se que ambos os modelos não conseguiram superar o modelo de referência, com destaque para o CB, que apresentou uma performance consideravelmente inferior. No entanto, ao considerar a precisão percentual média, avaliada pela métrica MAPE, ambos os modelos baseados em árvores apresentaram melhorias em relação ao modelo de referência, evidenciando um desempenho superior em termos de erro percentual médio.
+Na métrica KGE, comparando-se os resultados com o comportamento ilustrado na figura \ref{fig:jequiti_LR_WFV_LOG}, observa-se que ambos os modelos não conseguiram superar o modelo de referência, com destaque para o CB, que apresentou uma performance consideravelmente inferior. No entanto, ao considerar a previsão percentual média, avaliada pela métrica MAPE, ambos os modelos baseados em árvores apresentaram melhorias em relação ao modelo de referência, evidenciando um desempenho superior em termos de erro percentual médio.
 
 A KGE, relembrando, combina três aspectos fundamentais: variabilidade, viés e correlação entre os dados observados e previstos. Considerando esses fatores, com os dados log-transformados, o modelo LR capturou de forma mais eficaz os três aspectos mencionados. É provável que a linearização tenha sido um fator determinante para o bom desempenho deste modelo olhando por esta métrica, uma vez que, ao analisar a MAPE, os modelos não-lineares (CB e RF) apresentaram desempenhos melhores. Um desempenho médio percentual melhor pode dever-se à resiliência dos modelos não-lineares à sua robustez diante de valores discrepantes, aos quais o modelo linear é mais sensível.
 
@@ -198,7 +198,7 @@ A dispersão ao longo do tempo foi praticamente a mesma para ambos os modelos, c
 \end{figure}
 \clearpage
 
-Em termos de assimetria da distribuição dos resíduos, ambos modelos comportaram-se iguais, com assimetria positiva indicando cauda à direita. Com valores de $2,56$ para o modelo CB e $2,54$ para o RF, isso mostra tendência de subestimar as previsões, como visto anteriormente pelo PBIAS de ambos os modelos.
+Em termos de assimetria da distribuição dos resíduos, ambos modelos apresentaram valores elevados, com assimetria positiva indicando cauda à direita. Com valores de $2,02$ para o modelo CB e $3,05$ para o RF, isso mostra tendência de subestimar as previsões, como visto anteriormente pelo PBIAS de ambos os modelos.
 
 \begin{figure}[!h]
 	\centering
