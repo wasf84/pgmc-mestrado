@@ -562,47 +562,47 @@ O RF foi o modelo que obteve o melhor equilíbrio entre precisão (MAPE), correl
 \end{figure}
 \clearpage
 
-A análise dos gráficos de resíduos \textit{versus} valores previstos para os três modelos revela importantes diferenças no comportamento dos resíduos em relação às previsões. De início é possível notar as largas faixas de valores em que os resíduos se concentraram. O CB teve valores de \textit{lower fence} e \textit{upper fence} de $-1328,72$ e $1492,10$, respectivamente, uma amplitude de $2820$, o que lhe conferiu uma prevalência de $89,32\%$ dos resíduos dentro destes limites. De antemão, o menor valor dentre os modelos. Continuando para o modelo LR, tendo $-1628,38$ para o valor da faixa mínima e $1687,81$ para a máxima - amplitude de $3315$ - teve prevalência de 92,60\% dos resíduos. Isso parece realmente bom, mas com uma ampla faixa assim deixa indicado que o modelo oscilou muito nas previsões realizadas, demostrando incerteza. Finalmente, o RF, ficou ``no meio do caminho'' entre os modelos anteriores. Tendo os valores de $-1422,62$ para \textit{lower fence} e $1531,92$ para \textit{upper fence}, perfazendo uma amplitude de $2953$, o modelo teve prevalência de $90,68\%$ dos resíduos dentro destes limites.
+%A análise dos gráficos de resíduos \textit{versus} valores previstos para os três modelos revela importantes diferenças no comportamento dos resíduos em relação às previsões. De início é possível notar as largas faixas de valores em que os resíduos se concentraram. O CB teve valores de \textit{lower fence} e \textit{upper fence} de $-1328,72$ e $1492,10$, respectivamente, uma amplitude de $2820$, o que lhe conferiu uma prevalência de $89,32\%$ dos resíduos dentro destes limites. De antemão, o menor valor dentre os modelos. Continuando para o modelo LR, tendo $-1628,38$ para o valor da faixa mínima e $1687,81$ para a máxima - amplitude de $3315$ - teve prevalência de 92,60\% dos resíduos. Isso parece realmente bom, mas com uma ampla faixa assim deixa indicado que o modelo oscilou muito nas previsões realizadas, demostrando incerteza. Finalmente, o RF, ficou ``no meio do caminho'' entre os modelos anteriores. Tendo os valores de $-1422,62$ para \textit{lower fence} e $1531,92$ para \textit{upper fence}, perfazendo uma amplitude de $2953$, o modelo teve prevalência de $90,68\%$ dos resíduos dentro destes limites.
+%
+%Olhando mais atentamente o gráfico do modelo CB - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV} -, os resíduos estão relativamente concentrados em torno de $0$ para a maioria dos valores previstos. Contudo, à medida que os valores previstos aumentam, os resíduos se tornam mais dispersos, especialmente para previsões acima de $6000 m^3/s$. 
+%
+%O CB tende a subestimar mais frequentemente as previsões - maior presença de resíduos acima de \textit{upper fence} - para valores elevados de vazão. Existem vários \textit{outliers} positivos e negativos, com valores de resíduos superiores a $2000 m^3/s$ e inferiores a $-1.000 m^3/s$, principalmente para as previsões mais altas, donde pode-se inferir que o CB lidou bem com vazões mais baixas e moderadas, mas apresentou maior dificuldade com picos extremos de vazão, como indicado pela dispersão e pelos \textit{outliers} em previsões de alta magnitude.
+%
+%O modelo LR também apresentou distribuição de resíduos concentrada em torno de $0$ para valores previstos mais baixos - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_PREV}. No entanto, a \underline{dispersão} dos resíduos é maior em torno de $0$ e dentro do intervalo mostrado no gráfico, e houve alguns \textit{outliers} para previsões extremamente altas (acima de $7000 m^3/s$). Essa maior dispersão e alguns destes \textit{outliers} extremos indicam dificuldades do modelo em lidar com previsões de vazões de moderadas a extremas.
+%
+%O RF apresenta uma distribuição de resíduos relativamente mais compacta em torno de $0$ para a maioria dos valores previstos. No entanto, também há uma dispersão crescente à medida que os valores previstos aumentam, semelhante ao CB e ao LR. Um fato importante a se observar, colocando de lado os gráficos \ref{fig:grande_RF_WFV_ORIG_RESID_x_PREV} e \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV}, em que ambos os comportamentos se assemelham, apesar da faixa levemente larga e da menor prevalência dos resíduos dentro desta, o modelo CB apresentou menos resíduos de valores elevados \underline{abaixo} de \textit{lower fence}, ou seja, o modelo superestimou muito menos as previsões. Porém, acima de \textit{upper fence}, o CB teve mais pontos fora, reforçando o que já tinha sido apresentado antes através da PBIAS, de que este modelo teve tendência sistemática para subestimar as previsões. O modelo RF apresentou uma distribuição acima de \textit{upper fence} e abaixo de \textit{lower fence} mais equilibrada, uma amplitude mediana - quando vista ao lado dos outros modelos -, elevada concentração dos resíduos próximo a $0$, o que faz indicar um comportamento estável holisticamente. Também teve problemas em captar vazões extremas, de certo, mas quando se considera outros parâmetros para mensurar a qualidade, este modelo ficou em um ponto central. E, assim como o CB, ainda pode ser melhorado por otimização de hiperparâmetros.
+%
+%Quando fala-se em precisão, todos os três modelos - CB, LR e RF - apresentaram resíduos concentrados em torno de $0$ para valores previstos moderados (entre $3000$ e $6000 m^3/s$), indicando que eles conseguem lidar bem com a previsão de vazões nessa faixa, mas para valores extremos, ainda que eventualmente um modelo tenha sido melhor que o outro, foi muito pequena a variação, deixando claro que as previsões extremas foram problemáticas para todos os modelos.
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:grande_CB_WFV_ORIG_RESID_x_PREV}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:grande_LR_WFV_ORIG_RESID_x_PREV}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
+%\caption{Dispersão dos resíduos.\\(fonte: o autor)}
+%\label{fig:grande_RF_WFV_ORIG_RESID_x_PREV}
+%\end{figure}
+%\clearpage
 
-Olhando mais atentamente o gráfico do modelo CB - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV} -, os resíduos estão relativamente concentrados em torno de $0$ para a maioria dos valores previstos. Contudo, à medida que os valores previstos aumentam, os resíduos se tornam mais dispersos, especialmente para previsões acima de $6000 m^3/s$. 
-
-O CB tende a subestimar mais frequentemente as previsões - maior presença de resíduos acima de \textit{upper fence} - para valores elevados de vazão. Existem vários \textit{outliers} positivos e negativos, com valores de resíduos superiores a $2000 m^3/s$ e inferiores a $-1.000 m^3/s$, principalmente para as previsões mais altas, donde pode-se inferir que o CB lidou bem com vazões mais baixas e moderadas, mas apresentou maior dificuldade com picos extremos de vazão, como indicado pela dispersão e pelos \textit{outliers} em previsões de alta magnitude.
-
-O modelo LR também apresentou distribuição de resíduos concentrada em torno de $0$ para valores previstos mais baixos - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_PREV}. No entanto, a \underline{dispersão} dos resíduos é maior em torno de $0$ e dentro do intervalo mostrado no gráfico, e houve alguns \textit{outliers} para previsões extremamente altas (acima de $7000 m^3/s$). Essa maior dispersão e alguns destes \textit{outliers} extremos indicam dificuldades do modelo em lidar com previsões de vazões de moderadas a extremas.
-
-O RF apresenta uma distribuição de resíduos relativamente mais compacta em torno de $0$ para a maioria dos valores previstos. No entanto, também há uma dispersão crescente à medida que os valores previstos aumentam, semelhante ao CB e ao LR. Um fato importante a se observar, colocando de lado os gráficos \ref{fig:grande_RF_WFV_ORIG_RESID_x_PREV} e \ref{fig:grande_CB_WFV_ORIG_RESID_x_PREV}, em que ambos os comportamentos se assemelham, apesar da faixa levemente larga e da menor prevalência dos resíduos dentro desta, o modelo CB apresentou menos resíduos de valores elevados \underline{abaixo} de \textit{lower fence}, ou seja, o modelo superestimou muito menos as previsões. Porém, acima de \textit{upper fence}, o CB teve mais pontos fora, reforçando o que já tinha sido apresentado antes através da PBIAS, de que este modelo teve tendência sistemática para subestimar as previsões. O modelo RF apresentou uma distribuição acima de \textit{upper fence} e abaixo de \textit{lower fence} mais equilibrada, uma amplitude mediana - quando vista ao lado dos outros modelos -, elevada concentração dos resíduos próximo a $0$, o que faz indicar um comportamento estável holisticamente. Também teve problemas em captar vazões extremas, de certo, mas quando se considera outros parâmetros para mensurar a qualidade, este modelo ficou em um ponto central. E, assim como o CB, ainda pode ser melhorado por otimização de hiperparâmetros.
-
-Quando fala-se em precisão, todos os três modelos - CB, LR e RF - apresentaram resíduos concentrados em torno de $0$ para valores previstos moderados (entre $3000$ e $6000 m^3/s$), indicando que eles conseguem lidar bem com a previsão de vazões nessa faixa, mas para valores extremos, ainda que eventualmente um modelo tenha sido melhor que o outro, foi muito pequena a variação, deixando claro que as previsões extremas foram problemáticas para todos os modelos.
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_CB_WFV_ORIG_RESID_x_PREV}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_LR_WFV_ORIG_RESID_x_PREV}
-\end{figure}
-
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_PREV.png}
-\caption{Dispersão dos resíduos.\\(fonte: o autor)}
-\label{fig:grande_RF_WFV_ORIG_RESID_x_PREV}
-\end{figure}
-\clearpage
-
-A análise dos gráficos de dispersão dos resíduos ao longo do tempo para os modelos revela informações importantes sobre a evolução do desempenho de cada modelo em termos de erro durante o período analisado para o rio Grande, o ano de 2023. Aqui é possível identificar padrões de erro, presença de \textit{outliers} e a estabilidade dos resíduos ao longo do tempo.
+A análise dos gráficos de dispersão dos resíduos ao longo do tempo para os modelos revela informações importantes sobre a evolução do desempenho de cada modelo em termos de erro durante o período analisado para o rio Grande, o ano de $2023$. Aqui é possível identificar padrões de erro, presença de \textit{outliers} e a estabilidade dos resíduos ao longo do tempo.
 
 O CB demonstra uma concentração dos resíduos dentro da faixa de $\pm 1000 m^3/s$ na maior parte do período estudado - figura \ref{fig:grande_CB_WFV_ORIG_RESID_x_TEMPO}. Contudo, nos primeiros meses, de janeiro a maio de 2023, observa-se um maior espalhamento dos resíduos, com vários pontos excedendo os $2000 m^3/s$. Após esse intervalo inicial, os resíduos do CB tendem à estabilidade, permanecendo majoritariamente dentro dos limites estabelecidos. No entanto, a presença de \textit{outliers} entre março e maio de 2023 indica que o modelo enfrentou dificuldades para lidar com picos de vazão nesse período, ocasionando erros elevados. Apesar disso, após o pico de erro em maio, os resíduos do CB tornaram-se mais constantes, com variações menores e mais previsíveis, embora alguns \textit{outliers} persistam no final do ano, demonstrando, desta forma, que há desafios na captura de variações extremas.
 
 Em contraste, o LR apresenta uma dispersão dos resíduos significativamente maior ao longo do tempo quando comparada ao CB - figura \ref{fig:grande_LR_WFV_ORIG_RESID_x_TEMPO}. Mesmo nos períodos de menor erro, como de julho a novembro de 2023, os resíduos ainda exibem uma variação considerável, ainda muito dispersos, com pontos ultrapassando $\pm 1000 m^3/s$. A estabilidade dos resíduos da LR ficou também comprometida, exibindo elevada dispersão mesmo em períodos onde a série observada apresentou comportamento mais estável. Essa variabilidade reflete a limitação do LR em capturar a complexidade dos dados de vazão, revelando que o LR não lidou adequadamente com eventos extremos de vazão.
 
-Por sua vez, o RF apresenta uma dispersão dos resíduos semelhante à do CB - figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_TEMPO} -, porém com uma quantidade menor de \textit{outliers}, considerando acima de \textit{upper fence} e abaixo de \textit{lower fence}. A maior parte dos resíduos do RF está confinada à faixa de $\pm 1000 m^3/s$, com algumas exceções nos meses de março e abril e também os meses de novembro e dezembro de 2023, onde o modelo aparentou maior dificuldade em prever corretamente as vazões. A presença reduzida de \textit{outliers} no RF, em comparação ao LR e CB, bem como uma faixa menos extensa entre o menor \textit{outlier} e o maior \textit{outlier} (figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_PREV}), sugere uma maior robustez na captura das variações de vazão ao longo do tempo, embora alguns \textit{outliers} ocorram durante períodos de maior instabilidade nas vazões. A estabilidade dos resíduos do RF é notavelmente superior, com menor dispersão e uma tendência clara de erros mais baixos em comparação com a LR, embora ainda sejam observados alguns picos de erro nos primeiros meses de 2023.
+Por sua vez, o RF apresenta uma dispersão dos resíduos semelhante à do CB - figura \ref{fig:grande_RF_WFV_ORIG_RESID_x_TEMPO} -, porém com uma quantidade menor de \textit{outliers}, considerando acima de \textit{upper fence} e abaixo de \textit{lower fence}. A maior parte dos resíduos do RF está confinada à faixa de $\pm 1000 m^3/s$, com algumas exceções nos meses de março e abril e também os meses de novembro e dezembro de 2023, onde o modelo aparentou maior dificuldade em prever corretamente as vazões. A presença reduzida de \textit{outliers} no RF, em comparação ao LR e CB, bem como uma faixa menos extensa entre o menor \textit{outlier} e o maior \textit{outlier}, sugere uma maior robustez na captura das variações de vazão ao longo do tempo, embora alguns \textit{outliers} ocorram durante períodos de maior instabilidade nas vazões. A estabilidade dos resíduos do RF é notavelmente superior, com menor dispersão e uma tendência clara de erros mais baixos em comparação com a LR, embora ainda sejam observados alguns picos de erro nos primeiros meses de $2023$.
 
 De maneira geral, tanto o CB quanto o RF demonstram um padrão de erro mais estável ao longo do tempo, com a maioria dos resíduos concentrados dentro de uma faixa controlada de $\pm 1000 m^3/s$. Ambos os modelos apresentaram períodos de erro maior, especialmente no início do ano, mas tendem a estabilizar conforme o tempo avança. Em contrapartida, o LR exibiu elevada variabilidade nos resíduos, indicando uma menor capacidade de lidar com as flutuações nas vazões independentemente do período analisado.
 
