@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1 Portable) (preloaded format=pdflatex 2024.9.1)  11 OCT 2024 10:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1 Portable) (preloaded format=pdflatex 2024.9.1)  11 OCT 2024 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2998,11 +2998,11 @@ AED: lastpage setting LastPage
 (cap3_procedimentos_metodologicos.aux) (cap4_resultados.aux)
 (cap5_conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 31249 strings out of 476374
- 592573 string characters out of 5798277
+ 31251 strings out of 476374
+ 592593 string characters out of 5798277
  1890340 words of memory out of 5000000
  50344 multiletter control sequences out of 15000+600000
- 587455 words of font info for 210 fonts, out of 8000000 for 9000
+ 587542 words of font info for 211 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,104p,2421b,923s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathsy.e
@@ -3022,7 +3022,7 @@ nstall/fonts/type1/public/lm/lmri10.pfb><C:/miktex/texmfs/install/fonts/type1/p
 ublic/lm/lmri12.pfb><C:/miktex/texmfs/install/fonts/type1/public/lm/lmsy10.pfb>
 <C:/miktex/texmfs/install/fonts/type1/public/lm/lmsy8.pfb><C:/miktex/texmfs/ins
 tall/fonts/type1/public/lm/lmtt12.pfb>
-Output written on dissertacao.pdf (117 pages, 6119542 bytes).
+Output written on dissertacao.pdf (117 pages, 6119535 bytes).
 PDF statistics:
  1759 PDF objects out of 2073 (max. 8388607)
  358 named destinations out of 1000 (max. 500000)
