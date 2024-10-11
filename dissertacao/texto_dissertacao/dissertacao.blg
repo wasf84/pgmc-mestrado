@@ -1,27 +1,34 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: dissertacao.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: cap1_introducao.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: cap2_revisao.aux
+Reallocating 'name_of_file' (item size: 1) to 37 items.
 A level-1 auxiliary file: cap3_procedimentos_metodologicos.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: cap4_resultados.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: cap5_conclusao.aux
+Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: referencias.bib
 Warning--entry type for "bbc_chuvas_bahia_2024" isn't style-file defined
---line 444 of file referencias.bib
+--line 887 of file referencias.bib
 Warning--entry type for "g1_temporal_petropolis_2022" isn't style-file defined
---line 453 of file referencias.bib
+--line 905 of file referencias.bib
 Warning--entry type for "cnn_temporais_mg_2024" isn't style-file defined
---line 462 of file referencias.bib
+--line 923 of file referencias.bib
 Warning--entry type for "g1_temporal_es_2024" isn't style-file defined
---line 480 of file referencias.bib
+--line 959 of file referencias.bib
 Warning--entry type for "g1_cantareira_2015" isn't style-file defined
---line 489 of file referencias.bib
+--line 977 of file referencias.bib
 Warning--entry type for "skforecast_a" isn't style-file defined
---line 672 of file referencias.bib
+--line 1343 of file referencias.bib
 Warning--entry type for "skforecast_b" isn't style-file defined
---line 683 of file referencias.bib
+--line 1365 of file referencias.bib
 Warning--empty year in belloto1985residual
 Warning--empty year in belloto1985residual
 You've used 37 entries,
