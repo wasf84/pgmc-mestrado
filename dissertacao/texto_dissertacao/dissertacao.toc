@@ -42,15 +42,15 @@
 \contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\~AO}{61}{chapter.122}%
 \contentsline {section}{\numberline {4.1}Desempenho dos modelos}{61}{section.123}%
 \contentsline {subsection}{\numberline {\textbf {{4.1}.1}}Rio Jequitinhonha}{61}{subsection.124}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{84}{subsection.151}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{94}{subsection.164}%
-\contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{107}{subsection.180}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{110}{section.184}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{110}{section.185}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{85}{subsection.151}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{95}{subsection.164}%
+\contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{105}{subsection.177}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{108}{section.181}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{108}{section.182}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{111}{chapter.186}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{111}{section.187}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{111}{section.188}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{111}{section.189}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{109}{chapter.183}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{109}{section.184}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{109}{section.185}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{109}{section.186}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{112}{chapter*.191}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{110}{chapter*.188}%

@@ -48,58 +48,55 @@
 \contentsline {figure}{\numberline {3.47}{\ignorespaces Previsão completamente nos limites\\(fonte: o autor)}}{58}{figure.119}%
 \contentsline {figure}{\numberline {3.48}{\ignorespaces Fluxo de trabalho\\(fonte: o autor)}}{60}{figure.121}%
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Resultado do SeasonalNaive no teste \textit {Walk-Forward Validation}\\(fonte: o autor)}}{62}{figure.125}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}}{63}{figure.126}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}}{63}{figure.127}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR\\(fonte: o autor)}}{64}{figure.126}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Detalhe do trecho final dos dados, em 2022, usados para treinamento.\\(fonte: o autor)}}{64}{figure.127}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{65}{figure.128}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Histograma dos resíduos.\\(fonte: o autor)}}{65}{figure.129}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{65}{figure.130}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}}{67}{figure.131}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{67}{figure.132}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{68}{figure.133}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{68}{figure.134}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{70}{figure.135}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{70}{figure.136}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{71}{figure.137}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{72}{figure.138}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{73}{figure.139}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{73}{figure.140}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{74}{figure.141}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{75}{figure.142}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{76}{figure.143}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{77}{figure.144}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{78}{figure.145}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{79}{figure.146}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Histograma dos resíduos.\\(fonte: o autor)}}{66}{figure.129}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Resíduos da previsão ao longo do tempo.\\(fonte: o autor)}}{66}{figure.130}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{68}{figure.131}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{68}{figure.132}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{69}{figure.133}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{70}{figure.134}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{71}{figure.135}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{71}{figure.136}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{72}{figure.137}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{73}{figure.138}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces \textit {Walk-Forward Validation} para o modelo Regressão Linear - LR.\\(fonte: o autor)}}{75}{figure.139}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{75}{figure.140}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{76}{figure.141}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{76}{figure.142}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{77}{figure.143}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{78}{figure.144}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{79}{figure.145}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{80}{figure.146}%
 \contentsline {figure}{\numberline {4.23}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{81}{figure.147}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{81}{figure.148}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{83}{figure.149}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{83}{figure.150}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{86}{figure.152}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{86}{figure.153}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{87}{figure.154}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{82}{figure.148}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{84}{figure.149}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{84}{figure.150}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{87}{figure.152}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{87}{figure.153}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{88}{figure.154}%
 \contentsline {figure}{\numberline {4.30}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{89}{figure.155}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{89}{figure.156}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{89}{figure.157}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{90}{figure.158}%
-\contentsline {figure}{\numberline {4.34}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{91}{figure.159}%
-\contentsline {figure}{\numberline {4.35}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{91}{figure.160}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{93}{figure.161}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{93}{figure.162}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{93}{figure.163}%
-\contentsline {figure}{\numberline {4.39}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{95}{figure.165}%
-\contentsline {figure}{\numberline {4.40}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{96}{figure.166}%
-\contentsline {figure}{\numberline {4.41}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{96}{figure.167}%
-\contentsline {figure}{\numberline {4.42}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{98}{figure.168}%
-\contentsline {figure}{\numberline {4.43}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{99}{figure.169}%
-\contentsline {figure}{\numberline {4.44}{\ignorespaces Dispersão dos resíduos.\\(fonte: o autor)}}{99}{figure.170}%
-\contentsline {figure}{\numberline {4.45}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{101}{figure.171}%
-\contentsline {figure}{\numberline {4.46}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{101}{figure.172}%
-\contentsline {figure}{\numberline {4.47}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{102}{figure.173}%
-\contentsline {figure}{\numberline {4.48}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{103}{figure.174}%
-\contentsline {figure}{\numberline {4.49}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{104}{figure.175}%
-\contentsline {figure}{\numberline {4.50}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{104}{figure.176}%
-\contentsline {figure}{\numberline {4.51}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{105}{figure.177}%
-\contentsline {figure}{\numberline {4.52}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{106}{figure.178}%
-\contentsline {figure}{\numberline {4.53}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{106}{figure.179}%
-\contentsline {figure}{\numberline {4.54}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{108}{figure.181}%
-\contentsline {figure}{\numberline {4.55}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{108}{figure.182}%
-\contentsline {figure}{\numberline {4.56}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{109}{figure.183}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{90}{figure.156}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{90}{figure.157}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{91}{figure.158}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{92}{figure.159}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{92}{figure.160}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{94}{figure.161}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{94}{figure.162}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{94}{figure.163}%
+\contentsline {figure}{\numberline {4.39}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{96}{figure.165}%
+\contentsline {figure}{\numberline {4.40}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{97}{figure.166}%
+\contentsline {figure}{\numberline {4.41}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{97}{figure.167}%
+\contentsline {figure}{\numberline {4.42}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{99}{figure.168}%
+\contentsline {figure}{\numberline {4.43}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{100}{figure.169}%
+\contentsline {figure}{\numberline {4.44}{\ignorespaces Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}}{100}{figure.170}%
+\contentsline {figure}{\numberline {4.45}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{101}{figure.171}%
+\contentsline {figure}{\numberline {4.46}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{102}{figure.172}%
+\contentsline {figure}{\numberline {4.47}{\ignorespaces Histograma e curva-normal dos resíduos.\\(fonte: o autor)}}{102}{figure.173}%
+\contentsline {figure}{\numberline {4.48}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{103}{figure.174}%
+\contentsline {figure}{\numberline {4.49}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{104}{figure.175}%
+\contentsline {figure}{\numberline {4.50}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{104}{figure.176}%
+\contentsline {figure}{\numberline {4.51}{\ignorespaces \textit {Walk-Forward Validation} para o modelo CatBoost - CB.\\(fonte: o autor)}}{106}{figure.178}%
+\contentsline {figure}{\numberline {4.52}{\ignorespaces \textit {Walk-Forward Validation} para o modelo LinearRegression - LR.\\(fonte: o autor)}}{106}{figure.179}%
+\contentsline {figure}{\numberline {4.53}{\ignorespaces \textit {Walk-Forward Validation} para o modelo RandomForest - RF.\\(fonte: o autor)}}{107}{figure.180}%
