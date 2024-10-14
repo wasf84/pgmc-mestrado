@@ -736,28 +736,39 @@ O LR destacou-se como o modelo com maior eficiência na replicação do comporta
 %\end{figure}
 %\clearpage
 
+A análise comparativa dos resíduos dos modelos para o rio São Francisco revelou informações detalhadas sobre a precisão e robustez de cada abordagem ao longo do período de estudo.
+
+Inicialmente, observou-se que a área sombreada nos gráficos de dispersão dos resíduos permaneceu bastante estreita para todos os modelos. Este comportamento indica que os modelos apresentaram uma alta precisão nos valores previstos, refletindo uma capacidade robusta de captura das tendências gerais das vazões.
+
+Especificamente, o modelo CB apresentou um limie \textit{upper fence} de $103,87$ e \textit{lower fence} de $-72,34$, resultando em uma amplitude de $176,21$, com prevalência dos resíduos dentro desses limites de $83,84\%$. Contudo, o CB exibiu resíduos discrepantes no início do ano, especialmente em janeiro e fevereiro, antes de estabilizar a partir de março, restringindo-se à área de tolerância - figura \ref{fig:francisco_CB_WFV_ORIG_RESID_x_TEMPO}. Na porção final do ano, o modelo voltou a apresentar alguns valores discrepantes, embora a vasta maioria dos resíduos permanecesse próxima do limite superior.
+
+Por sua vez, o modelo LR apresentou um \textit{upper fence} de $67,78$ e um \textit{lower fence} de $-48,93$, com uma amplitude de $116,71$ e uma prevalêcia de $81,92\%$. Embora o LR também tenha exibido resíduos discrepantes no início do ano, a quantidade foi menor comparada ao CB e ao RF, e a estabilização dos resíduos ocorreu apenas a partir de março. Na porção final do período, o LR mostrou um aumento no número de resíduos fora das faixas estabelecidas, tanto acima quanto abaixo dos limites, indicando uma menor robustez em comparação ao CB para este período. A amplitude dos resíduos da LR variou entre $-600$ e $600$, sendo menor quando comparada aos outros modelos. Adicionalmente, o LR apresentou um maior número de \textit{outliers} acima do limite superior, similar ao RF, e menos \textit{outliers} abaixo do limite inferior - figura \ref{fig:francisco_LR_WFV_LOG_RESID_x_TEMPO}.
+
+O RF exibiu um limite superior de $46,83$ e inferior de $-39,87$, resultando em uma amplitude de $86,70$ e prevalência de $74,52\%$ dos resíduos na área sombreada, demonstrando uma distribuição de resíduos bastante controlada em torno da linha de referência $0$. No entanto, o RF também apresentou diversos \textit{outliers} no início do ano, de janeiro a março, e demorou para estabilizar na porção central do período, semelhante ao comportamento do LR. Na porção final do período, o RF voltou a apresentar muitos \textit{outliers}, e um maior espalhamento, refletindo desafios na previsão de vazões extremas. A amplitude dos resíduos do RF variou entre $-600$ e $600$, igualando-se à da LR - figura \ref{fig:francisco_RF_WFV_ORIG_RESID_x_TEMPO}.
+
+De maneira geral, os modelos demonstraram que, durante períodos de variações elevadas nas precipitações e, consequentemente, nas vazões, apresentaram resultados incertos, evidenciados pela quantidade de \textit{outliers} tanto no início quanto no final do ano, com um resultado levemente melhor para o CB que teve menos \textit{outliers}. Ao que tudo indica, houve um certo atraso dos modelos em capturar eventos extremos, levando-os a dificuldades em responder rapidamente às mudanças abruptas nas condições hidrológicas. O CB apresentou uma boa prevalência dos resíduos na área entre $\pm 1,5 \times IQR$, apesar de algumas discrepâncias em períodos de alta variabilidade. O LR, embora com uma prevalência menor, apresentou também menor amplitude, houve equilíbrio entre estes dois aspectos, embora também tenha tido problemas com vazões extremas. O RF, apesar de sua estabilidade geral, também enfrentou desafios semelhantes em períodos de alta variabilidade. Estes resultados destacam a necessidade de aprimoramentos nos modelos para melhor capturar e responder a eventos hidrológicos extremos, potencialmente através da incorporação de mecanismos adicionais para lidar com sazonalidade e dependências temporais.
+
 \begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
-	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-	\label{fig:francisco_CB_WFV_ORIG_RESID_x_TEMPO}
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png}
+\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+\label{fig:francisco_CB_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png}
-	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-	\label{fig:francisco_LR_WFV_LOG_RESID_x_TEMPO}
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png}
+\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+\label{fig:francisco_LR_WFV_LOG_RESID_x_TEMPO}
 \end{figure}
 
 \begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
-	\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
-	\label{fig:francisco_RF_WFV_ORIG_RESID_x_TEMPO}
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png}
+\caption{Dispersão dos resíduos ao longo do ano.\\(fonte: o autor)}
+\label{fig:francisco_RF_WFV_ORIG_RESID_x_TEMPO}
 \end{figure}
 \clearpage
-
 
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
