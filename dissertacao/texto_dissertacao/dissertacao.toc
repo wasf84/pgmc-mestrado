@@ -45,12 +45,12 @@
 \contentsline {subsection}{\numberline {\textbf {{4.1}.2}}Rio Doce}{85}{subsection.151}%
 \contentsline {subsection}{\numberline {\textbf {{4.1}.3}}Rio Grande}{95}{subsection.164}%
 \contentsline {subsection}{\numberline {\textbf {{4.1}.4}}Rio São Francisco}{105}{subsection.177}%
-\contentsline {section}{\numberline {4.2}Importância das variáveis}{111}{section.184}%
-\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{111}{section.185}%
+\contentsline {section}{\numberline {4.2}Importância das variáveis}{115}{section.190}%
+\contentsline {section}{\numberline {4.3}Discuss\~ao dos resultados}{115}{section.191}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{112}{chapter.186}%
-\contentsline {section}{\numberline {5.1}Conclus\~ao}{112}{section.187}%
-\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{112}{section.188}%
-\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{112}{section.189}%
+\contentsline {chapter}{\chapternumberline {5}CONCLUS\~AO E PERSPECTIVAS}{116}{chapter.192}%
+\contentsline {section}{\numberline {5.1}Conclus\~ao}{116}{section.193}%
+\contentsline {section}{\numberline {5.2}Contribuiç\~oes para a área}{116}{section.194}%
+\contentsline {section}{\numberline {5.3}Recomendações para Trabalhos Futuros}{116}{section.195}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\bfseries REFER\^ENCIAS}{113}{chapter*.191}%
+\contentsline {chapter}{\bfseries REFER\^ENCIAS}{117}{chapter*.197}%

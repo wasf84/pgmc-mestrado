@@ -770,6 +770,56 @@ De maneira geral, os modelos demonstraram que, durante períodos de variações 
 \end{figure}
 \clearpage
 
+A análise comparativa dos resíduos dos modelos de previsão para o rio São Francisco revelou comportamentos semelhantes entre os diferentes algoritmos - figuras \ref{fig:francisco_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}, \ref{fig:francisco_LR_WFV_LOG_RESID_x_CURVA_NORMAL} e \ref{fig:francisco_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}. Todos os modelos demonstraram uma distribuição dos resíduos com cauda longa à direita, indicando assimetria positiva, com uma concentração central em torno de $0$, dentro de uma faixa que se estende de $-200$ a $200 m^3/s$. Essa característica sugere que, na maioria dos casos, os resíduos estiveram próximos ao valor esperado, mas houve uma tendência de ocorrência de erros discrepantes.
+
+No entanto, o modelo LR apresentou uma menor quantidade de resíduos elevados a partir do valor de $300 m^3/s$ quando comparado aos outros modelos, ainda que o modelo RF tenha tido resultado parecido. Este resultado do modelo LR reflete, assim, uma menor instabilidade quanto à presença de \textit{outliers} - mas é patente que todos tiveram \textit{outliers}, confirmados pelas análises anteriores. As medidas de assimetria aferidas foram de $2,19$ para o CB, $1,58$ para a LR e $1,75$ para o RF. Tais valores indicam que a distribuição dos resíduos do CB foi mais assimétrica em relação aos outros modelos, enquanto a LR apresentou a menor assimetria, conferindo uma distribuição mais equilibrada dos resíduos.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_CB_WFV_ORIG_RESID_x_CURVA_NORMAL}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png}
+\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_LR_WFV_LOG_RESID_x_CURVA_NORMAL}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png}
+\caption{Histograma e curva-normal dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_RF_WFV_ORIG_RESID_x_CURVA_NORMAL}
+\end{figure}
+\clearpage
+
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png}
+\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_CB_WFV_ORIG_RESID_ACF}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png}
+\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_LR_WFV_LOG_RESID_ACF}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png}
+\caption{Gráfico ACF dos resíduos.\\(fonte: o autor)}
+\label{fig:francisco_RF_WFV_ORIG_RESID_ACF}
+\end{figure}
+\clearpage
+
 \section{Importância das variáveis}
 %Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
 
