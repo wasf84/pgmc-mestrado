@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.16)  17 OCT 2024 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  18 OCT 2024 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,14 +360,14 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 105.
+(babel)             (\language24). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language13). Reported on input line 108.
+(babel)             (\language24). Reported on input line 108.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
 Package babel Info: Hyphen rules for 'brazil' set to \l@portuguese
-(babel)             (\language46). Reported on input line 111.
+(babel)             (\language4). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -1716,14 +1716,14 @@ Overfull \hbox (1.45839pt too wide) detected at line 111
 
 ] (./dissertacao.toc
 Overfull \hbox (2.03773pt too wide) detected at line 51
- \T1/lmr/bx/n/12 116
+ \T1/lmr/bx/n/12 117
  []
 
 [17
 
 ]
 Overfull \hbox (2.03773pt too wide) detected at line 56
- \T1/lmr/bx/n/12 117
+ \T1/lmr/bx/n/12 118
  []
 
 ) [18]
@@ -3032,60 +3032,59 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
  <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>] [11
 2 <./Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./F
 iguras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-Overfull \hbox (163.70343pt too wide) in paragraph at lines 799--800
-[]\T1/lmr/m/n/12 (-20) wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-wwwwwwwwwwwwww 
- []
-
-<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1427, 1154.3125
+<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1430, 1154.3125
 pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png Graphic file (
 type png)
 <use Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF
-.png  used on input line 803.
+.png  used on input line 807.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1428, 1154.3125p
+<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1431, 1154.3125p
 t x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png Graphic file (t
 ype png)
 <use Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.
-png  used on input line 810.
+png  used on input line 814.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1429, 1154.3125
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1432, 1154.3125
 pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png Graphic file (
 type png)
 <use Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png>
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF
-.png  used on input line 817.
+.png  used on input line 821.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [113
 
- <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png> <./Figuras/rio_
-sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png>] [114 <./Figuras/rio_sao_francis
-co/wfv/RF/RF_WFV_ORIG_RESID_ACF.png>]) [115
+ <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>] [114 <./Figura
+s/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png> <./Figuras/rio_sao_francis
+co/wfv/RF/RF_WFV_ORIG_RESID_ACF.png>] [115
 
-]
+]) [116]
 \openout2 = `cap5_conclusao.aux'.
 
  (./cap5_conclusao.tex)
-[116
+[117
 
 
 
 
-] (./dissertacao.bbl [117
+] (./dissertacao.bbl [118
 
 
 
-] [118] [119]) 
+] [119] [120]) 
 AED: lastpage setting LastPage
-[120]
+[121]
 \tf@lof=\write6
 \openout6 = `dissertacao.lof'.
 
@@ -3099,11 +3098,11 @@ AED: lastpage setting LastPage
 (./cap3_procedimentos_metodologicos.aux) (./cap4_resultados.aux)
 (./cap5_conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 30608 strings out of 478287
- 579543 string characters out of 5849289
- 926302 words of memory out of 5000000
+ 30611 strings out of 478287
+ 579573 string characters out of 5849289
+ 925307 words of memory out of 5000000
  47540 multiletter control sequences out of 15000+600000
- 544343 words of font info for 206 fonts, out of 8000000 for 9000
+ 544472 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,94p,2036b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
@@ -3121,10 +3120,10 @@ xmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8
 /type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmtt12.pfb>
-Output written on dissertacao.pdf (122 pages, 6197244 bytes).
+Output written on dissertacao.pdf (123 pages, 6203238 bytes).
 PDF statistics:
- 1833 PDF objects out of 2073 (max. 8388607)
- 1434 compressed objects within 15 object streams
- 369 named destinations out of 1000 (max. 500000)
+ 1840 PDF objects out of 2073 (max. 8388607)
+ 1440 compressed objects within 15 object streams
+ 370 named destinations out of 1000 (max. 500000)
  40419 words of extra memory for PDF output out of 42996 (max. 10000000)
 

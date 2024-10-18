@@ -796,7 +796,11 @@ No entanto, o modelo LR apresentou uma menor quantidade de resíduos elevados a 
 \end{figure}
 \clearpage
 
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+O modelo CB apresentou resíduos autocorrelacionados nas \textit{lags} iniciais, estendendo-se aproximadamente até a \textit{lag} $30$ - figura \ref{fig:francisco_CB_WFV_ORIG_RESID_ACF}. Posteriormente, os resíduos estabilizaram-se dentro da faixa de tolerância definida, demonstrando uma melhoria na independência dos erros. Notavelmente, mesmo no final do ano, quando os demais modelos exibiram resíduos fora da faixa ou no limite da mesma, o CB continuou a gerar resíduos estáveis, indicando robustez durante todo o período analisado. Nas \textit{lags} iniciais, o CB demonstrou um comportamento sazonal nos resíduos, sugerindo que certos padrões sazonais próximos não foram adequadamente capturados pelo modelo, resultando em autocorrelações residuais persistentes.
+
+Por sua vez, o modelo LR exibiu alguns resíduos autocorrelacionados nas \textit{lags} iniciais e também apresentou resíduos fora da faixa de tolerância no final do período. Contudo, a análise geral indicou que o comportamento do LR foi relativamente estável, suportado por uma faixa de tolerância bastante estreita. Essa estabilidade sugere que, apesar das autocorrelações observadas, o modelo manteve uma consistência na distribuição dos resíduos ao longo do tempo, minimizando a ocorrência de erros sistemáticos - figura \ref{fig:francisco_LR_WFV_LOG_RESID_ACF}.
+
+Finalmente, o modelo RF mostrou-se comportamentalmente semelhante ao modelo LR, apresentando também resíduos autocorrelacionados nas \textit{lags} iniciais. No entanto, o RF não registrou escapadas de resíduos fora da faixa de tolerância no final do período, ficando alguns pontos bem no limite. Além disso, o RF manteve uma faixa de tolerância igualmente estreita, refletindo uma alta qualidade e estabilidade nos resíduos gerados. Juntamente com o modelo LR, o RF destacou-se como um dos modelos que apresentaram maior qualidade e estabilidade na autocorrelação dos resíduos - figura \ref{fig:francisco_RF_WFV_ORIG_RESID_ACF}.
 
 \begin{figure}[!h]
 \centering
@@ -820,8 +824,35 @@ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 \end{figure}
 \clearpage
 
+Termina aqui a apresentação dos resultados para todos os rios e todos os modelos. Apesar de em alguns momentos ter sido discutido algumas observações importantes sobre o comportamento dos modelos, uma análise generalizada ficará para outra seção.
+
 \section{Importância das variáveis}
-%Analisar a importância das variáveis contínuas e categóricas na previsão (feature importance).
+
+A realização de uma análise das variáveis nos modelos de aprendizado de máquina é uma etapa fundamental que impacta diretamente a eficácia, interpretabilidade e confiabilidade dos resultados obtidos. Essa análise envolve a avaliação da importância e a relevância das variáveis de entrada (\textit{features}) no processo de previsão realizado pelos modelos.
+
+Primeiramente, a análise das variáveis permite identificar quais \textit{features} possuem maior influência sobre as previsões do modelo. Métodos como a importância das variáveis - \textit{feature importance} - em algoritmos baseados em árvores (por exemplo, RandomForest e CatBoost) ou técnicas de regressão regularizada (como Lasso e Ridge na Regressão Linear) fornecem vislumbres sobre quais variáveis contribuem mais significativamente para o desempenho do modelo. Compreender essa relevância é crucial para otimizar o modelo, eliminando variáveis redundantes ou pouco informativas que podem introduzir ruído e reduzir a precisão das previsões.
+
+Além disso, a análise das variáveis facilita a interpretação dos resultados do modelo. Em contextos onde a interpretabilidade é essencial, como em aplicações ambientais, entender como cada variável afeta a saída do modelo é fundamental para a tomada de decisões informadas e para a confiança nos resultados apresentados. Modelos que oferecem maior transparência, ou seja, cuja relação entre as variáveis de entrada e a saída é claramente compreensível, são preferíveis em cenários onde a explicabilidade dos resultados é tão importante quanto a sua precisão.
+
+Outro aspecto relevante é a detecção e mitigação de problemas de multicolinearidade e redundância entre as variáveis. Variáveis altamente correlacionadas podem levar a instabilidades nos coeficientes dos modelos e a uma interpretação distorcida da importância das variáveis. Essa análise, desta forma, permite identificar e tratar tais situações, seja por meio da remoção de variáveis redundantes ou da transformação das variáveis para eliminar a correlação excessiva.
+
+Ademais, a análise das variáveis contribui para a identificação de vieses e desequilíbrios nos dados. Variáveis que refletem vieses presentes no conjunto de dados podem levar a modelos que perpetuam ou amplificam esses vieses, resultando em previsões injustas ou não representativas. Ao avaliar a distribuição e a influência das variáveis, é possível detectar e corrigir esses vieses, promovendo equidade e justiça nas previsões do modelo.
+
+A análise das variáveis também desempenha um papel crucial na generalização do modelo. Variáveis irrelevantes ou excessivamente específicas ao conjunto de treinamento podem causar \textit{overfitting}, onde o modelo se ajusta excessivamente aos dados de treinamento e apresenta baixa performance em novos dados. Ao selecionar cuidadosamente as variáveis mais informativas e relevantes, é possível aumentar a capacidade de generalização do modelo, melhorando seu desempenho em cenários de aplicação real.
+
+Por fim, a análise das variáveis é essencial para a validação e a robustez do modelo. Avaliar a sensibilidade do modelo às mudanças nas variáveis de entrada e realizar testes de robustez ajuda a garantir que o modelo mantenha sua performance diante de variações nos dados ou de ruídos. Isso é particularmente importante em aplicações críticas onde a confiabilidade do modelo pode ter implicações significativas.
+
+%Em resumo, a análise das variáveis nos modelos de aprendizado de máquina é crucial para:
+%
+%1. **Identificação de Features Importantes:** Determinar quais variáveis influenciam mais as previsões, permitindo otimização e redução de complexidade.
+%2. **Interpretação e Transparência:** Facilitar a compreensão de como o modelo toma decisões, aumentando a confiança nos resultados.
+%3. **Mitigação de Multicolinearidade:** Detectar e tratar variáveis correlacionadas para evitar instabilidades e interpretações distorcidas.
+%4. **Detecção de Vieses:** Identificar e corrigir vieses nos dados, promovendo previsões justas e representativas.
+%5. **Prevenção de Overfitting:** Selecionar variáveis relevantes para melhorar a capacidade de generalização do modelo.
+%6. **Validação e Robustez:** Garantir que o modelo mantenha sua performance diante de variações e ruídos nos dados.
+
+Portanto, a análise das variáveis não apenas aprimora a performance dos modelos de aprendizado de máquina, mas também assegura que os resultados sejam interpretáveis, justos e aplicáveis em contextos reais, contribuindo significativamente para a qualidade e a relevância do trabalho final.
+
 
 \section{Discuss\~ao dos resultados}
 %Interpretar os resultados e discutir as limitações. Se possível, comparar com estudos anteriores.
