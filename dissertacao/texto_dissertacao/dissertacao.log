@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  18 OCT 2024 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.14)  20 OCT 2024 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1706,27 +1706,47 @@ Overfull \hbox (1.45839pt too wide) detected at line 111
 \T1/lmr/m/n/12 Figura 4.62 ^^U  
  []
 
-) [13] (./dissertacao.lot) [14
 
-] [15
+Overfull \hbox (1.45839pt too wide) detected at line 112
+\T1/lmr/m/n/12 Figura 4.63 ^^U  
+ []
 
+
+Overfull \hbox (1.45839pt too wide) detected at line 113
+\T1/lmr/m/n/12 Figura 4.64 ^^U  
+ []
+
+
+Overfull \hbox (1.45839pt too wide) detected at line 114
+\T1/lmr/m/n/12 Figura 4.65 ^^U  
+ []
+
+
+Overfull \hbox (1.45839pt too wide) detected at line 115
+\T1/lmr/m/n/12 Figura 4.66 ^^U  
+ []
+
+) [13] [14] (./dissertacao.lot) [15
 
 ] [16
 
 
-] (./dissertacao.toc [17
+] [17
+
+
+] (./dissertacao.toc [18
 
 ]
 Overfull \hbox (2.03773pt too wide) detected at line 52
- \T1/lmr/bx/n/12 117
+ \T1/lmr/bx/n/12 120
  []
 
 
 Overfull \hbox (2.03773pt too wide) detected at line 57
- \T1/lmr/bx/n/12 118
+ \T1/lmr/bx/n/12 121
  []
 
-) [18]
+) [19]
 \openout2 = `cap1_introducao.aux'.
 
  (./cap1_introducao.tex
@@ -1743,19 +1763,19 @@ Overfull \hbox (18.99236pt too wide) in paragraph at lines 27--27
  []
 
 
-LaTeX Warning: Marginpar on page 19 moved by 91.30128pt.
+LaTeX Warning: Marginpar on page 20 moved by 91.30128pt.
 
 
-LaTeX Warning: Marginpar on page 19 moved by 25.36215pt.
+LaTeX Warning: Marginpar on page 20 moved by 25.36215pt.
 
-[19
+[20
 
 
 
-]) [20]
+]) [21]
 \openout2 = `cap2_revisao.aux'.
 
- (./cap2_revisao.tex) [21
+ (./cap2_revisao.tex) [22
 
 
 
@@ -1764,7 +1784,7 @@ LaTeX Warning: Marginpar on page 19 moved by 25.36215pt.
 \openout2 = `cap3_procedimentos_metodologicos.aux'.
 
  (./cap3_procedimentos_metodologicos.tex
-[22
+[23
 
 
 
@@ -1774,7 +1794,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
 6.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [23] [24]
+) [24] [25]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 55.
 
@@ -1784,11 +1804,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] [26] [27
+[26] [27] [28
 
 ]
 * abntbibufjf: Il 
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png, id=676, 1154.3
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png, id=692, 1154.3
 125pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png Graphic fi
 le (type png)
@@ -1799,16 +1819,16 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28]
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png, id=6
-84, 1154.3125pt x 552.0625pt>
+[29]
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png, id=7
+01, 1154.3125pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png 
 Graphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png>
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
 0000-2013_2016.png  used on input line 157.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png, id=685
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png, id=702
 , 1154.3125pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png Gr
 aphic file (type png)
@@ -1820,8 +1840,8 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png, id=6
-88, 1154.3125pt x 552.0625pt>
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png, id=7
+05, 1154.3125pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png 
 Graphic file (type png)
 <use Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png>
@@ -1831,7 +1851,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_5479
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png, id=689
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png, id=706
 , 1154.3125pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png Gr
 aphic file (type png)
@@ -1842,7 +1862,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png, id=691, 1154.312
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png, id=708, 1154.312
 5pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png Graphic file
  (type png)
@@ -1853,7 +1873,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_547900
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png, id=694, 1154.3
+<Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png, id=711, 1154.3
 125pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png Graphic fi
 le (type png)
@@ -1864,7 +1884,7 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieIncompleta_t_cv_5479
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png, id=697, 1154.312
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png, id=714, 1154.312
 5pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png Graphic file
  (type png)
@@ -1872,12 +1892,12 @@ File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_54790000.png Graphic file
 Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_547900
 00.png  used on input line 207.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-[29 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png> <./Figur
+[30 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000.png> <./Figur
 as/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2013_2016.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png, id=705, 1154.312
+<Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png, id=721, 1154.312
 5pt x 552.0625pt>
 File: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_01640000.png Graphic file
  (type png)
@@ -1888,14 +1908,14 @@ Package pdftex.def Info: Figuras/jequiti/jequitinhonhaSerieCompleta_t_cv_016400
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png> 
+[31 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2013_2016.png> 
 <./Figuras/jequiti/jequitinhonhaSerieIncompleta_t_vz_54790000-2021_2022.png> <.
 /Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000-2021_2022.png>]
-[31 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png> <./Figuras
+[32 <./Figuras/jequiti/jequitinhonhaSerieCompleta_t_vz_54790000.png> <./Figuras
 /jequiti/jequitinhonhaSerieIncompleta_t_cv_54790000.png> <./Figuras/jequiti/jeq
-uitinhonhaSerieCompleta_t_cv_54790000.png>] [32 <./Figuras/jequiti/jequitinhonh
+uitinhonhaSerieCompleta_t_cv_54790000.png>] [33 <./Figuras/jequiti/jequitinhonh
 aSerieCompleta_t_cv_01640000.png>]
-<Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png, id=726, 1154.3125pt x 55
+<Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png, id=743, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png Graphic file (type p
 ng)
@@ -1903,7 +1923,7 @@ ng)
 Package pdftex.def Info: Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png  
 used on input line 226.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-<Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png, id=729, 1154.3125pt x 
+<Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png, id=746, 1154.3125pt x 
 552.0625pt>
 File: Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png Graphic file (type
  png)
@@ -1915,7 +1935,7 @@ Package pdftex.def Info: Figuras/rio_doce/doceSerieIncompleta_t_cv_56990850.png
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png, id=730, 1154.3125pt x 55
+<Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png, id=747, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/doceSerieCompleta_t_cv_56994500.png Graphic file (type p
 ng)
@@ -1926,7 +1946,7 @@ used on input line 244.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png, id=735, 1154.3125pt x 55
+<Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png, id=752, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png Graphic file (type p
 ng)
@@ -1937,7 +1957,7 @@ used on input line 266.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png, id=736, 1154.3125pt x 55
+<Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png, id=753, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png Graphic file (type p
 ng)
@@ -1948,7 +1968,7 @@ used on input line 273.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png, id=737, 1154.3125pt x 55
+<Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png, id=754, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/doceSerieCompleta_c_cv_01941006.png Graphic file (type p
 ng)
@@ -1959,7 +1979,7 @@ used on input line 280.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png, id=738, 1154.3125pt x 55
+<Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png, id=755, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_doce/doceSerieCompleta_t_cv_56990005.png Graphic file (type p
 ng)
@@ -1970,15 +1990,15 @@ used on input line 287.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33
+[34
 
- <./Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png>] [34 <./Figuras/rio_d
+ <./Figuras/rio_doce/doceSerieCompleta_c_vz_56994500.png>] [35 <./Figuras/rio_d
 oce/doceSerieIncompleta_t_cv_56990850.png> <./Figuras/rio_doce/doceSerieComplet
 a_t_cv_56994500.png> <./Figuras/rio_doce/doceSerieCompleta_c_cv_01941010.png>] 
-[35 <./Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png> <./Figuras/rio_doc
+[36 <./Figuras/rio_doce/doceSerieCompleta_c_cv_01941004.png> <./Figuras/rio_doc
 e/doceSerieCompleta_c_cv_01941006.png> <./Figuras/rio_doce/doceSerieCompleta_t_
 cv_56990005.png>]
-<Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png, id=761, 1154.3125p
+<Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png, id=777, 1154.3125p
 t x 552.0625pt>
 File: Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png Graphic file (
 type png)
@@ -1986,7 +2006,7 @@ type png)
 Package pdftex.def Info: Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080
 .png  used on input line 301.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-<Figuras/rio_grande/serie_completa_estacao_t_vz_62020080.png, id=763, 1154.3125
+<Figuras/rio_grande/serie_completa_estacao_t_vz_62020080.png, id=779, 1154.3125
 pt x 552.0625pt>
 File: Figuras/rio_grande/serie_completa_estacao_t_vz_62020080.png Graphic file 
 (type png)
@@ -1994,11 +2014,11 @@ File: Figuras/rio_grande/serie_completa_estacao_t_vz_62020080.png Graphic file
 Package pdftex.def Info: Figuras/rio_grande/serie_completa_estacao_t_vz_6202008
 0.png  used on input line 310.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
- [36
+ [37
 
  <./Figuras/rio_grande/grandeSerieIncompleta_t_vz_62020080.png> <./Figuras/rio_
 grande/serie_completa_estacao_t_vz_62020080.png>]
-<Figuras/rio_grande/serie_completa_estacao_t_cv_61998080.png, id=771, 1154.3125
+<Figuras/rio_grande/serie_completa_estacao_t_cv_61998080.png, id=787, 1154.3125
 pt x 552.0625pt>
 File: Figuras/rio_grande/serie_completa_estacao_t_cv_61998080.png Graphic file 
 (type png)
@@ -2007,9 +2027,9 @@ Package pdftex.def Info: Figuras/rio_grande/serie_completa_estacao_t_cv_6199808
 0.png  used on input line 321.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
 
-[37 <./Figuras/rio_grande/serie_completa_estacao_t_cv_61998080.png>]
+[38 <./Figuras/rio_grande/serie_completa_estacao_t_cv_61998080.png>]
 <Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.png, 
-id=779, 1154.3125pt x 552.0625pt>
+id=795, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.
 png Graphic file (type png)
 <use Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.p
@@ -2017,7 +2037,7 @@ ng>
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_v
 z_44290002-detalhe.png  used on input line 335.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png, id=780, 11
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png, id=796, 11
 54.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png Graphi
 c file (type png)
@@ -2025,11 +2045,11 @@ c file (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_
 44290002.png  used on input line 342.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
- [38
+ [39
 
  <./Figuras/rio_sao_francisco/franciscoSerieIncompleta_c_vz_44290002-detalhe.pn
 g> <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_vz_44290002.png>]
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png, id=790, 11
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png, id=806, 11
 54.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png Graphi
 c file (type png)
@@ -2037,7 +2057,7 @@ c file (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
 01544017.png  used on input line 352.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png, id=791, 11
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png, id=807, 11
 54.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png Graphi
 c file (type png)
@@ -2045,7 +2065,7 @@ c file (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
 01544032.png  used on input line 359.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
-<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png, id=792, 11
+<Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png, id=808, 11
 54.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544036.png Graphi
 c file (type png)
@@ -2053,11 +2073,11 @@ c file (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_
 01544036.png  used on input line 366.
 (pdftex.def)             Requested size: 288.57742pt x 138.01527pt.
- [39
+ [40
 
  <./Figuras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544017.png> <./Figu
 ras/rio_sao_francisco/franciscoSerieCompleta_c_cv_01544032.png> <./Figuras/rio_
-sao_francisco/franciscoSerieCompleta_c_cv_01544036.png>] [40
+sao_francisco/franciscoSerieCompleta_c_cv_01544036.png>] [41
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2066,16 +2086,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 448.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 448.
- [41
+ [42
 
-] [42]
-<Figuras/jequiti/acf_jequitinhonha.png, id=828, 1154.3125pt x 552.0625pt>
+] [43]
+<Figuras/jequiti/acf_jequitinhonha.png, id=844, 1154.3125pt x 552.0625pt>
 File: Figuras/jequiti/acf_jequitinhonha.png Graphic file (type png)
 <use Figuras/jequiti/acf_jequitinhonha.png>
 Package pdftex.def Info: Figuras/jequiti/acf_jequitinhonha.png  used on input l
 ine 466.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/sazonalidade_jequitinhonha.png, id=829, 1154.3125pt x 552.0625
+<Figuras/jequiti/sazonalidade_jequitinhonha.png, id=845, 1154.3125pt x 552.0625
 pt>
 File: Figuras/jequiti/sazonalidade_jequitinhonha.png Graphic file (type png)
 <use Figuras/jequiti/sazonalidade_jequitinhonha.png>
@@ -2086,7 +2106,7 @@ n input line 473.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/acf_doce.png, id=830, 1154.3125pt x 552.0625pt>
+<Figuras/rio_doce/acf_doce.png, id=846, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_doce/acf_doce.png Graphic file (type png)
 <use Figuras/rio_doce/acf_doce.png>
 Package pdftex.def Info: Figuras/rio_doce/acf_doce.png  used on input line 480.
@@ -2095,7 +2115,7 @@ Package pdftex.def Info: Figuras/rio_doce/acf_doce.png  used on input line 480.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/decomposicao_serie_c_vz_56994500.png, id=831, 1154.3125pt x 5
+<Figuras/rio_doce/decomposicao_serie_c_vz_56994500.png, id=847, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/rio_doce/decomposicao_serie_c_vz_56994500.png Graphic file (type 
 png)
@@ -2106,7 +2126,7 @@ Package pdftex.def Info: Figuras/rio_doce/decomposicao_serie_c_vz_56994500.png
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/acf_grande.png, id=832, 1154.3125pt x 552.0625pt>
+<Figuras/rio_grande/acf_grande.png, id=848, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_grande/acf_grande.png Graphic file (type png)
 <use Figuras/rio_grande/acf_grande.png>
 Package pdftex.def Info: Figuras/rio_grande/acf_grande.png  used on input line 
@@ -2115,7 +2135,7 @@ Package pdftex.def Info: Figuras/rio_grande/acf_grande.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/decomposicao_serie_t_vz_62020080.png, id=833, 1154.3125pt x
+<Figuras/rio_grande/decomposicao_serie_t_vz_62020080.png, id=849, 1154.3125pt x
  552.0625pt>
 File: Figuras/rio_grande/decomposicao_serie_t_vz_62020080.png Graphic file (typ
 e png)
@@ -2126,7 +2146,7 @@ g  used on input line 501.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/acf_sao_francisco.png, id=834, 1154.3125pt x 552.062
+<Figuras/rio_sao_francisco/acf_sao_francisco.png, id=850, 1154.3125pt x 552.062
 5pt>
 File: Figuras/rio_sao_francisco/acf_sao_francisco.png Graphic file (type png)
 <use Figuras/rio_sao_francisco/acf_sao_francisco.png>
@@ -2136,7 +2156,7 @@ on input line 508.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/decomposicao_serie_c_vz_44290002.png, id=835, 1154.3
+<Figuras/rio_sao_francisco/decomposicao_serie_c_vz_44290002.png, id=851, 1154.3
 125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/decomposicao_serie_c_vz_44290002.png Graphic fi
 le (type png)
@@ -2147,10 +2167,10 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/decomposicao_serie_c_vz_4429
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[43 <./Figuras/jequiti/acf_jequitinhonha.png>] [44 <./Figuras/jequiti/sazonalid
-ade_jequitinhonha.png> <./Figuras/rio_doce/acf_doce.png>] [45 <./Figuras/rio_do
+[44 <./Figuras/jequiti/acf_jequitinhonha.png>] [45 <./Figuras/jequiti/sazonalid
+ade_jequitinhonha.png> <./Figuras/rio_doce/acf_doce.png>] [46 <./Figuras/rio_do
 ce/decomposicao_serie_c_vz_56994500.png> <./Figuras/rio_grande/acf_grande.png>]
-<Figuras/jequiti/jequitinhonha_antes_log.png, id=868, 1154.3125pt x 552.0625pt>
+<Figuras/jequiti/jequitinhonha_antes_log.png, id=885, 1154.3125pt x 552.0625pt>
 
 File: Figuras/jequiti/jequitinhonha_antes_log.png Graphic file (type png)
 <use Figuras/jequiti/jequitinhonha_antes_log.png>
@@ -2160,7 +2180,7 @@ nput line 542.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/jequitinhonha_depois_log.png, id=869, 1154.3125pt x 552.0625pt
+<Figuras/jequiti/jequitinhonha_depois_log.png, id=886, 1154.3125pt x 552.0625pt
 >
 File: Figuras/jequiti/jequitinhonha_depois_log.png Graphic file (type png)
 <use Figuras/jequiti/jequitinhonha_depois_log.png>
@@ -2170,7 +2190,7 @@ input line 549.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/rio_doce_antes_log.png, id=870, 1154.3125pt x 552.0625pt>
+<Figuras/rio_doce/rio_doce_antes_log.png, id=887, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_doce/rio_doce_antes_log.png Graphic file (type png)
 <use Figuras/rio_doce/rio_doce_antes_log.png>
 Package pdftex.def Info: Figuras/rio_doce/rio_doce_antes_log.png  used on input
@@ -2179,7 +2199,7 @@ Package pdftex.def Info: Figuras/rio_doce/rio_doce_antes_log.png  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/rio_doce_depois_log.png, id=871, 1154.3125pt x 552.0625pt>
+<Figuras/rio_doce/rio_doce_depois_log.png, id=888, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_doce/rio_doce_depois_log.png Graphic file (type png)
 <use Figuras/rio_doce/rio_doce_depois_log.png>
 Package pdftex.def Info: Figuras/rio_doce/rio_doce_depois_log.png  used on inpu
@@ -2188,7 +2208,7 @@ t line 563.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/grande_estacao_t_vz_62020080_original.png, id=872, 1154.312
+<Figuras/rio_grande/grande_estacao_t_vz_62020080_original.png, id=889, 1154.312
 5pt x 552.0625pt>
 File: Figuras/rio_grande/grande_estacao_t_vz_62020080_original.png Graphic file
  (type png)
@@ -2199,7 +2219,7 @@ al.png  used on input line 570.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/grande_estacao_t_vz_62020080_log.png, id=873, 1154.3125pt x
+<Figuras/rio_grande/grande_estacao_t_vz_62020080_log.png, id=890, 1154.3125pt x
  552.0625pt>
 File: Figuras/rio_grande/grande_estacao_t_vz_62020080_log.png Graphic file (typ
 e png)
@@ -2211,7 +2231,7 @@ g  used on input line 577.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_original.png, id
-=874, 1154.3125pt x 552.0625pt>
+=891, 1154.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_original.pn
 g Graphic file (type png)
 <use Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_original.png
@@ -2222,7 +2242,7 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_4
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_log.png, id=875,
+<Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_log.png, id=892,
  1154.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_44290002_log.png Gra
 phic file (type png)
@@ -2233,40 +2253,40 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/sao_francisco_estacao_c_vz_4
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46 <./Figuras/rio_grande/decomposicao_serie_t_vz_62020080.png> <./Figuras/rio_
-sao_francisco/acf_sao_francisco.png>] [47 <./Figuras/rio_sao_francisco/decompos
+[47 <./Figuras/rio_grande/decomposicao_serie_t_vz_62020080.png> <./Figuras/rio_
+sao_francisco/acf_sao_francisco.png>] [48 <./Figuras/rio_sao_francisco/decompos
 icao_serie_c_vz_44290002.png> <./Figuras/jequiti/jequitinhonha_antes_log.png> <
-./Figuras/jequiti/jequitinhonha_depois_log.png>] [48 <./Figuras/rio_doce/rio_do
+./Figuras/jequiti/jequitinhonha_depois_log.png>] [49 <./Figuras/rio_doce/rio_do
 ce_antes_log.png> <./Figuras/rio_doce/rio_doce_depois_log.png> <./Figuras/rio_g
-rande/grande_estacao_t_vz_62020080_original.png>] [49 <./Figuras/rio_grande/gra
+rande/grande_estacao_t_vz_62020080_original.png>] [50 <./Figuras/rio_grande/gra
 nde_estacao_t_vz_62020080_log.png> <./Figuras/rio_sao_francisco/sao_francisco_e
 stacao_c_vz_44290002_original.png> <./Figuras/rio_sao_francisco/sao_francisco_e
-stacao_c_vz_44290002_log.png>] [50
+stacao_c_vz_44290002_log.png>] [51
 
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[51]
+[52]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[52] [53] [54]
-<Figuras/skforecast-diagram-backtesting-refit.png, id=966, 1110.1475pt x 328.22
+[53] [54] [55]
+<Figuras/skforecast-diagram-backtesting-refit.png, id=982, 1110.1475pt x 328.22
 626pt>
 File: Figuras/skforecast-diagram-backtesting-refit.png Graphic file (type png)
 <use Figuras/skforecast-diagram-backtesting-refit.png>
 Package pdftex.def Info: Figuras/skforecast-diagram-backtesting-refit.png  used
  on input line 771.
 (pdftex.def)             Requested size: 333.04681pt x 98.46863pt.
-<Figuras/imagem1_skforecast-backtesting-refit.png, id=969, 903.375pt x 401.5pt>
+<Figuras/imagem1_skforecast-backtesting-refit.png, id=985, 903.375pt x 401.5pt>
 
 File: Figuras/imagem1_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem1_skforecast-backtesting-refit.png>
 Package pdftex.def Info: Figuras/imagem1_skforecast-backtesting-refit.png  used
  on input line 778.
 (pdftex.def)             Requested size: 271.01459pt x 120.45091pt.
-<Figuras/imagem2_skforecast-backtesting-refit.png, id=972, 903.375pt x 401.5pt>
+<Figuras/imagem2_skforecast-backtesting-refit.png, id=988, 903.375pt x 401.5pt>
 
 File: Figuras/imagem2_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem2_skforecast-backtesting-refit.png>
@@ -2277,7 +2297,7 @@ Package pdftex.def Info: Figuras/imagem2_skforecast-backtesting-refit.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/imagem3_skforecast-backtesting-refit.png, id=975, 903.375pt x 401.5pt>
+<Figuras/imagem3_skforecast-backtesting-refit.png, id=991, 903.375pt x 401.5pt>
 
 File: Figuras/imagem3_skforecast-backtesting-refit.png Graphic file (type png)
 <use Figuras/imagem3_skforecast-backtesting-refit.png>
@@ -2287,17 +2307,17 @@ Package pdftex.def Info: Figuras/imagem3_skforecast-backtesting-refit.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[55 <./Figuras/skforecast-diagram-backtesting-refit.png> <./Figuras/imagem1_skf
+[56 <./Figuras/skforecast-diagram-backtesting-refit.png> <./Figuras/imagem1_skf
 orecast-backtesting-refit.png>]
-<Figuras/diagram-bootstrapping-prediction-intervals.png, id=987, 1988.42876pt x
- 1109.14375pt>
+<Figuras/diagram-bootstrapping-prediction-intervals.png, id=1003, 1988.42876pt 
+x 1109.14375pt>
 File: Figuras/diagram-bootstrapping-prediction-intervals.png Graphic file (type
  png)
 <use Figuras/diagram-bootstrapping-prediction-intervals.png>
 Package pdftex.def Info: Figuras/diagram-bootstrapping-prediction-intervals.png
   used on input line 835.
 (pdftex.def)             Requested size: 338.02841pt x 188.55194pt.
- [56 <./Figuras/imagem2_skforecast-backtesting-refit.png> <./Figuras/imagem3_sk
+ [57 <./Figuras/imagem2_skforecast-backtesting-refit.png> <./Figuras/imagem3_sk
 forecast-backtesting-refit.png> <./Figuras/diagram-bootstrapping-prediction-int
 ervals.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
@@ -2310,13 +2330,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<Figuras/intervalo_previsao_1.png, id=999, 929.4725pt x 210.7875pt>
+<Figuras/intervalo_previsao_1.png, id=1016, 929.4725pt x 210.7875pt>
 File: Figuras/intervalo_previsao_1.png Graphic file (type png)
 <use Figuras/intervalo_previsao_1.png>
 Package pdftex.def Info: Figuras/intervalo_previsao_1.png  used on input line 8
 62.
 (pdftex.def)             Requested size: 371.78242pt x 84.3135pt.
-<Figuras/intervalo_previsao_2.png, id=1000, 928.46875pt x 210.7875pt>
+<Figuras/intervalo_previsao_2.png, id=1017, 928.46875pt x 210.7875pt>
 File: Figuras/intervalo_previsao_2.png Graphic file (type png)
 <use Figuras/intervalo_previsao_2.png>
 Package pdftex.def Info: Figuras/intervalo_previsao_2.png  used on input line 8
@@ -2326,9 +2346,9 @@ Package pdftex.def Info: Figuras/intervalo_previsao_2.png  used on input line 8
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[57 <./Figuras/intervalo_previsao_1.png>] [58 <./Figuras/intervalo_previsao_2.p
-ng>] [59]
-<Figuras/flowchart.png, id=1026, 570.13pt x 1645.14626pt>
+[58 <./Figuras/intervalo_previsao_1.png>] [59 <./Figuras/intervalo_previsao_2.p
+ng>] [60]
+<Figuras/flowchart.png, id=1042, 570.13pt x 1645.14626pt>
 File: Figuras/flowchart.png Graphic file (type png)
 <use Figuras/flowchart.png>
 Package pdftex.def Info: Figuras/flowchart.png  used on input line 918.
@@ -2337,11 +2357,11 @@ Package pdftex.def Info: Figuras/flowchart.png  used on input line 918.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [60 <./Figuras/flowchart.png>]
+) [61 <./Figuras/flowchart.png>]
 \openout2 = `cap4_resultados.aux'.
 
  (./cap4_resultados.tex
-<Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png, id=1032, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png, id=1048, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png  used on input 
@@ -2351,14 +2371,14 @@ line 19.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[61
+[62
 
 
 
 
 
-] [62 <./Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png>]
-<Figuras/jequiti/wfv/LR/LR_WFV_LOG.png, id=1044, 1154.3125pt x 752.8125pt>
+] [63 <./Figuras/jequiti/wfv/SN/SN_WFV_ORIG.png>]
+<Figuras/jequiti/wfv/LR/LR_WFV_LOG.png, id=1060, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_LOG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/LR/LR_WFV_LOG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/LR/LR_WFV_LOG.png  used on input l
@@ -2368,7 +2388,7 @@ ine 35.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/LR_final_2022_detalhe.png, id=1045, 1154.3125pt x 552.0625pt>
+<Figuras/jequiti/LR_final_2022_detalhe.png, id=1061, 1154.3125pt x 552.0625pt>
 File: Figuras/jequiti/LR_final_2022_detalhe.png Graphic file (type png)
 <use Figuras/jequiti/LR_final_2022_detalhe.png>
 Package pdftex.def Info: Figuras/jequiti/LR_final_2022_detalhe.png  used on inp
@@ -2377,11 +2397,11 @@ ut line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[63
+[64
 
-] [64 <./Figuras/jequiti/wfv/LR/LR_WFV_LOG.png> <./Figuras/jequiti/LR_final_202
+] [65 <./Figuras/jequiti/wfv/LR/LR_WFV_LOG.png> <./Figuras/jequiti/LR_final_202
 2_detalhe.png>]
-<Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png, id=1060, 1154.3125pt x 55
+<Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png, id=1077, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png Graphic file (type pn
 g)
@@ -2389,7 +2409,7 @@ g)
 Package pdftex.def Info: Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png  u
 sed on input line 66.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1061, 1154.3125
+<Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1078, 1154.3125
 pt x 552.0625pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic file (
 type png)
@@ -2401,7 +2421,7 @@ Package pdftex.def Info: Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1062, 1154.3125pt x 552.06
+<Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1079, 1154.3125pt x 552.06
 25pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_ACF.png Graphic file (type png)
 <use Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_ACF.png>
@@ -2411,10 +2431,10 @@ on input line 80.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[65 <./Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png>] [66 <./Figuras/jeq
+[66 <./Figuras/jequiti/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png>] [67 <./Figuras/jeq
 uiti/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./Figuras/jequiti/wfv/LR/LR_W
 FV_LOG_RESID_ACF.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_LOG.png, id=1080, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/wfv/CB/CB_WFV_LOG.png, id=1096, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_LOG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/CB/CB_WFV_LOG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_LOG.png  used on input l
@@ -2424,7 +2444,7 @@ ine 98.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/wfv/RF/RF_WFV_LOG.png, id=1081, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/wfv/RF/RF_WFV_LOG.png, id=1097, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_LOG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/RF/RF_WFV_LOG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/RF/RF_WFV_LOG.png  used on input l
@@ -2433,11 +2453,11 @@ ine 105.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67
+[68
 
-] [68 <./Figuras/jequiti/wfv/CB/CB_WFV_LOG.png> <./Figuras/jequiti/wfv/RF/RF_WF
+] [69 <./Figuras/jequiti/wfv/CB/CB_WFV_LOG.png> <./Figuras/jequiti/wfv/RF/RF_WF
 V_LOG.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png, id=1094, 1154.3125pt x 55
+<Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png, id=1110, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png Graphic file (type pn
 g)
@@ -2445,7 +2465,7 @@ g)
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png  u
 sed on input line 134.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_TEMPO.png, id=1095, 1154.3125pt x 55
+<Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_TEMPO.png, id=1111, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_TEMPO.png Graphic file (type pn
 g)
@@ -2457,11 +2477,11 @@ sed on input line 141.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[69
+[70
 
- <./Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png>] [70 <./Figuras/jequit
+ <./Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_TEMPO.png>] [71 <./Figuras/jequit
 i/wfv/RF/RF_WFV_LOG_RESID_x_TEMPO.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1106, 1154.3125
+<Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1123, 1154.3125
 pt x 552.0625pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic file (
 type png)
@@ -2469,7 +2489,7 @@ type png)
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL
 .png  used on input line 151.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1107, 1154.3125
+<Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1124, 1154.3125
 pt x 552.0625pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic file (
 type png)
@@ -2477,18 +2497,18 @@ type png)
 Package pdftex.def Info: Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL
 .png  used on input line 158.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
- [71
+ [72
 
  <./Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./Figuras/jequ
 iti/wfv/RF/RF_WFV_LOG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png, id=1115, 1154.3125pt x 552.06
+<Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png, id=1131, 1154.3125pt x 552.06
 25pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png Graphic file (type png)
 <use Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png  used 
 on input line 170.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_ACF.png, id=1116, 1154.3125pt x 552.06
+<Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_ACF.png, id=1132, 1154.3125pt x 552.06
 25pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_ACF.png Graphic file (type png)
 <use Figuras/jequiti/wfv/RF/RF_WFV_LOG_RESID_ACF.png>
@@ -2499,11 +2519,11 @@ on input line 177.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[72
+[73
 
- <./Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png>] [73 <./Figuras/jequiti/wf
+ <./Figuras/jequiti/wfv/CB/CB_WFV_LOG_RESID_ACF.png>] [74 <./Figuras/jequiti/wf
 v/RF/RF_WFV_LOG_RESID_ACF.png>]
-<Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png, id=1132, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png, id=1148, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png  used on input 
@@ -2513,7 +2533,7 @@ line 193.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png, id=1133, 1154.3125pt x 5
+<Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png, id=1149, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png Graphic file (type p
 ng)
@@ -2524,7 +2544,7 @@ used on input line 207.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1134, 1154.312
+<Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1150, 1154.312
 5pt x 552.0625pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file 
 (type png)
@@ -2535,7 +2555,7 @@ L.png  used on input line 214.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png, id=1135, 1154.3125pt x 552.0
+<Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png, id=1151, 1154.3125pt x 552.0
 625pt>
 File: Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png Graphic file (type png)
 <use Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png>
@@ -2545,18 +2565,18 @@ Package pdftex.def Info: Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[74
+[75
 
-] [75 <./Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png> <./Figuras/jequiti/wfv/LR/LR_W
-FV_ORIG_RESID_x_TEMPO.png>] [76 <./Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_C
+] [76 <./Figuras/jequiti/wfv/LR/LR_WFV_ORIG.png> <./Figuras/jequiti/wfv/LR/LR_W
+FV_ORIG_RESID_x_TEMPO.png>] [77 <./Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_x_C
 URVA_NORMAL.png> <./Figuras/jequiti/wfv/LR/LR_WFV_ORIG_RESID_ACF.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png, id=1153, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png, id=1170, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png  used on input 
 line 233.
 (pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
-<Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png, id=1154, 1154.3125pt x 752.8125pt>
+<Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png, id=1171, 1154.3125pt x 752.8125pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png Graphic file (type png)
 <use Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/jequiti/wfv/RF/RF_WFV_ORIG.png  used on input 
@@ -2566,11 +2586,11 @@ line 240.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[77
+[78
 
- <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png>] [78 <./Figuras/jequiti/wfv/RF/RF_W
+ <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG.png>] [79 <./Figuras/jequiti/wfv/RF/RF_W
 FV_ORIG.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1168, 1154.3125pt x 5
+<Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1184, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png Graphic file (type p
 ng)
@@ -2578,7 +2598,7 @@ ng)
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png  
 used on input line 271.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1169, 1154.3125pt x 5
+<Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1185, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png Graphic file (type p
 ng)
@@ -2590,11 +2610,11 @@ used on input line 278.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[79
+[80
 
- <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png>] [80 <./Figuras/jequi
+ <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png>] [81 <./Figuras/jequi
 ti/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1182, 1154.312
+<Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1198, 1154.312
 5pt x 552.0625pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file 
 (type png)
@@ -2602,7 +2622,7 @@ File: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file
 Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMA
 L.png  used on input line 292.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1183, 1154.312
+<Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1199, 1154.312
 5pt x 552.0625pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file 
 (type png)
@@ -2614,11 +2634,11 @@ L.png  used on input line 299.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[81
+[82
 
- <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>] [82 <./Figura
+ <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>] [83 <./Figura
 s/jequiti/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1196, 1154.3125pt x 552.0
+<Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1213, 1154.3125pt x 552.0
 625pt>
 File: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png Graphic file (type png)
 <use Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>
@@ -2629,7 +2649,7 @@ Package pdftex.def Info: Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1197, 1154.3125pt x 552.0
+<Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1214, 1154.3125pt x 552.0
 625pt>
 File: Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png Graphic file (type png)
 <use Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png>
@@ -2639,18 +2659,18 @@ Package pdftex.def Info: Figuras/jequiti/wfv/RF/RF_WFV_ORIG_RESID_ACF.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[83
+[84
 
-] [84 <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png> <./Figuras/jequiti/w
+] [85 <./Figuras/jequiti/wfv/CB/CB_WFV_ORIG_RESID_ACF.png> <./Figuras/jequiti/w
 fv/RF/RF_WFV_ORIG_RESID_ACF.png>]
 Overfull \hbox (88.44344pt too wide) in paragraph at lines 330--331
 []\T1/lmr/m/n/12 (-20) Uma coisa que pre-cisa fi-car claro aqui: $[]$.
  []
 
-[85
+[86
 
 ]
-<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png, id=1216, 1154.3125pt x 752.8125pt>
+<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png, id=1232, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png  used on input
@@ -2660,7 +2680,7 @@ Package pdftex.def Info: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png, id=1217, 1154.3125pt x 752.8125pt>
+<Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png, id=1233, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/LR/LR_WFV_LOG.png  used on input 
@@ -2669,7 +2689,7 @@ line 366.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png, id=1218, 1154.3125pt x 752.8125pt>
+<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png, id=1234, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png  used on input
@@ -2678,9 +2698,9 @@ Package pdftex.def Info: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[86] [87 <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png> <./Figuras/rio_doce/wfv/LR
-/LR_WFV_LOG.png>] [88 <./Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png>]
-<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1238, 1154.3125pt x 
+[87] [88 <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG.png> <./Figuras/rio_doce/wfv/LR
+/LR_WFV_LOG.png>] [89 <./Figuras/rio_doce/wfv/RF/RF_WFV_ORIG.png>]
+<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1255, 1154.3125pt x 
 552.0625pt>
 File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png Graphic file (type 
 png)
@@ -2688,7 +2708,7 @@ png)
 Package pdftex.def Info: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png 
  used on input line 427.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png, id=1239, 1154.3125pt x 5
+<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png, id=1256, 1154.3125pt x 5
 52.0625pt>
 File: Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png Graphic file (type p
 ng)
@@ -2700,7 +2720,7 @@ used on input line 434.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1240, 1154.3125pt x 
+<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1257, 1154.3125pt x 
 552.0625pt>
 File: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png Graphic file (type 
 png)
@@ -2711,12 +2731,12 @@ Package pdftex.def Info: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[89
+[90
 
- <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png>] [90 <./Figuras/rio_
+ <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png>] [91 <./Figuras/rio_
 doce/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png> <./Figuras/rio_doce/wfv/RF/RF_WFV_ORI
 G_RESID_x_TEMPO.png>]
-<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1258, 1154.31
+<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1274, 1154.31
 25pt x 552.0625pt>
 File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file
  (type png)
@@ -2724,7 +2744,7 @@ File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file
 Package pdftex.def Info: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORM
 AL.png  used on input line 453.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1259, 1154.312
+<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1275, 1154.312
 5pt x 552.0625pt>
 File: Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png Graphic file 
 (type png)
@@ -2736,7 +2756,7 @@ L.png  used on input line 460.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1260, 1154.31
+<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1276, 1154.31
 25pt x 552.0625pt>
 File: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic file
  (type png)
@@ -2747,12 +2767,12 @@ AL.png  used on input line 467.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[91
+[92
 
- <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>] [92 <./Figur
+ <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>] [93 <./Figur
 as/rio_doce/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./Figuras/rio_doce/wfv
 /RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1275, 1154.3125pt x 552.
+<Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1291, 1154.3125pt x 552.
 0625pt>
 File: Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png Graphic file (type png)
 
@@ -2764,7 +2784,7 @@ d on input line 481.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1276, 1154.3125pt x 552.0
+<Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1292, 1154.3125pt x 552.0
 625pt>
 File: Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png Graphic file (type png)
 <use Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png>
@@ -2774,7 +2794,7 @@ Package pdftex.def Info: Figuras/rio_doce/wfv/LR/LR_WFV_LOG_RESID_ACF.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1277, 1154.3125pt x 552.
+<Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1293, 1154.3125pt x 552.
 0625pt>
 File: Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_ACF.png Graphic file (type png)
 
@@ -2785,20 +2805,20 @@ d on input line 495.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[93
+[94
 
-] [94 <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png> <./Figuras/rio_doce
+] [95 <./Figuras/rio_doce/wfv/CB/CB_WFV_ORIG_RESID_ACF.png> <./Figuras/rio_doce
 /wfv/LR/LR_WFV_LOG_RESID_ACF.png> <./Figuras/rio_doce/wfv/RF/RF_WFV_ORIG_RESID_
-ACF.png>] [95
+ACF.png>] [96
 
 ]
-<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png, id=1298, 1154.3125pt x 752.8125pt>
+<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png, id=1314, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png  used on inp
 ut line 523.
 (pdftex.def)             Requested size: 380.9243pt x 248.4289pt.
-<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png, id=1299, 1154.3125pt x 752.8125pt>
+<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png, id=1315, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_grande/wfv/LR/LR_WFV_ORIG.png  used on inp
@@ -2808,7 +2828,7 @@ ut line 530.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png, id=1300, 1154.3125pt x 752.8125pt>
+<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png, id=1316, 1154.3125pt x 752.8125pt>
 File: Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png>
 Package pdftex.def Info: Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png  used on inp
@@ -2817,11 +2837,11 @@ ut line 537.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[96 <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png>] [97 <./Figuras/rio_grande/wf
-v/LR/LR_WFV_ORIG.png> <./Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png>] [98
+[97 <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG.png>] [98 <./Figuras/rio_grande/wf
+v/LR/LR_WFV_ORIG.png> <./Figuras/rio_grande/wfv/RF/RF_WFV_ORIG.png>] [99
 
 ]
-<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1320, 1154.3125pt 
+<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1336, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png Graphic file (typ
 e png)
@@ -2829,7 +2849,7 @@ e png)
 Package pdftex.def Info: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.pn
 g  used on input line 591.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png, id=1321, 1154.3125pt 
+<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png, id=1337, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png Graphic file (typ
 e png)
@@ -2841,7 +2861,7 @@ g  used on input line 598.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1322, 1154.3125pt 
+<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1338, 1154.3125pt 
 x 552.0625pt>
 File: Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png Graphic file (typ
 e png)
@@ -2852,10 +2872,10 @@ g  used on input line 605.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[99 <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png>] [100 <./Figura
-s/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png> <./Figuras/rio_grande/wfv/RF
-/RF_WFV_ORIG_RESID_x_TEMPO.png>]
-<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1337, 1154.
+[100 <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png>] [101 <./Figur
+as/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_TEMPO.png> <./Figuras/rio_grande/wfv/R
+F/RF_WFV_ORIG_RESID_x_TEMPO.png>]
+<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1354, 1154.
 3125pt x 552.0625pt>
 File: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic fi
 le (type png)
@@ -2863,7 +2883,7 @@ le (type png)
 Package pdftex.def Info: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NO
 RMAL.png  used on input line 619.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1338, 1154.
+<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1355, 1154.
 3125pt x 552.0625pt>
 File: Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic fi
 le (type png)
@@ -2875,7 +2895,7 @@ RMAL.png  used on input line 626.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1339, 1154.
+<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1356, 1154.
 3125pt x 552.0625pt>
 File: Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png Graphic fi
 le (type png)
@@ -2886,12 +2906,12 @@ RMAL.png  used on input line 633.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[101
+[102
 
  <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-[102 <./Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png> <./Figu
+[103 <./Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_x_CURVA_NORMAL.png> <./Figu
 ras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1355, 1154.3125pt x 55
+<Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1371, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png Graphic file (type pn
 g)
@@ -2899,7 +2919,7 @@ g)
 Package pdftex.def Info: Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png  u
 sed on input line 649.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_ACF.png, id=1356, 1154.3125pt x 55
+<Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_ACF.png, id=1372, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_grande/wfv/LR/LR_WFV_ORIG_RESID_ACF.png Graphic file (type pn
 g)
@@ -2911,7 +2931,7 @@ sed on input line 656.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1357, 1154.3125pt x 55
+<Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1373, 1154.3125pt x 55
 2.0625pt>
 File: Figuras/rio_grande/wfv/RF/RF_WFV_ORIG_RESID_ACF.png Graphic file (type pn
 g)
@@ -2922,12 +2942,12 @@ sed on input line 663.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[103
+[104
 
- <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>] [104 <./Figuras/rio_g
+ <./Figuras/rio_grande/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>] [105 <./Figuras/rio_g
 rande/wfv/LR/LR_WFV_ORIG_RESID_ACF.png> <./Figuras/rio_grande/wfv/RF/RF_WFV_ORI
 G_RESID_ACF.png>]
-<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png, id=1372, 1154.3125pt x 752.8
+<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png, id=1388, 1154.3125pt x 752.8
 125pt>
 File: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png>
@@ -2938,7 +2958,7 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG.png, id=1373, 1154.3125pt x 752.81
+<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG.png, id=1389, 1154.3125pt x 752.81
 25pt>
 File: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG.png Graphic file (type png)
 <use Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG.png>
@@ -2948,7 +2968,7 @@ on input line 692.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png, id=1374, 1154.3125pt x 752.8
+<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png, id=1390, 1154.3125pt x 752.8
 125pt>
 File: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png Graphic file (type png)
 <use Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png>
@@ -2958,14 +2978,14 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG.png  used
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[105
+[106
 
-] [106 <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png> <./Figuras/rio_sao_
-francisco/wfv/LR/LR_WFV_LOG.png>] [107 <./Figuras/rio_sao_francisco/wfv/RF/RF_W
-FV_ORIG.png>] [108
+] [107 <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG.png> <./Figuras/rio_sao_
+francisco/wfv/LR/LR_WFV_LOG.png>] [108 <./Figuras/rio_sao_francisco/wfv/RF/RF_W
+FV_ORIG.png>] [109
 
 ]
-<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1398, 1154.
+<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png, id=1414, 1154.
 3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png Graphic fi
 le (type png)
@@ -2973,7 +2993,7 @@ le (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_T
 EMPO.png  used on input line 753.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png, id=1399, 1154.3
+<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png, id=1415, 1154.3
 125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png Graphic fil
 e (type png)
@@ -2981,7 +3001,7 @@ e (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TE
 MPO.png  used on input line 760.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1400, 1154.
+<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png, id=1416, 1154.
 3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png Graphic fi
 le (type png)
@@ -2993,10 +3013,10 @@ EMPO.png  used on input line 767.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[109 <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png> <./Figu
-ras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png>] [110 <./Figuras/rio
+[110 <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_TEMPO.png> <./Figu
+ras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_TEMPO.png>] [111 <./Figuras/rio
 _sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_TEMPO.png>]
-<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1415
+<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1431
 , 1154.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png Gra
 phic file (type png)
@@ -3004,7 +3024,7 @@ phic file (type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_C
 URVA_NORMAL.png  used on input line 779.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1416,
+<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png, id=1432,
  1154.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png Grap
 hic file (type png)
@@ -3016,7 +3036,7 @@ RVA_NORMAL.png  used on input line 786.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1417
+<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png, id=1433
 , 1154.3125pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png Gra
 phic file (type png)
@@ -3027,12 +3047,12 @@ URVA_NORMAL.png  used on input line 793.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[111
+[112
 
  <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_x_CURVA_NORMAL.png>] [11
-2 <./Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./F
+3 <./Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_x_CURVA_NORMAL.png> <./F
 iguras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_x_CURVA_NORMAL.png>]
-<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1432, 1154.3125
+<Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png, id=1450, 1154.3125
 pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png Graphic file (
 type png)
@@ -3040,7 +3060,7 @@ type png)
 Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF
 .png  used on input line 807.
 (pdftex.def)             Requested size: 380.9243pt x 182.18118pt.
-<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1433, 1154.3125p
+<Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png, id=1451, 1154.3125p
 t x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png Graphic file (t
 ype png)
@@ -3052,7 +3072,7 @@ png  used on input line 814.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1434, 1154.3125
+<Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png, id=1452, 1154.3125
 pt x 552.0625pt>
 File: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF.png Graphic file (
 type png)
@@ -3063,28 +3083,76 @@ Package pdftex.def Info: Figuras/rio_sao_francisco/wfv/RF/RF_WFV_ORIG_RESID_ACF
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[113
+[114
 
- <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>] [114 <./Figura
+ <./Figuras/rio_sao_francisco/wfv/CB/CB_WFV_ORIG_RESID_ACF.png>] [115 <./Figura
 s/rio_sao_francisco/wfv/LR/LR_WFV_LOG_RESID_ACF.png> <./Figuras/rio_sao_francis
-co/wfv/RF/RF_WFV_ORIG_RESID_ACF.png>] [115
+co/wfv/RF/RF_WFV_ORIG_RESID_ACF.png>] [116
 
-]) [116]
+]
+<Figuras/jequiti/wfv/feature_importance/feature_importance_cb.png, id=1473, 106
+4.5371pt x 620.7993pt>
+File: Figuras/jequiti/wfv/feature_importance/feature_importance_cb.png Graphic 
+file (type png)
+<use Figuras/jequiti/wfv/feature_importance/feature_importance_cb.png>
+Package pdftex.def Info: Figuras/jequiti/wfv/feature_importance/feature_importa
+nce_cb.png  used on input line 883.
+(pdftex.def)             Requested size: 351.29832pt x 204.8644pt.
+<Figuras/jequiti/wfv/feature_importance/feature_importance_lr.png, id=1474, 106
+4.5371pt x 620.7993pt>
+File: Figuras/jequiti/wfv/feature_importance/feature_importance_lr.png Graphic 
+file (type png)
+<use Figuras/jequiti/wfv/feature_importance/feature_importance_lr.png>
+Package pdftex.def Info: Figuras/jequiti/wfv/feature_importance/feature_importa
+nce_lr.png  used on input line 890.
+(pdftex.def)             Requested size: 351.29832pt x 204.8644pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figuras/jequiti/wfv/feature_importance/feature_importance_rf.png, id=1475, 106
+4.5371pt x 620.7993pt>
+File: Figuras/jequiti/wfv/feature_importance/feature_importance_rf.png Graphic 
+file (type png)
+<use Figuras/jequiti/wfv/feature_importance/feature_importance_rf.png>
+Package pdftex.def Info: Figuras/jequiti/wfv/feature_importance/feature_importa
+nce_rf.png  used on input line 897.
+(pdftex.def)             Requested size: 351.29832pt x 204.8644pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[117 <./Figuras/jequiti/wfv/feature_importance/feature_importance_cb.png>]
+[118 <./Figuras/jequiti/wfv/feature_importance/feature_importance_lr.png> <./Fi
+guras/jequiti/wfv/feature_importance/feature_importance_rf.png>]
+<Figuras/jequiti/wfv/feature_importance/feature_importance_cb_previsao200.png, 
+id=1488, 1151.9838pt x 638.8668pt>
+File: Figuras/jequiti/wfv/feature_importance/feature_importance_cb_previsao200.
+png Graphic file (type png)
+<use Figuras/jequiti/wfv/feature_importance/feature_importance_cb_previsao200.p
+ng>
+Package pdftex.def Info: Figuras/jequiti/wfv/feature_importance/feature_importa
+nce_cb_previsao200.png  used on input line 907.
+(pdftex.def)             Requested size: 380.15582pt x 210.82669pt.
+) [119
+
+ <./Figuras/jequiti/wfv/feature_importance/feature_importance_cb_previsao200.pn
+g>]
 \openout2 = `cap5_conclusao.aux'.
 
- (./cap5_conclusao.tex)
-[117
+
+(./cap5_conclusao.tex) [120
 
 
 
 
-] (./dissertacao.bbl [118
+] (./dissertacao.bbl [121
 
 
 
-] [119] [120]) 
+] [122] [123])
+
 AED: lastpage setting LastPage
-[121]
+[124]
 \tf@lof=\write6
 \openout6 = `dissertacao.lof'.
 
@@ -3098,11 +3166,11 @@ AED: lastpage setting LastPage
 (./cap3_procedimentos_metodologicos.aux) (./cap4_resultados.aux)
 (./cap5_conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 30611 strings out of 478287
- 579571 string characters out of 5849289
- 926320 words of memory out of 5000000
- 47541 multiletter control sequences out of 15000+600000
- 544343 words of font info for 206 fonts, out of 8000000 for 9000
+ 30661 strings out of 478287
+ 581846 string characters out of 5849289
+ 927438 words of memory out of 5000000
+ 47575 multiletter control sequences out of 15000+600000
+ 544472 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,94p,2036b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
@@ -3120,10 +3188,10 @@ xmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8
 /type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmtt12.pfb>
-Output written on dissertacao.pdf (123 pages, 6204336 bytes).
+Output written on dissertacao.pdf (126 pages, 6485745 bytes).
 PDF statistics:
- 1845 PDF objects out of 2073 (max. 8388607)
- 1445 compressed objects within 15 object streams
- 371 named destinations out of 1000 (max. 500000)
- 40427 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1888 PDF objects out of 2073 (max. 8388607)
+ 1477 compressed objects within 15 object streams
+ 380 named destinations out of 1000 (max. 500000)
+ 40447 words of extra memory for PDF output out of 42996 (max. 10000000)
 

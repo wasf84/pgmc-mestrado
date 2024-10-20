@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -226,6 +226,21 @@ Luke Merrick and Ankur Taly.
 \newblock ISBN 978-3-030-57321-8.
 \newblock URL
   \url{https://link.springer.com/chapter/10.1007/978-3-030-57321-8_2}.
+
+\bibitem[Molnar(2024{\natexlab{a}})]{molnar_2024a}
+Christoph Molnar.
+\newblock Interpretability: Importance - interpretable machine learning,
+  2024{\natexlab{a}}.
+\newblock URL
+  \url{https://christophm.github.io/interpretable-ml-book/interpretability-importance.html}.
+\newblock Acessado em: agosto de 2024.
+
+\bibitem[Molnar(2024{\natexlab{b}})]{molnar_2024b}
+Christoph Molnar.
+\newblock Shapley values - interpretable machine learning, 2024{\natexlab{b}}.
+\newblock URL
+  \url{https://christophm.github.io/interpretable-ml-book/shapley.html}.
+\newblock Acessado em: agosto de 2024.
 
 \bibitem[Petry et~al.(2023)Petry, Fan, Siqueira, Collishonn, de~Paiva, Quedi,
   de~Araújo~Gama, Silveira, Freitas, and Paranhos]{rayyan-39677094}

@@ -1,75 +1,72 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: dissertacao.aux
-Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: plainnat.bst
-Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: cap1_introducao.aux
-Reallocating 'name_of_file' (item size: 1) to 17 items.
 A level-1 auxiliary file: cap2_revisao.aux
-Reallocating 'name_of_file' (item size: 1) to 37 items.
 A level-1 auxiliary file: cap3_procedimentos_metodologicos.aux
-Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: cap4_resultados.aux
-Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: cap5_conclusao.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: referencias.bib
 Warning--entry type for "bbc_chuvas_bahia_2024" isn't style-file defined
---line 887 of file referencias.bib
+--line 444 of file referencias.bib
 Warning--entry type for "g1_temporal_petropolis_2022" isn't style-file defined
---line 905 of file referencias.bib
+--line 453 of file referencias.bib
 Warning--entry type for "cnn_temporais_mg_2024" isn't style-file defined
---line 923 of file referencias.bib
+--line 462 of file referencias.bib
 Warning--entry type for "g1_temporal_es_2024" isn't style-file defined
---line 959 of file referencias.bib
+--line 480 of file referencias.bib
 Warning--entry type for "g1_cantareira_2015" isn't style-file defined
---line 977 of file referencias.bib
+--line 489 of file referencias.bib
 Warning--entry type for "skforecast_a" isn't style-file defined
---line 1343 of file referencias.bib
+--line 672 of file referencias.bib
 Warning--entry type for "skforecast_b" isn't style-file defined
---line 1365 of file referencias.bib
+--line 683 of file referencias.bib
+Repeated entry---line 878 of file referencias.bib
+ : @inproceedings{merrick_taly_2020
+ :                                 ,
+I'm skipping whatever remains of this entry
 Warning--empty year in belloto1985residual
 Warning--empty year in belloto1985residual
-You've used 37 entries,
+You've used 39 entries,
             2773 wiz_defined-function locations,
-            799 strings with 12726 characters,
-and the built_in function-call counts, 15625 in all, are:
-= -- 1347
-> -- 1006
-< -- 30
-+ -- 353
-- -- 312
-* -- 1171
-:= -- 2457
-add.period$ -- 138
-call.type$ -- 37
-change.case$ -- 212
-chr.to.int$ -- 33
-cite$ -- 76
-duplicate$ -- 632
-empty$ -- 1244
-format.name$ -- 366
-if$ -- 3242
-int.to.chr$ -- 5
+            806 strings with 13020 characters,
+and the built_in function-call counts, 16241 in all, are:
+= -- 1403
+> -- 1026
+< -- 32
++ -- 362
+- -- 318
+* -- 1205
+:= -- 2551
+add.period$ -- 146
+call.type$ -- 39
+change.case$ -- 220
+chr.to.int$ -- 34
+cite$ -- 80
+duplicate$ -- 662
+empty$ -- 1308
+format.name$ -- 374
+if$ -- 3374
+int.to.chr$ -- 6
 int.to.str$ -- 1
 missing$ -- 13
-newline$ -- 220
-num.names$ -- 148
-pop$ -- 502
+newline$ -- 232
+num.names$ -- 156
+pop$ -- 526
 preamble$ -- 1
-purify$ -- 177
+purify$ -- 183
 quote$ -- 0
-skip$ -- 562
+skip$ -- 585
 stack$ -- 0
-substring$ -- 234
-swap$ -- 61
+substring$ -- 238
+swap$ -- 65
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 402
+type$ -- 424
 warning$ -- 2
-while$ -- 125
+while$ -- 131
 width$ -- 0
-write$ -- 515
-(There were 9 warnings)
+write$ -- 543
+(There was 1 error message)
