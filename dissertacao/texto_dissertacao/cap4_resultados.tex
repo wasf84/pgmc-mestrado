@@ -836,6 +836,8 @@ A incorporação dos valores SHAP aprimora a análise ao oferecer uma metodologi
 
 Além disso, a análise com valores SHAP aborda limitações de outros métodos de análise de variáveis ao garantir justiça e consistência na atribuição da importância das variáveis. SHAP satisfaz propriedades desejáveis como precisão local, ausência de viés e consistência, que nem sempre são garantidas por outros métodos. Isso torna o SHAP uma ferramenta robusta para a análise de variáveis, fornecendo explicações confiáveis que podem ser compreendidas e utilizadas por usuários finais.\cite{molnar_2024b}
 
+A comparação da importância das variáveis será realizada por modelo, visto que o que se busca apresentar aqui é o comportamento de cada um destes frente aos tipos de variáveis do problema, variáveis do tipo categóricas e contínuas. Se as variáveis são de um determinado rio ou de outro não importa para o modelo nem para a análise SHAP.
+
 %Adicionalmente, a análise das variáveis facilita a detecção e mitigação de problemas de multicolinearidade e redundância entre as variáveis. Variáveis altamente correlacionadas podem levar a instabilidades nos coeficientes dos modelos e a uma interpretação distorcida da importância das features. A análise prévia das variáveis, especialmente utilizando SHAP, permite identificar e tratar essas situações, seja por meio da remoção de variáveis redundantes, da aplicação de técnicas de redução de dimensionalidade (como PCA) ou da transformação das variáveis para eliminar correlações excessivas.
 %
 %Outro aspecto relevante é a detecção de vieses e desequilíbrios nos dados. Variáveis que refletem vieses presentes no conjunto de dados podem levar a modelos que perpetuam ou amplificam esses vieses, resultando em previsões injustas ou não representativas. Ao avaliar a distribuição e a influência das variáveis através de SHAP, é possível identificar e corrigir esses vieses, promovendo a equidade e a justiça nas previsões do modelo.
@@ -846,15 +848,21 @@ Além disso, a análise com valores SHAP aborda limitações de outros métodos 
 %
 %A análise dos valores SHAP, em particular, oferece uma abordagem diferenciada e mais robusta para a avaliação da importância das variáveis, pois fornece explicações consistentes e detalhadas das contribuições de cada feature para as previsões individuais. Isso não apenas aprimora a performance dos modelos de aprendizado de máquina, mas também assegura que os resultados sejam interpretáveis, justos e aplicáveis em contextos reais, contribuindo significativamente para a qualidade e a relevância do trabalho final.
 
-\subsection{Rio Jequitinhonha}
+\subsection{CatBoost}
 
-Ao comparar os gráficos SHAP dos três modelos - CB CatBoost, LR LinearRegression e RF RandomForest -, podemos observar várias diferenças significativas nas importâncias das variáveis, refletindo como cada modelo lida com os dados de maneira distinta.
+%Ao comparar os gráficos SHAP do modelo CatBoost (CB) podemos observar várias diferenças significativas nas importâncias das variáveis, refletindo a forma de lidar com os dados de maneira distinta.
 
-Em todos os modelos os valores defasados - as \textit{lags} - de vazão empenham maior importância nas previsões. Isso é o que se espera, de fato, visto que as \textit{lags} possuem forte autocorrelação. Esta natureza do problema explica tamanha prevalência destas variáveis na importância das previsões. A lag\_1 pode ser interpretada como ``para prever a vazão de amanhã, basta que eu saiba a vazão de hoje''.
+Para todos os rios os valores defasados - as \textit{lags} - de vazão empenham maior importância nas previsões quando se observa as $10$ variáveis de maior impacto. Isso é o que se espera, de fato, visto que as \textit{lags} possuem forte autocorrelação. Esta natureza do problema e da forma de modelar o problema explica tamanha prevalência destas variáveis na importância das previsões. A lag\_1 pode ser interpretada como ``para prever a vazão de amanhã, basta que eu saiba a vazão de hoje''.
 
-A tentativa de criar variáveis de chuva de valores acumulados surtiu pouco efeito para o modelo linear, por exemplo - figura \ref{fig:jequiti_feature_importance_lr} E mesmo a linearização causada pelo transformação log não mudou este comportamento. As variáveis \textit{lag} são dominantes quando da aplicação de regressão linear em um problema de regressão em séries de vazão, o que nos permite concluir que a qualidade dos dados de vazão seja o mais importante neste caso, ou mesmo o exclusivo uso de vazão bastaria para realizar todas análises. Mas conclusões virão em um momento oportuno.
+A tentativa de criar variáveis de chuva de valores acumulados surtiu bom efeito para o modelo CatBoost. A não-linearidade na interação entre fenômenos de precipitação e vazão foi melhor capturada quando do uso de valores acumulados das chuvas. Apenas usando valores das estações não ficou bom para quaisquer dos rios, visto que, como já salientado anteriormente, as séries de chuva apresentaram muitos valores zerados, eventualmente por muito dias em sequência, e isso naturalmente não teria um peso relevante para realização das previsões.
 
-Tal prevalência das lags já não se viu exatamente igual para o modelo
+Os atributos categóricos, apesar de apresentarem pouco impacto na previsão de vazão, não podem ser completamente descartados.
+
+Tudo indica que os atributos categóricos surtem pouco efeito neste tipo de problema de previsão. Em nenhum resultado estas variáveis apresentaram peso significativo na previsão do modelo. A intenção era que o comportamento sazonal dos eventos de vazão pudesse ser destacado quando da inserção destas colunas, mas o registro das vazões e variáveis acumuladas de precipitação mostraram-se muito mais importantes. Pode-se concluir até mesmo que a retirada destas variáveis representará um ganho de desempenho para o resultado do modelo e consequente redução de complexidade.
+
+%E mesmo a linearização causada pelo transformação log não mudou este comportamento. As variáveis \textit{lag} são dominantes quando da aplicação de regressão linear em um problema de regressão em séries de vazão, o que nos permite concluir que a qualidade dos dados de vazão seja o mais importante neste caso, ou mesmo o exclusivo uso de vazão bastaria para realizar todas análises. Mas conclusões virão em um momento oportuno.
+%
+%Tal prevalência das lags já não se viu exatamente igual para o modelo
 
 %1. **CatBoost (CB)**:
 %- **Variáveis mais importantes**: A variável `lag\_1` domina completamente a importância, com uma média SHAP de 87,19, seguida por `t\_cv\_54790000\_soma\_7\_dias` com 14,3. Isso mostra que o modelo CatBoost dá muito mais peso às informações de atraso em `lag\_1`, indicando que é uma variável extremamente preditiva para o modelo.
@@ -881,24 +889,46 @@ Tal prevalência das lags já não se viu exatamente igual para o modelo
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.33]{Figuras/jequiti/wfv/feature_importance/feature_importance_cb.png}
-\caption{Média dos valores SHAP do modelo CatBoost (CB)\\(fonte: o autor)}
+\caption{Média dos valores SHAP - rio Jequitinhonha\\(fonte: o autor)}
 \label{fig:jequiti_feature_importance_cb}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/feature_importance/feature_importance_lr.png}
-\caption{Média dos valores SHAP do modelo \textit{LinearRegression} (LR)\\(fonte: o autor)}
-\label{fig:jequiti_feature_importance_lr}
+\includegraphics[scale=0.33]{Figuras/rio_doce/wfv/feature_importance/feature_importance_cb.png}
+\caption{Média dos valores SHAP - rio Doce\\(fonte: o autor)}
+\label{fig:doce_feature_importance_cb}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.33]{Figuras/jequiti/wfv/feature_importance/feature_importance_rf.png}
-\caption{Média dos valores SHAP do modelo RandomForest (RF)\\(fonte: o autor)}
-\label{fig:jequiti_feature_importance_rf}
+\includegraphics[scale=0.33]{Figuras/rio_grande/wfv/feature_importance/feature_importance_cb.png}
+\caption{Média dos valores SHAP - rio Grande\\(fonte: o autor)}
+\label{fig:grande_feature_importance_cb}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/feature_importance/feature_importance_cb.png}
+\caption{Média dos valores SHAP - rio São Francisco\\(fonte: o autor)}
+\label{fig:francisco_feature_importance_cb}
 \end{figure}
 \clearpage
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/feature_importance/feature_importance_lr.png}
+%\caption{Média dos valores SHAP do modelo \textit{LinearRegression} (LR)\\(fonte: o autor)}
+%\label{fig:jequiti_feature_importance_lr}
+%\end{figure}
+%
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.33]{Figuras/jequiti/wfv/feature_importance/feature_importance_rf.png}
+%\caption{Média dos valores SHAP do modelo RandomForest (RF)\\(fonte: o autor)}
+%\label{fig:jequiti_feature_importance_rf}
+%\end{figure}
+%\clearpage
 
 ------------------qewrqwerr
 

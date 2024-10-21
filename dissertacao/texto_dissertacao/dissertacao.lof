@@ -109,7 +109,8 @@
 \contentsline {figure}{\numberline {4.60}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{114}{figure.187}%
 \contentsline {figure}{\numberline {4.61}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{115}{figure.188}%
 \contentsline {figure}{\numberline {4.62}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{115}{figure.189}%
-\contentsline {figure}{\numberline {4.63}{\ignorespaces Média dos valores SHAP do modelo CatBoost (CB)\\(fonte: o autor)}}{117}{figure.192}%
-\contentsline {figure}{\numberline {4.64}{\ignorespaces Média dos valores SHAP do modelo \textit {LinearRegression} (LR)\\(fonte: o autor)}}{118}{figure.193}%
-\contentsline {figure}{\numberline {4.65}{\ignorespaces Média dos valores SHAP do modelo RandomForest (RF)\\(fonte: o autor)}}{118}{figure.194}%
-\contentsline {figure}{\numberline {4.66}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{119}{figure.195}%
+\contentsline {figure}{\numberline {4.63}{\ignorespaces Média dos valores SHAP - rio Jequitinhonha\\(fonte: o autor)}}{118}{figure.192}%
+\contentsline {figure}{\numberline {4.64}{\ignorespaces Média dos valores SHAP - rio Doce\\(fonte: o autor)}}{118}{figure.193}%
+\contentsline {figure}{\numberline {4.65}{\ignorespaces Média dos valores SHAP - rio Grande\\(fonte: o autor)}}{119}{figure.194}%
+\contentsline {figure}{\numberline {4.66}{\ignorespaces Média dos valores SHAP - rio São Francisco\\(fonte: o autor)}}{119}{figure.195}%
+\contentsline {figure}{\numberline {4.67}{\ignorespaces Gráfico ACF dos resíduos.\\(fonte: o autor)}}{120}{figure.196}%
