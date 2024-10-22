@@ -836,6 +836,8 @@ A incorporação dos valores SHAP aprimora a análise ao oferecer uma metodologi
 
 Além disso, a análise com valores SHAP aborda limitações de outros métodos de análise de variáveis ao garantir justiça e consistência na atribuição da importância das variáveis. SHAP satisfaz propriedades desejáveis como precisão local, ausência de viés e consistência, que nem sempre são garantidas por outros métodos. Isso torna o SHAP uma ferramenta robusta para a análise de variáveis, fornecendo explicações confiáveis que podem ser compreendidas e utilizadas por usuários finais.\cite{molnar_2024b}
 
+Contudo, uma coisa precisa ficar bastante clara: a análise SHAP não avalia causalidade, ou seja, realizar a avaliação de impacto de cada variável na previsão não significa dizer que tais variáveis mais importantes \textbf{causem} o evento estudado.
+
 A comparação da importância das variáveis será realizada por modelo, visto que o que se busca apresentar aqui é o comportamento de cada um destes frente aos tipos de variáveis do problema, variáveis do tipo categóricas e contínuas. Se as variáveis são de um determinado rio ou de outro não importa para o modelo nem para a análise SHAP.
 
 %Adicionalmente, a análise das variáveis facilita a detecção e mitigação de problemas de multicolinearidade e redundância entre as variáveis. Variáveis altamente correlacionadas podem levar a instabilidades nos coeficientes dos modelos e a uma interpretação distorcida da importância das features. A análise prévia das variáveis, especialmente utilizando SHAP, permite identificar e tratar essas situações, seja por meio da remoção de variáveis redundantes, da aplicação de técnicas de redução de dimensionalidade (como PCA) ou da transformação das variáveis para eliminar correlações excessivas.
@@ -852,39 +854,7 @@ A comparação da importância das variáveis será realizada por modelo, visto 
 
 %Ao comparar os gráficos SHAP do modelo CatBoost (CB) podemos observar várias diferenças significativas nas importâncias das variáveis, refletindo a forma de lidar com os dados de maneira distinta.
 
-Para todos os rios os valores defasados - as \textit{lags} - de vazão empenham maior importância nas previsões quando se observa as $10$ variáveis de maior impacto. Isso é o que se espera, de fato, visto que as \textit{lags} possuem forte autocorrelação. Esta natureza do problema e da forma de modelar o problema explica tamanha prevalência destas variáveis na importância das previsões. A lag\_1 pode ser interpretada como ``para prever a vazão de amanhã, basta que eu saiba a vazão de hoje''.
-
-A tentativa de criar variáveis de chuva de valores acumulados surtiu bom efeito para o modelo CatBoost. A não-linearidade na interação entre fenômenos de precipitação e vazão foi melhor capturada quando do uso de valores acumulados das chuvas. Apenas usando valores das estações não ficou bom para quaisquer dos rios, visto que, como já salientado anteriormente, as séries de chuva apresentaram muitos valores zerados, eventualmente por muito dias em sequência, e isso naturalmente não teria um peso relevante para realização das previsões.
-
-Os atributos categóricos, apesar de apresentarem pouco impacto na previsão de vazão, não podem ser completamente descartados.
-
-Tudo indica que os atributos categóricos surtem pouco efeito neste tipo de problema de previsão. Em nenhum resultado estas variáveis apresentaram peso significativo na previsão do modelo. A intenção era que o comportamento sazonal dos eventos de vazão pudesse ser destacado quando da inserção destas colunas, mas o registro das vazões e variáveis acumuladas de precipitação mostraram-se muito mais importantes. Pode-se concluir até mesmo que a retirada destas variáveis representará um ganho de desempenho para o resultado do modelo e consequente redução de complexidade.
-
-%E mesmo a linearização causada pelo transformação log não mudou este comportamento. As variáveis \textit{lag} são dominantes quando da aplicação de regressão linear em um problema de regressão em séries de vazão, o que nos permite concluir que a qualidade dos dados de vazão seja o mais importante neste caso, ou mesmo o exclusivo uso de vazão bastaria para realizar todas análises. Mas conclusões virão em um momento oportuno.
-%
-%Tal prevalência das lags já não se viu exatamente igual para o modelo
-
-%1. **CatBoost (CB)**:
-%- **Variáveis mais importantes**: A variável `lag\_1` domina completamente a importância, com uma média SHAP de 87,19, seguida por `t\_cv\_54790000\_soma\_7\_dias` com 14,3. Isso mostra que o modelo CatBoost dá muito mais peso às informações de atraso em `lag\_1`, indicando que é uma variável extremamente preditiva para o modelo.
-%- **Outras variáveis relevantes**: Outras variáveis, como `lag\_6`, `lag\_2`, e somas de 7 dias de `t\_cv\_01640000`, têm uma importância moderada. A partir de `lag\_3` para baixo, a importância das variáveis vai diminuindo gradualmente, embora ainda contribuam significativamente.
-%- **Variáveis com baixa importância**: Algumas variáveis, como `t\_cv\_01640000\_media\_30\_dias` e `t\_cv\_54790000\_media\_30\_dias`, têm valores SHAP quase nulos, sugerindo que o modelo as considera irrelevantes.
-%
-%2. **LinearRegression (LR)**:
-%- **Distribuição de importância**: Comparado ao modelo CB, a importância das variáveis no modelo de regressão linear é muito mais diluída. A variável `lag\_1` ainda é a mais importante, mas com uma magnitude muito menor (0,69). Nenhuma outra variável tem uma importância maior que 0,17.
-%- **Variáveis importantes**: Além de `lag\_1`, os atrasos até `lag\_7` têm pequenas importâncias, assim como algumas variáveis sazonais (`month\_10`, `month\_1`, etc.). O modelo de regressão linear parece considerar mais variáveis, mas com menor intensidade, refletindo um comportamento mais homogêneo.
-%- **Importância geral baixa**: O fato de todas as variáveis terem valores SHAP muito pequenos pode indicar que o modelo LinearRegression tem um ajuste mais simples e talvez menos potente para capturar relações complexas nos dados.
-%
-%3. **RandomForest (RF)**:
-%- **Variáveis mais importantes**: Assim como no modelo CatBoost, a variável `lag_1` também domina com um valor SHAP extremamente alto (152,27), seguida por `lag_6` com 23,05. Isso mostra que o RandomForest também considera os atrasos anteriores (lags) como cruciais para a previsão.
-%- **Distribuição de importância**: A importância é mais concentrada em poucas variáveis, principalmente em `lag_1`, `lag_6`, `lag_3`, e `lag_2`. As variáveis que têm menos influência vão diminuindo de forma muito rápida, sugerindo que o modelo RandomForest dá muito peso às variáveis mais importantes e praticamente ignora o resto.
-%- **Variáveis com baixa importância**: Algumas variáveis, como `t_cv_54790000_soma_7_dias`, `estacao`, e outras, têm pouca relevância para o RandomForest, com valores SHAP muito pequenos.
-%
-%### **Comparação Geral**:
-%- **Dominância de `lag_1`**: Em todos os modelos, a variável `lag_1` é consistentemente a mais importante, embora com magnitudes muito diferentes. O RandomForest a considera mais significativa do que os outros dois modelos.
-%- **Modelo CatBoost vs. RandomForest**: Ambos os modelos de árvore (CatBoost e RandomForest) apresentam uma concentração de importância em poucas variáveis, com grande dominância de `lag_1` e outros atrasos (lags). Porém, o CatBoost apresenta uma distribuição ligeiramente mais equilibrada em relação ao RandomForest.
-%- **Modelo LinearRegression**: A regressão linear trata as variáveis de forma mais equânime, mas com uma magnitude de importância muito menor. Isso sugere que a LinearRegression pode não capturar tão bem as complexidades dos dados em comparação com os outros modelos, que parecem ser mais adequados para capturar a variabilidade nos atrasos e outras variáveis.
-%
-%Resumindo, os modelos baseados em árvores (CatBoost e RandomForest) mostram uma clara preferência por certas variáveis, especialmente os lags, enquanto o modelo de regressão linear distribui a importância de maneira mais uniforme, mas com menores magnitudes. Isso reflete como cada abordagem lida de maneira diferente com a mesma tarefa de previsão.
+Os gráficos mostrados em \ref{fig:jequiti_feature_importance_cb}, \ref{fig:doce_feature_importance_cb}, \ref{fig:grande_feature_importance_cb} e \ref{fig:francisco_feature_importance_cb} representam a média do valor absoluto SHAP para cada uma das variáveis, correspondente a cada rio estudado.
 
 \begin{figure}[!h]
 \centering
@@ -914,6 +884,57 @@ Tudo indica que os atributos categóricos surtem pouco efeito neste tipo de prob
 \label{fig:francisco_feature_importance_cb}
 \end{figure}
 \clearpage
+
+Para todos os rios, os valores defasados - \textit{lags} - de vazão empenham maior importância nas previsões quando se observa as $10$ variáveis de maior impacto. Isso é o que se espera, de fato, visto que as \textit{lags} possuem forte autocorrelação. Esta natureza do problema e a forma de modelar o problema explica tamanha prevalência destas variáveis na importância das previsões. A lag\_1 pode ser interpretada como ``para prever a vazão de amanhã, basta que eu saiba a vazão de hoje''.
+
+A tentativa de criar variáveis de chuva de valores acumulados surtiu bom efeito para o modelo CatBoost. A não-linearidade na interação entre fenômenos de precipitação e vazão foi melhor capturada quando do uso de valores acumulados das chuvas. Apenas usando valores das estações não ficou bom para quaisquer dos rios, visto que, como já salientado anteriormente, as séries de chuva apresentaram muitos valores zerados, eventualmente por muito dias em sequência, e isso naturalmente não teria um peso relevante para realização das previsões - figuras \ref{fig:jequiti_feature_importance_cb}, \ref{fig:doce_feature_importance_cb}, \ref{fig:grande_feature_importance_cb} e \ref{fig:francisco_feature_importance_cb}.
+
+Os atributos categóricos, apesar de apresentarem pouco impacto na previsão de vazão, não podem ser completamente descartados, e, em geral, mostraram-se mais relevantes para as previsões do que as variáveis correspondentes às estações de precipitação. Isso é bom de destacar. Todas as variáveis são analisadas e desempenham função no resultado final do modelo, com exceção óbvia daquelas que resultam em $0$. As variáveis que ficaram na parte inferior do gráfico, se removidas, podem melhorar o comportamento geral do modelos. Tomemos como exemplo o rio São Francisco. Uma nova rodada de experimento foi executada e foi feita a remoção das variáveis que tiveram média abaixo de $1$. Foram as colunas `c\_cv\_01544017', `c\_cv\_01544017\_soma\_3\_dias', `c\_cv\_01544032\_media\_30\_dias', 'c\_cv\_01544036\_media\_30\_dias'. O resultado ficou melhor após a remoção - figura \ref{fig:francisco_resultados_melhorados_apos_remocao} - comparada com antes - figura \ref{fig:francisco_CB_WFV_ORIG}. Com exceção da métrica MAPE, que houve uma piora de menos de $1\%$, em todas as demais métricas o modelo ficou melhor.
+
+\begin{table}[!h]
+\centering \small
+\caption{Resultados antes e depois da remoção das variáveis - rio São Francisco\\(fonte: o autor)}
+\begin{tabular}{|c|c|c|c|} \hline 
+	\textbf{KGE} & \textbf{MAPE} & \textbf{PBIAS} & \textbf{Cobertura empírica} \\\hline
+	$0,93396$    & $0,03296$     & $-2,61473$     & $90,68\%$\\\hline
+	$0,96111$    & $0,03344$     & $-1,86549$     & $91,23\%$\\\hline
+\end{tabular}
+\label{tab:comparacao_resultados_sao_francisco}
+\end{table}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.33]{Figuras/rio_sao_francisco/wfv/CB/resultado melhorado sem as variaveis inferiores a 1.png}
+\caption{\textit{Walk-Forward Validation} para o modelo CatBoost após remoção das variáveis.\\(fonte: o autor)}
+\label{fig:francisco_resultados_melhorados_apos_remocao}
+\end{figure}
+\clearpage
+
+%E mesmo a linearização causada pelo transformação log não mudou este comportamento. As variáveis \textit{lag} são dominantes quando da aplicação de regressão linear em um problema de regressão em séries de vazão, o que nos permite concluir que a qualidade dos dados de vazão seja o mais importante neste caso, ou mesmo o exclusivo uso de vazão bastaria para realizar todas análises. Mas conclusões virão em um momento oportuno.
+%
+%Tal prevalência das lags já não se viu exatamente igual para o modelo
+
+%1. **CatBoost (CB)**:
+%- **Variáveis mais importantes**: A variável `lag\_1` domina completamente a importância, com uma média SHAP de 87,19, seguida por `t\_cv\_54790000\_soma\_7\_dias` com 14,3. Isso mostra que o modelo CatBoost dá muito mais peso às informações de atraso em `lag\_1`, indicando que é uma variável extremamente preditiva para o modelo.
+%- **Outras variáveis relevantes**: Outras variáveis, como `lag\_6`, `lag\_2`, e somas de 7 dias de `t\_cv\_01640000`, têm uma importância moderada. A partir de `lag\_3` para baixo, a importância das variáveis vai diminuindo gradualmente, embora ainda contribuam significativamente.
+%- **Variáveis com baixa importância**: Algumas variáveis, como `t\_cv\_01640000\_media\_30\_dias` e `t\_cv\_54790000\_media\_30\_dias`, têm valores SHAP quase nulos, sugerindo que o modelo as considera irrelevantes.
+%
+%2. **LinearRegression (LR)**:
+%- **Distribuição de importância**: Comparado ao modelo CB, a importância das variáveis no modelo de regressão linear é muito mais diluída. A variável `lag\_1` ainda é a mais importante, mas com uma magnitude muito menor (0,69). Nenhuma outra variável tem uma importância maior que 0,17.
+%- **Variáveis importantes**: Além de `lag\_1`, os atrasos até `lag\_7` têm pequenas importâncias, assim como algumas variáveis sazonais (`month\_10`, `month\_1`, etc.). O modelo de regressão linear parece considerar mais variáveis, mas com menor intensidade, refletindo um comportamento mais homogêneo.
+%- **Importância geral baixa**: O fato de todas as variáveis terem valores SHAP muito pequenos pode indicar que o modelo LinearRegression tem um ajuste mais simples e talvez menos potente para capturar relações complexas nos dados.
+%
+%3. **RandomForest (RF)**:
+%- **Variáveis mais importantes**: Assim como no modelo CatBoost, a variável `lag_1` também domina com um valor SHAP extremamente alto (152,27), seguida por `lag_6` com 23,05. Isso mostra que o RandomForest também considera os atrasos anteriores (lags) como cruciais para a previsão.
+%- **Distribuição de importância**: A importância é mais concentrada em poucas variáveis, principalmente em `lag_1`, `lag_6`, `lag_3`, e `lag_2`. As variáveis que têm menos influência vão diminuindo de forma muito rápida, sugerindo que o modelo RandomForest dá muito peso às variáveis mais importantes e praticamente ignora o resto.
+%- **Variáveis com baixa importância**: Algumas variáveis, como `t_cv_54790000_soma_7_dias`, `estacao`, e outras, têm pouca relevância para o RandomForest, com valores SHAP muito pequenos.
+%
+%### **Comparação Geral**:
+%- **Dominância de `lag_1`**: Em todos os modelos, a variável `lag_1` é consistentemente a mais importante, embora com magnitudes muito diferentes. O RandomForest a considera mais significativa do que os outros dois modelos.
+%- **Modelo CatBoost vs. RandomForest**: Ambos os modelos de árvore (CatBoost e RandomForest) apresentam uma concentração de importância em poucas variáveis, com grande dominância de `lag_1` e outros atrasos (lags). Porém, o CatBoost apresenta uma distribuição ligeiramente mais equilibrada em relação ao RandomForest.
+%- **Modelo LinearRegression**: A regressão linear trata as variáveis de forma mais equânime, mas com uma magnitude de importância muito menor. Isso sugere que a LinearRegression pode não capturar tão bem as complexidades dos dados em comparação com os outros modelos, que parecem ser mais adequados para capturar a variabilidade nos atrasos e outras variáveis.
+%
+%Resumindo, os modelos baseados em árvores (CatBoost e RandomForest) mostram uma clara preferência por certas variáveis, especialmente os lags, enquanto o modelo de regressão linear distribui a importância de maneira mais uniforme, mas com menores magnitudes. Isso reflete como cada abordagem lida de maneira diferente com a mesma tarefa de previsão.
 
 %\begin{figure}[!h]
 %\centering
